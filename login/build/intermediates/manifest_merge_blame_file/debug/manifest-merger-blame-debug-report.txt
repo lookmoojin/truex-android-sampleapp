@@ -1,0 +1,33 @@
+1<?xml version="1.0" encoding="utf-8"?>
+2<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+3    xmlns:tools="http://schemas.android.com/tools"
+4    package="com.tdg.login" >
+5
+6    <uses-sdk android:minSdkVersion="1" />
+7
+8    <uses-permission android:name="android.permission.INTERNET" />
+8-->/Users/natcha.jin/Documents/Android Studio/truex-android-sampleapp/login/src/main/AndroidManifest.xml:6:5-67
+8-->/Users/natcha.jin/Documents/Android Studio/truex-android-sampleapp/login/src/main/AndroidManifest.xml:6:22-64
+9
+10    <application>
+10-->/Users/natcha.jin/Documents/Android Studio/truex-android-sampleapp/login/src/main/AndroidManifest.xml:8:5-20:19
+11        <provider
+11-->/Users/natcha.jin/Documents/Android Studio/truex-android-sampleapp/login/src/main/AndroidManifest.xml:9:9-18:20
+12            android:name="androidx.startup.InitializationProvider"
+12-->/Users/natcha.jin/Documents/Android Studio/truex-android-sampleapp/login/src/main/AndroidManifest.xml:10:13-67
+13            android:authorities="${applicationId}.androidx-startup"
+13-->/Users/natcha.jin/Documents/Android Studio/truex-android-sampleapp/login/src/main/AndroidManifest.xml:11:13-68
+14            android:exported="false"
+14-->/Users/natcha.jin/Documents/Android Studio/truex-android-sampleapp/login/src/main/AndroidManifest.xml:12:13-37
+15            tools:node="merge" >
+15-->/Users/natcha.jin/Documents/Android Studio/truex-android-sampleapp/login/src/main/AndroidManifest.xml:13:13-31
+16            <meta-data
+16-->/Users/natcha.jin/Documents/Android Studio/truex-android-sampleapp/login/src/main/AndroidManifest.xml:15:13-17:52
+17                android:name="com.tdg.login.initializer.OauthInitializer"
+17-->/Users/natcha.jin/Documents/Android Studio/truex-android-sampleapp/login/src/main/AndroidManifest.xml:16:17-74
+18                android:value="androidx.startup" />
+18-->/Users/natcha.jin/Documents/Android Studio/truex-android-sampleapp/login/src/main/AndroidManifest.xml:17:17-49
+19        </provider>
+20    </application>
+21
+22</manifest>
