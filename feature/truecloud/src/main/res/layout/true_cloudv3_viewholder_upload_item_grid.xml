@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/trueCloudItemImageView"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/true_cloudv3_grid_width3"
+        android:scaleType="centerCrop"
+        app:layout_constraintDimensionRatio="3:2"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:shapeAppearanceOverlay="@style/ShapeAppearance.App.CornerRadius.Small"
+        app:srcCompat="@drawable/ic_true_cloudv3_place_holder_image" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="@+id/trueCloudItemImageView"
+        app:layout_constraintEnd_toEndOf="@+id/trueCloudItemImageView"
+        app:layout_constraintStart_toStartOf="@+id/trueCloudItemImageView"
+        >
+
+        <com.google.android.material.progressindicator.LinearProgressIndicator
+            android:id="@+id/trueCloudLinearProgressIndicator"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/true_cloudv3_progress_height"
+            app:trackThickness="@dimen/true_cloudv3_progress_height"
+            app:indicatorColor="@color/true_cloudv3_color_overlay_white"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:trackColor="@color/true_cloudv3_color_dark"
+            app:trackCornerRadius="@dimen/true_cloudv3_spacing_s" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/trueCloudStatusTextView"
+            style="@style/TrueID.ExtraSmall.Bold.White"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/true_cloudv3_spacing_3s"
+            android:layout_marginEnd="@dimen/true_cloudv3_spacing_2s"
+            android:layout_marginBottom="@dimen/true_cloudv3_spacing_2s"
+            android:ellipsize="end"
+            android:maxLines="1"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            tools:text="@string/true_cloudv3_status_pending" />
+
+        <FrameLayout
+            android:id="@+id/trueCloudV3ActionContainer"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/trueCloudCancelImageView"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/trueCloudPauseImageView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:srcCompat="@drawable/ic_true_cloudv3_pause_task"
+                app:tint="@color/true_cloudv3_color_white"
+                tools:ignore="UnusedAttribute"
+                tools:visibility="visible" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/trueCloudRetryImageView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:srcCompat="@drawable/ic_true_cloudv3_retry_task"
+                app:tint="@color/true_cloudv3_color_white" />
+
+        </FrameLayout>
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/trueCloudCancelImageView"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:layout_marginEnd="@dimen/true_cloudv3_spacing_3s"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:srcCompat="@drawable/ic_true_cloudv3_close_task"
+            app:tint="@color/white"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

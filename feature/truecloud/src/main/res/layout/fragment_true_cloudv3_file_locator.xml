@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/trueCloudBackImageView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/true_cloudv3_spacing_2s"
+        android:contentDescription="@string/true_cloudv3_button_back"
+        android:padding="@dimen/true_cloudv3_spacing_3s"
+        android:src="@drawable/ic_left"
+        android:tint="@color/black"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_chainStyle="packed" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/trueCloudTitleTextView"
+        style="@style/TrueID.Body.Bold.Black"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:maxLines="1"
+        android:ellipsize="end"
+        app:layout_constraintBottom_toBottomOf="@+id/trueCloudBackImageView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/trueCloudBackImageView"
+        app:layout_constraintTop_toTopOf="@+id/trueCloudBackImageView" />
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/trueCloudFilesRecyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginBottom="@dimen/dp_32"
+        app:layout_constraintBottom_toTopOf="@+id/tureCloudButtonContainer"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/trueCloudBackImageView"
+        tools:listitem="@layout/true_cloudv3_viewholder_folder_item_list" />
+
+    <com.truedigital.features.truecloudv3.widget.TrueCloudV3DataEmptyView
+        android:id="@+id/trueCloudDataEmpty"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/trueCloudBackImageView" />
+
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:id="@+id/tureCloudButtonContainer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/true_cloudv3_spacing_m"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/trueCloudButtonCancel"
+            style="@style/TrueID.Body"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/true_cloudv3_spacing_m"
+            android:layout_weight="1"
+            android:background="@drawable/button_dialog_outlined"
+            android:gravity="center"
+            android:padding="@dimen/true_cloudv3_spacing_3s"
+            android:text="@string/true_cloudv3_dialog_cancel"
+            android:textColor="@color/black" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/trueCloudButtonSubmit"
+            style="@style/TrueID.Body"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/common_round_black"
+            android:gravity="center"
+            android:padding="@dimen/true_cloudv3_spacing_3s"
+            android:textColor="@color/white" />
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+</androidx.constraintlayout.widget.ConstraintLayout>

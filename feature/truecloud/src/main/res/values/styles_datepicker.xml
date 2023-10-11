@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="CustomDatePickerDialog" parent="ThemeOverlay.MaterialComponents.Dialog">
+        <item name="colorAccent">@color/true_cloudv3_choose_date_blue</item>
+        <item name="colorPrimary">@color/true_cloudv3_choose_date_blue</item>
+    </style>
+</resources>

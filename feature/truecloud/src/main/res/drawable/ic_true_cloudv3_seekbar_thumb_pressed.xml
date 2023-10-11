@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- shadow -->
+    <item
+        android:width="24dp"
+        android:height="24dp"
+        android:right="1dp"
+        android:top="1dp"> <!-- setting size using size tag messes up seek bar layout when API < 23, but size is needed API 23+ or thumb won't show -->
+
+        <shape
+            android:innerRadius="0dp"
+            android:shape="ring"
+            android:thickness="8dp"
+            android:useLevel="false">
+            <solid android:color="#33000000" />
+        </shape>
+    </item>
+
+    <!-- Thumb -->
+    <item>
+        <shape
+            android:innerRadius="0dp"
+            android:shape="ring"
+            android:thickness="8dp"
+            android:useLevel="false">
+            <solid android:color="#FFFFFF" />
+        </shape>
+    </item>
+
+</layer-list>

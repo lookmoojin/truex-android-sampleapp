@@ -1,0 +1,315 @@
+<resources>
+    <!--Header-->
+    <string name="true_cloudv3_page_name_title">ทรูคลาวด์</string>
+    <!--Category-->
+    <string name="true_cloudv3_category">หมวดหมู่</string>
+    <!--Menus-->
+    <string name="true_cloudv3_menu_images">รูปภาพ</string>
+    <string name="true_cloudv3_menu_videos">วิดีโอ</string>
+    <string name="true_cloudv3_menu_audio">เสียง</string>
+    <string name="true_cloudv3_menu_files">ไฟล์</string>
+    <string name="true_cloudv3_menu_others">อื่นๆ</string>
+    <string name="true_cloudv3_menu_contacts">รายชื่อ</string>
+    <string name="true_cloudv3_menu_all_files">ทั้งหมด</string>
+    <string name="true_cloudv3_menu_trash">ถังขยะ</string>
+    <string name="true_cloudv3_menu_settings">ตั้งค่า</string>
+    <string name="true_cloudv3_menu_collection">คอลเล็กชัน</string>
+    <string name="true_cloudv3_menu_recent_upload">รายการอัปโหลดล่าสุด</string>
+    <string name="true_cloudv3_menu_favorite">สิ่งที่ชื่นชอบ</string>
+
+    <string name="true_cloudv3_storage_used">ใช้ไป %s</string>
+    <string name="true_cloudv3_storage_total">ทั้งหมด %s</string>
+
+    <string name="true_cloudv3_empty_message">ขณะนี้ยังไม่มีไฟล์ที่อัปโหลด</string>
+    <string name="true_cloudv3_error_message">เกิดข้อผิดพลาดบางอย่าง กรุณาลองใหม่อีกครั้ง</string>
+    <string name="true_cloudv3_error_message_common">เกิดข้อผิดพลาดบางอย่าง \nกรุณาลองใหม่ภายหลัง</string>
+    <string name="true_cloudv3_max_file_message">สามารถเลือกได้สูงสุด 20 ไฟล์ต่อครั้ง</string>
+
+    <string name="true_cloudv3_upload_menu_true_cloud_storage">พื้นที่จัดเก็บข้อมูล</string>
+    <string name="true_cloudv3_upload_menu_title">อัปโหลด</string>
+    <string name="true_cloudv3_upload_menu_images">รูปภาพ</string>
+    <string name="true_cloudv3_upload_menu_videos">วิดีโอ</string>
+    <string name="true_cloudv3_upload_menu_contacts">รายชื่อ</string>
+    <string name="true_cloudv3_upload_menu_audio">เสียง</string>
+    <string name="true_cloudv3_upload_menu_files">ไฟล์</string>
+
+    <string name="true_cloudv3_option_menu_title">ตัวเลือก</string>
+    <string name="true_cloudv3_option_menu_share">คัดลอกลิงก์เพื่อแชร์</string>
+    <string name="true_cloudv3_option_menu_download">ดาวน์โหลด</string>
+    <string name="true_cloudv3_option_menu_delete">ลบออกจากทรูคลาวด์</string>
+    <string name="true_cloudv3_upload_contact">อัปโหลดผู้ติดต่อ</string>
+
+    <string name="true_cloudv3_contact_menu_title">รายชื่อ</string>
+    <string name="true_cloudv3_edit_contact_menu_title">แก้ไข รายชื่อ</string>
+
+    <string name="true_cloudv3_button_login">เข้าสู่ระบบ</string>
+    <string name="true_cloudv3_button_setting">ตั้งค่า</string>
+    <string name="true_cloudv3_button_later">ไว้ทีหลัง</string>
+    <string name="true_cloudv3_button_retry">ลองใหม่</string>
+    <string name="true_cloudv3_button_cancel">ยกเลิก</string>
+    <string name="true_cloudv3_button_confirm">ยืนยัน</string>
+    <string name="true_cloudv3_button_ok">ตกลง</string>
+    <string name="true_cloudv3_button_save">บันทึก</string>
+
+    <string name="true_cloudv3_dialog_title_file">ไม่สามารถเข้าถึงไฟล์</string>
+    <string name="true_cloudv3_dialog_subtitle_file">คุณได้จำกัดการเข้าถึงไฟล์ โปรดเลือก "ตั้งค่า" และเปิดการเข้าถึง</string>
+    <string name="true_cloudv3_dialog_title_contact">ไม่สามารถเข้าถึงรายชื่อ</string>
+    <string name="true_cloudv3_dialog_subtitle_contact">คุณได้จำกัดการเข้าถึงรายชื่อ โปรดเลือก "ตั้งค่า" และเปิดการเข้าถึง</string>
+    <string name="true_cloudv3_dialog_subtitle_notification">คุณได้ปิดการแจ้งเตือน โปรดเลือก "ตั้งค่า" และเปิดการเข้าถึง</string>
+    <string name="true_cloudv3_dialog_title_sorry">ขออภัย</string>
+    <string name="true_cloudv3_dialog_subtitle_something_wrong">เกิดข้อผิดพลาดบางอย่าง (%s)\nกรุณาลองใหม่อีกครั้ง</string>
+    <string name="true_cloudv3_dialog_title_delete">คุณต้องการจะลบไฟล์ที่เลือกหรือไม่</string>
+    <string name="true_cloudv3_dialog_subtitle_delete">หากคุณเลือกที่จะลบ ไฟล์ทั้งหมดที่คุณเลือกจะถูกลบออก</string>
+
+    <string name="true_cloudv3_upload_title_success_single">เพิ่มไฟล์เข้าสำเร็จ</string>
+    <string name="true_cloudv3_upload_title_success_multiple">เพิ่มเข้าสำเร็จ %s ไฟล์</string>
+
+    <string name="true_cloudv3_delete_success">ลบไฟล์สำเร็จ</string>
+    <string name="true_cloudv3_delete_error">ลบไฟล์ไม่สำเร็จ</string>
+
+    <string name="true_cloudv3_storage_bar_title">พื้นที่จัดเก็บข้อมูล</string>
+    <string name="true_cloudv3_storage_bar_used">ใช้ไป %s</string>
+    <string name="true_cloudv3_storage_bar_total">ทั้งหมด %s</string>
+    <string name="true_cloudv3_storage_detail">ใช้ไป %1$s จาก %2$s</string>
+
+    <string name="true_cloudv3_copy_success">คัดลอกสำเร็จ</string>
+    <string name="true_cloudv3_copy_error">ไม่สามารถคัดลอกลิงก์แชร์ได้</string>
+
+    <string name="true_cloudv3_upload_progress_bar_total_multiple">กำลังอัปโหลด %s ไฟล์</string>
+    <string name="true_cloudv3_upload_progress_bar_total_single">กำลังอัปโหลด %s ไฟล์</string>
+
+    <string name="true_cloudv3_cancel_success">ยกเลิกการอัปโหลด</string>
+    <string name="true_cloudv3_upload_status_uploading">กำลังอัปโหลด... %s</string>
+    <string name="true_cloudv3_upload_status_downloadinging">กำลังดาวน์โหลด... %s%%</string>
+
+    <string name="true_cloudv3_status_upload">กำลังอัปโหลด...</string>
+    <string name="true_cloudv3_status_pending">กำลังรอ...</string>
+    <string name="true_cloudv3_status_paused">พักการทำงาน</string>
+    <string name="true_cloudv3_status_failed">ล้มเหลว</string>
+    <string name="true_cloudv3_status_complete">เสร็จสิ้น</string>
+
+    <string name="true_cloudv3_notification_channel_name">TransferNotificationChannel</string>
+    <string name="true_cloudv3_notification_title">Upload</string>
+    <string name="true_cloudv3_notification_text">Uploading...</string>
+
+    <string name="true_cloudv3_dialog_create_new">สร้างใหม่</string>
+    <string name="true_cloudv3_dialog_folder">โฟลเดอร์</string>
+    <string name="true_cloudv3_dialog_upload">อัปโหลด</string>
+    <string name="true_cloudv3_dialog_option">ตัวเลือก</string>
+    <string name="true_cloudv3_dialog_select">เลือก</string>
+    <string name="true_cloudv3_dialog_sort_by">เรียงลำดับ</string>
+    <string name="true_cloudv3_dialog_add_new_folder">เพิ่มโฟลเดอร์ใหม่</string>
+    <string name="true_cloudv3_dialog_download">ดาวน์โหลด</string>
+    <string name="true_cloudv3_dialog_rename">เปลี่ยนชื่อ</string>
+    <string name="true_cloudv3_dialog_delete">ย้ายไฟล์ไปยังถังขยะ</string>
+    <string name="true_cloudv3_dialog_view_file">เปิดไฟล์</string>
+    <string name="true_cloudv3_dialog_photo_editor">แก้ไขรูปภาพ</string>
+    <string name="true_cloudv3_dialog_a_to_z">ชื่อ A to Z</string>
+    <string name="true_cloudv3_dialog_z_to_a">ชื่อ Z to A</string>
+    <string name="true_cloudv3_dialog_new_to_old">ใหม่ไปเก่า</string>
+    <string name="true_cloudv3_dialog_old_to_new">เก่าไปใหม่</string>
+    <string name="true_cloudv3_dialog_size_large_to_small">ขนาดใหญ่ไปขนาดเล็ก</string>
+    <string name="true_cloudv3_dialog_size_small_to_large">ขนาดเล็กไปขนาดใหญ่</string>
+    <string name="true_cloudv3_dialog_apply">นำไปใช้</string>
+    <string name="true_cloudv3_dialog_migration">ถ่ายโอนข้อมูล</string>
+    <string name="true_cloudv3_dialog_migration_success">ถ่ายโอนข้อมูลสำเร็จ</string>
+    <string name="true_cloudv3_dialog_migration_detail">การถ่ายโอนข้อมูลจะต้องทำภายในวันที่ 31 พฤษภาคม 2566 ถ้าคุณอยากถ่ายโอนข้อมูล ไปที่: ตั้งค่า > ถ่ายโอนข้อมูล</string>
+    <string name="true_cloudv3_dialog_migration_detail_success">การถ่ายโอนข้อมูลสำเร็จ คุณสามารถเข้าไปที่ไฟล์ทั้งหมดเพื่อดูไฟล์ที่ถ่ายโอนมาได้</string>
+    <string name="true_cloudv3_dialog_migration_go_to_all_file">ไปที่ ไฟล์ทั้งหมด</string>
+    <string name="true_cloudv3_dialog_migration_dismiss">กลับ</string>
+    <string name="true_cloudv3_dialog_cancel">ยกเลิก</string>
+    <string name="true_cloudv3_dialog_open_setting">เปิด ตั้งค่า</string>
+    <string name="true_cloudv3_dialog_sync_all_contacts">ซิงค์ผู้ติดต่อทั้งหมด</string>
+    <string name="true_cloudv3_dialog_title_confirm_sync_all_contacts">ซิงค์รายชื่อทั้งหมดในเครื่องนี้ซ้ำหรือไม่</string>
+    <string name="true_cloudv3_dialog_subtitle_confirm_sync_all_contacts">คุณได้เคยซิงค์รายชื่อทั้งหมดในเครื่องนี้แล้ว หากซิงค์อีกรอบคุณจะมีรายชื่อบนทรูคลาวด์ซ้ำ</string>
+    <string name="true_cloudv3_dialog_select_contacts">เลือกผู้ติดต่อที่จะอัปโหลด</string>
+    <string name="true_cloudv3_dialog_delete_all_contacts">ลบผู้ติดต่อทั้งหมด</string>
+    <string name="true_cloudv3_dialog_title_confirm_delete_all_contacts">คุณต้องการจะลบรายชื่อทั้งหมดหรือไม่</string>
+    <string name="true_cloudv3_dialog_subtitle_confirm_delete_all_contacts">หากคุณเลือกที่จะลบ รายชื่อทั้งหมดบนทรูคลาวด์จะถูกลบออก</string>
+    <string name="true_cloudv3_dialog_export_to_device">ส่งออกไปยังอุปกรณ์</string>
+    <string name="true_cloudv3_dialog_success_download">ดาวน์โหลดไฟล์สำเร็จ</string>
+
+    <string name="true_cloudv3_dialog_create_folder_cancel">ยกเลิก</string>
+    <string name="true_cloudv3_dialog_create_folder_create_folder">สร้างโฟลเดอร์</string>
+    <string name="true_cloudv3_dialog_create_folder_hint">ชื่อโฟลเดอร์</string>
+    <string name="true_cloudv3_dialog_rename_hint">ชื่อไฟล์ใหม่</string>
+
+    <string name="true_cloudv3_upload_header">อัปโหลด (%s)</string>
+    <string name="true_cloudv3_auto_backup_header">สำรองข้อมูล (%s)</string>
+    <string name="true_cloudv3_upload_cancel_all">ยกเลิกทั้งหมด</string>
+    <string name="true_cloudv3_d_selected">%d เลือก</string>
+    <string name="true_cloudv3_select_all">เลือกทั้งหมด</string>
+
+    <string name="true_cloudv3_edit_contact_firstname">ชื่อ</string>
+    <string name="true_cloudv3_edit_contact_lastname">นามสกุล</string>
+    <string name="true_cloudv3_edit_contact_email">อีเมล</string>
+    <string name="true_cloudv3_edit_contact_select_label">เลือกประเภท</string>
+    <string name="true_cloudv3_dialog_no_label">No Label</string>
+    <string name="true_cloudv3_dialog_mobile">Mobile</string>
+    <string name="true_cloudv3_dialog_work">ที่ทำงาน</string>
+    <string name="true_cloudv3_dialog_home">บ้าน</string>
+    <string name="true_cloudv3_dialog_main">Main</string>
+    <string name="true_cloudv3_dialog_work_fax">แฟกซ์ที่ทำงาน</string>
+    <string name="true_cloudv3_dialog_home_fax">แฟกซ์ที่บ้าน</string>
+    <string name="true_cloudv3_dialog_other">อื่นๆ</string>
+    <string name="true_cloudv3_dialog_custom">Custom</string>
+    <string name="true_cloudv3_dialog_label_name">ชื่อประเภท</string>
+    <string name="true_cloudv3_dialog_create">สร้าง</string>
+    <string name="true_cloudv3_dialog_custom_label_name">แก้ไข ชื่อประเภท</string>
+    <string name="true_cloudv3_edit_contact_label">ประเภท</string>
+    <string name="true_cloudv3_edit_contact_phone">เบอร์</string>
+    <string name="true_cloudv3_migrating_data">ถ่ายโอนข้อมูล</string>
+    <string name="true_cloudv3_migrate_data">ถ่ายโอนข้อมูล</string>
+    <string name="true_cloudv3_migrate_data_detail">ถ่ายโอนข้อมูลภายใน 31 พฤษภาคม 2566</string>
+    <string name="true_cloudv3_later">ย้ายภายหลัง</string>
+
+    <string name="true_cloudv3_binary_size_format">%.2f</string>
+    <string name="true_cloudv3_download_file_completed">ดาวน์โหลดไฟล์สำเร็จ</string>
+    <string name="true_cloudv3_download_file_error">ดาวน์โหลดไฟล์ ล้มเหลว : %s</string>
+    <string name="true_cloudv3_start_migration_data">เริ่มถ่ายโอนข้อมูลจาก True Cloud เวอร์ชั่นก่อนหน้า</string>
+    <string name="true_cloudv3_start_migration_detail">นี่คือทรูคลาวด์เวอร์ชั่นใหม่ คุณมีข้อมูลที่อัปโหลดไว้ในเวอร์ชั่นก่อนหน้า คุณสามารถถ่ายโอนข้อมูลมาที่เวอร์ชั่นนี้ได้</string>
+    <string name="true_cloudv3_migration_data_checking">กำลังตรวจสอบ...</string>
+    <string name="true_cloudv3_migration_data_migrating">กำลังถ่ายโอนข้อมูล...</string>
+    <string name="true_cloudv3_migration_data_detail">กำลังถ่ายโอนข้อมูลของคุณ คุณสามารถออกจากหน้านี้หรือ TrueID ได้ และสามารถกลับมาตรวจสอบได้ในภายหลังที่หน้าหลักทรูคลาวด์</string>
+
+    <string name="true_cloudv3_header_settings">ตั้งค่า</string>
+    <string name="true_cloudv3_migration_you_migration_failed">การถ่ายโอนข้อมูลล้มเหลว</string>
+    <string name="true_cloudv3_migration_please_try_migrate_again">กรุณาลองถ่ายโอนข้อมูลอีกครั้ง</string>
+    <string name="true_cloudv3_setting_you_storage_plan">ขนาดพื้นที่จัดเก็บของคุณ</string>
+    <string name="true_cloudv3_migration_close">ปิด</string>
+    <string name="true_cloudv3_migration_dismiss">กลับ</string>
+    <string name="true_cloudv3_migration_cancel">ยกเลิก</string>
+    <string name="true_cloudv3_migration_toast_success">อัปโหลดสำเร็จ</string>
+    <string name="true_cloudv3_migration_cancel_failed">Migration Cancel is failed.</string>
+    <string name="true_cloudv3_migration_time_remaining_na">เวลาที่เหลือ: N/A</string>
+    <string name="true_cloudv3_migration_do_you_want_to_cancel_it">คุณต้องการจะยกเลิกหรือไม่?</string>
+    <string name="true_cloudv3_migration_cancel_detail">หากคุณยกเลิก การถ่ายโอนข้อมูลจะจบลงในทันที แต่คุณจะพบข้อมูลที่ถูกถ่ายโอนมาแล้วได้ในทรูคลาวด์</string>
+
+    <string name="true_cloudv3_noti_title_downloading">กำลังดาวน์โหลด...</string>
+    <string name="true_cloudv3_noti_title_download_complete">ดาวน์โหลดสำเร็จ</string>
+    <string name="true_cloudv3_noti_title_download_failed">ดาวน์โหลดไม่สำเร็จ</string>
+    <string name="true_cloudv3_noti_title_download_pause">ดาวน์โหลด พัก</string>
+    <string name="true_cloudv3_noti_download_progress">%s%%</string>
+    <string name="true_cloudv3_select_a_file_to_upload">เลือกไฟล์สำหรับอัปโหลด</string>
+    <string name="true_cloudv3_select_file_exceeded_storage_size">ไฟล์ที่เลือกเกินขนาดพื้นที่จัดเก็บข้อมูล</string>
+    <string name="true_cloudv3_delete_this_contact">ลบรายชื่อ</string>
+    <string name="true_cloudv3_would_you_like_to_delete_this_contact">คุณต้องการจะลบรายชื่อนี้หรือไม่</string>
+    <string name="true_cloudv3_if_you_delete_this_contact">หากคุณเลือกที่จะลบ รายชื่อนี้จะถูกลบออก จากทรูคลาวด์</string>
+    <string name="true_cloudv3_delete_contact_successfully">ลบรายชื่อสำเร็จ</string>
+    <string name="true_cloudv3_added_new_folder">เพิ่มโฟล์เดอร์ใหม่ในไฟล์ทั้งหมด</string>
+    <string name="true_cloudv3_can_not_add_new_folder">ไม่สามารถเพิ่มโฟลเดอร์ใหม่ได้</string>
+    <string name="true_cloudv3_delete_item_successfully">ย้ายไฟล์ไปยังถังขยะ</string>
+    <string name="true_cloudv3_all_contact_were_synsed_to_true_cloud">ซิงค์รายชื่อทั้งหมดเข้าทรูคลาวด์</string>
+    <string name="true_cloudv3_can_not_sync_all_contacts_to_true_cloud">ไม่สามารถซิงค์รายชื่อทั้งหมดเข้าทรูคลาวด์</string>
+    <string name="true_cloudv3_see_image_info">ข้อมูลรูปภาพ</string>
+    <string name="true_cloudv3_see_file_info">ข้อมูลไฟล์</string>
+    <string name="true_cloudv3_dialog_file_info">ข้อมูล</string>
+    <string name="true_cloudv3_dialog_file_info_title_name">Name</string>
+    <string name="true_cloudv3_dialog_file_info_title_size">Size</string>
+    <string name="true_cloudv3_dialog_file_info_title_datetime">Time</string>
+    <string name="true_cloudv3_dialog_file_info_title_image_length">Image Height</string>
+    <string name="true_cloudv3_dialog_file_info_title_image_width">Image Width</string>
+    <string name="true_cloudv3_dialog_file_info_title_device">Device</string>
+    <string name="true_cloudv3_dialog_file_info_title_focal_length">Focal Length</string>
+    <string name="true_cloudv3_dialog_file_info_title_aperture">Aperture</string>
+    <string name="true_cloudv3_dialog_file_info_title_iso">ISO</string>
+    <string name="true_cloudv3_dialog_file_info_title_flash">Flash</string>
+    <string name="true_cloudv3_dialog_file_info_title_latitude">Latitude</string>
+    <string name="true_cloudv3_dialog_file_info_title_longitude">Longitude</string>
+    <string name="true_cloudv3_dialog_file_info_title_camera_owner_name">Camera owner name</string>
+    <string name="true_cloudv3_dialog_file_info_title_image_desc">Image description</string>
+    <string name="true_cloudv3_can_not_delete_contact">ไม่สามารถลบรายชื่อ</string>
+    <string name="true_cloudv3_added_contact_successfully">เพิ่มรายชื่อสำเร็จ</string>
+    <string name="true_cloudv3_can_not_add_contact_to_true_cloud">ไม่สามารถเพิ่มรายชื่อเข้าทรูคลาวด์</string>
+    <string name="true_cloudv3_share">แชร์</string>
+    <string name="true_cloudv3_save_shared">Option</string>
+    <string name="true_cloudv3_save_shared_to_my_cloud">บันทึกลงทรูคลาวด์ของฉัน</string>
+    <string name="true_cloudv3_save_shared_to_my_device">บันทึกลงเครื่อง</string>
+    <string name="true_cloudv3_save_shared_to_my_cloud_success">บันทึกลงทรูคลาวด์สำเร็จ</string>
+    <string name="ture_cloudv3_save_shared_to_my_device_success">บันทึกสำเร็จ</string>
+    <string name="true_cloudv3_view_private_file">เข้าถึงไฟล์ส่วนตัว</string>
+    <string name="true_cloudv3_view_private_file_text_hint">รหัสผ่าน</string>
+    <string name="true_cloudv3_view_private_file_text_error">ไฟล์นี้เป็นไฟล์ส่วนตัว \nคุณไม่สามารถเข้าถึงไฟล์นี้ได้ในขณะนี้ โปรดติดต่อเจ้าของไฟล์</string>
+    <string name="true_cloudv3_view_private_file_button_submit">ยืนยัน</string>
+    <string name="true_cloudv3_view_private_file_wrong_password">รหัสผ่านผิด</string>
+    <string name="true_cloudv3_share_via">แชร์ผ่าน</string>
+    <string name="true_cloudv3_copy_link">คัดลอกลิงก์</string>
+    <string name="true_cloudv3_copied_share_link">คัดลอกลิงก์สำหรับแชร์</string>
+    <string name="true_cloudv3_control_share_access">ตั้งค่าการเข้าถึงการแชร์</string>
+    <string name="true_cloudv3_control_access">ตั้งค่าการเข้าถึงการแชร์</string>
+    <string name="true_cloudv3_expiration_date">วันหมดอายุ</string>
+    <string name="true_cloudv3_choose_date">เลือกวันที่</string>
+    <string name="true_cloudv3_private">ส่วนตัว</string>
+    <string name="true_cloudv3_public">สาธารณะ</string>
+    <string name="true_cloudv3_password">รหัสผ่าน</string>
+    <string name="true_cloudv3_set_a_password">ตั้งค่ารหัสผ่าน</string>
+    <string name="true_cloudv3_maximum_characters">ตัวอักษรสูงสุด</string>
+    <string name="true_cloudv3_minimum_characters">ตัวอักษรขั้นต่ำ</string>
+    <string name="true_cloudv3_password_must_have_6_24_characters">รหัสผ่านต้องมีตั้งแต่ 6-24 ตัวอักษร</string>
+    <string name="true_cloudv3_6">6</string>
+    <string name="true_cloudv3_d24">%d/24</string>
+    <string name="true_cloudv3_update">อัปเดต</string>
+    <string name="true_cloudv3_update_successfully">อัปเดตสำเร็จ</string>
+    <string name="true_cloudv3_update_failed">อัปเดตไม่สำเร็จ</string>
+    <string name="true_cloudv3_text_password_star">******</string>
+    <string name="true_cloudv3_filter_by_keyword">ค้นหาด้วยคีย์เวิร์ด</string>
+    <string name="true_cloudv3_no_search_result">ไม่พบผลค้นหา\nโปรดลองใหม่อีกครั้งด้วยการสะกดใหม่หรือ\nลองคำอื่น</string>
+    <string name="true_cloudv3_dialog_selected_move_file">ย้ายไปยัง</string>
+    <string name="true_cloudv3_dialog_selected_copy_file">คัดลอกไปยัง</string>
+    <string name="true_cloudv3_dialog_selected_copy_file_option">คัดลอกไปยัง</string>
+    <string name="true_cloudv3_dialog_selected_delete">ลบ</string>
+    <string name="true_cloudv3_dialog_selected_favorite">รายการโปรด</string>
+    <string name="true_cloudv3_file_locator">%s %s</string>
+    <string name="true_cloudv3_file_locator_move">ย้าย</string>
+    <string name="true_cloudv3_file_locator_copy">คัดลอก</string>
+    <string name="true_cloudv3_file_locator_move_success">การย้ายสำเร็จ</string>
+    <string name="true_cloudv3_file_locator_move_error">การย้ายไม่สำเร็จ</string>
+    <string name="true_cloudv3_file_locator_copy_success">การคัดลอกสำเร็จ</string>
+    <string name="true_cloudv3_file_locator_copy_error">ไม่สามารถคัดลอกไฟล์ได้</string>
+    <string name="true_cloudv3_trash_empty_message">ไม่มีไฟล์ที่ถูกลบ</string>
+    <string name="true_cloudv3_dialog_trash">เคลียร์ถังขยะ</string>
+    <string name="true_cloudv3_delete_date">ถูกลบภายใน %s</string>
+    <string name="true_cloudv3_empty_trash_title">คุณต้องการจะเคลียร์ถังขยะหรือไม่</string>
+    <string name="true_cloudv3_empty_trash_desc">หากคุณเลือกที่จะเคลียร์ถังขยะ ไฟล์และโฟลเดอร์ทั้งหมดในถังขยะจะถูกลบออกจากทรูคลาวด์ถาวร</string>
+    <string name="true_cloudv3_empty_trash_success">เคลียร์ถังขยะสำเร็จ</string>
+    <string name="true_cloudv3_empty_trash_error">ไม่สามารถเคลียร์ถังขยะได้</string>
+    <string name="true_cloudv3_empty_trash_empty">ถังขยะว่างเปล่าขณะนี้</string>
+    <string name="true_cloudv3_empty_trash_restore">กู้คืน</string>
+    <string name="true_cloudv3_empty_trash_delete_permanent">ลบถาวร</string>
+    <string name="true_cloudv3_empty_trash_delete_permanent_title">คุณต้องการจะลบไฟล์นี้ถาวรหรือไม่</string>
+    <string name="true_cloudv3_empty_trash_delete_permanent_desc">หากคุณเลือกที่จะลบ ไฟล์นี้จะถูกลบออกจากทรูคลาวด์ถาวร</string>
+    <string name="true_cloudv3_empty_trash_delete_permanent_success">ลบถาวรสำเร็จ</string>
+    <string name="true_cloudv3_empty_trash_delete_permanent_failed">ไม่สามารถลบไฟล์ถาวรได้</string>
+    <string name="true_cloudv3_empty_trash_delete_permanent_multiple_success">ลบถาวรสำเร็จ %s ไฟล์</string>
+    <string name="true_cloudv3_empty_trash_restore_success">กู้คืนสำเร็จ</string>
+    <string name="true_cloudv3_empty_trash_restore_error">ไม่สามารถกู้คืนไฟล์ได้</string>
+    <string name="true_cloudv3_empty_trash_restore_multiple_success">กู้คืน %s ไฟล์สำเร็จ</string>
+    <string name="true_cloudv3_trash_multiple_file">ย้าย %s ไฟล์ไปยังถังขยะ</string>
+    <string name="true_cloudv3_delete_multiple_file">ลบถาวรสำเร็จ %s ไฟล์</string>
+    <string name="true_cloudv3_auto_backup_setting_title">เปิดใช้สำรองข้อมูล</string>
+    <string name="true_cloudv3_subscription_buy">Buy Storage</string>
+    <string name="true_cloudv3_storage_setting">การสำรองข้อมูล</string>
+    <string name="true_cloudv3_content_type_setting">ประเภทการสำรองข้อมูล</string>
+    <string name="true_cloudv3_auto_backup_button">สำรองข้อมูล</string>
+    <string name="true_cloudv3_auto_backup_button_active">เปิดใช้\nสำรองข้อมูล</string>
+    <string name="true_cloudv3_auto_backup_title_active">เริ่มสำรองข้อมูลอัตโนมัติตอนนี้</string>
+    <string name="true_cloudv3_auto_backup_desc_active">สำรองข้อมูลและบันทึกลงบนทรูคลาวด์อัตโนมัติ</string>
+    <string name="true_cloudv3_backing_up_files">กำลังสำรองข้อมูล</string>
+    <string name="true_cloudv3_backing_up_failed">สำรองข้อมูลล้มเหลว</string>
+    <string name="true_cloudv3_backing_up_tyr_again">โปรดสำรองข้อมูลใหม่อีกครั้ง</string>
+    <string name="true_cloudv3_auto_backup_time_remaining_hour">โปรดอยู่ในทรูคลาวด์เพื่อสำรองข้อมูลได้ต่อเนื่อง</string>
+    <string name="true_cloudv3_auto_backup_time_remaining_minute">โปรดอยู่ในทรูคลาวด์เพื่อสำรองข้อมูลได้ต่อเนื่อง</string>
+    <string name="true_cloudv3_auto_backup_toast">เปิดใช้สำรองข้อมูลสำเร็จ</string>
+    <plurals name="migrate_remaining_hour">
+        <item quantity="one">เวลาที่เหลือ: ประมาณ %d ชั่วโมง</item>
+        <item quantity="other">เวลาที่เหลือ: ประมาณ %d ชั่วโมง</item>
+    </plurals>
+    <plurals name="migrate_remaining_minute">
+        <item quantity="one">เวลาที่เหลือ: ประมาณ %d นาที</item>
+        <item quantity="other">เวลาที่เหลือ: ประมาณ %d นาที</item>
+    </plurals>
+
+    <string name="true_cloudv3_photo_editor_discard_dialog_title">ยกเลิกการเปลี่ยนแปลง</string>
+    <string name="true_cloudv3_photo_editor_discard_dialog_description">ต้องการยกเลิกการเปลี่ยนแปลงรูปภาพนี้กลับไปเป็นต้นฉบับหรือไม่</string>
+    <string name="true_cloudv3_photo_editor_discard_dialog_action_discard">เปลี่ยนกลับ</string>
+</resources>

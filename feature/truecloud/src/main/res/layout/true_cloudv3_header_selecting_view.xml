@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    tools:background="@android:color/white">
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/trueCloudImageViewClose"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/true_cloudv3_spacing_2s"
+        android:padding="@dimen/true_cloudv3_spacing_3s"
+        android:src="@drawable/ic_close_black"
+        android:tint="@color/black"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_chainStyle="packed" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/trueCloudTextViewSelectTitle"
+        style="@style/TrueID.Body.Bold.Black"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:gravity="start"
+        android:text="@string/true_cloudv3_d_selected"
+        app:layout_constraintBottom_toBottomOf="@+id/trueCloudImageViewClose"
+        app:layout_constraintEnd_toStartOf="@+id/trueCloudImageViewTrash"
+        app:layout_constraintStart_toEndOf="@+id/trueCloudImageViewClose"
+        app:layout_constraintTop_toTopOf="@+id/trueCloudImageViewClose" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/trueCloudImageViewTrash"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/true_cloudv3_spacing_3s"
+        android:padding="@dimen/true_cloudv3_spacing_s"
+        android:visibility="gone"
+        android:src="@drawable/ic_true_cloudv3_trash"
+        app:layout_constraintBottom_toBottomOf="@+id/trueCloudImageViewClose"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/trueCloudImageViewSelectOption"
+        app:layout_constraintTop_toTopOf="@+id/trueCloudImageViewClose"
+        app:layout_constraintVertical_chainStyle="packed" />
+
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/trueCloudImageViewSelectOption"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/true_cloudv3_spacing_3s"
+        android:padding="@dimen/true_cloudv3_spacing_s"
+        android:src="@drawable/ic_true_cloudv3_more"
+        android:tint="@color/black"
+        app:layout_constraintBottom_toBottomOf="@+id/trueCloudImageViewClose"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/trueCloudImageViewClose"
+        app:layout_constraintVertical_chainStyle="packed" />
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/true_cloudv3_spacing_3s"
+        android:gravity="center"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/trueCloudImageViewSelectOption">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/trueCloudImageViewActionSelectAll"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/true_cloudv3_spacing_m"
+            app:srcCompat="@drawable/ic_deselect"
+            tools:ignore="UnusedAttribute" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/trueCloudTextViewSelectAll"
+            style="@style/TrueID.Body.Black"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/true_cloudv3_select_all" />
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

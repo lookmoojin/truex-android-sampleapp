@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingBottom="@dimen/true_cloudv3_spacing_l"
+    android:background="@drawable/bg_white_true_cloudv3_upload_dialog"
+    android:orientation="vertical">
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:paddingHorizontal="@dimen/true_cloudv3_spacing_m"
+        android:paddingTop="@dimen/true_cloudv3_spacing_l"
+        android:paddingBottom="@dimen/true_cloudv3_spacing_2s">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            style="@style/TrueID.Header3.Bold.Black"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/true_cloudv3_dialog_create_new" />
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:layout_marginHorizontal="@dimen/true_cloudv3_spacing_m"
+        android:background="@color/true_cloudv3_line_separator_color2" />
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:paddingHorizontal="@dimen/true_cloudv3_spacing_m"
+        android:paddingBottom="@dimen/true_cloudv3_spacing_2s"
+        android:paddingTop="@dimen/true_cloudv3_spacing_2m">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/iconFolderImageView"
+            android:layout_width="@dimen/true_cloudv3_spacing_l"
+            android:layout_height="@dimen/true_cloudv3_spacing_l"
+            android:src="@drawable/ic_folder_open_24"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/trueCloudAddFolderTextView"
+            style="@style/TrueID.Header3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/true_cloudv3_spacing_m"
+            android:text="@string/true_cloudv3_dialog_folder" />
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:paddingHorizontal="@dimen/true_cloudv3_spacing_m"
+        android:paddingBottom="@dimen/true_cloudv3_spacing_2s"
+        android:paddingTop="@dimen/true_cloudv3_spacing_2m">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/iconUploadImageView"
+            android:layout_width="@dimen/true_cloudv3_spacing_l"
+            android:layout_height="@dimen/true_cloudv3_spacing_l"
+            android:src="@drawable/ic_round_cloud_upload_24"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/trueCloudUploadTextView"
+        style="@style/TrueID.Header3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/true_cloudv3_spacing_m"
+        android:text="@string/true_cloudv3_dialog_upload" />
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+</androidx.appcompat.widget.LinearLayoutCompat>

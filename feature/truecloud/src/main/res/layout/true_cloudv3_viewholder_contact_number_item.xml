@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tool="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="@dimen/true_cloudv3_spacing_2m"
+    android:layout_marginTop="@dimen/true_cloudv3_spacing_2m"
+    android:layout_marginEnd="@dimen/true_cloudv3_spacing_2m"
+    android:orientation="horizontal">
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:id="@+id/linearLayoutCompat"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/trueCloudPhoneNumberTextView"
+            style="@style/TrueID.Body.Black"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tool:text="+6688888888" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/trueCloudPhoneTypeTextView"
+            style="@style/TrueID.ExtraSmall.LightGrey"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tool:text="mobile" />
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/trueCloudCopyImageView"
+        android:layout_width="@dimen/true_cloudv3_spacing_l"
+        android:layout_height="@dimen/true_cloudv3_spacing_l"
+        android:padding="@dimen/true_cloudv3_spacing_s"
+        app:layout_constraintStart_toEndOf="@+id/linearLayoutCompat"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_truecloud_content_copy_24" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/trueCloudCallImageView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:padding="@dimen/true_cloudv3_spacing_2s"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:srcCompat="@drawable/ic_baseline_call_24" />
+
+</androidx.constraintlayout.widget.ConstraintLayout >

@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/background_true_cloudv3_item_grid">
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/trueCloudItemImageView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/trueCloudShapeAbleItemImageView"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/true_cloudv3_grid_width3"
+        android:scaleType="centerCrop"
+        app:layout_constraintDimensionRatio="3:2"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:shapeAppearanceOverlay="@style/ShapeAppearance.App.CornerRadius.MediumSmall" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/trueCloudNameTextView"
+        style="@style/TrueID.Body.Black"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/true_cloudv3_spacing_2s"
+        android:layout_marginEnd="@dimen/true_cloudv3_spacing_2s"
+        android:ellipsize="end"
+        android:maxLines="1"
+        app:layout_constraintBottom_toTopOf="@+id/trueCloudDetailTextView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:text="Image.png" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/trueCloudDetailTextView"
+        style="@style/TrueID.Small.LightGrey"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/true_cloudv3_spacing_2s"
+        android:layout_marginEnd="@dimen/true_cloudv3_spacing_2s"
+        android:layout_marginBottom="@dimen/true_cloudv3_spacing_2s"
+        android:ellipsize="end"
+        android:maxLines="1"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:text="12 Jan 22, 20:15, 1.1 Kb" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/trueCloudGridSelectImageView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/true_cloudv3_spacing_m"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/selector_background"
+        tools:ignore="UnusedAttribute" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

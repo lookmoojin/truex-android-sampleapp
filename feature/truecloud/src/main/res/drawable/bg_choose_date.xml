@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+    <solid android:color="@color/true_cloudv3_choose_date_blue" />
+    <corners
+        android:radius="@dimen/true_cloudv3_radius_size" />
+</shape>

@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center_horizontal"
+    android:background="@drawable/bg_white_true_cloudv3_create_new_folder_dialog"
+    android:gravity="center"
+    android:orientation="vertical">
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_width="350dp"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="vertical"
+        android:paddingHorizontal="@dimen/true_cloudv3_spacing_m"
+        android:paddingTop="@dimen/true_cloudv3_spacing_l"
+        android:paddingBottom="@dimen/true_cloudv3_spacing_2s">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/migratingImageView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_dialog_warning"
+            android:layout_gravity="center_horizontal"
+            android:gravity="center" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            style="@style/TrueID.Header3.Bold.Black"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/true_cloudv3_spacing_2s"
+            android:layout_marginTop="@dimen/true_cloudv3_spacing_2s"
+            android:gravity="center"
+            android:text="@string/true_cloudv3_migration_do_you_want_to_cancel_it" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            style="@style/TrueID.Body.LightGrey"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/true_cloudv3_spacing_2s"
+            android:ellipsize="end"
+            android:gravity="center"
+            android:maxLines="4"
+            android:text="@string/true_cloudv3_migration_cancel_detail" />
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/true_cloudv3_spacing_m"
+            android:orientation="horizontal">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/trueCloudDismissTextView"
+                style="@style/TrueID.Body"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/true_cloudv3_spacing_m"
+                android:layout_weight="1"
+                android:background="@drawable/button_dialog_outlined"
+                android:gravity="center"
+                android:padding="@dimen/true_cloudv3_spacing_3s"
+                android:text="@string/true_cloudv3_migration_dismiss"
+                android:textColor="@color/black" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/trueCloudCancelItgTextView"
+                style="@style/TrueID.Body"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/common_round_black"
+                android:gravity="center"
+                android:padding="@dimen/true_cloudv3_spacing_3s"
+                android:text="@string/true_cloudv3_migration_cancel"
+                android:textColor="@color/white" />
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+</androidx.appcompat.widget.LinearLayoutCompat>

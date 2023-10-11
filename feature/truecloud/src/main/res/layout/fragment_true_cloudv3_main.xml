@@ -1,0 +1,367 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <com.truedigital.common.share.componentv3.widget.CommonAppBar
+        android:id="@+id/trueCloudMainAppBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/TrueID.CommonAppBar"
+        app:cab_title="@string/true_cloudv3_page_name_title"
+        app:cab_title_content_description="@string/true_cloudv3_commonappbar_title" />
+
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/trueCloudNestedScrollView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true"
+        android:scrollbars="vertical"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"
+        tools:fillViewport="false">
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginStart="@dimen/true_cloudv3_spacing_m"
+            android:layout_marginEnd="@dimen/true_cloudv3_spacing_m"
+            android:orientation="vertical">
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:id="@+id/trueCloudLinearLayoutCompat"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <include
+                    android:id="@+id/trueCloudButton"
+                    layout="@layout/true_cloudv3_button_view" />
+
+                <com.truedigital.features.truecloudv3.widget.TrueCloudV3StorageView
+                    android:id="@+id/trueCloudStorageBarView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/true_cloudv3_spacing_m" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    style="@style/TrueID.Header1.Bold.Black"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/true_cloudv3_spacing_2s"
+                    android:gravity="center_vertical"
+                    android:text="@string/true_cloudv3_menu_collection" />
+
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    android:id="@+id/trueCloudMenuRecent"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:weightSum="2"
+                    android:layout_marginTop="@dimen/true_cloudv3_spacing_m">
+
+                    <androidx.appcompat.widget.LinearLayoutCompat
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1.2"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal">
+
+                        <com.google.android.material.imageview.ShapeableImageView
+                            style="@style/TrueID.CardView.ImageSquare"
+                            android:layout_width="@dimen/true_cloudv3_width"
+                            android:layout_height="@dimen/true_cloudv3_height"
+                            android:layout_marginTop="@dimen/true_cloudv3_spacing_2s"
+                            android:layout_marginBottom="@dimen/true_cloudv3_spacing_2s"
+                            android:src="@drawable/ic_true_cloudv3_recent_upload"
+                            app:shapeAppearanceOverlay="@style/ShapeAppearance.App.CornerRadius.Small" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            style="@style/TrueID.ExtraSmall"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/true_cloudv3_spacing_m"
+                            android:ellipsize="end"
+                            android:maxLines="1"
+                            android:text="@string/true_cloudv3_menu_recent_upload" />
+
+                    </androidx.appcompat.widget.LinearLayoutCompat>
+
+                    <androidx.appcompat.widget.LinearLayoutCompat
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight=".8"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal"
+                        android:visibility="invisible">
+
+                        <com.google.android.material.imageview.ShapeableImageView
+                            style="@style/TrueID.CardView.ImageSquare"
+                            android:layout_width="@dimen/true_cloudv3_width"
+                            android:layout_height="@dimen/true_cloudv3_height"
+                            android:layout_marginTop="@dimen/true_cloudv3_spacing_2s"
+                            android:layout_marginBottom="@dimen/true_cloudv3_spacing_2s"
+                            android:src="@drawable/ic_true_cloudv3_favorite"
+                            app:shapeAppearanceOverlay="@style/ShapeAppearance.App.CornerRadius.Small" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            style="@style/TrueID.ExtraSmall"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/true_cloudv3_spacing_m"
+                            android:ellipsize="end"
+                            android:maxLines="1"
+                            android:text="@string/true_cloudv3_menu_favorite" />
+
+                    </androidx.appcompat.widget.LinearLayoutCompat>
+
+                </androidx.appcompat.widget.LinearLayoutCompat>
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    style="@style/TrueID.Header1.Bold.Black"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/true_cloudv3_spacing_m"
+                    android:gravity="center_vertical"
+                    android:text="@string/true_cloudv3_category" />
+
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    android:id="@+id/trueCloudMenuImages"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/true_cloudv3_spacing_2s"
+                    android:contentDescription="@string/true_cloudv3_category_item_images"
+                    android:gravity="center_vertical"
+                    android:paddingTop="@dimen/true_cloudv3_spacing_2s"
+                    android:paddingBottom="@dimen/true_cloudv3_spacing_2s">
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:layout_width="@dimen/true_cloudv3_width"
+                        android:layout_height="@dimen/true_cloudv3_height"
+                        android:background="@drawable/bg_icon_oval"
+                        android:scaleType="centerInside"
+                        android:src="@drawable/access_ic_true_cloudv3_image" />
+
+                    <androidx.appcompat.widget.LinearLayoutCompat
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/true_cloudv3_spacing_m"
+                        android:orientation="vertical">
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            style="@style/TrueID.Body.Bold.Black"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/true_cloudv3_menu_images" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/trueCloudImagesSizeTextView"
+                            style="@style/TrueID.Small.LightGrey"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content" />
+
+                    </androidx.appcompat.widget.LinearLayoutCompat>
+                </androidx.appcompat.widget.LinearLayoutCompat>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:background="@color/true_cloudv3_line_separator_color" />
+
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    android:id="@+id/trueCloudMenuVideos"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:contentDescription="@string/true_cloudv3_category_item_videos"
+                    android:gravity="center_vertical"
+                    android:paddingTop="@dimen/true_cloudv3_spacing_2s"
+                    android:paddingBottom="@dimen/true_cloudv3_spacing_2s">
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:layout_width="@dimen/true_cloudv3_width"
+                        android:layout_height="@dimen/true_cloudv3_height"
+                        android:background="@drawable/bg_icon_oval"
+                        android:scaleType="centerInside"
+                        android:src="@drawable/access_ic_true_cloudv3_video" />
+
+                    <androidx.appcompat.widget.LinearLayoutCompat
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/true_cloudv3_spacing_m"
+                        android:orientation="vertical">
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            style="@style/TrueID.Body.Bold.Black"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/true_cloudv3_menu_videos" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/trueCloudVideosSizeTextView"
+                            style="@style/TrueID.Small.LightGrey"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content" />
+
+                    </androidx.appcompat.widget.LinearLayoutCompat>
+
+                </androidx.appcompat.widget.LinearLayoutCompat>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:background="@color/true_cloudv3_line_separator_color" />
+
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    android:id="@+id/trueCloudMenuAudio"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:contentDescription="@string/true_cloudv3_category_item_audio"
+                    android:gravity="center_vertical"
+                    android:paddingTop="@dimen/true_cloudv3_spacing_2s"
+                    android:paddingBottom="@dimen/true_cloudv3_spacing_2s">
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:layout_width="@dimen/true_cloudv3_width"
+                        android:layout_height="@dimen/true_cloudv3_height"
+                        android:background="@drawable/bg_icon_oval"
+                        android:scaleType="centerInside"
+                        android:src="@drawable/access_ic_true_cloudv3_audio" />
+
+                    <androidx.appcompat.widget.LinearLayoutCompat
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/true_cloudv3_spacing_m"
+                        android:orientation="vertical">
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            style="@style/TrueID.Body.Bold.Black"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/true_cloudv3_menu_audio" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/trueCloudAudioSizeTextView"
+                            style="@style/TrueID.Small.LightGrey"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content" />
+
+                    </androidx.appcompat.widget.LinearLayoutCompat>
+
+                </androidx.appcompat.widget.LinearLayoutCompat>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:background="@color/true_cloudv3_line_separator_color" />
+
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    android:id="@+id/trueCloudMenuFiles"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:contentDescription="@string/true_cloudv3_category_item_files"
+                    android:gravity="center_vertical"
+                    android:paddingTop="@dimen/true_cloudv3_spacing_2s"
+                    android:paddingBottom="@dimen/true_cloudv3_spacing_2s">
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:layout_width="@dimen/true_cloudv3_width"
+                        android:layout_height="@dimen/true_cloudv3_height"
+                        android:background="@drawable/bg_icon_oval"
+                        android:scaleType="centerInside"
+                        android:src="@drawable/access_ic_true_cloudv3_file" />
+
+                    <androidx.appcompat.widget.LinearLayoutCompat
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/true_cloudv3_spacing_m"
+                        android:orientation="vertical">
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            style="@style/TrueID.Body.Bold.Black"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/true_cloudv3_menu_others" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/trueCloudOthersSizeTextView"
+                            style="@style/TrueID.Small.LightGrey"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content" />
+
+                    </androidx.appcompat.widget.LinearLayoutCompat>
+
+                </androidx.appcompat.widget.LinearLayoutCompat>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:background="@color/true_cloudv3_line_separator_color" />
+
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    android:id="@+id/trueCloudMenuContacts"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:contentDescription="@string/true_cloudv3_category_item_contacts"
+                    android:gravity="center_vertical"
+                    android:paddingTop="@dimen/true_cloudv3_spacing_2s"
+                    android:paddingBottom="@dimen/true_cloudv3_spacing_2s">
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:layout_width="@dimen/true_cloudv3_width"
+                        android:layout_height="@dimen/true_cloudv3_height"
+                        android:background="@drawable/bg_icon_oval"
+                        android:scaleType="centerInside"
+                        android:src="@drawable/access_ic_true_cloudv3_contact" />
+
+                    <androidx.appcompat.widget.LinearLayoutCompat
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/true_cloudv3_spacing_m"
+                        android:orientation="vertical">
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            style="@style/TrueID.Body.Bold.Black"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/true_cloudv3_menu_contacts" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/trueCloudContactsSizeTextView"
+                            style="@style/TrueID.Small.LightGrey"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content" />
+
+                    </androidx.appcompat.widget.LinearLayoutCompat>
+
+                </androidx.appcompat.widget.LinearLayoutCompat>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:background="@color/true_cloudv3_line_separator_color" />
+
+            </androidx.appcompat.widget.LinearLayoutCompat>
+        </androidx.appcompat.widget.LinearLayoutCompat>
+    </androidx.core.widget.NestedScrollView>
+
+    <include
+        android:id="@+id/loadingProgressBar"
+        layout="@layout/true_cloudv3_progress_bar_loading_view"
+        android:visibility="gone" />
+
+    <com.github.clans.fab.FloatingActionButton
+        android:id="@+id/floatingButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|end"
+        android:layout_marginEnd="@dimen/true_cloudv3_spacing_m"
+        android:layout_marginBottom="@dimen/true_cloudv3_spacing_m"
+        android:contentDescription="@string/true_cloudv3_button_upload"
+        android:src="@drawable/fab_add"
+        app:fab_colorNormal="@color/black"
+        app:fab_colorPressed="@color/black_50"
+        app:fab_colorRipple="@color/gray"
+        app:fab_size="normal" />
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

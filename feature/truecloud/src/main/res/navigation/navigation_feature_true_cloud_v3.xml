@@ -1,0 +1,467 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation_feature_true_cloud_v3"
+    app:startDestination="@id/introTrueCloudFragment">
+
+    <fragment
+        android:id="@+id/introTrueCloudFragment"
+        android:name="com.truedigital.features.truecloudv3.presentation.IntroTrueCloudFragment"
+        tools:layout="@layout/fragment_intro_true_cloud">
+
+        <deepLink app:uri="trueidapp://truecloudv3" />
+
+        <action
+            android:id="@+id/action_introTrueCloudFragment_to_mainTrueCloudV3Fragment"
+            app:destination="@id/mainTrueCloudV3Fragment"
+            app:enterAnim="@anim/slide_in_down"
+            app:exitAnim="@anim/slide_out_top"
+            app:popEnterAnim="@anim/slide_in_top"
+            app:popExitAnim="@anim/slide_out_down"
+            app:popUpTo="@id/introTrueCloudFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/introTrueCloudSharedFileFragment"
+        android:name="com.truedigital.features.truecloudv3.presentation.IntroTrueCloudSharedFileFragment">
+
+        <action
+            android:id="@+id/action_introTrueCloudSharedFileFragment_to_sharedFileViewerFragment"
+            app:destination="@id/sharedFileViewerFragment"
+            app:popUpTo="@id/introTrueCloudSharedFileFragment"
+            app:popUpToInclusive="true" />
+        <deepLink
+            android:id="@+id/deepLink2"
+            app:uri="trueidapp://truecloudv3/share/{encryptedSharedObjectId}" />
+        <argument
+            android:name="encryptedSharedObjectId"
+            app:argType="string" />
+    </fragment>
+    <fragment
+        android:id="@+id/mainTrueCloudV3Fragment"
+        android:name="com.truedigital.features.truecloudv3.presentation.MainTrueCloudV3Fragment"
+        tools:layout="@layout/fragment_true_cloudv3_main">
+
+        <action
+            android:id="@+id/action_mainTrueCloudFragment_to_filesTrueCloudFragment"
+            app:destination="@id/filesTrueCloudFragment"
+            app:enterAnim="@anim/slide_in_down"
+            app:exitAnim="@anim/slide_out_top"
+            app:popEnterAnim="@anim/slide_in_top"
+            app:popExitAnim="@anim/slide_out_down" />
+
+        <action
+            android:id="@+id/action_mainTrueCloudFragment_to_createnewbottomsheet"
+            app:destination="@id/CreateNewBottomSheetDialogFragment"/>
+
+        <action
+            android:id="@+id/action_mainTrueCloudFragment_to_createNewFolderFragment"
+            app:destination="@id/createNewFolderFragment"/>
+        <action
+            android:id="@+id/action_mainTrueCloudFragment_to_contactFragment"
+            app:destination="@id/contactTrueCloudFragment"/>
+        <action
+            android:id="@+id/action_mainTrueCloudFragment_to_introMigrateDataFragment"
+            app:destination="@id/truecloudv3IntroMigrateDataFragment"/>
+        <action
+            android:id="@+id/action_mainTrueCloudFragment_to_settingTrueCloudV3Fragment"
+            app:destination="@id/truecloudv3SettingFragment"/>
+        <action
+            android:id="@+id/action_mainTrueCloudFragment_to_MigrateDataFragment"
+            app:destination="@id/MigrateDataFragment"/>
+
+        <action
+            android:id="@+id/action_mainTrueCloudFragment_to_trueCloudV3IntroPermissionFragment"
+            app:destination="@id/truecloudv3IntroPermissionFragment"
+            app:enterAnim="@anim/slide_in_down"
+            app:exitAnim="@anim/slide_out_top"
+            app:popEnterAnim="@anim/slide_in_top"
+            app:popExitAnim="@anim/slide_out_down" />
+
+        <action
+            android:id="@+id/action_mainTrueCloudFragment_to_createNewFolderDialogFragment"
+            app:destination="@id/createNewFolderDialogFragment"/>
+        <action
+            android:id="@+id/action_mainTrueCloudV3Fragment_to_trueCloudV3TrashFragment"
+            app:destination="@id/trueCloudV3TrashFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/truecloudv3IntroMigrateDataFragment"
+        android:name="com.truedigital.features.truecloudv3.presentation.IntroMigrateDataFragment"
+        tools:layout="@layout/fragment_intro_migrate_data" >
+        <action
+            android:id="@+id/action_IntroMigrateDataFragment_to_MigrateDataFragment"
+            app:destination="@id/MigrateDataFragment"/>
+    </fragment>
+    <fragment
+        android:id="@+id/MigrateDataFragment"
+        android:name="com.truedigital.features.truecloudv3.presentation.MigrateDataFragment"
+        tools:layout="@layout/fragment_migrate_data" />
+
+    <fragment
+        android:id="@+id/truecloudv3IntroPermissionFragment"
+        android:name="com.truedigital.features.truecloudv3.presentation.IntroPermissionFragment"
+        tools:layout="@layout/fragment_true_cloudv3_intro_permission" />
+
+    <fragment
+        android:id="@+id/truecloudv3ShareControlAccessFragment"
+        android:name="com.truedigital.features.truecloudv3.presentation.ShareControlAccessFragment"
+        tools:layout="@layout/fragment_share_control_access" />
+
+    <fragment
+        android:id="@+id/truecloudv3SettingFragment"
+        android:name="com.truedigital.features.truecloudv3.presentation.SettingTrueCloudV3Fragment"
+        tools:layout="@layout/fragment_true_cloudv3_setting" >
+        <action
+            android:id="@+id/action_SettingTrueCloudv3Fragment_to_MigrateDataFragment"
+            app:destination="@id/MigrateDataFragment"/>
+        <action
+            android:id="@+id/action_SettingTrueCloudv3Fragment_to_trueCloudV3AutoBackupSettingFragment"
+            app:destination="@id/trueCloudV3AutoBackupSettingFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/filesTrueCloudFragment"
+        android:name="com.truedigital.features.truecloudv3.presentation.FilesTrueCloudFragment"
+        tools:layout="@layout/fragment_true_cloudv3_files" >
+
+        <action
+            android:id="@+id/action_FileTrueCloudFragment_to_trueCloudV3IntroPermissionFragment"
+            app:destination="@id/truecloudv3IntroPermissionFragment"
+            app:enterAnim="@anim/slide_in_down"
+            app:exitAnim="@anim/slide_out_top"
+            app:popEnterAnim="@anim/slide_in_top"
+            app:popExitAnim="@anim/slide_out_down" />
+
+        <action
+            android:id="@+id/action_FileTrueCloudFragment_to_fileViewerFragment"
+            app:destination="@id/fileViewerFragment"
+            app:enterAnim="@anim/slide_in_down"
+            app:exitAnim="@anim/slide_out_top"
+            app:popEnterAnim="@anim/slide_in_top"
+            app:popExitAnim="@anim/slide_out_down" />
+
+        <action
+            android:id="@+id/action_FileTrueCloudFragment_to_optionMainFileBottomSheetDialogFragment"
+            app:destination="@id/optionMainFileBottomSheetDialogFragment"
+            app:enterAnim="@anim/slide_in_down"
+            app:exitAnim="@anim/slide_out_top"
+            app:popEnterAnim="@anim/slide_in_top"
+            app:popExitAnim="@anim/slide_out_down" />
+
+        <action
+            android:id="@+id/action_FileTrueCloudFragment_to_optionFileBottomSheetDialogFragment"
+            app:destination="@id/optionFileBottomSheetDialogFragment"
+            app:enterAnim="@anim/slide_in_down"
+            app:exitAnim="@anim/slide_out_top"
+            app:popEnterAnim="@anim/slide_in_top"
+            app:popExitAnim="@anim/slide_out_down" />
+
+        <action
+            android:id="@+id/action_FileTrueCloudFragment_to_optionFileSelectedBottomSheetDialogFragment"
+            app:destination="@id/optionFileSelectedBottomSheetDialogFragment"
+            app:enterAnim="@anim/slide_in_down"
+            app:exitAnim="@anim/slide_out_top"
+            app:popEnterAnim="@anim/slide_in_top"
+            app:popExitAnim="@anim/slide_out_down" />
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/fileViewerFragment"
+        android:name="com.truedigital.features.truecloudv3.presentation.FileViewerFragment"
+        tools:layout="@layout/fragment_true_cloudv3_file_viewer">
+
+        <action
+            android:id="@+id/action_FileViewerFragment_to_optionFileBottomSheetDialogFragment"
+            app:destination="@id/optionFileBottomSheetDialogFragment"
+            app:enterAnim="@anim/slide_in_down"
+            app:exitAnim="@anim/slide_out_top"
+            app:popEnterAnim="@anim/slide_in_top"
+            app:popExitAnim="@anim/slide_out_down" />
+    </fragment>
+    <fragment
+        android:id="@+id/sharedFileViewerFragment"
+        android:name="com.truedigital.features.truecloudv3.presentation.SharedFileViewerFragment"
+        tools:layout="@layout/fragment_true_cloudv3_shared_file_viewer">
+
+        <action
+            android:id="@+id/action_SharedFileViewerFragment_to_SharedFileBottomSheetDialogFragment"
+            app:destination="@id/saveSharedFileBottomSheetDialogFragment"
+            app:enterAnim="@anim/slide_in_down"
+            app:exitAnim="@anim/slide_out_top"
+            app:popEnterAnim="@anim/slide_in_top"
+            app:popExitAnim="@anim/slide_out_down" />
+        <action
+            android:id="@+id/action_sharedFileViewerFragment_to_mainTrueCloudV3Fragment"
+            app:popUpTo="@id/mainTrueCloudV3Fragment"
+            app:popUpToInclusive="false"
+            app:destination="@id/mainTrueCloudV3Fragment" />
+
+    </fragment>
+    <fragment
+        android:id="@+id/photoEditorFragment"
+        android:name="com.truedigital.features.truecloudv3.presentation.PhotoEditorFragment"
+        tools:layout="@layout/fragment_true_cloudv3_photo_editor">
+
+        <action
+            android:id="@+id/action_photoEditor_to_photoEditorTransformFragment"
+            app:destination="@id/photoEditorTransformFragment" />
+
+        <action
+            android:id="@+id/action_photoEditor_to_photoEditorAdjustFragment"
+            app:destination="@id/photoEditorAdjustFragment" />
+
+        <action
+            android:id="@+id/action_photoEditor_to_photoEditorFocusFragment"
+            app:destination="@id/photoEditorFocusFragment" />
+
+        <action
+            android:id="@+id/action_photoEditor_to_photoEditorTextFragment"
+            app:destination="@id/photoEditorTextFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/photoEditorTransformFragment"
+        android:name="com.truedigital.features.truecloudv3.presentation.PhotoEditorTransformFragment"
+        tools:layout="@layout/fragment_true_cloudv3_photo_editor_transform" />
+
+    <fragment
+        android:id="@+id/photoEditorAdjustFragment"
+        android:name="com.truedigital.features.truecloudv3.presentation.PhotoEditorAdjustFragment"
+        tools:layout="@layout/fragment_true_cloudv3_photo_editor_adjust" />
+
+    <fragment
+        android:id="@+id/photoEditorFocusFragment"
+        android:name="com.truedigital.features.truecloudv3.presentation.PhotoEditorFocusFragment"
+        tools:layout="@layout/fragment_true_cloudv3_photo_editor_focus" />
+
+    <fragment
+        android:id="@+id/photoEditorTextFragment"
+        android:name="com.truedigital.features.truecloudv3.presentation.PhotoEditorTextFragment"
+        tools:layout="@layout/fragment_true_cloudv3_photo_editor_text">
+
+        <action
+            android:id="@+id/action_photoEditorTextFragment_to_photoEditorTextInputDialogFragment"
+            app:destination="@id/photoEditorTextInputDialogFragment" />
+    </fragment>
+
+    <dialog
+        android:id="@+id/photoEditorTextInputDialogFragment"
+        android:name="com.truedigital.features.truecloudv3.presentation.PhotoEditorTextInputDialogFragment"
+        tools:layout="@layout/true_cloudv3_photo_editor_text_input_dialog" />
+
+    <fragment
+        android:id="@+id/contactTrueCloudFragment"
+        android:name="com.truedigital.features.truecloudv3.presentation.ContactFragment"
+        tools:layout="@layout/fragment_true_cloudv3_contact">
+        <action
+            android:id="@+id/action_ContactTrueCloudFragment_to_trueCloudV3IntroPermissionFragment"
+            app:destination="@id/truecloudv3IntroPermissionFragment"
+            app:enterAnim="@anim/slide_in_down"
+            app:exitAnim="@anim/slide_out_top"
+            app:popEnterAnim="@anim/slide_in_top"
+            app:popExitAnim="@anim/slide_out_down" />
+        <action
+            android:id="@+id/action_ContactTrueCloudFragment_to_trueCloudV3DetailBottomSheetDialogFragment"
+            app:destination="@id/trueCloudV3DetailBottomSheetDialogFragment"
+            app:enterAnim="@anim/slide_in_down"
+            app:exitAnim="@anim/slide_out_top"
+            app:popEnterAnim="@anim/slide_in_top"
+            app:popExitAnim="@anim/slide_out_down" />
+        <action
+            android:id="@+id/action_ContactTrueCloudFragment_to_trueCloudV3OptionContactBottomSheetDialogFragment"
+            app:destination="@id/trueCloudV3OptionContactBottomSheetDialogFragment"
+            app:enterAnim="@anim/slide_in_down"
+            app:exitAnim="@anim/slide_out_top"
+            app:popEnterAnim="@anim/slide_in_top"
+            app:popExitAnim="@anim/slide_out_down" />
+        <action
+            android:id="@+id/action_ContactTrueCloudFragment_to_trueCloudV3SyncContactBottomSheetDialogFragment"
+            app:destination="@id/trueCloudV3SyncContactBottomSheetDialogFragment"
+            app:enterAnim="@anim/slide_in_down"
+            app:exitAnim="@anim/slide_out_top"
+            app:popEnterAnim="@anim/slide_in_top"
+            app:popExitAnim="@anim/slide_out_down" />
+
+    </fragment>
+    <fragment
+        android:id="@+id/trueCloudV3EditContactFragment"
+        android:name="com.truedigital.features.truecloudv3.presentation.ContactEditFragment"
+        tools:layout="@layout/fragment_true_cloudv3_edit_contact" >
+
+        <action
+            android:id="@+id/action_TrueCloudV3EditContactFragment_to_trueCloudV3ContactSelectLabelBottomSheetDialogFragment"
+            app:destination="@id/trueCloudV3ContactSelectLabelBottomSheetDialogFragment"
+            app:enterAnim="@anim/slide_in_down"
+            app:exitAnim="@anim/slide_out_top"
+            app:popEnterAnim="@anim/slide_in_top"
+            app:popExitAnim="@anim/slide_out_down" />
+    </fragment>
+    <fragment
+        android:id="@+id/trueCloudv3FileLocatorFragment"
+        android:name="com.truedigital.features.truecloudv3.presentation.FileLocatorFragment"
+        tools:layout="@layout/fragment_true_cloudv3_file_locator">
+    </fragment>
+    <fragment
+        android:id="@+id/trueCloudV3TrashFragment"
+        android:name="com.truedigital.features.truecloudv3.presentation.TrashTrueCloudV3Fragment"
+        tools:layout="@layout/fragment_trash_true_cloud_v3">
+        <action
+            android:id="@+id/action_trueCloudV3TrashFragment_to_optionTrashFileBottomSheetDialogFragment"
+            app:destination="@id/optionTrashFileBottomSheetDialogFragment"
+            app:enterAnim="@anim/slide_in_down"
+            app:exitAnim="@anim/slide_out_top"
+            app:popEnterAnim="@anim/slide_in_top"
+            app:popExitAnim="@anim/slide_out_down"/>
+        <action
+            android:id="@+id/action_trueCloudV3TrashFragment_to_optionMainFileBottomSheetDialogFragment"
+            app:destination="@id/optionMainFileBottomSheetDialogFragment"
+            app:enterAnim="@anim/slide_in_down"
+            app:exitAnim="@anim/slide_out_top"
+            app:popEnterAnim="@anim/slide_in_top"
+            app:popExitAnim="@anim/slide_out_down"/>
+    </fragment>
+    <fragment
+        android:id="@+id/trueCloudV3AutoBackupSettingFragment"
+        android:name="com.truedigital.features.truecloudv3.presentation.AutoBackupSettingFragment"
+        tools:layout="@layout/fragment_true_cloudv3_auto_backup_setting">
+    </fragment>
+    <dialog
+        android:id="@+id/createNewFolderFragment"
+        android:name="com.truedigital.features.truecloudv3.presentation.CreateNewFolderDialogFragment"
+        tools:layout="@layout/fragment_true_cloudv3_add_new_folder" />
+
+    <dialog
+        android:id="@+id/trueCloudV3DetailBottomSheetDialogFragment"
+        android:name="com.truedigital.features.truecloudv3.presentation.CreateContactDetailBottomSheetDialogFragment"
+        tools:layout="@layout/true_cloudv3_contact_details_bottom_sheet_dialog" >
+        <action
+            android:id="@+id/action_TrueCloudV3DetailBottomSheetDialogFragment_to_trueCloudV3EditContactFragment"
+            app:destination="@id/trueCloudV3EditContactFragment"
+            app:enterAnim="@anim/slide_in_down"
+            app:exitAnim="@anim/slide_out_top"
+            app:popEnterAnim="@anim/slide_in_top"
+            app:popExitAnim="@anim/slide_out_down" />
+    </dialog>
+    <dialog
+        android:id="@+id/trueCloudV3OptionContactBottomSheetDialogFragment"
+        android:name="com.truedigital.features.truecloudv3.presentation.CreateOptionContactBottomSheetDialogFragment"
+        tools:layout="@layout/true_cloudv3_contact_bottom_sheet_dialog" />
+    <dialog
+        android:id="@+id/trueCloudV3SyncContactBottomSheetDialogFragment"
+        android:name="com.truedigital.features.truecloudv3.presentation.CreateSyncContactBottomSheetDialogFragment"
+        tools:layout="@layout/true_cloudv3_sync_contact_bottom_sheet_dialog" />
+
+    <dialog
+        android:id="@+id/trueCloudV3CustomLabelDialogFragment"
+        android:name="com.truedigital.features.truecloudv3.presentation.CreateContactCustomLabelDialogFragment"
+        tools:layout="@layout/fragment_true_cloudv3_create_label" />
+    <dialog
+        android:id="@+id/trueCloudV3ContactSelectLabelBottomSheetDialogFragment"
+        android:name="com.truedigital.features.truecloudv3.presentation.CreateContactSelectLabelBottomSheetDialogFragment"
+        tools:layout="@layout/true_cloudv3_edit_contact_bottom_sheet_dialog" >
+
+        <action
+            android:id="@+id/action_TrueCloudV3ContactSelectLabelBottomSheetDialogFragment_to_trueCloudV3CustomLabelDialogFragment"
+            app:destination="@id/trueCloudV3CustomLabelDialogFragment"
+            app:enterAnim="@anim/slide_in_down"
+            app:exitAnim="@anim/slide_out_top"
+            app:popEnterAnim="@anim/slide_in_top"
+            app:popExitAnim="@anim/slide_out_down" />
+    </dialog>
+    <dialog
+        android:id="@+id/createRenameFragment"
+        android:name="com.truedigital.features.truecloudv3.presentation.RenameDialogFragment"
+        tools:layout="@layout/fragment_true_cloudv3_rename_file" />
+
+    <dialog
+        android:id="@+id/CreateNewBottomSheetDialogFragment"
+        android:name="com.truedigital.features.truecloudv3.presentation.CreateNewBottomSheetDialogFragment"
+        android:label="CreateNewBottomSheetDialogFragment"
+        tools:layout="@layout/true_cloudv3_create_new_bottom_sheet_dialog"/>
+    <dialog
+        android:id="@+id/optionMainFileBottomSheetDialogFragment"
+        android:name="com.truedigital.features.truecloudv3.presentation.OptionMainFileBottomSheetDialogFragment"
+        android:label="OptionMainFileBottomSheetDialogFragment"
+        tools:layout="@layout/true_cloudv3_more_option_bottom_sheet_dialog">
+        <action
+            android:id="@+id/action_OptionMainFileBottomSheetDialogFragment_to_createNewFolderDialogFragment"
+            app:destination="@id/createNewFolderDialogFragment"/>
+        <action
+            android:id="@+id/action_OptionMainFileBottomSheetDialogFragment_to_sortByBottomSheetDialogFragment"
+            app:destination="@id/sortByBottomSheetDialogFragment"/>
+    </dialog>
+    <dialog
+        android:id="@+id/sortByBottomSheetDialogFragment"
+        android:name="com.truedigital.features.truecloudv3.presentation.SortByBottomSheetDialogFragment"
+        android:label="SortByBottomSheetDialogFragment"
+        tools:layout="@layout/true_cloudv3_sort_by_bottom_sheet_dialog"/>
+    <dialog
+        android:id="@+id/createNewFolderDialogFragment"
+        android:name="com.truedigital.features.truecloudv3.presentation.CreateNewFolderDialogFragment"
+        android:label="CreateNewFolderDialogFragment"
+        tools:layout="@layout/fragment_true_cloudv3_add_new_folder"/>
+    <dialog
+        android:id="@+id/optionFileBottomSheetDialogFragment"
+        android:name="com.truedigital.features.truecloudv3.presentation.OptionFileBottomSheetDialogFragment"
+        android:label="OptionFileBottomSheetDialogFragment"
+        tools:layout="@layout/true_cloudv3_file_bottom_sheet_dialog">
+        <action
+            android:id="@+id/action_optionFileBottomSheetDialogFragment_to_renameDialogFragment"
+            app:destination="@id/renameDialogFragment"/>
+        <action
+            android:id="@+id/action_optionFileBottomSheetDialogFragment_to_fileInfoBottomSheetDialogFragment"
+            app:destination="@id/fileInfoBottomSheetDialogFragment"/>
+        <action
+            android:id="@+id/action_optionFileBottomSheetDialogFragment_to_shareBottomSheetDialogFragment"
+            app:destination="@id/shareBottomSheetDialogFragment"/>
+        <action
+            android:id="@+id/action_optionFileBottomSheetDialogFragment_to_photoEditorFragment"
+            app:destination="@id/photoEditorFragment" />
+    </dialog>
+    <dialog
+        android:id="@+id/shareBottomSheetDialogFragment"
+        android:name="com.truedigital.features.truecloudv3.presentation.ShareBottomSheetDialogFragment"
+        android:label="ShareBottomSheetDialogFragment"
+        tools:layout="@layout/true_cloudv3_share_bottom_sheet_dialog" >
+        <action
+            android:id="@+id/action_ShareBottomSheetDialogFragment_to_ShareControlAccessFragment"
+            app:destination="@id/truecloudv3ShareControlAccessFragment"/>
+    </dialog>
+    <dialog
+        android:id="@+id/fileInfoBottomSheetDialogFragment"
+        android:name="com.truedigital.features.truecloudv3.presentation.FileInfoBottomSheetDialogFragment"
+        android:label="FileInfoBottomSheetDialogFragment"
+        tools:layout="@layout/true_cloudv3_file_info_bottom_sheet_dialog"/>
+    <dialog
+        android:id="@+id/renameDialogFragment"
+        android:name="com.truedigital.features.truecloudv3.presentation.RenameDialogFragment"
+        android:label="RenameDialogFragment"
+        tools:layout="@layout/fragment_true_cloudv3_rename_file"/>
+
+    <dialog
+        android:id="@+id/saveSharedFileBottomSheetDialogFragment"
+        android:name="com.truedigital.features.truecloudv3.presentation.SaveSharedFileBottomSheetDialogFragment"
+        android:label="SaveSharedFileBottomSheetDialogFragment"
+        tools:layout="@layout/true_cloudv3_save_shared_file_bottom_sheet_dialog" />
+    <dialog
+        android:id="@+id/optionFileSelectedBottomSheetDialogFragment"
+        android:name="com.truedigital.features.truecloudv3.presentation.OptionFileSelectedBottomSheetDialogFragment"
+        android:label="OptionFileSelectedBottomSheetDialogFragment"
+        tools:layout="@layout/true_cloudv3_file_selected_option_bottom_sheet_dialog">
+        <action
+            android:id="@+id/action_FileSelectedBottomSheet_to_trueCloudV3FileLocatorFragment"
+            app:destination="@id/trueCloudv3FileLocatorFragment"
+            app:enterAnim="@anim/slide_in_down"
+            app:exitAnim="@anim/slide_out_top"
+            app:popEnterAnim="@anim/slide_in_top"
+            app:popExitAnim="@anim/slide_out_down" />
+    </dialog>
+    <dialog
+        android:id="@+id/optionTrashFileBottomSheetDialogFragment"
+        android:name="com.truedigital.features.truecloudv3.presentation.OptionTrashFileBottomSheetDialogFragment"
+        android:label="OptionTrashFileBottomSheetDialogFragment"
+        tools:layout="@layout/true_cloudv3_trash_option_bottom_sheet_dialog"/>
+</navigation>

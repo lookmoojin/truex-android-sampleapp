@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/true_cloudv3_gray98">
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/iconImageView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginBottom="12dp"
+        android:src="@drawable/ic_true_cloudv3_uploading"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:shapeAppearanceOverlay="@style/ShapeAppearance.App.CircleImageView" />
+
+    <com.google.android.material.progressindicator.LinearProgressIndicator
+        android:id="@+id/progressBar"
+        android:layout_width="0dp"
+        android:layout_height="4dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="16dp"
+        android:contentDescription="@string/true_cloudv3_upload_progress_bar"
+        android:indeterminate="false"
+        android:max="100"
+        app:indicatorColor="@color/black"
+        app:layout_constraintEnd_toStartOf="@+id/cancelUploadingImageView"
+        app:layout_constraintStart_toEndOf="@+id/iconImageView"
+        app:layout_constraintTop_toTopOf="@+id/iconImageView"
+        app:trackColor="@color/true_cloudv3_gray82"
+        app:trackCornerRadius="8dp"
+        tools:background="@color/black" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/cancelUploadingImageView"
+        android:layout_width="18dp"
+        android:layout_height="18dp"
+        android:layout_marginEnd="16dp"
+        android:contentDescription="@string/true_cloudv3_upload_cancel_imageview"
+        android:padding="4dp"
+        android:src="@drawable/ic_close_white"
+        android:tint="@color/black"
+        app:layout_constraintBottom_toBottomOf="@+id/iconImageView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/iconImageView" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/totalUploadTextView"
+        style="@style/TrueID.ExtraSmall.LightGrey"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:contentDescription="@string/true_cloudv3_upload_total_textview"
+        app:layout_constraintBottom_toBottomOf="@+id/iconImageView"
+        app:layout_constraintStart_toStartOf="@+id/progressBar"
+        app:layout_constraintTop_toBottomOf="@+id/progressBar"
+        tools:text="Uploading 20 files" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/progressUploadTextView"
+        style="@style/TrueID.ExtraSmall.LightGrey"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:contentDescription="@string/true_cloudv3_upload_count_textview"
+        app:layout_constraintBottom_toBottomOf="@+id/iconImageView"
+        app:layout_constraintEnd_toEndOf="@+id/progressBar"
+        app:layout_constraintTop_toBottomOf="@+id/progressBar"
+        tools:text="3/5" />
+</androidx.constraintlayout.widget.ConstraintLayout>

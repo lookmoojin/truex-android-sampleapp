@@ -1,0 +1,85 @@
+plugins {
+    id 'com.android.library'
+    id 'androidx.navigation.safeargs'
+    id 'kotlin-parcelize'
+}
+
+android {
+    namespace 'com.tdg.feature.truecloud'
+    compileSdk 33
+
+    defaultConfig {
+        minSdk 26
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        consumerProguardFiles "consumer-rules.pro"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    productFlavors {
+        staging {
+            buildConfigField 'String', 'BASE_URL_TRUE_CLOUD', '"https://drive-customer-api-alpha.trueid-preprod.net/drive/"'
+            buildConfigField 'String', 'BASE_URL_PUBLIC', '"https://cloudshare.trueid-alpha.net/public-api/"'
+        }
+
+        preprod {
+            buildConfigField 'String', 'BASE_URL_TRUE_CLOUD', '"https://drive-customer-api-alpha.trueid-preprod.net/drive/"'
+            buildConfigField 'String', 'BASE_URL_PUBLIC', '"https://cloudshare.trueid-alpha.net/public-api/"'
+        }
+
+        prod {
+            buildConfigField 'String', 'BASE_URL_TRUE_CLOUD', '"https://drive-customer-api.trueid.net/drive/"'
+            buildConfigField 'String', 'BASE_URL_PUBLIC', '"https://cloudshare.trueid.net/public-api/"'
+        }
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    buildFeatures {
+        viewBinding true
+    }
+}
+
+dependencies {
+    implementation 'com.squareup.retrofit2:converter-gson:2.5.0'
+//    implementation project(':common:core')
+//    implementation project(':common:navigation')
+//    implementation project(':common:share:analytics')
+//    implementation project(':common:share:component')
+//    implementation project(':common:share:component-v3')
+//    implementation project(':common:share:currentdate')
+//    implementation project(':common:share:datalegacy')
+//    implementation project(':common:share:data:coredata')
+//    implementation project(':common:share:data:firestoreconfig')
+//    implementation project(':features:discover:apppermission')
+//    implementation project(':features:music')
+//
+//    testImplementation project(':common:share:mock')
+//
+//    implementation amazonaws.truecloudAws
+//    implementation amazonaws.truecloudAwsMobileClient
+//    implementation amazonaws.truecloudAwsAuthUserpools
+//    implementation broakenmedia.multiContactPicker
+//    implementation imageUtil.photoEditor
+//    implementation imageUtil.imageCropper
+//    implementation view.startPointSeekBar
+//    implementation view.colorPicker
+
+//    DataStore()
+//    Glide()
+//    ImageUtil()
+//    View()
+//    UnitTesting()
+}
+
+ext {
+    isBelongTo = "external-dev"
+}

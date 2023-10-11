@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/trueCloudUploadTitleLayout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="@dimen/true_cloudv3_spacing_m"
+    android:layout_marginEnd="@dimen/true_cloudv3_spacing_m"
+    android:layout_marginTop="@dimen/true_cloudv3_spacing_3s">
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/trueCloudTextViewAllFilesTitle"
+        style="@style/TrueID.Header3.Bold.Black"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/true_cloudv3_spacing_2s"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:text="@string/true_cloudv3_menu_all_files"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

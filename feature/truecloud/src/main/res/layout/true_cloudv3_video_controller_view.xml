@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/controlLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ViewFlipper
+        android:id="@+id/playPauseBackgroundViewFlipper"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/playBackgroundImageView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_true_cloudv3_player_play" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/pauseBackgroundImageView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_true_cloudv3_player_pause" />
+    </ViewFlipper>
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@color/true_cloudv3_video_controller_bg"
+        android:paddingVertical="@dimen/true_cloudv3_spacing_m"
+        android:paddingStart="@dimen/true_cloudv3_spacing_2m"
+        android:paddingEnd="@dimen/true_cloudv3_spacing_l"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <com.truedigital.features.truecloudv3.widget.TrueCloudV3PlayerSeekBarView
+            android:id="@+id/trueCloudPlayerSeekBar"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1" />
+
+        <ViewFlipper
+            android:id="@+id/toggleFullscreenViewFlipper"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/fullscreenImageView"
+                android:layout_width="36dp"
+                android:layout_height="36dp"
+                android:layout_gravity="center"
+                android:clickable="true"
+                android:focusable="true"
+                android:padding="8dp"
+                android:scaleType="fitCenter"
+                android:src="@drawable/ic_true_cloudv3_fullscreen" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/exitFullscreenImageView"
+                android:layout_width="36dp"
+                android:layout_height="36dp"
+                android:layout_gravity="center"
+                android:clickable="true"
+                android:focusable="true"
+                android:padding="8dp"
+                android:scaleType="fitCenter"
+                android:src="@drawable/ic_true_cloudv3_fullscreen_exit" />
+        </ViewFlipper>
+
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

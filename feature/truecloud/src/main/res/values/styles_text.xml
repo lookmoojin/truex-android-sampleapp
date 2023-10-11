@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="TrueID.TrueCloudWidget">
+        <item name="fontFamily">@font/font_true_cloudv3_widget</item>
+        <item name="android:fontFamily">@font/font_true_cloudv3_widget</item>
+    </style>
+
+    <style name="TrueID.TrueCloudWidget.Small">
+        <item name="android:textSize">10sp</item>
+        <item name="android:textStyle">normal</item>
+        <item name="android:lineSpacingExtra">4sp</item>
+    </style>
+
+    <style name="TrueID.TrueCloudWidget.Small.Black">
+        <item name="android:lineSpacingExtra">0.25sp</item>
+        <item name="android:textColor">@color/grey_700</item>
+    </style>
+
+    <style name="TrueID.TrueCloudWidget.Small.Bold">
+        <item name="android:textStyle">bold</item>
+        <item name="android:lineSpacingExtra">4sp</item>
+    </style>
+
+    <style name="TrueID.TrueCloudWidget.Small.Bold.Black">
+        <item name="android:textColor">@color/grey_700</item>
+    </style>
+
+    <style name="TrueID.TrueCloudWidget.Body">
+        <item name="android:textSize">14sp</item>
+        <item name="android:letterSpacing">0.03</item>
+        <item name="android:textStyle">normal</item>
+    </style>
+
+    <style name="TrueID.TrueCloudWidget.Body.Black">
+        <item name="android:textColor">@color/light_primary</item>
+    </style>
+
+    <style name="TrueID.TrueCloudWidget.Body.Bold">
+        <item name="android:textStyle">bold</item>
+        <item name="android:lineSpacingExtra">4sp</item>
+    </style>
+
+    <style name="TrueID.TrueCloudWidget.Body.Bold.Black">
+        <item name="android:textColor">@color/light_primary</item>
+    </style>
+
+    <style name="Widget.AppTheme.TextInputLayout" parent="Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense">
+        <item name="boxStrokeColor">@color/true_cloudv3_color_black</item>
+        <item name="boxStrokeWidth">2dp</item>
+        <item name="boxCornerRadiusBottomEnd">@dimen/true_cloudv3_spacing_2s</item>
+        <item name="boxCornerRadiusBottomStart">@dimen/true_cloudv3_spacing_2s</item>
+        <item name="boxCornerRadiusTopEnd">@dimen/true_cloudv3_spacing_2s</item>
+        <item name="boxCornerRadiusTopStart">@dimen/true_cloudv3_spacing_2s</item>
+        <item name="android:textColorHint">@color/true_cloudv3_color_black</item>
+    </style>
+
+    <style name="ThemeOverlay.AppTheme.TextInputEditText.Outlined" parent="">
+        <item name="colorPrimary">@color/true_cloudv3_color_gray_30</item>
+    </style>
+    <style name="ThemeOverlay.AppTheme.TextInputEditText.Outlined.Gray" parent="">
+        <item name="colorPrimary">@color/true_cloudv3_color_gray</item>
+    </style>
+</resources>
