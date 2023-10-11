@@ -15,3 +15,4 @@ dependencyResolutionManagement {
 
 rootProject.name = "truex-android-sampleapp"
 include ':app'
+include ':login'
