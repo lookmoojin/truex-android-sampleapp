@@ -1,0 +1,90 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<SmellBaseline>
+  <ManuallySuppressedIssues/>
+  <CurrentIssues>
+    <ID>FunctionNaming:EncryptUtil.kt$EncryptUtilImpl$ @Throws(NoSuchAlgorithmException::class, UnsupportedEncodingException::class) private fun SHA256(text: String, length: Int): String</ID>
+    <ID>FunctionParameterNaming:EncryptUtil.kt$EncryptUtilImpl$_encryptionKey: String</ID>
+    <ID>FunctionParameterNaming:EncryptUtil.kt$EncryptUtilImpl$_initVector: String</ID>
+    <ID>FunctionParameterNaming:EncryptUtil.kt$EncryptUtilImpl$_inputText: String</ID>
+    <ID>FunctionParameterNaming:EncryptUtil.kt$EncryptUtilImpl$_mode: EncryptMode</ID>
+    <ID>FunctionParameterNaming:Functions.kt$TAG: String = ""</ID>
+    <ID>FunctionParameterNaming:NavigationExtension.kt$_navigationId: Int</ID>
+    <ID>ImplicitDefaultLocale:EncryptUtil.kt$EncryptUtilImpl$String.format("%02x", b)</ID>
+    <ID>ImplicitDefaultLocale:IntegerExtension.kt$String.format("%x", this)</ID>
+    <ID>MagicNumber:DateLongExtension.kt$543</ID>
+    <ID>MagicNumber:DateStringExtension.kt$100</ID>
+    <ID>MagicNumber:DateStringExtension.kt$543</ID>
+    <ID>MagicNumber:DeviceRepository.kt$DeviceRepositoryImpl$10</ID>
+    <ID>MagicNumber:DoubleExtension.kt$10</ID>
+    <ID>MagicNumber:DoubleExtension.kt$10.0</ID>
+    <ID>MagicNumber:DoubleExtension.kt$100</ID>
+    <ID>MagicNumber:DoubleExtension.kt$1000</ID>
+    <ID>MagicNumber:EncryptUtil.kt$EncryptUtilImpl$0xFF</ID>
+    <ID>MagicNumber:EncryptUtil.kt$EncryptUtilImpl$16</ID>
+    <ID>MagicNumber:EncryptUtil.kt$EncryptUtilImpl$32</ID>
+    <ID>MagicNumber:ErrorHandlingCallAdapterFactory.kt$CommonCallAdapter.&lt;no name provided>$200</ID>
+    <ID>MagicNumber:ErrorHandlingCallAdapterFactory.kt$CommonCallAdapter.&lt;no name provided>$299</ID>
+    <ID>MagicNumber:ErrorHandlingCallAdapterFactory.kt$CommonCallAdapter.&lt;no name provided>$400</ID>
+    <ID>MagicNumber:ErrorHandlingCallAdapterFactory.kt$CommonCallAdapter.&lt;no name provided>$401</ID>
+    <ID>MagicNumber:ErrorHandlingCallAdapterFactory.kt$CommonCallAdapter.&lt;no name provided>$499</ID>
+    <ID>MagicNumber:ErrorHandlingCallAdapterFactory.kt$CommonCallAdapter.&lt;no name provided>$500</ID>
+    <ID>MagicNumber:ErrorHandlingCallAdapterFactory.kt$CommonCallAdapter.&lt;no name provided>$599</ID>
+    <ID>MagicNumber:GetCountViewFormatUseCase.kt$GetCountViewFormatUseCaseImpl$1000</ID>
+    <ID>MagicNumber:GetCountViewFormatUseCase.kt$GetCountViewFormatUseCaseImpl$100000</ID>
+    <ID>MagicNumber:GetCountViewFormatUseCase.kt$GetCountViewFormatUseCaseImpl$1000000</ID>
+    <ID>MagicNumber:GetCountViewFormatUseCase.kt$GetCountViewFormatUseCaseImpl$10000000</ID>
+    <ID>MagicNumber:IntegerExtension.kt$0x00FFFFFF</ID>
+    <ID>MagicNumber:IntegerExtension.kt$0xFF</ID>
+    <ID>MagicNumber:IntegerExtension.kt$24</ID>
+    <ID>MagicNumber:IntegerExtension.kt$60</ID>
+    <ID>MagicNumber:StringExtension.kt$16</ID>
+    <ID>MatchingDeclarationName:Extensions.kt$Constants</ID>
+    <ID>MaxLineLength:ConnectivityStateHolder.kt$ConnectivityStateHolder$*</ID>
+    <ID>MaxLineLength:ErrorHandlingCallAdapterFactory.kt$ErrorHandlingCallAdapterFactory$check(returnType is ParameterizedType) { "CommonCall must have generic type (e.g., CommonCall&lt;ResponseBody>)" }</ID>
+    <ID>MaxLineLength:NetworkEvent.kt$NetworkEvent$AvailabilityEvent : NetworkEvent</ID>
+    <ID>MaxLineLength:NetworkStateImp.kt$NetworkStateImp$* This is a static implementation of NetworkState, it holds the network states and is editable but it's only usable from this file.</ID>
+    <ID>MaxLineLength:RxErrorHandlingCallAdapterFactory.kt$RxErrorHandlingCallAdapterFactory.RxCallAdapterWrapper$is Completable -> result.onErrorResumeNext(Function { throwable -> Completable.error(asRetrofitException(call.request().url.toString(), throwable)) })</ID>
+    <ID>MaxLineLength:RxErrorHandlingCallAdapterFactory.kt$RxErrorHandlingCallAdapterFactory.RxCallAdapterWrapper$is Observable&lt;*> -> result.onErrorResumeNext(Function { throwable -> Observable.error(asRetrofitException(call.request().url.toString(), throwable)) })</ID>
+    <ID>MaxLineLength:RxErrorHandlingCallAdapterFactory.kt$RxErrorHandlingCallAdapterFactory.RxCallAdapterWrapper$is Single&lt;*> -> result.onErrorResumeNext(Function { throwable -> Single.error(asRetrofitException(call.request().url.toString(), throwable)) })</ID>
+    <ID>MaxLineLength:StringExtension.kt$"Value" to "Unexpected Error in StringExtension : $errorMessage , SystemWebViewVersion : $this , minimumVersion : $version"</ID>
+    <ID>MemberNameEqualsClassName:ZawgyiConverter.kt$ZawgyiConverter$private val zawgyiConverter: TransliterateU2Z = TransliterateU2Z("Unicode to Zawgyi")</ID>
+    <ID>NestedBlockDepth:CoreUtility.kt$CoreUtility$private fun initialModuleInstance(context: Context)</ID>
+    <ID>PrintStackTrace:DeviceRepository.kt$DeviceRepositoryImpl$e</ID>
+    <ID>PrintStackTrace:DoubleExtension.kt$e</ID>
+    <ID>PrintStackTrace:EncryptUtil.kt$EncryptUtilImpl$e</ID>
+    <ID>PrintStackTrace:EncryptUtil.kt$EncryptUtilImpl$ex</ID>
+    <ID>PrintStackTrace:GetCountViewFormatUseCase.kt$GetCountViewFormatUseCaseImpl$e</ID>
+    <ID>ReturnCount:DateStringExtension.kt$fun String?.fromUtcFormatTo( resultFormat: String = DateFormatConstant.yyyy_MM_dd_DASH, isThai: Boolean = false ): String</ID>
+    <ID>ReturnCount:GetCountViewFormatUseCase.kt$GetCountViewFormatUseCaseImpl$override fun execute(countView: Double): String</ID>
+    <ID>ReturnCount:GsonUtil.kt$GsonUtil.SafeObjectTypeAdapterFactory$override fun &lt;T : Any?> create(gson: Gson, type: TypeToken&lt;T>): TypeAdapter&lt;T>?</ID>
+    <ID>ReturnCount:GsonUtil.kt$GsonUtil.SafeObjectTypeAdapterFactory.ArrayAdapter$override fun read(reader: JsonReader): MutableList&lt;T>?</ID>
+    <ID>ReturnCount:ShelfSkeleton.kt$ShelfSkeleton$fun getStableId(position: Int): Int</ID>
+    <ID>ReturnCount:StringExtension.kt$fun String.compareVersionTo(version: String): CompareVersion</ID>
+    <ID>ReturnCount:ViewRenderPosition.kt$ViewRenderPosition$fun isActivePosition( parentStartPosition: Int, parentEndPosition: Int ): Boolean</ID>
+    <ID>SpreadOperator:PermissionManager.kt$PermissionManagerImpl$(*permissions)</ID>
+    <ID>SwallowedException:ApplicationPackageManager.kt$ApplicationPackageManagerImpl$e: PackageManager.NameNotFoundException</ID>
+    <ID>SwallowedException:DateStringExtension.kt$e: Exception</ID>
+    <ID>SwallowedException:DateStringExtension.kt$e: NullPointerException</ID>
+    <ID>SwallowedException:EncryptUtil.kt$EncryptUtilImpl$e: Exception</ID>
+    <ID>SwallowedException:GsonUtil.kt$GsonUtil$e: Exception</ID>
+    <ID>SwallowedException:RetrofitExtension.kt$e: Exception</ID>
+    <ID>SwallowedException:ShelfSkeleton.kt$ShelfSkeleton$e: Exception</ID>
+    <ID>TooGenericExceptionThrown:EmptyProvider.kt$EmptyProvider$throw Exception("unimplemented")</ID>
+    <ID>TooManyFunctions:ActivityProvider.kt$ActivityProvider$ActivityProvider</ID>
+    <ID>TooManyFunctions:ContextDataProvider.kt$ContextDataProvider</ID>
+    <ID>TooManyFunctions:ContextDataProvider.kt$ContextDataProviderImp : ContextDataProvider</ID>
+    <ID>TooManyFunctions:DateStringExtension.kt$com.truedigital.core.extensions.DateStringExtension.kt</ID>
+    <ID>TooManyFunctions:EncryptUtil.kt$EncryptUtil</ID>
+    <ID>TooManyFunctions:EncryptUtil.kt$EncryptUtilImpl : EncryptUtil</ID>
+    <ID>TooManyFunctions:LocalizationRepository.kt$LocalizationRepository</ID>
+    <ID>TooManyFunctions:LocalizationRepository.kt$LocalizationRepositoryImpl : LocalizationRepository</ID>
+    <ID>TooManyFunctions:SharedPrefsUtils.kt$SharedPrefsUtils : SharedPrefsInterface</ID>
+    <ID>TooManyFunctions:StringExtension.kt$com.truedigital.core.extensions.StringExtension.kt</ID>
+    <ID>UnusedPrivateMember:Functions.kt$TAG: String = ""</ID>
+    <ID>UnusedPrivateMember:InputModeLifecycleObserver.kt$InputModeLifecycleObserver$@OnLifecycleEvent(Lifecycle.Event.ON_START) private fun setNewSoftInputMode()</ID>
+    <ID>UnusedPrivateMember:InputModeLifecycleObserver.kt$InputModeLifecycleObserver$@OnLifecycleEvent(Lifecycle.Event.ON_STOP) private fun restoreOriginalSoftInputMode()</ID>
+    <ID>UnusedPrivateMember:NetworkCallbackImp.kt$NetworkCallbackImp.Companion$private const val TAG = "NetworkCallbackImp"</ID>
+    <ID>UtilityClassWithPublicConstructor:FontStyle.kt$FontManager</ID>
+    <ID>UtilityClassWithPublicConstructor:KeyboardUtils.kt$KeyboardUtils</ID>
+  </CurrentIssues>
+</SmellBaseline>

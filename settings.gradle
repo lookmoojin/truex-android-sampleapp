@@ -17,3 +17,4 @@ rootProject.name = "truex-android-sampleapp"
 include ':app'
 include ':feature:truecloud-v3'
 include ':login'
+include ':common:core'
