@@ -1,7 +1,7 @@
 package com.tdg.login.injections;
 
 @javax.inject.Singleton
-@dagger.Component(modules = {com.tdg.login.di.NetworkModule.class, com.tdg.login.di.OauthApiModule.class, com.tdg.login.di.OauthModule.class})
+@dagger.Component(modules = {com.tdg.login.di.NetworkModule.class, com.tdg.login.di.OauthApiModule.class, com.tdg.login.di.OauthBaseModule.class, com.tdg.login.di.OauthModule.class})
 @kotlin.Metadata(mv = {1, 9, 0}, k = 1, xi = 48, d1 = {"\u0000\f\n\u0002\u0018\u0002\n\u0002\u0010\u0000\n\u0002\b\u0003\bg\u0018\u0000 \u00022\u00020\u0001:\u0002\u0002\u0003\u00a8\u0006\u0004"}, d2 = {"Lcom/tdg/login/injections/OauthComponent;", "", "Companion", "Factory", "login_debug"})
 public abstract interface OauthComponent {
     @org.jetbrains.annotations.NotNull
