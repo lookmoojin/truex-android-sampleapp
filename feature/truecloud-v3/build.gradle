@@ -10,11 +10,6 @@ apply {
 android {
     namespace 'com.tdg.truex_android_sampleapp'
     productFlavors {
-        staging {
-            buildConfigField 'String', 'BASE_URL_TRUE_CLOUD', '"https://drive-customer-api-alpha.trueid-preprod.net/drive/"'
-            buildConfigField 'String', 'BASE_URL_PUBLIC', '"https://cloudshare.trueid-alpha.net/public-api/"'
-        }
-
         preprod {
             buildConfigField 'String', 'BASE_URL_TRUE_CLOUD', '"https://drive-customer-api-alpha.trueid-preprod.net/drive/"'
             buildConfigField 'String', 'BASE_URL_PUBLIC', '"https://cloudshare.trueid-alpha.net/public-api/"'
@@ -43,14 +38,14 @@ dependencies {
 //
 //    testImplementation project(':common:share:mock')
 //
-//    implementation amazonaws.truecloudAws
-//    implementation amazonaws.truecloudAwsMobileClient
-//    implementation amazonaws.truecloudAwsAuthUserpools
-//    implementation broakenmedia.multiContactPicker
-//    implementation imageUtil.photoEditor
-//    implementation imageUtil.imageCropper
-//    implementation view.startPointSeekBar
-//    implementation view.colorPicker
+    implementation amazonaws.truecloudAws
+    implementation amazonaws.truecloudAwsMobileClient
+    implementation amazonaws.truecloudAwsAuthUserpools
+    implementation broakenmedia.multiContactPicker
+    implementation imageUtil.photoEditor
+    implementation imageUtil.imageCropper
+    implementation view.startPointSeekBar
+    implementation view.colorPicker
 
     DataStore()
     Glide()

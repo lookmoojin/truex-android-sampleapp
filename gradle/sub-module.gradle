@@ -32,8 +32,8 @@ android {
         versionCode 1
         versionName "1.0"
 
-//        buildConfigField("String", "VERSION_NAME", "\"${versionName}\"")
-//        buildConfigField("String", "VERSION_CODE", "\"${versionCode}\"")
+        buildConfigField("String", "VERSION_NAME", "\"${versionName}\"")
+        buildConfigField("String", "VERSION_CODE", "\"${versionCode}\"")
 
         consumerProguardFiles "proguard-android-optimize.txt", "consumer-rules.pro", "proguard-rules.pro"
 
@@ -129,6 +129,7 @@ android {
     buildFeatures {
         viewBinding true
         dataBinding true
+        buildConfig true
     }
 }
 
