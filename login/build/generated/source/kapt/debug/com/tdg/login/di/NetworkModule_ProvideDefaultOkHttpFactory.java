@@ -17,9 +17,9 @@ import okhttp3.OkHttpClient;
     "KotlinInternal",
     "KotlinInternalInJava"
 })
-public final class NetworkModule_ProvideDefaultOkHttpFactory implements Factory<OkHttpClient.Builder> {
+public final class NetworkModule_ProvideDefaultOkHttpFactory implements Factory<OkHttpClient> {
   @Override
-  public OkHttpClient.Builder get() {
+  public OkHttpClient get() {
     return provideDefaultOkHttp();
   }
 
@@ -27,7 +27,7 @@ public final class NetworkModule_ProvideDefaultOkHttpFactory implements Factory<
     return InstanceHolder.INSTANCE;
   }
 
-  public static OkHttpClient.Builder provideDefaultOkHttp() {
+  public static OkHttpClient provideDefaultOkHttp() {
     return Preconditions.checkNotNullFromProvides(NetworkModule.INSTANCE.provideDefaultOkHttp());
   }
 
