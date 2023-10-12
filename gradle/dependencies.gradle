@@ -1,0 +1,529 @@
+apply {
+    from("$rootDir/gradle/dependencies-source.gradle")
+}
+
+
+def minSdkVersion = 21
+
+
+def dependencyGroup(Closure closure) {
+    closure.delegate = dependencies
+    return closure
+}
+
+def AndroidComponents = dependencyGroup {
+    api androidSupport.material
+    api androidSupport.myanmarTools
+    api androidX.appcompat
+    api androidX.appcompatResources
+    api androidX.cardView
+    api androidX.constraintLayout
+    api androidX.core
+    api androidX.fragment
+    api androidX.recyclerview
+    api androidX.legacy
+    api androidX.multiDex
+    api androidX.startupRuntime
+    api androidX.viewpager2
+}
+
+def AndroidLifeCycle = dependencyGroup {
+    api androidX.common
+    api androidX.extensions
+    api androidX.reactivestreams
+    api androidX.runtime
+    api androidX.viewmodel
+    api androidX.viewmodelSaveSate
+}
+
+def AndroidComposeUI = dependencyGroup {
+    implementation platform(androidX.composeBoM)
+
+    implementation (androidX.composeUI) {
+        exclude group: 'androidx.startup'
+    }
+    implementation (androidX.composeUIActivity) {
+        exclude group: 'androidx.startup'
+    }
+    implementation (androidX.composeUIFlowLayout) {
+        exclude group: 'androidx.startup'
+    }
+    implementation (androidX.composeUIPreview) {
+        exclude group: 'androidx.startup'
+    }
+    implementation (androidX.composeUIMaterial3) {
+        exclude group: 'androidx.startup'
+    }
+    implementation(androidX.composeUIMaterialIcon) {
+        exclude group: 'androidx.startup'
+    }
+    debugImplementation(androidX.composeUITool) {
+        exclude group: 'androidx.startup'
+    }
+    debugImplementation (androidX.composeUITestManifest) {
+        exclude group: 'androidx.startup'
+    }
+    implementation (androidX.composeUINavigation) {
+        exclude group: 'androidx.startup'
+    }
+    implementation(androidX.composeUILiveData) {
+        exclude group: 'androidx.startup'
+    }
+    implementation(androidX.composeUIPagerIndicator) {
+        exclude group: 'androidx.startup'
+    }
+    implementation(androidX.composeSystemUIController) {
+        exclude group: 'androidx.startup'
+    }
+    implementation(androidX.composeUIWebView) {
+        exclude group: 'androidx.startup'
+    }
+    implementation(androidX.constraintLayoutComposeUI) {
+        exclude group: 'androidx.startup'
+    }
+    implementation(coil.imageLoader) {
+        exclude group: 'androidx.startup'
+    }
+    implementation (androidX.composeUIRuntime) {
+        exclude group: 'androidx.startup'
+    }
+}
+
+def AndroidPaging = dependencyGroup {
+    implementation androidX.pagingRuntime
+    implementation androidX.pagingRxjava2
+    implementation androidX.pagingCommon
+}
+
+def AndroidStateSafe = dependencyGroup {
+    api bridge.bridge
+    api icepick.icepick
+    compileOnly icepick.icepickProcessor
+}
+
+def Apollo = dependencyGroup {
+    api apollo.apollo
+}
+
+def AppsFlyer = dependencyGroup {
+    api appsFlyer.afAndroid
+    api appsFlyer.installReferrer
+}
+
+def Biometric = dependencyGroup {
+    api androidX.biometric
+}
+
+def BouncyCastle = dependencyGroup {
+    implementation bouncyCastle.bcprovJdk15
+}
+
+def Chart = dependencyGroup {
+    implementation view.mpChart
+}
+
+def Chucker = dependencyGroup {
+    debugImplementation chucker.library
+    qaImplementation chucker.libraryNoOp
+    releaseImplementation chucker.libraryNoOp
+}
+
+def CropImage = dependencyGroup {
+    implementation imageUtil.simpleCropView
+}
+
+def AmitySDK = dependencyGroup {
+    api amity.amityFCM
+    api amity.amitySDK
+    api amity.amityUikit
+}
+
+def DataStore = dependencyGroup {
+    implementation dataStore.datastorePref
+    implementation dataStore.dataStoreCore
+}
+
+def EventBus = dependencyGroup {
+    implementation eventBus.otto
+}
+
+def FacebookDebugger = dependencyGroup {
+    implementation facebook.stetho
+    implementation facebook.stethoOkhttp3
+    implementation facebook.stethoUrlConnection
+}
+
+def Firebase = dependencyGroup {
+    api platform(firebase.bom)
+    // Workaround conflict with EKo
+    api firebase.iid
+    api firebase.dynamicLinks
+    api firebase.fireStore
+    implementation firebase.installations
+}
+
+def GravitySnapHelper = dependencyGroup {
+    implementation view.gravitySnapHelper
+}
+
+def Glide = dependencyGroup {
+    api imageLoader.glide
+    api imageLoader.glideAnnotations
+    api imageLoader.glideTransformations
+    api imageLoader.glideSvg
+    kapt imageLoader.glideCompiler
+}
+
+def Huawei = dependencyGroup {
+    huaweiApi huawei.core
+    huaweiApi huawei.coreInstaller
+    huaweiApi huawei.crash
+    huaweiApi huawei.hiAnalytics
+    huaweiApi huawei.push
+}
+
+def ImageUtil = dependencyGroup {
+    implementation imageUtil.imageChooser
+    implementation imageUtil.subsamplingScaleImage
+}
+
+def KotlinCoroutine = dependencyGroup {
+    api coroutines.android
+    api coroutines.core
+    api coroutines.coreRx
+    api coroutines.playServices
+    api coroutines.rx
+}
+
+def Location = dependencyGroup {
+    implementation location.reactiveLocation2
+}
+
+def LeakCanary = dependencyGroup {
+    debugImplementation leakCanary.leakcanaryAndroid
+}
+
+def Lottie = dependencyGroup {
+    implementation animation.lottie
+}
+
+def Maps = dependencyGroup {
+    implementation google.maps
+}
+
+def MostMedia = dependencyGroup {
+    implementation mostMedia.mostMediaSdk
+}
+
+def MUX = dependencyGroup {
+    api mux.muxExoPlayer
+}
+
+def Navigation = dependencyGroup {
+    api androidX.navigationFragment
+    api androidX.navigationUI
+}
+
+def Okhttp = dependencyGroup {
+    api(platform(okhttp.bom))
+    api okhttp.okhttp
+    api okhttp.loggingInterceptor
+}
+
+def OpenSourceNotices = dependencyGroup {
+    prodImplementation playService.oss
+}
+
+def Parceler = dependencyGroup {
+    implementation parceler.parcelerApi
+    kapt parceler.parceler
+}
+
+def PlayService = dependencyGroup {
+    api playService.castFramework
+    api playService.core
+    api playService.coreKTX
+    api(playService.tagManager) {
+        exclude group: 'com.google.android.gms', module: 'play-services-basement'
+        exclude group: 'com.google.android.gms', module: 'play-services-measurement'
+        exclude group: 'com.google.android.gms', module: 'play-services-measurement-impl'
+        exclude group: 'com.google.android.gms', module: 'play-services-measurement-sdk'
+    }
+    api playService.location
+}
+
+def Player = dependencyGroup {
+    api player.exoplayer
+    api player.extensionIMA
+    api player.extensionOkhttp
+
+    api androidX.media
+    /*TODO
+    *  Will update again once there is stable version
+    * */
+    api "androidx.media3:media3-exoplayer:1.0.0-alpha03"
+    api "androidx.media3:media3-exoplayer-dash:1.0.0-alpha03"
+}
+
+def ReactiveX = dependencyGroup {
+    api reactiveX.rxJava
+    api reactiveX.rxAndroid
+    api reactiveX.rxPermissions
+}
+
+def Retrofit = dependencyGroup {
+    api retrofit.retrofit
+    api retrofit.converterGson
+    api retrofit.adapterRxJava2
+    api retrofit.converterScalars
+    api(retrofit.converterSimpleXml) {
+        exclude group: 'stax', module: 'stax-api'
+        exclude group: 'stax', module: 'stax'
+        exclude group: 'xpp3', module: 'xpp3'
+    }
+}
+
+def Room = dependencyGroup {
+    implementation room.ktx
+    implementation room.runtime
+    implementation room.rxjava2
+    kapt room.compiler
+}
+
+def ThreeTen = dependencyGroup {
+    implementation threeTen.threetenabp
+}
+
+def TechnicalLogging = dependencyGroup {
+    api timber.timber
+    api newRelic.newRelic
+    api tooLargeTool.toolargetool
+
+    huaweiApi huawei.crash
+}
+
+def TrueSDK = dependencyGroup {
+    stagingImplementation(name: trueMoneySDK.tmnSdkStg, ext: 'aar')
+    preprodImplementation(name: trueMoneySDK.tmnSdkStg, ext: 'aar')
+    prodImplementation(name: trueMoneySDK.tmnSdkProd, ext: 'aar')
+}
+
+def TunedDependencies = dependencyGroup {
+    implementation facebook.conceal
+    implementation facebook.stetho
+    implementation facebook.stethoOkhttp3
+    implementation imageUtil.circleImageView
+    implementation view.aviLib
+    implementation view.discreteScrollView
+    implementation view.gravitySnapHelper
+    implementation view.segmented
+    implementation view.swipeLayoutLib
+}
+
+def TrueCloudDependencies = dependencyGroup {
+    implementation eventBus.otto
+    implementation view.materialScrollBar
+    implementation view.materialTabStrip
+
+    implementation(view.materialDialogs) {
+        exclude module: 'appcompat-v7'
+        exclude module: 'recyclerview-v7'
+        exclude module: 'support-annotations'
+        transitive = false
+    }
+}
+
+def Utilities = dependencyGroup {
+    implementation group: 'ch.hsr', name: 'geohash', version: '1.4.0'
+}
+
+def UnitTesting = dependencyGroup {
+    androidTestImplementation androidX.testingCore
+    androidTestImplementation androidX.testRunner
+    androidTestImplementation androidX.testRules
+    androidTestImplementation androidX.testJunit
+    androidTestImplementation androidX.testTruth
+    androidTestImplementation(androidX.espressoCore) {
+        exclude group: 'org.checkerframework'
+        exclude group: 'com.google.protobuf'
+    }
+    androidTestImplementation(androidX.espressoCrontrib) {
+        exclude group: 'org.checkerframework'
+        exclude group: 'com.google.protobuf'
+    }
+    androidTestImplementation(androidX.espressoIntents) {
+        exclude group: 'org.checkerframework'
+        exclude group: 'com.google.protobuf'
+    }
+    androidTestImplementation(androidX.espressoWeb) {
+        exclude group: 'org.checkerframework'
+        exclude group: 'com.google.protobuf'
+    }
+    androidTestImplementation(androidX.espressoAccess) {
+        exclude group: 'org.checkerframework'
+        exclude group: 'com.google.protobuf'
+    }
+    androidTestImplementation androidSupport.androidTestTruth
+
+    testImplementation jUnit4.jUnit4
+    testImplementation jUnit5.jUnit5
+    testImplementation jUnit5.junitPlatformRunner
+    testImplementation jUnit5.junitJupiterParams
+    testRuntimeOnly jUnit5.junitPlatformLauncher
+    testRuntimeOnly jUnit5.junitJupiterEngine
+    testRuntimeOnly jUnit5.junitVintageEngine
+
+    androidTestImplementation jUnit4.jUnit4
+    androidTestImplementation jUnit5.jUnit5
+    androidTestImplementation jUnit5.junitJupiterParams
+    androidTestImplementation jUnit5.junitAndroidTestCore
+    androidTestRuntimeOnly jUnit5.junitAndroidTestRunner
+
+    testImplementation androidX.testingCore
+    testImplementation androidX.testJunit
+    testImplementation androidX.testingArchCore
+    testImplementation androidX.testRoom
+    testImplementation androidX.testWork
+
+    // Compose UI Test
+    androidTestImplementation platform(androidX.composeBoM)
+    androidTestImplementation (androidX.composeUITestJunit) {
+        exclude group: 'androidx.startup'
+    }
+
+    // Kotlin
+    implementation kotlin.kotlinStdlibJDK7
+    implementation kotlin.kotlinStdlibJDK8
+
+    testImplementation kotlin.kotlinTest
+    testImplementation kotlin.kotlinTestJUnit5
+    testImplementation kotlin.kotlinReflect
+
+    // Mocking
+    testImplementation mockTest.mockitoCore
+    testImplementation mockTest.mockitoInline
+    testImplementation mockTest.mockitoKotlin
+    testImplementation mockTest.mockk
+    androidTestImplementation mockTest.mockkAndroid
+    androidTestImplementation mockTest.mockkAgent
+    androidTestImplementation mockTest.mockitoAndroid
+
+    // Coroutines
+    testImplementation coroutines.test
+
+    // LiveData
+    testImplementation livedata.testing
+    testImplementation livedata.testingKTX
+
+    // Okhttp
+    testImplementation okhttp.okhttpUrlConnection
+    testImplementation(okhttp.okhttpMockwebserver) {
+        force = true
+    }
+
+    // Spek
+    //testImplementation spek.spekDslJvm
+    //testImplementation spek.spekRunnerJunit5
+
+    // ThreeTen
+    testImplementation threeTen.threetenbp
+
+    // Kakao
+    androidTestImplementation(kakao.kakao) {
+        exclude group: "androidx.test.espresso"
+    }
+
+    // Robolectric
+    testImplementation robolectric.robolectric
+    //json
+    testImplementation json.jsonTest
+
+    androidTestImplementation androidX.fragmentTest
+    androidTestImplementation androidX.navigationTest
+
+    androidTestImplementation androidX.testUiautomator
+    androidTestImplementation hamcrest.hamcrest
+}
+
+def View = dependencyGroup {
+    implementation animation.recyclerviewAnimators
+    implementation view.clansFab
+    implementation view.getbaseFab
+    implementation view.materialScrollBar
+    implementation view.smartTabLayoutLibrary
+    implementation view.smartTabLayoutUtilsV4
+    implementation view.spinnerDatePicker
+    implementation view.viewpagerIndicator
+    implementation(view.switcher) {
+        exclude module: 'appcompat-v7'
+    }
+}
+
+def WebKit = dependencyGroup {
+    implementation androidX.webkit
+}
+
+def Watermark = dependencyGroup {
+    api(name: 'watermarking', ext: 'aar')
+}
+
+def ZxingQR = dependencyGroup {
+    implementation zxingQR.zxingAndroidEmbedded
+    implementation zxingQR.zxingCore
+}
+
+def Dagger = dependencyGroup {
+    implementation dagger.dagger
+    kapt dagger.daggerCompiler
+}
+
+ext.AndroidComponents = AndroidComponents
+ext.AndroidLifeCycle = AndroidLifeCycle
+ext.AndroidComposeUI = AndroidComposeUI
+ext.AndroidPaging = AndroidPaging
+ext.AndroidStateSafe = AndroidStateSafe
+ext.AppsFlyer = AppsFlyer
+ext.Apollo = Apollo
+ext.Biometric = Biometric
+ext.BouncyCastle = BouncyCastle
+ext.Chart = Chart
+ext.Chucker = Chucker
+ext.CropImage = CropImage
+ext.AmitySDK = AmitySDK
+ext.DataStore = DataStore
+ext.EventBus = EventBus
+ext.FacebookDebugger = FacebookDebugger
+ext.Firebase = Firebase
+ext.Glide = Glide
+ext.Huawei = Huawei
+ext.ImageUtil = ImageUtil
+ext.KotlinCoroutine = KotlinCoroutine
+ext.LeakCanary = LeakCanary
+ext.Location = Location
+ext.Lottie = Lottie
+ext.MUX = MUX
+ext.Maps = Maps
+ext.MostMedia = MostMedia
+ext.Navigation = Navigation
+ext.Okhttp = Okhttp
+ext.OpenSourceNotices = OpenSourceNotices
+ext.Parceler = Parceler
+ext.PlayService = PlayService
+ext.Player = Player
+ext.ReactiveX = ReactiveX
+ext.Retrofit = Retrofit
+ext.Room = Room
+ext.GravitySnapHelper = GravitySnapHelper
+ext.ThreeTen = ThreeTen
+ext.TechnicalLogging = TechnicalLogging
+ext.TrueSDK = TrueSDK
+ext.TunedDependencies = TunedDependencies
+ext.TrueCloudDependencies = TrueCloudDependencies
+ext.Utilities = Utilities
+ext.UnitTesting = UnitTesting
+ext.View = View
+ext.Watermark = Watermark
+ext.WebKit = WebKit
+ext.ZxingQR = ZxingQR
+ext.Dagger = Dagger
+ext.minSdkVersion = minSdkVersion

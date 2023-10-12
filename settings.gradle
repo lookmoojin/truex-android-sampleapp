@@ -15,4 +15,4 @@ dependencyResolutionManagement {
 
 rootProject.name = "truex-android-sampleapp"
 include ':app'
-include ':feature:truecloud'
+include ':feature:truecloud-v3'
