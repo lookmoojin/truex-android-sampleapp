@@ -417,9 +417,9 @@ def UnitTesting = dependencyGroup {
 
     // Okhttp
     testImplementation okhttp.okhttpUrlConnection
-    testImplementation(okhttp.okhttpMockwebserver) {
-        force = true
-    }
+//    testImplementation(okhttp.okhttpMockwebserver) {
+//        force = true
+//    }
 
     // Spek
     //testImplementation spek.spekDslJvm
