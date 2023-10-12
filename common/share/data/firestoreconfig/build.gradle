@@ -1,0 +1,57 @@
+plugins {
+    id 'com.android.library'
+}
+
+apply {
+    from("${rootDir}/gradle/sub-module.gradle")
+    from("${rootDir}/gradle/dependencies.gradle")
+}
+
+android {
+    namespace 'com.tdg.truex_android_sampleapp.common.share.data.firestoreconfig'
+    productFlavors {
+        staging {
+            // Firebase
+            buildConfigField 'String', 'FIRE_BASE_APPLICATION_ID', '"1:791297836702:android:f335ee92ad0700fdb35d8f"'
+            buildConfigField 'String', 'FIRE_BASE_API_KEY', '"AIzaSyDLc7PmSsFbvhhH9l_raDFkAzVrj9AlNTc"'
+            buildConfigField 'String', 'FIRE_BASE_GCM_SENDER_ID', '"791297836702"'
+            buildConfigField 'String', 'FIRE_BASE_STORAGE_BUCKET', '"trueid-v3-staging.appspot.com"'
+            buildConfigField 'String', 'FIRE_BASE_PROJECT_ID', '"trueid-v3-staging"'
+            buildConfigField 'String', 'FIRE_BASE_SECURE_NAME', '"trueid-v3-staging-secure"'
+        }
+        preprod {
+            // Firebase
+            buildConfigField 'String', 'FIRE_BASE_APPLICATION_ID', '"1:474911571098:android:bc30877b49006d8905f323"'
+            buildConfigField 'String', 'FIRE_BASE_API_KEY', '"AIzaSyD0LYlt8p59wv4VcjJbnZMSeeWZgGpZcG4"'
+            buildConfigField 'String', 'FIRE_BASE_GCM_SENDER_ID', '"474911571098"'
+            buildConfigField 'String', 'FIRE_BASE_STORAGE_BUCKET', '"trueid-v3-preprod.appspot.com"'
+            buildConfigField 'String', 'FIRE_BASE_PROJECT_ID', '"trueid-v3-preprod"'
+            buildConfigField 'String', 'FIRE_BASE_SECURE_NAME', '"trueid-v3-preprod-secure"'
+        }
+        prod {
+            // Firebase
+            buildConfigField 'String', 'FIRE_BASE_APPLICATION_ID', '"1:650256560707:android:b01f147487438b9468daf6"'
+            buildConfigField 'String', 'FIRE_BASE_API_KEY', '"AIzaSyDJBll-YsRCMt9IXLVagvpIfaG80Jr1M78"'
+            buildConfigField 'String', 'FIRE_BASE_GCM_SENDER_ID', '"650256560707"'
+            buildConfigField 'String', 'FIRE_BASE_STORAGE_BUCKET', '"trueid-v3-production-c68dc.appspot.com"'
+            buildConfigField 'String', 'FIRE_BASE_PROJECT_ID', '"trueid-v3-production-c68dc"'
+            buildConfigField 'String', 'FIRE_BASE_SECURE_NAME', '"trueid-v3-production-c68dc-secure"'
+        }
+    }
+}
+
+dependencies {
+
+    implementation project(":common:core")
+//    testImplementation project(":common:share:data:coredata")
+//    testImplementation project(":common:share:maintenance")
+//    testImplementation project(':common:share:mock')
+
+    Firebase()
+    UnitTesting()
+
+}
+
+ext {
+    isBelongTo = "app-core"
+}

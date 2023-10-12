@@ -1,0 +1,147 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<SmellBaseline>
+  <ManuallySuppressedIssues/>
+  <CurrentIssues>
+    <ID>ClassNaming:DataContentConstant.kt$DataContentConstant$BACKEND_TYPE</ID>
+    <ID>CollapsibleIfStatements:NetworkInfoUseCase.kt$NetworkInfoUseCaseImpl$if (ContextCompat.checkSelfPermission( contextDataProvider.getDataContext(), Manifest.permission.ACCESS_COARSE_LOCATION ) == PackageManager.PERMISSION_GRANTED ) { if (telephonyManager.phoneType == TelephonyManager.PHONE_TYPE_GSM) { val location = telephonyManager.cellLocation as? GsmCellLocation if (location != null) { val cellIdHex = location.cid.decToHex() val subIndex = if (cellIdHex.length > 2) { 2 } else { 0 } val eNBHex = cellIdHex.substring(0, cellIdHex.length - subIndex) val eNB = eNBHex.hexToDec() return JSONObject().apply { put(GSM_LOCATION_AREA_CODE, location.lac) put(GSM_CELL_ID, location.cid) put(GSM_PRIMARY_SCRAMBLING_CODE, location.psc) put(GSM_NODE_B_ID, eNB) } } } }</ID>
+    <ID>ComplexMethod:FirebaseAnalyticsHelper.kt$FirebaseAnalyticsHelper$fun sendEventFirebaseAnalytic( screenName: String, firebaseAnalyticsModel: FirebaseAnalyticsModel )</ID>
+    <ID>ConstructorParameterNaming:LiveChatSchedulesResponse.kt$LiveChatSchedulesData$@SerializedName("end_date") var end_date: String</ID>
+    <ID>ConstructorParameterNaming:LiveChatSchedulesResponse.kt$LiveChatSchedulesData$@SerializedName("livetv_id") val livetv_id: String? = null</ID>
+    <ID>ConstructorParameterNaming:LiveChatSchedulesResponse.kt$LiveChatSchedulesData$@SerializedName("program_name") val program_name: String? = null</ID>
+    <ID>ConstructorParameterNaming:LiveChatSchedulesResponse.kt$LiveChatSchedulesData$@SerializedName("start_date") var start_date: String</ID>
+    <ID>ConstructorParameterNaming:LiveChatSchedulesResponse.kt$LiveChatSchedulesPages$@SerializedName("total_items") val total_items: Any? = null</ID>
+    <ID>ConstructorParameterNaming:LiveChatSchedulesResponse.kt$LiveChatSchedulesPages$@SerializedName("total_pages") val total_pages: Any? = null</ID>
+    <ID>EmptyFunctionBlock:AuthLoginListener.kt$AuthLoginListener${}</ID>
+    <ID>EmptyFunctionBlock:UnsafeOkHttpClient.kt$UnsafeOkHttpClient.&lt;no name provided>${ }</ID>
+    <ID>ImplicitDefaultLocale:MIStringUtils.kt$MIStringUtils$String.format("%.1f GB", bytes / unit.toDouble().pow(exp.toDouble()))</ID>
+    <ID>LargeClass:Setting.kt$Setting</ID>
+    <ID>LongMethod:FirebaseAnalyticsHelper.kt$FirebaseAnalyticsHelper$fun sendEventFirebaseAnalytic( screenName: String, firebaseAnalyticsModel: FirebaseAnalyticsModel )</ID>
+    <ID>LongMethod:FirebaseUtil.kt$FirebaseUtil$private fun setDatabaseUrl(useDB: String)</ID>
+    <ID>LongMethod:NetworkInfoUseCase.kt$NetworkInfoUseCaseImpl$@SuppressLint("MissingPermission") override fun getNetworkInfo(): List&lt;String></ID>
+    <ID>MagicNumber:GetProfileSettingsUseCase.kt$GetProfileSettingsUseCaseImpl$3000</ID>
+    <ID>MagicNumber:MIStringUtils.kt$MIStringUtils$10</ID>
+    <ID>MagicNumber:MIStringUtils.kt$MIStringUtils$1000</ID>
+    <ID>MagicNumber:MIStringUtils.kt$MIStringUtils$1024</ID>
+    <ID>MagicNumber:MIStringUtils.kt$MIStringUtils$3</ID>
+    <ID>MagicNumber:MIStringUtils.kt$MIStringUtils$60</ID>
+    <ID>MagicNumber:ProfileRepository.kt$ProfileRepositoryImpl$10001</ID>
+    <ID>MagicNumber:ProfileRepository.kt$ProfileRepositoryImpl$3000</ID>
+    <ID>MagicNumber:TrueIdHandleException.kt$400</ID>
+    <ID>MagicNumber:TrueIdHandleException.kt$401</ID>
+    <ID>MagicNumber:TrueIdHandleException.kt$403</ID>
+    <ID>MagicNumber:TrueIdHandleException.kt$404</ID>
+    <ID>MagicNumber:TrueIdHandleException.kt$409</ID>
+    <ID>MagicNumber:TrueIdHandleException.kt$500</ID>
+    <ID>MagicNumber:TrueIdHandleException.kt$502</ID>
+    <ID>MagicNumber:TrueIdHandleException.kt$503</ID>
+    <ID>MagicNumber:TrueIdHandleException.kt$504</ID>
+    <ID>MagicNumber:TrueIdHandleException.kt$599</ID>
+    <ID>MagicNumber:TrueIdHandleException.kt$TrueIdHandleException$200</ID>
+    <ID>MagicNumber:TrueIdHandleException.kt$TrueIdHandleException$399</ID>
+    <ID>MagicNumber:UserRepository.kt$UserRepositoryImpl$1000</ID>
+    <ID>MagicNumber:WifiInfoUseCase.kt$WifiInfoUseCaseImpl$7</ID>
+    <ID>MagicNumber:WifiInfoUseCase.kt$WifiInfoUseCaseImpl$8</ID>
+    <ID>MagicNumber:WifiInfoUseCase.kt$WifiInfoUseCaseImpl$9</ID>
+    <ID>MatchingDeclarationName:EpgRequest.kt$EpgInfoRequest</ID>
+    <ID>MaxLineLength:DeviceEntitlementRepository.kt$DeviceEntitlementRepository$fun addDeviceEntitlement(addDeviceEntitlementRequest: AddDeviceEntitlementRequest): Single&lt;Response&lt;AddDeviceEntitlementResponse>></ID>
+    <ID>MaxLineLength:DeviceEntitlementRepository.kt$DeviceEntitlementRepositoryImpl$override</ID>
+    <ID>MaxLineLength:FirebaseUtil.kt$FirebaseUtil$Toast.makeText(context, "USAGEMETER_REALTIME_APPNAME= $usageMeterEndpoint", Toast.LENGTH_LONG).show()</ID>
+    <ID>MaxLineLength:GetActiveDeviceEntitlementUseCase.kt$GetActiveDeviceEntitlementUseCaseImpl$deviceEntitlement.limitDevice = deviceEntitlementResponse.data?.maxEntitlement ?: DEFAULT_LIMIT_MAX_DEVICE</ID>
+    <ID>MaxLineLength:GetActiveDeviceEntitlementUseCase.kt$GetActiveDeviceEntitlementUseCaseImpl$isOwnDevice = deviceRepository.getAndroidId().equals(deviceEntitlementDetails.deviceId, ignoreCase = true)</ID>
+    <ID>MaxLineLength:GetActiveDeviceEntitlementUseCase.kt$GetActiveDeviceEntitlementUseCaseImpl$numberDateAfterRegisterDate = (currentTime - registerDate) / MILLISECONDS_IN_SECOND / SECONDS_IN_MINUTE / MINUTES_IN_HOUR / HOURS_IN_DAY</ID>
+    <ID>MaxLineLength:ProfileRepository.kt$ProfileRepositoryImpl$override</ID>
+    <ID>MaxLineLength:RemoveActiveDeviceEntitlementUseCase.kt$RemoveActiveDeviceEntitlementUseCaseImpl$deviceEntitlementRepository.removeDeviceEntitlementList(userRepository.getSsoId(), deleteDeviceEntitlementRequest)</ID>
+    <ID>MaxLineLength:RemoveKeySharedPrefsUseCase.kt$RemoveKeySharedPrefsUseCaseImpl$class</ID>
+    <ID>MaxLineLength:TrueIdHandleException.kt$TrueIdMessageExceptionHelper : Exception</ID>
+    <ID>MayBeConst:TrueCardType.kt$TrueCardType$val TYPE_BLACK = "BLACK"</ID>
+    <ID>MayBeConst:TrueCardType.kt$TrueCardType$val TYPE_BLUE = "BLUE"</ID>
+    <ID>MayBeConst:TrueCardType.kt$TrueCardType$val TYPE_GREEN = "GREEN"</ID>
+    <ID>MayBeConst:TrueCardType.kt$TrueCardType$val TYPE_METAL = "METAL"</ID>
+    <ID>MayBeConst:TrueCardType.kt$TrueCardType$val TYPE_RED = "RED"</ID>
+    <ID>MayBeConst:TrueCardType.kt$TrueCardType$val TYPE_WHITE = "WHITE"</ID>
+    <ID>NestedBlockDepth:FirebaseAnalyticsHelper.kt$FirebaseAnalyticsHelper$private fun setNetworkAndWifiInfo(firebaseAnalyticsModel: FirebaseAnalyticsModel)</ID>
+    <ID>NestedBlockDepth:NetworkInfoUseCase.kt$NetworkInfoUseCaseImpl$@SuppressLint("MissingPermission") override fun getGMS(): JSONObject?</ID>
+    <ID>NestedBlockDepth:NetworkInfoUseCase.kt$NetworkInfoUseCaseImpl$@SuppressLint("MissingPermission") override fun getLTE(): CellInfoLte?</ID>
+    <ID>PrintStackTrace:FirebaseAnalyticsHelper.kt$FirebaseAnalyticsHelper$e</ID>
+    <ID>ReturnCount:EncryptLocationUseCase.kt$EncryptLocationUseCaseImpl$override fun getEncryptLocation(): String</ID>
+    <ID>SwallowedException:BaseDao.kt$BaseDao$e: SQLiteException</ID>
+    <ID>SwallowedException:EncryptLocationUseCase.kt$EncryptLocationUseCaseImpl$e: BadPaddingException</ID>
+    <ID>SwallowedException:EncryptLocationUseCase.kt$EncryptLocationUseCaseImpl$e: IllegalBlockSizeException</ID>
+    <ID>SwallowedException:EncryptLocationUseCase.kt$EncryptLocationUseCaseImpl$e: InvalidAlgorithmParameterException</ID>
+    <ID>SwallowedException:EncryptLocationUseCase.kt$EncryptLocationUseCaseImpl$e: InvalidKeyException</ID>
+    <ID>SwallowedException:EncryptLocationUseCase.kt$EncryptLocationUseCaseImpl$e: UnsupportedEncodingException</ID>
+    <ID>ThrowingExceptionsWithoutMessageOrCause:GetAllConfigUseCase.kt$GetAppConfigUseCaseImpl$Throwable()</ID>
+    <ID>TooGenericExceptionThrown:CmsShelfRepository.kt$CmsShelfRepositoryImpl$throw Throwable(ERROR_LOAD_SHELF)</ID>
+    <ID>TooGenericExceptionThrown:DeviceEntitlementRepository.kt$DeviceEntitlementRepositoryImpl$throw Throwable(DeviceEntitlementErrorCode.ERROR_GET_DEVICE_LIST_FAIL.errorCode)</ID>
+    <ID>TooManyFunctions:AuthManagerWrapper.kt$AuthManagerWrapper : CoroutineScope</ID>
+    <ID>TooManyFunctions:BaseDao.kt$BaseDao&lt;T : BaseEntity></ID>
+    <ID>TooManyFunctions:FirebaseUtil.kt$FirebaseUtil : FirebaseUtilInterface</ID>
+    <ID>TooManyFunctions:FirebaseUtil.kt$FirebaseUtilInterface</ID>
+    <ID>TooManyFunctions:LoginManagerInterface.kt$LoginManagerImpl : LoginManagerInterface</ID>
+    <ID>TooManyFunctions:LoginManagerInterface.kt$LoginManagerInterface</ID>
+    <ID>TooManyFunctions:UserRepository.kt$UserRepository</ID>
+    <ID>TooManyFunctions:UserRepository.kt$UserRepositoryImpl : UserRepository</ID>
+    <ID>UnusedPrivateMember:FirebaseAnalyticsHelper.kt$FirebaseAnalyticsHelper$activity: Activity</ID>
+    <ID>UnusedPrivateMember:FirebaseAnalyticsHelper.kt$FirebaseAnalyticsHelper$screenName: String</ID>
+    <ID>VariableNaming:ChatGroupProfile.kt$GroupProfile$var group_id: String? = ""</ID>
+    <ID>VariableNaming:ChatGroupProfile.kt$RolesProfile$var badge_description_en: String? = null</ID>
+    <ID>VariableNaming:ChatGroupProfile.kt$RolesProfile$var badge_description_local: String? = null</ID>
+    <ID>VariableNaming:ChatGroupProfile.kt$RolesProfile$var badge_description_th: String? = null</ID>
+    <ID>VariableNaming:ChatGroupProfile.kt$RolesProfile$var badge_icon: String? = null</ID>
+    <ID>VariableNaming:ChatGroupProfile.kt$RolesProfile$var badge_title_en: String? = null</ID>
+    <ID>VariableNaming:ChatGroupProfile.kt$RolesProfile$var badge_title_local: String? = null</ID>
+    <ID>VariableNaming:ChatGroupProfile.kt$RolesProfile$var badge_title_th: String? = null</ID>
+    <ID>VariableNaming:ChatGroupProfile.kt$RolesProfile$var crown_no: Int? = null</ID>
+    <ID>VariableNaming:ChatGroupProfile.kt$RolesProfile$var default_bg: String? = ""</ID>
+    <ID>VariableNaming:ChatGroupProfile.kt$RolesProfile$var display_name_color: String? = ""</ID>
+    <ID>VariableNaming:ChatGroupProfile.kt$RolesProfile$var font_awesome_color: String? = ""</ID>
+    <ID>VariableNaming:FirebaseAnalyticsModel.kt$FirebaseAnalyticsModel$// NCC var error_type = ""</ID>
+    <ID>VariableNaming:FirebaseAnalyticsModel.kt$FirebaseAnalyticsModel$// error tracking var status_code = ""</ID>
+    <ID>VariableNaming:FirebaseAnalyticsModel.kt$FirebaseAnalyticsModel$// play clip var content_exclusivity = ""</ID>
+    <ID>VariableNaming:FirebaseAnalyticsModel.kt$FirebaseAnalyticsModel$// redeem var merchant_id = ""</ID>
+    <ID>VariableNaming:FirebaseAnalyticsModel.kt$FirebaseAnalyticsModel$// search var search_term = ""</ID>
+    <ID>VariableNaming:FirebaseAnalyticsModel.kt$FirebaseAnalyticsModel$// tv var channel_code = ""</ID>
+    <ID>VariableNaming:FirebaseAnalyticsModel.kt$FirebaseAnalyticsModel$var channel_name_en = ""</ID>
+    <ID>VariableNaming:FirebaseAnalyticsModel.kt$FirebaseAnalyticsModel$var channel_name_th = ""</ID>
+    <ID>VariableNaming:FirebaseAnalyticsModel.kt$FirebaseAnalyticsModel$var cms_id = ""</ID>
+    <ID>VariableNaming:FirebaseAnalyticsModel.kt$FirebaseAnalyticsModel$var content_class = ""</ID>
+    <ID>VariableNaming:FirebaseAnalyticsModel.kt$FirebaseAnalyticsModel$var content_list_id = ""</ID>
+    <ID>VariableNaming:FirebaseAnalyticsModel.kt$FirebaseAnalyticsModel$var content_type = ""</ID>
+    <ID>VariableNaming:FirebaseAnalyticsModel.kt$FirebaseAnalyticsModel$var duration_s = ""</ID>
+    <ID>VariableNaming:FirebaseAnalyticsModel.kt$FirebaseAnalyticsModel$var episode_id = ""</ID>
+    <ID>VariableNaming:FirebaseAnalyticsModel.kt$FirebaseAnalyticsModel$var episode_name = ""</ID>
+    <ID>VariableNaming:FirebaseAnalyticsModel.kt$FirebaseAnalyticsModel$var error_msg_en = ""</ID>
+    <ID>VariableNaming:FirebaseAnalyticsModel.kt$FirebaseAnalyticsModel$var event_name = ""</ID>
+    <ID>VariableNaming:FirebaseAnalyticsModel.kt$FirebaseAnalyticsModel$var item_index = ""</ID>
+    <ID>VariableNaming:FirebaseAnalyticsModel.kt$FirebaseAnalyticsModel$var link_desc = ""</ID>
+    <ID>VariableNaming:FirebaseAnalyticsModel.kt$FirebaseAnalyticsModel$var link_type = ""</ID>
+    <ID>VariableNaming:FirebaseAnalyticsModel.kt$FirebaseAnalyticsModel$var merchant_name = ""</ID>
+    <ID>VariableNaming:FirebaseAnalyticsModel.kt$FirebaseAnalyticsModel$var movie_type = ""</ID>
+    <ID>VariableNaming:FirebaseAnalyticsModel.kt$FirebaseAnalyticsModel$var music_code = ""</ID>
+    <ID>VariableNaming:FirebaseAnalyticsModel.kt$FirebaseAnalyticsModel$var network_wifi_c1 = ""</ID>
+    <ID>VariableNaming:FirebaseAnalyticsModel.kt$FirebaseAnalyticsModel$var network_wifi_c2 = ""</ID>
+    <ID>VariableNaming:FirebaseAnalyticsModel.kt$FirebaseAnalyticsModel$var other_type = ""</ID>
+    <ID>VariableNaming:FirebaseAnalyticsModel.kt$FirebaseAnalyticsModel$var partner_id = ""</ID>
+    <ID>VariableNaming:FirebaseAnalyticsModel.kt$FirebaseAnalyticsModel$var partner_name = ""</ID>
+    <ID>VariableNaming:FirebaseAnalyticsModel.kt$FirebaseAnalyticsModel$var privilege_id = ""</ID>
+    <ID>VariableNaming:FirebaseAnalyticsModel.kt$FirebaseAnalyticsModel$var privilege_name = ""</ID>
+    <ID>VariableNaming:FirebaseAnalyticsModel.kt$FirebaseAnalyticsModel$var provision_code = ""</ID>
+    <ID>VariableNaming:FirebaseAnalyticsModel.kt$FirebaseAnalyticsModel$var recommendation_schema_id = ""</ID>
+    <ID>VariableNaming:FirebaseAnalyticsModel.kt$FirebaseAnalyticsModel$var redeem_point = ""</ID>
+    <ID>VariableNaming:FirebaseAnalyticsModel.kt$FirebaseAnalyticsModel$var screen_name = ""</ID>
+    <ID>VariableNaming:FirebaseAnalyticsModel.kt$FirebaseAnalyticsModel$var shelf_code = ""</ID>
+    <ID>VariableNaming:FirebaseAnalyticsModel.kt$FirebaseAnalyticsModel$var shelf_index = ""</ID>
+    <ID>VariableNaming:FirebaseAnalyticsModel.kt$FirebaseAnalyticsModel$var shelf_name = ""</ID>
+    <ID>VariableNaming:FirebaseAnalyticsModel.kt$FirebaseAnalyticsModel$var title_id = ""</ID>
+    <ID>VariableNaming:LiveScoreFirebaseData.kt$LiveScoreFirebaseData$var localteam_goals: String? = null</ID>
+    <ID>VariableNaming:LiveScoreFirebaseData.kt$LiveScoreFirebaseData$var visitorteam_goals: String? = null</ID>
+    <ID>VariableNaming:TruePointTrueId.kt$TruePointTrueId$var button_en: String? = null</ID>
+    <ID>VariableNaming:TruePointTrueId.kt$TruePointTrueId$var button_th: String? = null</ID>
+    <ID>VariableNaming:TruePointTrueId.kt$TruePointTrueId$var deep_link: String? = null</ID>
+    <ID>VariableNaming:TruePointTrueId.kt$TruePointTrueId$var post_webview_trueyou: String? = null</ID>
+    <ID>VariableNaming:TruePointTrueId.kt$TruePointTrueId$var privilege_trueyou: PrivilegeTrueYou? = null</ID>
+    <ID>VariableNaming:TruePointTrueId.kt$TruePointTrueId$var shelf_slug: List&lt;String>? = arrayListOf()</ID>
+    <ID>VariableNaming:TruePointTrueId.kt$TruePointTrueId$var url_webview_en: String? = null</ID>
+    <ID>VariableNaming:TruePointTrueId.kt$TruePointTrueId$var url_webview_th: String? = null</ID>
+  </CurrentIssues>
+</SmellBaseline>

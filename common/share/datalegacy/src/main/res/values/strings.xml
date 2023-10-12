@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--Alert permission-->
+    <string name="go_to_setting">Go to setting</string>
+    <string name="cancel">Cancel</string>
+
+    <!--Inboxmessage-->
+    <string name="notification_time_min_ago">minute ago</string>
+    <string name="notification_time_mins_ago">minutes ago</string>
+    <string name="notification_time_hour_ago">hour ago</string>
+    <string name="notification_time_hours_ago">hours ago</string>
+    <string name="notification_time_yesterday">Yesterday</string>
+    <string name="notification_time_just_now">Just now</string>
+
+    <!-- Already logged in -->
+    <string name="logged_in">You are already logged in.</string>
+
+    <string name="server_client_id" translatable="false">474911571098-hg322me7rdsrspneukqsnjqo5n22nb7p.apps.googleusercontent.com</string>
+</resources>
