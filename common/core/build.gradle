@@ -508,7 +508,7 @@ dependencies {
     implementation playService.location
     api playService.ads
 
-//    api project(':common:foundation')
+    api project(':common:foundation')
 
     AndroidStateSafe()
     AppsFlyer()

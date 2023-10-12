@@ -1,0 +1,32 @@
+apply {
+    from("${rootDir}/gradle/sub-module.gradle")
+    from("${rootDir}/gradle/dependencies.gradle")
+//    from("${rootDir}/gradle/jetpack-compose.gradle")
+}
+android {
+    namespace 'com.tdg.truex_android_sampleapp.common.fundation'
+}
+dependencies {
+
+    api kotlin.kotlinStdlibJDK7
+    api androidX.workRuntime
+
+    implementation coldStartupInstrumentation.coldStartupInstrumentation
+
+    AndroidComponents()
+    AndroidLifeCycle()
+    Apollo()
+    Glide()
+    KotlinCoroutine()
+    Navigation()
+    ReactiveX()
+    Retrofit()
+    Okhttp()
+    TechnicalLogging()
+    Player()
+    UnitTesting()
+}
+
+ext {
+    isBelongTo = "app-core"
+}
