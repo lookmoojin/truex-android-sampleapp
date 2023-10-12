@@ -1,0 +1,11 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<SmellBaseline>
+  <ManuallySuppressedIssues/>
+  <CurrentIssues>
+    <ID>MagicNumber:NewRelicManager.kt$NewRelicManager$100</ID>
+    <ID>MagicNumber:PlatformAnalyticManager.kt$PlatformAnalyticManager$100</ID>
+    <ID>NestedBlockDepth:PlatformAnalyticManager.kt$PlatformAnalyticManager$fun trackUserProperties(event: HashMap&lt;String, String?>?, functionName: String)</ID>
+    <ID>NestedBlockDepth:PlatformAnalyticManager.kt$PlatformAnalyticManager$override fun trackEvent(event: HashMap&lt;String, Any>)</ID>
+    <ID>UnnecessaryAbstractClass:TrackCustomerHasTrueMoneyAbstract.kt$TrackCustomerHasTrueMoneyAbstract</ID>
+  </CurrentIssues>
+</SmellBaseline>
