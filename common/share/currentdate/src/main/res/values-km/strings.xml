@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="just_now">អម្បាញ់មិញ</string>
+    <string name="minute_ago">នាទីមុន</string>
+    <string name="minutes_ago">នាទីមុន</string>
+    <string name="hour_ago">ម៉ោងមុន</string>
+    <string name="hours_ago">ម៉ោងមុន</string>
+    <string name="days_ago">ថ្ងៃមុន</string>
+    <string name="moment_ago">អម្បាញ់មិញ</string>
+    <string name="one_day_ago">1 ថ្ងៃមុន</string>
+</resources>

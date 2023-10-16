@@ -10,9 +10,9 @@ android {
 }
 
 dependencies {
-    implementation project(':common:share:component')
+//    implementation project(':common:share:component')
     implementation project(':common:share:data:firestoreconfig')
-    implementation project(':common:share:securitys')
+//    implementation project(':common:share:securitys')
 //    testImplementation project(path: ':common:share:mock')
 
     AmitySDK()

@@ -1,0 +1,23 @@
+apply plugin: 'com.android.library'
+
+apply from: "${project.rootDir}/gradle/sub-module.gradle"
+apply from: "${project.rootDir}/gradle/dependencies.gradle"
+
+android {
+    namespace 'com.tdg.common.share.currentdate'
+}
+
+dependencies {
+    implementation commonsNet.commonsNet
+    implementation project(':common:core')
+    implementation project(':common:share:datalegacy')
+    implementation project(':common:share:data:firestoreconfig')
+    ThreeTen()
+
+//    testImplementation project(':common:share:mock')
+    UnitTesting()
+}
+
+ext {
+    isBelongTo = "hero"
+}

@@ -1,0 +1,16 @@
+<?xml version="1.0" ?>
+<SmellBaseline>
+  <ManuallySuppressedIssues></ManuallySuppressedIssues>
+  <CurrentIssues>
+    <ID>ComplexMethod:ConvertToDateFormatUseCase.kt$ConvertToDateFormatUseCaseImpl$override fun execute( date: String, dateFormat: String, timeResourceUnitModel: TimeResourceUnitModel, dateTime: Date ): String</ID>
+    <ID>LongMethod:ConvertToDateFormatUseCase.kt$ConvertToDateFormatUseCaseImpl$override fun execute( date: String, dateFormat: String, timeResourceUnitModel: TimeResourceUnitModel, dateTime: Date ): String</ID>
+    <ID>MagicNumber:ConvertToDateFormatUseCase.kt$ConvertToDateFormatUseCaseImpl$24</ID>
+    <ID>MagicNumber:ConvertToDateFormatUseCase.kt$ConvertToDateFormatUseCaseImpl$60</ID>
+    <ID>MagicNumber:ConvertToDateFormatUseCase.kt$ConvertToDateFormatUseCaseImpl$7</ID>
+    <ID>NestedBlockDepth:DateTimeUtilController.kt$DateTimeUtilController$override fun convertTimeFormatForNewCMS(dateTime: String?): String</ID>
+    <ID>PrintStackTrace:ConvertToDateFormatUseCase.kt$ConvertToDateFormatUseCaseImpl$e</ID>
+    <ID>TooManyFunctions:DateTimeUtil.kt$DateTimeInterface</ID>
+    <ID>TooManyFunctions:DateTimeUtil.kt$DateTimeUtil : DateTimeInterface</ID>
+    <ID>TooManyFunctions:DateTimeUtilController.kt$DateTimeUtilController : DateTimeInterface</ID>
+  </CurrentIssues>
+</SmellBaseline>
