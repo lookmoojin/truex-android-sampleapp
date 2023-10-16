@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="nativeshare_error_something_wrong">Something went wrong at the moment.\nPlease try again in a bit.</string>
+    <string name="nativeshare_no_internet_connection">No internet connection. Please try again.</string>
+    <string name="nativeshare_share_fail" translatable="false">Share fail</string>
+    <string name="nativeshare_share_fail_api_exception">Please update Google Play services.</string>
+</resources>
