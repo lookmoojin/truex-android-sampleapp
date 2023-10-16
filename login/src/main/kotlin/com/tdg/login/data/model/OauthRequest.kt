@@ -15,7 +15,7 @@ data class OauthRequest(
     @SerializedName("password")
     var password: String = "",
 
-    @SerializedName("grantType")
+    @SerializedName("grant_type")
     var grantType: String = "password",
 
     @SerializedName("scope")
