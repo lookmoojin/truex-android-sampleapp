@@ -1,0 +1,15 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<SmellBaseline>
+  <ManuallySuppressedIssues/>
+  <CurrentIssues>
+    <ID>FunctionParameterNaming:DataBindsModule.kt$DataBindsModule$IsPrivilegeUrlUseCaseImpl: IsPrivilegeUrlUseCaseImpl</ID>
+    <ID>MaxLineLength:ConfigsDeeplinkFormat.kt$ConfigsDeeplinkFormat$DeeplinkConstants.DeeplinkContentType.ARTICLE_ENTERTAINMENT to DeeplinkConstants.DeeplinkFormat.ARTICLE_ENTERTAINMENT</ID>
+    <ID>NestedBlockDepth:PreLoadAdsViewUseCase.kt$PreLoadAdsViewUseCaseImpl$override fun execute(adItem: List&lt;ShelfSkeleton>)</ID>
+    <ID>NestedBlockDepth:PreLoadAdsViewUseCase.kt$PreLoadAdsViewUseCaseImpl$private fun customAdsSize(adsSize: String): List&lt;AdSize></ID>
+    <ID>SerialVersionUIDInSerializableClass:MaintenanceInfo.kt$MaintenanceInfo : Serializable</ID>
+    <ID>SerialVersionUIDInSerializableClass:MaintenanceInfo.kt$MaintenanceTime : Serializable</ID>
+    <ID>SpreadOperator:PreLoadAdsViewUseCase.kt$PreLoadAdsViewUseCaseImpl$(*adSizeList.map { it }.toTypedArray())</ID>
+    <ID>SwallowedException:IsDynamicUrlUseCase.kt$IsDynamicUrlUseCaseImpl$error: Exception</ID>
+    <ID>SwallowedException:IsPrivilegeUrlUseCase.kt$IsPrivilegeUrlUseCaseImpl$error: Exception</ID>
+  </CurrentIssues>
+</SmellBaseline>
