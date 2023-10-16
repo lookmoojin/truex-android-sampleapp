@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/shelfMenuItemLinearLayout"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <com.truedigital.component.view.AppTextView
+        android:id="@+id/shelfMenuTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="2dp"
+        android:layout_marginEnd="2dp"
+        android:layout_marginBottom="5dp"
+        android:background="@android:color/white"
+        android:ellipsize="end"
+        android:gravity="center"
+        android:lines="1"
+        android:minWidth="70dp"
+        android:paddingStart="5dp"
+        android:paddingEnd="5dp"
+        android:textColor="@color/TCGrayDark"
+        android:textSize="15sp"
+        app:textStyle="skvbold" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/redLineView"
+            android:layout_width="match_parent"
+            android:layout_height="2.5dp"
+            android:layout_marginStart="5dp"
+            android:layout_marginEnd="5dp"
+            android:background="@color/TCRedLight" />
+
+    </RelativeLayout>
+
+</LinearLayout>

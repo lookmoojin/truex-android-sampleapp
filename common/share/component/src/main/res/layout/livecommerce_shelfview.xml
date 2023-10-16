@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/commerceViewGroupContainer"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:contentDescription="commerce_activelive_shelf"
+    android:visibility="gone">
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/seemoreImageView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="20dp"
+        android:contentDescription="commerce_activelive_shelfseemore"
+        app:layout_constraintBottom_toBottomOf="@+id/titleTextView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_seemore" />
+
+    <TextView
+        android:id="@+id/titleTextView"
+        style="@style/TrueID.Header2.Bold"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:contentDescription="commerce_activelive_shelftitle"
+        android:ellipsize="end"
+        android:lines="1"
+        app:layout_constraintEnd_toStartOf="@id/seemoreImageView"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="visible" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/commerceRecyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="20dp"
+        android:clipToPadding="false"
+        android:contentDescription="commerce_activelive_shelflistview"
+        android:orientation="horizontal"
+        android:paddingStart="19dp"
+        android:paddingEnd="9dp"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/titleTextView" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

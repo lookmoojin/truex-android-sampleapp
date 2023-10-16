@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="AppEditText">
+        <attr name="textStyle" />
+    </declare-styleable>
+
+    <declare-styleable name="AppTextView">
+        <attr name="textStyle" />
+    </declare-styleable>
+
+    <declare-styleable name="AppButton">
+        <attr name="textStyle" />
+    </declare-styleable>
+
+    <attr name="textStyle" format="enum">
+        <enum name="normal" value="0" />
+        <enum name="bold" value="1" />
+        <enum name="extraBold" value="2" />
+        <enum name="light" value="3" />
+        <enum name="skvbold" value="4" />
+        <enum name="skvtext" value="5" />
+    </attr>
+
+    <declare-styleable name="CircleImageView">
+        <attr name="civ_border_width" format="dimension" />
+        <attr name="civ_border_color" format="color" />
+        <attr name="civ_border_overlay" format="boolean" />
+        <attr name="civ_fill_color" format="color" />
+        <attr name="civ_circle_background_color" format="color" />
+    </declare-styleable>
+
+    <declare-styleable name="MIRatioImageView">
+        <attr name="ratio" format="enum">
+            <enum name="ratio_4_3" value="0" />
+            <enum name="ratio_16_9" value="1" />
+            <enum name="ratio_1_1" value="2" />
+        </attr>
+    </declare-styleable>
+
+    <declare-styleable name="TrueIdDialog">
+        <attr name="iconColor" format="color" />
+        <attr name="iconBackgroundColor" format="color" />
+        <attr name="textTitleColor" format="color" />
+        <attr name="textSubtitleColor" format="color" />
+        <attr name="buttonColorPrimary" format="color" />
+        <attr name="buttonColorSecondary" format="color" />
+        <attr name="buttonColorTertiary" format="color" />
+        <attr name="textButtonColorPrimary" format="color" />
+        <attr name="textButtonColorSecondary" format="color" />
+        <attr name="textButtonColorTertiary" format="color" />
+        <attr name="buttonStylePrimary" format="reference"/>
+        <attr name="buttonStyleSecondary" format="reference"/>
+        <attr name="buttonStyleTertiary" format="reference"/>
+    </declare-styleable>
+
+    <declare-styleable name="TrueIdDialogButton">
+        <attr name="containedButtonColor" format="color" />
+        <attr name="textContainedButtonColor" format="color" />
+        <attr name="outlinedButtonColor" format="color" />
+        <attr name="textOutlinedButtonColor" format="color" />
+        <attr name="textButtonColor" format="color" />
+    </declare-styleable>
+</resources>

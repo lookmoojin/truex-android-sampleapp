@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/errorRootView"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:clickable="true"
+    android:focusable="true"
+    tools:background="@android:color/white"
+    android:contentDescription="@string/error_view">
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/startViewGuideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.08" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/endViewGuideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.92" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/errorImageView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:contentDescription="@string/error_view_imageview_error"
+        app:layout_constraintBottom_toTopOf="@+id/errorTitleTextView"
+        app:layout_constraintEnd_toEndOf="@id/endViewGuideline"
+        app:layout_constraintStart_toStartOf="@id/startViewGuideline"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_chainStyle="packed"
+        tools:src="@drawable/maintenance_white" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/errorTitleTextView"
+        style="@style/TrueID.Header2.Bold.DarkGrey"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:contentDescription="@string/error_view_textview_title"
+        android:gravity="center"
+        android:visibility="gone"
+        app:layout_constraintBottom_toTopOf="@+id/errorDetailTextView"
+        app:layout_constraintEnd_toEndOf="@id/endViewGuideline"
+        app:layout_constraintStart_toStartOf="@id/startViewGuideline"
+        app:layout_constraintTop_toBottomOf="@+id/errorImageView"
+        tools:text="title"
+        tools:visibility="visible" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/errorDetailTextView"
+        style="@style/TrueID.Small.DarkGrey"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:contentDescription="@string/error_view_textview_description"
+        android:gravity="center"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@id/endViewGuideline"
+        app:layout_constraintStart_toStartOf="@id/startViewGuideline"
+        app:layout_constraintTop_toBottomOf="@+id/errorTitleTextView"
+        tools:text="detail"
+        tools:visibility="visible" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

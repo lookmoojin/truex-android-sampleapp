@@ -1,0 +1,90 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<SmellBaseline>
+  <ManuallySuppressedIssues/>
+  <CurrentIssues>
+    <ID>CollapsibleIfStatements:BackToTopView.kt$BackToTopView.&lt;no name provided>$if (newState == RecyclerView.SCROLL_STATE_IDLE) { if (isOnTop()) { hide() } }</ID>
+    <ID>CollapsibleIfStatements:OrientationChangeEventListener.kt$OrientationChangeEvent$if ((orientation in 255..285) || (orientation in 75..105)) { // check if auto rotate screen is on if (isAutoRotateScreenOn()) { // change state to LANDSCAPE orientationChangeEventListener.onChangeToLandscape() currentOrientationState = OrientationState.LANDSCAPE } }</ID>
+    <ID>CollapsibleIfStatements:OrientationChangeEventListener.kt$OrientationChangeEvent$if ((orientation in 345..359) || (orientation in 0..15)) { // check if auto rotate screen is on if (isAutoRotateScreenOn()) { // change state to PORTRAIT orientationChangeEventListener.onChangeToPortrait() currentOrientationState = OrientationState.PORTRAIT } }</ID>
+    <ID>ComplexCondition:BackToTopView.kt$BackToTopView.&lt;no name provided>$(controlsVisible &amp;&amp; dy > 0) || (!controlsVisible &amp;&amp; dy &lt; 0)</ID>
+    <ID>ComplexMethod:StringExtension.kt$ fun String?.isBirthDateEligible(max: String?, min: String?): Boolean</ID>
+    <ID>ComplexMethod:StringExtension.kt$fun String?.formatterFullDateTime(context: Context, localLanguage: GetLocalizationUseCase): String</ID>
+    <ID>ComplexMethod:ViewAndLikeWidget.kt$ViewAndLikeWidget$fun setupContentViewAndLike( countView: Int, countLike: Int, date: String, duration: String, isSeries: Boolean )</ID>
+    <ID>EmptyCatchBlock:AppEditText.kt$AppEditText${ }</ID>
+    <ID>EmptyCatchBlock:AppTextView.kt$AppTextView${ }</ID>
+    <ID>ForbiddenComment:LikeWidget.kt$LikeWidget$// TODO: Missing FA here!!!!</ID>
+    <ID>LongMethod:StringExtension.kt$ fun String.toTimeDifferenceNow(context: Context): String</ID>
+    <ID>LongMethod:StringExtension.kt$fun String?.formatterFullDateTime(context: Context, localLanguage: GetLocalizationUseCase): String</ID>
+    <ID>LongMethod:ViewAndLikeWidget.kt$ViewAndLikeWidget$fun setupContentViewAndLike( countView: Int, countLike: Int, date: String, duration: String, isSeries: Boolean )</ID>
+    <ID>MagicNumber:BackToTopView.kt$BackToTopView$14F</ID>
+    <ID>MagicNumber:BackToTopView.kt$BackToTopView$4</ID>
+    <ID>MagicNumber:BottomTabNavigationFragment.kt$BottomTabNavigationFragment$3000</ID>
+    <ID>MagicNumber:DateExtension.kt$543</ID>
+    <ID>MagicNumber:GetActiveLiveStreamUseCase.kt$GetActiveLiveStreamUseCaseImpl$2000</ID>
+    <ID>MagicNumber:LikeWidget.kt$LikeWidget$3</ID>
+    <ID>MagicNumber:OrientationChangeEventListener.kt$OrientationChangeEvent$105</ID>
+    <ID>MagicNumber:OrientationChangeEventListener.kt$OrientationChangeEvent$15</ID>
+    <ID>MagicNumber:OrientationChangeEventListener.kt$OrientationChangeEvent$255</ID>
+    <ID>MagicNumber:OrientationChangeEventListener.kt$OrientationChangeEvent$285</ID>
+    <ID>MagicNumber:OrientationChangeEventListener.kt$OrientationChangeEvent$345</ID>
+    <ID>MagicNumber:OrientationChangeEventListener.kt$OrientationChangeEvent$359</ID>
+    <ID>MagicNumber:OrientationChangeEventListener.kt$OrientationChangeEvent$75</ID>
+    <ID>MagicNumber:QrPaymentDialogError.kt$QrPaymentDialogError$0.90</ID>
+    <ID>MagicNumber:StringExtension.kt$1000</ID>
+    <ID>MagicNumber:StringExtension.kt$1000.0</ID>
+    <ID>MagicNumber:StringExtension.kt$1000000</ID>
+    <ID>MagicNumber:StringExtension.kt$18</ID>
+    <ID>MagicNumber:StringExtension.kt$2018</ID>
+    <ID>MagicNumber:StringExtension.kt$24</ID>
+    <ID>MagicNumber:StringExtension.kt$26</ID>
+    <ID>MagicNumber:StringExtension.kt$3</ID>
+    <ID>MagicNumber:StringExtension.kt$543</ID>
+    <ID>MagicNumber:StringExtension.kt$60</ID>
+    <ID>MagicNumber:WebViewFullDialog.kt$WebViewFullDialog.&lt;no name provided>$100</ID>
+    <ID>MayBeConst:ProgressWithTextDialogFragment.kt$ProgressWithTextDialogFragment.Companion$val KEY_MESSAGE = "key_message"</ID>
+    <ID>NestedBlockDepth:BaseFragment.kt$BaseFragment$ open fun showProgressDialog()</ID>
+    <ID>NestedBlockDepth:BaseFragment.kt$BaseFragment$protected fun showProgressDialog(msg: String)</ID>
+    <ID>NestedBlockDepth:OrientationChangeEventListener.kt$OrientationChangeEvent$override fun onOrientationChanged(orientation: Int)</ID>
+    <ID>NestedBlockDepth:StringExtension.kt$ fun String.toTimeDifferenceNow(context: Context): String</ID>
+    <ID>NestedBlockDepth:StringExtension.kt$fun String?.fromFormatApiToHasLocale( resultFormat: String = yyyy_MM_dd_DASH, isAddTimeZone: Boolean ): String</ID>
+    <ID>NestedBlockDepth:StringExtension.kt$fun String?.toDateFormatMultipleLanguage( resultFormatTh: String = dd_MMMM_yyyy, resultFormatEn: String = MMM_dd_yyyy, isAddTimeZone: Boolean = false, isEnThOnly: Boolean = false ): String</ID>
+    <ID>NestedBlockDepth:TrueIdDialogFragment.kt$TrueIdDialogFragment$private fun initIconView(view: AppCompatImageView)</ID>
+    <ID>NestedBlockDepth:ViewAndLikeWidget.kt$ViewAndLikeWidget$fun setupContentViewAndLike( countView: Int, countLike: Int, date: String, duration: String, isSeries: Boolean )</ID>
+    <ID>NestedBlockDepth:ViewAndLikeWidget.kt$ViewAndLikeWidget$fun setupContentViewAndLike(countView: Int, countLike: Int, date: String)</ID>
+    <ID>NestedBlockDepth:WebViewFullDialog.kt$WebViewFullDialog$private fun showProgressDialog(msg: String)</ID>
+    <ID>PrintStackTrace:StringExtension.kt$e</ID>
+    <ID>ReturnCount:ConvertShelfDataToLiveStreamDataUseCase.kt$ConvertShelfDataToLiveStreamDataUseCaseImpl$override fun execute(shelfItemData: String): Triple&lt;String, String, String></ID>
+    <ID>ReturnCount:StringExtension.kt$ fun String.toFullLang(): String</ID>
+    <ID>ReturnCount:StringExtension.kt$ fun String?.isBirthDateEligible(max: String?, min: String?): Boolean</ID>
+    <ID>ReturnCount:StringExtension.kt$fun String?.fromFormatApiToHasLocale( resultFormat: String = yyyy_MM_dd_DASH, isAddTimeZone: Boolean ): String</ID>
+    <ID>ReturnCount:StringExtension.kt$fun String?.toDateFormatMultipleLanguage( resultFormatTh: String = dd_MMMM_yyyy, resultFormatEn: String = MMM_dd_yyyy, isAddTimeZone: Boolean = false, isEnThOnly: Boolean = false ): String</ID>
+    <ID>SwallowedException:AppEditText.kt$AppEditText$exception: RuntimeException</ID>
+    <ID>SwallowedException:AppTextView.kt$AppTextView$exception: RuntimeException</ID>
+    <ID>SwallowedException:BaseFragment.kt$BaseFragment$e: NullPointerException</ID>
+    <ID>SwallowedException:BottomTabNavigationFragment.kt$BottomTabNavigationFragment$e: Exception</ID>
+    <ID>SwallowedException:CardPrivilegeUtils.kt$CardPrivilegeUtils$e: Exception</ID>
+    <ID>SwallowedException:ConvertShelfDataToLiveStreamDataUseCase.kt$ConvertShelfDataToLiveStreamDataUseCaseImpl$e: JsonSyntaxException</ID>
+    <ID>SwallowedException:GetActiveLiveStreamUseCase.kt$GetActiveLiveStreamUseCaseImpl$e: Exception</ID>
+    <ID>SwallowedException:StringExtension.kt$e: Exception</ID>
+    <ID>SwallowedException:StringExtension.kt$e: NullPointerException</ID>
+    <ID>SwallowedException:ViewAndLikeWidget.kt$ViewAndLikeWidget$e: Exception</ID>
+    <ID>TooGenericExceptionThrown:RecyclerViewExtension.kt$&lt;no name provided>$throw Exception("Only LinearLayoutManager support here")</ID>
+    <ID>TooManyFunctions:AppInfoDialog.kt$AppInfoDialog : DialogFragment</ID>
+    <ID>TooManyFunctions:BaseFragment.kt$BaseFragment : BaseAbstractFragmentOrientationChangeEventListenerFragmentInterface</ID>
+    <ID>TooManyFunctions:CoreActivity.kt$CoreActivity : FoundationActivity</ID>
+    <ID>TooManyFunctions:LikeWidget.kt$LikeWidget : AppCompatImageView</ID>
+    <ID>TooManyFunctions:ShelfMenuItemWidget.kt$ShelfMenuItemWidget : FrameLayout</ID>
+    <ID>TooManyFunctions:StringExtension.kt$com.truedigital.component.extension.StringExtension.kt</ID>
+    <ID>TooManyFunctions:TrueIdDialog.kt$TrueIdDialog$Builder</ID>
+    <ID>TooManyFunctions:TrueIdDialogFragment.kt$TrueIdDialogFragment : BottomSheetDialogFragmentTrueIdDialog</ID>
+    <ID>TooManyFunctions:ViewAndLikeWidget.kt$ViewAndLikeWidget : LinearLayout</ID>
+    <ID>UnnecessaryAbstractClass:AppInfoData.kt$AppInfoData</ID>
+    <ID>UnusedPrivateMember:BackToTopView.kt$BackToTopView$activity: Activity</ID>
+    <ID>UnusedPrivateMember:BaseFragment.kt$BaseFragment$i</ID>
+    <ID>UnusedPrivateMember:FragmentInterface.kt$FragmentInterface$i</ID>
+    <ID>UnusedPrivateMember:GlobalSearchWidget.kt$GlobalSearchWidget$activity: FragmentActivity</ID>
+    <ID>UnusedPrivateMember:LikeWidget.kt$LikeWidget$likeType: String</ID>
+    <ID>UnusedPrivateMember:LikeWidget.kt$LikeWidget$private var analyticScreenName: String? = null</ID>
+    <ID>UtilityClassWithPublicConstructor:DynamicLinkConstant.kt$DynamicLinkConstant</ID>
+    <ID>VariableNaming:StringExtension.kt$val SPLITTER = "-"</ID>
+  </CurrentIssues>
+</SmellBaseline>

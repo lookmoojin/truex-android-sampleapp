@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/countViewAndLikeLayout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:baselineAligned="false"
+    android:gravity="start|center_vertical"
+    android:orientation="horizontal">
+
+    <com.truedigital.component.view.AppTextView
+        android:id="@+id/dateTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ellipsize="end"
+        android:gravity="center"
+        android:maxLines="1"
+        android:visibility="gone"
+        android:textColor="@color/TCGrayDark"
+        android:textSize="12sp"
+        app:textStyle="skvbold"
+        tools:text="28 Aug 60"
+        tools:textColor="@color/TCGrayDark"
+        tools:visibility="visible" />
+
+    <View
+        android:id="@+id/lineViewLayout"
+        android:layout_width="1dp"
+        android:layout_height="match_parent"
+        android:layout_margin="4dp"
+        android:background="@color/TCGrayDark"
+        android:visibility="gone"
+        tools:visibility="visible" />
+
+    <LinearLayout
+        android:id="@+id/countViewLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:visibility="gone"
+        tools:visibility="visible">
+
+        <ImageView
+            android:id="@+id/iconViewImageView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="4dp"
+            android:gravity="center_vertical"
+            android:src="@drawable/ic_view_grey"
+            tools:src="@drawable/ic_view_grey" />
+
+        <com.truedigital.component.view.AppTextView
+            android:id="@+id/countViewTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:textColor="@color/TCGrayDark"
+            android:textSize="12sp"
+            app:textStyle="skvbold"
+            tools:text="12000k"
+            tools:textColor="@color/TCGrayDark" />
+
+    </LinearLayout>
+
+    <View
+        android:id="@+id/lineLayout"
+        android:layout_width="1dp"
+        android:layout_height="match_parent"
+        android:layout_margin="4dp"
+        android:background="@color/TCGrayDark"
+        android:visibility="gone"
+        tools:visibility="visible" />
+
+    <LinearLayout
+        android:id="@+id/countLikeLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:visibility="gone"
+        tools:visibility="visible">
+
+        <ImageView
+            android:id="@+id/iconLikeImageView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:layout_marginEnd="4dp"
+            android:layout_marginBottom="4dp"
+            android:gravity="center_vertical"
+            android:src="@drawable/ic_like_count"
+            tools:src="@drawable/ic_like_count" />
+
+        <com.truedigital.component.view.AppTextView
+            android:id="@+id/countLikeTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:textColor="@color/TCGrayDark"
+            android:textSize="12sp"
+            app:textStyle="skvbold"
+            tools:text="12k"
+            tools:textColor="@color/TCGrayDark" />
+
+    </LinearLayout>
+
+    <View
+        android:id="@+id/lineLayout2"
+        android:layout_width="1dp"
+        android:layout_height="match_parent"
+        android:layout_margin="4dp"
+        android:background="@color/TCGrayDark"
+        android:visibility="gone"
+        tools:visibility="visible" />
+
+    <com.truedigital.component.view.AppTextView
+        android:id="@+id/countDurationTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:visibility="gone"
+        android:textColor="@color/TCGrayDark"
+        android:textSize="12sp"
+        app:textStyle="skvbold"
+        tools:text="1 Hr 22 Min"
+        tools:textColor="@color/TCGrayDark"
+        tools:visibility="visible" />
+
+</LinearLayout>

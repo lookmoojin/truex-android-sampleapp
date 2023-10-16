@@ -1,0 +1,8 @@
+<resources>
+    <string name="ok">လုပ္ေဆာင္မည္</string>
+    <string name="cancel">ပယ္ဖ်က္မည္</string>
+
+    <!--Back to Top-->
+    <string name="function_button_back_to_top">အေပၚသို</string>
+    <string name="discover_more">အျခား</string>
+</resources>

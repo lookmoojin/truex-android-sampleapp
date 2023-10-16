@@ -1,0 +1,168 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+
+    <style name="ShowStatusBarTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="colorPrimaryDark">@android:color/transparent</item>
+        <item name="android:windowLightStatusBar" tools:ignore="NewApi">true</item>
+        <item name="android:statusBarColor">@android:color/transparent</item>
+        <item name="castMiniControllerStyle">@style/CustomCastMiniController</item>
+    </style>
+
+    <style name="ShowStatusBarDarkTheme" parent="TrueID">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="android:windowDrawsSystemBarBackgrounds">false</item>
+        <item name="android:statusBarColor">@android:color/transparent</item>
+        <item name="android:windowLightStatusBar" tools:ignore="NewApi">false</item>
+    </style>
+
+    <style name="ShowStatusBarDarkTheme.DarkStatusBar" parent="ShowStatusBarDarkTheme">
+        <item name="android:statusBarColor">@android:color/black</item>
+    </style>
+
+    <style name="FullscreenDialog" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="colorPrimaryDark">#FCFCFC</item>
+        <item name="android:windowLightStatusBar" tools:ignore="NewApi">true</item>
+    </style>
+
+    <!--MI Material Progress Dialog-->
+    <style name="ProgressDialog" parent="@android:style/Theme.Dialog">
+        <item name="android:windowFrame">@null</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:windowAnimationStyle">@android:style/Animation.Dialog</item>
+        <item name="android:windowSoftInputMode">stateUnspecified|adjustPan</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowNoTitle">true</item>
+    </style>
+
+    <style name="TrueChannelTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <item name="colorPrimaryDark">@android:color/black</item>
+        <item name="android:windowLightStatusBar" tools:ignore="NewApi">false</item>
+    </style>
+
+    <style name="dialog_tran" parent="android:style/Theme.Dialog">
+        <item name="android:windowFrame">@null</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:backgroundDimEnabled">false</item>
+        <item name="android:backgroundDimAmount">0.4</item>
+    </style>
+
+    <!--Dialog Custom Theme-->
+    <style name="dialog_animation_up">
+        <item name="android:windowEnterAnimation">@anim/slide_in_down</item>
+        <item name="android:windowExitAnimation">@anim/slide_out_down</item>
+    </style>
+
+    <style name="dialog_animation_fade">
+        <item name="android:windowEnterAnimation">@anim/fadein</item>
+        <item name="android:windowExitAnimation">@anim/fadeout</item>
+    </style>
+
+    <style name="dialog_animation_push">
+        <item name="android:windowEnterAnimation">@anim/slide_in_right</item>
+        <item name="android:windowExitAnimation">@anim/slide_out_right</item>
+    </style>
+
+    <!-- Text Style-->
+    <style name="MI_TextStyle_HeaderText">
+        <item name="android:padding">4dp</item>
+        <item name="android:textSize">@dimen/font_header</item>
+        <item name="android:textColor">@android:color/black</item>
+    </style>
+
+    <style name="CustomCastMiniController" parent="CastMiniController">
+        <item name="castBackground">@android:color/white</item>
+    </style>
+
+    <style name="BottomSheetDialog" parent="Theme.Design.Light.BottomSheetDialog">
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:colorBackground">@android:color/transparent</item>
+        <item name="android:windowFrame">@null</item>
+        <item name="android:windowIsFloating">true</item>
+    </style>
+
+    <!--Moved from gamification module-->
+    <style name="playerToolbar" parent="android:Widget">
+        <item name="titleTextAppearance">@style/TextAppearance.Widget.AppCompat.Toolbar.Title</item>
+        <item name="subtitleTextAppearance">
+            @style/TextAppearance.Widget.AppCompat.Toolbar.Subtitle
+        </item>
+        <item name="android:minHeight">?attr/actionBarSize</item>
+        <item name="titleMargin">4dp</item>
+        <item name="maxButtonHeight">@dimen/abc_action_bar_default_height_material</item>
+        <item name="buttonGravity">top</item>
+        <item name="collapseIcon">?attr/homeAsUpIndicator</item>
+        <item name="collapseContentDescription">@string/abc_toolbar_collapse_description</item>
+        <item name="contentInsetStart">16dp</item>
+        <item name="contentInsetStartWithNavigation">@dimen/abc_action_bar_content_inset_with_nav
+        </item>
+        <item name="android:paddingLeft">0dp</item>
+        <item name="android:paddingRight">0dp</item>
+    </style>
+
+    <!--Dialog styles-->
+    <style name="TrueIdDialog" />
+
+    <style name="TrueIdDialog.Button" parent="Widget.AppCompat.Button">
+        <item name="android:textAppearance">@style/TrueID.Body</item>
+        <item name="textAllCaps">false</item>
+        <item name="android:padding">12dp</item>
+    </style>
+
+    <style name="TrueIdDialog.Button.Contained">
+        <item name="android:background">@drawable/btn_dialog_contained</item>
+        <item name="android:textColor">?textContainedButtonColor</item>
+    </style>
+
+    <style name="TrueIdDialog.Button.Outlined">
+        <item name="android:background">@drawable/btn_dialog_outlined</item>
+        <item name="android:textColor">?textOutlinedButtonColor</item>
+    </style>
+
+    <style name="TrueIdDialog.Button.Text">
+        <item name="android:background">@drawable/btn_dialog_text</item>
+        <item name="android:textColor">?textButtonColor</item>
+    </style>
+
+    <style name="TrueIdDialog.BottomSheet"/>
+    <style name="TrueIdDialog.BottomSheet.Container">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginTop">24dp</item>
+        <item name="android:layout_gravity">bottom|center_horizontal</item>
+        <item name="android:paddingBottom">32dp</item>
+        <item name="android:background">@drawable/bg_dialog_bottom_sheet</item>
+    </style>
+
+    <style name="TrueIdDialog.TextAppearance"/>
+    <style name="TrueIdDialog.TextAppearance.Title">
+        <item name="android:textSize">18sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:lineSpacingExtra">2sp</item>
+        <item name="android:textColor">?textTitleColor</item>
+    </style>
+    <style name="TrueIdDialog.TextAppearance.Subtitle">
+        <item name="android:textSize">14sp</item>
+        <item name="android:textStyle">normal</item>
+        <item name="android:lineSpacingExtra">4sp</item>
+        <item name="android:textColor">?textSubtitleColor</item>
+        <item name="android:gravity">center</item>
+    </style>
+
+    <style name="TrueIdDialog.Text">
+        <item name="android:gravity">center</item>
+    </style>
+    <style name="TrueIdDialog.Text.Title">
+        <item name="android:textAppearance">@style/TrueIdDialog.TextAppearance.Title</item>
+        <item name="android:paddingStart">12dp</item>
+        <item name="android:paddingEnd">12dp</item>
+    </style>
+    <style name="TrueIdDialog.Text.Subtitle">
+        <item name="android:textAppearance">@style/TrueIdDialog.TextAppearance.Subtitle</item>
+    </style>
+</resources>
