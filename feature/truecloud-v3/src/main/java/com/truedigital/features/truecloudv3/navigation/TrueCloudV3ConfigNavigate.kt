@@ -1,7 +1,7 @@
 package com.truedigital.features.truecloudv3.navigation
 
 import androidx.collection.arrayMapOf
-import com.truedigital.features.truecloudv3.R
+import com.tdg.truecloud.R
 import com.truedigital.navigation.router.Destination
 
 object TrueCloudV3ConfigNavigate : Map<Destination, Int> by arrayMapOf(
@@ -11,23 +11,23 @@ object TrueCloudV3ConfigNavigate : Map<Destination, Int> by arrayMapOf(
     AllFileToOptionFileBottomSheet to R.id.action_FileTrueCloudFragment_to_optionFileBottomSheetDialogFragment,
     OptionFileToRenameDialog to R.id.action_optionFileBottomSheetDialogFragment_to_renameDialogFragment,
     OptionFileToFileInfoBottomSheet to
-        R.id.action_optionFileBottomSheetDialogFragment_to_fileInfoBottomSheetDialogFragment,
+            R.id.action_optionFileBottomSheetDialogFragment_to_fileInfoBottomSheetDialogFragment,
     OptingMainToSortByBottomSheet to
-        R.id.action_OptionMainFileBottomSheetDialogFragment_to_sortByBottomSheetDialogFragment,
+            R.id.action_OptionMainFileBottomSheetDialogFragment_to_sortByBottomSheetDialogFragment,
     OptingMainToCreateNewFolder to R.id.action_OptionMainFileBottomSheetDialogFragment_to_createNewFolderDialogFragment,
     ContactDetailToEditContactFragment to
-        R.id.action_TrueCloudV3DetailBottomSheetDialogFragment_to_trueCloudV3EditContactFragment,
+            R.id.action_TrueCloudV3DetailBottomSheetDialogFragment_to_trueCloudV3EditContactFragment,
     ContactSelectLabelBottomSheetToCustomLabelDialog to
-        R.id.action_TrueCloudV3ContactSelectLabelBottomSheetDialogFragment_to_trueCloudV3CustomLabelDialogFragment,
+            R.id.action_TrueCloudV3ContactSelectLabelBottomSheetDialogFragment_to_trueCloudV3CustomLabelDialogFragment,
     ContactToContactDetailBottomSheet to
-        R.id.action_ContactTrueCloudFragment_to_trueCloudV3DetailBottomSheetDialogFragment,
+            R.id.action_ContactTrueCloudFragment_to_trueCloudV3DetailBottomSheetDialogFragment,
     ContactToOptionContactBottomSheet to
-        R.id.action_ContactTrueCloudFragment_to_trueCloudV3OptionContactBottomSheetDialogFragment,
+            R.id.action_ContactTrueCloudFragment_to_trueCloudV3OptionContactBottomSheetDialogFragment,
     ContactToSyncContactBottomSheet to
-        R.id.action_ContactTrueCloudFragment_to_trueCloudV3SyncContactBottomSheetDialogFragment,
+            R.id.action_ContactTrueCloudFragment_to_trueCloudV3SyncContactBottomSheetDialogFragment,
     ContactToPermission to R.id.action_ContactTrueCloudFragment_to_trueCloudV3IntroPermissionFragment,
     EditContactToContactSelectLabelBottomSheet to
-        R.id.action_TrueCloudV3EditContactFragment_to_trueCloudV3ContactSelectLabelBottomSheetDialogFragment,
+            R.id.action_TrueCloudV3EditContactFragment_to_trueCloudV3ContactSelectLabelBottomSheetDialogFragment,
     FileViewerToOptionFileBottomSheet to R.id.action_FileViewerFragment_to_optionFileBottomSheetDialogFragment,
     IntroTrueCloudToMain to R.id.action_introTrueCloudFragment_to_mainTrueCloudV3Fragment,
     IntroMigrateToMigrating to R.id.action_IntroMigrateDataFragment_to_MigrateDataFragment,
@@ -45,7 +45,7 @@ object TrueCloudV3ConfigNavigate : Map<Destination, Int> by arrayMapOf(
     SharedFileViewerToMain to R.id.action_sharedFileViewerFragment_to_mainTrueCloudV3Fragment,
     IntroSharedToSharedViewer to R.id.action_introTrueCloudSharedFileFragment_to_sharedFileViewerFragment,
     SelectFileToOptionFileSelectedBottomSheet to
-        R.id.action_FileTrueCloudFragment_to_optionFileSelectedBottomSheetDialogFragment,
+            R.id.action_FileTrueCloudFragment_to_optionFileSelectedBottomSheetDialogFragment,
     OptionFileSelectedToFileLocatorFragment to R.id.action_FileSelectedBottomSheet_to_trueCloudV3FileLocatorFragment,
     MainToTrash to R.id.action_mainTrueCloudV3Fragment_to_trueCloudV3TrashFragment,
     TrashToTrashBottomSheet to R.id.action_trueCloudV3TrashFragment_to_optionTrashFileBottomSheetDialogFragment,

@@ -1,0 +1,58 @@
+apply {
+    from("${rootDir}/gradle/sub-module.gradle")
+    from("${rootDir}/gradle/dependencies.gradle")
+}
+android {
+    namespace 'com.tdg.truex_android_sampleapp.common.navigation'
+}
+dependencies {
+    implementation project(":common:core")
+//    implementation project(":common:navigations:share")
+    implementation project(":common:share:amityserviceconfig")
+    implementation project(":common:share:analytics")
+//    implementation project(":common:share:articledetails:share")
+    implementation project(":common:share:component")
+    implementation project(":common:share:component-v3")
+    implementation project(":common:share:data:coredata")
+    implementation project(":common:share:datalegacy")
+//    implementation project(":common:share:mobileid")
+//    implementation project(":common:share:payment:share")
+//    implementation project(":common:share:payment:truemoney")
+    implementation project(":common:share:resource")
+//    implementation project(':common:share:securitys')
+//    implementation project(":common:share:webview:webviewshare")
+
+//    implementation project(":features:commerces:share")
+//    implementation project(":features:community:share")
+//    implementation project(":features:gamifications:share")
+//    implementation project(":features:homelandings:share")
+//    implementation project(":features:homes:share")
+//    implementation project(":features:iservices-v3:share")
+//    implementation project(":features:listens:share")
+//    implementation project(":features:netcampaigns:share")
+//    implementation project(":features:netcampaigns:share")
+//    implementation project(":features:privileges:deeplink")
+//    implementation project(":features:privileges:deeplink")
+//    implementation project(":features:profiles:share")
+//    implementation project(":features:profiles:share")
+//    implementation project(":features:qrscanners:share")
+//    implementation project(":features:reads:share")
+//    implementation project(":features:setting:share")
+//    implementation project(":features:specialpopups:share")
+//    implementation project(":features:sport:deeplinks")
+//    implementation project(":features:trueclouds:share")
+//    implementation project(":features:watch:share:deeplinks")
+
+//    api project(":features:communicator:common:core")
+
+    DataStore()
+    Navigation()
+    Huawei()
+
+    UnitTesting()
+//    testImplementation project(":common:share:mock")
+}
+
+ext {
+    isBelongTo = "app-core"
+}

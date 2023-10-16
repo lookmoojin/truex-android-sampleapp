@@ -1,0 +1,19 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<SmellBaseline>
+  <ManuallySuppressedIssues/>
+  <CurrentIssues>
+    <ID>ComplexCondition:ShelfAdapter.kt$ShelfAdapter$!latestTagAnalytics.contains(shelfId) &amp;&amp; isValidTrackingShelf(shelf, view) &amp;&amp; ( shelf.typeCallApi != PERSONALIZE_TYPE &amp;&amp; shelf.typeCallApi != BY_PERSONALIZE_TYPE )</ID>
+    <ID>EmptyFunctionBlock:ShelfAdapter.kt$ShelfAdapter${}</ID>
+    <ID>LongMethod:GetInterContentUseCase.kt$GetInterContentUseCaseImpl$private fun mapIntentContentToSkeleton(jsonArray: JsonArray): List&lt;ShelfSkeleton></ID>
+    <ID>MagicNumber:TrackFirebaseAnalyticsDeeplinkUseCase.kt$TrackFirebaseAnalyticsDeeplinkUseCaseImpl$100</ID>
+    <ID>MaxLineLength:BaseInterViewModel.kt$BaseInterViewModel$if</ID>
+    <ID>MaxLineLength:ShelfAdapter.kt$ShelfAdapter.&lt;no name provided>$if</ID>
+    <ID>MaxLineLength:TrackFirebaseAnalyticsDeeplinkUseCase.kt$TrackFirebaseAnalyticsDeeplinkUseCaseImpl$MeasurementConstant.Key.KEY_ERROR_NAME to MeasurementConstant.Deeplink.Event.DEEPLINK_EVENT_DEEP_LINKING_ERROR</ID>
+    <ID>MaxLineLength:TrackFirebaseAnalyticsDeeplinkUseCase.kt$TrackFirebaseAnalyticsDeeplinkUseCaseImpl$MeasurementConstant.Key.KEY_EVENT_NAME to MeasurementConstant.Deeplink.Event.DEEPLINK_EVENT_DEEP_LINKING_OPEN</ID>
+    <ID>ReturnCount:NavigateHostDeeplinkUseCase.kt$NavigateHostDeeplinkUseCaseImpl$override suspend fun execute(stringUrl: String): Pair&lt;DeepLinkResult, DecodeDeeplinkUseCase?></ID>
+    <ID>ReturnCount:ShelfAdapter.kt$ShelfAdapter$// Get the first content position top for renderer. fun getScrollPosition(pastVisibleItems: Int): Int</ID>
+    <ID>ReturnCount:ShelfAdapter.kt$ShelfAdapter$override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder</ID>
+    <ID>SwallowedException:ShelfAdapter.kt$ShelfAdapter.&lt;no name provided>$e: IndexOutOfBoundsException</ID>
+    <ID>TooManyFunctions:ShelfAdapter.kt$ShelfAdapter : Adapter</ID>
+  </CurrentIssues>
+</SmellBaseline>

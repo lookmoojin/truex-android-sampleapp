@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item name="navigation_privilege_redeem_flow" type="id"/>
+    <item name="navigation_payment_flow" type="id"/>
+    <item name="navigation_webview_app_flow" type="id"/>
+</resources>
