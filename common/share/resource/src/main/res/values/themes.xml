@@ -1,0 +1,60 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+
+    <!-- Base application theme. -->
+    <style name="Base.TrueID" parent="Theme.MaterialComponents.Light.NoActionBar">
+        <item name="fontFamily">@font/font_true_id</item>
+        <item name="android:fontFamily">@font/font_true_id</item>
+    </style>
+
+    <style name="TrueID" parent="Base.TrueID">
+        <item name="colorPrimary">@color/red_500_brand</item>
+        <item name="colorPrimaryVariant">@color/red_500_brand</item>
+        <item name="colorOnPrimary">@color/black_white_white</item>
+        <item name="colorSecondary">@color/black_white_white</item>
+        <item name="colorSecondaryVariant">@color/black_white_white</item>
+        <item name="colorOnSecondary">@color/light_on_surface_high_emphasis</item>
+        <item name="colorError">@color/red_500_brand</item>
+        <item name="colorOnError">@color/black_white_white</item>
+        <item name="colorSurface">@color/black_white_white</item>
+        <item name="colorOnSurface">@color/light_on_surface_high_emphasis</item>
+        <item name="android:colorBackground">@color/black_white_white</item>
+        <item name="colorOnBackground">@color/light_on_surface_high_emphasis</item>
+
+        <item name="android:statusBarColor">@android:color/transparent</item>
+        <item name="android:navigationBarColor">@android:color/transparent</item>
+        <item name="android:windowLightStatusBar" tools:targetApi="23">true</item>
+        <item name="checkboxStyle">@style/Widget.TrueID.Checkbox</item>
+        <item name="colorControlNormal">@color/light_on_surface_high_emphasis</item>
+        <item name="switchStyle">@style/Widget.TrueID.Switch</item>
+        <item name="appBarLayoutStyle">@style/Widget.TrueID.AppBarLayout</item>
+        <item name="toolbarStyle">@style/Widget.TrueID.Toolbar</item>
+        <item name="radioButtonStyle">@style/Widget.TrueID.RadioButton</item>
+
+        <!-- Typography -->
+        <item name="textAppearanceHeadline1">@style/TextAppearance.TrueID.Headline1</item>
+        <item name="textAppearanceHeadline2">@style/TextAppearance.TrueID.Headline2</item>
+        <item name="textAppearanceHeadline3">@style/TextAppearance.TrueID.Headline3</item>
+        <item name="textAppearanceHeadline4">@style/TextAppearance.TrueID.Headline4</item>
+        <item name="textAppearanceSubtitle1">@style/TextAppearance.TrueID.Subtitle1</item>
+        <item name="textAppearanceSubtitle2">@style/TextAppearance.TrueID.Subtitle2</item>
+        <item name="textAppearanceBody1">@style/TextAppearance.TrueID.Body1</item>
+        <item name="textAppearanceBody2">@style/TextAppearance.TrueID.Body2</item>
+        <item name="textAppearanceButton">@style/TextAppearance.TrueID.Button</item>
+        <item name="textAppearanceCaption">@style/TextAppearance.TrueID.Caption</item>
+        <item name="textAppearanceOverline">@style/TextAppearance.TrueID.Overline</item>
+        <item name="bottomSheetDialogTheme">@style/TrueID.BottomSheetDialog</item>
+    </style>
+
+    <style name="TrueID.PopupTheme" parent="ThemeOverlay.TrueID.Light" />
+
+    <style name="ThemeOverlay.TrueID.Light" parent="ThemeOverlay.MaterialComponents.Light" />
+
+    <style name="TrueID.Translucent">
+        <item name="android:background">@android:color/transparent</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:colorBackgroundCacheHint">@null</item>
+        <item name="android:windowIsTranslucent">true</item>
+    </style>
+
+</resources>

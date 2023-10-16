@@ -1,0 +1,1163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- Typography -->
+    <style name="TextAppearance.TrueID.Headline1" parent="TextAppearance.MaterialComponents.Headline1">
+        <item name="android:textSize">34sp</item>
+        <item name="lineHeight">36sp</item>
+    </style>
+
+    <style name="TextAppearance.TrueID.Headline2" parent="TextAppearance.MaterialComponents.Headline2">
+        <item name="android:textSize">24sp</item>
+        <item name="android:letterSpacing">0.01</item>
+    </style>
+
+    <style name="TextAppearance.TrueID.Headline3" parent="TextAppearance.MaterialComponents.Headline3">
+        <item name="android:textSize">20sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:letterSpacing">0.01</item>
+        <item name="android:lineSpacingExtra">4sp</item>
+    </style>
+
+    <style name="TextAppearance.TrueID.Headline4" parent="TextAppearance.MaterialComponents.Headline4">
+        <item name="android:textSize">18sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:letterSpacing">0.01</item>
+        <item name="android:lineSpacingExtra">6sp</item>
+    </style>
+
+    <style name="TextAppearance.TrueID.Body1" parent="TextAppearance.MaterialComponents.Body1">
+        <item name="android:textSize">16sp</item>
+        <item name="android:letterSpacing">0.03</item>
+        <item name="android:lineSpacingExtra">8sp</item>
+    </style>
+
+    <style name="TextAppearance.TrueID.Body2" parent="TextAppearance.MaterialComponents.Body2">
+        <item name="android:textSize">14sp</item>
+        <item name="android:letterSpacing">0.02</item>
+        <item name="android:lineSpacingExtra">6sp</item>
+    </style>
+
+    <style name="TextAppearance.TrueID.Subtitle1" parent="TextAppearance.MaterialComponents.Subtitle1">
+        <item name="android:textSize">16sp</item>
+        <item name="android:letterSpacing">0.01</item>
+        <item name="android:lineSpacingExtra">8sp</item>
+    </style>
+
+    <style name="TextAppearance.TrueID.Subtitle2" parent="TextAppearance.MaterialComponents.Subtitle2">
+        <item name="android:textSize">14sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:letterSpacing">0.01</item>
+        <item name="android:lineSpacingExtra">6sp</item>
+    </style>
+
+    <style name="TextAppearance.TrueID.Button" parent="TextAppearance.MaterialComponents.Button">
+        <item name="android:textAllCaps">false</item>
+        <item name="android:textSize">14sp</item>>
+    </style>
+
+    <style name="TextAppearance.TrueID.Caption" parent="TextAppearance.MaterialComponents.Caption">
+        <item name="android:textSize">12sp</item>
+        <item name="android:lineSpacingExtra">4sp</item>
+        <item name="android:letterSpacing">0.03</item>
+    </style>
+
+    <style name="TextAppearance.TrueID.Overline" parent="TextAppearance.MaterialComponents.Overline">
+        <item name="android:textStyle">bold</item>
+        <item name="android:textSize">10sp</item>
+        <item name="android:letterSpacing">0.15</item>
+        <item name="android:lineSpacingExtra">6sp</item>
+    </style>
+
+    <style name="TextAppearance.TrueID.SuperSmall.White" parent="TextAppearance.MaterialComponents.Overline">
+        <item name="android:textStyle">bold</item>
+        <item name="android:textSize">10sp</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:letterSpacing">0</item>
+    </style>
+    <!-- End Typography -->
+
+    <!-- Large Title -->
+    <style name="TrueID.LargeTitle">
+        <item name="android:textSize">34sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:lineSpacingExtra">2sp</item>
+    </style>
+
+    <style name="TrueID.LargeTitle.Dark">
+        <item name="android:textColor">@color/black_white_white</item>
+    </style>
+    <!-- End Large Title -->
+
+    <!-- Medium Title -->
+    <style name="TrueID.MediumTitle">
+        <item name="android:textSize">28sp</item>
+        <item name="android:textStyle">normal</item>
+    </style>
+
+    <style name="TrueID.MediumTitle.Bold">
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="TrueID.MediumTitle.Bold.White">
+        <item name="android:textColor">@color/black_white_white</item>
+    </style>
+    <!-- End Medium Title -->
+
+    <!-- Title In CommonAppBar -->
+    <style name="TrueID.TitleInCommonAppBar">
+        <item name="android:textSize">28sp</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="TrueID.CollapseTitleInCommonAppBar">
+        <item name="android:textSize">24sp</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="TrueID.TitleInCommonAppBar.Dark">
+        <item name="android:textColor">@color/black_white_white</item>
+    </style>
+
+    <style name="TrueID.CollapseTitleInCommonAppBar.Dark">
+        <item name="android:textColor">@color/black_white_white</item>
+    </style>
+
+    <!-- End Title In CommonAppBar -->
+
+    <!-- Title -->
+    <style name="TrueID.Title">
+        <item name="android:textSize">24sp</item>
+        <item name="android:textStyle">normal</item>
+        <item name="android:lineSpacingExtra">2sp</item>
+    </style>
+
+    <style name="TrueID.Title.DarkGrey">
+        <item name="android:textColor">@color/grey_600</item>
+    </style>
+
+    <style name="TrueID.Title.Grey">
+        <item name="android:textColor">@color/grey_400</item>
+    </style>
+
+    <style name="TrueID.Title.PrimaryRed">
+        <item name="android:textColor">@color/red_500_brand</item>
+    </style>
+
+    <style name="TrueID.Title.White">
+        <item name="android:textColor">@color/black_white_white</item>
+    </style>
+
+    <style name="TrueID.Title.DisableGrey">
+        <item name="android:textColor">@color/grey_300</item>
+    </style>
+
+    <style name="TrueID.Title.Blue">
+        <item name="android:textColor">@color/semantic_colors_blue_500</item>
+    </style>
+
+    <style name="TrueID.Title.Green">
+        <item name="android:textColor">@color/semantic_colors_green_600</item>
+    </style>
+
+    <style name="TrueID.Title.Bold">
+        <item name="android:textStyle">bold</item>
+        <item name="android:lineSpacingExtra">4sp</item>
+    </style>
+
+    <style name="TrueID.Title.Bold.PrimaryRed">
+        <item name="android:textColor">@color/red_500_brand</item>
+    </style>
+
+    <style name="TrueID.Title.Bold.White">
+        <item name="android:textColor">@color/black_white_white</item>
+    </style>
+
+    <style name="TrueID.Title.Bold.DisableGrey">
+        <item name="android:textColor">@color/grey_300</item>
+    </style>
+
+    <style name="TrueID.Title.Bold.Blue">
+        <item name="android:textColor">@color/semantic_colors_blue_500</item>
+    </style>
+
+    <style name="TrueID.Title.Bold.Green">
+        <item name="android:textColor">@color/semantic_colors_green_600</item>
+    </style>
+
+    <style name="TrueID.Title.Bold.Black">
+        <item name="android:textColor">@color/black</item>
+    </style>
+    <!-- End Title -->
+
+    <!-- Header 1 -->
+    <style name="TrueID.Header1">
+        <item name="android:textSize">22sp</item>
+        <item name="android:textStyle">normal</item>
+        <item name="android:lineSpacingExtra">2sp</item>
+    </style>
+
+    <style name="TrueID.Header1.DarkGrey">
+        <item name="android:textColor">@color/grey_600</item>
+    </style>
+
+    <style name="TrueID.Header1.Grey">
+        <item name="android:textColor">@color/grey_400</item>
+    </style>
+
+    <style name="TrueID.Header1.PrimaryRed">
+        <item name="android:textColor">@color/red_500_brand</item>
+    </style>
+
+    <style name="TrueID.Header1.White">
+        <item name="android:textColor">@color/black_white_white</item>
+    </style>
+
+    <style name="TrueID.Header1.DisableGrey">
+        <item name="android:textColor">@color/grey_300</item>
+    </style>
+
+    <style name="TrueID.Header1.Blue">
+        <item name="android:textColor">@color/semantic_colors_blue_500</item>
+    </style>
+
+    <style name="TrueID.Header1.Green">
+        <item name="android:textColor">@color/semantic_colors_green_600</item>
+    </style>
+
+    <style name="TrueID.Header1.Bold">
+        <item name="android:textStyle">bold</item>
+        <item name="android:lineSpacingExtra">4sp</item>
+    </style>
+
+    <style name="TrueID.Header1.Bold.PrimaryRed">
+        <item name="android:textColor">@color/red_500_brand</item>
+    </style>
+
+    <style name="TrueID.Header1.Bold.White">
+        <item name="android:textColor">@color/black_white_white</item>
+    </style>
+
+    <style name="TrueID.Header1.Bold.DisableGrey">
+        <item name="android:textColor">@color/grey_300</item>
+    </style>
+
+    <style name="TrueID.Header1.Bold.Blue">
+        <item name="android:textColor">@color/semantic_colors_blue_500</item>
+    </style>
+
+    <style name="TrueID.Header1.Bold.Black">
+        <item name="android:textColor">@color/black</item>
+    </style>
+
+    <style name="TrueID.Header1.Bold.Green">
+        <item name="android:textColor">@color/semantic_colors_green_600</item>
+    </style>
+    <!-- End Header 1 -->
+
+    <!-- Header 2 -->
+    <style name="TrueID.Header2">
+        <item name="android:textSize">20sp</item>
+        <item name="android:textStyle">normal</item>
+        <item name="android:letterSpacing">0.01</item>
+        <item name="android:lineSpacingExtra">0sp</item>
+    </style>
+
+    <style name="TrueID.Header2.Black">
+        <item name="android:textColor">@color/black</item>
+    </style>
+
+    <style name="TrueID.Header2.DarkGrey">
+        <item name="android:textColor">@color/grey_600</item>
+    </style>
+
+    <style name="TrueID.Header2.Grey">
+        <item name="android:textColor">@color/grey_400</item>
+    </style>
+
+    <style name="TrueID.Header2.PrimaryRed">
+        <item name="android:textColor">@color/red_500_brand</item>
+    </style>
+
+    <style name="TrueID.Header2.White">
+        <item name="android:textColor">@color/black_white_white</item>
+    </style>
+
+    <style name="TrueID.Header2.DisableGrey">
+        <item name="android:textColor">@color/grey_300</item>
+    </style>
+
+    <style name="TrueID.Header2.Blue">
+        <item name="android:textColor">@color/semantic_colors_blue_500</item>
+    </style>
+
+    <style name="TrueID.Header2.Green">
+        <item name="android:textColor">@color/semantic_colors_green_600</item>
+    </style>
+
+    <style name="TrueID.Header2.Bold">
+        <item name="android:textStyle">bold</item>
+        <item name="android:lineSpacingExtra">4sp</item>
+    </style>
+
+    <style name="TrueID.Header2.Bold.PrimaryRed">
+        <item name="android:textColor">@color/red_500_brand</item>
+    </style>
+
+    <style name="TrueID.Header2.Bold.White">
+        <item name="android:textColor">@color/black_white_white</item>
+    </style>
+
+    <style name="TrueID.Header2.Bold.DisableGrey">
+        <item name="android:textColor">@color/grey_300</item>
+    </style>
+
+    <style name="TrueID.Header2.Bold.Blue">
+        <item name="android:textColor">@color/semantic_colors_blue_500</item>
+    </style>
+
+    <style name="TrueID.Header2.Bold.Green">
+        <item name="android:textColor">@color/semantic_colors_green_600</item>
+    </style>
+
+    <style name="TrueID.Header2.Bold.DarkGrey">
+        <item name="android:textColor">@color/grey_600</item>
+    </style>
+
+    <style name="TrueID.Header2.Bold.Black">
+        <item name="android:textColor">@color/black</item>
+    </style>
+    <!-- End Header 2-->
+
+    <!-- Header 3 -->
+    <style name="TrueID.Header3">
+        <item name="android:textSize">18sp</item>
+        <item name="android:textStyle">normal</item>
+        <item name="android:letterSpacing">0.01</item>
+        <item name="android:lineSpacingExtra">4sp</item>
+    </style>
+
+    <style name="TrueID.Header3.DarkGrey">
+        <item name="android:textColor">@color/grey_600</item>
+    </style>
+
+    <style name="TrueID.Header3.Grey">
+        <item name="android:textColor">@color/grey_400</item>
+    </style>
+
+    <style name="TrueID.Header3.PrimaryRed">
+        <item name="android:textColor">@color/red_500_brand</item>
+    </style>
+
+    <style name="TrueID.Header3.White">
+        <item name="android:textColor">@color/black_white_white</item>
+    </style>
+
+    <style name="TrueID.Header3.DisableGrey">
+        <item name="android:textColor">@color/grey_300</item>
+    </style>
+
+    <style name="TrueID.Header3.Blue">
+        <item name="android:textColor">@color/semantic_colors_blue_500</item>
+    </style>
+
+    <style name="TrueID.Header3.Green">
+        <item name="android:textColor">@color/semantic_colors_green_600</item>
+    </style>
+
+    <style name="TrueID.Header3.Black">
+        <item name="android:textColor">@color/black</item>
+    </style>
+
+    <style name="TrueID.Header3.Bold">
+        <item name="android:textStyle">bold</item>
+        <item name="android:lineSpacingExtra">4sp</item>
+    </style>
+
+    <style name="TrueID.Header3.Bold.Black">
+        <item name="android:textColor">@color/black</item>
+    </style>
+
+    <style name="TrueID.Header3.Bold.PrimaryRed">
+        <item name="android:textColor">@color/red_500_brand</item>
+    </style>
+
+    <style name="TrueID.Header3.Bold.White">
+        <item name="android:textColor">@color/black_white_white</item>
+    </style>
+
+    <style name="TrueID.Header3.Bold.DisableGrey">
+        <item name="android:textColor">@color/grey_300</item>
+    </style>
+
+    <style name="TrueID.Header3.Bold.Blue">
+        <item name="android:textColor">@color/semantic_colors_blue_500</item>
+    </style>
+
+    <style name="TrueID.Header3.Bold.Green">
+        <item name="android:textColor">@color/semantic_colors_green_600</item>
+    </style>
+
+    <style name="TrueID.Header3.Bold.BrownishGrey">
+        <item name="android:textColor">@color/brownish_grey</item>
+    </style>
+    <!-- End Header 3 -->
+
+    <!-- Header 4 -->
+    <style name="TrueID.Header4">
+        <item name="android:textSize">20sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:letterSpacing">0.01</item>
+        <item name="android:lineSpacingExtra">4sp</item>
+    </style>
+
+    <style name="TrueID.Header4.White">
+        <item name="android:textColor">@color/black_white_white</item>
+    </style>
+    <!-- End Header 4 -->
+
+    <!-- Body -->
+    <style name="TrueID.Body">
+        <item name="android:textSize">16sp</item>
+        <item name="android:letterSpacing">0.03</item>
+        <item name="android:textStyle">normal</item>
+    </style>
+
+    <style name="TrueID.Body.Black">
+        <item name="android:textColor">@color/light_primary</item>
+    </style>
+
+    <style name="TrueID.Body.DarkGrey">
+        <item name="android:textColor">@color/grey_600</item>
+    </style>
+
+    <style name="TrueID.Body.Grey">
+        <item name="android:textColor">@color/grey_400</item>
+    </style>
+
+    <style name="TrueID.Body.PrimaryRed">
+        <item name="android:textColor">@color/red_500_brand</item>
+    </style>
+
+    <style name="TrueID.Body.White">
+        <item name="android:textColor">@color/black_white_white</item>
+    </style>
+
+    <style name="TrueID.Body.DisableGrey">
+        <item name="android:textColor">@color/grey_300</item>
+    </style>
+
+    <style name="TrueID.Body.LightGrey">
+        <item name="android:textColor">@color/grey_700</item>
+    </style>
+
+    <style name="TrueID.Body.Blue">
+        <item name="android:textColor">@color/semantic_colors_blue_500</item>
+    </style>
+
+    <style name="TrueID.Body.LightBlue">
+        <item name="android:textColor">@color/semantic_colors_blue_400</item>
+    </style>
+
+    <style name="TrueID.Body.Green">
+        <item name="android:textColor">@color/semantic_colors_green_600</item>
+    </style>
+
+    <style name="TrueID.Body.Bold">
+        <item name="android:lineSpacingExtra">4sp</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="TrueID.Body.Bold.Black">
+        <item name="android:textColor">@color/light_primary</item>
+    </style>
+
+    <style name="TrueID.Body.Bold.PrimaryRed">
+        <item name="android:textColor">@color/red_500_brand</item>
+    </style>
+
+    <style name="TrueID.Body.Bold.White">
+        <item name="android:textColor">@color/black_white_white</item>
+    </style>
+
+    <style name="TrueID.Body.Bold.DisableGrey">
+        <item name="android:textColor">@color/grey_300</item>
+    </style>
+
+    <style name="TrueID.Body.Bold.Blue">
+        <item name="android:textColor">@color/semantic_colors_blue_500</item>
+    </style>
+
+    <style name="TrueID.Body.Bold.Green">
+        <item name="android:textColor">@color/semantic_colors_green_600</item>
+    </style><!-- End Body-->
+
+    <!-- Small -->
+    <style name="TrueID.Small">
+        <item name="android:textSize">14sp</item>
+        <item name="android:textStyle">normal</item>
+        <item name="android:lineSpacingExtra">4sp</item>
+    </style>
+
+    <style name="TrueID.Small.Black">
+        <item name="android:lineSpacingExtra">0.25sp</item>
+        <item name="android:textColor">@color/light_primary</item>
+    </style>
+
+    <style name="TrueID.Small.DarkGrey">
+        <item name="android:textColor">@color/grey_600</item>
+    </style>
+
+    <style name="TrueID.Small.Grey">
+        <item name="android:textColor">@color/grey_400</item>
+    </style>
+
+    <style name="TrueID.Small.LightGrey">
+        <item name="android:textColor">@color/grey_700</item>
+    </style>
+
+    <style name="TrueID.Small.WhiteLightGrey">
+        <item name="android:lineSpacingExtra">0.25sp</item>
+        <item name="android:textColor">@color/white_light_grey</item>
+    </style>
+
+    <style name="TrueID.Small.PrimaryRed">
+        <item name="android:textColor">@color/red_500_brand</item>
+    </style>
+
+    <style name="TrueID.Small.White">
+        <item name="android:textColor">@color/black_white_white</item>
+    </style>
+
+    <style name="TrueID.Small.DisableGrey">
+        <item name="android:textColor">@color/grey_300</item>
+    </style>
+
+    <style name="TrueID.Small.Blue">
+        <item name="android:textColor">@color/semantic_colors_blue_500</item>
+    </style>
+
+    <style name="TrueID.Small.Green">
+        <item name="android:textColor">@color/semantic_colors_green_600</item>
+    </style>
+
+    <style name="TrueID.Small.Bold">
+        <item name="android:textStyle">bold</item>
+        <item name="android:lineSpacingExtra">4sp</item>
+    </style>
+
+    <style name="TrueID.Small.Bold.PrimaryRed">
+        <item name="android:textColor">@color/red_500_brand</item>
+    </style>
+
+    <style name="TrueID.Small.Bold.White">
+        <item name="android:textColor">@color/black_white_white</item>
+    </style>
+
+    <style name="TrueID.Small.Bold.DisableGrey">
+        <item name="android:textColor">@color/grey_300</item>
+    </style>
+
+    <style name="TrueID.Small.Bold.Black">
+        <item name="android:textColor">@color/light_primary</item>
+    </style>
+
+    <style name="TrueID.Small.Bold.Blue">
+        <item name="android:textColor">@color/semantic_colors_blue_500</item>
+    </style>
+
+    <style name="TrueID.Small.Bold.Green">
+        <item name="android:textColor">@color/semantic_colors_green_600</item>
+    </style><!-- End Small -->
+
+    <!-- Extra Small -->
+    <style name="TrueID.ExtraSmall">
+        <item name="android:textSize">12sp</item>
+        <item name="android:textStyle">normal</item>
+        <item name="android:lineSpacingExtra">4sp</item>
+    </style>
+
+    <style name="TrueID.ExtraSmall.DarkGrey">
+        <item name="android:textColor">@color/grey_600</item>
+    </style>
+
+    <style name="TrueID.ExtraSmall.LightGrey">
+        <item name="android:textColor">@color/grey_700</item>
+    </style>
+
+    <style name="TrueID.ExtraSmall.Grey">
+        <item name="android:textColor">@color/grey_400</item>
+    </style>
+
+    <style name="TrueID.ExtraSmall.PrimaryRed">
+        <item name="android:textColor">@color/red_500_brand</item>
+    </style>
+
+    <style name="TrueID.ExtraSmall.Black">
+        <item name="android:textColor">@color/light_primary</item>
+    </style>
+
+    <style name="TrueID.ExtraSmall.White">
+        <item name="android:textColor">@color/black_white_white</item>
+    </style>
+
+    <style name="TrueID.ExtraSmall.DisableGrey">
+        <item name="android:textColor">@color/grey_300</item>
+    </style>
+
+    <style name="TrueID.ExtraSmall.Blue">
+        <item name="android:textColor">@color/semantic_colors_blue_500</item>
+    </style>
+
+    <style name="TrueID.ExtraSmall.Green">
+        <item name="android:textColor">@color/semantic_colors_green_600</item>
+    </style>
+
+    <style name="TrueID.ExtraSmall.BrownishGrey">
+        <item name="android:textColor">@color/brownish_grey</item>
+    </style>
+
+    <style name="TrueID.ExtraSmall.Bold">
+        <item name="android:textStyle">bold</item>
+        <item name="android:lineSpacingExtra">4sp</item>
+    </style>
+
+    <style name="TrueID.ExtraSmall.Bold.PrimaryRed">
+        <item name="android:textColor">@color/red_500_brand</item>
+    </style>
+
+    <style name="TrueID.ExtraSmall.Bold.White">
+        <item name="android:textColor">@color/black_white_white</item>
+    </style>
+
+    <style name="TrueID.ExtraSmall.Bold.DisableGrey">
+        <item name="android:textColor">@color/grey_300</item>
+    </style>
+
+    <style name="TrueID.ExtraSmall.Bold.Blue">
+        <item name="android:textColor">@color/semantic_colors_blue_500</item>
+    </style>
+
+    <style name="TrueID.ExtraSmall.Bold.Green">
+        <item name="android:textColor">@color/semantic_colors_green_600</item>
+    </style>
+
+    <style name="TrueID.ExtraSmall.Bold.Black">
+        <item name="android:textColor">@color/black</item>
+    </style>
+    <!-- End Extra Small -->
+
+    <!-- Tiny Small -->
+    <style name="TrueID.TinySmall">
+        <item name="android:textSize">10sp</item>
+        <item name="android:textStyle">normal</item>
+        <item name="android:lineSpacingExtra">2sp</item>
+    </style>
+
+    <style name="TrueID.TinySmall.DarkGrey">
+        <item name="android:textColor">@color/grey_600</item>
+    </style>
+
+    <style name="TrueID.TinySmall.LightGrey">
+        <item name="android:textColor">@color/grey_700</item>
+    </style>
+
+    <style name="TrueID.TinySmall.Grey">
+        <item name="android:textColor">@color/grey_400</item>
+    </style>
+
+    <style name="TrueID.TinySmall.PrimaryRed">
+        <item name="android:textColor">@color/red_500_brand</item>
+    </style>
+
+    <style name="TrueID.TinySmall.White">
+        <item name="android:textColor">@color/black_white_white</item>
+    </style>
+
+    <style name="TrueID.TinySmall.DisableGrey">
+        <item name="android:textColor">@color/grey_300</item>
+    </style>
+
+    <style name="TrueID.TinySmall.Black">
+        <item name="android:textColor">@color/black</item>
+    </style>
+
+    <style name="TrueID.TinySmall.Blue">
+        <item name="android:textColor">@color/semantic_colors_blue_500</item>
+    </style>
+
+    <style name="TrueID.TinySmall.Green">
+        <item name="android:textColor">@color/semantic_colors_green_600</item>
+    </style>
+
+    <style name="TrueID.TinySmall.Bold">
+        <item name="android:textStyle">bold</item>
+        <item name="android:lineSpacingExtra">2sp</item>
+    </style>
+
+    <style name="TrueID.TinySmall.Bold.PrimaryRed">
+        <item name="android:textColor">@color/red_500_brand</item>
+    </style>
+
+    <style name="TrueID.TinySmall.Bold.White">
+        <item name="android:textColor">@color/black_white_white</item>
+    </style>
+
+    <style name="TrueID.TinySmall.Bold.Black">
+        <item name="android:textColor">@color/black</item>
+    </style>
+
+    <style name="TrueID.TinySmall.Bold.DisableGrey">
+        <item name="android:textColor">@color/grey_300</item>
+    </style>
+
+    <style name="TrueID.TinySmall.Bold.Blue">
+        <item name="android:textColor">@color/semantic_colors_blue_500</item>
+    </style>
+
+    <style name="TrueID.TinySmall.Bold.Green">
+        <item name="android:textColor">@color/semantic_colors_green_600</item>
+    </style><!-- End Tiny Small -->
+
+    <!-- Today Style -->
+
+    <style name="TrueID.Header1.Bold.White.Title">
+        <item name="android:layout_marginStart">8dp</item>
+        <item name="android:layout_marginEnd">8dp</item>
+        <item name="android:paddingBottom">-8dp</item>
+        <item name="android:lineSpacingExtra">-4.25sp</item>
+        <item name="android:maxLines">2</item>
+        <item name="android:ellipsize">end</item>
+    </style>
+
+    <style name="TrueID.Body.Bold.Black.Title">
+        <item name="android:lineSpacingExtra">0.25sp</item>
+        <item name="android:maxLines">2</item>
+        <item name="android:ellipsize">end</item>
+    </style>
+
+    <style name="TrueID.Small.White.TagRecommend">
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:background">@drawable/common_round_conner_blue</item>
+    </style>
+
+    <style name="TrueID.Small.Bold.White.Rectangle">
+        <item name="android:layout_marginStart">8dp</item>
+        <item name="android:layout_marginEnd">8dp</item>
+        <item name="android:lineSpacingExtra">0.25sp</item>
+    </style>
+
+    <style name="TrueID.Small.White.TagNonRecommend">
+        <item name="android:background">@drawable/common_conner_left_red</item>
+        <item name="android:gravity">center</item>
+        <item name="android:layout_height">20dp</item>
+        <item name="android:layout_width">20dp</item>
+    </style>
+
+    <style name="TrueID.Small.Bold.Black.Title">
+        <item name="android:lineSpacingExtra">0.25sp</item>
+        <item name="android:maxLines">2</item>
+        <item name="android:ellipsize">end</item>
+        <item name="android:layout_marginTop">4dp</item>
+    </style>
+
+    <style name="TrueID.Small.Black.Title">
+        <item name="android:lineSpacingExtra">0.25sp</item>
+        <item name="android:maxLines">2</item>
+        <item name="android:ellipsize">end</item>
+        <item name="android:layout_marginTop">4dp</item>
+    </style>
+
+    <style name="TrueID.Small.White.SpecialSubTitle">
+        <item name="android:paddingStart">11dp</item>
+        <item name="android:paddingEnd">11dp</item>
+        <item name="android:paddingBottom">11dp</item>
+        <item name="android:lineSpacingExtra">-0.25sp</item>
+        <item name="android:background">@drawable/common_black_transparent_gradient</item>
+        <item name="android:maxLines">2</item>
+        <item name="android:ellipsize">end</item>
+    </style>
+
+    <style name="TrueID.Small.Black.Tag">
+        <item name="android:paddingStart">16dp</item>
+        <item name="android:paddingTop">4dp</item>
+        <item name="android:paddingEnd">16dp</item>
+        <item name="android:paddingBottom">4dp</item>
+        <item name="android:background">@drawable/common_light_surface_overlay_round_corner_16dp
+        </item>
+        <item name="android:maxLines">1</item>
+        <item name="android:ellipsize">end</item>
+    </style>
+
+    <style name="TrueID.Small.Bold.Black.TagPrice">
+        <item name="android:padding">4dp</item>
+        <item name="android:gravity">center</item>
+        <item name="android:background">@drawable/common_light_surface_overlay_round_corner_16dp
+        </item>
+    </style>
+
+    <style name="TrueID.ExtraSmall.White.Tag">
+        <item name="android:paddingStart">8dp</item>
+        <item name="android:paddingEnd">8dp</item>
+        <item name="android:ellipsize">end</item>
+    </style>
+
+    <style name="TrueID.ExtraSmall.White.Tag.Red">
+        <item name="android:background">@drawable/common_round_corner_red_12dp</item>
+    </style>
+
+    <style name="TrueID.ExtraSmall.White.Tag.Yellow">
+        <item name="android:background">@drawable/common_round_corner_yellow_12dp</item>
+    </style>
+
+    <style name="TrueID.ExtraSmall.White.Tag.Movie">
+        <item name="android:background">@drawable/common_grey400_round_corner_4dp</item>
+    </style>
+
+    <style name="TrueID.ExtraSmall.White.Tag.Discount">
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:background">@drawable/common_black_round_corner_4dp</item>
+    </style>
+
+    <style name="TrueID.ExtraSmall.DarkGrey.SubTitle">
+        <item name="android:lineSpacingExtra">0.25sp</item>
+        <item name="android:maxLines">1</item>
+        <item name="android:ellipsize">end</item>
+    </style>
+
+    <style name="TrueID.ExtraSmall.White.SubTitle">
+        <item name="android:lineSpacingExtra">0.25sp</item>
+        <item name="android:maxLines">1</item>
+        <item name="android:ellipsize">end</item>
+    </style>
+
+    <!-- End Today Style -->
+
+    <style name="TrueID.Small.White.Title">
+        <item name="android:lineSpacingExtra">-0.08dp</item>
+        <item name="android:maxLines">2</item>
+        <item name="android:ellipsize">end</item>
+    </style>
+
+    <!-- Welcome Style -->
+    <style name="TrueID.WelcomeGetStart">
+        <item name="android:layout_width">170dp</item>
+        <item name="android:layout_height">44dp</item>
+        <item name="android:layout_centerInParent">true</item>
+        <item name="android:layout_marginBottom">25dp</item>
+        <item name="android:background">@drawable/button_red</item>
+        <item name="android:ellipsize">end</item>
+        <item name="android:gravity">center</item>
+        <item name="android:lines">2</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:textStyle">bold</item>
+    </style><!-- End Welcome Style -->
+
+    <!-- Search Style -->
+    <style name="TrueID.ExploreSearch">
+        <item name="android:textSize">24sp</item>
+        <item name="android:letterSpacing">0.01</item>
+        <item name="android:layout_alignParentTop">true</item>
+        <item name="android:layout_marginLeft">10dp</item>
+        <item name="android:layout_marginTop">4dp</item>
+        <item name="android:ellipsize">end</item>
+        <item name="android:gravity">start</item>
+        <item name="android:lines">1</item>
+    </style><!-- End Search Style -->
+
+    <style name="TrueID.TopTenRanking">
+        <item name="android:shadowColor">@android:color/black</item>
+        <item name="android:shadowDx">2</item>
+        <item name="android:shadowDy">2</item>
+        <item name="android:shadowRadius">8</item>
+        <item name="android:textSize">64dp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:includeFontPadding">false</item>
+    </style>
+
+    <style name="TrueID.TopTenRanking.White">
+        <item name="android:textColor">@android:color/white</item>
+    </style>
+
+    <!--    Watch Party-->
+    <style name="WatchParty">
+        <item name="fontFamily">@font/font_true_id</item>
+        <item name="android:fontFamily">@font/font_true_id</item>
+    </style>
+
+    <style name="WatchParty.Centi">
+        <item name="android:textSize">10sp</item>
+        <item name="android:textStyle">normal</item>
+    </style>
+
+    <style name="WatchParty.ExtraSmall">
+        <item name="android:textSize">12sp</item>
+        <item name="android:textStyle">normal</item>
+    </style>
+
+    <style name="WatchParty.Small">
+        <item name="android:textSize">14sp</item>
+        <item name="android:textStyle">normal</item>
+    </style>
+
+    <style name="WatchParty.Base">
+        <item name="android:textSize">16sp</item>
+        <item name="android:textStyle">normal</item>
+    </style>
+
+    <style name="WatchParty.Deka">
+        <item name="android:textSize">18sp</item>
+        <item name="android:textStyle">normal</item>
+    </style>
+
+    <style name="WatchParty.Hecto">
+        <item name="android:textSize">20sp</item>
+        <item name="android:textStyle">normal</item>
+    </style>
+
+    <style name="WatchParty.Kilo">
+        <item name="android:textSize">24sp</item>
+        <item name="android:textStyle">normal</item>
+    </style>
+
+    <style name="WatchParty.Giga">
+        <item name="android:textSize">26sp</item>
+        <item name="android:textStyle">normal</item>
+    </style>
+
+    <style name="WatchParty.Mega">
+        <item name="android:textSize">32sp</item>
+        <item name="android:textStyle">normal</item>
+    </style>
+
+    <style name="WatchParty.Centi.Bold">
+        <item name="android:textSize">10sp</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="WatchParty.ExtraSmall.Bold">
+        <item name="android:textSize">12sp</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="WatchParty.Small.Bold">
+        <item name="android:textSize">14sp</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="WatchParty.Base.Bold">
+        <item name="android:textSize">16sp</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="WatchParty.Deka.Bold">
+        <item name="android:textSize">18sp</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="WatchParty.Hecto.Bold">
+        <item name="android:textSize">20sp</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="WatchParty.Kilo.Bold">
+        <item name="android:textSize">24sp</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="WatchParty.Giga.Bold">
+        <item name="android:textSize">26sp</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="WatchParty.Mega.Bold">
+        <item name="android:textSize">32sp</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="WatchParty.Centi.White">
+        <item name="android:textColor">@color/white</item>
+    </style>
+
+    <style name="WatchParty.ExtraSmall.White">
+        <item name="android:textColor">@color/white</item>
+    </style>
+
+    <style name="WatchParty.Small.White">
+        <item name="android:textColor">@color/white</item>
+    </style>
+
+    <style name="WatchParty.Base.White">
+        <item name="android:textColor">@color/white</item>
+    </style>
+
+    <style name="WatchParty.Deka.White">
+        <item name="android:textColor">@color/white</item>
+    </style>
+
+    <style name="WatchParty.Hecto.White">
+        <item name="android:textColor">@color/white</item>
+    </style>
+
+    <style name="WatchParty.Kilo.White">
+        <item name="android:textColor">@color/white</item>
+    </style>
+
+    <style name="WatchParty.Giga.White">
+        <item name="android:textColor">@color/white</item>
+    </style>
+
+    <style name="WatchParty.Mega.White">
+        <item name="android:textColor">@color/white</item>
+    </style>
+
+    <style name="WatchParty.Centi.Bold.White">
+        <item name="android:textColor">@color/white</item>
+    </style>
+
+    <style name="WatchParty.ExtraSmall.Bold.White">
+        <item name="android:textColor">@color/white</item>
+    </style>
+
+    <style name="WatchParty.Small.Bold.White">
+        <item name="android:textColor">@color/white</item>
+    </style>
+
+    <style name="WatchParty.Base.Bold.White">
+        <item name="android:textColor">@color/white</item>
+    </style>
+
+    <style name="WatchParty.Deka.Bold.White">
+        <item name="android:textColor">@color/white</item>
+    </style>
+
+    <style name="WatchParty.Hecto.Bold.White">
+        <item name="android:textColor">@color/white</item>
+    </style>
+
+    <style name="WatchParty.Kilo.Bold.White">
+        <item name="android:textColor">@color/white</item>
+    </style>
+
+    <style name="WatchParty.Giga.Bold.White">
+        <item name="android:textColor">@color/white</item>
+    </style>
+
+    <style name="WatchParty.Mega.Bold.White">
+        <item name="android:textColor">@color/white</item>
+    </style>
+
+    <style name="WatchParty.ExtraSmall.Black">
+        <item name="android:textColor">@color/black</item>
+    </style>
+
+    <style name="WatchParty.Small.Black">
+        <item name="android:textColor">@color/black</item>
+    </style>
+
+    <style name="WatchParty.Base.Black">
+        <item name="android:textColor">@color/black</item>
+    </style>
+
+    <style name="WatchParty.Deka.Black">
+        <item name="android:textColor">@color/black</item>
+    </style>
+
+    <style name="WatchParty.Hecto.Black">
+        <item name="android:textColor">@color/black</item>
+    </style>
+
+    <style name="WatchParty.Kilo.Black">
+        <item name="android:textColor">@color/black</item>
+    </style>
+
+    <style name="WatchParty.Giga.Black">
+        <item name="android:textColor">@color/black</item>
+    </style>
+
+    <style name="WatchParty.Mega.Black">
+        <item name="android:textColor">@color/black</item>
+    </style>
+
+    <style name="WatchParty.ExtraSmall.Bold.Black">
+        <item name="android:textColor">@color/black</item>
+    </style>
+
+    <style name="WatchParty.Small.Bold.Black">
+        <item name="android:textColor">@color/black</item>
+    </style>
+
+    <style name="WatchParty.Base.Bold.Black">
+        <item name="android:textColor">@color/black</item>
+    </style>
+
+    <style name="WatchParty.Deka.Bold.Black">
+        <item name="android:textColor">@color/black</item>
+    </style>
+
+    <style name="WatchParty.Hecto.Bold.Black">
+        <item name="android:textColor">@color/black</item>
+    </style>
+
+    <style name="WatchParty.Kilo.Bold.Black">
+        <item name="android:textColor">@color/black</item>
+    </style>
+
+    <style name="WatchParty.Giga.Bold.Black">
+        <item name="android:textColor">@color/black</item>
+    </style>
+
+    <style name="WatchParty.Mega.Bold.Black">
+        <item name="android:textColor">@color/black</item>
+    </style>
+
+    <style name="WatchParty.ExtraSmall.Gray">
+        <item name="android:textColor">@color/grey_700</item>
+    </style>
+
+    <style name="WatchParty.Small.Gray">
+        <item name="android:textColor">@color/grey_700</item>
+    </style>
+
+    <style name="WatchParty.Base.Gray">
+        <item name="android:textColor">@color/grey_700</item>
+    </style>
+
+    <style name="WatchParty.Deka.Gray">
+        <item name="android:textColor">@color/grey_700</item>
+    </style>
+
+    <style name="WatchParty.ExtraSmall.Bold.Gray">
+        <item name="android:textColor">@color/grey_700</item>
+    </style>
+
+    <style name="WatchParty.Centi.Black">
+        <item name="android:textColor">@color/black</item>
+    </style>
+
+    <style name="WatchParty.ExtraSmall.Dark">
+        <item name="android:textColor">@color/dark_background</item>
+    </style>
+
+    <style name="WatchParty.NormalAndBold">
+        <item name="android:textSize">14sp</item>
+        <item name="android:textStyle">normal|bold</item>
+    </style>
+
+    <style name="WatchParty.NormalAndBold.Gray">
+        <item name="android:textColor">@color/grey_700</item>
+    </style>
+
+    <style name="WatchParty.NormalAndBold.White">
+        <item name="android:textColor">@color/white</item>
+    </style>
+
+    <style name="WatchParty.ExtraSmall.WhiteLightGrey">
+        <item name="android:textColor">@color/white_light_grey</item>
+    </style>
+
+</resources>

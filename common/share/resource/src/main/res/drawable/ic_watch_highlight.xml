@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+  <item>
+    <shape android:shape="oval">
+      <solid android:color="@color/red_500_brand" />
+      <size
+          android:width="24dp"
+          android:height="24dp" />
+    </shape>
+  </item>
+  <item android:drawable="@drawable/res_ic_watch_black"
+      android:height="12dp"
+      android:width="16dp"
+      android:gravity="center"
+      />
+</layer-list>
