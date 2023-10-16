@@ -8,12 +8,13 @@ import android.view.ViewGroup
 import android.widget.FrameLayout
 import com.google.android.material.bottomsheet.BottomSheetBehavior
 import com.google.android.material.bottomsheet.BottomSheetDialogFragment
+import com.tdg.truecloud.R
+import com.tdg.truecloud.databinding.FragmentTrueCloudv3BottomsheetMigratedBinding
 import com.truedigital.core.extensions.viewBinding
-import com.truedigital.features.truecloudv3.R
-import com.truedigital.features.truecloudv3.databinding.FragmentTrueCloudv3BottomsheetMigratedBinding
 import com.truedigital.foundation.extension.onClick
 
-class MigratedBottomSheetDialogFragment(private val onMigratedClick: OnMigratedClick) : BottomSheetDialogFragment() {
+class MigratedBottomSheetDialogFragment(private val onMigratedClick: OnMigratedClick) :
+    BottomSheetDialogFragment() {
     private val binding by viewBinding(FragmentTrueCloudv3BottomsheetMigratedBinding::bind)
 
     override fun onCreateView(
@@ -21,7 +22,11 @@ class MigratedBottomSheetDialogFragment(private val onMigratedClick: OnMigratedC
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        return inflater.inflate(R.layout.fragment_true_cloudv3_bottomsheet_migrated, container, false)
+        return inflater.inflate(
+            R.layout.fragment_true_cloudv3_bottomsheet_migrated,
+            container,
+            false
+        )
     }
 
     override fun onCreateDialog(savedInstanceState: Bundle?): Dialog {

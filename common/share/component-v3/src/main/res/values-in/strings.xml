@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- deeplink description-->
+    <string name="deeplink_feature_off_title" translatable="false">Konten Tidak Tersedia</string>
+    <string name="deeplink_not_found_description" translatable="false">Konten ini tidak tersedia di negara anda atau sudah dihapus. (101)</string>
+    <string name="deeplink_feature_off_description" translatable="false">Konten ini tidak tersedia di negara anda atau sudah dihapus. (102)</string>
+    <string name="deeplink_error_description" translatable="false">Konten ini tidak tersedia di negara anda atau sudah dihapus. (103)</string>
+    <string name="deeplink_feature_off_button" translatable="false">OK</string>
+</resources>

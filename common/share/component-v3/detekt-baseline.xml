@@ -1,0 +1,54 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<SmellBaseline>
+  <ManuallySuppressedIssues/>
+  <CurrentIssues>
+    <ID>EmptyFunctionBlock:CustomInfiniteViewPager.kt$CustomInfiniteViewPager.&lt;no name provided>${}</ID>
+    <ID>EmptyFunctionBlock:ViewPagerLoopAndAutoScroll.kt$ViewPagerLoopAndAutoScroll.&lt;no name provided>${}</ID>
+    <ID>FunctionParameterNaming:TruePointWidgetViewModel.kt$TruePointWidgetViewModel$_hideTitle: Boolean</ID>
+    <ID>FunctionParameterNaming:WeMallShelfWidgetViewModel.kt$WeMallShelfWidgetViewModel$_data: WeMallShelfResponseModel</ID>
+    <ID>ImplicitDefaultLocale:BadgeTextView.kt$BadgeTextView$String.format("%d+", maxBadgeNumber)</ID>
+    <ID>LongMethod:CountdownScheduleLiveViewHolder.kt$CountdownScheduleLiveViewHolder$override fun render(bannerItem: BannerBaseItemModel)</ID>
+    <ID>LongMethod:CountdownSchedulePreviewViewHolder.kt$CountdownSchedulePreviewViewHolder$override fun render(bannerItem: BannerBaseItemModel)</ID>
+    <ID>MagicNumber:CommonAppBar.kt$CommonAppBar$16</ID>
+    <ID>MagicNumber:CommonAppBar.kt$CommonAppBar$24</ID>
+    <ID>MagicNumber:CommonAppBar.kt$CommonAppBar$32</ID>
+    <ID>MagicNumber:CommonSearchBar.kt$CommonSearchBar$10000</ID>
+    <ID>MagicNumber:CountInboxViewModel.kt$CountInboxViewModel$99</ID>
+    <ID>MagicNumber:CustomInfiniteViewPager.kt$CustomInfiniteViewPager$0.14f</ID>
+    <ID>MagicNumber:CustomInfiniteViewPager.kt$CustomInfiniteViewPager$0.85f</ID>
+    <ID>MagicNumber:CustomInfiniteViewPager.kt$CustomInfiniteViewPager$3</ID>
+    <ID>MagicNumber:StringExtensions.kt$1000.0</ID>
+    <ID>MagicNumber:StringExtensions.kt$1000000</ID>
+    <ID>MagicNumber:StringExtensions.kt$3</ID>
+    <ID>MagicNumber:TopNavigationView.kt$TopNavigationView$100</ID>
+    <ID>MagicNumber:WeMallShelfViewHolder.kt$WeMallShelfViewHolder$100</ID>
+    <ID>MagicNumber:WeMallShelfWidget.kt$WeMallShelfWidget$100</ID>
+    <ID>MaxLineLength:CallIconWidget.kt$CallIconWidget$binding.callShapeableImageView.setImageResource(if (isDark) R.drawable.common_ic_call_dark else R.drawable.common_ic_call_light)</ID>
+    <ID>MaxLineLength:CommonBottomDialogFragment.kt$CommonBottomDialogFragment$binding.commonBottomDialogImageviewIcon.setImageDrawable(AppCompatResources.getDrawable(requireContext(), it))</ID>
+    <ID>MaxLineLength:GetInboxEnableUseCase.kt$GetInboxEnableUseCaseImpl$class</ID>
+    <ID>MaxLineLength:NotificationIconWidget.kt$NotificationIconWidget$binding.notificationShapeableImageView.setImageResource(if (isDark) R.drawable.common_ic_notification_dark else R.drawable.common_ic_notification_light)</ID>
+    <ID>MayBeConst:TrueCardType.kt$TrueCardType$val TYPE_BLACK = "BLACK"</ID>
+    <ID>MayBeConst:TrueCardType.kt$TrueCardType$val TYPE_BLUE = "BLUE"</ID>
+    <ID>MayBeConst:TrueCardType.kt$TrueCardType$val TYPE_GREEN = "GREEN"</ID>
+    <ID>MayBeConst:TrueCardType.kt$TrueCardType$val TYPE_METAL = "METAL"</ID>
+    <ID>MayBeConst:TrueCardType.kt$TrueCardType$val TYPE_RED = "RED"</ID>
+    <ID>MayBeConst:TrueCardType.kt$TrueCardType$val TYPE_WHITE = "WHITE"</ID>
+    <ID>NestedBlockDepth:ViewPagerLoopAndAutoScroll.kt$ViewPagerLoopAndAutoScroll$private fun setPageIndicator()</ID>
+    <ID>ReturnCount:StringExtensions.kt$fun String.checkAndConvertToBadgeType(newEpiBadgeStart: String?, newEpiBadgeEnd: String?): String</ID>
+    <ID>SpreadOperator:AdsWidget.kt$AdsWidget$(*adSizeList.map { it }.toTypedArray())</ID>
+    <ID>SwallowedException:StringExtensions.kt$e: Exception</ID>
+    <ID>TooManyFunctions:CommonAppBar.kt$CommonAppBar : AppBarLayoutLifecycleObserver</ID>
+    <ID>TooManyFunctions:CommonSearchBar.kt$CommonSearchBar : FrameLayout</ID>
+    <ID>TooManyFunctions:CommunityTab.kt$CommunityTab : FrameLayoutLifecycleObserver</ID>
+    <ID>TooManyFunctions:CustomInfiniteViewPager.kt$CustomInfiniteViewPager : ConstraintLayout</ID>
+    <ID>TooManyFunctions:TopNavigationView.kt$TopNavigationView : TabLayout</ID>
+    <ID>TooManyFunctions:ViewPagerLoopAndAutoScroll.kt$ViewPagerLoopAndAutoScroll : ConstraintLayout</ID>
+    <ID>UnusedPrivateMember:BadgeTextView.kt$BadgeTextView$private var badgeNumber: Int = 0 set(value) { field = value visibility = if (value > 0) View.VISIBLE else View.INVISIBLE text = if (value > maxBadgeNumber) { String.format("%d+", maxBadgeNumber) } else { value.toString() } }</ID>
+    <ID>UnusedPrivateMember:CustomInfiniteViewPager.kt$CustomInfiniteViewPager$item</ID>
+    <ID>UnusedPrivateMember:ViewPagerLoopAndAutoScroll.kt$ViewPagerLoopAndAutoScroll$item</ID>
+    <ID>VariableNaming:ViewPagerLoopAndAutoScroll.kt$ViewPagerLoopAndAutoScroll$private val DEFAULT_BANNER_HIGHT = 9</ID>
+    <ID>VariableNaming:ViewPagerLoopAndAutoScroll.kt$ViewPagerLoopAndAutoScroll$private val DEFAULT_BANNER_WIDTH = 16</ID>
+    <ID>VariableNaming:ViewPagerLoopAndAutoScroll.kt$ViewPagerLoopAndAutoScroll$private val DEFAULT_TIME_BANNER = 3000L</ID>
+    <ID>VariableNaming:ViewPagerLoopAndAutoScroll.kt$ViewPagerLoopAndAutoScroll$private val STAGE_NOT_SCROLL = 0L</ID>
+  </CurrentIssues>
+</SmellBaseline>

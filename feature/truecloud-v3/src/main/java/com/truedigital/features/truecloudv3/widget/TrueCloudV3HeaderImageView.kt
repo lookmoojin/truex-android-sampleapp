@@ -4,7 +4,7 @@ import android.content.Context
 import android.util.AttributeSet
 import android.view.LayoutInflater
 import android.widget.FrameLayout
-import com.truedigital.features.truecloudv3.databinding.TrueCloudv3HeaderImageViewBinding
+import com.tdg.truecloud.databinding.TrueCloudv3HeaderImageViewBinding
 import com.truedigital.foundation.extension.onClick
 
 class TrueCloudV3HeaderImageView @JvmOverloads constructor(
@@ -12,11 +12,12 @@ class TrueCloudV3HeaderImageView @JvmOverloads constructor(
     attrs: AttributeSet? = null,
     defStyleAttr: Int = 0
 ) : FrameLayout(context, attrs, defStyleAttr) {
-    private val binding: TrueCloudv3HeaderImageViewBinding = TrueCloudv3HeaderImageViewBinding.inflate(
-        LayoutInflater.from(context),
-        this,
-        false
-    )
+    private val binding: TrueCloudv3HeaderImageViewBinding =
+        TrueCloudv3HeaderImageViewBinding.inflate(
+            LayoutInflater.from(context),
+            this,
+            false
+        )
 
     init {
         addView(binding.root)

@@ -1,0 +1,33 @@
+<resources>
+    <dimen name="appbar_expanded_space_size">140dp</dimen>
+    <dimen name="appbar_expanded_space_two_view">156dp</dimen>
+
+    <dimen name="appbar_expanded_show_three_view_size">200dp</dimen>
+
+    <dimen name="appbar_expanded_title_three_margin_bottom">120dp</dimen>
+
+    <dimen name="appbar_expanded_not_community_tab">150dp</dimen>
+
+    <dimen name="appbar_expanded_title_margin_bottom">60dp</dimen>
+    <dimen name="appbar_expanded_title_margin_Top_not_header">50dp</dimen>
+    <dimen name="appbar_expanded_title_margin_bottom_not_search">62dp</dimen>
+
+    <dimen name="text_size_vertical_title">14sp</dimen>
+    <dimen name="top_navigation_space_between_parent">16dp</dimen>
+    <dimen name="top_navigation_space_between_item">4dp</dimen>
+
+    <dimen name="privilege_bubble_item_size">64dp</dimen>
+    <dimen name="carousel_default_margin">8dp</dimen>
+    <dimen name="width_height_item_square">60dp</dimen>
+    <dimen name="width_height_icon_square">48dp</dimen>
+    <item name="sport_community_live_match_spacing_multiplier" type="integer" format="float">1.0</item>
+
+    <dimen name="spacing_icon_scan">12.5dp</dimen>
+
+    <dimen name="shelf_countdown_date_countdown_number_size">18sp</dimen>
+    <dimen name="shelf_countdown_date_countdown_detail_text_size">8sp</dimen>
+    <dimen name="shelf_countdown_date_countdown_string_size">18sp</dimen>
+    <dimen name="shelf_countdown_team_name_size">18sp</dimen>
+    <dimen name="shelf_countdown_match_date_text_size">8sp</dimen>
+    <dimen name="shelf_countdown_guideline_match_date_bottom">0.94</dimen>
+</resources>

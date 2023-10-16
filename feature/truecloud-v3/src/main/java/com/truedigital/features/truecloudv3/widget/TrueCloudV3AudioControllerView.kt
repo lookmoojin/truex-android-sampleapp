@@ -5,7 +5,7 @@ import android.util.AttributeSet
 import android.widget.ImageView
 import android.widget.ViewFlipper
 import com.google.android.exoplayer2.ui.PlayerControlView
-import com.truedigital.features.truecloudv3.R
+import com.tdg.truecloud.R
 
 class TrueCloudV3AudioControllerView @JvmOverloads constructor(
     context: Context,

@@ -6,8 +6,8 @@ import android.view.LayoutInflater
 import android.widget.FrameLayout
 import android.widget.SeekBar
 import androidx.core.content.ContextCompat
-import com.truedigital.features.truecloudv3.R
-import com.truedigital.features.truecloudv3.databinding.TrueCloudv3ViewPlayerSeekBarBinding
+import com.tdg.truecloud.R
+import com.tdg.truecloud.databinding.TrueCloudv3ViewPlayerSeekBarBinding
 import com.truedigital.features.tuned.common.extensions.toDurationString
 
 class TrueCloudV3PlayerSeekBarView @JvmOverloads constructor(

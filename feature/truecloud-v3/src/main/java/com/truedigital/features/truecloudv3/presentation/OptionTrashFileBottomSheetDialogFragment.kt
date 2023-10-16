@@ -11,14 +11,14 @@ import androidx.fragment.app.viewModels
 import androidx.navigation.fragment.findNavController
 import com.google.android.material.bottomsheet.BottomSheetBehavior
 import com.google.android.material.bottomsheet.BottomSheetDialogFragment
+import com.tdg.truecloud.R
+import com.tdg.truecloud.databinding.TrueCloudv3TrashOptionBottomSheetDialogBinding
 import com.truedigital.common.share.componentv3.extension.setSavedStateHandle
 import com.truedigital.component.dialog.trueid.DialogIconType
 import com.truedigital.component.dialog.trueid.DialogManager
 import com.truedigital.core.extensions.viewBinding
-import com.truedigital.features.truecloudv3.R
 import com.truedigital.features.truecloudv3.common.TrueCloudV3KeyBundle.KEY_BUNDLE_TRUE_CLOUD_OPTION_MAIN_TRASH
 import com.truedigital.features.truecloudv3.common.TrueCloudV3SaveStateKey
-import com.truedigital.features.truecloudv3.databinding.TrueCloudv3TrashOptionBottomSheetDialogBinding
 import com.truedigital.features.truecloudv3.domain.model.TrueCloudFilesModel
 import com.truedigital.features.truecloudv3.injections.TrueCloudV3Component
 import com.truedigital.features.truecloudv3.presentation.viewmodel.OptionTrashFileBottomSheetDialogViewModel
@@ -71,7 +71,8 @@ class OptionTrashFileBottomSheetDialogFragment : BottomSheetDialogFragment() {
         initListener()
         observeViewModel()
         val itemList: ArrayList<TrueCloudFilesModel.File> =
-            arguments?.getParcelableArrayList(KEY_BUNDLE_TRUE_CLOUD_OPTION_MAIN_TRASH) ?: ArrayList()
+            arguments?.getParcelableArrayList(KEY_BUNDLE_TRUE_CLOUD_OPTION_MAIN_TRASH)
+                ?: ArrayList()
         viewModel.init(
             itemList = itemList
         )

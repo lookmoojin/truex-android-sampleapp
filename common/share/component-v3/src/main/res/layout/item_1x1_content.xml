@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    style="@style/TrueID.Frame.Square"
+    android:contentDescription="@string/item_1x1_content">
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/thumbnailImageView"
+        style="@style/TrueID.CardView.ImageSquare"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:contentDescription="@string/today_imageview_1x1_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/notificationShapeableImageView"
+        style="@style/TrueID.HeaderIcon"
+        android:contentDescription="main_imageview_userinbox"
+        android:padding="8dp"
+        android:scaleType="fitCenter"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="VectorDrawableCompat" />
+
+    <com.truedigital.common.share.componentv3.widget.badge.presentation.BadgeTextView
+        android:id="@+id/notificationCountInboxTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:contentDescription="main_textview_badge_number"
+        android:gravity="center"
+        android:textColor="@android:color/white"
+        android:textSize="12sp"
+        android:textStyle="bold"
+        android:translationX="-5dp"
+        android:translationY="10dp"
+        app:backgroundColor="@color/tomato"
+        app:layout_constraintBottom_toTopOf="@+id/notificationShapeableImageView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/notificationShapeableImageView"
+        tools:text="9" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

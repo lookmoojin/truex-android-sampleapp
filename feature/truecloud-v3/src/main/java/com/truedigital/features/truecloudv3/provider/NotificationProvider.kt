@@ -4,7 +4,7 @@ import android.app.Notification
 import android.app.PendingIntent
 import android.content.Context
 import androidx.core.app.NotificationCompat
-import com.truedigital.features.truecloudv3.R
+import com.tdg.truecloud.R
 import javax.inject.Inject
 
 interface NotificationProvider {

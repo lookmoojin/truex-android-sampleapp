@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    style="@style/TrueID.Frame.Horizontal"
+    android:background="@color/transparent"
+    android:contentDescription="@string/item_16x9_player">
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/thumbnailImageView"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:contentDescription="@string/today_imageview_16x9_player"
+        android:foreground="?attr/selectableItemBackground"
+        android:scaleType="fitCenter"
+        app:layout_constraintDimensionRatio="16:9"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:shapeAppearanceOverlay="@style/ShapeAppearance.App.CornerRadius.Medium"
+        app:srcCompat="@mipmap/placeholder_trueidwhite_horizontal"
+        app:strokeColor="@color/black_opacity_55"
+        app:strokeWidth="0.5dp" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/titleTextView"
+        style="@style/TrueID.Body.Bold.Black.Title"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:contentDescription="@string/today_textview_16x9_player_title"
+        android:ellipsize="end"
+        android:lines="1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/thumbnailImageView"
+        tools:text="ถ่ายทอดสดจาก CNN ถ่ายทอดสดจาก CNN ถ่ายทอดสดจาก CNN" />
+</androidx.constraintlayout.widget.ConstraintLayout>

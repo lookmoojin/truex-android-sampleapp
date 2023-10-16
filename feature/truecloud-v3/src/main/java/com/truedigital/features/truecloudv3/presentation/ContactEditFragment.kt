@@ -18,12 +18,10 @@ import com.truedigital.component.base.BaseFragment
 import com.truedigital.component.dialog.trueid.DialogIconType
 import com.truedigital.component.dialog.trueid.DialogManager
 import com.truedigital.core.extensions.viewBinding
-import com.truedigital.features.truecloudv3.R
 import com.truedigital.features.truecloudv3.common.TrueCloudV3KeyBundle.KEY_BUNDLE_TRUE_CLOUD_CONTACT_DATA
 import com.truedigital.features.truecloudv3.common.TrueCloudV3SaveStateKey.KEY_TRUE_CLOUD_CONTACT_DATA
 import com.truedigital.features.truecloudv3.common.TrueCloudV3SaveStateKey.KEY_TRUE_CLOUD_CONTACT_SELECTED_PHONE_LABEL
 import com.truedigital.features.truecloudv3.common.TrueCloudV3SaveStateKey.KEY_TRUE_CLOUD_DELETE_CONTACT
-import com.truedigital.features.truecloudv3.databinding.FragmentTrueCloudv3EditContactBinding
 import com.truedigital.features.truecloudv3.domain.model.ContactTrueCloudModel
 import com.truedigital.features.truecloudv3.domain.model.CustomPhoneLabelModel
 import com.truedigital.features.truecloudv3.injections.TrueCloudV3Component

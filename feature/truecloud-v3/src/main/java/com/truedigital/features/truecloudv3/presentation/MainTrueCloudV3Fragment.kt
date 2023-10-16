@@ -11,6 +11,8 @@ import androidx.activity.result.contract.ActivityResultContracts
 import androidx.appcompat.app.AppCompatDelegate
 import androidx.fragment.app.viewModels
 import androidx.navigation.fragment.findNavController
+import com.tdg.truecloud.R
+import com.tdg.truecloud.databinding.FragmentTrueCloudv3MainBinding
 import com.truedigital.common.share.componentv3.common.IconGravity
 import com.truedigital.common.share.componentv3.extension.getSavedStateHandle
 import com.truedigital.common.share.componentv3.extension.setSavedStateHandle
@@ -20,14 +22,12 @@ import com.truedigital.component.dialog.trueid.DialogIconType
 import com.truedigital.component.dialog.trueid.DialogManager
 import com.truedigital.component.dialog.trueid.DialogTopNavigationType
 import com.truedigital.core.extensions.viewBinding
-import com.truedigital.features.truecloudv3.R
 import com.truedigital.features.truecloudv3.common.FileCategoryType
 import com.truedigital.features.truecloudv3.common.TrueCloudV3MediaType
 import com.truedigital.features.truecloudv3.common.TrueCloudV3SaveStateKey.KEY_FROM_INIT_MIGRATION_PAGE
 import com.truedigital.features.truecloudv3.common.TrueCloudV3SaveStateKey.KEY_PERMISSION_GRANTED_RESULT
 import com.truedigital.features.truecloudv3.common.TrueCloudV3SaveStateKey.KEY_PERMISSION_GRANTED_RESULT_CATEGORY
 import com.truedigital.features.truecloudv3.common.TrueCloudV3SaveStateKey.KEY_TRUE_CLOUD_OPTION_MAIN_FILE_ADD_NEW_FOLDER
-import com.truedigital.features.truecloudv3.databinding.FragmentTrueCloudv3MainBinding
 import com.truedigital.features.truecloudv3.domain.model.DetailDialogModel
 import com.truedigital.features.truecloudv3.domain.usecase.NodePermission
 import com.truedigital.features.truecloudv3.extension.actionGetContent
@@ -230,6 +230,7 @@ class MainTrueCloudV3Fragment : BaseFragment(R.layout.fragment_true_cloudv3_main
                     )
                 }
             }
+
             FileCategoryType.CONTACT -> {
                 if (checkContactStoragePermissionAlready()) {
                     viewModel.contactClicked(fileCategoryType.type)
@@ -239,6 +240,7 @@ class MainTrueCloudV3Fragment : BaseFragment(R.layout.fragment_true_cloudv3_main
                     )
                 }
             }
+
             else -> {
                 /* Nothing to do */
             }

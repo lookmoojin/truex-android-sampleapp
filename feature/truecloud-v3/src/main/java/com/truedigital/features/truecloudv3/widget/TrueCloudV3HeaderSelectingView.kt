@@ -5,8 +5,8 @@ import android.util.AttributeSet
 import android.view.LayoutInflater
 import android.widget.FrameLayout
 import androidx.core.view.isVisible
-import com.truedigital.features.truecloudv3.R
-import com.truedigital.features.truecloudv3.databinding.TrueCloudv3HeaderSelectingViewBinding
+import com.tdg.truecloud.R
+import com.tdg.truecloud.databinding.TrueCloudv3HeaderSelectingViewBinding
 import com.truedigital.foundation.extension.onClick
 
 class TrueCloudV3HeaderSelectingView @JvmOverloads constructor(

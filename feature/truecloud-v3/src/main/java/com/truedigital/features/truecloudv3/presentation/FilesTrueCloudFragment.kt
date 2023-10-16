@@ -15,6 +15,8 @@ import androidx.navigation.fragment.NavHostFragment
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import com.tdg.truecloud.R
+import com.tdg.truecloud.databinding.FragmentTrueCloudv3FilesBinding
 import com.truedigital.common.share.componentv3.extension.getSavedStateHandle
 import com.truedigital.common.share.componentv3.extension.setSavedStateHandle
 import com.truedigital.component.base.BaseFragment
@@ -24,13 +26,11 @@ import com.truedigital.component.dialog.trueid.DialogTopNavigationType
 import com.truedigital.core.extensions.viewBinding
 import com.truedigital.core.manager.permission.PermissionManager
 import com.truedigital.core.manager.permission.PermissionManagerImpl
-import com.truedigital.features.truecloudv3.R
 import com.truedigital.features.truecloudv3.common.SortType
 import com.truedigital.features.truecloudv3.common.TrueCloudV3KeyBundle.KEY_BUNDLE_TRUE_CLOUD_CATEGORY
 import com.truedigital.features.truecloudv3.common.TrueCloudV3KeyBundle.KEY_BUNDLE_TRUE_CLOUD_FOLDER_ID
 import com.truedigital.features.truecloudv3.common.TrueCloudV3MediaType
 import com.truedigital.features.truecloudv3.common.TrueCloudV3SaveStateKey
-import com.truedigital.features.truecloudv3.databinding.FragmentTrueCloudv3FilesBinding
 import com.truedigital.features.truecloudv3.domain.model.TrueCloudFilesModel
 import com.truedigital.features.truecloudv3.extension.actionGetContent
 import com.truedigital.features.truecloudv3.extension.actionGetContentWithMimeType

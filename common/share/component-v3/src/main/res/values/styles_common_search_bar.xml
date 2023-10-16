@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="TrueID.CommonSearchBar" parent="CardView">
+        <item name="csb_card_style">@style/TrueID.CardSearchBar.Light</item>
+        <item name="csb_title_style">@style/TrueID.Body.Black</item>
+        <item name="csb_ic_search_style">@style/TrueID.IconSearchBar.SearchLight</item>
+        <item name="csb_ic_scan_style">@style/TrueID.IconSearchBar.ScanLight</item>
+        <item name="csb_ic_close_style">@style/TrueID.IconSearchBar.CloseLight</item>
+    </style>
+
+    <style name="TrueID.CommonSearchBar.Dark">
+        <item name="csb_card_style">@style/TrueID.CardSearchBar.Dark</item>
+        <item name="csb_title_style">@style/TrueID.Body.White</item>
+        <item name="csb_ic_search_style">@style/TrueID.IconSearchBar.SearchDark</item>
+        <item name="csb_ic_scan_style">@style/TrueID.IconSearchBar.ScanDark</item>
+        <item name="csb_ic_close_style">@style/TrueID.IconSearchBar.CloseDark</item>
+    </style>
+
+    <style name="TrueID.CardSearchBar">
+        <item name="cardElevation">3dp</item>
+        <item name="android:focusable">true</item>
+        <item name="android:clickable">true</item>
+    </style>
+
+    <style name="TrueID.CardSearchBar.Light">
+        <item name="cardBackgroundColor">@color/black_white_white</item>
+        <item name="rippleColor">@color/light_states_black_overlay_focused</item>
+    </style>
+
+    <style name="TrueID.CardSearchBar.Dark">
+        <item name="cardBackgroundColor">@color/black_little</item>
+        <item name="rippleColor">@color/light_states_white_overlay_focus</item>
+    </style>
+
+
+    <style name="TrueID.IconSearchBar">
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:paddingTop">@dimen/spacing_2</item>
+        <item name="android:paddingBottom">@dimen/spacing_2</item>
+        <item name="android:adjustViewBounds">true</item>
+    </style>
+
+    <style name="TrueID.IconSearchBar.SearchLight">
+        <item name="srcCompat">@drawable/res_ic_search_black</item>
+        <item name="android:paddingStart">@dimen/spacing_3</item>
+        <item name="android:paddingEnd">@dimen/spacing_2</item>
+    </style>
+
+    <style name="TrueID.IconSearchBar.SearchDark">
+        <item name="srcCompat">@drawable/res_ic_search_white</item>
+        <item name="android:paddingStart">@dimen/spacing_3</item>
+        <item name="android:paddingEnd">@dimen/spacing_2</item>
+    </style>
+
+    <style name="TrueID.IconSearchBar.ScanLight">
+        <item name="srcCompat">@drawable/res_ic_qr_code_scanner_black</item>
+        <item name="android:paddingStart">@dimen/spacing_icon_scan</item>
+        <item name="android:paddingEnd">@dimen/spacing_icon_scan</item>
+    </style>
+
+    <style name="TrueID.IconSearchBar.ScanDark">
+        <item name="srcCompat">@drawable/res_ic_qr_code_scanner_white</item>
+        <item name="android:paddingStart">@dimen/spacing_icon_scan</item>
+        <item name="android:paddingEnd">@dimen/spacing_icon_scan</item>
+    </style>
+
+    <style name="TrueID.IconSearchBar.CloseLight">
+        <item name="srcCompat">@drawable/ic_dialog_close_light</item>
+        <item name="android:paddingStart">@dimen/spacing_2</item>
+        <item name="android:paddingEnd">@dimen/spacing_3</item>
+    </style>
+
+    <style name="TrueID.IconSearchBar.CloseDark">
+        <item name="srcCompat">@drawable/ic_dialog_close_dark</item>
+        <item name="android:paddingStart">@dimen/spacing_2</item>
+        <item name="android:paddingEnd">@dimen/spacing_3</item>
+    </style>
+
+</resources>

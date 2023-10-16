@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="text_truepoint_your_point">คะแนน</string>
+    <string name="text_truepoint_point_unit">%1$s คะแนน</string>
+    <string name="see_all">ดูเพิ่มเติม</string>
+    <string name="text_recommend">รายการแนะนำ</string>
+    <string name="text_countdown_shelf_today">วันนี้</string>
+    <string name="text_countdown_shelf_tonight">คืนนี้</string>
+    <string name="text_countdown_shelf_tomorrow">พรุ่งนี้</string>
+    <string name="text_countdown_shelf_match_date" translatable="false">%s น.</string>
+    <string name="text_countdown_shelf_day_to_go">อีก %s วัน</string>
+
+    <!-- deeplink description-->
+    <string name="deeplink_feature_off_title" translatable="false">ไม่พบเนื้อหา</string>
+    <string name="deeplink_not_found_description" translatable="false">เนื้อหานี้อาจไม่มีอยู่\nหรือไม่พร้อมให้รับชมในภูมิภาคของคุณ (101)</string>
+    <string name="deeplink_feature_off_description" translatable="false">เนื้อหานี้อาจไม่มีอยู่\nหรือไม่พร้อมให้รับชมในภูมิภาคของคุณ (102)</string>
+    <string name="deeplink_error_description" translatable="false">เนื้อหานี้อาจไม่มีอยู่\nหรือไม่พร้อมให้รับชมในภูมิภาคของคุณ (103)</string>
+    <string name="deeplink_feature_off_button" translatable="false">ตกลง</string>
+    <string name="today_txt_popular">ฟีดยอดนิยม</string>
+    <string name="today_txt_for_you">สำหรับคุณ</string>
+</resources>

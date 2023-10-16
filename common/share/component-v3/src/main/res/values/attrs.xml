@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <declare-styleable name="CommonAppBar">
+        <attr name="cab_title" format="string" />
+        <attr name="cab_title_content_description" format="string" />
+        <attr name="cab_search" format="string" />
+        <attr name="cab_title_style" format="reference" />
+        <attr name="cab_search_style" format="reference" />
+        <attr name="cab_icon_search_style" format="reference" />
+        <attr name="cab_icon_scan_style" format="reference" />
+        <attr name="cab_collapse_title_gravity" format="flags">
+            <!-- Push title to the top of its container, not changing its size. -->
+            <flag name="top" value="0x30" />
+            <!-- Push title to the bottom of its container, not changing its size. -->
+            <flag name="bottom" value="0x50" />
+            <!-- Push title to the left of its container, not changing its size. -->
+            <flag name="left" value="0x03" />
+            <!-- Push title to the right of its container, not changing its size. -->
+            <flag name="right" value="0x05" />
+            <!-- Place title in the vertical center of its container, not changing its size. -->
+            <flag name="center_vertical" value="0x10" />
+            <!-- Grow the vertical size of the title if needed so it completely fills its container. -->
+            <flag name="fill_vertical" value="0x70" />
+            <!-- Place title in the horizontal center of its container, not changing its size. -->
+            <flag name="center_horizontal" value="0x01" />
+            <!-- Place the title in the center of its container in both the vertical and horizontal axis, not changing its size. -->
+            <flag name="center" value="0x11" />
+            <!-- Push title to the beginning of its container, not changing its size. -->
+            <flag name="start" value="0x00800003" />
+            <!-- Push title to the end of its container, not changing its size. -->
+            <flag name="end" value="0x00800005" />
+        </attr>
+    </declare-styleable>
+
+    <declare-styleable name="CommonLargeNavigationBar">
+        <attr name="cln_title" format="string" />
+        <attr name="cln_title_style" format="reference" />
+    </declare-styleable>
+
+    <declare-styleable name="CommonSearchBar">
+        <attr name="csb_title" format="string" />
+        <attr name="csb_card_style" format="reference" />
+        <attr name="csb_title_style" format="reference" />
+        <attr name="csb_ic_search_style" format="reference" />
+        <attr name="csb_ic_scan_style" format="reference" />
+        <attr name="csb_ic_close_style" format="reference" />
+    </declare-styleable>
+
+    <declare-styleable name="BadgeTextView">
+        <attr name="backgroundColor" />
+        <attr name="maxBadgeNumber" format="integer" />
+    </declare-styleable>
+
+    <declare-styleable name="TopNavigationView">
+        <attr name="item_content_description" format="string" />
+        <attr name="item_image_view_content_description" format="string" />
+        <attr name="item_text_view_content_description" format="string" />
+    </declare-styleable>
+</resources>

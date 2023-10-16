@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="text_size_vertical_title">20sp</dimen>
+
+    <dimen name="privilege_bubble_item_size">58dp</dimen>
+    <dimen name="carousel_default_margin">8dp</dimen>
+
+    <dimen name="width_height_item_square">52dp</dimen>
+    <dimen name="width_height_icon_square">42dp</dimen>
+
+    <dimen name="shelf_countdown_date_countdown_number_size">22sp</dimen>
+    <dimen name="shelf_countdown_date_countdown_detail_text_size">12sp</dimen>
+    <dimen name="shelf_countdown_date_countdown_string_size">22sp</dimen>
+    <dimen name="shelf_countdown_team_name_size">22sp</dimen>
+    <dimen name="shelf_countdown_match_date_text_size">12sp</dimen>
+</resources>

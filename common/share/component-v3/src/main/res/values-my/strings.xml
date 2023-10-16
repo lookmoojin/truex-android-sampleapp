@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="text_truepoint_your_point">Your TruePoint</string>
+    <string name="see_all">See more</string>
+    <string name="text_recommend">Recommend</string>
+    <string name="text_countdown_shelf_today">วันนี้</string>
+    <string name="text_countdown_shelf_tonight">คืนนี้</string>
+    <string name="text_countdown_shelf_tomorrow">พรุ่งนี้</string>
+    <string name="text_countdown_shelf_match_date" translatable="false">%s น.</string>
+    <string name="text_countdown_shelf_day_to_go">อีก %s วัน</string>
+
+    <!-- deeplink description-->
+    <string name="deeplink_feature_off_title" translatable="false">အကြောင်းအရာ မရှိသေးပါ။</string>
+    <string name="deeplink_not_found_description" translatable="false">ဤအကြောင်းအရာကို လက်ရှိတွင်မြန်မာနိုင်ငံမှာ မရှိသေးပါ။ (101)</string>
+    <string name="deeplink_feature_off_description" translatable="false">ဤအကြောင်းအရာကို လက်ရှိတွင်မြန်မာနိုင်ငံမှာ မရှိသေးပါ။ (102)</string>
+    <string name="deeplink_error_description" translatable="false">ဤအကြောင်းအရာကို လက်ရှိတွင်မြန်မာနိုင်ငံမှာ မရှိသေးပါ။ (103)</string>
+    <string name="deeplink_feature_off_button" translatable="false">အိုကေ</string>
+</resources>
