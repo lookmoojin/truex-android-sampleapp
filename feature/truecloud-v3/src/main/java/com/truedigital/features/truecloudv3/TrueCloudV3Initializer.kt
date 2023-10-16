@@ -12,7 +12,6 @@ import com.truedigital.common.share.datalegacy.DataLegacyInitializer
 import com.truedigital.common.share.datalegacy.injections.DataLegacyComponent
 import com.truedigital.core.CoreInitializer
 import com.truedigital.core.injections.CoreComponent
-import com.truedigital.features.truecloudv3.injections.DaggerTrueCloudV3Component
 import com.truedigital.features.truecloudv3.injections.TrueCloudV3Component
 import com.truedigital.navigation.NavigationInitializer
 import com.truedigital.navigation.injections.NavigationComponent

@@ -6,7 +6,7 @@ import android.text.TextWatcher
 import android.util.AttributeSet
 import android.view.LayoutInflater
 import android.widget.FrameLayout
-import com.truedigital.features.truecloudv3.databinding.TrueCloudv3SearchBarViewBinding
+import com.tdg.truecloud.databinding.TrueCloudv3SearchBarViewBinding
 import java.util.Timer
 import java.util.TimerTask
 

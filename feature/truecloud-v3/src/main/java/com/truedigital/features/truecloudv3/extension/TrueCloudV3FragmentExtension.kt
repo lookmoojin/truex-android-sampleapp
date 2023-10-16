@@ -21,11 +21,11 @@ fun Fragment.checkPermissionAlready(permission: String): Boolean {
 fun Fragment.checkStoragePermissionAlready(): Boolean {
     return if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.TIRAMISU) {
         checkPermissionAlready(Manifest.permission.READ_MEDIA_AUDIO) &&
-            checkPermissionAlready(Manifest.permission.READ_MEDIA_VIDEO) &&
-            checkPermissionAlready(Manifest.permission.READ_MEDIA_IMAGES)
+                checkPermissionAlready(Manifest.permission.READ_MEDIA_VIDEO) &&
+                checkPermissionAlready(Manifest.permission.READ_MEDIA_IMAGES)
     } else {
         checkPermissionAlready(Manifest.permission.READ_EXTERNAL_STORAGE) &&
-            checkPermissionAlready(Manifest.permission.WRITE_EXTERNAL_STORAGE)
+                checkPermissionAlready(Manifest.permission.WRITE_EXTERNAL_STORAGE)
     }
 }
 

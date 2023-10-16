@@ -7,11 +7,11 @@ import android.view.LayoutInflater
 import android.widget.FrameLayout
 import androidx.appcompat.widget.LinearLayoutCompat
 import androidx.core.content.ContextCompat
+import com.tdg.truecloud.R
+import com.tdg.truecloud.databinding.TrueCloudv3WidgetStorageBinding
 import com.truedigital.core.extensions.toDateFromUTC
-import com.truedigital.features.truecloudv3.R
 import com.truedigital.features.truecloudv3.common.FileStorageType
 import com.truedigital.features.truecloudv3.common.MigrationStatus
-import com.truedigital.features.truecloudv3.databinding.TrueCloudv3WidgetStorageBinding
 import com.truedigital.features.truecloudv3.domain.model.DataMigrationModel
 import com.truedigital.features.truecloudv3.domain.model.DataStorageModel
 import com.truedigital.features.truecloudv3.extension.formatBinarySize
@@ -62,7 +62,8 @@ class TrueCloudV3StorageView @JvmOverloads constructor(
         showAutoBackup()
         binding.trueCloudAutoBackupTextView.gone()
         binding.iconAutoBackupImageView.visible()
-        binding.headerAutoBackupTextView.text = context.getString(R.string.true_cloudv3_backing_up_files)
+        binding.headerAutoBackupTextView.text =
+            context.getString(R.string.true_cloudv3_backing_up_files)
         binding.subtitleAutoBackupTextView.text = context.getString(
             R.string.true_cloudv3_auto_backup_time_remaining_hour
         )
@@ -74,10 +75,12 @@ class TrueCloudV3StorageView @JvmOverloads constructor(
             ContextCompat.getDrawable(context, R.drawable.icon_true_cloudv3_auto_backup_error)
         )
         binding.trueCloudAutoBackupTextView.visible()
-        binding.trueCloudAutoBackupTextView.text = context.getString(R.string.true_cloudv3_auto_backup_button)
+        binding.trueCloudAutoBackupTextView.text =
+            context.getString(R.string.true_cloudv3_auto_backup_button)
         binding.iconAutoBackupImageView.visible()
         binding.headerAutoBackupTextView.setTextColor(ContextCompat.getColor(context, R.color.red))
-        binding.headerAutoBackupTextView.text = context.getString(R.string.true_cloudv3_backing_up_failed)
+        binding.headerAutoBackupTextView.text =
+            context.getString(R.string.true_cloudv3_backing_up_failed)
         binding.subtitleAutoBackupTextView.text = context.getString(
             R.string.true_cloudv3_backing_up_tyr_again
         )
@@ -264,7 +267,8 @@ class TrueCloudV3StorageView @JvmOverloads constructor(
                 setMigrationView(it)
             }
 
-            val totalUsedStorage = it.dataUsage?.sortedObj?.sumOf { it.second ?: ZERO_LONG } ?: ZERO_LONG
+            val totalUsedStorage =
+                it.dataUsage?.sortedObj?.sumOf { it.second ?: ZERO_LONG } ?: ZERO_LONG
             val totalStorageCal = it.quota
             val totalStorage = it.quota.formatBinarySize(context)
             binding.trueCloudUsedStorageTextView.text =
@@ -367,6 +371,7 @@ class TrueCloudV3StorageView @JvmOverloads constructor(
                     context.getString(R.string.true_cloudv3_migrating_data)
                 binding.subtitleMigrateionTextView.text = remainingMsg
             }
+
             MigrationStatus.FAILED.key -> {
                 binding.containerMigrateData.visible()
                 binding.trueCloudMigrateTextView.visible()
@@ -382,6 +387,7 @@ class TrueCloudV3StorageView @JvmOverloads constructor(
                 )
                 binding.iconMigrateImageView.setImageResource(R.drawable.ic_migrate_error)
             }
+
             else -> {
                 binding.containerMigrateData.gone()
             }
