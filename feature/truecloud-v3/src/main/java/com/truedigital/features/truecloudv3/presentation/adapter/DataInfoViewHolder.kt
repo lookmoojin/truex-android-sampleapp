@@ -1,7 +1,7 @@
 package com.truedigital.features.truecloudv3.presentation.adapter
 
 import androidx.recyclerview.widget.RecyclerView
-import com.truedigital.features.truecloudv3.databinding.TrueCloudv3ViewholderDataInfoItemBinding
+import com.tdg.truecloud.databinding.TrueCloudv3ViewholderDataInfoItemBinding
 
 class DataInfoViewHolder(
     private val binding: TrueCloudv3ViewholderDataInfoItemBinding

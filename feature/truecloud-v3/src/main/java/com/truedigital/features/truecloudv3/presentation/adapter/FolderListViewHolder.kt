@@ -1,7 +1,7 @@
 package com.truedigital.features.truecloudv3.presentation.adapter
 
 import androidx.recyclerview.widget.RecyclerView
-import com.truedigital.features.truecloudv3.databinding.TrueCloudv3ViewholderFolderItemListBinding
+import com.tdg.truecloud.databinding.TrueCloudv3ViewholderFolderItemListBinding
 import com.truedigital.features.truecloudv3.domain.model.TrueCloudFilesModel
 import com.truedigital.foundation.extension.gone
 import com.truedigital.foundation.extension.invisible
@@ -27,6 +27,7 @@ class FolderListViewHolder(
         private const val ALPHA_07 = 0.7f
         private const val ALPHA_1 = 1f
     }
+
     fun bind(folder: TrueCloudFilesModel.Folder) = with(binding) {
         folder.let {
             val createDate = it.createdAt

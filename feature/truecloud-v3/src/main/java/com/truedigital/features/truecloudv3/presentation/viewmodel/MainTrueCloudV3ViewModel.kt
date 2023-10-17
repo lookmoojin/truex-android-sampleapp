@@ -6,6 +6,7 @@ import android.os.Bundle
 import androidx.datastore.preferences.core.stringPreferencesKey
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.viewModelScope
+import com.tdg.truecloud.R
 import com.truedigital.common.share.analytics.di.AnalyticsModule
 import com.truedigital.common.share.analytics.measurement.AnalyticManagerInterface
 import com.truedigital.common.share.analytics.measurement.base.platform.PlatformAnalyticModel
@@ -19,7 +20,6 @@ import com.truedigital.core.coroutines.CoroutineDispatcherProvider
 import com.truedigital.core.extensions.launchSafe
 import com.truedigital.core.extensions.launchSafeIn
 import com.truedigital.core.utils.DataStoreUtil
-import com.truedigital.features.truecloudv3.R
 import com.truedigital.features.truecloudv3.common.FileCategoryType
 import com.truedigital.features.truecloudv3.common.MigrationStatus
 import com.truedigital.features.truecloudv3.common.TaskActionType
@@ -535,7 +535,7 @@ class MainTrueCloudV3ViewModel @Inject constructor(
     private suspend fun updateUploadTask(taskUploadModels: MutableList<TaskUploadModel>?) {
         taskUploadModels?.filter {
             it.actionType == TaskActionType.UPLOAD ||
-                it.actionType == TaskActionType.AUTO_BACKUP
+                    it.actionType == TaskActionType.AUTO_BACKUP
         }
             ?.forEach { _taskUplaodModel ->
                 val transferObserver =
@@ -596,9 +596,9 @@ class MainTrueCloudV3ViewModel @Inject constructor(
                     "false"
                 ).toBoolean() &&
                 dataStoreUtil.getSinglePreference(
-                        stringPreferencesKey(AutoBackupViewModel.lastTimeStamp),
-                        "0"
-                    ).toLong() <= 0L
+                    stringPreferencesKey(AutoBackupViewModel.lastTimeStamp),
+                    "0"
+                ).toLong() <= 0L
             ) {
                 onShowInitAutoBackup.value = Unit
             } else {

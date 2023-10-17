@@ -3,7 +3,7 @@ package com.truedigital.features.truecloudv3.presentation.adapter
 import android.graphics.BitmapFactory
 import android.util.Base64
 import androidx.recyclerview.widget.RecyclerView
-import com.truedigital.features.truecloudv3.databinding.TrueCloudv3ViewholderContactItemBinding
+import com.tdg.truecloud.databinding.TrueCloudv3ViewholderContactItemBinding
 import com.truedigital.features.truecloudv3.domain.model.ContactTrueCloudModel
 import com.truedigital.foundation.extension.invisible
 import com.truedigital.foundation.extension.onClick

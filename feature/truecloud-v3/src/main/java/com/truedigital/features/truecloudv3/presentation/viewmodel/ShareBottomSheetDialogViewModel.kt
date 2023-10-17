@@ -2,6 +2,7 @@ package com.truedigital.features.truecloudv3.presentation.viewmodel
 
 import android.os.Bundle
 import android.os.Environment
+import com.tdg.truecloud.R
 import com.truedigital.common.share.analytics.di.AnalyticsModule
 import com.truedigital.common.share.analytics.measurement.AnalyticManagerInterface
 import com.truedigital.common.share.analytics.measurement.constant.MeasurementConstant
@@ -9,7 +10,6 @@ import com.truedigital.common.share.datalegacy.wrapper.ContextDataProviderWrappe
 import com.truedigital.core.base.ScopedViewModel
 import com.truedigital.core.coroutines.CoroutineDispatcherProvider
 import com.truedigital.core.extensions.launchSafeIn
-import com.truedigital.features.truecloudv3.R
 import com.truedigital.features.truecloudv3.common.TrueCloudV3KeyBundle
 import com.truedigital.features.truecloudv3.common.TrueCloudV3TrackAnalytic
 import com.truedigital.features.truecloudv3.common.TrueCloudV3TransferState

@@ -5,8 +5,8 @@ import android.view.ViewGroup
 import android.widget.Space
 import androidx.recyclerview.widget.RecyclerView
 import com.newrelic.agent.android.NewRelic
-import com.truedigital.features.truecloudv3.databinding.TrueCloudv3ViewholderContactHeaderBinding
-import com.truedigital.features.truecloudv3.databinding.TrueCloudv3ViewholderContactItemBinding
+import com.tdg.truecloud.databinding.TrueCloudv3ViewholderContactHeaderBinding
+import com.tdg.truecloud.databinding.TrueCloudv3ViewholderContactItemBinding
 import com.truedigital.features.truecloudv3.domain.model.Contact
 import com.truedigital.features.truecloudv3.domain.model.ContactTrueCloudModel
 import com.truedigital.features.truecloudv3.domain.model.HeaderSelectionModel
@@ -32,6 +32,7 @@ class ContactAdapter : RecyclerView.Adapter<RecyclerView.ViewHolder>() {
                     )
                 )
             }
+
             CONTACT_ITEM_VIEW_TYPE -> {
                 ContactViewHolder(
                     TrueCloudv3ViewholderContactItemBinding.inflate(
@@ -42,6 +43,7 @@ class ContactAdapter : RecyclerView.Adapter<RecyclerView.ViewHolder>() {
                     onItemClicked
                 )
             }
+
             else -> {
                 NewRelic.recordHandledException(
                     Exception("View type $viewType isn't supported in AddressBookContactAdapter")
@@ -57,6 +59,7 @@ class ContactAdapter : RecyclerView.Adapter<RecyclerView.ViewHolder>() {
                 is ContactHeaderViewHolder -> {
                     (item as HeaderSelectionModel).let { holder.bind(it) }
                 }
+
                 is ContactViewHolder -> {
                     (item as ContactTrueCloudModel).let { holder.bind(it) }
                 }
@@ -75,6 +78,7 @@ class ContactAdapter : RecyclerView.Adapter<RecyclerView.ViewHolder>() {
     override fun getItemCount(): Int {
         return contactList.size
     }
+
     fun getItemAtPosition(position: Int): Contact {
         return contactList[position]
     }

@@ -1,11 +1,11 @@
 package com.truedigital.features.truecloudv3.presentation.viewmodel
 
 import androidx.exifinterface.media.ExifInterface
+import com.tdg.truecloud.R
 import com.truedigital.common.share.datalegacy.wrapper.ContextDataProviderWrapper
 import com.truedigital.core.base.ScopedViewModel
 import com.truedigital.core.coroutines.CoroutineDispatcherProvider
 import com.truedigital.core.extensions.launchSafeIn
-import com.truedigital.features.truecloudv3.R
 import com.truedigital.features.truecloudv3.domain.model.TrueCloudFilesModel
 import com.truedigital.features.truecloudv3.provider.ExifProvider
 import com.truedigital.features.truecloudv3.provider.FileProvider
@@ -25,6 +25,7 @@ class FileInfoBottomSheetDialogViewModel @Inject constructor(
     companion object {
         private const val MAX_SHOW_SIZE = 5
     }
+
     val onSetMaxHeightView = SingleLiveEvent<Unit>()
     val onSetUpData = SingleLiveEvent<List<Pair<String, String>>>()
     lateinit var trueCloudFilesModel: TrueCloudFilesModel.File

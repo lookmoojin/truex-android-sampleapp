@@ -4,6 +4,7 @@ import android.net.Uri
 import android.os.Bundle
 import androidx.lifecycle.MutableLiveData
 import androidx.navigation.NavController
+import com.tdg.truecloud.R
 import com.truedigital.common.share.datalegacy.login.LoginManagerInterface
 import com.truedigital.common.share.datalegacy.wrapper.AuthLoginListener
 import com.truedigital.common.share.datalegacy.wrapper.ContextDataProviderWrapper
@@ -11,7 +12,6 @@ import com.truedigital.core.base.ScopedViewModel
 import com.truedigital.core.coroutines.CoroutineDispatcherProvider
 import com.truedigital.core.extensions.launchSafe
 import com.truedigital.core.extensions.launchSafeIn
-import com.truedigital.features.truecloudv3.R
 import com.truedigital.features.truecloudv3.common.TaskActionType
 import com.truedigital.features.truecloudv3.common.TaskStatusType
 import com.truedigital.features.truecloudv3.common.TrueCloudV3KeyBundle.KEY_BUNDLE_TRUE_CLOUD_FILE_ACCESSTOKEN

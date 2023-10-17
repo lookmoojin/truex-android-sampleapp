@@ -4,6 +4,7 @@ import android.content.Intent
 import android.os.Bundle
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.viewModelScope
+import com.tdg.truecloud.R
 import com.truedigital.common.share.analytics.di.AnalyticsModule
 import com.truedigital.common.share.analytics.measurement.AnalyticManagerInterface
 import com.truedigital.common.share.analytics.measurement.base.platform.PlatformAnalyticModel
@@ -12,7 +13,6 @@ import com.truedigital.common.share.datalegacy.wrapper.ContextDataProviderWrappe
 import com.truedigital.core.base.ScopedViewModel
 import com.truedigital.core.coroutines.CoroutineDispatcherProvider
 import com.truedigital.core.extensions.launchSafeIn
-import com.truedigital.features.truecloudv3.R
 import com.truedigital.features.truecloudv3.common.FileMimeTypeManager
 import com.truedigital.features.truecloudv3.common.TrueCloudV3ErrorMessage
 import com.truedigital.features.truecloudv3.common.TrueCloudV3KeyBundle.KEY_BUNDLE_TRUE_CLOUD_CONTACT_DATA
@@ -345,6 +345,7 @@ class ContactViewModel @Inject constructor(
             TrueCloudV3ErrorMessage.ERROR_CONTACT_NOT_FOUND -> {
                 onContactNotfound.postValue(Unit)
             }
+
             else -> {
                 onGetContactError.postValue(
                     Pair(errorMessage, ACTION_GET_CONTACT)

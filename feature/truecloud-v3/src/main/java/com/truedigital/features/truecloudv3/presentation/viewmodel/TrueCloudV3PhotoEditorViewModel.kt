@@ -5,12 +5,12 @@ import androidx.core.os.bundleOf
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.map
+import com.tdg.truecloud.R
 import com.truedigital.common.share.datalegacy.wrapper.ContextDataProviderWrapper
 import com.truedigital.core.base.ScopedViewModel
 import com.truedigital.core.coroutines.CoroutineDispatcherProvider
 import com.truedigital.core.extensions.launchSafe
 import com.truedigital.core.extensions.launchSafeIn
-import com.truedigital.features.truecloudv3.R
 import com.truedigital.features.truecloudv3.common.TaskStatusType
 import com.truedigital.features.truecloudv3.common.TrueCloudV3KeyBundle.KEY_BUNDLE_TRUE_CLOUD_PHOTO_EDITOR_IMAGE
 import com.truedigital.features.truecloudv3.common.TrueCloudV3TransferState
@@ -145,7 +145,8 @@ class TrueCloudV3PhotoEditorViewModel @Inject constructor(
             _onShowLoading.value = true
             trueCloudFilesModel.coverImageKey?.let { removeCoverImageCache(it) }
             replaceFileUploadUseCase.execute(filePath, objectId).map {
-                it.setTransferListener(object : TrueCloudV3TransferObserver.TrueCloudV3TransferListener {
+                it.setTransferListener(object :
+                    TrueCloudV3TransferObserver.TrueCloudV3TransferListener {
                     override fun onStateChanged(id: Int, state: TrueCloudV3TransferState?) {
                         when (state) {
                             TrueCloudV3TransferState.COMPLETED -> {

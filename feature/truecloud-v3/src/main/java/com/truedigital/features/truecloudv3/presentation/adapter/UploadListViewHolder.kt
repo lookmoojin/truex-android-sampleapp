@@ -3,9 +3,9 @@ package com.truedigital.features.truecloudv3.presentation.adapter
 import android.content.res.ColorStateList
 import androidx.core.content.ContextCompat
 import androidx.recyclerview.widget.RecyclerView
-import com.truedigital.features.truecloudv3.R
+import com.tdg.truecloud.R
+import com.tdg.truecloud.databinding.TrueCloudv3ViewholderUploadItemListBinding
 import com.truedigital.features.truecloudv3.common.TaskStatusType
-import com.truedigital.features.truecloudv3.databinding.TrueCloudv3ViewholderUploadItemListBinding
 import com.truedigital.features.truecloudv3.domain.model.TrueCloudFilesModel
 
 class UploadListViewHolder(
@@ -46,21 +46,21 @@ class UploadListViewHolder(
                 )
             )
             trueCloudCancelImageView.imageTintList = (
-                ColorStateList.valueOf(
-                    ContextCompat.getColor(
-                        root.context,
-                        task.status.actionColor
+                    ColorStateList.valueOf(
+                        ContextCompat.getColor(
+                            root.context,
+                            task.status.actionColor
+                        )
                     )
-                )
-                )
+                    )
             trueCloudRetryImageView.imageTintList = (
-                ColorStateList.valueOf(
-                    ContextCompat.getColor(
-                        root.context,
-                        task.status.actionColor
+                    ColorStateList.valueOf(
+                        ContextCompat.getColor(
+                            root.context,
+                            task.status.actionColor
+                        )
                     )
-                )
-                )
+                    )
             trueCloudUploadProgress.progress = task.progress?.toInt() ?: 0
             var status = root.context.getString(task.status.textStatus)
             if (TaskStatusType.IN_PROGRESS == task.status) {

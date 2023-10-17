@@ -6,7 +6,7 @@ apply plugin: 'org.jetbrains.kotlin.android'
 apply plugin: 'jacoco'
 //apply plugin: 'de.mannodermaus.android-junit5'
 
-//apply from: "$rootDir/gradle/version.gradle"
+apply from: "$rootDir/gradle/version.gradle"
 //apply from: "$rootDir/gradle/variant-configuration.gradle"
 //apply from: "$rootDir/gradle/ktlint.gradle.kts"
 //apply from: "$rootDir/gradle/dependencies-size.gradle.kts"
@@ -134,7 +134,7 @@ android {
 }
 
 dependencies {
-//    AndroidComponents()
-//    AndroidComposeUI()
-//    Dagger()
+    AndroidComponents()
+    AndroidComposeUI()
+    Dagger()
 }
