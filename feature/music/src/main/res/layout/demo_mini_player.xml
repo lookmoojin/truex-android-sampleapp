@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/playerBackgroundCardView"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/collapsed_player_height"
+        app:cardBackgroundColor="@color/white"
+        app:cardElevation="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/thumbnailImageView"
+        style="@style/TrueID.CardView.ImageSquare"
+        android:layout_width="@dimen/mini_player_thumb_size"
+        android:layout_height="@dimen/mini_player_thumb_size"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
+        app:layout_constraintBottom_toBottomOf="@+id/playerBackgroundCardView"
+        app:layout_constraintStart_toStartOf="@+id/playerBackgroundCardView"
+        app:layout_constraintTop_toTopOf="@+id/playerBackgroundCardView"
+        app:shapeAppearanceOverlay="@style/ShapeAppearance.App.CornerRadius.Small"
+        tools:src="@drawable/placeholder_new_trueid_white_square" />
+
+    <TextView
+        android:id="@+id/miniSongNameTextView"
+        style="@style/TextMusic.Body.Black"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:ellipsize="end"
+        android:singleLine="true"
+        android:visibility="visible"
+        app:layout_constraintBottom_toTopOf="@+id/miniArtistNameTextView"
+        app:layout_constraintEnd_toStartOf="@+id/playPauseBackgroundImageView"
+        app:layout_constraintStart_toEndOf="@+id/thumbnailImageView"
+        app:layout_constraintTop_toTopOf="@+id/playerBackgroundCardView"
+        app:layout_constraintVertical_chainStyle="packed"
+        tools:text="Song name" />
+
+    <TextView
+        android:id="@+id/miniArtistNameTextView"
+        style="@style/TextMusic.ExtraSmall.Gray"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:ellipsize="end"
+        android:singleLine="true"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="@+id/playerBackgroundCardView"
+        app:layout_constraintEnd_toStartOf="@+id/playPauseBackgroundImageView"
+        app:layout_constraintStart_toEndOf="@+id/thumbnailImageView"
+        app:layout_constraintTop_toBottomOf="@+id/miniSongNameTextView"
+        tools:text="Artist name" />
+
+    <ImageView
+        android:id="@+id/playPauseBackgroundImageView"
+        android:layout_width="@dimen/mini_player_play_pause_background_size"
+        android:layout_height="@dimen/mini_player_play_pause_background_size"
+        android:layout_marginEnd="16dp"
+        android:src="@drawable/music_bg_circle_white"
+        app:layout_constraintBottom_toBottomOf="@+id/playerBackgroundCardView"
+        app:layout_constraintEnd_toEndOf="@+id/playerBackgroundCardView"
+        app:layout_constraintTop_toTopOf="@+id/playerBackgroundCardView"
+        app:tint="@color/black" />
+
+    <com.truedigital.features.music.widget.player.MusicPlayPauseWidget
+        android:id="@+id/playPauseButton"
+        android:layout_width="@dimen/mini_player_play_pause_size"
+        android:layout_height="@dimen/mini_player_play_pause_size"
+        android:background="@null"
+        android:src="@drawable/selector_music_ic_play_pause"
+        android:tint="@color/white"
+        app:layout_constraintBottom_toBottomOf="@+id/playPauseBackgroundImageView"
+        app:layout_constraintEnd_toEndOf="@+id/playPauseBackgroundImageView"
+        app:layout_constraintStart_toStartOf="@+id/playPauseBackgroundImageView"
+        app:layout_constraintTop_toTopOf="@+id/playPauseBackgroundImageView" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

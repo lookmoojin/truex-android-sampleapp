@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/action_more"
+        android:icon="@drawable/music_ic_more_horizontal"
+        android:contentDescription="@string/myplaylist_button_more_playlist"
+        android:title="More"
+        app:showAsAction="always" />
+
+</menu>

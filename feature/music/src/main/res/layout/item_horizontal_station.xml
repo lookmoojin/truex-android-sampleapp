@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.daimajia.swipe.SwipeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/swipeView"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:contentDescription="@string/music_see_all_item_horizontal_station"
+    app:drag_edge="right"
+    app:show_mode="lay_down">
+
+    <!-- Bottom View -->
+    <LinearLayout
+        android:id="@+id/bottomViewHolder"
+        android:layout_width="50dp"
+        android:layout_height="match_parent"
+        android:gravity="center">
+
+        <ImageView
+            android:id="@+id/deleteImageView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/primary"
+            android:contentDescription="@string/music_see_all_imageview_horizontal_station_delete"
+            android:foreground="?android:attr/selectableItemBackground"
+            android:scaleType="center"
+            android:src="@drawable/music_ic_trash"
+            app:tint="@android:color/white" />
+
+    </LinearLayout>
+
+    <!-- Surface View -->
+    <LinearLayout
+        android:id="@+id/surfaceViewHolder"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/white"
+        android:clickable="true"
+        android:foreground="?android:attr/selectableItemBackground"
+        android:gravity="center_vertical"
+        android:minHeight="@dimen/my_music_item_min_height"
+        android:orientation="horizontal">
+
+        <FrameLayout
+            android:id="@+id/stationImageOverlay"
+            android:layout_width="@dimen/horizontal_item_image_size"
+            android:layout_height="@dimen/horizontal_item_image_size"
+            android:layout_marginStart="@dimen/horizontal_row_spacing"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginBottom="8dp"
+            android:contentDescription="@string/music_see_all_imageview_horizontal_station_background"
+            tools:foreground="@drawable/overlay_artist_shuffle">
+
+            <ImageView
+                android:id="@+id/stationImageView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/placeholder_background"
+                android:contentDescription="@string/music_see_all_imageview_horizontal_station_thumbnail"
+                android:src="@drawable/placeholder_station" />
+
+        </FrameLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/stationNameTextView"
+                style="@style/TextMusic.Small.Bold.Black"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:contentDescription="@string/music_see_all_textview_horizontal_station_name"
+                android:ellipsize="end"
+                android:maxLines="1"
+                tools:text="Station Name" />
+
+            <TextView
+                android:id="@+id/stationDescriptionTextView"
+                style="@style/TextMusic.Small.Gray"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:contentDescription="@string/music_see_all_textview_horizontal_station_description"
+                android:ellipsize="end"
+                android:lines="1"
+                android:maxLines="1"
+                tools:text="Station description" />
+
+        </LinearLayout>
+
+        <ImageButton
+            android:id="@+id/moreButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginEnd="8dp"
+            android:background="@android:color/transparent"
+            android:contentDescription="@string/music_see_all_imageview_horizontal_station_more"
+            android:padding="8dp"
+            android:src="@drawable/music_ic_more_vertical"
+            android:tint="@color/theme_color_black" />
+
+    </LinearLayout>
+
+</com.daimajia.swipe.SwipeLayout>

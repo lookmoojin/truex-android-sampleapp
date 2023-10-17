@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="seekbar_width_size">900dp</dimen>
+    <dimen name="full_player_thumb_size">400dp</dimen>
+</resources>

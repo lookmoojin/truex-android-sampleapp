@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <com.google.android.material.textview.MaterialTextView
+        style="@style/TextMusic.Title.Bold.Black"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:contentDescription="@string/myplaylistshelf_textview_title"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:paddingHorizontal="16dp"
+        android:paddingVertical="12dp"
+        android:text="@string/my_playlists" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvMyPlaylistWrapper"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:clipToPadding="false"
+        android:contentDescription="@string/myplaylistshelf_scroll_shelf"
+        android:nestedScrollingEnabled="false"
+        android:orientation="horizontal"
+        android:paddingHorizontal="12dp"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        tools:listitem="@layout/item_my_playlist" />
+
+</LinearLayout>

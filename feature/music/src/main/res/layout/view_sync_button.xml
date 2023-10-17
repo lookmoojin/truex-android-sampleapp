@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="40dp"
+    android:layout_height="40dp"
+    android:layout_gravity="center"
+    android:layout_marginEnd="16dp"
+    android:layout_marginStart="16dp">
+
+    <ImageView
+        android:id="@+id/syncDownload"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/music_bg_rounded_gray_border"
+        android:padding="8dp"
+        android:src="@drawable/music_ic_download_sync"
+        android:visibility="gone"
+        app:tint="@color/theme_color_black" />
+
+    <com.wang.avi.AVLoadingIndicatorView
+        android:id="@+id/syncProgress"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/music_bg_rounded_gray_border"
+        android:padding="8dp"
+        android:visibility="gone"
+        app:indicatorColor="@color/primary"
+        app:indicatorName="LineScalePartyIndicator" />
+
+    <ImageView
+        android:id="@+id/syncCompleted"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/music_bg_rounded_gray_border"
+        android:padding="8dp"
+        android:src="@drawable/music_ic_download_ok"
+        android:visibility="gone"
+        app:tint="@color/theme_color_black" />
+
+    <ImageView
+        android:id="@+id/syncPending"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/music_bg_rounded_gray_border"
+        android:padding="8dp"
+        android:src="@drawable/music_ic_download_error"
+        android:visibility="gone"
+        app:tint="@color/theme_color_black" />
+
+</FrameLayout>

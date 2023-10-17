@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/coverImageView"
+        style="@style/TrueID.CardView.ImageSquare"
+        android:layout_width="278dp"
+        android:layout_height="278dp"
+        android:layout_marginTop="16dp"
+        android:contentDescription="@string/myplaylist_imageview_cover_playlist"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:shapeAppearanceOverlay="@style/ShapeAppearance.App.CornerRadius.Medium"
+        tools:src="@drawable/placeholder_new_trueid_white_square" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/playlistTitleTextView"
+        style="@style/TextMusic.ExtraSmall.Gray"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="8dp"
+        android:contentDescription="@string/myplaylist_textview_title"
+        android:text="@string/my_playlist"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/coverImageView" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/playlistNameTextView"
+        style="@style/TextMusic.Title.Bold.Black"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="6dp"
+        android:contentDescription="@string/myplaylist_textview_name"
+        android:gravity="center"
+        app:layout_constraintEnd_toEndOf="@+id/coverImageView"
+        app:layout_constraintStart_toStartOf="@+id/coverImageView"
+        app:layout_constraintTop_toBottomOf="@+id/playlistTitleTextView"
+        tools:text="Playlist name" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/songsCountTextView"
+        style="@style/TextMusic.Small.Bold.Gray"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="6dp"
+        android:layout_marginEnd="8dp"
+        android:contentDescription="@string/myplaylist_textview_song_count"
+        android:visibility="invisible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/playlistNameTextView"
+        tools:text="50 songs"
+        tools:visibility="visible" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/shuffleButton"
+        style="@style/ButtonMusic.Shuffle"
+        android:layout_width="188dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="18dp"
+        android:contentDescription="@string/myplaylist_button_shuffle"
+        android:text="@string/shuffle"
+        app:elevation="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/guideline3"
+        app:layout_constraintStart_toStartOf="@+id/guideline4"
+        app:layout_constraintTop_toBottomOf="@+id/songsCountTextView" />
+
+    <ImageButton
+        android:id="@+id/addMyPlaylistButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/music_bg_circle_light_gray"
+        android:contentDescription="@string/myplaylist_button_add"
+        android:padding="12dp"
+        android:src="@drawable/music_ic_add"
+        android:foreground="@drawable/selectable_background_ripper_circle"
+        app:layout_constraintBottom_toBottomOf="@+id/shuffleButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.3"
+        app:layout_constraintStart_toStartOf="@+id/guideline3"
+        app:layout_constraintTop_toTopOf="@+id/shuffleButton" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.8" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.2" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

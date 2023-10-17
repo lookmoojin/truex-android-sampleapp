@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white">
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/bottomRootViewGuideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.8" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/shelfRecyclerView"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:clipToPadding="false"
+        android:contentDescription="@string/music_for_you_scroll_shelves"
+        android:paddingBottom="@dimen/collapsed_player_height"
+        android:visibility="gone"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:visibility="visible" />
+
+    <com.truedigital.component.widget.error.ErrorViewWidget
+        android:id="@+id/musicLandingErrorView"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:contentDescription="@string/music_for_you_imageview_error"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="@id/bottomRootViewGuideline"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:visibility="visible" />
+
+    <View
+        android:id="@+id/musicLandingLoadingView"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.google.android.material.progressindicator.CircularProgressIndicator
+        android:id="@+id/musicLandingLoadingProgress"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:contentDescription="@string/music_for_you_imageview_loading"
+        android:indeterminate="true"
+        app:indicatorColor="@color/global_progress_bar"
+        app:layout_constraintBottom_toBottomOf="@id/bottomRootViewGuideline"
+        app:layout_constraintEnd_toEndOf="@id/musicLandingLoadingView"
+        app:layout_constraintStart_toStartOf="@id/musicLandingLoadingView"
+        app:layout_constraintTop_toTopOf="@id/musicLandingLoadingView" />
+
+    <androidx.constraintlayout.widget.Group
+        android:id="@+id/musicLandingLoadingGroup"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        app:constraint_referenced_ids="musicLandingLoadingView,musicLandingLoadingProgress" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

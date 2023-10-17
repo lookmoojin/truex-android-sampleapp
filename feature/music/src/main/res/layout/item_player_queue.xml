@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.daimajia.swipe.SwipeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/swipeView"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:contentDescription="@string/queue_item_content"
+    app:drag_edge="right"
+    app:show_mode="lay_down">
+
+    <!-- Bottom View -->
+    <LinearLayout
+        android:id="@+id/bottomViewHolder"
+        android:layout_width="50dp"
+        android:layout_height="match_parent"
+        android:gravity="center">
+
+        <ImageView
+            android:id="@+id/deleteImageView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/primary"
+            android:contentDescription="@string/queue_imageview_content_delete"
+            android:foreground="?android:attr/selectableItemBackground"
+            android:scaleType="center"
+            android:src="@drawable/music_ic_trash"
+            app:tint="@color/theme_color_black" />
+
+    </LinearLayout>
+
+    <!-- Surface View -->
+    <LinearLayout
+        android:id="@+id/surfaceViewHolder"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:foreground="?android:attr/selectableItemBackground"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <FrameLayout
+            android:id="@+id/flDragAndDrop"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:layout_marginStart="@dimen/horizontal_row_spacing">
+
+            <ImageView
+                android:id="@+id/dragAndDropImageView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:contentDescription="@string/queue_imageview_content_drag_and_drop"
+                android:src="@drawable/music_ic_drag_vertical"
+                app:tint="@color/theme_color_black" />
+
+            <ImageView
+                android:id="@+id/nowPlayingImageView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:contentDescription="@string/queue_imageview_content_now_playing"
+                android:src="@drawable/music_ic_speaker"
+                android:visibility="gone"
+                app:tint="@color/primary" />
+
+        </FrameLayout>
+
+        <LinearLayout
+            android:id="@+id/layoutDetailsContainer"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <FrameLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/nameTextView"
+                    style="@style/TextMusic.Small.Bold.Black"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:contentDescription="@string/queue_textview_content_name"
+                    android:ellipsize="end"
+                    android:maxLines="1"
+                    android:textStyle="normal"
+                    tools:text="Song name" />
+
+                <ImageView
+                    android:id="@+id/videoImageView"
+                    android:layout_width="@dimen/track_info_icon_size"
+                    android:layout_height="@dimen/track_info_icon_size"
+                    android:layout_gravity="center_vertical|end"
+                    android:layout_marginStart="4dp"
+                    android:contentDescription="@string/queue_imageview_content_video"
+                    android:src="@drawable/music_ic_video_solid"
+                    android:visibility="gone"
+                    app:tint="@color/theme_color_black" />
+
+                <ImageView
+                    android:id="@+id/lyricsImageView"
+                    android:layout_width="@dimen/track_info_icon_size"
+                    android:layout_height="@dimen/track_info_icon_size"
+                    android:layout_gravity="center_vertical|end"
+                    android:layout_marginStart="4dp"
+                    android:contentDescription="@string/queue_imageview_content_lyrics"
+                    android:src="@drawable/music_ic_lyrics_bordered"
+                    android:visibility="gone"
+                    app:tint="@color/theme_color_black" />
+
+            </FrameLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/offlineImageView"
+                    android:layout_width="@dimen/track_info_icon_size"
+                    android:layout_height="@dimen/track_info_icon_size"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginEnd="4dp"
+                    android:contentDescription="@string/queue_imageview_content_offline"
+                    android:src="@drawable/music_ic_download"
+                    android:visibility="gone"
+                    app:tint="@android:color/holo_green_light" />
+
+                <ImageView
+                    android:id="@+id/explicitImageView"
+                    android:layout_width="@dimen/track_info_icon_size"
+                    android:layout_height="@dimen/track_info_icon_size"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginEnd="4dp"
+                    android:contentDescription="@string/queue_imageview_content_explicit"
+                    android:src="@drawable/music_ic_explicit"
+                    android:visibility="gone"
+                    app:tint="@color/error_red" />
+
+                <TextView
+                    android:id="@+id/artistTextView"
+                    style="@style/TextMusic.ExtraSmall.Gray"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:contentDescription="@string/queue_textview_content_artist"
+                    android:ellipsize="end"
+                    android:maxLines="1"
+                    tools:text="Artist name" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/durationTextView"
+            style="@style/TextMusic.Small.Black"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:contentDescription="@string/queue_textview_content_duration"
+            tools:text="11:11" />
+
+        <ImageButton
+            android:id="@+id/moreButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:background="@android:color/transparent"
+            android:contentDescription="@string/queue_imageview_content_more"
+            android:padding="8dp"
+            android:src="@drawable/music_ic_more_vertical"
+            android:tint="@color/theme_color_black" />
+
+    </LinearLayout>
+
+</com.daimajia.swipe.SwipeLayout>

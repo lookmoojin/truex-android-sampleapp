@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="@dimen/station_image_size"
+    android:layout_height="wrap_content"
+    android:contentDescription="@string/station_item_station"
+    android:foreground="?android:attr/selectableItemBackground"
+    android:minHeight="@dimen/station_shelf_height"
+    android:orientation="vertical">
+
+    <FrameLayout
+        android:id="@+id/stationImageOverlay"
+        android:layout_width="@dimen/station_image_size"
+        android:layout_height="@dimen/station_image_size"
+        android:layout_marginBottom="4dp"
+        tools:foreground="@drawable/overlay_artist_shuffle">
+
+        <ImageView
+            android:id="@+id/stationImage"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/music_bg_rect_product_item"
+            android:contentDescription="@string/station_imageview_station"
+            android:src="@drawable/placeholder_station" />
+
+    </FrameLayout>
+
+    <TextView
+        android:id="@+id/stationName"
+        style="@style/TextMusic.Small.Bold.Black"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:contentDescription="@string/station_textview_name"
+        android:ellipsize="end"
+        android:maxLines="1"
+        tools:text="Station Name" />
+
+    <TextView
+        android:id="@+id/stationDescription"
+        style="@style/TextMusic.ExtraSmall.Gray"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:contentDescription="@string/station_textview_description"
+        android:ellipsize="end"
+        android:maxLines="1"
+        tools:text="Station description" />
+
+</LinearLayout>

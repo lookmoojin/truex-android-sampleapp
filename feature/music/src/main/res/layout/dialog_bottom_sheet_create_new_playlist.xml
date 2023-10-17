@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/collapseImageView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:background="?selectableItemBackgroundBorderless"
+            android:contentDescription="@string/createmyplaylist_button_collapse"
+            android:padding="4dp"
+            app:layout_constraintBottom_toBottomOf="@+id/createPlaylistTextView"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/createPlaylistTextView"
+            app:srcCompat="@drawable/music_ic_collapse"
+            app:tint="@color/black" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/createPlaylistTextView"
+            style="@style/TextMusic.Header3.Bold.Black"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:contentDescription="@string/createmyplaylist_textview_header"
+            android:text="@string/create_new_playlist"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="8dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/createPlaylistTextView"
+            app:layout_constraintVertical_bias="0.25">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/createPlaylistNameInputText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                android:background="@drawable/music_bg_rounded_gray_border"
+                android:contentDescription="@string/createmyplaylist_edittext_name"
+                android:hint="@string/enter_a_name_of_playlist"
+                android:inputType="text"
+                android:maxLength="70"
+                android:maxLines="1"
+                android:padding="16dp"
+                android:textCursorDrawable="@android:color/black"
+                tools:ignore="ContentDescription" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/createPlaylistButton"
+                style="@style/ButtonMusic.CreateNewPlaylist"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="8dp"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/selector_round_button_gray_black"
+                android:contentDescription="@string/createmyplaylist_button_create"
+                android:enabled="false"
+                android:padding="8dp"
+                android:text="@string/create_playlist" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/cancelButton"
+                style="@style/TextMusic.Header3.Black"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="8dp"
+                android:layout_marginTop="8dp"
+                android:contentDescription="@string/createmyplaylist_button_cancel"
+                android:padding="8dp"
+                android:text="@string/cancel"
+                android:textAlignment="center" />
+
+        </LinearLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</FrameLayout>

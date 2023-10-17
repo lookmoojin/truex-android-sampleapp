@@ -1,0 +1,282 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    android:clipToPadding="false"
+    android:paddingBottom="@dimen/collapsed_player_height">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:descendantFocusability="blocksDescendants"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                style="@style/TextMusic.Body.Bold.Black"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/horizontal_row_spacing"
+                android:layout_marginTop="16dp"
+                android:contentDescription="@string/music_my_library_favorite_textview_shelf_name"
+                android:text="@string/favourites_title"
+                android:textSize="24sp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/artistContainer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/artistItem"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:clickable="true"
+                android:foreground="?android:attr/selectableItemBackground"
+                android:paddingStart="@dimen/horizontal_row_spacing"
+                android:paddingTop="8dp"
+                android:paddingEnd="@dimen/horizontal_row_spacing"
+                android:paddingBottom="8dp">
+
+                <ImageView
+                    android:id="@+id/artistItemImage"
+                    android:layout_width="@dimen/my_music_image_size"
+                    android:layout_height="@dimen/my_music_image_size"
+                    android:layout_gravity="center_vertical"
+                    android:contentDescription="@string/music_my_library_favorite_imageview_artist"
+                    android:src="@drawable/music_ic_fav_artist" />
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginStart="8dp"
+                    android:layout_weight="1">
+
+                    <TextView
+                        style="@style/TextMusic.Body.Black.LineSpacing1_25"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:contentDescription="@string/music_my_library_favorite_textview_artist"
+                        android:text="@string/artists" />
+
+                    <TextView
+                        android:id="@+id/artistCountTextView"
+                        style="@style/TextMusic.ExtraSmall.Black"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginStart="8dp"
+                        android:contentDescription="@string/music_my_library_favorite_textview_artist_count"
+                        tools:text="(1)" />
+
+                </LinearLayout>
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="end|center_vertical"
+                    android:contentDescription="@string/music_my_library_favorite_imageview_artist_see_all"
+                    android:src="@drawable/music_ic_chevron_right" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/albumContainer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/albumItem"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:clickable="true"
+                android:foreground="?android:attr/selectableItemBackground"
+                android:paddingStart="@dimen/horizontal_row_spacing"
+                android:paddingTop="8dp"
+                android:paddingEnd="@dimen/horizontal_row_spacing"
+                android:paddingBottom="8dp">
+
+                <ImageView
+                    android:id="@+id/albumItemImage"
+                    android:layout_width="@dimen/my_music_image_size"
+                    android:layout_height="@dimen/my_music_image_size"
+                    android:layout_gravity="center_vertical"
+                    android:contentDescription="@string/music_my_library_favorite_imageview_album"
+                    android:src="@drawable/music_ic_fav_album" />
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginStart="8dp"
+                    android:layout_weight="1">
+
+                    <TextView
+                        style="@style/TextMusic.Body.Black.LineSpacing1_25"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:contentDescription="@string/music_my_library_favorite_textview_album"
+                        android:text="@string/albums" />
+
+                    <TextView
+                        android:id="@+id/albumCountTextView"
+                        style="@style/TextMusic.ExtraSmall.Black"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginStart="8dp"
+                        android:contentDescription="@string/music_my_library_favorite_textview_album_count"
+                        tools:text="(1)" />
+
+                </LinearLayout>
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="end|center_vertical"
+                    android:contentDescription="@string/music_my_library_favorite_imageview_album_see_all"
+                    android:src="@drawable/music_ic_chevron_right" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/songContainer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/songItem"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:clickable="true"
+                android:foreground="?android:attr/selectableItemBackground"
+                android:paddingStart="@dimen/horizontal_row_spacing"
+                android:paddingTop="8dp"
+                android:paddingEnd="@dimen/horizontal_row_spacing"
+                android:paddingBottom="8dp">
+
+                <ImageView
+                    android:id="@+id/songItemImage"
+                    android:layout_width="@dimen/my_music_image_size"
+                    android:layout_height="@dimen/my_music_image_size"
+                    android:layout_gravity="center_vertical"
+                    android:contentDescription="@string/music_my_library_favorite_imageview_song"
+                    android:padding="4dp"
+                    android:src="@drawable/music_ic_fav_song" />
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginStart="8dp"
+                    android:layout_weight="1">
+
+                    <TextView
+                        style="@style/TextMusic.Body.Black.LineSpacing1_25"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:contentDescription="@string/music_my_library_favorite_textview_song"
+                        android:text="@string/songs" />
+
+                    <TextView
+                        android:id="@+id/songCountTextView"
+                        style="@style/TextMusic.ExtraSmall.Black"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginStart="8dp"
+                        android:contentDescription="@string/music_my_library_favorite_textview_song_count"
+                        tools:text="(1)" />
+
+                </LinearLayout>
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="end|center_vertical"
+                    android:contentDescription="@string/music_my_library_favorite_imageview_song_see_all"
+                    android:src="@drawable/music_ic_chevron_right" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/playlistContainer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/playlistItem"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:clickable="true"
+                android:foreground="?android:attr/selectableItemBackground"
+                android:paddingStart="@dimen/horizontal_row_spacing"
+                android:paddingTop="8dp"
+                android:paddingEnd="@dimen/horizontal_row_spacing"
+                android:paddingBottom="8dp">
+
+                <ImageView
+                    android:id="@+id/playlistItemImage"
+                    android:layout_width="@dimen/my_music_image_size"
+                    android:layout_height="@dimen/my_music_image_size"
+                    android:layout_gravity="center_vertical"
+                    android:contentDescription="@string/music_my_library_favorite_imageview_playlist"
+                    android:src="@drawable/music_ic_fav_playlist" />
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginStart="8dp"
+                    android:layout_weight="1">
+
+                    <TextView
+                        style="@style/TextMusic.Body.Black.LineSpacing1_25"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:contentDescription="@string/music_my_library_favorite_textview_playlist"
+                        android:text="@string/playlists" />
+
+                    <TextView
+                        android:id="@+id/playlistCountTextView"
+                        style="@style/TextMusic.ExtraSmall.Black"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginStart="8dp"
+                        android:contentDescription="@string/music_my_library_favorite_textview_playlist_count"
+                        tools:text="(1)" />
+
+                </LinearLayout>
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="end|center_vertical"
+                    android:contentDescription="@string/music_my_library_favorite_imageview_playlist_see_all"
+                    android:src="@drawable/music_ic_chevron_right" />
+
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+</androidx.core.widget.NestedScrollView>

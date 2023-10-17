@@ -1,0 +1,176 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<SmellBaseline>
+  <ManuallySuppressedIssues/>
+  <CurrentIssues>
+    <ID>CollapsibleIfStatements:ProductListActivity.kt$ProductListActivity.&lt;no name provided>$if (adapter != null &amp;&amp; adapter is ProductListGridAdapter) { if (adapter.getItemViewType(position) == ProductListBaseAdapter.ITEM_TYPE_LOADING) { return numColumns } }</ID>
+    <ID>ComplexCondition:BottomSheetProductPicker.kt$BottomSheetProductPicker$( BottomSheetProductPresenter.TRACK_ITEM_TYPES.contains(itemType) &amp;&amp; (product as Track).artistString.isEmpty() ) || ( itemType == ProductPickerType.ALBUM &amp;&amp; product is Album &amp;&amp; (product as Album).primaryRelease?.artistString?.isEmpty() == true ) || ( itemType == ProductPickerType.ALBUM &amp;&amp; product is Release &amp;&amp; (product as Release).artistString.isEmpty() )</ID>
+    <ID>ComplexCondition:LyricAdapter.kt$LyricAdapter$( it.type == LyricContentType.TITLE || it.type == LyricContentType.ARTIST || it.type == LyricContentType.ALBUM ) &amp;&amp; enableTitles</ID>
+    <ID>ComplexCondition:MediaSessionServiceNotification.kt$MediaSessionServiceNotification$playbackState.state == PlaybackStateCompat.STATE_PAUSED || playbackState.state == PlaybackStateCompat.STATE_ERROR || playbackState.state == PlaybackStateCompat.STATE_STOPPED || playbackState.state == PlaybackStateCompat.STATE_NONE</ID>
+    <ID>ComplexCondition:MusicPlayerController.kt$MusicPlayerController$adQueue == null || adQueue?.attachedTrackId != peekedTrack.id || stakkarQueue == null || stakkarQueue?.attachedTrackId != peekedTrack.id</ID>
+    <ID>ComplexCondition:MusicPlayerController.kt$MusicPlayerController$currentMedia != null &amp;&amp; currentMedia is AdMediaAsset &amp;&amp; adId == currentMedia?.id &amp;&amp; url != null</ID>
+    <ID>ComplexCondition:MusicPlayerController.kt$MusicPlayerController$currentMedia != null &amp;&amp; currentMedia is TrackMediaAsset &amp;&amp; isOnlineStation() &amp;&amp; currentSource != null</ID>
+    <ID>ComplexCondition:MusicPlayerController.kt$MusicPlayerController$isCurrentSource(initialSource.sourceId) &amp;&amp; tracks.isNotEmpty() &amp;&amp; startIndex != null &amp;&amp; isCurrentMedia(tracks[startIndex].id)</ID>
+    <ID>ComplexCondition:PlayerWidget.kt$PlayerWidget$controller.metadata == null || ( controller.playbackState != null &amp;&amp; ( controller.playbackState.state == PlaybackStateCompat.STATE_STOPPED || controller.playbackState.state == PlaybackStateCompat.STATE_ERROR ) )</ID>
+    <ID>ComplexCondition:PlaylistActivity.kt$PlaylistActivity$config.enableShareAndFavIcon &amp;&amp; config.enableShare &amp;&amp; !(isOwner &amp;&amp; !isPublic)</ID>
+    <ID>ComplexMethod:BottomSheetProductPicker.kt$BottomSheetProductPicker$@SuppressLint("SetTextI18n") private fun initInfo()</ID>
+    <ID>ComplexMethod:BottomSheetProductPicker.kt$BottomSheetProductPicker$private fun getDefaultProductOptions(): MutableList&lt;PickerOptions></ID>
+    <ID>ComplexMethod:BottomSheetProductPicker.kt$BottomSheetProductPicker$private fun initOptions()</ID>
+    <ID>ComplexMethod:BundleExtensions.kt$@Suppress("UNCHECKED_CAST") fun Bundle.put(vararg params: Pair&lt;String, Any?>): Bundle</ID>
+    <ID>ComplexMethod:ContextExtensions.kt$fun Context.browse(uri: Uri, sceneTransitionEnabled: Boolean = true): Boolean</ID>
+    <ID>ComplexMethod:IntentExtensions.kt$fun Intent.putExtras(vararg params: Pair&lt;String, Any?>): Intent</ID>
+    <ID>ComplexMethod:MapProductListTypeUseCase.kt$MapProductListTypeUseCaseImpl$override fun execute(type: String?): ProductListType</ID>
+    <ID>ComplexMethod:MediaSessionServiceNotification.kt$MediaSessionServiceNotification$private fun updateNotification()</ID>
+    <ID>ComplexMethod:MusicPlayerController.kt$MusicPlayerController$// Play the next track in the playQueue (if one exists) private fun playNext()</ID>
+    <ID>ComplexMethod:MusicPlayerController.kt$MusicPlayerController$// artist shuffle &amp; album &amp; playlist fun playFullStream( initialSource: PlayerSource, tracks: List&lt;Track>, startIndex: Int?, forceShuffle: Boolean, forceSequential: Boolean )</ID>
+    <ID>ComplexMethod:MusicPlayerController.kt$MusicPlayerController$fun onSkipToNext()</ID>
+    <ID>ComplexMethod:MusicPlayerController.kt$MusicPlayerController$private fun play(track: Track)</ID>
+    <ID>ComplexMethod:MusicPlayerServiceImpl.kt$MusicPlayerServiceImpl$override fun onStartCommand(intent: Intent?, flags: Int, startId: Int): Int</ID>
+    <ID>ComplexMethod:PlayerWidget.kt$PlayerWidget$private fun updateWidgets(context: Context, controller: MediaControllerCompat)</ID>
+    <ID>ComplexMethod:PlaylistActivity.kt$PlaylistActivity$override fun showOwner(isOwner: Boolean, isPublic: Boolean, hasPlaylistWriteRight: Boolean)</ID>
+    <ID>ComplexMethod:ProductListActivity.kt$ProductListActivity$override fun showBottomSheet(item: Product)</ID>
+    <ID>ComplexMethod:ProductListPresenter.kt$ProductListPresenter$private fun loadData()</ID>
+    <ID>ImplicitDefaultLocale:ContentLanguage.kt$ContentLanguage$String.format( "ContentLanguage(code=%s, localDisplayName=%s", code.uppercase(), localDisplayName )</ID>
+    <ID>ImplicitDefaultLocale:ContentLanguageTest.kt$ContentLanguageTest$String.format("ContentLanguage(code=CODE, localDisplayName=name")</ID>
+    <ID>ImplicitDefaultLocale:StringExtensions.kt$String.format( "%d:%02d", TimeUnit.MILLISECONDS.toMinutes(this), TimeUnit.MILLISECONDS.toSeconds(this) % TimeUnit.MINUTES.toSeconds(1) )</ID>
+    <ID>LargeClass:ArtistActivity.kt$ArtistActivity : LifecycleComponentActivityViewSurfaceRouterSurface</ID>
+    <ID>LargeClass:ArtistPresenter.kt$ArtistPresenter : Presenter</ID>
+    <ID>LargeClass:BottomSheetProductPicker.kt$BottomSheetProductPicker : BottomSheetDialogViewSurfaceRouterSurface</ID>
+    <ID>LargeClass:MusicPlayerController.kt$MusicPlayerController : Presenter</ID>
+    <ID>LargeClass:MusicPlayerServiceImpl.kt$MusicPlayerServiceImpl : MusicPlayerServicePlayerSurface</ID>
+    <ID>LongMethod:AlbumActivity.kt$AlbumActivity$override fun onCreate(savedInstanceState: Bundle?)</ID>
+    <ID>LongMethod:BottomSheetProductPicker.kt$BottomSheetProductPicker$@SuppressLint("SetTextI18n") private fun initInfo()</ID>
+    <ID>LongMethod:BottomSheetProductPicker.kt$BottomSheetProductPicker$private fun getDefaultProductOptions(): MutableList&lt;PickerOptions></ID>
+    <ID>LongMethod:BottomSheetProductPicker.kt$BottomSheetProductPicker$private fun initOptions()</ID>
+    <ID>LongMethod:ContextExtensions.kt$fun Context.browse(uri: Uri, sceneTransitionEnabled: Boolean = true): Boolean</ID>
+    <ID>LongMethod:GetMusicForYouShelfUseCase.kt$GetMusicForYouShelfUseCaseImpl$override fun execute(apiPath: String): Flow&lt;List&lt;MusicForYouShelfModel>></ID>
+    <ID>LongMethod:GetSearchAllUseCase.kt$GetSearchAllUseCaseImpl$private fun getHeaderItem( index: Int, key: String?, themeType: ThemeType ): MusicSearchModel.MusicHeaderModel</ID>
+    <ID>LongMethod:GetSearchTopMenuUseCase.kt$GetSearchTopMenuUseCaseImpl$override suspend fun execute(activePosition: Int, theme: ThemeType): List&lt;TopMenuModel></ID>
+    <ID>LongMethod:MediaSessionServiceNotification.kt$MediaSessionServiceNotification$private fun updateNotification()</ID>
+    <ID>LongMethod:MusicLandingTrackFAViewModel.kt$MusicLandingTrackFAViewModel$fun trackFASelectContent( itemModel: MusicForYouItemModel, selectContentModel: MusicLandingFASelectContentModel )</ID>
+    <ID>LongMethod:MusicPlayerController.kt$MusicPlayerController$// Play the next track in the playQueue (if one exists) private fun playNext()</ID>
+    <ID>LongMethod:MusicPlayerController.kt$MusicPlayerController$fun onSkipToNext()</ID>
+    <ID>LongMethod:MusicPlayerController.kt$MusicPlayerController$fun playVideo(video: Track)</ID>
+    <ID>LongMethod:MusicPlayerController.kt$MusicPlayerController$private fun play(track: Track)</ID>
+    <ID>LongMethod:MusicPlayerFragment.kt$MusicPlayerFragment$private fun observeViewModel()</ID>
+    <ID>LongMethod:MyPlaylistFragment.kt$MyPlaylistFragment$private fun observeMyPlaylistViewModel()</ID>
+    <ID>LongMethod:PlayerQueueActivity.kt$PlayerQueueActivity$override fun onCreate(savedInstanceState: Bundle?)</ID>
+    <ID>LongMethod:PlayerQueueActivity.kt$PlayerQueueActivity.&lt;no name provided>$override fun onPlaybackStateChanged(state: PlaybackStateCompat?)</ID>
+    <ID>LongMethod:PlayerWidget.kt$PlayerWidget$private fun updateWidgets(context: Context, controller: MediaControllerCompat)</ID>
+    <ID>LongMethod:ProductListActivity.kt$ProductListActivity$override fun setViewMode()</ID>
+    <ID>LongMethod:ProductListActivity.kt$ProductListActivity$override fun showBottomSheet(item: Product)</ID>
+    <ID>LongMethod:ProductListGridAdapter.kt$ProductListGridAdapter$override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): RecyclerView.ViewHolder</ID>
+    <ID>LongMethod:ProductListHorizontalAdapter.kt$ProductListHorizontalAdapter$override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): RecyclerView.ViewHolder</ID>
+    <ID>LongMethod:StationActivity.kt$StationActivity$override fun onCreate(savedInstanceState: Bundle?)</ID>
+    <ID>LongMethod:TagActivity.kt$TagActivity$override fun onCreate(savedInstanceState: Bundle?)</ID>
+    <ID>MagicNumber:ContextExtensions.kt$3</ID>
+    <ID>MagicNumber:ContextExtensions.kt$4</ID>
+    <ID>MaxLineLength:MusicForYouShelfAdapter.kt$MusicForYouShelfAdapter$@Assisted("onItemClicked") private val onItemClicked: (MusicForYouItemModel, MusicLandingFASelectContentModel) -> Unit</ID>
+    <ID>MaxLineLength:MusicLandingFragment.kt$MusicLandingFragment$private val musicLandingActionViewModel: MusicLandingActionViewModel by viewModels({ requireActivity() }) { viewModelFactory }</ID>
+    <ID>MaxLineLength:MusicSearchTrendingSectionPlaylistViewHolder.kt$MusicSearchTrendingSectionPlaylistViewHolder$lateinit</ID>
+    <ID>MaxLineLength:SettingRepositoryImpl.kt$SettingRepositoryImpl$@Named(SharePreferenceModule.KEY_SETTING_PREFERENCES) private val sharedPreferences: ObfuscatedKeyValueStoreInterface</ID>
+    <ID>NestedBlockDepth:AlbumAdapter.kt$AlbumAdapter$override fun onBindViewHolder(holder: RecyclerView.ViewHolder, position: Int)</ID>
+    <ID>NestedBlockDepth:ArtistPresenter.kt$ArtistPresenter$override fun onStart(arguments: Bundle?)</ID>
+    <ID>NestedBlockDepth:AuthenticationToken.kt$AuthenticationToken$private fun hasRight(right: String): Boolean</ID>
+    <ID>NestedBlockDepth:ContextExtensions.kt$fun Context.browse(uri: Uri, sceneTransitionEnabled: Boolean = true): Boolean</ID>
+    <ID>NestedBlockDepth:MusicAdsBannerViewModel.kt$MusicAdsBannerViewModel$fun renderAds(isTablet: Boolean, mobileSize: String, tabletSize: String)</ID>
+    <ID>NestedBlockDepth:MusicPlayerController.kt$MusicPlayerController$fun onSkipToNext()</ID>
+    <ID>NestedBlockDepth:ProductListActivity.kt$ProductListActivity$override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?)</ID>
+    <ID>NestedBlockDepth:TuningView.kt$TuningView.&lt;no name provided>$override fun onMetadataChanged(metadata: MediaMetadataCompat?)</ID>
+    <ID>ReturnCount:AuthenticationToken.kt$AuthenticationToken$private fun hasRight(right: String): Boolean</ID>
+    <ID>ReturnCount:GenerateGridImageUseCase.kt$GenerateGridImageUseCaseImpl$override fun execute(trackList: List&lt;Track>): Pair&lt;String, List&lt;String>></ID>
+    <ID>ReturnCount:ImageManager.kt$ImageManager$@CheckResult fun options( width: Int, height: Int = width, mode: String = "", filters: Array&lt;String>? = null, isCustomUrl: Boolean = true ): ImageManager</ID>
+    <ID>ReturnCount:MusicPlayerController.kt$MusicPlayerController$// Play the next track in the playQueue (if one exists) private fun playNext()</ID>
+    <ID>ReturnCount:MusicPlayerController.kt$MusicPlayerController$private fun getEnqueueTrackExtrasObservable(): Single&lt;TrackExtras>?</ID>
+    <ID>SpreadOperator:ContextExtensions.kt$(this, *pairs.toTypedArray())</ID>
+    <ID>SpreadOperator:MusicAdsBannerWidget.kt$MusicAdsBannerWidget$(*adsSizeList.map { it }.toTypedArray())</ID>
+    <ID>SwallowedException:AlbumConverters.kt$AlbumConverters$e: Exception</ID>
+    <ID>SwallowedException:PlaylistConverters.kt$PlaylistConverters$e: Exception</ID>
+    <ID>SwallowedException:StationConverters.kt$StationConverters$e: Exception</ID>
+    <ID>TooGenericExceptionThrown:BundleExtensions.kt$throw RuntimeException("Intent extra ${it.first} has wrong type ${value.javaClass.name}")</ID>
+    <ID>TooGenericExceptionThrown:IntentExtensions.kt$throw RuntimeException("Intent extra ${it.first} has wrong type ${value.javaClass.name}")</ID>
+    <ID>TooGenericExceptionThrown:MusicSearchContentAdapter.kt$MusicSearchContentAdapter$throw Exception("view type $viewType isn't supported in MusicSearchContentAdapter")</ID>
+    <ID>TooGenericExceptionThrown:MusicSearchTrendingAdapter.kt$MusicSearchTrendingAdapter$throw Exception("Unknown item position $position in MusicSearchTrendingAdapter")</ID>
+    <ID>TooGenericExceptionThrown:MusicSearchTrendingAdapter.kt$MusicSearchTrendingAdapter$throw Exception("view type $viewType isn't supported in MusicSearchTrendingAdapter")</ID>
+    <ID>TooGenericExceptionThrown:MyPlaylistHeaderAdapter.kt$MyPlaylistHeaderAdapter$throw Exception("view type $viewType isn't supported in MyPlaylistHeaderAdapter")</ID>
+    <ID>TooManyFunctions:AddSongBottomSheetDialogFragment.kt$AddSongBottomSheetDialogFragment : BaseMusicBottomSheetDialogFragment</ID>
+    <ID>TooManyFunctions:AddSongViewModel.kt$AddSongViewModel : ScopedViewModel</ID>
+    <ID>TooManyFunctions:AlbumActivity.kt$AlbumActivity : LifecycleComponentActivityViewSurfaceRouterSurface</ID>
+    <ID>TooManyFunctions:AlbumPresenter.kt$AlbumPresenter : Presenter</ID>
+    <ID>TooManyFunctions:AlbumPresenter.kt$AlbumPresenter$ViewSurface</ID>
+    <ID>TooManyFunctions:ArtistActivity.kt$ArtistActivity : LifecycleComponentActivityViewSurfaceRouterSurface</ID>
+    <ID>TooManyFunctions:ArtistFacade.kt$ArtistFacade</ID>
+    <ID>TooManyFunctions:ArtistFacadeImpl.kt$ArtistFacadeImpl : ArtistFacade</ID>
+    <ID>TooManyFunctions:ArtistPresenter.kt$ArtistPresenter : Presenter</ID>
+    <ID>TooManyFunctions:ArtistPresenter.kt$ArtistPresenter$ViewSurface</ID>
+    <ID>TooManyFunctions:ArtistRepository.kt$ArtistRepository</ID>
+    <ID>TooManyFunctions:ArtistRepositoryImpl.kt$ArtistRepositoryImpl : ArtistRepository</ID>
+    <ID>TooManyFunctions:AuthenticationTokenRepositoryImpl.kt$AuthenticationTokenRepositoryImpl : AuthenticationTokenRepository</ID>
+    <ID>TooManyFunctions:BottomSheetProductPicker.kt$BottomSheetProductPicker : BottomSheetDialogViewSurfaceRouterSurface</ID>
+    <ID>TooManyFunctions:BottomSheetProductPresenter.kt$BottomSheetProductPresenter : Presenter</ID>
+    <ID>TooManyFunctions:BottomSheetProductPresenter.kt$BottomSheetProductPresenter$ViewSurface</ID>
+    <ID>TooManyFunctions:CacheRepository.kt$CacheRepository</ID>
+    <ID>TooManyFunctions:CacheRepositoryImpl.kt$CacheRepositoryImpl : CacheRepository</ID>
+    <ID>TooManyFunctions:ContextExtensions.kt$com.truedigital.features.tuned.common.extensions.ContextExtensions.kt</ID>
+    <ID>TooManyFunctions:ForceLoginBannerViewModel.kt$ForceLoginBannerViewModel : ScopedViewModel</ID>
+    <ID>TooManyFunctions:ImageManager.kt$ImageManager</ID>
+    <ID>TooManyFunctions:InstanceComponent.kt$InstanceComponent</ID>
+    <ID>TooManyFunctions:MediaSessionServiceNotification.kt$MediaSessionServiceNotification</ID>
+    <ID>TooManyFunctions:MusicLandingFragment.kt$MusicLandingFragment : Fragment</ID>
+    <ID>TooManyFunctions:MusicLandingViewModel.kt$MusicLandingViewModel : ScopedViewModel</ID>
+    <ID>TooManyFunctions:MusicPlayerController.kt$MusicPlayerController : Presenter</ID>
+    <ID>TooManyFunctions:MusicPlayerController.kt$MusicPlayerController$PlayerSurface</ID>
+    <ID>TooManyFunctions:MusicPlayerFacade.kt$MusicPlayerFacade</ID>
+    <ID>TooManyFunctions:MusicPlayerFacadeImpl.kt$MusicPlayerFacadeImpl : MusicPlayerFacade</ID>
+    <ID>TooManyFunctions:MusicPlayerFragment.kt$MusicPlayerFragment : Fragment</ID>
+    <ID>TooManyFunctions:MusicPlayerMotionLayout.kt$MusicPlayerMotionLayout : MotionLayout</ID>
+    <ID>TooManyFunctions:MusicPlayerService.kt$MusicPlayerService : Service</ID>
+    <ID>TooManyFunctions:MusicPlayerServiceImpl.kt$MusicPlayerServiceImpl : MusicPlayerServicePlayerSurface</ID>
+    <ID>TooManyFunctions:MusicPlayerViewModel.kt$MusicPlayerViewModel : ViewModel</ID>
+    <ID>TooManyFunctions:MusicRoomRepository.kt$MusicRoomRepository</ID>
+    <ID>TooManyFunctions:MusicRoomRepository.kt$MusicRoomRepositoryImpl : MusicRoomRepository</ID>
+    <ID>TooManyFunctions:MusicSearchDataSource.kt$MusicSearchDataSource : PageKeyedDataSource</ID>
+    <ID>TooManyFunctions:MusicSearchLandingFragment.kt$MusicSearchLandingFragment : TunedFragment</ID>
+    <ID>TooManyFunctions:MusicSearchTrendingFragment.kt$MusicSearchTrendingFragment : Fragment</ID>
+    <ID>TooManyFunctions:MusicSearchViewModel.kt$MusicSearchViewModel : ScopedViewModel</ID>
+    <ID>TooManyFunctions:MusicServiceConnectionViewModel.kt$MusicServiceConnectionViewModel : ViewModel</ID>
+    <ID>TooManyFunctions:MusicUserRepository.kt$MusicUserRepository</ID>
+    <ID>TooManyFunctions:MusicUserRepositoryImpl.kt$MusicUserRepositoryImpl : MusicUserRepository</ID>
+    <ID>TooManyFunctions:MyMusicFragment.kt$MyMusicFragment : Fragment</ID>
+    <ID>TooManyFunctions:MyMusicPresenter.kt$MyMusicPresenter : Presenter</ID>
+    <ID>TooManyFunctions:MyMusicView.kt$MyMusicView : LifecycleComponentViewViewSurfaceRouterSurface</ID>
+    <ID>TooManyFunctions:MyPlaylistFragment.kt$MyPlaylistFragment : Fragment</ID>
+    <ID>TooManyFunctions:MyPlaylistViewModel.kt$MyPlaylistViewModel : ScopedViewModel</ID>
+    <ID>TooManyFunctions:NetworkModule.kt$NetworkModule</ID>
+    <ID>TooManyFunctions:PlayQueue.kt$PlayQueue&lt;T></ID>
+    <ID>TooManyFunctions:PlayerQueueActivity.kt$PlayerQueueActivity : LifecycleComponentActivityViewSurfaceRouterSurface</ID>
+    <ID>TooManyFunctions:PlayerWidget.kt$PlayerWidget : AppWidgetProvider</ID>
+    <ID>TooManyFunctions:PlaylistActivity.kt$PlaylistActivity : LifecycleComponentActivityViewSurfaceRouterSurface</ID>
+    <ID>TooManyFunctions:PlaylistPresenter.kt$PlaylistPresenter : Presenter</ID>
+    <ID>TooManyFunctions:PlaylistPresenter.kt$PlaylistPresenter$ViewSurface</ID>
+    <ID>TooManyFunctions:ProductListActivity.kt$ProductListActivity : LifecycleComponentActivityViewSurfaceRouterSurface</ID>
+    <ID>TooManyFunctions:ProductListBaseAdapter.kt$ProductListBaseAdapter : RecyclerSwipeAdapter</ID>
+    <ID>TooManyFunctions:ProductListFacade.kt$ProductListFacade</ID>
+    <ID>TooManyFunctions:ProductListFacadeImpl.kt$ProductListFacadeImpl : ProductListFacade</ID>
+    <ID>TooManyFunctions:ProductListPresenter.kt$ProductListPresenter : Presenter</ID>
+    <ID>TooManyFunctions:ProductListPresenter.kt$ProductListPresenter$ViewSurface</ID>
+    <ID>TooManyFunctions:RepositoryModule.kt$RepositoryModule$RepositoryModule</ID>
+    <ID>TooManyFunctions:StationActivity.kt$StationActivity : LifecycleComponentActivityViewSurfaceRouterSurface</ID>
+    <ID>TooManyFunctions:StationOverviewPresenter.kt$StationOverviewPresenter : Presenter</ID>
+    <ID>TooManyFunctions:StationOverviewPresenter.kt$StationOverviewPresenter$ViewSurface</ID>
+    <ID>TooManyFunctions:StationOverviewView.kt$StationOverviewView : LifecycleComponentViewViewSurfaceRouterSurface</ID>
+    <ID>TooManyFunctions:StationPresenter.kt$StationPresenter : Presenter</ID>
+    <ID>TooManyFunctions:StationPresenter.kt$StationPresenter$ViewSurface</ID>
+    <ID>TooManyFunctions:StationRepository.kt$StationRepository</ID>
+    <ID>TooManyFunctions:StationRepositoryImpl.kt$StationRepositoryImpl : StationRepository</ID>
+    <ID>TooManyFunctions:StationServiceApiInterface.kt$StationServiceApiInterface</ID>
+    <ID>TooManyFunctions:StreamMediaSource.kt$StreamMediaSource : MediaSourceMediaSourceCallerListener</ID>
+    <ID>TooManyFunctions:TagActivity.kt$TagActivity : LifecycleComponentActivityViewSurfaceRouterSurface</ID>
+    <ID>TooManyFunctions:TagPresenter.kt$TagPresenter : Presenter</ID>
+    <ID>TooManyFunctions:TagPresenter.kt$TagPresenter$ViewSurface</ID>
+    <ID>TooManyFunctions:TuningPresenter.kt$TuningPresenter : Presenter</ID>
+    <ID>TooManyFunctions:TuningView.kt$TuningView : LifecycleComponentViewViewSurface</ID>
+    <ID>TooManyFunctions:UseCaseModule.kt$UseCaseModule</ID>
+    <ID>UnnecessaryAbstractClass:MusicTrendingModel.kt$TrendingModel</ID>
+    <ID>UnusedPrivateMember:LyricAdapter.kt$LyricAdapter$count</ID>
+  </CurrentIssues>
+</SmellBaseline>

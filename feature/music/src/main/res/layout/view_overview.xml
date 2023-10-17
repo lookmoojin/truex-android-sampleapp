@@ -1,0 +1,288 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/product_container_bg"
+    android:clipToPadding="false"
+    android:paddingBottom="@dimen/collapsed_player_height"
+    android:transitionGroup="true"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+    <LinearLayout
+        android:id="@+id/llContent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingBottom="16dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="82dp"
+            android:layout_marginBottom="@dimen/bg_product_control_margin_bottom"
+            android:background="@color/product_control_container_bg"
+            android:orientation="horizontal"
+            android:paddingTop="16dp"
+            android:paddingBottom="16dp">
+
+            <include
+                android:id="@+id/buttonSync"
+                layout="@layout/view_sync_button" />
+
+            <FrameLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1">
+
+                <Button
+                    android:id="@+id/playStation"
+                    style="@style/TextMusic.Header3.Bold.White"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_gravity="center_horizontal"
+                    android:background="@drawable/music_bg_play_button"
+                    app:backgroundTint="@color/primary"
+                    tools:ignore="MissingPrefix" />
+
+                <com.wang.avi.AVLoadingIndicatorView
+                    android:id="@+id/progressBarStation"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:layout_gravity="center"
+                    android:elevation="8dp"
+                    android:visibility="gone"
+                    app:indicatorColor="@color/loading_indicator_color"
+                    app:indicatorName="LineScalePartyIndicator" />
+
+            </FrameLayout>
+
+            <ImageView
+                android:id="@+id/buttonMore"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_gravity="center"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="16dp"
+                android:src="@drawable/music_ic_more_vertical"
+                app:tint="@android:color/white" />
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/stationDescription"
+            style="@style/TextMusic.Body.White"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:background="@color/content_background"
+            android:lineSpacingMultiplier="1.25"
+            android:padding="@dimen/horizontal_row_spacing"
+            tools:text="Station description goes here. I want to be long so that I can test line spacing" />
+
+        <ImageView
+            android:id="@+id/stationBanner"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/horizontal_row_spacing"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="@dimen/horizontal_row_spacing"
+            android:foreground="?android:attr/selectableItemBackground"
+            android:src="@drawable/placeholder_station"
+            android:visibility="gone" />
+
+        <LinearLayout
+            android:id="@+id/featuringBgContainer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:background="@color/content_background"
+            android:orientation="vertical">
+
+            <FrameLayout
+                android:id="@+id/featuringViewMore"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/horizontal_row_spacing"
+                android:layout_marginTop="@dimen/dynamic_content_heading_top_spacing"
+                android:layout_marginEnd="@dimen/horizontal_row_spacing"
+                android:layout_marginBottom="@dimen/dynamic_content_heading_bottom_spacing">
+
+                <TextView
+                    android:id="@+id/featuringTitle"
+                    style="@style/TextMusic.Body.Bold.White"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/featuring_title"
+                    android:textAllCaps="true" />
+
+                <TextView
+                    android:id="@+id/tvSeeAllFeaturing"
+                    style="@style/TextMusic.Small.GrayMedium"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="end|bottom"
+                    android:text="@string/see_all_label"
+                    android:textAllCaps="true"
+                    android:visibility="gone" />
+
+                <ImageView
+                    android:id="@+id/ivFeaturingNavigationArrow"
+                    android:layout_width="@dimen/disclosure_indicator_size"
+                    android:layout_height="@dimen/disclosure_indicator_size"
+                    android:layout_gravity="end|center_vertical"
+                    android:src="@drawable/music_ic_right_arrow"
+                    android:visibility="gone"
+                    app:tint="@color/navigation_arrow_color" />
+
+            </FrameLayout>
+
+            <FrameLayout
+                android:id="@+id/featuringContainer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:minHeight="@dimen/artist_shelf_height">
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/featuringList"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:clipToPadding="false"
+                    android:visibility="invisible"
+                    tools:visibility="visible" />
+
+                <LinearLayout
+                    android:id="@+id/featuringError"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:visibility="gone">
+
+                    <TextView
+                        style="@style/TextMusic.Small.White"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/generic_error_message" />
+
+                    <Button
+                        android:id="@+id/featuringErrorRetryButton"
+                        style="@style/BorderlessRetryButton"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/generic_error_button" />
+
+                </LinearLayout>
+
+                <com.wang.avi.AVLoadingIndicatorView
+                    android:id="@+id/featuringProgressBar"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    app:indicatorColor="@color/primary"
+                    app:indicatorName="LineScalePartyIndicator" />
+
+            </FrameLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/similarBgContainer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:background="@color/content_background"
+            android:orientation="vertical">
+
+            <FrameLayout
+                android:id="@+id/similarViewMore"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/horizontal_row_spacing"
+                android:layout_marginTop="@dimen/dynamic_content_heading_top_spacing"
+                android:layout_marginEnd="@dimen/horizontal_row_spacing"
+                android:layout_marginBottom="@dimen/dynamic_content_heading_bottom_spacing">
+
+                <TextView
+                    android:id="@+id/similarTitle"
+                    style="@style/TextMusic.Body.Bold.White"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/similar_title"
+                    android:textAllCaps="true" />
+
+                <TextView
+                    android:id="@+id/tvSeeAllSimilar"
+                    style="@style/TextMusic.Small.GrayMedium"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="end|bottom"
+                    android:text="@string/see_all_label"
+                    android:textAllCaps="true"
+                    android:visibility="gone" />
+
+                <ImageView
+                    android:id="@+id/ivSimilarNavigationArrow"
+                    android:layout_width="@dimen/disclosure_indicator_size"
+                    android:layout_height="@dimen/disclosure_indicator_size"
+                    android:layout_gravity="end|center_vertical"
+                    android:src="@drawable/music_ic_right_arrow"
+                    android:visibility="gone"
+                    app:tint="@color/navigation_arrow_color" />
+
+            </FrameLayout>
+
+            <FrameLayout
+                android:id="@+id/similarContainer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:minHeight="@dimen/station_shelf_height">
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/similarList"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:clipToPadding="false"
+                    android:visibility="invisible"
+                    tools:visibility="visible" />
+
+                <LinearLayout
+                    android:id="@+id/similarError"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:visibility="gone">
+
+                    <TextView
+                        style="@style/TextMusic.Small.White"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/generic_error_message" />
+
+                    <Button
+                        android:id="@+id/similarErrorRetryButton"
+                        style="@style/BorderlessRetryButton"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/generic_error_button" />
+
+                </LinearLayout>
+
+                <com.wang.avi.AVLoadingIndicatorView
+                    android:id="@+id/similarProgressBar"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    app:indicatorColor="@color/primary"
+                    app:indicatorName="LineScalePartyIndicator" />
+
+            </FrameLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</androidx.core.widget.NestedScrollView>
