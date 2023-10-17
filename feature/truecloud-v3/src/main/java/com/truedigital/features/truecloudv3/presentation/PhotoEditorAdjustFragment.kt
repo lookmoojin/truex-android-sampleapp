@@ -9,11 +9,14 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.appcompat.app.AppCompatDelegate
 import androidx.appcompat.widget.AppCompatCheckedTextView
+import androidx.core.view.forEach
 import androidx.fragment.app.viewModels
 import androidx.lifecycle.Lifecycle
 import androidx.lifecycle.lifecycleScope
 import androidx.lifecycle.repeatOnLifecycle
 import androidx.navigation.fragment.findNavController
+import com.tdg.truecloud.R
+import com.tdg.truecloud.databinding.FragmentTrueCloudv3PhotoEditorAdjustBinding
 import com.truedigital.common.share.componentv3.extension.setSavedStateHandle
 import com.truedigital.component.base.BaseFragment
 import com.truedigital.component.dialog.trueid.DialogIconType
