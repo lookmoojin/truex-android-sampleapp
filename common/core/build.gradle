@@ -1,7 +1,7 @@
 apply {
     from("${rootDir}/gradle/sub-module.gradle")
     from("${rootDir}/gradle/dependencies.gradle")
-//    from("${rootDir}/gradle/version.gradle")
+    from("${rootDir}/gradle/version.gradle")
 }
 
 android {

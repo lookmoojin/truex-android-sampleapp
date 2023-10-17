@@ -32,7 +32,7 @@ dependencies {
     implementation project(':common:share:datalegacy')
     implementation project(':common:share:data:coredata')
     implementation project(':common:share:data:firestoreconfig')
-//    implementation project(':features:discover:apppermission')
+    implementation project(':feature:discover:apppermission')
 //    implementation project(':features:music')
 //
 //    testImplementation project(':common:share:mock')

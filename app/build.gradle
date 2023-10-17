@@ -8,6 +8,7 @@ plugins {
 
 apply {
     from("$rootDir/gradle/dependencies.gradle")
+    from("$rootDir/gradle/version.gradle")
 }
 
 android {

@@ -1,0 +1,30 @@
+plugins {
+    id 'com.android.library'
+}
+
+apply {
+    from("${project.rootDir}/gradle/sub-module.gradle")
+    from("${project.rootDir}/gradle/dependencies.gradle")
+}
+
+android {
+    namespace 'com.tdg.feature.discover.apppermission'
+}
+
+dependencies {
+    implementation(project(":common:core"))
+    implementation project(":common:share:analytics")
+    implementation project(":common:share:component")
+    implementation project(":common:share:component-v3")
+    implementation project(":common:share:data:coredata")
+    implementation project(":common:share:data:firestoreconfig")
+    implementation project(":common:share:datalegacy")
+//    implementation project(":features:discover:onboarding")
+//    testImplementation project(':common:share:mock')
+
+    UnitTesting()
+}
+
+ext {
+    isBelongTo = "today"
+}
