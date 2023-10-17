@@ -20,7 +20,7 @@ object NetworkModule {
     @Provides
     @Singleton
     @DefaultOkHttp
-    fun provideDefaultOkHttp(): OkHttpClient {
-        return OkHttpClient.Builder().build()
+    fun provideDefaultOkHttp(): OkHttpClient.Builder {
+        return OkHttpClient.Builder()
     }
 }

@@ -11,7 +11,6 @@ class ApiBuilder {
     ) {
         inline fun <reified T> build(baseUrl: String): T {
             return Retrofit.Builder()
-//                .client(OkHttpClient.Builder().build())
                 .client(okHttpClient)
                 .baseUrl(baseUrl)
                 .addConverterFactory(gsonConverterFactory)

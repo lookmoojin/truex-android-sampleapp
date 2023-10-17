@@ -2,7 +2,6 @@ package com.tdg.login.injections
 
 import com.tdg.login.di.NetworkModule
 import com.tdg.login.di.OauthApiModule
-import com.tdg.login.di.OauthBaseModule
 import com.tdg.login.di.OauthModule
 import dagger.Component
 import javax.inject.Singleton
@@ -12,7 +11,6 @@ import javax.inject.Singleton
     modules = [
         NetworkModule::class,
         OauthApiModule::class,
-        OauthBaseModule::class,
         OauthModule::class
     ]
 )
@@ -27,7 +25,7 @@ interface OauthComponent {
 
         fun getInstance(): OauthComponent {
             if (!(::oauthComponent.isInitialized)) {
-                error("OauthComponent not initialize")
+                error("MyTeamComponent not initialize")
             }
             return oauthComponent
         }

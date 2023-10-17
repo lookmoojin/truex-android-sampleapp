@@ -16,8 +16,8 @@ class LoginUseCaseImpl @Inject constructor(
     override fun login(username: String, password: String): Flow<String> {
         return oauthRepository.login(
             OauthRequest(
-                username = "0620922456",
-                password = "VGVzdFBhc3MwMQ==" //encode base64
+                username = username,
+                password = password //base64
             )
         ).map {
             it.toString()

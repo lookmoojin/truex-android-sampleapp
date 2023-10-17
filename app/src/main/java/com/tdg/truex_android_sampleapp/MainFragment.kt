@@ -13,10 +13,6 @@ class MainFragment : Fragment() {
     private var _binding: FragmentMainBinding? = null
     private val binding get() = _binding!!
 
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-    }
-
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
@@ -28,15 +24,7 @@ class MainFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        initView()
-    }
-
-    private fun initView() = with(binding) {
-        loginButton.setOnClickListener {
-            // login
-        }
-
-        nextButton.setOnClickListener {
+        binding.textView.setOnClickListener {
             findNavController().navigate(
                 MainFragmentDirections.actionMainFragmentToMenuFragment()
             )
