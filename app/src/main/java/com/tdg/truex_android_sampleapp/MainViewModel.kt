@@ -1,6 +1,5 @@
 package com.tdg.truex_android_sampleapp
 
-import android.util.Log
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
@@ -22,15 +21,20 @@ class MainViewModel @Inject constructor(
     val onLoginSuccess: LiveData<String>
         get() = _onLoginSuccess
 
-    fun login() {
+    private val _onLoginFailed = MutableLiveData<String>()
+    val onLoginFailed: LiveData<String>
+        get() = _onLoginFailed
+
+    fun login(username: String, password: String, isPreProd: Boolean) {
         viewModelScope.launchSafe {
-            loginUseCase.login("", "")
+            loginUseCase.execute(username, password, isPreProd)
                 .flowOn(coroutineDispatcher.io())
                 .catch { error ->
-                    Log.d("MainViewModel","error ${error.message}")
+                    _onLoginFailed.value = error.message
                 }
-                .collectSafe {
-                    _onLoginSuccess.value = it
+                .collectSafe { (accessToken, refreshToken) ->
+                    _onLoginSuccess.value =
+                        "access token = $accessToken${"\n"}refresh token = $refreshToken"
                 }
         }
     }
