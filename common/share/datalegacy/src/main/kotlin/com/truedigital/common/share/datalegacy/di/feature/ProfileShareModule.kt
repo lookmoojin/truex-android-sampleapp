@@ -1,7 +1,5 @@
 package com.truedigital.common.share.datalegacy.di.feature
 
-import com.truedigital.common.share.datalegacy.domain.GetCurrentSubProfileIdUseCase
-import com.truedigital.common.share.datalegacy.domain.GetCurrentSubProfileIdUseCaseImpl
 import com.truedigital.common.share.datalegacy.domain.profile.usecase.userdetails.ClearProfileCacheUseCase
 import com.truedigital.common.share.datalegacy.domain.profile.usecase.userdetails.ClearProfileCacheUseCaseImpl
 import com.truedigital.common.share.datalegacy.domain.profile.usecase.userdetails.GetCurrentSubProfileUseCase
@@ -43,8 +41,4 @@ interface ProfileShareModule {
         getCurrentSubProfileUseCaseImpl: GetCurrentSubProfileUseCaseImpl
     ): GetCurrentSubProfileUseCase
 
-    @Binds
-    fun bindsGetCurrentSubProfileIdUseCase(
-        getCurrentSubProfileIdUseCaseImpl: GetCurrentSubProfileIdUseCaseImpl
-    ): GetCurrentSubProfileIdUseCase
 }

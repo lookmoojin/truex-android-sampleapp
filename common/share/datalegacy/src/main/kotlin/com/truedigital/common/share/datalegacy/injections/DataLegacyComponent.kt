@@ -3,9 +3,7 @@ package com.truedigital.common.share.datalegacy.injections
 import android.net.wifi.WifiManager
 import android.telephony.TelephonyManager
 import com.google.firebase.remoteconfig.FirebaseRemoteConfig
-import com.truedigital.common.share.datalegacy.data.TvsNowCacheSourceRepository
 import com.truedigital.common.share.datalegacy.data.api.di.BaseHttpClientModule
-import com.truedigital.common.share.datalegacy.data.api.di.CcuApiModule
 import com.truedigital.common.share.datalegacy.data.api.di.CmsFnApiModule
 import com.truedigital.common.share.datalegacy.data.api.di.DefaultOkHttp
 import com.truedigital.common.share.datalegacy.data.api.di.GraphApiModule
@@ -28,22 +26,15 @@ import com.truedigital.common.share.datalegacy.data.api.interceptor.HeaderInterc
 import com.truedigital.common.share.datalegacy.data.api.interceptor.HeaderWrapperInterceptor
 import com.truedigital.common.share.datalegacy.data.api.interceptor.SevenTokenInterceptor
 import com.truedigital.common.share.datalegacy.data.endpoint.ApiConfigurationManager
-import com.truedigital.common.share.datalegacy.data.repository.avatar.AvatarRepository
 import com.truedigital.common.share.datalegacy.data.repository.cmsfnshelf.repository.CmsShelfRepository
 import com.truedigital.common.share.datalegacy.data.repository.login.StateUserLoginRepository
-import com.truedigital.common.share.datalegacy.data.repository.multimedia.ConcurrentUserRepository
 import com.truedigital.common.share.datalegacy.data.repository.profile.ProfileRepository
 import com.truedigital.common.share.datalegacy.data.repository.profile.UserRepository
-import com.truedigital.common.share.datalegacy.di.feature.AdsShareModule
-import com.truedigital.common.share.datalegacy.di.feature.ArticleShareModule
 import com.truedigital.common.share.datalegacy.di.feature.AuthWrapperShareModule
-import com.truedigital.common.share.datalegacy.di.feature.AvatarModule
-import com.truedigital.common.share.datalegacy.di.feature.ConcurrentUserModule
 import com.truedigital.common.share.datalegacy.di.feature.ContextModule
 import com.truedigital.common.share.datalegacy.di.feature.DataCommonModule
 import com.truedigital.common.share.datalegacy.di.feature.DeviceEntitlementModule
 import com.truedigital.common.share.datalegacy.di.feature.DeviceModule
-import com.truedigital.common.share.datalegacy.di.feature.FirebaseModule
 import com.truedigital.common.share.datalegacy.di.feature.LocationModule
 import com.truedigital.common.share.datalegacy.di.feature.LoginBindsModule
 import com.truedigital.common.share.datalegacy.di.feature.LoginModule
@@ -51,10 +42,6 @@ import com.truedigital.common.share.datalegacy.di.feature.OtherModule
 import com.truedigital.common.share.datalegacy.di.feature.ProfileSettingModule
 import com.truedigital.common.share.datalegacy.di.feature.ProfileShareModule
 import com.truedigital.common.share.datalegacy.di.feature.VerifyDeviceModule
-import com.truedigital.common.share.datalegacy.domain.GetCurrentSubProfileIdUseCase
-import com.truedigital.common.share.datalegacy.domain.ads.usecase.AdvertisingIdUseCase
-import com.truedigital.common.share.datalegacy.domain.avatar.usecase.GetAvatarUrlUseCase
-import com.truedigital.common.share.datalegacy.domain.avatar.usecase.GetAvatarUrlUserLastedUseCase
 import com.truedigital.common.share.datalegacy.domain.config.usecase.GetAppConfigUseCase
 import com.truedigital.common.share.datalegacy.domain.endpoint.usecase.GetApiConfigurationUseCase
 import com.truedigital.common.share.datalegacy.domain.entitlement.usecase.AddDeviceEntitlementUseCase
@@ -77,10 +64,7 @@ import com.truedigital.common.share.datalegacy.domain.profile.usecase.userdetail
 import com.truedigital.common.share.datalegacy.domain.verifydevice.usecase.VerifyTrustDeviceOwnerUseCase
 import com.truedigital.common.share.datalegacy.domain.webview.usecase.GetSystemWebViewMinimumVersionUseCase
 import com.truedigital.common.share.datalegacy.helpers.FirebaseAnalyticsHelper
-import com.truedigital.common.share.datalegacy.js.TrueIDJavaScriptHandler
 import com.truedigital.common.share.datalegacy.login.LoginManagerInterface
-import com.truedigital.common.share.datalegacy.utils.ArticleDetailStateUtil
-import com.truedigital.common.share.datalegacy.utils.FirebaseUtilInterface
 import com.truedigital.common.share.datalegacy.wrapper.AuthManagerWrapper
 import com.truedigital.common.share.datalegacy.wrapper.ContextDataProviderWrapper
 import com.truedigital.core.domain.usecase.IsBypassSSLUseCase
@@ -98,19 +82,13 @@ import javax.inject.Singleton
     modules = [
         AuthWrapperShareModule::class,
         BaseHttpClientModule::class,
-        CcuApiModule::class,
         CmsFnApiModule::class,
         GraphApiModule::class,
         IceApiModule::class,
-        AdsShareModule::class,
-        ArticleShareModule::class,
-        AvatarModule::class,
-        ConcurrentUserModule::class,
         ContextModule::class,
         DataCommonModule::class,
         DeviceEntitlementModule::class,
         DeviceModule::class,
-        FirebaseModule::class,
         InterceptorModule::class,
         LocationModule::class,
         LoginModule::class,
@@ -151,7 +129,6 @@ interface DataLegacyComponent {
     }
 
     fun getDataLegacySubComponent(): DataLegacySubComponent
-    fun inject(trueIDJavaScriptHandler: TrueIDJavaScriptHandler)
 }
 
 @Subcomponent
@@ -194,7 +171,6 @@ interface DataLegacySubComponent {
     fun getNoRetryInterceptor(): Interceptor
 
     // Firebase
-    fun getFirebaseUtilInterface(): FirebaseUtilInterface
     fun getFirebaseRemoteConfig(): FirebaseRemoteConfig
 
     // fun getIceApiInterface(): IceApiInterface
@@ -203,7 +179,6 @@ interface DataLegacySubComponent {
 
     // Utilities
     fun getAuthManagerWrapper(): AuthManagerWrapper
-    fun getArticleDetailStateUtil(): ArticleDetailStateUtil
     fun getContextDataProviderWrapper(): ContextDataProviderWrapper
     fun getTelephonyManager(): TelephonyManager
     fun getWifiManager(): WifiManager
@@ -211,9 +186,6 @@ interface DataLegacySubComponent {
     fun getApiConfigurationManager(): ApiConfigurationManager
 
     // Use cases
-    fun getAdvertisingIdUseCase(): AdvertisingIdUseCase
-    fun getGetAvatarUrlUseCase(): GetAvatarUrlUseCase
-    fun getGetAvatarUrlUserLastedUseCase(): GetAvatarUrlUserLastedUseCase
     fun getGetAppConfigUseCase(): GetAppConfigUseCase
     fun getContainDeviceIdInDeviceListUseCase(): ContainDeviceIdInDeviceListUseCase
     fun getNetworkInfoUseCase(): NetworkInfoUseCase
@@ -232,18 +204,14 @@ interface DataLegacySubComponent {
     fun getRemoveKeySharedPrefsUseCase(): RemoveKeySharedPrefsUseCase
     fun getGetLoginUrlUseCase(): GetLoginUrlUseCase
     fun getGetCurrentSubProfileUseCase(): GetCurrentSubProfileUseCase
-    fun getGetCurrentSubProfileIdUseCase(): GetCurrentSubProfileIdUseCase
     fun getGetActiveDeviceEntitlementUseCase(): GetActiveDeviceEntitlementUseCase
     fun getRemoveActiveDeviceEntitlementUseCase(): RemoveActiveDeviceEntitlementUseCase
     fun getAddDeviceEntitlementUseCase(): AddDeviceEntitlementUseCase
 
     // Repositories
-    fun getAvatarRepository(): AvatarRepository
-    fun getConcurrentUserRepository(): ConcurrentUserRepository
     fun getCmsShelfRepository(): CmsShelfRepository
     fun getUserRepository(): UserRepository
     fun getProfileRepository(): ProfileRepository
-    fun getTvsNowCacheSourceRepository(): TvsNowCacheSourceRepository
     fun getStateUserLoginRepository(): StateUserLoginRepository
     fun isBypassSSLUseCase(): IsBypassSSLUseCase
     fun provideCertificatePinner(): CertificatePinner

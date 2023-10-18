@@ -16,9 +16,6 @@
             <meta-data
                 android:name="com.truedigital.common.share.datalegacy.DataLegacyInitializer"
                 android:value="androidx.startup" />
-            <meta-data
-                android:name="com.truedigital.common.share.datalegacy.FirebaseInitializer"
-                android:value="androidx.startup" />
         </provider>
         <meta-data
             android:name="com.truedigital.trueidsdk.JavaScriptHandler"
