@@ -2,10 +2,8 @@
 <SmellBaseline>
   <ManuallySuppressedIssues/>
   <CurrentIssues>
-    <ID>CollapsibleIfStatements:BackToTopView.kt$BackToTopView.&lt;no name provided>$if (newState == RecyclerView.SCROLL_STATE_IDLE) { if (isOnTop()) { hide() } }</ID>
     <ID>CollapsibleIfStatements:OrientationChangeEventListener.kt$OrientationChangeEvent$if ((orientation in 255..285) || (orientation in 75..105)) { // check if auto rotate screen is on if (isAutoRotateScreenOn()) { // change state to LANDSCAPE orientationChangeEventListener.onChangeToLandscape() currentOrientationState = OrientationState.LANDSCAPE } }</ID>
     <ID>CollapsibleIfStatements:OrientationChangeEventListener.kt$OrientationChangeEvent$if ((orientation in 345..359) || (orientation in 0..15)) { // check if auto rotate screen is on if (isAutoRotateScreenOn()) { // change state to PORTRAIT orientationChangeEventListener.onChangeToPortrait() currentOrientationState = OrientationState.PORTRAIT } }</ID>
-    <ID>ComplexCondition:BackToTopView.kt$BackToTopView.&lt;no name provided>$(controlsVisible &amp;&amp; dy > 0) || (!controlsVisible &amp;&amp; dy &lt; 0)</ID>
     <ID>ComplexMethod:StringExtension.kt$ fun String?.isBirthDateEligible(max: String?, min: String?): Boolean</ID>
     <ID>ComplexMethod:StringExtension.kt$fun String?.formatterFullDateTime(context: Context, localLanguage: GetLocalizationUseCase): String</ID>
     <ID>ComplexMethod:ViewAndLikeWidget.kt$ViewAndLikeWidget$fun setupContentViewAndLike( countView: Int, countLike: Int, date: String, duration: String, isSeries: Boolean )</ID>
@@ -15,9 +13,6 @@
     <ID>LongMethod:StringExtension.kt$ fun String.toTimeDifferenceNow(context: Context): String</ID>
     <ID>LongMethod:StringExtension.kt$fun String?.formatterFullDateTime(context: Context, localLanguage: GetLocalizationUseCase): String</ID>
     <ID>LongMethod:ViewAndLikeWidget.kt$ViewAndLikeWidget$fun setupContentViewAndLike( countView: Int, countLike: Int, date: String, duration: String, isSeries: Boolean )</ID>
-    <ID>MagicNumber:BackToTopView.kt$BackToTopView$14F</ID>
-    <ID>MagicNumber:BackToTopView.kt$BackToTopView$4</ID>
-    <ID>MagicNumber:BottomTabNavigationFragment.kt$BottomTabNavigationFragment$3000</ID>
     <ID>MagicNumber:DateExtension.kt$543</ID>
     <ID>MagicNumber:GetActiveLiveStreamUseCase.kt$GetActiveLiveStreamUseCaseImpl$2000</ID>
     <ID>MagicNumber:LikeWidget.kt$LikeWidget$3</ID>
@@ -60,7 +55,6 @@
     <ID>SwallowedException:AppEditText.kt$AppEditText$exception: RuntimeException</ID>
     <ID>SwallowedException:AppTextView.kt$AppTextView$exception: RuntimeException</ID>
     <ID>SwallowedException:BaseFragment.kt$BaseFragment$e: NullPointerException</ID>
-    <ID>SwallowedException:BottomTabNavigationFragment.kt$BottomTabNavigationFragment$e: Exception</ID>
     <ID>SwallowedException:CardPrivilegeUtils.kt$CardPrivilegeUtils$e: Exception</ID>
     <ID>SwallowedException:ConvertShelfDataToLiveStreamDataUseCase.kt$ConvertShelfDataToLiveStreamDataUseCaseImpl$e: JsonSyntaxException</ID>
     <ID>SwallowedException:GetActiveLiveStreamUseCase.kt$GetActiveLiveStreamUseCaseImpl$e: Exception</ID>
@@ -78,7 +72,6 @@
     <ID>TooManyFunctions:TrueIdDialogFragment.kt$TrueIdDialogFragment : BottomSheetDialogFragmentTrueIdDialog</ID>
     <ID>TooManyFunctions:ViewAndLikeWidget.kt$ViewAndLikeWidget : LinearLayout</ID>
     <ID>UnnecessaryAbstractClass:AppInfoData.kt$AppInfoData</ID>
-    <ID>UnusedPrivateMember:BackToTopView.kt$BackToTopView$activity: Activity</ID>
     <ID>UnusedPrivateMember:BaseFragment.kt$BaseFragment$i</ID>
     <ID>UnusedPrivateMember:FragmentInterface.kt$FragmentInterface$i</ID>
     <ID>UnusedPrivateMember:GlobalSearchWidget.kt$GlobalSearchWidget$activity: FragmentActivity</ID>

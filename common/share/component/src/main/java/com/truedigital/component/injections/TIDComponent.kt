@@ -10,14 +10,9 @@ import com.truedigital.component.di.ComponentViewModelsModule
 import com.truedigital.component.di.LikeBindsModule
 import com.truedigital.component.di.LiveCommerceBindsModule
 import com.truedigital.component.di.LiveCommerceProvidesModule
-import com.truedigital.component.utils.BackToTopView
 import com.truedigital.component.view.AppButton
 import com.truedigital.component.view.AppEditText
 import com.truedigital.component.view.AppTextView
-import com.truedigital.component.widget.like.presentation.LikeWidget
-import com.truedigital.component.widget.livecommerce.presentation.LiveCommerceWidget
-import com.truedigital.component.widget.search.GlobalSearchWidget
-import com.truedigital.component.widget.share.ShareWidget
 import com.truedigital.core.injections.CoreSubComponent
 import dagger.Component
 import javax.inject.Singleton
@@ -73,10 +68,5 @@ interface TIDComponent {
     fun inject(appButton: AppButton)
     fun inject(appEditText: AppEditText)
     fun inject(appTextView: AppTextView)
-    fun inject(backToTopView: BackToTopView)
-    fun inject(likeWidget: LikeWidget)
-    fun inject(globalSearchWidget: GlobalSearchWidget)
-    fun inject(shareWidget: ShareWidget)
-    fun inject(liveCommerceWidget: LiveCommerceWidget)
     fun inject(coreActivity: CoreActivity)
 }

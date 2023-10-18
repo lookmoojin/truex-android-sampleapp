@@ -26,7 +26,6 @@
     <ID>MaxLineLength:CallIconWidget.kt$CallIconWidget$binding.callShapeableImageView.setImageResource(if (isDark) R.drawable.common_ic_call_dark else R.drawable.common_ic_call_light)</ID>
     <ID>MaxLineLength:CommonBottomDialogFragment.kt$CommonBottomDialogFragment$binding.commonBottomDialogImageviewIcon.setImageDrawable(AppCompatResources.getDrawable(requireContext(), it))</ID>
     <ID>MaxLineLength:GetInboxEnableUseCase.kt$GetInboxEnableUseCaseImpl$class</ID>
-    <ID>MaxLineLength:NotificationIconWidget.kt$NotificationIconWidget$binding.notificationShapeableImageView.setImageResource(if (isDark) R.drawable.common_ic_notification_dark else R.drawable.common_ic_notification_light)</ID>
     <ID>MayBeConst:TrueCardType.kt$TrueCardType$val TYPE_BLACK = "BLACK"</ID>
     <ID>MayBeConst:TrueCardType.kt$TrueCardType$val TYPE_BLUE = "BLUE"</ID>
     <ID>MayBeConst:TrueCardType.kt$TrueCardType$val TYPE_GREEN = "GREEN"</ID>

@@ -29,14 +29,6 @@
         <attr name="civ_circle_background_color" format="color" />
     </declare-styleable>
 
-    <declare-styleable name="MIRatioImageView">
-        <attr name="ratio" format="enum">
-            <enum name="ratio_4_3" value="0" />
-            <enum name="ratio_16_9" value="1" />
-            <enum name="ratio_1_1" value="2" />
-        </attr>
-    </declare-styleable>
-
     <declare-styleable name="TrueIdDialog">
         <attr name="iconColor" format="color" />
         <attr name="iconBackgroundColor" format="color" />
