@@ -14,6 +14,8 @@
         android:layout_height="wrap_content"
         android:layout_margin="8dp"
         android:text="Preprod"
+        android:backgroundTint="@drawable/env_selector"
+        app:cornerRadius="5dp"
         app:layout_constraintEnd_toStartOf="@+id/prodButton"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintHorizontal_chainStyle="spread"
@@ -25,7 +27,9 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_margin="8dp"
+        android:backgroundTint="@drawable/env_selector"
         android:text="Prod"
+        app:cornerRadius="5dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toEndOf="@+id/preprodButton"
@@ -63,16 +67,34 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/passwordEditText" />
 
-    <com.google.android.material.textview.MaterialTextView
-        android:id="@+id/textViewResponse"
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/copyButton"
+        android:layout_width="0dp"
+        android:layout_height="40dp"
         android:layout_margin="8dp"
-        android:text="Response"
+        android:text="copy JWT"
+        app:cornerRadius="5dp"
+        android:backgroundTint="@color/gray_light"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/loginButton" />
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
         app:layout_constraintBottom_toTopOf="@+id/nextButton"
         app:layout_constraintEnd_toEndOf="@+id/loginButton"
         app:layout_constraintStart_toStartOf="@+id/loginButton"
-        app:layout_constraintTop_toBottomOf="@+id/loginButton" />
+        app:layout_constraintTop_toBottomOf="@+id/copyButton">
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/responseTextView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="Response"
+            android:textIsSelectable="true" />
+
+    </androidx.core.widget.NestedScrollView>
 
     <com.google.android.material.button.MaterialButton
         android:id="@+id/nextButton"

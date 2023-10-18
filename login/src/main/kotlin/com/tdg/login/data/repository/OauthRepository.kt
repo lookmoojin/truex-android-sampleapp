@@ -17,10 +17,6 @@ class OauthRepositoryImpl @Inject constructor(
     private val apiInterface: OauthApiInterface
 ) : OauthRepository {
 
-    companion object {
-        const val LOGIN_FAILED = "login failed"
-    }
-
     override fun login(request: OauthRequest): Flow<OauthResponse> {
         return flow {
             val clientId = RequestBody.create(MediaType.parse("text/plain"), request.clientId)
@@ -50,7 +46,7 @@ class OauthRepositoryImpl @Inject constructor(
                 if (isSuccessful && body != null) {
                     emit(body)
                 } else {
-                    error(LOGIN_FAILED)
+                    error(errorBody()?.string().orEmpty())
                 }
             }
         }

@@ -1,6 +1,7 @@
 package com.tdg.login.base
 
 import androidx.annotation.WorkerThread
+import kotlinx.coroutines.CancellableContinuation
 import kotlinx.coroutines.CancellationException
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.CoroutineStart
@@ -10,6 +11,7 @@ import kotlinx.coroutines.flow.collect
 import kotlinx.coroutines.launch
 import kotlin.coroutines.CoroutineContext
 import kotlin.coroutines.EmptyCoroutineContext
+import kotlin.coroutines.resume
 
 fun CoroutineScope.launchSafe(
     context: CoroutineContext = EmptyCoroutineContext,
@@ -59,6 +61,16 @@ suspend inline fun <T> Flow<T>.collectSafe(
             collectSafe.onCancellation(error)
         }
     }
+
+/**
+ * Only call resume() if the CancellableContinuation was active
+ * @link https://github.com/Kotlin/kotlinx.coroutines/issues/1874#issuecomment-936951673
+ * */
+fun <T> CancellableContinuation<T>.resumeIfActive(value: T) {
+    if (isActive) {
+        resume(value)
+    }
+}
 
 interface LaunchSafe {
 
