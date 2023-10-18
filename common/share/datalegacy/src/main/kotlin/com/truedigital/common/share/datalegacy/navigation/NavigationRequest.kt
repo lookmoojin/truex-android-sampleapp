@@ -2,7 +2,6 @@ package com.truedigital.common.share.datalegacy.navigation
 
 import com.truedigital.common.share.datalegacy.domain.discover.model.shelf.BaseShelfModel
 import com.truedigital.common.share.datalegacy.domain.discover.model.shelf.ShelfModel
-import com.truedigital.common.share.datalegacy.enums.TileContentType
 
 class NavigationRequest {
 
@@ -15,7 +14,6 @@ class NavigationRequest {
     // ////////////////////////
 
     var shelfSlug = ""
-    var contentType: TileContentType? = null
     var cmsId = ""
     var adsTagsUrl = ""
     var shelfIndex = ""

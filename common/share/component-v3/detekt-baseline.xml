@@ -20,7 +20,6 @@
     <ID>MagicNumber:StringExtensions.kt$1000.0</ID>
     <ID>MagicNumber:StringExtensions.kt$1000000</ID>
     <ID>MagicNumber:StringExtensions.kt$3</ID>
-    <ID>MagicNumber:TopNavigationView.kt$TopNavigationView$100</ID>
     <ID>MagicNumber:WeMallShelfViewHolder.kt$WeMallShelfViewHolder$100</ID>
     <ID>MagicNumber:WeMallShelfWidget.kt$WeMallShelfWidget$100</ID>
     <ID>MaxLineLength:CallIconWidget.kt$CallIconWidget$binding.callShapeableImageView.setImageResource(if (isDark) R.drawable.common_ic_call_dark else R.drawable.common_ic_call_light)</ID>
@@ -40,7 +39,6 @@
     <ID>TooManyFunctions:CommonSearchBar.kt$CommonSearchBar : FrameLayout</ID>
     <ID>TooManyFunctions:CommunityTab.kt$CommunityTab : FrameLayoutLifecycleObserver</ID>
     <ID>TooManyFunctions:CustomInfiniteViewPager.kt$CustomInfiniteViewPager : ConstraintLayout</ID>
-    <ID>TooManyFunctions:TopNavigationView.kt$TopNavigationView : TabLayout</ID>
     <ID>TooManyFunctions:ViewPagerLoopAndAutoScroll.kt$ViewPagerLoopAndAutoScroll : ConstraintLayout</ID>
     <ID>UnusedPrivateMember:BadgeTextView.kt$BadgeTextView$private var badgeNumber: Int = 0 set(value) { field = value visibility = if (value > 0) View.VISIBLE else View.INVISIBLE text = if (value > maxBadgeNumber) { String.format("%d+", maxBadgeNumber) } else { value.toString() } }</ID>
     <ID>UnusedPrivateMember:CustomInfiniteViewPager.kt$CustomInfiniteViewPager$item</ID>
