@@ -12,7 +12,6 @@ import com.truedigital.common.share.componentv3.di.WeMallShelfComponentBindsModu
 import com.truedigital.common.share.componentv3.di.WeMallShelfComponentModule
 import com.truedigital.common.share.componentv3.widget.CommonAppBar
 import com.truedigital.common.share.componentv3.widget.CommonSearchBar
-import com.truedigital.common.share.componentv3.widget.ads.AdsWidget
 import com.truedigital.common.share.componentv3.widget.ads.domain.usecase.GetAdsPreLoadConfigUseCase
 import com.truedigital.common.share.componentv3.widget.badge.domain.usecase.CountInboxUseCase
 import com.truedigital.common.share.componentv3.widget.badge.domain.usecase.GetInboxEnableUseCase
@@ -90,7 +89,6 @@ interface ComponentV3Component {
     }
 
     fun inject(widget: WeMallShelfWidget)
-    fun inject(widget: AdsWidget)
     fun inject(widget: CallIconWidget)
     fun inject(appBar: CommonAppBar)
     fun inject(searchBar: CommonSearchBar)
