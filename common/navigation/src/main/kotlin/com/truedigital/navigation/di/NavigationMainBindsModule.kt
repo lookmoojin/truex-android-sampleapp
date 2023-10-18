@@ -10,14 +10,8 @@ import com.truedigital.navigation.domain.usecase.GetPersonaConfigUseCase
 import com.truedigital.navigation.domain.usecase.GetPersonaConfigUseCaseImpl
 import com.truedigital.navigation.domain.usecase.GetTodayPersonaSegmentEnableUseCase
 import com.truedigital.navigation.domain.usecase.GetTodayPersonaSegmentEnableUseCaseImpl
-import com.truedigital.navigation.usecase.GetCountryUseCase
-import com.truedigital.navigation.usecase.GetCountryUseCaseImpl
-import com.truedigital.navigation.usecase.GetInterContentUseCase
-import com.truedigital.navigation.usecase.GetInterContentUseCaseImpl
 import com.truedigital.navigation.usecase.GetNavigationControllerRepository
 import com.truedigital.navigation.usecase.GetNavigationControllerRepositoryImpl
-import com.truedigital.navigations.share.domain.usecase.GetTabUseCase
-import com.truedigital.navigations.share.domain.usecase.GetTabUseCaseImpl
 import dagger.Binds
 import dagger.Module
 import javax.inject.Singleton
@@ -48,21 +42,6 @@ interface NavigationMainBindsModule {
     fun bindsGetNavigationControllerUseCase(
         getNavigationControllerUseCaseImpl: GetNavigationControllerRepositoryImpl
     ): GetNavigationControllerRepository
-
-    @Binds
-    fun bindsGetCountryUseCase(
-        getCountryUseCaseImpl: GetCountryUseCaseImpl
-    ): GetCountryUseCase
-
-    @Binds
-    fun bindsGetTabUseCase(
-        getTabUseCaseImpl: GetTabUseCaseImpl
-    ): GetTabUseCase
-
-    @Binds
-    fun bindsGetInterContentUseCase(
-        getInterContentUseCaseImpl: GetInterContentUseCaseImpl
-    ): GetInterContentUseCase
 
     @Binds
     fun bindsGetTodayPersonaSegmentEnableUseCase(

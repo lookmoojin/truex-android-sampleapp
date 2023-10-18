@@ -5,11 +5,6 @@ import com.truedigital.common.share.currentdate.injections.CurrentDateSubCompone
 import com.truedigital.common.share.datalegacy.injections.DataLegacySubComponent
 import com.truedigital.common.share.nativeshare.injections.LinkGeneratorSubComponent
 import com.truedigital.component.base.core.CoreActivity
-import com.truedigital.component.di.CmsFnLikeApiModule
-import com.truedigital.component.di.ComponentViewModelsModule
-import com.truedigital.component.di.LikeBindsModule
-import com.truedigital.component.di.LiveCommerceBindsModule
-import com.truedigital.component.di.LiveCommerceProvidesModule
 import com.truedigital.component.view.AppButton
 import com.truedigital.component.view.AppEditText
 import com.truedigital.component.view.AppTextView
@@ -19,13 +14,7 @@ import javax.inject.Singleton
 
 @Singleton
 @Component(
-    modules = [
-        CmsFnLikeApiModule::class,
-        LikeBindsModule::class,
-        LiveCommerceBindsModule::class,
-        LiveCommerceProvidesModule::class,
-        ComponentViewModelsModule::class
-    ],
+    modules = [],
     dependencies = [
         AnalyticsSubComponent::class,
         CoreSubComponent::class,

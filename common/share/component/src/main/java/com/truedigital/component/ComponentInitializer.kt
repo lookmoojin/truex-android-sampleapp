@@ -8,8 +8,6 @@ import com.truedigital.common.share.currentdate.CurrentDateInitializer
 import com.truedigital.common.share.currentdate.injections.CurrentDateComponent
 import com.truedigital.common.share.datalegacy.DataLegacyInitializer
 import com.truedigital.common.share.datalegacy.injections.DataLegacyComponent
-import com.truedigital.common.share.nativeshare.LinkGeneratorInitializer
-import com.truedigital.common.share.nativeshare.injections.LinkGeneratorComponent
 import com.truedigital.component.injections.DaggerTIDComponent
 import com.truedigital.component.injections.TIDComponent
 import com.truedigital.core.CoreInitializer
@@ -22,8 +20,7 @@ class ComponentInitializer : Initializer<TIDComponent> {
             AnalyticsComponent.getInstance().getAnalyticsSubComponent(),
             CoreComponent.getInstance().getCoreSubComponent(),
             CurrentDateComponent.getInstance().getCurrentDateSubComponent(),
-            DataLegacyComponent.getInstance().getDataLegacySubComponent(),
-            LinkGeneratorComponent.getInstance().getLinkGeneratorSubComponent(),
+            DataLegacyComponent.getInstance().getDataLegacySubComponent()
         ).apply {
             TIDComponent.initialize(this)
         }
@@ -33,8 +30,6 @@ class ComponentInitializer : Initializer<TIDComponent> {
         AnalyticsInitializer::class.java,
         CoreInitializer::class.java,
         CurrentDateInitializer::class.java,
-        DataLegacyInitializer::class.java,
-        LinkGeneratorInitializer::class.java,
-
+        DataLegacyInitializer::class.java
     )
 }
