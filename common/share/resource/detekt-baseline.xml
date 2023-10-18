@@ -1,7 +1,0 @@
-<?xml version='1.0' encoding='UTF-8'?>
-<SmellBaseline>
-  <ManuallySuppressedIssues />
-  <CurrentIssues>
-    <ID>LongMethod:TypeFacesM2.kt$TypeFacesM2$fun getTypography(fontFamily: FontFamily)</ID>
-  </CurrentIssues>
-</SmellBaseline>

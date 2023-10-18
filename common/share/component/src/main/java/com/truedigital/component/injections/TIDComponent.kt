@@ -3,7 +3,6 @@ package com.truedigital.component.injections
 import com.truedigital.common.share.analytics.injections.AnalyticsSubComponent
 import com.truedigital.common.share.currentdate.injections.CurrentDateSubComponent
 import com.truedigital.common.share.datalegacy.injections.DataLegacySubComponent
-import com.truedigital.common.share.nativeshare.injections.LinkGeneratorSubComponent
 import com.truedigital.component.base.core.CoreActivity
 import com.truedigital.component.view.AppButton
 import com.truedigital.component.view.AppEditText
@@ -19,9 +18,7 @@ import javax.inject.Singleton
         AnalyticsSubComponent::class,
         CoreSubComponent::class,
         CurrentDateSubComponent::class,
-        DataLegacySubComponent::class,
-        LinkGeneratorSubComponent::class,
-
+        DataLegacySubComponent::class
     ]
 )
 interface TIDComponent {
