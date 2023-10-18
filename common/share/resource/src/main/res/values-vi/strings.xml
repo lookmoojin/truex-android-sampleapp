@@ -1,7 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<resources>
-    <string name="action_retry">Thử lại</string>
-
-    <string name="error_system_title">Chúng tôi sẽ trở lại ngay</string>
-    <string name="error_system_message">Chúng tôi đang cập nhật hệ thống TrueID và rất xin lỗi vì sự bất tiện này. Xin bạn vui lòng quay lại sau.</string>
-</resources>

@@ -1,7 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<resources>
-    <string name="action_retry">Retry</string>
-
-    <string name="error_system_title">Will be back soon</string>
-    <string name="error_system_message">We are updating our TrueID platform. Please come back later and sorry for inconvenience.</string>
-</resources>

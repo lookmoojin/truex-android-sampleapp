@@ -1,7 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<resources>
-    <string name="action_retry">Coba lagi</string>
-
-    <string name="error_system_title">Akan segera kembali</string>
-    <string name="error_system_message">Sedang terjadi pembaharuan pada TrueID. Silahkan kembali lagi nanti dan mohon maaf atas ketidaknyamannya</string>
-</resources>

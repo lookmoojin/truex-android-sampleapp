@@ -1,7 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<resources>
-    <string name="action_retry">ပြန်ကြိုးစားမည်</string>
-
-    <string name="error_system_title">မကြာမီ ပြန်သုံးလို့ရပါမည်</string>
-    <string name="error_system_message">ကျွန်ုပ်တို့၏ TrueID ကို အဆင့်မြှင့်တင်နေပါသည်။ ကျေးဇူးပြု၍ ခဏအကြာတွင် နောက်တစ်ကြိမ်ပြန်လာခဲ့ပါ။ အဆင်မပြေမှုအတွက် တောင်းပန်ပါတယ်။</string>
-</resources>

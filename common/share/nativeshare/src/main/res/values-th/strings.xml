@@ -1,7 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<resources>
-    <string name="nativeshare_error_something_wrong">ไม่สามารถแสดงหน้านี้ได้ในขณะนี้\nกรุณาลองอีกครั้ง</string>
-    <string name="nativeshare_no_internet_connection">ไม่สามารถเชื่อมต่ออินเตอร์เน็ตได้ กรุณาลองอีกครั้ง</string>
-    <string name="nativeshare_share_fail" translatable="false">Share fail</string>
-    <string name="nativeshare_share_fail_api_exception">กรุณาอัปเดต Google Play services</string>
-</resources>

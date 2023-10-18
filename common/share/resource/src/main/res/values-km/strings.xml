@@ -1,7 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<resources>
-    <string name="action_retry">ព្យាយាមម្តងទៀត</string>
-
-    <string name="error_system_title">នឹងត្រឡប់មកវិញក្នុងពេលឆាប់ៗ</string>
-    <string name="error_system_message">ខាងយើងកំពុងធ្វើការ Update ទៅលើវេទិកា TrueID។ សូមត្រឡប់មកវិញនៅពេលក្រោយ និង សូមអធ្យាស្រ័យសម្រាប់ភាពរអាក់រអួល។</string>
-</resources>

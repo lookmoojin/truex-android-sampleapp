@@ -18,8 +18,6 @@ import com.truedigital.navigation.domain.usecase.SetCrossRouterNavControllerUseC
 import com.truedigital.navigation.domain.usecase.SetRouterSecondaryToNavControllerUseCase
 import com.truedigital.navigation.domain.usecase.SetRouterToNavControllerUseCase
 import com.truedigital.navigation.router.CrossRouter
-import com.truedigital.navigation.usecase.GetCountryUseCase
-import com.truedigital.navigation.usecase.GetInterContentUseCase
 import com.truedigital.navigation.usecase.GetNavigationControllerRepository
 import dagger.Component
 import dagger.Subcomponent
@@ -80,13 +78,10 @@ interface NavigationSubComponent {
     fun getNavigationRouterRepository(): NavigationRouterRepository
     fun getCrossRouter(): CrossRouter
 
-    fun getGetCountryUseCase(): GetCountryUseCase
-
     // Use cases
     fun getSetRouterToNavControllerUseCase(): SetRouterToNavControllerUseCase
     fun getSetRouterSecondaryToNavControllerUseCase(): SetRouterSecondaryToNavControllerUseCase
     fun getSetCrossRouterNavControllerUseCase(): SetCrossRouterNavControllerUseCase
-    fun getGetInterContentUseCase(): GetInterContentUseCase
     fun getTrackFirebaseAnalyticsDeeplinkUseCase(): TrackFirebaseAnalyticsDeeplinkUseCase
 
     fun getGetNavigationControllerUseCase(): GetNavigationControllerRepository

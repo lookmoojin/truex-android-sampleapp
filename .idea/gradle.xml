@@ -17,7 +17,6 @@
             <option value="$PROJECT_DIR$/common/foundation" />
             <option value="$PROJECT_DIR$/common/navigation" />
             <option value="$PROJECT_DIR$/common/share" />
-            <option value="$PROJECT_DIR$/common/share/amityserviceconfig" />
             <option value="$PROJECT_DIR$/common/share/analytics" />
             <option value="$PROJECT_DIR$/common/share/component" />
             <option value="$PROJECT_DIR$/common/share/component-v3" />
@@ -26,8 +25,6 @@
             <option value="$PROJECT_DIR$/common/share/data/coredata" />
             <option value="$PROJECT_DIR$/common/share/data/firestoreconfig" />
             <option value="$PROJECT_DIR$/common/share/datalegacy" />
-            <option value="$PROJECT_DIR$/common/share/nativeshare" />
-            <option value="$PROJECT_DIR$/common/share/resource" />
             <option value="$PROJECT_DIR$/feature" />
             <option value="$PROJECT_DIR$/feature/discover" />
             <option value="$PROJECT_DIR$/feature/discover/apppermission" />

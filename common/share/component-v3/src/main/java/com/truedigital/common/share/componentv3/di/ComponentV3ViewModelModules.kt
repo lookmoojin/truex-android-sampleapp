@@ -3,7 +3,6 @@ package com.truedigital.common.share.componentv3.di
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
 import com.truedigital.common.share.componentv3.widget.ads.presentation.AdsWidgetViewModel
-import com.truedigital.common.share.componentv3.widget.badge.presentation.CountInboxViewModel
 import com.truedigital.common.share.componentv3.widget.searchanimation.presentation.SearchAnimationViewModel
 import com.truedigital.common.share.componentv3.widget.truepoint.presentation.TruePointWidgetViewModel
 import com.truedigital.common.share.componentv3.widget.wemallshelfcomponent.presentation.WeMallShelfWidgetViewModel
@@ -47,12 +46,5 @@ interface ComponentV3ViewModelModules {
     @ViewModelKey(WeMallShelfWidgetViewModel::class)
     fun bindsWeMallShelfWidgetViewModel(
         weMallShelfWidgetViewModel: WeMallShelfWidgetViewModel
-    ): ViewModel
-
-    @Binds
-    @IntoMap
-    @ViewModelKey(CountInboxViewModel::class)
-    fun bindsCountInboxViewModel(
-        countInboxViewModel: CountInboxViewModel
     ): ViewModel
 }
