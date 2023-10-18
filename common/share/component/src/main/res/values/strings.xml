@@ -1,0 +1,123 @@
+<resources>
+    <string name="error_code_caption">Error code:</string>
+
+    <string name="size_image_url">640</string>
+
+    <string name="ok">OK</string>
+    <string name="cancel">Cancel</string>
+    <string name="delete">Delete</string>
+    <string name="close">Close</string>
+    <string name="done">DONE</string>
+    <string name="disconnnet">Disconnect</string>
+
+    <string name="save">Save</string>
+    <string name="loading">Loading…</string>
+
+    <string name="press_back_to_exit">Press BACK again to exit.</string>
+
+    <string name="error_other">Whoops, something went wrong...</string>
+    <string name="error_other_sub">Please try again in a few moments.</string>
+    <string name="error_reach_quota_server">Whoops, we are experiencing higher than expected usage...</string>
+
+    <string name="discover_more">See more</string>
+
+    <!-- Card Type -->
+    <string name="txt_card_black">TrueBlack</string>
+    <string name="txt_card_black_blue_green_red">True Customers</string>
+    <string name="txt_card_black_blue_green_red_white">True Customers</string>
+    <string name="txt_card_black_blue_red">True Customers</string>
+    <string name="txt_card_black_red">TrueBlack&amp;Red</string>
+    <string name="txt_card_blue">TrueBlue</string>
+    <string name="txt_card_blue_green">TrueBlue&amp;Green</string>
+    <string name="txt_card_blue_green_red">True Customers</string>
+    <string name="txt_card_blue_green_red_white">True Customers</string>
+    <string name="txt_card_blue_green_white">True Customers</string>
+    <string name="txt_card_blue_red">TrueRed&amp;Blue</string>
+    <string name="txt_card_green">TrueGreen</string>
+    <string name="txt_card_red">TrueRed</string>
+    <string name="txt_card_truepoint">TruePoint</string>
+    <string name="txt_card_white">TrueWhite</string>
+    <string name="txt_card_no_card">True Customers</string>
+    <string name="txt_card_open_deal">All customers</string>
+    <string name="txt_card_other">True Privileges</string>
+
+    <string name="copy_to_clipboard">Copied to clipboard.</string>
+
+    <!--Permission-->
+    <string name="permission_title" translatable="false">Permission detection</string>
+    <string name="permission_content" translatable="false">Some permissions are not allowed. \nDo you want to allow those permissions</string>
+    <string name="permission_location" translatable="false">location</string>
+    <string name="permission_photo_file" translatable="false">photo_file</string>
+    <string name="permission_request" translatable="false">permission_request</string>
+
+    <string name="no_internet_connection">No internet connection. Please try again.</string>
+    <string name="error_something_wrong">Something went wrong at the moment.\nPlease try again in a bit.</string>
+    <string name="share_fail_api_exception">Please update Google Play services.</string>
+    <string name="share_fail" translatable="false">Share fail</string>
+
+    <string name="dialog_in_progress_please_wait">Please wait\nwhile we process your request</string>
+
+    <!--Back to Top-->
+    <string name="function_button_back_to_top">Back to Top</string>
+
+    <string name="show_detail">More</string>
+    <string name="hide_synopsis">Less</string>
+
+    <string name="txt_hour">Hr</string>
+    <string name="txt_minute">Min</string>
+    <string name="txt_all_episode">All Episodes</string>
+
+    <!--Error-->
+    <string name="error_title">Coming back soon.</string>
+    <string name="error_detail">We’re building a better service for you!</string>
+    <string name="global_search_search_not_found_title">We couldn\'t find any matches for your search</string>
+    <string name="global_search_search_not_found_detail">Make sure that all words are spelled correctly or try different keywords</string>
+
+    <string name="message_error_base">Sorry,Something went wrong.\nPlease try again.</string>
+
+    <!--Inboxmessage-->
+    <string name="notification_time_min_ago">minute ago</string>
+    <string name="notification_time_mins_ago">minutes ago</string>
+    <string name="notification_time_hour_ago">hour ago</string>
+    <string name="notification_time_hours_ago">hours ago</string>
+    <string name="notification_time_yesterday">Yesterday</string>
+    <string name="notification_time_just_now">Just now</string>
+
+    <string name="label_go_to_setting_button">Go to Settings</string>
+
+    <!--Reminder-->
+    <string name="reminder_remaining_day">You can watch this program in %d day</string>
+    <string name="reminder_remaining_days">You can watch this program in %d days</string>
+    <string name="reminder_remaining_hr_min">You can watch this program in %1$d hr %2$d min</string>
+    <string name="reminder_remaining_hr_mins">You can watch this program in %1$d hr %2$d mins</string>
+    <string name="reminder_remaining_hrs_min">You can watch this program in %1$d hrs %2$d min</string>
+    <string name="reminder_remaining_hrs_mins">You can watch this program in %1$d hrs %2$d mins</string>
+    <string name="reminder_remaining_min_second">You can watch this program in %1$d min %2$d second</string>
+    <string name="reminder_remaining_min_seconds">You can watch this program in %1$d mins %2$d seconds</string>
+    <string name="reminder_remaining_mins_second">You can watch this program in %1$d min %2$d second</string>
+    <string name="reminder_remaining_mins_seconds">You can watch this program in %1$d mins %2$d seconds</string>
+    <string name="reminder_remaining_second">You can watch this program in %d second</string>
+    <string name="reminder_remaining_seconds">You can watch this program in %d seconds</string>
+
+    <string name="tv_current_program_channel">Channel</string>
+    <string name="tv_current_program_dual_language">Dual Language</string>
+
+    <!--Activity: Error-->
+    <string name="error_activity_error_occurred">Sorry, we ran into a temporary problem and can\'t complete your request.\r\nPlease try again in a bit.</string>
+    <string name="error_internet_connection">Unable to connect to the internet. Reconnect and try again.</string>
+
+    <!--Favorite Widget-->
+    <string name="live_favorite_added">Added to favourite channel</string>
+    <string name="live_favorite_removed">Removed from favourite channel</string>
+    <string name="live_favorite_full">Favourite channel is full</string>
+
+    <string name="history_edit">Edit</string>
+
+    <string name="tv_current_program_button_sheet_share">Share</string>
+    <string name="tv_current_program_button_sheet_help">Help</string>
+    <string name="tv_current_program_button_sheet_detail">View program detail</string>
+
+    <string name="detect_debuging_options_title">Application Security Policy</string>
+    <string name="detect_debuging_options_detail">To continue using TrueID, please turn\n off “Developer options.”\n1.Goto your device’s Settings menu.\n2.Choose Developer Options (If Developer Options is not visible, go to About Phone and tap on Build Number server times to activate it.)\n3.Disable USB Debugging and Wireless Debugging function.\n4.Choose OK to confirm.</string>
+    <string name="detect_debuging_options_ok">Ok</string>
+</resources>

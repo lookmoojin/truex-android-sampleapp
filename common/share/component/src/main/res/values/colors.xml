@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="TCGrayLight">#DCDDE0</color>
+    <color name="TCGrayLightPlus">#EEEEF0</color>
+    <color name="TFGrayLightPlus">#E3E4E8</color>
+    <color name="TFGrayMedium">#676D74</color>
+    <color name="bg_text_tag_item_search2">#818698</color>
+    <color name="TTGrayMedium">#868f96</color>
+    <color name="TFGrayLight">#8f9bb3</color>
+    <color name="TCGrayMedium">#B0B9C2</color>
+    <color name="TCGrayPinkish">#c9c8c8</color>
+    <color name="TCGrayDarkPlus">#323C46</color>
+    <color name="TTGrayDarkPlus">#494A4B</color>
+    <color name="TCCharcoalGray">#333d46</color>
+
+    <color name="TCRedLight">#E43939</color>
+
+    <!--UI refresh guideline 2017-->
+    <!--color palette 2017 Font-->
+    <color name="TFWhiteAlpha">#33FFFFFF</color>
+
+    <!--color palette 2017 True Contents-->
+    <color name="TCGrayDark">#6A747E</color>
+    <color name="TCGrayDarkAlpha90">#E66A747E</color>
+    <color name="TCGrayDarkAlpha75">#BF6A747E</color>
+    <color name="TFRedMedium">#DA1F32</color>
+
+    <color name="TCGalleryWhite">#F0F0F0</color>
+    <color name="grey_89">#fafafa</color>
+    <color name="TCSemiTransGalleryWhite">#99F0F0F0</color>
+
+    <color name="TRed">#da1e32</color>
+    <color name="HyperLink">#E2241A</color>
+    <color name="TBorder">#dddddd</color>
+    <color name="TDarkMint">#32d74b</color>
+
+    <color name="transparent">#00ffffff</color>
+
+    <color name="bg_theme_gray">#FCFCFC</color>
+    <color name="bg_chrome_cast">#BFFFFFFF</color>
+
+    <color name="color_state_progress">#01dab9</color>
+    <color name="true_black">#191919</color>
+    <color name="true_red">#DC0000</color>
+    <color name="true_red_color_contact_dialog">#ee072a</color>
+    <color name="gray_cancel_true">#6c6c6c</color>
+    <color name="border_circle_partnership">#DBDFE5</color>
+
+    <color name="bg_dialog">#ebebee</color>
+    <color name="button_state_neutral">#68727D</color>
+    <color name="bg_top_navigation">#282c2f</color>
+    <color name="discover_shelf_text">#242424</color>
+
+    <color name="tv_detail_category_shelf_background_gray">#10151a</color>
+    <color name="popup_filtered_divider">#D8D8D8</color>
+
+    <!--color True Content 2019-->
+    <color name="TSilver">#c2c7cb</color>
+
+    <color name="white">#ffffff</color>
+    <color name="white_light">#EBEBEB</color>
+    <color name="setting_text_gray">#f3f3f3</color>
+
+    <!--Table-->
+    <color name="position_one_bg">#d5d6da</color>
+
+    <!-- basic colors -->
+    <color name="red">#ff432f</color>
+    <color name="color_state_text_time">#464c52</color>
+    <color name="dark_transparent">#AA0C0200</color>
+    <color name="gray">#939393</color>
+    <color name="gray_true_light">#AAAAAA</color>
+    <color name="gray_true">#eaebed</color>
+    <color name="gray_release_date">#818181</color>
+
+    <!-- StreamingPlayer Shared Colors -->
+    <color name="gray_light">#DCDDE0</color>
+    <color name="gray_dark">#616569</color>
+
+    <color name="header_gray">#364551</color>
+    <color name="black_semi_transparent">#B2000000</color>
+    <color name="black_trans">#c9000000</color>
+    <color name="color_bg_title">#E9E9E9</color>
+
+    <color name="back_button_tint">#878b96</color>
+    <color name="bg_text_tag_item_search">#818698</color>
+
+    <color name="sport_player_score">#232a31</color>
+    <color name="black_opacity_55">#8C000000</color>
+    <color name="black_opacity_16">#29000000</color>
+    <color name="tv_current_program_bg">#333d46</color>
+
+    <color name="true_light_gray_plus">#eeeef0</color>
+    <color name="gray_darker">#282c2f</color>
+
+    <!--Global search-->
+    <color name="bg_search_section">#e6e8ee</color>
+    <color name="bg_red">#d0112e</color>
+    <color name="bg_text_cate">#5b6066</color>
+    <color name="bg_text_search_found">#5b5f67</color>
+    <color name="bg_tag_search">#F2F2F2</color>
+
+    <!--Dialog-->
+    <color name="dialog_bg_dark">#1C1C1C</color>
+    <color name="dialog_icon_bg_dark">#2C2C2C</color>
+
+    <!--True point-->
+    <color name="white_light_06">#F2F2F2</color>
+    <color name="santa_grey">#9e9ea1</color>
+    <color name="grey_alpha_40">#667E7E7E</color>
+    <color name="grey_light_disable">#9E9E9E</color>
+</resources>

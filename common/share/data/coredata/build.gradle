@@ -1,0 +1,27 @@
+plugins {
+    id 'com.android.library'
+//    id 'kotlinx-serialization'
+}
+
+apply {
+    from("${project.rootDir}/gradle/sub-module.gradle")
+    from("${project.rootDir}/gradle/dependencies.gradle")
+}
+android {
+    namespace 'com.tdg.common.share.data.coredata'
+}
+dependencies {
+    implementation project(":common:core")
+    implementation project(":common:share:datalegacy")
+    implementation project(":common:share:data:firestoreconfig")
+//    implementation project(":common:share:data:prasarn")
+
+//    testImplementation project(':common:share:mock')
+
+    Glide()
+    UnitTesting()
+}
+
+ext {
+    isBelongTo = "app-core"
+}

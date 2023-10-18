@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/trueCloudBackImageView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/true_cloudv3_spacing_2s"
+        android:contentDescription="@string/true_cloudv3_button_back"
+        android:padding="@dimen/true_cloudv3_spacing_3s"
+        android:src="@drawable/ic_left"
+        android:tint="@color/black"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_chainStyle="packed" />
+
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/trueCloudTitleTextView"
+        style="@style/TrueID.Body.Bold.Black"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="@string/true_cloudv3_header_settings"
+        app:layout_constraintBottom_toBottomOf="@+id/trueCloudBackImageView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/trueCloudBackImageView"
+        app:layout_constraintTop_toTopOf="@+id/trueCloudBackImageView" />
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/autoBackupContainerLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/trueCloudTitleTextView"
+        >
+
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:id="@+id/autoBackupDetailLayout"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/true_cloudv3_spacing_3m"
+            android:background="@color/true_cloudv3_color_white"
+            android:gravity="center_vertical"
+            android:orientation="vertical"
+            android:paddingLeft="@dimen/true_cloudv3_spacing_l"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            >
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/trueCloudAutoBackupTitleTextView"
+                style="@style/TrueID.Body.Bold.Black"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/true_cloudv3_auto_backup_setting_title"
+                android:textColor="@color/black"
+                android:textSize="14sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/trueCloudNextImageView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/true_cloudv3_spacing_2s"
+            android:contentDescription="@string/true_cloudv3_button_back"
+            android:padding="@dimen/true_cloudv3_spacing_3s"
+            android:src="@drawable/ic_arrow_right"
+            android:tint="@color/black"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintVertical_chainStyle="packed" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/containerMigrateLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/autoBackupContainerLayout">
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:id="@+id/detailLinearLayout"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/true_cloudv3_spacing_3m"
+            android:background="@color/true_cloudv3_gray95"
+            android:gravity="center_vertical"
+            android:orientation="vertical"
+            android:paddingLeft="@dimen/true_cloudv3_spacing_l"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                style="@style/TrueID.Body.Bold.Black"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/true_cloudv3_migrate_data"
+                android:textColor="@color/black"
+                android:textSize="14sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/trueCloudMigrationDetailTextView"
+                style="@style/TrueID.ExtraSmall.Grey"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/true_cloudv3_migrate_data_detail"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/trueCloudMigrateTextView"
+            style="@style/TrueID.TinySmall.Black"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="@dimen/true_cloudv3_spacing_l"
+            android:background="@drawable/common_round_black"
+            android:gravity="center"
+            android:padding="@dimen/true_cloudv3_spacing_2s"
+            android:text="@string/true_cloudv3_migrate_data"
+            android:textColor="@color/white"
+            app:layout_constraintBottom_toBottomOf="@+id/detailLinearLayout"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/detailLinearLayout" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.656"
+        app:layout_constraintStart_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/containerMigrateLayout">
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:id="@+id/storageDetailLinearLayout"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/true_cloudv3_spacing_3m"
+            android:background="@color/true_cloudv3_color_white"
+            android:gravity="center_vertical"
+            android:orientation="vertical"
+            android:paddingLeft="@dimen/true_cloudv3_spacing_l"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            >
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/trueCloudStorageTitleTextView"
+                style="@style/TrueID.Body.Bold.Black"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/true_cloudv3_setting_you_storage_plan"
+                android:textColor="@color/black"
+                android:textSize="14sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/trueCloudStorageDetailTextView"
+                style="@style/TrueID.ExtraSmall.Grey"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/trueCloudSubscriptionTextView"
+            style="@style/TrueID.TinySmall.Black"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="@dimen/true_cloudv3_spacing_l"
+            android:background="@drawable/common_round_black"
+            android:gravity="center"
+            android:padding="@dimen/true_cloudv3_spacing_2s"
+            android:text="@string/true_cloudv3_subscription_buy"
+            android:textColor="@color/white"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="@+id/storageDetailLinearLayout"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/storageDetailLinearLayout" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

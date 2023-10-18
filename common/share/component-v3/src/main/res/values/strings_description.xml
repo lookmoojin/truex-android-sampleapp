@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="handle_failed_imageview_icon" translatable="false">handle_failed_imageview_icon</string>
+    <string name="handle_failed_textview_title" translatable="false">handle_failed_textview_title</string>
+    <string name="handle_failed_textview_description" translatable="false">handle_failed_textview_description</string>
+    <string name="handle_failed_button_retry" translatable="false">handle_failed_button_retry</string>
+
+    <!-- Discover bubble shelf -->
+    <string name="privilege_button_bubble_item" translatable="false">privilege_button_bubble_item</string>
+
+    <!-- CommunityTab -->
+    <string name="community_tab" translatable="false">community_tab</string>
+    <string name="community_tab_for_you_button_tab" translatable="false">community_tab_for_you_button_tab</string>
+    <string name="community_tab_popular_button_tab" translatable="false">community_tab_popular_button_tab</string>
+</resources>

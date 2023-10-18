@@ -1,0 +1,140 @@
+apply plugin: 'com.android.library'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-parcelize'
+apply plugin: 'kotlin-kapt'
+apply plugin: 'org.jetbrains.kotlin.android'
+apply plugin: 'jacoco'
+//apply plugin: 'de.mannodermaus.android-junit5'
+
+apply from: "$rootDir/gradle/version.gradle"
+//apply from: "$rootDir/gradle/variant-configuration.gradle"
+//apply from: "$rootDir/gradle/ktlint.gradle.kts"
+//apply from: "$rootDir/gradle/dependencies-size.gradle.kts"
+//apply from: "$rootDir/gradle/sonarqube-ext.gradle"
+//apply from: "$rootDir/gradle/detekt.gradle"
+//apply from: "$rootDir/gradle/dexguard-maven.gradle"
+
+//if (getGradle().getStartParameter().getTaskRequests().toString() != "Debug") {
+//    apply plugin: 'dexguard'
+//}
+
+android {
+
+    compileSdkVersion 33
+    buildToolsVersion "33.0.0"
+
+//    useLibrary 'org.apache.http.legacy'
+
+    defaultConfig {
+        minSdkVersion 27
+        targetSdkVersion 33
+
+        versionCode 1
+        versionName "1.0"
+
+        buildConfigField("String", "VERSION_NAME", "\"${versionName}\"")
+        buildConfigField("String", "VERSION_CODE", "\"${versionCode}\"")
+
+        consumerProguardFiles "proguard-android-optimize.txt", "consumer-rules.pro", "proguard-rules.pro"
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        testInstrumentationRunnerArguments runnerBuilder: 'de.mannodermaus.junit5.AndroidJUnit5Builder'
+    }
+
+    buildTypes {
+        debug {
+            debuggable true
+        }
+        qa {
+            debuggable true
+        }
+        release {
+            debuggable false
+        }
+    }
+
+    flavorDimensions 'platform', 'environment'
+
+    productFlavors {
+        google { dimension 'platform' }
+        huawei { dimension 'platform' }
+
+        staging {
+            dimension 'environment'
+        }
+        preprod {
+            dimension 'environment'
+        }
+        prod {
+            dimension 'environment'
+        }
+    }
+
+    packagingOptions {
+        resources.excludes.add("META-INF/LICENSE.md")
+        resources.excludes.add("META-INF/io.netty.versions.properties")
+        resources.excludes.add("META-INF/INDEX.LIST")
+        resources.excludes.add("META-INF/LICENSE-notice.md")
+        resources.excludes.add("META-INF/*.kotlin_module")
+        resources.excludes.add("LICENSE")
+        resources.excludes.add("LICENSE.txt")
+        resources.excludes.add("third_party/java_src/error_prone/project/annotations/Annotations.gwt.xml")
+        resources.excludes.add("third_party/java_src/error_prone/project/annotations/Google_internal.gwt.xml")
+        resources.excludes.add("error_prone/Annotations.gwt.xml")
+        resources.excludes.add("DebugProbesKt.bin")
+
+        pickFirst 'win32-x86-64/attach_hotspot_windows.dll'
+        pickFirst 'win32-x86/attach_hotspot_windows.dll'
+
+        jniLibs {
+            useLegacyPackaging = true
+        }
+
+        dex {
+            useLegacyPackaging true
+        }
+    }
+
+    sourceSets {
+        main.java.srcDirs += 'src/main/kotlin'
+        main.kotlin.srcDirs += 'src/main/kotlin'
+        test.java.srcDirs += 'src/test/kotlin'
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_11
+        targetCompatibility JavaVersion.VERSION_11
+    }
+
+//    kotlinOptions {
+//        jvmTarget = '11'
+//        freeCompilerArgs += [
+//                "-opt-in=kotlinx.coroutines.FlowPreview",
+//                "-opt-in=kotlinx.coroutines.ExperimentalCoroutinesApi"
+//        ]
+//    }
+
+    testOptions {
+//        junitPlatform {
+//            details 'tree'
+//        }
+        unitTests.all {
+            jacoco.excludes = ['jdk.internal.*']
+
+            setIgnoreFailures(false)
+        }
+        unitTests.returnDefaultValues = true
+    }
+
+    buildFeatures {
+        viewBinding true
+        dataBinding true
+        buildConfig true
+    }
+}
+
+dependencies {
+    AndroidComponents()
+    AndroidComposeUI()
+    Dagger()
+}

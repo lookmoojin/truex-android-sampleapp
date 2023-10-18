@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="true_cloudv3_line_separator_color">#c7c7c7</color>
+    <color name="true_cloudv3_color_toast_success">#9919951B</color>
+    <color name="true_cloudv3_color_toast_error">#99E81E2A</color>
+    <color name="true_cloudv3_color_migration_failed">#E81E2A</color>
+    <color name="true_cloudv3_dark_gray">#7C7C7C</color>
+    <color name="true_cloudv3_gray98">#fafafa</color>
+    <color name="true_cloudv3_gray95">#f2f2f2</color>
+    <color name="true_cloudv3_gray100">#818181</color>
+    <color name="true_cloudv3_gray82">#d1d1d1</color>
+    <color name="true_cloudv3_gray4">#bdbdbd</color>
+    <color name="true_cloudv3_color_light">#F2F2F2</color>
+    <color name="true_cloudv3_color_white">#FFFFFF</color>
+    <color name="true_cloudv3_color_overlay_white">#8E8E8E</color>
+    <color name="true_cloudv3_color_black">#000000</color>
+    <color name="true_cloudv3_color_gray">#D1D1D1</color>
+    <color name="true_cloudv3_color_gray_30">#8E8E8E</color>
+    <color name="true_cloudv3_color_dark">#484848</color>
+    <color name="true_cloudv3_progress_image_type">#FFC314</color>
+    <color name="true_cloudv3_progress_video_type">#02BC01</color>
+    <color name="true_cloudv3_progress_audio_type">#009CFF</color>
+    <color name="true_cloudv3_progress_other_type">#FF5500</color>
+    <color name="true_cloudv3_progress_contact_type">#000084</color>
+    <color name="true_cloudv3_color_list_divider_color">#bcbbc1</color>
+    <color name="true_cloudv3_line_separator_color2">#E5E5E5</color>
+    <color name="true_cloudv3_choose_date_blue">#007AFF</color>
+
+    <color name="true_cloudv3_seek_bar_progress_bg">#4D000000</color>
+    <color name="true_cloudv3_seek_bar_active_progress_bg">#000000</color>
+    <color name="true_cloudv3_video_controller_bg">#B3D9D9D9</color>
+</resources>

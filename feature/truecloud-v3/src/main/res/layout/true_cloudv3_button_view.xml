@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="@dimen/true_cloudv3_spacing_m"
+    android:orientation="horizontal">
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/trueCloudAllfilesButton"
+        style="@style/TrueID.Body.Bold.Black"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/true_cloudv3_spacing_s"
+        android:layout_weight="1"
+        android:background="@drawable/background_true_cloudv3_border_button"
+        android:drawableTop="@drawable/ic_true_cloudv3_browse"
+        android:drawablePadding="@dimen/true_cloudv3_spacing_s"
+        android:gravity="center"
+        android:padding="@dimen/true_cloudv3_spacing_3s"
+        android:stateListAnimator="@null"
+        android:text="@string/true_cloudv3_menu_all_files"
+        android:maxLines="1"
+        android:ellipsize="end"/>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/trueCloudTrashButton"
+        style="@style/TrueID.Body.Bold.Black"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/true_cloudv3_spacing_s"
+        android:layout_weight="1"
+        android:background="@drawable/background_true_cloudv3_border_button"
+        android:drawableTop="@drawable/ic_true_cloudv3_trash"
+        android:drawablePadding="@dimen/true_cloudv3_spacing_s"
+        android:gravity="center"
+        android:padding="@dimen/true_cloudv3_spacing_3s"
+        android:stateListAnimator="@null"
+        android:text="@string/true_cloudv3_menu_trash"
+        android:maxLines="1"
+        android:ellipsize="end"/>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/trueCloudSettingButton"
+        style="@style/TrueID.Body.Bold.Black"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/true_cloudv3_spacing_s"
+        android:layout_weight="1"
+        android:background="@drawable/background_true_cloudv3_border_button"
+        android:drawableTop="@drawable/ic_true_cloudv3_setting"
+        android:drawablePadding="@dimen/true_cloudv3_spacing_s"
+        android:gravity="center"
+        android:padding="@dimen/true_cloudv3_spacing_3s"
+        android:stateListAnimator="@null"
+        android:text="@string/true_cloudv3_menu_settings"
+        android:maxLines="1"
+        android:ellipsize="end"/>
+
+</androidx.appcompat.widget.LinearLayoutCompat>

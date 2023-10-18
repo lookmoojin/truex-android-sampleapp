@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="success_toast_color">#19951B</color>
+    <color name="success_sport_toast_color">#27D34D</color>
+
+    <color name="error_toast_color">#E81E2A</color>
+    <color name="error_sport_toast_color">#99E81E2A</color>
+
+    <color name="warning_toast_color">#F8CB39</color>
+    <color name="warning_sport_toast_color">#99F8CB39</color>
+</resources>

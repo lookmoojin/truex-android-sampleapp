@@ -1,0 +1,1426 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<defaults>
+  <entry>
+    <key>animals</key>
+    <value>{"cat":true,"whale":[]}</value>
+  </entry>
+  <entry>
+    <key>app_shortcuts</key>
+    <value>[
+    {
+      "icon": "https://cms.dmpcdn.com/misc/2020/02/17/b3227cb0-5165-11ea-9543-d5ca51e2945c_original.png",
+      "index": "0",
+      "title_en": "Free at 7-Eleven",
+      "title_th": "แลก 7 - 11",
+      "type": "7-eleven",
+      "url": "https://privilege.trueid.net/coupons"
+    },
+    {
+      "icon": "https://cms.dmpcdn.com/misc/2020/02/17/b3cbdc10-5165-11ea-a388-539128d44e68_original.png",
+      "index": "1",
+      "title_en": "Live TV",
+      "title_th": "ดูทีวีสด",
+      "type": "live-tv",
+      "url": "https://tv.trueid.net"
+    },
+    {
+      "icon": "https://cms.dmpcdn.com/misc/2019/12/11/cad8daf0-1bed-11ea-a282-13af15ea56d3_original.png",
+      "index": "2",
+      "title_en": "Chat &amp; Call",
+      "title_th": "แชทและโทร",
+      "type": "chat-call",
+      "url": "https://www.trueid.net?page=communicator&amp;section=trueidcall"
+    },
+    {
+      "icon": "https://cms.dmpcdn.com/misc/2020/02/17/b3216b40-5165-11ea-9543-d5ca51e2945c_original.png",
+      "index": "3",
+      "title_en": "Scanner",
+      "title_th": "สแกน",
+      "type": "qr-scanner",
+      "url": "https://home.trueid.net/scanner"
+    }
+  ]</value>
+  </entry>
+  <entry>
+    <key>oneapp_force_login_on_relaunch</key>
+    <value>[   {     "country": "th",     "enable": false,     "show_close_button": true   },   {     "country": "id",     "enable": false,     "show_close_button": true   },   {     "country": "ph",     "enable": false,     "show_close_button": true   },   {     "country": "kh",     "enable": false,     "show_close_button": true   },   {     "country": "mm",     "enable": false,     "show_close_button": true   },   {     "country": "vn",     "enable": false,     "show_close_button": true   } ]</value>
+  </entry>
+  <entry>
+    <key>today_persona_segment_enable</key>
+    <value>false</value>
+  </entry>
+  <entry>
+    <key>oneapp_force_login</key>
+    <value>[{"country":"th","enable":true},{"country":"id","enable":false},{"country":"ph","enable":false},{"country":"kh","enable":false},{"country":"mm","enable":false},{"country":"vn","enable":false}]</value>
+  </entry>
+  <entry>
+    <key>today_item_1x1_highlight</key>
+    <value>true</value>
+  </entry>
+  <entry>
+    <key>aaa_signin_flow</key>
+    <value>https://sdk-identity.trueid.net/</value>
+  </entry>
+  <entry>
+    <key>pinned_domains</key>
+    <value>[{"urls":["content-customer-api.trueid.net","content-public-api.trueid.net","subscription-customer-api.trueid.net","subscription-public-api.trueid.net","streaming-customer-api.trueid.net"],"control_list":["BTesB8QCQnAi7o7PRosxs/BpO40byP18f6v8omGTlPo="],"blackbox":["E3tYcwo9CiqATmKtpMLW5V+pzIq+ZoDmpXSiJlXGmTo="]}]</value>
+  </entry>
+  <entry>
+    <key>subprofile_product_rules</key>
+    <value>{"mandatory_ads":["avod"],"use_frequency":["livetv"],"ads":{"tier_1":{"content_type":{"livetv":{"platform":{"OTT_ANRDTV_APP":{"ads":true,"frequency":300},"LG_SMTV":{"ads":true,"frequency":300},"SAMSUNG_SMTV":{"ads":true,"frequency":300},"default":{"ads":false,"frequency":600}}},"avod":{"platform":{"OTT_ANRDTV_APP":{"ads":true},"LG_SMTV":{"ads":true},"SAMSUNG_SMTV":{"ads":true},"default":{"ads":false}}},"sfv":{"platform":{"default":{"ads":false}}}}},"tier_2":{"content_type":{"livetv":{"platform":{"OTT_ANRDTV_APP":{"ads":true,"frequency":600},"LG_SMTV":{"ads":true,"frequency":600},"SAMSUNG_SMTV":{"ads":true,"frequency":600},"default":{"ads":false,"frequency":600}}},"avod":{"platform":{"OTT_ANRDTV_APP":{"ads":true},"LG_SMTV":{"ads":true},"SAMSUNG_SMTV":{"ads":true},"default":{"ads":false}}},"sfv":{"platform":{"default":{"ads":false}}}}},"tier_3":{"content_type":{"livetv":{"platform":{"OTT_ANRDTV_APP":{"ads":true,"frequency":600},"LG_SMTV":{"ads":true,"frequency":600},"SAMSUNG_SMTV":{"ads":true,"frequency":600},"default":{"ads":false,"frequency":600}}},"avod":{"platform":{"OTT_ANRDTV_APP":{"ads":true},"LG_SMTV":{"ads":true},"SAMSUNG_SMTV":{"ads":true},"default":{"ads":false}}},"sfv":{"platform":{"default":{"ads":false}}}}},"non_login":{"content_type":{"livetv":{"platform":{"OTT_ANRDTV_APP":{"ads":true,"frequency":300},"LG_SMTV":{"ads":true,"frequency":300},"SAMSUNG_SMTV":{"ads":true,"frequency":300},"default":{"ads":true,"frequency":300}}},"avod":{"platform":{"OTT_ANRDTV_APP":{"ads":true},"LG_SMTV":{"ads":true},"SAMSUNG_SMTV":{"ads":true},"default":{"ads":true}}},"sfv":{"platform":{"default":{"ads":true}}}}}},"resolution":{"tier_1":{"content_type":{"livetv":{"platform":{"OTT_ANRDTV_APP":{"resolution_code":"540p"},"LG_SMTV":{"resolution_code":"540p"},"SAMSUNG_SMTV":{"resolution_code":"540p"},"default":{"resolution_code":null}}},"avod":{"platform":{"OTT_ANRDTV_APP":{"resolution_code":"540p"},"LG_SMTV":{"resolution_code":"540p"},"SAMSUNG_SMTV":{"resolution_code":"540p"},"default":{"resolution_code":null}}},"fvod":{"platform":{"OTT_ANRDTV_APP":{"resolution_code":"540p"},"LG_SMTV":{"resolution_code":"540p"},"SAMSUNG_SMTV":{"resolution_code":"540p"},"default":{"resolution_code":null}}}}},"tier_2":{"content_type":{"livetv":{"platform":{"OTT_ANRDTV_APP":{"resolution_code":"720p"},"LG_SMTV":{"resolution_code":"720p"},"SAMSUNG_SMTV":{"resolution_code":"720p"},"default":{"resolution_code":null}}},"avod":{"platform":{"OTT_ANRDTV_APP":{"resolution_code":"720p"},"LG_SMTV":{"resolution_code":"720p"},"SAMSUNG_SMTV":{"resolution_code":"720p"},"default":{"resolution_code":null}}},"fvod":{"platform":{"OTT_ANRDTV_APP":{"resolution_code":"720p"},"LG_SMTV":{"resolution_code":"720p"},"SAMSUNG_SMTV":{"resolution_code":"720p"},"default":{"resolution_code":null}}}}},"tier_3":{"content_type":{"livetv":{"platform":{"OTT_ANRDTV_APP":{"resolution_code":"1080p"},"LG_SMTV":{"resolution_code":"1080p"},"SAMSUNG_SMTV":{"resolution_code":"1080p"},"default":{"resolution_code":null}}},"avod":{"platform":{"OTT_ANRDTV_APP":{"resolution_code":"1080p"},"LG_SMTV":{"resolution_code":"1080p"},"SAMSUNG_SMTV":{"resolution_code":"1080p"},"default":{"resolution_code":null}}},"fvod":{"platform":{"OTT_ANRDTV_APP":{"resolution_code":"1080p"},"LG_SMTV":{"resolution_code":"1080p"},"SAMSUNG_SMTV":{"resolution_code":"1080p"},"default":{"resolution_code":null}}}}},"non_login":{"content_type":{"livetv":{"platform":{"OTT_ANRDTV_APP":{"resolution_code":"540p"},"LG_SMTV":{"resolution_code":"540p"},"SAMSUNG_SMTV":{"resolution_code":"540p"},"default":{"resolution_code":null}}},"avod":{"platform":{"OTT_ANRDTV_APP":{"resolution_code":"540p"},"LG_SMTV":{"resolution_code":"540p"},"SAMSUNG_SMTV":{"resolution_code":"540p"},"default":{"resolution_code":null}}},"fvod":{"platform":{"OTT_ANRDTV_APP":{"resolution_code":"540p"},"LG_SMTV":{"resolution_code":"540p"},"SAMSUNG_SMTV":{"resolution_code":"540p"},"default":{"resolution_code":null}}}}}}}</value>
+  </entry>
+  <entry>
+    <key>today_video_vertical_config</key>
+    <value>[   {     "shelf_id": "V9oJjLdbW3Zr",     "title_enable": true,     "preview_enable": false,     "loop_timer": 3   },   {     "shelf_id": "nvJAza8ojnWE",     "title_enable": false,     "preview_enable": true,     "loop_timer": 3   } ]</value>
+  </entry>
+  <entry>
+    <key>oneapp_more_page</key>
+    <value>[
+  {
+    "country": "th",
+    "language": [
+      {
+        "code": "th",
+        "title": "เพิ่มเติม"
+      },
+      {
+        "code": "en",
+        "title": "More"
+      },
+      {
+        "code": "my",
+        "title": "နောက်ထပ်"
+      }
+    ],
+    "items": [
+      {
+        "language": [
+          {
+            "code": "th",
+            "title": "วอลเล็ท"
+          },
+          {
+            "code": "en",
+            "title": "Wallet"
+          },
+          {
+            "code": "my",
+            "title": "ပိုက်ဆံအိတ်"
+          }
+        ],
+        "app_url": "",
+        "enable_api": false,
+        "icon": "https://cms.dmpcdn.com/dev_misc/2021/06/24/253bddd0-d498-11eb-b190-ff8236efc842_original.png",
+        "image_bg": "https://cms.dmpcdn.com/misc/2023/01/25/416ff7b0-9c7f-11ed-a3b3-b9a1b3f7ce49_webp_original.jpg",
+        "index": "6",
+        "item_enable": true,
+        "shelf_slug": "wallet",
+        "type": ""
+      },
+      {
+        "language": [
+          {
+            "code": "th",
+            "title": "รีโมท ทรูไอดี ทีวี"
+          },
+          {
+            "code": "en",
+            "title": "TrueID TV Remote"
+          },
+          {
+            "code": "my",
+            "title": "ထရူးအိုင်ဒီ တီဗီ ရီမုတ်"
+          }
+        ],
+        "app_url": "",
+        "enable_api": false,
+        "icon": "https://cms.dmpcdn.com/misc/2021/06/18/81a7c130-d009-11eb-ac3d-7b73ba5837a2_original.png",
+        "image_bg": "https://cms.dmpcdn.com/misc/2023/01/25/43053db0-9c7f-11ed-a879-6148a80eaf58_webp_original.jpg",
+        "index": "2",
+        "item_enable": true,
+        "shelf_slug": "trueidTVremote",
+        "type": ""
+      },
+      {
+        "language": [
+          {
+            "code": "th",
+            "title": "เกมเซ็นเตอร์"
+          },
+          {
+            "code": "en",
+            "title": "Game Center"
+          },
+          {
+            "code": "my",
+            "title": "ဂိမ်းစင်တာာ"
+          }
+        ],
+        "app_url": "",
+        "enable_api": false,
+        "icon": "https://cms.dmpcdn.com/misc/2021/06/18/8159ef50-d009-11eb-976f-13d2d304b9ff_original.png",
+        "image_bg": "https://cms.dmpcdn.com/misc/2023/01/25/3f898470-9c7f-11ed-880b-650051a3106b_webp_original.jpg",
+        "index": "0",
+        "item_enable": true,
+        "shelf_slug": "getReward"
+      },
+      {
+        "language": [
+          {
+            "code": "th",
+            "title": "กล่องทรูไอดี ทีวี"
+          },
+          {
+            "code": "en",
+            "title": "TrueID TV Box"
+          },
+          {
+            "code": "my",
+            "title": "TrueID TV Box"
+          }
+        ],
+        "app_url": "https://trueidtv.trueid.net/",
+        "enable_api": true,
+        "icon": "https://cms.dmpcdn.com/misc/2021/11/23/11c42d50-4c40-11ec-bdd6-1d5b79336c2b_webp_original.png",
+        "image_bg": "https://cms.dmpcdn.com/misc/2023/01/25/42b548f0-9c7f-11ed-a4d9-d34c682ccf94_webp_original.jpg",
+        "index": "5",
+        "item_enable": true,
+        "shelf_slug": "",
+        "type": "inapp-browser"
+      },
+      {
+        "language": [
+          {
+            "code": "th",
+            "title": "สร้างคอนเทนต์"
+          },
+          {
+            "code": "en",
+            "title": "TrueID In-Trend"
+          },
+          {
+            "code": "my",
+            "title": "TrueID In-Trend"
+          }
+        ],
+        "app_url": "https://creators.trueid.net/?university=15876&amp;register_init=1&amp;utm_source=trueid-app&amp;utm_medium=button&amp;utm_campaign=trueid-app_more_page",
+        "enable_api": true,
+        "icon": "https://cms.dmpcdn.com/misc/2021/06/18/6abbfcc0-d009-11eb-952e-8703c29a4e8e_original.png",
+        "image_bg": "https://cms.dmpcdn.com/misc/2023/01/25/423ac1c0-9c7f-11ed-910d-ab7cc6b4ee20_webp_original.jpg",
+        "index": "5",
+        "item_enable": true,
+        "shelf_slug": "ugc-creator-studio",
+        "type": "inapp-browser"
+      },
+      {
+        "language": [
+          {
+            "code": "th",
+            "title": "สมาชิกแพ็กเกจ"
+          },
+          {
+            "code": "en",
+            "title": "Subscriptions"
+          },
+          {
+            "code": "my",
+            "title": "Subscriptions"
+          }
+        ],
+        "app_url": "",
+        "deeplink": "https://myaccount.trueid.net/subscriptions",
+        "enable_api": true,
+        "icon": "https://cms.dmpcdn.com/misc/2021/11/04/063e9e10-3d14-11ec-938b-c9c4306501ff_original.png",
+        "image_bg": "https://cms.dmpcdn.com/misc/2023/01/25/40bf4550-9c7f-11ed-820f-7b9bb3a4c608_webp_original.jpg",
+        "index": "0",
+        "item_enable": true,
+        "shelf_slug": "",
+        "type": "deeplink"
+      },
+      {
+        "language": [
+          {
+            "code": "th",
+            "title": "ทรูคลาวด์"
+          },
+          {
+            "code": "en",
+            "title": "True Cloud"
+          },
+          {
+            "code": "my",
+            "title": "ထရူးကလောက်"
+          }
+        ],
+        "app_url": "",
+        "enable_api": false,
+        "icon": "https://cms.dmpcdn.com/misc/2021/12/13/9912ad00-5bbc-11ec-bfa1-578c6faec9e4_original.png",
+        "image_bg": "https://cms.dmpcdn.com/misc/2023/01/25/41f30a60-9c7f-11ed-a4d9-d34c682ccf94_webp_original.jpg",
+        "index": "4",
+        "item_enable": true,
+        "shelf_slug": "truecloud2",
+        "type": ""
+      },
+      {
+        "language": [
+          {
+            "code": "th",
+            "title": "หาร้านใกล้คุณ"
+          },
+          {
+            "code": "en",
+            "title": "Shops Near Me"
+          },
+          {
+            "code": "my",
+            "title": "အနီးအနားရှိဆိုင်များ"
+          }
+        ],
+        "app_url": "https://tsm-discovery-web.weomni.com",
+        "deeplink": "https://home.trueid.net/inapp-browser-with-ssoid?website=https://tsm-discovery-web.weomni.com",
+        "enable_api": true,
+        "icon": "https://cms.dmpcdn.com/misc/2022/04/11/5ac14510-b95f-11ec-90d2-75be72506ff7_webp_original.png",
+        "image_bg": "https://cms.dmpcdn.com/misc/2023/01/25/4062f480-9c7f-11ed-a3b3-b9a1b3f7ce49_webp_original.jpg",
+        "index": "0",
+        "item_enable": true,
+        "shelf_slug": "",
+        "type": "deeplink"
+      },
+      {
+        "language": [
+          {
+            "code": "th",
+            "title": "ทรูไอเซอร์วิส"
+          },
+          {
+            "code": "en",
+            "title": "True iService"
+          },
+          {
+            "code": "my",
+            "title": "True iService"
+          }
+        ],
+        "app_url": "",
+        "deeplink": "https://home.trueid.net/external-browser?website=https://iservice.true.th/landing?utm_campaign=TID_ISV_App_Partner&amp;utm_medium=Link&amp;utm_source=TrueID_App",
+        "enable_api": false,
+        "icon": "https://cms.dmpcdn.com/misc/2023/01/25/10d06dd0-9c82-11ed-a3b3-b9a1b3f7ce49_webp_original.png",
+        "image_bg": "https://cms.dmpcdn.com/misc/2023/01/25/ea018290-9c8e-11ed-820f-7b9bb3a4c608_webp_original.jpg",
+        "index": "4",
+        "item_enable": true,
+        "shelf_slug": "",
+        "type": "deeplink"
+      },
+      {
+        "language": [
+          {
+            "code": "th",
+            "title": "คำถามที่พบบ่อย"
+          },
+          {
+            "code": "en",
+            "title": "Help Center"
+          },
+          {
+            "code": "my",
+            "title": "အကူအညီရယူရန်"
+          }
+        ],
+        "app_url": "https://help.trueid.net/app/th-th",
+        "enable_api": true,
+        "icon": "https://cms.dmpcdn.com/misc/2022/04/11/5ac0f6f0-b95f-11ec-846f-71c868a15fe0_webp_original.png",
+        "image_bg": "https://cms.dmpcdn.com/misc/2023/01/25/3f8517a0-9c7f-11ed-910d-ab7cc6b4ee20_webp_original.jpg",
+        "index": "1",
+        "item_enable": true,
+        "shelf_slug": "faqweb",
+        "type": "inapp-browser"
+      },
+      {
+        "language": [
+          {
+            "code": "th",
+            "title": "ตั้งค่า"
+          },
+          {
+            "code": "en",
+            "title": "Setting"
+          },
+          {
+            "code": "my",
+            "title": "နောက်ထပ်"
+          }
+        ],
+        "app_url": "",
+        "enable_api": false,
+        "icon": "https://cms.dmpcdn.com/misc/2021/12/13/98d70390-5bbc-11ec-91fe-7b8d71e75fc5_original.png",
+        "image_bg": "https://cms.dmpcdn.com/misc/2023/01/25/401dae20-9c7f-11ed-a5a0-0b703e7ea8c4_webp_original.jpg",
+        "index": "2",
+        "item_enable": true,
+        "shelf_slug": "settings",
+        "type": ""
+      }
+    ],
+    "title_en": "Services",
+    "title_th": "บริการ"
+  },
+  {
+    "country": "vn",
+    "language": [
+      {
+        "code": "vi",
+        "title": "Tùy chọn khác"
+      },
+      {
+        "code": "en",
+        "title": "More"
+      }
+    ],
+    "items": [
+      {
+        "language": [
+          {
+            "code": "vi",
+            "title": "Trò chơi"
+          },
+          {
+            "code": "en",
+            "title": "Game Center"
+          }
+        ],
+        "app_url": "",
+        "enable_api": false,
+        "icon": "https://cms.dmpcdn.com/misc/2021/06/18/8159ef50-d009-11eb-976f-13d2d304b9ff_original.png",
+        "image_bg": "https://cms.dmpcdn.com/misc/2022/04/11/48643080-b95f-11ec-846f-71c868a15fe0_webp_original.png",
+        "index": "0",
+        "item_enable": true,
+        "shelf_slug": "getReward"
+      },
+      {
+        "language": [
+          {
+            "code": "vi",
+            "title": "Điều khiển TrueID TV"
+          },
+          {
+            "code": "en",
+            "title": "TrueID TV Remote"
+          }
+        ],
+        "app_url": "",
+        "enable_api": false,
+        "icon": "https://cms.dmpcdn.com/misc/2021/06/18/81a7c130-d009-11eb-ac3d-7b73ba5837a2_original.png",
+        "image_bg": "https://cms.dmpcdn.com/misc/2022/04/11/4bbe30f0-b95f-11ec-90d2-75be72506ff7_webp_original.png",
+        "index": "3",
+        "item_enable": true,
+        "shelf_slug": "trueidTVremote",
+        "type": ""
+      },
+      {
+        "language": [
+          {
+            "code": "vi",
+            "title": "Trung tâm hỗ trợ"
+          },
+          {
+            "code": "en",
+            "title": "Help Center"
+          }
+        ],
+        "app_url": "https://help.trueid.net/vn-en",
+        "enable_api": true,
+        "icon": "https://cms.dmpcdn.com/misc/2021/06/18/815d23a0-d009-11eb-976f-13d2d304b9ff_original.png",
+        "image_bg": "https://cms.dmpcdn.com/misc/2022/04/11/491aaf40-b95f-11ec-90d2-75be72506ff7_webp_original.png",
+        "index": "1",
+        "item_enable": true,
+        "shelf_slug": "faqweb",
+        "type": "inapp-browser"
+      },
+      {
+        "language": [
+          {
+            "code": "vi",
+            "title": "Thiết lập"
+          },
+          {
+            "code": "en",
+            "title": "Setting"
+          }
+        ],
+        "app_url": "",
+        "enable_api": false,
+        "icon": "https://cms.dmpcdn.com/misc/2021/12/13/98d70390-5bbc-11ec-91fe-7b8d71e75fc5_original.png",
+        "image_bg": "https://cms.dmpcdn.com/misc/2022/04/11/f925e080-b964-11ec-846f-71c868a15fe0_webp_original.png",
+        "index": "2",
+        "item_enable": true,
+        "shelf_slug": "settings",
+        "type": ""
+      }
+    ]
+  },
+  {
+    "country": "kh",
+    "language": [
+      {
+        "code": "km",
+        "title": "បន្ថែម"
+      },
+      {
+        "code": "en",
+        "title": "More"
+      }
+    ],
+    "items": [
+      {
+        "language": [
+          {
+            "code": "km",
+            "title": "Game Center"
+          },
+          {
+            "code": "en",
+            "title": "Game Center"
+          }
+        ],
+        "app_url": "",
+        "enable_api": false,
+        "icon": "https://cms.dmpcdn.com/misc/2021/06/18/8159ef50-d009-11eb-976f-13d2d304b9ff_original.png",
+        "image_bg": "https://cms.dmpcdn.com/misc/2022/04/11/48643080-b95f-11ec-846f-71c868a15fe0_webp_original.png",
+        "index": "0",
+        "item_enable": true,
+        "shelf_slug": "getReward"
+      },
+      {
+        "language": [
+          {
+            "code": "km",
+            "title": "TrueID TV Remote"
+          },
+          {
+            "code": "en",
+            "title": "TrueID TV Remote"
+          }
+        ],
+        "app_url": "",
+        "enable_api": false,
+        "icon": "https://cms.dmpcdn.com/misc/2021/06/18/81a7c130-d009-11eb-ac3d-7b73ba5837a2_original.png",
+        "image_bg": "https://cms.dmpcdn.com/misc/2022/04/11/4bbe30f0-b95f-11ec-90d2-75be72506ff7_webp_original.png",
+        "index": "3",
+        "item_enable": true,
+        "shelf_slug": "trueidTVremote",
+        "type": ""
+      },
+      {
+        "language": [
+          {
+            "code": "km",
+            "title": "កន្លែងជំនួយ"
+          },
+          {
+            "code": "en",
+            "title": "Help Center"
+          }
+        ],
+        "app_url": "https://help.trueid.net/kh-en",
+        "enable_api": true,
+        "icon": "https://cms.dmpcdn.com/misc/2021/06/18/815d23a0-d009-11eb-976f-13d2d304b9ff_original.png",
+        "image_bg": "https://cms.dmpcdn.com/misc/2022/04/11/491aaf40-b95f-11ec-90d2-75be72506ff7_webp_original.png",
+        "index": "1",
+        "item_enable": true,
+        "shelf_slug": "faqweb",
+        "type": "inapp-browser"
+      },
+      {
+        "language": [
+          {
+            "code": "km",
+            "title": "បន្ថែម"
+          },
+          {
+            "code": "en",
+            "title": "Setting"
+          }
+        ],
+        "app_url": "",
+        "enable_api": false,
+        "icon": "https://cms.dmpcdn.com/misc/2021/12/13/98d70390-5bbc-11ec-91fe-7b8d71e75fc5_original.png",
+        "image_bg": "https://cms.dmpcdn.com/misc/2022/04/11/f925e080-b964-11ec-846f-71c868a15fe0_webp_original.png",
+        "index": "2",
+        "item_enable": true,
+        "shelf_slug": "settings",
+        "type": ""
+      }
+    ]
+  },
+  {
+    "country": "id",
+    "language": [
+      {
+        "code": "id",
+        "title": "Lebih Lanjut "
+      },
+      {
+        "code": "en",
+        "title": "More"
+      }
+    ],
+    "items": [
+      {
+        "language": [
+          {
+            "code": "id",
+            "title": "Game Center"
+          },
+          {
+            "code": "en",
+            "title": "Game Center"
+          }
+        ],
+        "app_url": "",
+        "enable_api": false,
+        "icon": "https://cms.dmpcdn.com/misc/2021/06/18/8159ef50-d009-11eb-976f-13d2d304b9ff_original.png",
+        "image_bg": "https://cms.dmpcdn.com/misc/2022/04/11/48643080-b95f-11ec-846f-71c868a15fe0_webp_original.png",
+        "index": "0",
+        "item_enable": true,
+        "shelf_slug": "getReward"
+      },
+      {
+        "language": [
+          {
+            "code": "id",
+            "title": "TrueID TV Remote"
+          },
+          {
+            "code": "en",
+            "title": "TrueID TV Remote"
+          }
+        ],
+        "app_url": "",
+        "enable_api": false,
+        "icon": "https://cms.dmpcdn.com/misc/2021/06/18/81a7c130-d009-11eb-ac3d-7b73ba5837a2_original.png",
+        "image_bg": "https://cms.dmpcdn.com/misc/2022/04/11/4bbe30f0-b95f-11ec-90d2-75be72506ff7_webp_original.png",
+        "index": "3",
+        "item_enable": true,
+        "shelf_slug": "trueidTVremote",
+        "type": ""
+      },
+      {
+        "language": [
+          {
+            "code": "id",
+            "title": "Pusat Bantuan"
+          },
+          {
+            "code": "en",
+            "title": "Help Center"
+          }
+        ],
+        "app_url": "https://help.trueid.net/id-id",
+        "enable_api": true,
+        "icon": "https://cms.dmpcdn.com/misc/2021/06/18/815d23a0-d009-11eb-976f-13d2d304b9ff_original.png",
+        "image_bg": "https://cms.dmpcdn.com/misc/2022/04/11/491aaf40-b95f-11ec-90d2-75be72506ff7_webp_original.png",
+        "index": "1",
+        "item_enable": true,
+        "shelf_slug": "faqweb",
+        "type": "inapp-browser"
+      },
+      {
+        "language": [
+          {
+            "code": "id",
+            "title": "Pengaturan"
+          },
+          {
+            "code": "en",
+            "title": "Setting"
+          }
+        ],
+        "app_url": "",
+        "enable_api": false,
+        "icon": "https://cms.dmpcdn.com/misc/2021/12/13/98d70390-5bbc-11ec-91fe-7b8d71e75fc5_original.png",
+        "image_bg": "https://cms.dmpcdn.com/misc/2022/04/11/f925e080-b964-11ec-846f-71c868a15fe0_webp_original.png",
+        "index": "2",
+        "item_enable": true,
+        "shelf_slug": "settings",
+        "type": ""
+      }
+    ]
+  },
+  {
+    "country": "ph",
+    "language": [
+      {
+        "code": "fil",
+        "title": "More"
+      },
+      {
+        "code": "en",
+        "title": "More"
+      }
+    ],
+    "items": [
+      {
+        "language": [
+          {
+            "code": "fil",
+            "title": "Game Center"
+          },
+          {
+            "code": "en",
+            "title": "Game Center"
+          }
+        ],
+        "app_url": "",
+        "enable_api": false,
+        "icon": "https://cms.dmpcdn.com/misc/2021/06/18/8159ef50-d009-11eb-976f-13d2d304b9ff_original.png",
+        "image_bg": "https://cms.dmpcdn.com/misc/2022/04/11/48643080-b95f-11ec-846f-71c868a15fe0_webp_original.png",
+        "index": "0",
+        "item_enable": true,
+        "shelf_slug": "getReward"
+      },
+      {
+        "language": [
+          {
+            "code": "fil",
+            "title": "TrueID TV Remote"
+          },
+          {
+            "code": "en",
+            "title": "TrueID TV Remote"
+          }
+        ],
+        "app_url": "",
+        "enable_api": false,
+        "icon": "https://cms.dmpcdn.com/misc/2021/06/18/81a7c130-d009-11eb-ac3d-7b73ba5837a2_original.png",
+        "image_bg": "https://cms.dmpcdn.com/misc/2022/04/11/4bbe30f0-b95f-11ec-90d2-75be72506ff7_webp_original.png",
+        "index": "2",
+        "item_enable": true,
+        "shelf_slug": "trueidTVremote",
+        "type": ""
+      },
+      {
+        "language": [
+          {
+            "code": "fil",
+            "title": "Help Center"
+          },
+          {
+            "code": "en",
+            "title": "Help Center"
+          }
+        ],
+        "app_url": "https://help.trueid.net/ph-fil",
+        "enable_api": true,
+        "icon": "https://cms.dmpcdn.com/misc/2021/06/18/815d23a0-d009-11eb-976f-13d2d304b9ff_original.png",
+        "image_bg": "https://cms.dmpcdn.com/misc/2022/04/11/491aaf40-b95f-11ec-90d2-75be72506ff7_webp_original.png",
+        "index": "1",
+        "item_enable": true,
+        "shelf_slug": "faqweb",
+        "type": "inapp-browser"
+      },
+      {
+        "language": [
+          {
+            "code": "fil",
+            "title": "Setting"
+          },
+          {
+            "code": "en",
+            "title": "Setting"
+          }
+        ],
+        "app_url": "",
+        "enable_api": false,
+        "icon": "https://cms.dmpcdn.com/misc/2021/12/13/98d70390-5bbc-11ec-91fe-7b8d71e75fc5_original.png",
+        "image_bg": "https://cms.dmpcdn.com/misc/2022/04/11/f925e080-b964-11ec-846f-71c868a15fe0_webp_original.png",
+        "index": "2",
+        "item_enable": true,
+        "shelf_slug": "settings",
+        "type": ""
+      }
+    ]
+  },
+  {
+    "country": "mm",
+    "language": [
+      {
+        "code": "my",
+        "title": "နောက်ထပ်"
+      },
+      {
+        "code": "en",
+        "title": "More"
+      }
+    ],
+    "items": [
+      {
+        "language": [
+          {
+            "code": "my",
+            "title": "ဂိမ်းစင်တာ"
+          },
+          {
+            "code": "en",
+            "title": "Game Center"
+          }
+        ],
+        "app_url": "",
+        "enable_api": false,
+        "icon": "https://cms.dmpcdn.com/misc/2021/06/18/8159ef50-d009-11eb-976f-13d2d304b9ff_original.png",
+        "image_bg": "https://cms.dmpcdn.com/misc/2022/04/11/48643080-b95f-11ec-846f-71c868a15fe0_webp_original.png",
+        "index": "0",
+        "item_enable": true,
+        "shelf_slug": "getReward"
+      },
+      {
+        "language": [
+          {
+            "code": "my",
+            "title": "TrueID TV Remote"
+          },
+          {
+            "code": "en",
+            "title": "TrueID TV Remote"
+          }
+        ],
+        "app_url": "",
+        "enable_api": false,
+        "icon": "https://cms.dmpcdn.com/misc/2021/06/18/81a7c130-d009-11eb-ac3d-7b73ba5837a2_original.png",
+        "image_bg": "https://cms.dmpcdn.com/misc/2022/04/11/4bbe30f0-b95f-11ec-90d2-75be72506ff7_webp_original.png",
+        "index": "2",
+        "item_enable": true,
+        "shelf_slug": "trueidTVremote",
+        "type": ""
+      },
+      {
+        "language": [
+          {
+            "code": "my",
+            "title": "အကူအညီရယူရန်"
+          },
+          {
+            "code": "en",
+            "title": "Help Center"
+          }
+        ],
+        "app_url": "https://help.trueid.net/mm-en",
+        "enable_api": true,
+        "icon": "https://cms.dmpcdn.com/misc/2021/06/18/815d23a0-d009-11eb-976f-13d2d304b9ff_original.png",
+        "image_bg": "https://cms.dmpcdn.com/misc/2022/04/11/491aaf40-b95f-11ec-90d2-75be72506ff7_webp_original.png",
+        "index": "1",
+        "item_enable": true,
+        "shelf_slug": "faqweb",
+        "type": "inapp-browser"
+      },
+      {
+        "language": [
+          {
+            "code": "my",
+            "title": "နောက်ထပ်"
+          },
+          {
+            "code": "en",
+            "title": "Setting"
+          }
+        ],
+        "app_url": "",
+        "enable_api": false,
+        "icon": "https://cms.dmpcdn.com/misc/2021/12/13/98d70390-5bbc-11ec-91fe-7b8d71e75fc5_original.png",
+        "image_bg": "https://cms.dmpcdn.com/misc/2022/04/11/f925e080-b964-11ec-846f-71c868a15fe0_webp_original.png",
+        "index": "2",
+        "item_enable": true,
+        "shelf_slug": "settings",
+        "type": ""
+      }
+    ]
+  }
+]</value>
+  </entry>
+  <entry>
+    <key>more_page</key>
+    <value>[   {     "shelf_items": [       {         "app_url": "",         "enable_api": false,         "icon": "https://cms.dmpcdn.com/dev_misc/2021/06/24/253bddd0-d498-11eb-b190-ff8236efc842_original.png",         "image_bg": "https://cms.dmpcdn.com/misc/2021/07/14/d246af90-e470-11eb-817b-17e2ded05283_original.png",         "index": "6",         "item_enable": true,         "shelf_slug": "wallet",         "title_en": "Wallet",         "title_mm": "ပိုက္ဆံအိတ္",         "title_th": "วอลเล็ท",         "type": ""       },       {         "app_url": "",         "enable_api": false,         "icon": "https://cms.dmpcdn.com/misc/2021/06/18/81a7c130-d009-11eb-ac3d-7b73ba5837a2_original.png",         "image_bg": "https://cms.dmpcdn.com/misc/2021/07/14/d2db7580-e470-11eb-b3f5-8140d94796e3_original.png",         "index": "2",         "item_enable": true,         "shelf_slug": "trueidTVremote",         "title_en": "TrueID TV Remote",         "title_th": "รีโมท ทรูไอดี ทีวี",         "title_mm": "ထရူးအိုင္ဒီ တီဗီ လီမုတ္",         "type": ""       },       {         "app_url": "",         "enable_api": false,         "icon": "https://cms.dmpcdn.com/misc/2021/06/18/8159ef50-d009-11eb-976f-13d2d304b9ff_original.png",         "image_bg": "https://cms.dmpcdn.com/misc/2021/09/13/ae76eb80-1449-11ec-8db4-0b8b3a4ec79c_original.png",         "index": "0",         "item_enable": true,         "shelf_slug": "getReward",         "title_en": "Game Center",         "title_th": "เกมเซ็นเตอร์",         "title_mm": "ဂိမ္းစင္တာ",         "type": ""       },       {         "app_url": "https://trueidtv.trueid.net/",         "enable_api": true,         "icon": "https://cms.dmpcdn.com/misc/2021/11/23/11c42d50-4c40-11ec-bdd6-1d5b79336c2b_webp_original.png",         "image_bg": "https://cms.dmpcdn.com/misc/2021/11/23/ed0f9130-4c39-11ec-ab58-5fb28ccfed2d_webp_original.png",         "index": "5",         "item_enable": true,         "shelf_slug": "",         "title_en": "TrueID TV Box",         "title_th": "กล่องทรูไอดี ทีวี",         "title_mm": "TrueID TV Box",         "type": "inapp-browser"       },       {         "app_url": "https://creators.trueid.net/?university=15876&amp;register_init=1&amp;utm_source=trueid-app&amp;utm_medium=button&amp;utm_campaign=trueid-app_more_page",         "enable_api": true,         "icon": "https://cms.dmpcdn.com/misc/2021/06/18/6abbfcc0-d009-11eb-952e-8703c29a4e8e_original.png",         "image_bg": "https://cms.dmpcdn.com/misc/2021/07/14/d1b0b120-e470-11eb-b3f5-8140d94796e3_original.png",         "index": "5",         "item_enable": true,         "shelf_slug": "",         "title_en": "TrueID In-Trend",         "title_th": "สร้างคอนเทนต์",         "title_mm": "TrueID In-Trend",         "type": "inapp-browser"       },       {         "app_url": "",         "deeplink": "https://myaccount.trueid.net/subscriptions",         "enable_api": true,         "icon": "https://cms.dmpcdn.com/misc/2021/11/04/063e9e10-3d14-11ec-938b-c9c4306501ff_original.png",         "image_bg": "https://cms.dmpcdn.com/misc/2021/11/04/12023ea0-3d14-11ec-938b-c9c4306501ff_original.png",         "index": "0",         "item_enable": true,         "shelf_slug": "",         "title_en": "Subscriptions",         "title_th": "สมาชิกแพ็กเกจ",         "title_mm": "",         "type": "deeplink"       },       {         "app_url": "https://tsm-discovery-web.weomni.com",         "deeplink": "https://home.trueid.net/inapp-browser-with-ssoid?website=https://tsm-discovery-web.weomni.com",         "enable_api": true,         "icon": "https://cms.dmpcdn.com/misc/2021/07/14/dc3165e0-e47a-11eb-817b-17e2ded05283_original.png",         "image_bg": "https://cms.dmpcdn.com/misc/2021/07/27/a4ac60b0-ee8a-11eb-8217-8759e1bcd621_original.png",         "index": "0",         "item_enable": true,         "shelf_slug": "",         "title_en": "Shops Near Me",         "title_th": "หาร้านใกล้คุณ",         "title_mm": "အနီးအနားရွိဆိုင္မ်ား",         "type": "deeplink"       },       {         "app_url": "",         "enable_api": false,         "icon": "https://cms.dmpcdn.com/misc/2021/12/13/9912ad00-5bbc-11ec-bfa1-578c6faec9e4_original.png",         "image_bg": "https://cms.dmpcdn.com/misc/2021/12/13/99178f00-5bbc-11ec-bfa1-578c6faec9e4_original.png",         "index": "4",         "item_enable": true,         "shelf_slug": "truecloud",         "title_en": "TrueCloud",         "title_th": "ทรูคลาวด์",         "title_mm": "ထရူးကေလာက္",         "type": ""       },       {         "app_url": "https://help.trueid.net/app/th-th",         "enable_api": true,         "icon": "https://cms.dmpcdn.com/misc/2021/06/18/815d23a0-d009-11eb-976f-13d2d304b9ff_original.png",         "image_bg": "https://cms.dmpcdn.com/misc/2021/07/14/d16fb080-e470-11eb-b3f5-8140d94796e3_original.png",         "index": "1",         "item_enable": true,         "shelf_slug": "faqweb",         "title_en": "Help Center",         "title_th": "คำถามที่พบบ่อย",         "title_mm": "ေမးခြန္းမ်ား",         "type": "inapp-browser"       },       {         "app_url": "",         "enable_api": false,         "icon": "https://cms.dmpcdn.com/misc/2021/12/13/98d70390-5bbc-11ec-91fe-7b8d71e75fc5_original.png",         "image_bg": "https://cms.dmpcdn.com/misc/2021/12/13/52d17570-5bc0-11ec-bfa1-578c6faec9e4_original.png",         "index": "2",         "item_enable": true,         "shelf_slug": "settings",         "title_en": "Setting",         "title_th": "ตั้งค่า",         "title_mm": "ဆက္တင္",         "type": ""       }     ],     "title_en": "Services",     "title_th": "บริการ",     "title_mm": "ဝန္ေဆာင္မႈ"   } ]</value>
+  </entry>
+  <entry>
+    <key>rocket</key>
+    <value>{"control_list":["BTesB8QCQnAi7o7PRosxs/BpO40byP18f6v8omGTlPo="],"blackbox":["E3tYcwo9CiqATmKtpMLW5V+pzIq+ZoDmpXSiJlXGmTo="]}</value>
+  </entry>
+  <entry>
+    <key>oneapp_setting</key>
+    <value>[
+    {
+        "country": "th",
+        "language": [
+            {
+                "code": "th",
+                "title": "ตั้งค่า"
+            },
+            {
+                "code": "en",
+                "title": "Setting"
+            },
+            {
+                "code": "my",
+                "title": "Setting"
+            }
+        ],
+        "items": {
+            "notification": {
+                "language": [
+                    {
+                        "code": "th",
+                        "title": "การแจ้งเตือน"
+                    },
+                    {
+                        "code": "en",
+                        "title": "Allow Notification"
+                    },
+                    {
+                        "code": "my",
+                        "title": "အသိပေးချက်လက်ခံရန်"
+                    }
+                ],
+                "enable": "true"
+            },
+            "streaming_device": {
+                "language": [
+                    {
+                        "code": "th",
+                        "title": "จัดการอุปกรณ์รับชม"
+                    },
+                    {
+                        "code": "en",
+                        "title": "Streaming device"
+                    },
+                    {
+                        "code": "my",
+                        "title": "Streaming အသုံးပြုမည့်စက်"
+                    }
+                ],
+                "enable": "true"
+            },
+            "chat": {
+                "language": [
+                    {
+                        "code": "th",
+                        "title": "แชทกับเรา"
+                    },
+                    {
+                        "code": "en",
+                        "title": "Chat with TrueID"
+                    },
+                    {
+                        "code": "my",
+                        "title": "trueID နှင့် ပြောရန်"
+                    }
+                ],
+                "enable": "true"
+            },
+            "about": {
+                "language": [
+                    {
+                        "code": "th",
+                        "title": "เกี่ยวกับแอป"
+                    },
+                    {
+                        "code": "en",
+                        "title": "About this app"
+                    },
+                    {
+                        "code": "my",
+                        "title": "trueID အကြောင်း"
+                    }
+                ],
+                "enable": "true",
+                "sub_items": {
+                    "privacy": {
+                        "language": [
+                            {
+                                "code": "th",
+                                "title": "นโยบายการคุ้มครองข้อมูลส่วนบุคคล",
+                                "url": "https://home.trueid.net/campaign/K0vVpaQx2NY0"
+                            },
+                            {
+                                "code": "en",
+                                "title": "Privacy Policy",
+                                "url": "https://home.trueid.net/campaign/K0vVpaQx2NY0"
+                            },
+                            {
+                                "code": "my",
+                                "title": "ကိုယ်ရေးအချက်အလက်မူဝါဒ",
+                                "url": "https://home.trueid.net/campaign/K0vVpaQx2NY0"
+                            }
+                        ],
+                        "enable": "true"
+                    },
+                    "term_con": {
+                        "language": [
+                            {
+                                "code": "th",
+                                "title": "ข้อตกลงและเงื่อนไขการใช้บริการ",
+                                "url": "https://home.trueid.net/campaign/DMem80PKr55M"
+                            },
+                            {
+                                "code": "en",
+                                "title": "Terms &amp; Condition of Service",
+                                "url": "https://home.trueid.net/campaign/z52PLJdxwdlk"
+                            },
+                            {
+                                "code": "my",
+                                "title": "စည်းကမ်းသတ်မှတ်ချက်များ",
+                                "url": "https://home.trueid.net/campaign/z52PLJdxwdlk"
+                            }
+                        ],
+                        "enable": "true"
+                    }
+                }
+            }
+        }
+    },
+    {
+        "country": "vn",
+        "language": [
+            {
+                "code": "vi",
+                "title": "Thiết lập"
+            },
+            {
+                "code": "en",
+                "title": "Setting"
+            }
+        ],
+        "items": {
+            "notification": {
+                "language": [
+                    {
+                        "code": "vi",
+                        "title": "Cho phép thông báo"
+                    },
+                    {
+                        "code": "en",
+                        "title": "Allow Notification"
+                    }
+                ],
+                "enable": "true"
+            },
+            "streaming_device": {
+                "language": [
+                    {
+                        "code": "vi",
+                        "title": "Thiết bị phát"
+                    },
+                    {
+                        "code": "en",
+                        "title": "Streaming device"
+                    }
+                ],
+                "enable": "true"
+            },
+            "about": {
+                "language": [
+                    {
+                        "code": "vi",
+                        "title": "Thông tin ứng dụng"
+                    },
+                    {
+                        "code": "en",
+                        "title": "About this app"
+                    }
+                ],
+                "enable": "true",
+                "sub_items": {
+                    "privacy": {
+                        "language": [
+                            {
+                                "code": "vi",
+                                "title": "Chính sách bảo mật",
+                                "url": "https://home.trueid.net/campaign/xN7BBQmd03qo"
+                            },
+                            {
+                                "code": "en",
+                                "title": "Privacy Policy",
+                                "url": "https://home.trueid.net/campaign/xN7BBQmd03qo"
+                            }
+                        ],
+                        "enable": "true"
+                    },
+                    "term_con": {
+                        "language": [
+                            {
+                                "code": "vi",
+                                "title": "Điểu khoản &amp; Điều Kiện",
+                                "url": "https://home.trueid.net/campaign/Z2QRRGwa9jRA"
+                            },
+                            {
+                                "code": "en",
+                                "title": "Terms &amp; Condition of Service",
+                                "url": "https://home.trueid.net/campaign/Z2QRRGwa9jRA"
+                            }
+                        ],
+                        "enable": "true"
+                    }
+                }
+            }
+        }
+    },
+    {
+        "country": "kh",
+        "language": [
+            {
+                "code": "km",
+                "title": "ការកំណត់"
+            },
+            {
+                "code": "en",
+                "title": "Setting"
+            }
+        ],
+        "items": {
+            "notification": {
+                "language": [
+                    {
+                        "code": "km",
+                        "title": "អនុញ្ញាតការជូនដំណឹង"
+                    },
+                    {
+                        "code": "en",
+                        "title": "Allow Notification"
+                    }
+                ],
+                "enable": "true"
+            },
+            "streaming_device": {
+                "language": [
+                    {
+                        "code": "km",
+                        "title": "ឧបករណ៍កំពុងទស្សនា"
+                    },
+                    {
+                        "code": "en",
+                        "title": "Streaming device"
+                    }
+                ],
+                "enable": "true"
+            },
+            "about": {
+                "language": [
+                    {
+                        "code": "km",
+                        "title": "អំពីកម្មវិធី"
+                    },
+                    {
+                        "code": "en",
+                        "title": "About this app"
+                    }
+                ],
+                "enable": "true",
+                "sub_items": {
+                    "privacy": {
+                        "language": [
+                            {
+                                "code": "km",
+                                "title": "​គោលការណ៍​ភាព​ឯកជន",
+                                "url": "https://home.trueid.net/campaign/ZGNJJR8VK47G"
+                            },
+                            {
+                                "code": "en",
+                                "title": "Privacy Policy",
+                                "url": "https://home.trueid.net/campaign/ZGNJJR8VK47G"
+                            }
+                        ],
+                        "enable": "true"
+                    },
+                    "term_con": {
+                        "language": [
+                            {
+                                "code": "km",
+                                "title": "ល័ក្ខខ័ណ្ឌនៃសេវាកម្ម",
+                                "url": "https://home.trueid.net/campaign/18xDDlXnzZX8"
+                            },
+                            {
+                                "code": "en",
+                                "title": "Terms &amp; Condition of Service",
+                                "url": "https://home.trueid.net/campaign/18xDDlXnzZX8"
+                            }
+                        ],
+                        "enable": "true"
+                    }
+                }
+            }
+        }
+    },
+    {
+        "country": "ph",
+        "language": [
+            {
+                "code": "fil",
+                "title": "Setting"
+            },
+            {
+                "code": "en",
+                "title": "Setting"
+            }
+        ],
+        "items": {
+            "notification": {
+                "language": [
+                    {
+                        "code": "fil",
+                        "title": "Allow Notification"
+                    },
+                    {
+                        "code": "en",
+                        "title": "Allow Notification"
+                    }
+                ],
+                "enable": "true"
+            },
+            "streaming_device": {
+                "language": [
+                    {
+                        "code": "fil",
+                        "title": "Streaming device"
+                    },
+                    {
+                        "code": "en",
+                        "title": "Streaming device"
+                    }
+                ],
+                "enable": "true"
+            },
+            "about": {
+                "language": [
+                    {
+                        "code": "fil",
+                        "title": "About this app"
+                    },
+                    {
+                        "code": "en",
+                        "title": "About this app"
+                    }
+                ],
+                "enable": "true",
+                "sub_items": {
+                    "privacy": {
+                        "language": [
+                            {
+                                "code": "fil",
+                                "title": "Privacy Policy",
+                                "url": "https://home.trueid.net/campaign/XJmBBYklrrP0"
+                            },
+                            {
+                                "code": "en",
+                                "title": "Privacy Policy",
+                                "url": "https://home.trueid.net/campaign/XJmBBYklrrP0"
+                            }
+                        ],
+                        "enable": "true"
+                    },
+                    "term_con": {
+                        "language": [
+                            {
+                                "code": "fil",
+                                "title": "Terms &amp; Condition of Service",
+                                "url": "https://home.trueid.net/campaign/xLYrrl8Z54aq"
+                            },
+                            {
+                                "code": "en",
+                                "title": "Terms &amp; Condition of Service",
+                                "url": "https://home.trueid.net/campaign/xLYrrl8Z54aq"
+                            }
+                        ],
+                        "enable": "true"
+                    }
+                }
+            }
+        }
+    },
+    {
+        "country": "id",
+        "language": [
+            {
+                "code": "id",
+                "title": "Pengaturan"
+            },
+            {
+                "code": "en",
+                "title": "Setting"
+            }
+        ],
+        "items": {
+            "notification": {
+                "language": [
+                    {
+                        "code": "id",
+                        "title": "Izinkan Notifikasi"
+                    },
+                    {
+                        "code": "en",
+                        "title": "Allow Notification"
+                    }
+                ],
+                "enable": "true"
+            },
+            "streaming_device": {
+                "language": [
+                    {
+                        "code": "id",
+                        "title": "Perangkat streaming"
+                    },
+                    {
+                        "code": "en",
+                        "title": "Streaming device"
+                    }
+                ],
+                "enable": "true"
+            },
+            "about": {
+                "language": [
+                    {
+                        "code": "id",
+                        "title": "Tentang aplikasi ini"
+                    },
+                    {
+                        "code": "en",
+                        "title": "About this app"
+                    }
+                ],
+                "enable": "true",
+                "sub_items": {
+                    "privacy": {
+                        "language": [
+                            {
+                                "code": "id",
+                                "title": "Kebijakan Pribadi",
+                                "url": "https://home.trueid.net/campaign/lOzrr8WgWYMO"
+                            },
+                            {
+                                "code": "en",
+                                "title": "Privacy Policy",
+                                "url": "https://home.trueid.net/campaign/lOzrr8WgWYMO"
+                            }
+                        ],
+                        "enable": "true"
+                    },
+                    "term_con": {
+                        "language": [
+                            {
+                                "code": "id",
+                                "title": "Syarat dan Ketentuan",
+                                "url": "https://home.trueid.net/campaign/e6nQQWlZxgwj"
+                            },
+                            {
+                                "code": "en",
+                                "title": "Terms &amp; Condition of Service",
+                                "url": "https://home.trueid.net/campaign/e6nQQWlZxgwj"
+                            }
+                        ],
+                        "enable": "true"
+                    }
+                }
+            }
+        }
+    },
+    {
+        "country": "mm",
+        "language": [
+            {
+                "code": "my",
+                "title": "Setting"
+            },
+            {
+                "code": "en",
+                "title": "Setting"
+            }
+        ],
+        "items": {
+            "notification": {
+                "language": [
+                    {
+                        "code": "my",
+                        "title": "အသိပေးချက်လက်ခံရန်"
+                    },
+                    {
+                        "code": "en",
+                        "title": "Allow Notification"
+                    }
+                ],
+                "enable": "true"
+            },
+            "streaming_device": {
+                "language": [
+                    {
+                        "code": "my",
+                        "title": "Streaming အသုံးပြုမည့်စက်"
+                    },
+                    {
+                        "code": "en",
+                        "title": "Streaming device"
+                    }
+                ],
+                "enable": "true"
+            },
+            "about": {
+                "language": [
+                    {
+                        "code": "my",
+                        "title": "trueID အကြောင်း"
+                    },
+                    {
+                        "code": "en",
+                        "title": "About this app"
+                    }
+                ],
+                "enable": "true",
+                "sub_items": {
+                    "privacy": {
+                        "language": [
+                            {
+                                "code": "my",
+                                "title": "ကိုယ်ရေးအချက်အလက်မူဝါဒ",
+                                "url": "https://home.trueid.net/campaign/Qxo77PXXDmDx"
+                            },
+                            {
+                                "code": "en",
+                                "title": "Privacy Policy",
+                                "url": "https://home.trueid.net/campaign/Qxo77PXXDmDx"
+                            }
+                        ],
+                        "enable": "true"
+                    },
+                    "term_con": {
+                        "language": [
+                            {
+                                "code": "my",
+                                "title": "စည်းကမ်းသတ်မှတ်ချက်များ",
+                                "url": "https://home.trueid.net/campaign/EqPYYr8a6RVp"
+                            },
+                            {
+                                "code": "en",
+                                "title": "Terms &amp; Condition of Service",
+                                "url": "https://home.trueid.net/campaign/EqPYYr8a6RVp"
+                            }
+                        ],
+                        "enable": "true"
+                    }
+                }
+            }
+        }
+    }
+]</value>
+  </entry>
+  <entry>
+    <key>inbox_enabled</key>
+    <value>true</value>
+  </entry>
+  <entry>
+    <key>planet</key>
+    <value>{ "mercury": true, "earth": true, "uranus": true }</value>
+  </entry>
+  <entry>
+    <key>today_now_trending_enable</key>
+    <value>false</value>
+  </entry>
+  <entry>
+    <key>feature_a</key>
+    <value>false</value>
+  </entry>
+</defaults>

@@ -1,0 +1,333 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<resources>
+    <!-- General -->
+    <string name="songs">เพลง</string>
+    <string name="playlists">เพลย์ลิสต์</string>
+    <string name="artists">ศิลปิน</string>
+    <string name="albums">อัลบั้ม</string>
+    <string name="videos">วีดีโอ</string>
+    <string name="stations">สถานี</string>
+    <string name="add">เพิ่ม</string>
+    <string name="delete">ลบ</string>
+
+    <string name="generic_error_message">There was an unexpected error</string>
+    <string name="generic_error_button">Retry</string>
+    <string name="dialog_ok">OK</string>
+    <string name="dialog_yes">Yes</string>
+    <string name="dialog_cancel">Cancel</string>
+    <string name="player_loading">Loading…</string>
+    <string name="share">Share</string>
+    <string name="track_not_available_message">This song is no longer available</string>
+    <string name="shuffle">Shuffle</string>
+    <string name="ok">ตกลง</string>
+    <string name="confirm">ตกลง</string>
+
+    <string name="app_name">TrueID</string>
+    <string name="route_host" translatable="false">play-demo.tunedglobal.com</string>
+    <string name="route_scheme" translatable="false">demo</string>
+    <string name="station_preset_description" translatable="false">TrueID Music</string>
+
+    <!-- Product flavour specific strings -->
+    <string name="share_station_title">Listen to this cool %s mix on #TrueID Music</string>
+    <string name="share_artist_title">Listen to %s on #TrueID Music</string>
+    <string name="share_profile_title">Check out %s on #TrueID Music</string>
+    <string name="share_album_title">Listen to %s on #TrueID Music</string>
+    <string name="share_playlist_title">Listen to Playlist %s on #TrueID Music</string>
+    <string name="share_track_title">Listen to %s on #TrueID Music</string>
+    <string name="share_video_title">Watch %s on #TrueID Music</string>
+    <string name="share_content_title">Check out %s on #TrueID Music</string>
+
+    <!-- Splash Screen -->
+
+    <!-- Home Screen -->
+    <string name="home_title">Music</string>
+    <string name="for_you_title">For you</string>
+    <string name="my_music_title">My Music</string>
+    <string name="overview_title">Overview</string>
+    <string name="tuning_title">Tuning</string>
+    <string name="loading_content_error">Error loading content, please try again</string>
+    <string name="search_top_hit_heading">Top Hit</string>
+    <string name="search_station_heading">Mixes</string>
+    <string name="search_artist_heading">Artists</string>
+    <string name="search_artist_description">Artist</string>
+    <string name="search_album_heading">Albums</string>
+    <string name="search_song_heading">Songs</string>
+    <string name="search_video_heading">Videos</string>
+    <string name="search_playlist_heading">Playlists</string>
+    <string name="search_trending_heading">Trending</string>
+    <string name="search_recent_heading">Recent</string>
+    <string name="search_profiles_heading">Profiles</string>
+    <string name="search_profile_description">Profile</string>
+    <string name="search_results_error_title">There was an error retrieving your search results</string>
+    <string name="search_results_not_available">Sorry no rights in your country</string>
+    <string name="no_search_results_heading">No Results Found</string>
+    <string name="no_search_results_body">Check your spelling and try again or try another search term</string>
+    <string name="various_artists_title">Various Artists</string>
+    <string name="play_video_failed_message">Failed to play video</string>
+    <string name="play_song_failed_message">Failed to play song</string>
+    <string name="see_all_label">See all</string>
+    <string name="clear_button_text">Clear all</string>
+
+    <!-- Local Mix -->
+
+    <!-- Player -->
+    <string name="player_no_skips_remaining">No skips remaining</string>
+    <plurals name="player_skips_remaining">
+        <item quantity="zero">@string/player_no_skips_remaining</item>
+        <item quantity="one">%d skip remaining</item>
+        <item quantity="other">%d skips remaining</item>
+    </plurals>
+    <string name="playback_error_end_of_queue">No more songs available.</string>
+    <string name="playback_error_play_limit_reached">You have reached this month\'s play limit</string>
+    <string name="playback_error_streaming_disabled">No Wi-Fi network found. Please turn on \"Allow Streaming via Mobile Data\"</string>
+    <string name="playback_error_streaming_disabled_dialog_ok">Settings</string>
+    <string name="playback_error_streaming_disabled_dialog_cancel">Cancel</string>
+    <string name="player_queue_auto_play_enabled">Auto-play is enabled</string>
+    <string name="player_queue_auto_play_description">Similar songs will continue to play when the end of the queue is reached.</string>
+    <string name="no_lyrics">Lyrics not available</string>
+    <string name="lyrics_title">Lyrics</string>
+    <string name="clear_title">Clear</string>
+    <string name="clear_queue_confirmation_message">Are you sure you want to clear the queue?</string>
+
+    <!-- Player Settings -->
+    <string name="player_setting_title">Player Settings</string>
+    <string name="player_queue_title">Player Queue</string>
+    <string name="data_heading">Mobile Data</string>
+    <string name="sleep_timer_heading">Sleep Timer</string>
+    <string name="sleep_after">Turn Off After</string>
+    <string name="sleep_timer_options_off">Off</string>
+
+    <!-- Station Screen -->
+    <string name="featuring_title">Featuring</string>
+    <string name="similar_title">Similar</string>
+    <string name="station_play_button">Play</string>
+    <string name="station_description">Mix</string>
+    <string name="station_artist_description">Artist Mix</string>
+    <string name="station_artist_shuffle_description">Artist Shuffle</string>
+    <string name="station_user_description">Profile Mix</string>
+    <string name="load_station_error">Error loading mix</string>
+    <string name="likes_title">Likes</string>
+    <string name="dislikes_title">Dislikes</string>
+    <string name="error_removing_vote">Error removing liked song</string>
+    <string name="error_already_removing_vote">Please wait until current liked song is removed</string>
+    <string name="error_loading_votes">Error loading liked songs</string>
+    <string name="no_likes_title">No Liked Songs</string>
+    <string name="no_likes_description">When you\'re playing a mix, click the <b>thumb up</b> icon to like a song, we\'ll try to get more songs that sound similar during that mix.</string>
+    <string name="no_dislikes_title">No Disliked Songs</string>
+    <string name="no_dislikes_description">When you\'re playing a mix, click the <b>thumb down</b> icon to dislike a song, we\'ll avoid playing that song during that mix.</string>
+
+    <!-- Album Screen -->
+    <string name="more_albums_from_title">More from %1$s</string>
+    <string name="album_play_button">Shuffle Play</string>
+    <string name="error_load_album">Error loading album</string>
+    <string name="disc_title">Disc %d</string>
+    <string name="error_album_navigation_not_allowed">Albums are unavailable at this time</string>
+    <string name="album_by">By %s</string>
+
+    <!-- Artist Screen -->
+    <string name="appears_in_title">Mixes with </string>
+    <string name="albums_title">Albums</string>
+    <string name="trending_title">Trending</string>
+    <string name="artist_play_button">Play Artist</string>
+    <string name="appears_on_albums_title">Appears On</string>
+    <string name="mixes_with_title">Mixes with %s</string>
+    <string name="videos_title">Videos</string>
+    <string name="load_artist_error">Error loading artist</string>
+    <string name="play_artist_station_error">Could not start radio from this artist.</string>
+    <string name="artist_label">Artist</string>
+    <string name="hint_artist_shuffle">Play trending songs from this artist</string>
+    <string name="hint_artist_mix">Start a mix with this artist and similar ones</string>
+    <string name="latest_songs_title">Latest Songs</string>
+
+    <!-- BottomSheet -->
+    <string name="bottom_sheet_share_label">Share</string>
+    <string name="bottom_sheet_add_collection_label">เพิ่มเข้ารายการโปรด</string>
+    <string name="bottom_sheet_remove_collection_label">ลบออกจากรายการโปรด</string>
+    <string name="bottom_sheet_show_artist_label">ไปยังศิลปิน</string>
+    <string name="bottom_sheet_clear_votes_label">Clear my likes/dislikes</string>
+    <string name="bottom_sheet_remove_playlist_label">ลบเพลย์ลิสต์</string>
+    <string name="bottom_sheet_edit_playlist_label">Edit playlist</string>
+    <string name="bottom_sheet_change_playlist_name_label">Change playlist name</string>
+    <string name="bottom_sheet_add_songs_label">Add songs</string>
+    <string name="bottom_sheet_add_to_queue_label">เพิ่มลงคิวเพลง</string>
+    <string name="bottom_sheet_remove_from_queue_label">Remove from queue</string>
+    <string name="bottom_sheet_add_to_playlist_label">Add to playlist</string>
+    <string name="bottom_sheet_add_to_my_playlist_label">เพิ่มลงในเพลย์ลิสต์ของฉัน</string>
+    <string name="bottom_sheet_remove_from_playlist_label">ลบออกจากเพลย์ลิสต์นี้</string>
+    <string name="bottom_sheet_show_album_label">ไปยังอัลบั้ม</string>
+    <string name="bottom_sheet_player_settings_label">Player settings</string>
+    <string name="bottom_sheet_play_video_label">Play video</string>
+    <string name="bottom_sheet_download_label">Download</string>
+    <string name="bottom_sheet_downloading_label">Downloading</string>
+    <string name="bottom_sheet_remove_download_label">Remove from downloads</string>
+    <string name="bottom_sheet_make_public_label">Make public</string>
+    <string name="bottom_sheet_make_private_label">Make private</string>
+    <string name="bottom_sheet_remove_from_history_label">Remove from history</string>
+    <string name="follow_title">Follow</string>
+    <string name="unfollow_title">Unfollow</string>
+    <string name="starred_video_added_message">Added to Starred Videos in My Music</string>
+    <string name="clear_votes_error">There was an error clearing Likes/Dislikes</string>
+    <string name="clear_votes_success">Likes/Dislikes has been cleared successfully</string>
+    <string name="clear_votes_empty">You have no Likes/Dislikes for this mix</string>
+    <string name="add_to_queue_error">You cannot add to a queue when playing a Mix or Radio. Select play on your selection to replace the music currently playing.</string>
+    <string name="explicit_label">Explicit</string>
+
+    <!-- My Profile Screen -->
+    <string name="error_loading_images">Error loading images</string>
+    <string name="save_title">Save</string>
+    <string name="audio_quality_title">Audio Quality</string>
+    <string name="audio_quality_high_title">High quality streaming</string>
+
+    <!--Setting page-->
+    <string name="allow_mobile_data_title">Allow streaming via Mobile Data</string>
+
+    <!-- Alarms -->
+
+    <!-- Profile Screen -->
+    <string name="follower_count_title">%s followers</string>
+
+    <!-- Activity Feed -->
+
+    <!-- Onboarding Screen -->
+
+    <!-- Mobile Verify Screen -->
+
+    <!-- Subscribe Screens -->
+    <string name="token_expired">Re-auth required</string>
+
+    <!-- Favourites -->
+    <string name="favourites_title">รายการโปรด</string>
+    <string name="collection_error_message">There was an error adding item to your collection</string>
+    <string name="starred_station_added_message">Added to Starred Mixes in My Music</string>
+    <string name="starred_profile_added_message">Added to Followed Profiles</string>
+    <string name="playlist_description">%d songs</string>
+    <string name="no_favourited_title">ไม่มีรายการ%sโปรด</string>
+    <string name="no_favourited_description">เพิ่มรายการ%sโปรดเพื่อเริ่มใช้งาน</string>
+
+    <!-- Dialogs -->
+    <string name="button_popup_login">เข้าสู่ระบบ</string>
+
+    <!-- Stakkar -->
+    <string name="message_from_title">Message from</string>
+
+    <!-- Widget -->
+    <string name="widget_description">Hassle free music!</string>
+
+    <!--Sync-->
+    <string name="loss_of_network_title">Offline</string>
+    <string name="loss_of_network_description">No Network detected.\nWould you like to go offline for this session?</string>
+    <string name="loss_of_network_reconnecting_description">No Network detected.\nAttempting to reconnect…</string>
+
+    <!--My Downloads-->
+    <string name="go_offline_button">Go Offline</string>
+    <plurals name="playlist_number_of_tracks">
+        <item quantity="one">%d เพลง</item>
+        <item quantity="other">%d เพลง</item>
+    </plurals>
+    <plurals name="number_of_synced_track_title">
+        <item quantity="one">%d Song</item>
+        <item quantity="other">%d Songs</item>
+    </plurals>
+
+    <!--Playlist-->
+    <string name="playlist_no_song_title">Playlist Empty</string>
+    <string name="playlist_no_song_description">There is no music in this playlist</string>
+    <string name="playlist_songs_title">Songs</string>
+    <string name="playlist_play_button">Shuffle Play</string>
+    <string name="error_load_playlist">Error loading playlist</string>
+    <string name="playlist_label">Playlist</string>
+    <string name="playlist_created_date">Created %s</string>
+    <string name="playlist_by_user">By %s</string>
+
+    <!-- Product List -->
+
+    <!-- QRCode Scanner -->
+
+    <!-- Reward -->
+
+    <!-- Tag -->
+    <string name="tag_screen_top_playlists">Top Playlists</string>
+    <string name="tag_screen_featured_artists">Featured Artists</string>
+    <string name="tag_screen_new_releases">Trending Albums</string>
+    <string name="tag_screen_trending_station">Trending Radio</string>
+    <string name="error_loading_tag">Error loading content</string>
+
+    <!-- Artist by set tag -->
+
+    <!-- Playlist By DJ -->
+
+    <!-- TP Login -->
+
+    <!-- Recent -->
+
+    <!-- DM Playlist-->
+
+    <!-- Error Message-->
+    <string name="error_music_search_title">ไม่พบผลลัพธ์จากคําค้นของคุณ</string>
+    <string name="error_music_search_description">ลองตรวจการสะกด หรือใช้คําอื่นดูนะคะ</string>
+    <string name="error_music_get_track_error">ไม่สามารถเล่นเพลงนี้ได้</string>
+    <string name="error_music_title">ขออภัยค่ะ</string>
+    <string name="error_music_landing_description">เกิดข้อผิดพลาดบางอย่าง กรุณาลองใหม่อีกครั้ง</string>
+
+    <!--Search-->
+    <string name="message_insert_keyword_search">พิมพ์คีย์เวิร์ดที่คุณต้องการค้นหา</string>
+
+    <!--My Library-->
+    <string name="music_my_library">คลังของฉัน</string>
+
+    <!--GeoBlock-->
+    <string name="geo_block_description">คุณสามารถรับฟังเพลงบนทรูไอดีได้จากประเทศไทยเท่านั้น</string>
+
+    <!--Favorite-->
+    <string name="added_to_favorite">เพิ่มลงในรายการโปรด</string>
+    <string name="removed_to_favorite">ลบออกจากรายการโปรด</string>
+    <string name="error_added_to_favorite">ไม่สามารถเพิ่มรายการโปรดได้ในขณะนี้</string>
+    <string name="error_removed_to_favorite">ไม่สามารถลบรายการโปรดได้ในขณะนี้</string>
+
+    <!-- My Music -->
+    <string name="create_new_list">สร้างเพลย์ลิสต์</string>
+    <string name="my_playlists">เพลย์ลิสต์ของฉัน</string>
+
+    <!--My Playlist-->
+    <string name="my_playlist">My Playlist</string>
+    <string name="my_playlist_error_title_dialog">ไม่สามารถโหลดเพลย์สิสต์</string>
+    <string name="my_playlist_error_message_dialog">ขออภัยค่ะ เกิดข้อผิดพลาดทำให้ไม่สามารถโหลดเพลย์ลิสต์ได้ กรุณาลองใหม่ในภายหลัง</string>
+    <string name="my_playlist_empty_message">เพลย์ลิสต์ว่างเปล่า\nโปรดเพิ่มเพลงลงในเพลย์ลิสต์</string>
+    <string name="my_playlist_remove_song_success">ลบเพลงสำเร็จ</string>
+    <string name="my_playlist_remove_song_fail">ไม่สามารถลบเพลงนี้ได้</string>
+    <string name="create_new_playlist">สร้างเพลย์ลิสต์ของฉัน</string>
+    <string name="create_playlist">สร้างเพลย์ลิสต์</string>
+    <string name="enter_a_name_of_playlist">ใส่ชื่อเพลย์ลิสต์ที่ต้องการสร้าง</string>
+    <string name="create_new_playlist_cancel_title_dialog">ยืนยันการยกเลิกหรือไม่</string>
+    <string name="create_new_playlist_cancel_message_dialog">หากยกเลิก เพลย์ลิสต์นี้จะไม่ถูกบันทึก</string>
+    <string name="create_new_playlist_error_title_dialog">ไม่สามารถสร้างเพลย์ลิสต์ได้</string>
+    <string name="create_new_playlist_error_message_dialog">ขออภัยค่ะ เกิดข้อผิดพลาดบางอย่าง กรุณาลองใหม่อีกครั้งค่ะ</string>
+    <string name="add_to_queue_track_empty">ไม่มีเพลงให้เพิ่มในคิวเพลง</string>
+    <string name="delete_my_playlist">ต้องการลบเพลย์ลิสต์นี้หรือไม่</string>
+    <string name="delete_my_playlist_detail">หากลบเพลย์ลิสต์ คุณจะไม่สามารถกู้คืนได้อีก</string>
+    <string name="delete_my_playlist_success">ลบเพลย์ลิสต์สำเร็จ</string>
+    <string name="delete_my_playlist_error">ไม่สามารถลบเพลย์ลิสต์ได้</string>
+    <string name="delete_my_playlist_error_detail">ขออภัยค่ะ เกิดข้อผิดพลาดบางอย่าง กรุณาลองใหม่อีกครั้งค่ะ</string>
+
+    <!-- Add Song -->
+    <string name="add_songs_title">เพิ่มเพลง</string>
+    <string name="add_songs_search_hint">ค้นหาชื่อเพลงเพื่อเพิ่มอย่างรวดเร็ว</string>
+    <string name="add_songs_search_greeting">ค้นหาชื่อเพลงที่ต้องการเพิ่มได้อย่างรวดเร็ว เพื่อเพลิดเพลินกับการใช้งานเพลย์ลิสต์ของฉัน</string>
+    <string name="add_songs_empty_search_title">ไม่พบผลค้นหา</string>
+    <string name="add_songs_empty_search_description">โปรดลองใหม่อีกครั้งด้วยการสะกดใหม่หรือลองคำอื่น</string>
+    <string name="add_song_error_title_dialog">ไม่สามารถเพิ่มเพลงลงในเพลย์ลิสต์</string>
+    <string name="add_song_error_description_dialog">ขออภัยค่ะ โปรดลองอีกครั้งด้วยเพลงอื่น หรือกรุณาลองใหม่อีกครั้งค่ะ</string>
+    <string name="add_song_cancel_title_dialog">ยืนยันการยกเลิกหรือไม่</string>
+    <string name="add_song_cancel_message_dialog">หากยกเลิก เพลงจะไม่ถูกเพิ่มเข้าไป</string>
+    <string name="add_song_toast">เพิ่มลงเพลย์ลิสต์</string>
+
+    <!-- Add to My Playlist -->
+    <string name="add_to_my_playlist_success">เพิ่มลงเพลย์ลิสต์</string>
+    <string name="add_to_my_playlist_fail">ไม่สามารถเพิ่มลงเพลย์ลิสต์ได้</string>
+
+    <!-- Add to queue -->
+    <string name="add_to_queue_success">เพิ่มลงในคิวเพลง</string>
+
+    <string name="play_radio_error">ไม่สามารถเล่นวิทยุช่องนี้ได้</string>
+</resources>

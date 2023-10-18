@@ -1,0 +1,58 @@
+plugins {
+    id 'com.android.library'
+    id 'androidx.navigation.safeargs'
+    id 'kotlin-parcelize'
+}
+apply {
+    from("${project.rootDir}/gradle/sub-module.gradle")
+    from("${project.rootDir}/gradle/dependencies.gradle")
+}
+android {
+    namespace 'com.tdg.truecloud'
+    productFlavors {
+        preprod {
+            buildConfigField 'String', 'BASE_URL_TRUE_CLOUD', '"https://drive-customer-api-alpha.trueid-preprod.net/drive/"'
+            buildConfigField 'String', 'BASE_URL_PUBLIC', '"https://cloudshare.trueid-alpha.net/public-api/"'
+        }
+
+        prod {
+            buildConfigField 'String', 'BASE_URL_TRUE_CLOUD', '"https://drive-customer-api.trueid.net/drive/"'
+            buildConfigField 'String', 'BASE_URL_PUBLIC', '"https://cloudshare.trueid.net/public-api/"'
+        }
+    }
+}
+
+dependencies {
+    implementation project(':common:core')
+    implementation project(':common:navigation')
+    implementation project(':common:share:analytics')
+    implementation project(':common:share:component')
+    implementation project(':common:share:component-v3')
+    implementation project(':common:share:currentdate')
+    implementation project(':common:share:datalegacy')
+    implementation project(':common:share:data:coredata')
+    implementation project(':common:share:data:firestoreconfig')
+    implementation project(':feature:discover:apppermission')
+    implementation project(':feature:music')
+
+//    testImplementation project(':common:share:mock')
+//
+    implementation amazonaws.truecloudAws
+    implementation amazonaws.truecloudAwsMobileClient
+    implementation amazonaws.truecloudAwsAuthUserpools
+    implementation broakenmedia.multiContactPicker
+    implementation imageUtil.photoEditor
+    implementation imageUtil.imageCropper
+    implementation view.startPointSeekBar
+    implementation view.colorPicker
+
+    DataStore()
+    Glide()
+    ImageUtil()
+    View()
+    UnitTesting()
+}
+
+ext {
+    isBelongTo = "external-dev"
+}

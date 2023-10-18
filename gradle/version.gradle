@@ -1,0 +1,67 @@
+apply {
+    from("$rootDir/gradle/dependencies.gradle")
+}
+
+int versionMajor = 3
+int versionMinor = 29
+int versionPatch = 0
+int versionManufacturer = 0
+int versionRC = 0
+String versionClassifier = null //ALPHA, BETA or Etc,.
+boolean isSnapshot = false
+
+//Release Candidate
+boolean isReleaseCandidate = false
+
+ext.versionMajor = versionMajor
+ext.versionMinor = versionMinor
+ext.versionPatch = versionPatch
+ext.versionManufacturer = versionManufacturer
+ext.versionRC = versionRC
+ext.versionClassifier = versionClassifier
+ext.isSnapshot = isSnapshot
+ext.minimumSdkVersion = minSdkVersion
+ext.isReleaseCandidate = isReleaseCandidate
+ext.versionReleaseCandidate = versionRC
+
+//Generated
+ext.versionBuildNumber = generateVersionCode()
+ext.versionNameApp = generateVersionName()
+
+private Integer generateVersionMinor() {
+    if (ext.isReleaseCandidate && versionPatch == 0) {
+        int prev = ext.versionMinor
+        return (prev - 1) * 100
+    } else {
+        return ext.versionMinor * 100
+    }
+}
+
+private Integer generateVersionPatch() {
+    if (ext.isReleaseCandidate) {
+        return ext.versionPatch + ext.versionReleaseCandidate
+    } else {
+        return ext.versionPatch
+    }
+}
+
+private Integer generateVersionCode() {
+    return ext.minimumSdkVersion * 1000000 + ext.versionMajor * 10000 + generateVersionMinor() + generateVersionPatch()
+}
+
+private String generateVersionName() {
+    String versionName = "${ext.versionMajor}.${ext.versionMinor}.${ext.versionPatch}"
+
+    if (ext.isReleaseCandidate) {
+        versionName = "${versionName}.${ext.versionManufacturer}.${ext.versionRC}"
+    }
+
+    if (ext.versionClassifier == null && ext.isSnapshot) {
+        ext.versionClassifier = "SNAPSHOT"
+    }
+
+    if (ext.versionClassifier != null) {
+        versionName += "-" + ext.versionClassifier
+    }
+    return versionName
+}

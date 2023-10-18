@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="@dimen/song_video_image_size"
+    android:layout_height="wrap_content"
+    android:foreground="?android:attr/selectableItemBackground"
+    android:minHeight="@dimen/song_video_shelf_height"
+    android:orientation="vertical">
+
+    <FrameLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="4dp">
+
+        <ImageView
+            android:id="@+id/videoImageView"
+            android:layout_width="@dimen/song_video_image_size"
+            android:layout_height="@dimen/song_video_image_size"
+            android:background="@drawable/music_bg_rect_product_item"
+            android:contentDescription="@string/video_imageview_item"
+            android:src="@drawable/placeholder_video" />
+
+        <ImageView
+            android:id="@+id/videoPlayImageView"
+            android:layout_width="@dimen/song_video_play_icon_size"
+            android:layout_height="@dimen/song_video_play_icon_size"
+            android:layout_gravity="center"
+            android:contentDescription="@string/video_imageview_play"
+            android:padding="8dp"
+            android:src="@drawable/music_ic_play"
+            android:visibility="gone" />
+
+    </FrameLayout>
+
+    <TextView
+        android:id="@+id/videoName"
+        style="@style/TextMusic.Small.Bold.Black"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:contentDescription="@string/video_textview_name"
+        android:ellipsize="end"
+        android:maxLines="1"
+        tools:text="Video Name" />
+
+    <TextView
+        android:id="@+id/videoArtistName"
+        style="@style/TextMusic.ExtraSmall.Gray"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:contentDescription="@string/video_textview_artist_name"
+        android:ellipsize="end"
+        android:maxLines="1"
+        tools:text="Artist Name" />
+
+</LinearLayout>

@@ -1,0 +1,35 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<SmellBaseline>
+  <ManuallySuppressedIssues/>
+  <CurrentIssues>
+    <ID>EmptyFunctionBlock:BlurTransformation.kt$BlurTransformation${}</ID>
+    <ID>EmptyFunctionBlock:ColorFilterTransformation.kt$ColorFilterTransformation${}</ID>
+    <ID>EmptyFunctionBlock:PositionedCropTransformation.kt$PositionedCropTransformation${}</ID>
+    <ID>ForbiddenComment:ViewModelExtensions.kt$// TODO: Need to refactor it due to there still have a crash issue</ID>
+    <ID>MagicNumber:BlurTransformation.kt$BlurTransformation$15f</ID>
+    <ID>MagicNumber:ImageViewExtension.kt$0.5f</ID>
+    <ID>MagicNumber:ImageViewExtension.kt$1000</ID>
+    <ID>MagicNumber:ImageViewExtension.kt$60</ID>
+    <ID>MagicNumber:PositionedCropTransformation.kt$PositionedCropTransformation$0.5f</ID>
+    <ID>MagicNumber:ViewExtension.kt$1500</ID>
+    <ID>MaxLineLength:ColorFilterTransformation.kt$ColorFilterTransformation$override</ID>
+    <ID>MaxLineLength:FoundationApplication.kt$FoundationApplication$Timber.d("Application Create = ${appStartUpMetrics.applicationOnCreateTime}")</ID>
+    <ID>MaxLineLength:FoundationApplication.kt$FoundationApplication$Timber.d("Content provider = ${appStartUpMetrics.contentProviderToAppStart}")</ID>
+    <ID>MaxLineLength:FoundationApplication.kt$FoundationApplication$Timber.d("First Draw = ${appStartUpMetrics.appOnCreateEndToFirstDraw}")</ID>
+    <ID>MaxLineLength:FoundationApplication.kt$FoundationApplication$Timber.d("Process Fork To CP = ${appStartUpMetrics.processForkToContentProvider}")</ID>
+    <ID>MaxLineLength:PositionedCropTransformation.kt$PositionedCropTransformation$*</ID>
+    <ID>MaxLineLength:PositionedCropTransformation.kt$PositionedCropTransformation$class</ID>
+    <ID>MaxLineLength:PositionedCropTransformation.kt$PositionedCropTransformation$private</ID>
+    <ID>MaxLineLength:ReactiveExtension.kt$inline</ID>
+    <ID>MayBeConst:AACExtensions.kt$SingleLiveEvent.Companion$private val TAG = "SingleLiveEvent"</ID>
+    <ID>NestedBlockDepth:ImageViewExtension.kt$fun ImageView?.loadBlur( context: Context?, url: String?, placeholder: Int? = null, scaleType: ImageView.ScaleType = ImageView.ScaleType.FIT_CENTER, resizeType: String = RESIZE )</ID>
+    <ID>ReturnCount:ContextExtension.kt$fun Context?.isAvailable(): Boolean</ID>
+    <ID>ReturnCount:PositionedCropTransformation.kt$PositionedCropTransformation$ private fun crop(recycled: Bitmap?, toTransform: Bitmap?, outWidth: Int, outHeight: Int, xPercentage: Float, yPercentage: Float): Bitmap?</ID>
+    <ID>SwallowedException:ViewExtension.kt$e: Exception</ID>
+    <ID>TooGenericExceptionThrown:ViewModelFactory.kt$ViewModelFactory$throw RuntimeException(e)</ID>
+    <ID>TooManyFunctions:BasePlayer.kt$BasePlayer : ExoPlayer</ID>
+    <ID>TooManyFunctions:ImageViewExtension.kt$com.truedigital.foundation.extension.ImageViewExtension.kt</ID>
+    <ID>TooManyFunctions:ViewExtension.kt$com.truedigital.foundation.extension.ViewExtension.kt</ID>
+    <ID>UnusedPrivateMember:AACExtensions.kt$SingleLiveEvent.Companion$private val TAG = "SingleLiveEvent"</ID>
+  </CurrentIssues>
+</SmellBaseline>

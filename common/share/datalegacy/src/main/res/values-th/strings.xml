@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--Alert permission-->
+    <string name="go_to_setting">ไปที่ตั้งค่า</string>
+    <string name="cancel">ยกเลิก</string>
+
+    <!--Inboxmessage-->
+    <string name="notification_time_min_ago">นาทีที่แล้ว</string>
+    <string name="notification_time_mins_ago">นาทีที่แล้ว</string>
+    <string name="notification_time_hour_ago">ชั่วโมงที่แล้ว</string>
+    <string name="notification_time_hours_ago">ชั่วโมงที่แล้ว</string>
+    <string name="notification_time_yesterday">เมื่อวานนี้</string>
+    <string name="notification_time_just_now">เมื่อไม่นานนี้</string>
+
+    <!-- Already logged in -->
+    <string name="logged_in">คุณได้เข้าสู่ระบบแล้วค่ะ</string>
+</resources>

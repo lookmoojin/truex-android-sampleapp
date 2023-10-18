@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--Inboxmessage-->
+    <string name="notification_time_min_ago">menit yang lalu</string>
+    <string name="notification_time_mins_ago">menit yang lalu</string>
+    <string name="notification_time_hour_ago">jam yang lalu</string>
+    <string name="notification_time_hours_ago">jam yang lalu</string>
+    <string name="notification_time_yesterday">Yesterday</string>
+    <string name="notification_time_just_now">Baru saja</string>
+</resources>

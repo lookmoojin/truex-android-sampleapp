@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="250dp"
+    android:background="@drawable/bg_grey_pattern">
+
+    <com.truedigital.component.view.AppTextView
+        android:id="@+id/miAlertTitleTextView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:background="@color/true_black"
+        android:padding="10dp"
+        android:text="Title"
+        android:textColor="@android:color/white"
+        android:textSize="25dp"
+        app:textStyle="bold" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/miAlertTitleTextView">
+
+        <com.truedigital.component.view.AppTextView
+            android:id="@+id/miAlertSubTitleTextView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@+id/btn_container"
+            android:gravity="center"
+            android:padding="4dp"
+            android:text=""
+            android:textColor="@android:color/white"
+            android:textSize="25dp"
+            app:textStyle="bold" />
+
+        <RelativeLayout
+            android:id="@+id/btn_container"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:background="@color/true_black">
+
+            <com.truedigital.component.view.AppTextView
+                android:id="@+id/miAlertOkTextView"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_margin="10dp"
+                android:background="@color/true_red"
+                android:gravity="center"
+                android:text="@string/save"
+                android:textColor="@android:color/white"
+                android:textSize="25dp"
+                app:textStyle="bold" />
+        </RelativeLayout>
+    </RelativeLayout>
+
+
+</RelativeLayout>

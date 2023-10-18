@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="cms_size_image">_1024</string>
+    <string name="cms_size_image_large">_1440</string>
+    <string name="cms_size_image_square">_150</string>
+</resources>

@@ -2,8 +2,13 @@ plugins {
     id 'com.android.application'
     id 'org.jetbrains.kotlin.android'
     id 'androidx.navigation.safeargs.kotlin'
-    id 'kotlin-android'
     id 'kotlin-kapt'
+    id 'kotlin-android'
+}
+
+apply {
+    from("$rootDir/gradle/dependencies.gradle")
+    from("$rootDir/gradle/version.gradle")
 }
 
 android {
@@ -24,6 +29,17 @@ android {
         release {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    flavorDimensions 'environment'
+    productFlavors {
+        preprod {
+            applicationIdSuffix ".preprod"
+            dimension 'environment'
+        }
+        prod {
+            dimension 'environment'
         }
     }
     compileOptions {

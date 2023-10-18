@@ -1,0 +1,352 @@
+<resources>
+    <!--Header-->
+    <string name="true_cloudv3_page_name_title">True Cloud</string>
+    <!--Category-->
+    <string name="true_cloudv3_category">Category</string>
+    <!--Menus-->
+    <string name="true_cloudv3_menu_images">Images</string>
+    <string name="true_cloudv3_menu_videos">Videos</string>
+    <string name="true_cloudv3_menu_audio">Audio</string>
+    <string name="true_cloudv3_menu_files">Files</string>
+    <string name="true_cloudv3_menu_others">Others</string>
+    <string name="true_cloudv3_menu_contacts">Contacts</string>
+    <string name="true_cloudv3_menu_all_files">All files</string>
+    <string name="true_cloudv3_menu_trash">Trash</string>
+    <string name="true_cloudv3_menu_settings">Settings</string>
+    <string name="true_cloudv3_menu_collection">Collection</string>
+    <string name="true_cloudv3_menu_recent_upload">Recent Upload</string>
+    <string name="true_cloudv3_menu_favorite">Favorite</string>
+
+    <string name="true_cloudv3_storage_used">%s used</string>
+    <string name="true_cloudv3_storage_total">%s total</string>
+
+    <string name="true_cloudv3_empty_message">There are no files uploaded</string>
+    <string name="true_cloudv3_error_message">Something went wrong, please try again.</string>
+    <string name="true_cloudv3_error_message_common">Something went wrong. \nPlease try again later.</string>
+    <string name="true_cloudv3_max_file_message">Can select up to 20 items per time</string>
+
+    <string name="true_cloudv3_upload_menu_true_cloud_storage">True Cloud Storage</string>
+    <string name="true_cloudv3_upload_menu_title">Upload</string>
+    <string name="true_cloudv3_upload_menu_images">Images</string>
+    <string name="true_cloudv3_upload_menu_videos">Videos</string>
+    <string name="true_cloudv3_upload_menu_contacts">Contacts</string>
+    <string name="true_cloudv3_upload_menu_audio">Audio</string>
+    <string name="true_cloudv3_upload_menu_files">Files</string>
+
+    <string name="true_cloudv3_option_menu_title">Option</string>
+    <string name="true_cloudv3_option_menu_share">Copy Share Link</string>
+    <string name="true_cloudv3_option_menu_download">Download</string>
+    <string name="true_cloudv3_option_menu_delete">Delete from True Cloud</string>
+
+    <string name="true_cloudv3_upload_contact">Upload Contact</string>
+
+    <string name="true_cloudv3_contact_menu_title">Contacts</string>
+    <string name="true_cloudv3_edit_contact_menu_title">Edit contact</string>
+
+    <string name="true_cloudv3_button_login">Login</string>
+    <string name="true_cloudv3_button_setting">Settings</string>
+    <string name="true_cloudv3_button_later">Later</string>
+    <string name="true_cloudv3_button_retry">Retry</string>
+    <string name="true_cloudv3_button_cancel">Cancel</string>
+    <string name="true_cloudv3_button_confirm">Confirm</string>
+    <string name="true_cloudv3_button_ok">Ok</string>
+    <string name="true_cloudv3_button_save">Save</string>
+
+    <string name="true_cloudv3_dialog_title_file">Permission Denied</string>
+    <string name="true_cloudv3_dialog_subtitle_file">You have disabled the access to Files, please enable it from "Settings".</string>
+    <string name="true_cloudv3_dialog_title_contact">Permission Denied</string>
+    <string name="true_cloudv3_dialog_subtitle_contact">You have disabled the access to Contacts, please enable it from "Settings".</string>
+    <string name="true_cloudv3_dialog_subtitle_notification">You have disabled the Notifications, please enable it from "Settings".</string>
+    <string name="true_cloudv3_dialog_title_sorry">Sorry</string>
+    <string name="true_cloudv3_dialog_subtitle_something_wrong">Something went wrong (%s).\nPlease try again.</string>
+    <string name="true_cloudv3_dialog_title_delete">Would you like to delete all selected items?</string>
+    <string name="true_cloudv3_dialog_subtitle_delete">If you delete, you will delete all items you selected.</string>
+
+    <string name="true_cloudv3_upload_title_success_single">New file added</string>
+    <string name="true_cloudv3_upload_title_success_multiple">%s new files added</string>
+
+    <string name="true_cloudv3_delete_success">Delete item successfully</string>
+    <string name="true_cloudv3_delete_error">Failed to delete this item</string>
+
+    <string name="true_cloudv3_storage_bar_title">True Cloud Storage</string>
+    <string name="true_cloudv3_storage_bar_used">%s used</string>
+    <string name="true_cloudv3_storage_bar_total">%s total</string>
+    <string name="true_cloudv3_storage_detail">%1$s of %2$s used</string>
+
+    <string name="true_cloudv3_copy_success">Copied successfully</string>
+    <string name="true_cloudv3_copy_error">Can’t copy share link</string>
+
+    <string name="true_cloudv3_upload_progress_bar_total_multiple">Uploading %s files</string>
+    <string name="true_cloudv3_upload_progress_bar_total_single">Uploading %s file</string>
+
+    <string name="true_cloudv3_cancel_success">Upload cancelled</string>
+    <string name="true_cloudv3_upload_status_uploading">Uploading... %s</string>
+    <string name="true_cloudv3_upload_status_downloadinging">Downloading... %s%%</string>
+
+    <string name="true_cloudv3_status_upload">Uploading...</string>
+    <string name="true_cloudv3_status_pending">Pending...</string>
+    <string name="true_cloudv3_status_paused">Paused</string>
+    <string name="true_cloudv3_status_failed">Failed</string>
+    <string name="true_cloudv3_status_complete">Complete</string>
+
+    <string name="true_cloudv3_notification_channel_name">TransferNotificationChannel</string>
+    <string name="true_cloudv3_notification_title">Upload</string>
+    <string name="true_cloudv3_notification_text">Uploading...</string>
+
+    <string name="true_cloudv3_dialog_create_new">Create New</string>
+    <string name="true_cloudv3_dialog_folder">Folder</string>
+    <string name="true_cloudv3_dialog_upload">Upload</string>
+    <string name="true_cloudv3_dialog_option">Option</string>
+    <string name="true_cloudv3_dialog_select">Select</string>
+    <string name="true_cloudv3_dialog_sort_by">Sort by</string>
+    <string name="true_cloudv3_dialog_add_new_folder">Add new folder</string>
+    <string name="true_cloudv3_dialog_download">Download</string>
+    <string name="true_cloudv3_dialog_rename">Rename</string>
+    <string name="true_cloudv3_dialog_delete">Remove To Trash</string>
+    <string name="true_cloudv3_dialog_view_file">View File</string>
+    <string name="true_cloudv3_dialog_photo_editor">Edit image</string>
+    <string name="true_cloudv3_dialog_a_to_z">Title A to Z</string>
+    <string name="true_cloudv3_dialog_z_to_a">Title Z to A</string>
+    <string name="true_cloudv3_dialog_new_to_old">New to old</string>
+    <string name="true_cloudv3_dialog_old_to_new">Old to new</string>
+    <string name="true_cloudv3_dialog_size_large_to_small">Size large to small</string>
+    <string name="true_cloudv3_dialog_size_small_to_large">Size small to large</string>
+    <string name="true_cloudv3_dialog_apply">Apply</string>
+    <string name="true_cloudv3_dialog_migration">Migration</string>
+    <string name="true_cloudv3_dialog_migration_success">Data Migration Success</string>
+    <string name="true_cloudv3_dialog_migration_detail">Data migration option will be available only until May 31, 2023. If you want to migrate later, go to: Settings > Data Migration</string>
+    <string name="true_cloudv3_dialog_migration_detail_success">Data Migration is completed. You can find your files in All Files.</string>
+    <string name="true_cloudv3_dialog_migration_go_to_all_file">Go to All Files</string>
+    <string name="true_cloudv3_dialog_migration_dismiss">Dismiss</string>
+    <string name="true_cloudv3_dialog_cancel">Cancel</string>
+    <string name="true_cloudv3_dialog_open_setting">Open Setting</string>
+    <string name="true_cloudv3_dialog_sync_all_contacts">Sync all contacts</string>
+    <string name="true_cloudv3_dialog_title_confirm_sync_all_contacts">Do you want to sync all contacts on this device again?</string>
+    <string name="true_cloudv3_dialog_subtitle_confirm_sync_all_contacts">You have performed sync all contacts on this device already. You will have duplicated items if you sync again.</string>
+    <string name="true_cloudv3_dialog_select_contacts">Select contacts to upload</string>
+    <string name="true_cloudv3_dialog_delete_all_contacts">Delete all contacts</string>
+    <string name="true_cloudv3_dialog_title_confirm_delete_all_contacts">Would you like to delete all contacts?</string>
+    <string name="true_cloudv3_dialog_subtitle_confirm_delete_all_contacts">If you delete, you will delete all contacts on True Cloud.</string>
+    <string name="true_cloudv3_dialog_export_to_device">Export to device</string>
+    <string name="true_cloudv3_dialog_success_download">Successfully Downloaded</string>
+
+    <string name="true_cloudv3_dialog_create_folder_cancel">Cancel</string>
+    <string name="true_cloudv3_dialog_create_folder_create_folder">Create Folder</string>
+    <string name="true_cloudv3_dialog_create_folder_hint">Enter new folder name</string>
+    <string name="true_cloudv3_dialog_rename_hint">Enter new file name</string>
+
+    <string name="true_cloudv3_upload_header">Upload (%s)</string>
+    <string name="true_cloudv3_auto_backup_header">Auto Backup (%s)</string>
+    <string name="true_cloudv3_upload_cancel_all">Cancel All</string>
+    <string name="true_cloudv3_d_selected">%d selected</string>
+    <string name="true_cloudv3_select_all">Select all</string>
+    <string name="true_cloudv3_edit_contact_firstname">First Name</string>
+    <string name="true_cloudv3_edit_contact_lastname">Last Name</string>
+    <string name="true_cloudv3_edit_contact_email">Email</string>
+    <string name="true_cloudv3_edit_contact_select_label">Select Label</string>
+    <string name="true_cloudv3_dialog_no_label">No Label</string>
+    <string name="true_cloudv3_dialog_mobile">Mobile</string>
+    <string name="true_cloudv3_dialog_work">Work</string>
+    <string name="true_cloudv3_dialog_home">Home</string>
+    <string name="true_cloudv3_dialog_main">Main</string>
+    <string name="true_cloudv3_dialog_work_fax">Work Fax</string>
+    <string name="true_cloudv3_dialog_home_fax">Home Fax</string>
+    <string name="true_cloudv3_dialog_other">Other</string>
+    <string name="true_cloudv3_dialog_custom">Custom</string>
+    <string name="true_cloudv3_dialog_label_name">Label Name</string>
+    <string name="true_cloudv3_dialog_create">Create</string>
+    <string name="true_cloudv3_dialog_custom_label_name">Custom Label Name</string>
+    <string name="true_cloudv3_edit_contact_label">Label</string>
+    <string name="true_cloudv3_edit_contact_phone">Phone</string>
+    <string name="true_cloudv3_migrating_data">Migrating data</string>
+    <string name="true_cloudv3_migrate_data">Migrate Data</string>
+    <string name="true_cloudv3_migrate_data_detail">Migrate by May 31, 2023</string>
+    <string name="true_cloudv3_later">Later</string>
+    <string name="true_cloudv3_download_file_completed">Download file completed</string>
+    <string name="true_cloudv3_download_file_error">Download error : %s</string>
+    <string name="true_cloudv3_binary_size_format">%.2f</string>
+    <string name="true_cloudv3_start_migration_data">Start migration data from True Cloud previous version.</string>
+    <string name="true_cloudv3_start_migration_detail">This is True Cloud new version, you previously have data in previous version, you can migrate your data</string>
+    <string name="true_cloudv3_migration_data_checking">checking...</string>
+    <string name="true_cloudv3_migration_data_migrating">migrating data...</string>
+    <string name="true_cloudv3_migration_data_detail">Your data is being migrated. You can leave this page or TrueID and come back to check later on True Cloud main page.</string>
+    <string name="true_cloudv3_header_settings">Settings</string>
+    <string name="true_cloudv3_migration_you_migration_failed">Data Migration Failed</string>
+    <string name="true_cloudv3_migration_please_try_migrate_again">Please try migrating data again.</string>
+    <string name="true_cloudv3_migration_toast_success">Successfully Uploaded</string>
+    <string name="true_cloudv3_setting_you_storage_plan">Subscription</string>
+    <string name="true_cloudv3_migration_close">Close</string>
+    <string name="true_cloudv3_migration_dismiss">Dismiss</string>
+    <string name="true_cloudv3_migration_cancel">Cancel</string>
+    <string name="true_cloudv3_migration_cancel_failed">Migration Cancel is failed.</string>
+    <string name="true_cloudv3_migration_time_remaining_na">Time remaining: N/A</string>
+    <string name="true_cloudv3_migration_do_you_want_to_cancel_it">Do you want to cancel it?</string>
+    <string name="true_cloudv3_migration_cancel_detail">The Migrating data will be canceled. However, you’ll see successful uploading data in your Truecloud.</string>
+
+    <string name="true_cloudv3_noti_title_downloading">Downloading...</string>
+    <string name="true_cloudv3_noti_title_download_complete">Download complete</string>
+    <string name="true_cloudv3_noti_title_download_failed">Download failed</string>
+    <string name="true_cloudv3_noti_title_download_pause">Download pause</string>
+    <string name="true_cloudv3_noti_download_progress">%s%%</string>
+    <string name="true_cloudv3_export_complete">Export complete</string>
+    <string name="true_cloudv3_export_failed">Export failed</string>
+    <string name="true_cloudv3_select_a_contact">Select a Contact</string>
+    <string name="true_cloudv3_select_a_file_to_upload">Select a File to Upload</string>
+    <string name="true_cloudv3_select_file_exceeded_storage_size">Selected files exceeded storage size</string>
+    <string name="true_cloudv3_delete_this_contact">Delete this contact</string>
+    <string name="true_cloudv3_would_you_like_to_delete_this_contact">Would you like to delete this contact?</string>
+    <string name="true_cloudv3_if_you_delete_this_contact">If you delete, this contact will be deleted from True Cloud.</string>
+    <string name="true_cloudv3_delete_contact_successfully">Deleted contact successfully</string>
+    <string name="true_cloudv3_added_new_folder">Added a new folder in All Files</string>
+    <string name="true_cloudv3_can_not_add_new_folder">Can’t add a new folder</string>
+    <string name="true_cloudv3_delete_item_successfully">Removed file to Trash</string>
+    <string name="true_cloudv3_all_contact_were_synsed_to_true_cloud">All contacts were synced to True Cloud</string>
+    <string name="true_cloudv3_can_not_sync_all_contacts_to_true_cloud">Can’t sync all contacts to True Cloud</string>
+    <string name="true_cloudv3_see_image_info">View image info</string>
+    <string name="true_cloudv3_see_file_info">View file info</string>
+    <string name="true_cloudv3_dialog_file_info">Info</string>
+    <string name="true_cloudv3_dialog_file_info_title_name">Name</string>
+    <string name="true_cloudv3_dialog_file_info_title_size">Size</string>
+    <string name="true_cloudv3_dialog_file_info_title_datetime">Time</string>
+    <string name="true_cloudv3_dialog_file_info_title_image_length">Image Height</string>
+    <string name="true_cloudv3_dialog_file_info_title_image_width">Image Width</string>
+    <string name="true_cloudv3_dialog_file_info_title_device">Device</string>
+    <string name="true_cloudv3_dialog_file_info_title_focal_length">Focal Length</string>
+    <string name="true_cloudv3_dialog_file_info_title_aperture">Aperture</string>
+    <string name="true_cloudv3_dialog_file_info_title_iso">ISO</string>
+    <string name="true_cloudv3_dialog_file_info_title_flash">Flash</string>
+    <string name="true_cloudv3_dialog_file_info_title_latitude">Latitude</string>
+    <string name="true_cloudv3_dialog_file_info_title_longitude">Longitude</string>
+    <string name="true_cloudv3_dialog_file_info_title_camera_owner_name">Camera owner name</string>
+    <string name="true_cloudv3_dialog_file_info_title_image_desc">Image description</string>
+    <string name="true_cloudv3_can_not_delete_contact">Can’t Deleted contact</string>
+    <string name="true_cloudv3_added_contact_successfully">Added contact successfully</string>
+    <string name="true_cloudv3_can_not_add_contact_to_true_cloud">Can’t add contact to True Cloud</string>
+    <string name="true_cloudv3_share">Share</string>
+    <string name="true_cloudv3_share_via">Share via</string>
+    <string name="true_cloudv3_save_shared">Option</string>
+    <string name="true_cloudv3_save_shared_to_my_cloud">Save to my True Cloud</string>
+    <string name="true_cloudv3_save_shared_to_my_device">Save to my device</string>
+    <string name="true_cloudv3_save_shared_to_my_cloud_success">Saved to my True Cloud</string>
+    <string name="ture_cloudv3_save_shared_to_my_device_success">Successfully saved</string>
+    <string name="true_cloudv3_copy_link">Copy link</string>
+    <string name="true_cloudv3_copied_share_link">Copied share link</string>
+    <string name="true_cloudv3_control_share_access">Control share access</string>
+    <string name="true_cloudv3_view_private_file">View Private File</string>
+    <string name="true_cloudv3_view_private_file_text_hint">Password</string>
+    <string name="true_cloudv3_view_private_file_text_error">This file is a private file. \nYou don’t have an access to this file at this moment. Please contact the file owner.</string>
+    <string name="true_cloudv3_view_private_file_button_submit">Submit</string>
+    <string name="true_cloudv3_view_private_file_wrong_password">Wrong password</string>
+    <string name="true_cloudv3_control_access">Control Share Access</string>
+    <string name="true_cloudv3_expiration_date">Expiration Date</string>
+    <string name="true_cloudv3_choose_date">Choose Date</string>
+    <string name="true_cloudv3_private">Private</string>
+    <string name="true_cloudv3_public">Public</string>
+    <string name="true_cloudv3_password">Password</string>
+    <string name="true_cloudv3_set_a_password">Set a password</string>
+    <string name="true_cloudv3_maximum_characters">Maximum characters</string>
+    <string name="true_cloudv3_minimum_characters">Minimum characters</string>
+    <string name="true_cloudv3_password_must_have_6_24_characters">Password must have 6-24 characters</string>
+    <string name="true_cloudv3_6">6</string>
+    <string name="true_cloudv3_d24">%d/24</string>
+    <string name="true_cloudv3_update">Update</string>
+    <string name="true_cloudv3_update_successfully">Updated successfully</string>
+    <string name="true_cloudv3_update_failed">Update failed</string>
+    <string name="true_cloudv3_text_password_star">******</string>
+    <string name="true_cloudv3_filter_by_keyword">Filter by keyword</string>
+    <string name="true_cloudv3_no_search_result">Couldn’t find any search result \nPlease try again using a different spelling \nor keyword</string>
+
+    <string name="true_cloudv3_dialog_selected_move_file">Move to</string>
+    <string name="true_cloudv3_dialog_selected_copy_file">Copy to Folder</string>
+    <string name="true_cloudv3_dialog_selected_copy_file_option">Copy to</string>
+    <string name="true_cloudv3_dialog_selected_delete">Delete</string>
+    <string name="true_cloudv3_dialog_selected_favorite">Add to Favorite</string>
+    <string name="true_cloudv3_file_locator">%s %s</string>
+    <string name="true_cloudv3_file_locator_move">move</string>
+    <string name="true_cloudv3_file_locator_copy">copy</string>
+    <string name="true_cloudv3_file_locator_move_success">Moved successfully</string>
+    <string name="true_cloudv3_file_locator_move_error">Can’t move this item</string>
+    <string name="true_cloudv3_file_locator_copy_success">Copied successfully</string>
+    <string name="true_cloudv3_file_locator_copy_error">Can’t copy this file</string>
+    <string name="true_cloudv3_trash_empty_message">There are no deleted files</string>
+    <string name="true_cloudv3_dialog_trash">Empty Trash</string>
+    <string name="true_cloudv3_delete_date">Delete by %s</string>
+    <string name="true_cloudv3_empty_trash_title">Would you like to empty trash?</string>
+    <string name="true_cloudv3_empty_trash_desc">If you empty trash, files and folders in Trash will be permanently deleted from True Cloud.</string>
+    <string name="true_cloudv3_empty_trash_success">Emptied trash successfully</string>
+    <string name="true_cloudv3_empty_trash_error">Can’t empty trash</string>
+    <string name="true_cloudv3_empty_trash_empty">Trash is currently empty</string>
+    <string name="true_cloudv3_empty_trash_restore">Restore</string>
+    <string name="true_cloudv3_empty_trash_delete_permanent">Delete permanently</string>
+    <string name="true_cloudv3_empty_trash_delete_permanent_title">Would you like to delete this file?</string>
+    <string name="true_cloudv3_empty_trash_delete_permanent_desc">If you delete, this file will be permanently deleted from True Cloud.</string>
+    <string name="true_cloudv3_empty_trash_delete_permanent_success">Deleted successfully</string>
+    <string name="true_cloudv3_empty_trash_delete_permanent_failed">Can’t delete permanently</string>
+    <string name="true_cloudv3_empty_trash_delete_permanent_multiple_success">Deleted %s files successfully</string>
+    <string name="true_cloudv3_empty_trash_restore_success">Restored successfully</string>
+    <string name="true_cloudv3_empty_trash_restore_error">Can’t restore files</string>
+    <string name="true_cloudv3_empty_trash_restore_multiple_success">Restored %s file successfully</string>
+    <string name="true_cloudv3_trash_multiple_file">Removed %s files to Trash</string>
+    <string name="true_cloudv3_delete_multiple_file">Deleted %s files successfully</string>
+    <string name="true_cloudv3_auto_backup_setting_title">Turn on auto backup</string>
+    <string name="true_cloudv3_subscription_buy">Buy Storage</string>
+    <string name="true_cloudv3_storage_setting">Storage</string>
+    <string name="true_cloudv3_content_type_setting">Content using True Cloud</string>
+    <string name="true_cloudv3_auto_backup_button">Auto Backup</string>
+    <string name="true_cloudv3_auto_backup_button_active">Turn on \n Auto Backup</string>
+    <string name="true_cloudv3_auto_backup_title_active">Start the Auto-Backup now</string>
+    <string name="true_cloudv3_auto_backup_desc_active">Backup files and save to True\nCloud automatically</string>
+    <string name="true_cloudv3_backing_up_files">Backing up files</string>
+    <string name="true_cloudv3_backing_up_failed">Backup Failed</string>
+    <string name="true_cloudv3_backing_up_tyr_again">Please try backup again later</string>
+    <string name="true_cloudv3_auto_backup_time_remaining_hour">Please stay in True Cloud to continue backup process</string>
+    <string name="true_cloudv3_auto_backup_time_remaining_minute">Please stay in True Cloud to continue backup process</string>
+    <string name="true_cloudv3_auto_backup_toast">Turned on Auto Backup successfully</string>
+    <plurals name="migrate_remaining_hour">
+        <item quantity="one">Time remaining: about %d hour</item>
+        <item quantity="other">Time remaining: about %d hours</item>
+    </plurals>
+    <plurals name="migrate_remaining_minute">
+        <item quantity="one">Time remaining: about %d minute</item>
+        <item quantity="other">Time remaining: about %d minutes</item>
+    </plurals>
+
+    <string name="true_cloudv3_photo_editor" translatable="false">Editor</string>
+    <string name="true_cloudv3_photo_editor_transform" translatable="false">Transform</string>
+    <string name="true_cloudv3_photo_editor_adjust" translatable="false">Adjust</string>
+    <string name="true_cloudv3_photo_editor_focus" translatable="false">Focus</string>
+    <string name="true_cloudv3_photo_editor_text" translatable="false">Text</string>
+    <string name="true_cloudv3_photo_editor_reset" translatable="false">Reset</string>
+    <string name="true_cloudv3_photo_editor_transform_crop_free" translatable="false">Custom</string>
+    <string name="true_cloudv3_photo_editor_transform_crop_square" translatable="false">Square</string>
+    <string name="true_cloudv3_photo_editor_transform_crop_16_9" translatable="false">16:9</string>
+    <string name="true_cloudv3_photo_editor_transform_crop_9_16" translatable="false">9:16</string>
+    <string name="true_cloudv3_photo_editor_transform_crop_4_3" translatable="false">4:3</string>
+    <string name="true_cloudv3_photo_editor_transform_crop_3_4" translatable="false">3:4</string>
+    <string name="true_cloudv3_photo_editor_transform_crop_3_2" translatable="false">3:2</string>
+    <string name="true_cloudv3_photo_editor_transform_crop_2_3" translatable="false">2:3</string>
+    <string name="true_cloudv3_photo_editor_adjust_brightness" translatable="false">Brightness</string>
+    <string name="true_cloudv3_photo_editor_adjust_contrast" translatable="false">Contrast</string>
+    <string name="true_cloudv3_photo_editor_adjust_saturation" translatable="false">Saturation</string>
+    <string name="true_cloudv3_photo_editor_adjust_sharpness" translatable="false">Sharpness</string>
+    <string name="true_cloudv3_photo_editor_adjust_temperature" translatable="false">Temperature</string>
+    <string name="true_cloudv3_photo_editor_brush_color" translatable="false">Color</string>
+    <string name="true_cloudv3_photo_editor_brush_size" translatable="false">Size</string>
+    <string name="true_cloudv3_photo_editor_brush_picker" translatable="false">Pick Color</string>
+    <string name="true_cloudv3_photo_editor_text_font" translatable="false">Font</string>
+    <string name="true_cloudv3_photo_editor_text_color" translatable="false">Color</string>
+    <string name="true_cloudv3_photo_editor_text_bg_color" translatable="false">BG Color</string>
+    <string name="true_cloudv3_photo_editor_text_alignment" translatable="false">Alignment</string>
+    <string name="true_cloudv3_photo_editor_text_font_noto" translatable="false">Noto Sans</string>
+    <string name="true_cloudv3_photo_editor_text_font_noto_bold" translatable="false">Noto Sans Bold</string>
+    <string name="true_cloudv3_photo_editor_text_font_sukhumvit" translatable="false">Sukhumvit</string>
+    <string name="true_cloudv3_photo_editor_text_font_sukhumvit_bold" translatable="false">Sukhumvit Bold</string>
+    <string name="true_cloudv3_photo_editor_text_alignment_left" translatable="false">Left</string>
+    <string name="true_cloudv3_photo_editor_text_alignment_center" translatable="false">Center</string>
+    <string name="true_cloudv3_photo_editor_text_alignment_right" translatable="false">Right</string>
+    <string name="true_cloudv3_photo_editor_text_input_dialog_title" translatable="false">Add Text</string>
+    <string name="true_cloudv3_photo_editor_text_input_hint" translatable="false">Your | text</string>
+    <string name="true_cloudv3_photo_editor_discard_dialog_title">Discard changes?</string>
+    <string name="true_cloudv3_photo_editor_discard_dialog_description">If you go back now, your image edits will be discarded</string>
+    <string name="true_cloudv3_photo_editor_discard_dialog_action_discard">Discard</string>
+</resources>

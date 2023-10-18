@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/trueCloudTitleTextView"
+        style="@style/TrueID.Small"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/true_cloudv3_spacing_s"
+        android:paddingRight="10dp"
+        android:paddingLeft="10dp"
+        android:includeFontPadding="false"
+        android:textColor="@color/true_cloudv3_color_black"
+        tools:text="@tools:sample/full_names" />
+
+</FrameLayout>

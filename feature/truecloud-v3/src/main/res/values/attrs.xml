@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="DegreeRulerView">
+        <attr name="drv_min_value" format="integer" />
+        <attr name="drv_max_value" format="integer" />
+
+        <attr name="drv_indicator_interval" format="dimension" />
+        <attr name="drv_indicator_color" format="color" />
+    </declare-styleable>
+
+    <declare-styleable name="DegreeRulerValuePicker">
+        <attr name="drvp_min_value" format="integer" />
+        <attr name="drvp_max_value" format="integer" />
+
+        <attr name="drvp_indicator_interval" format="dimension" />
+        <attr name="drvp_indicator_color" format="color" />
+    </declare-styleable>
+</resources>

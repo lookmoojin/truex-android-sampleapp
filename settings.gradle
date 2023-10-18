@@ -1,18 +1,20 @@
-pluginManagement {
-    repositories {
-        google()
-        mavenCentral()
-        gradlePluginPortal()
-    }
-}
-dependencyResolutionManagement {
-    repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
-    repositories {
-        google()
-        mavenCentral()
-    }
-}
 
 rootProject.name = "truex-android-sampleapp"
 include ':app'
+include ':feature:truecloud-v3'
 include ':login'
+include ':common:core'
+include ':common:share:data:firestoreconfig'
+include ':common:share:datalegacy'
+include ':common:share:analytics'
+include ':common:foundation'
+include ':common:share:data:coredata'
+include ':common:share:amityserviceconfig'
+include ':common:share:currentdate'
+include ':common:share:nativeshare'
+include ':common:share:resource'
+include ':common:share:component'
+include ':common:share:component-v3'
+include ':common:navigation'
+include ':feature:discover:apppermission'
+include ':feature:music'

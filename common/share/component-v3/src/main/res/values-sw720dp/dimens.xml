@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="appbar_expanded_space_size">178dp</dimen>
+    <dimen name="width_height_item_square">65dp</dimen>
+    <dimen name="width_height_icon_square">55dp</dimen>
+
+    <dimen name="shelf_countdown_date_countdown_number_size">32sp</dimen>
+    <dimen name="shelf_countdown_date_countdown_detail_text_size">16sp</dimen>
+    <dimen name="shelf_countdown_date_countdown_string_size">34sp</dimen>
+    <dimen name="shelf_countdown_team_name_size">34sp</dimen>
+    <dimen name="shelf_countdown_match_date_text_size">18sp</dimen>
+</resources>

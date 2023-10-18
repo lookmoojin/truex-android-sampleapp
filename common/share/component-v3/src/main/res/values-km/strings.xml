@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- deeplink description-->
+    <string name="deeplink_feature_off_title" translatable="false">មិនមានមាតិកា</string>
+    <string name="deeplink_not_found_description" translatable="false">មាតិកានេះមិនមាននៅក្នុងប្រទេសរបស់អ្នកទេ (101)</string>
+    <string name="deeplink_feature_off_description" translatable="false">មាតិកានេះមិនមាននៅក្នុងប្រទេសរបស់អ្នកទេ (102)</string>
+    <string name="deeplink_error_description" translatable="false">មាតិកានេះមិនមាននៅក្នុងប្រទេសរបស់អ្នកទេ (103)</string>
+    <string name="deeplink_feature_off_button" translatable="false">យល់ព្រម</string>
+</resources>

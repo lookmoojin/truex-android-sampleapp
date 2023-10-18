@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/trueCloudHeaderTitle"
+        style="@style/TrueID.Body.Bold.Black"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:maxLines="1"
+        android:padding="@dimen/true_cloudv3_spacing_3s"
+        android:text="@string/true_cloudv3_photo_editor"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <View
+        android:id="@+id/photoEditorBackgroundView"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@color/white"
+        app:layout_constraintBottom_toTopOf="@id/editorLayout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/trueCloudHeaderTitle" />
+
+    <ja.burhanrashid52.photoeditor.PhotoEditorView
+        android:id="@+id/photoEditorView"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@id/editorLayout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/trueCloudHeaderTitle" />
+
+    <LinearLayout
+        android:id="@+id/editorLayout"
+        android:layout_width="0dp"
+        android:layout_height="256dp"
+        android:background="@color/true_cloudv3_gray98"
+        android:gravity="bottom"
+        android:orientation="vertical"
+        android:paddingBottom="@dimen/true_cloudv3_spacing_2l"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <HorizontalScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/true_cloudv3_spacing_m"
+            android:clipToPadding="false">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingHorizontal="20dp">
+
+                <TextView
+                    android:id="@+id/cropTextView"
+                    style="@style/TrueID.ExtraSmall"
+                    android:layout_width="72dp"
+                    android:layout_height="wrap_content"
+                    android:background="?android:attr/selectableItemBackground"
+                    android:drawablePadding="@dimen/true_cloudv3_spacing_s"
+                    android:gravity="center"
+                    android:paddingVertical="@dimen/true_cloudv3_spacing_3s"
+                    android:text="@string/true_cloudv3_photo_editor_transform"
+                    app:drawableTopCompat="@drawable/ic_true_cloudv3_photo_editor_crop" />
+
+                <TextView
+                    android:id="@+id/adjustTextView"
+                    style="@style/TrueID.ExtraSmall"
+                    android:layout_width="72dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/true_cloudv3_spacing_2s"
+                    android:background="?android:attr/selectableItemBackground"
+                    android:drawablePadding="@dimen/true_cloudv3_spacing_s"
+                    android:gravity="center"
+                    android:paddingVertical="@dimen/true_cloudv3_spacing_3s"
+                    android:text="@string/true_cloudv3_photo_editor_adjust"
+                    app:drawableTopCompat="@drawable/ic_true_cloudv3_photo_editor_adjust" />
+
+                <TextView
+                    android:id="@+id/focusTextView"
+                    style="@style/TrueID.ExtraSmall"
+                    android:layout_width="72dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/true_cloudv3_spacing_2s"
+                    android:background="?android:attr/selectableItemBackground"
+                    android:drawablePadding="@dimen/true_cloudv3_spacing_s"
+                    android:gravity="center"
+                    android:paddingVertical="@dimen/true_cloudv3_spacing_3s"
+                    android:text="@string/true_cloudv3_photo_editor_focus"
+                    app:drawableTopCompat="@drawable/ic_true_cloudv3_photo_editor_focus" />
+
+
+                <TextView
+                    android:id="@+id/textTextView"
+                    style="@style/TrueID.ExtraSmall"
+                    android:layout_width="72dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/true_cloudv3_spacing_2s"
+                    android:background="?android:attr/selectableItemBackground"
+                    android:drawablePadding="@dimen/true_cloudv3_spacing_s"
+                    android:gravity="center"
+                    android:paddingVertical="@dimen/true_cloudv3_spacing_3s"
+                    android:text="@string/true_cloudv3_photo_editor_text"
+                    app:drawableTopCompat="@drawable/ic_true_cloudv3_photo_editor_text" />
+
+            </LinearLayout>
+
+        </HorizontalScrollView>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingHorizontal="30dp">
+
+            <ImageView
+                android:id="@+id/discardImageView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:contentDescription="@string/true_cloudv3_photo_editor_discard"
+                android:src="@drawable/ic_true_cloudv3_photo_editor_discard" />
+
+            <Space
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1" />
+
+            <ImageView
+                android:id="@+id/undoImageView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:contentDescription="@string/true_cloudv3_photo_editor_undo"
+                android:src="@drawable/ic_true_cloudv3_photo_editor_undo" />
+
+            <Space
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1" />
+
+            <ImageView
+                android:id="@+id/redoImageView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:contentDescription="@string/true_cloudv3_photo_editor_redo"
+                android:src="@drawable/ic_true_cloudv3_photo_editor_redo" />
+
+            <Space
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1" />
+
+            <ImageView
+                android:id="@+id/saveImageView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:contentDescription="@string/true_cloudv3_photo_editor_save"
+                android:src="@drawable/ic_true_cloudv3_photo_editor_save" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <ProgressBar
+        android:id="@+id/trueCloudProgress"
+        style="?android:attr/progressBarStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:elevation="6dp"
+        android:indeterminate="true"
+        android:indeterminateTint="@color/red_500_brand"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>

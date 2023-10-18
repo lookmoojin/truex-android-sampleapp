@@ -1,0 +1,40 @@
+plugins {
+    id 'com.android.library'
+}
+
+apply from: "${project.rootDir}/gradle/sub-module.gradle"
+apply from: "${project.rootDir}/gradle/dependencies.gradle"
+
+android {
+    namespace 'com.tdg.common.share.amityserviceconfig'
+}
+
+dependencies {
+//    implementation project(':common:share:component')
+    implementation project(':common:share:data:firestoreconfig')
+//    implementation project(':common:share:securitys')
+//    testImplementation project(path: ':common:share:mock')
+
+    AmitySDK()
+    Firebase()
+    UnitTesting()
+}
+
+android{
+    productFlavors {
+        staging {
+            buildConfigField 'String', 'ENV_TYPE', '"STAGING"'
+        }
+        preprod {
+            buildConfigField 'String', 'ENV_TYPE', '"PREPROD"'
+        }
+        prod {
+            buildConfigField 'String', 'ENV_TYPE', '"PROD"'
+        }
+    }
+}
+
+
+ext {
+    isBelongTo = "watch"
+}

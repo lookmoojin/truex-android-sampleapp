@@ -1,0 +1,57 @@
+plugins {
+    id 'com.android.library'
+}
+
+apply from: "${project.rootDir}/gradle/sub-module.gradle"
+apply from: "${project.rootDir}/gradle/dependencies.gradle"
+
+android {
+
+    namespace 'com.tdg.common.share.component'
+
+    productFlavors {
+        staging {
+            buildConfigField 'String', 'COMMERCE_MUZE_BASE_URL', '"https://live-commerce-customer-api.trueid-alpha.net/"'
+            buildConfigField 'String', 'COMMERCE_AMITY_BASE_URL', '"https://community-public-api.trueid-preprod.net/"'
+        }
+
+        preprod {
+            buildConfigField 'String', 'COMMERCE_MUZE_BASE_URL', '"https://live-commerce-customer-api.trueid-preprod.net/"'
+            buildConfigField 'String', 'COMMERCE_AMITY_BASE_URL', '"https://community-public-api.trueid-preprod.net/"'
+        }
+
+        prod {
+            buildConfigField 'String', 'COMMERCE_MUZE_BASE_URL', '"https://live-commerce-customer-api.trueid.net/"'
+            buildConfigField 'String', 'COMMERCE_AMITY_BASE_URL', '"https://live-commerce-customer-api.trueid.net/"'
+        }
+    }
+
+    testOptions {
+        unitTests.returnDefaultValues = true
+    }
+}
+
+dependencies {
+    implementation eventBus.otto
+    implementation firebase.perf
+    implementation view.skeletonlayout
+    implementation androidSupport.flexbox
+
+    api project(":common:foundation")
+
+    implementation project(":common:core")
+    implementation project(":common:share:analytics")
+    implementation project(":common:share:currentdate")
+    implementation project(":common:share:data:coredata")
+    implementation project(":common:share:datalegacy")
+    implementation project(":common:share:nativeshare")
+    implementation project(":common:share:resource")
+//    testImplementation project(":common:share:mock")
+
+    KotlinCoroutine()
+    UnitTesting()
+}
+
+ext {
+    isBelongTo = "app-core"
+}

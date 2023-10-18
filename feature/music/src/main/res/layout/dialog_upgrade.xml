@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <ImageButton
+        android:id="@+id/buttonClose"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:layout_gravity="end"
+        android:background="@null"
+        android:scaleType="fitXY"
+        android:src="@drawable/music_ic_cross"
+        android:tint="@color/text_color_dialog" />
+
+    <ImageView
+        android:id="@+id/icon"
+        android:layout_width="@dimen/dialog_icon_size"
+        android:layout_height="@dimen/dialog_icon_size"
+        android:layout_gravity="center_horizontal"
+        android:background="@drawable/music_bg_red_circle_solid"
+        android:padding="12dp"
+        android:scaleType="fitXY"
+        android:src="@drawable/music_ic_key" />
+
+    <TextView
+        android:id="@+id/textViewTitle"
+        style="@style/TextMusic.Header2.Grey"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:gravity="center" />
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/textViewDescription"
+                style="@style/TextMusic.Body.Grey"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:lineSpacingMultiplier="1.25" />
+
+        </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+    <Button
+        android:id="@+id/buttonUpgrade"
+        style="@style/TextMusic.Header3.Bold.White"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/music_bg_rect_primary_solid"
+        android:paddingTop="8dp"
+        android:paddingBottom="8dp" />
+
+</LinearLayout>

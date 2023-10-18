@@ -1,0 +1,15 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<SmellBaseline>
+  <ManuallySuppressedIssues/>
+  <CurrentIssues>
+    <ID>ComplexCondition:DynamicLinkGenerator.kt$DynamicLinkGeneratorImpl$shareUrl.contains("music") &amp;&amp; (type.contains("playlist") || type.contains("album") || type.contains("song"))</ID>
+    <ID>MagicNumber:ImageUtils.kt$60</ID>
+    <ID>MagicNumber:OneLinkGenerator.kt$OneLinkGeneratorImpl$100</ID>
+    <ID>MaxLineLength:CreateOneLinkModel.kt$CreateOneLinkModel$*</ID>
+    <ID>MaxLineLength:DynamicLinkGenerator.kt$DynamicLinkGeneratorImpl$callback.onFailure(contextDataProvider.getString(R.string.nativeshare_error_something_wrong))</ID>
+    <ID>MaxLineLength:DynamicLinkGenerator.kt$DynamicLinkGeneratorImpl$callback.onFailure(contextDataProvider.getString(R.string.nativeshare_share_fail_api_exception))</ID>
+    <ID>MaxLineLength:OneLinkGenerator.kt$OneLinkGenerator$*</ID>
+    <ID>PrintStackTrace:ImageUtils.kt$exception</ID>
+    <ID>UnnecessaryAbstractClass:DynamicLinkGeneratorAbstract.kt$DynamicLinkGeneratorAbstract</ID>
+  </CurrentIssues>
+</SmellBaseline>

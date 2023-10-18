@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    style="@style/TrueID.Frame.Square"
+    android:layout_height="wrap_content"
+    android:layout_marginEnd="8dp"
+    android:contentDescription="commerce_activelive_item">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardView"
+        style="@style/TrueID.CardView.ImageVertical.LiveCommerce"
+        app:cardBackgroundColor="@color/grey_89"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/thumbnailImageView"
+                android:layout_width="125dp"
+                android:layout_height="190dp"
+                android:contentDescription="commerce_activelive_previewimage"
+                android:scaleType="centerCrop"
+                android:src="@drawable/ic_livecommerce_placeholder"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/commerceTextViewTitle"
+                style="@style/TrueID.Small.Bold.Black"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:contentDescription="commerce_activelive_title"
+                android:ellipsize="end"
+                android:lineSpacingExtra="0dp"
+                android:lines="2"
+                android:maxLines="2"
+                android:paddingLeft="8dp"
+                android:paddingTop="4dp"
+                android:paddingRight="8dp"
+                app:layout_constraintTop_toBottomOf="@id/thumbnailImageView"
+                tools:text="ขายขายขยาขายขายขายขายขายขายขาย" />
+
+            <TextView
+                android:id="@+id/commerceTextViewSubtitle"
+                style="@style/TrueID.ExtraSmall.Grey"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:contentDescription="commerce_activelive_subtitle"
+                android:ellipsize="end"
+                android:lineSpacingExtra="0dp"
+                android:lines="1"
+                android:maxLines="1"
+                android:paddingLeft="8dp"
+                android:paddingRight="8dp"
+                app:layout_constraintEnd_toEndOf="@id/thumbnailImageView"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/commerceTextViewTitle"
+                tools:text="ราคาถูกมากมากมากมากมากกกมากมาก" />
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/commerceProfileImageView"
+                style="@style/ShapeAppearance.App.CircleImageView.Default.Profile"
+                android:layout_marginLeft="8dp"
+                android:layout_marginBottom="8dp"
+                android:contentDescription="commerce_activelive_profileimage"
+                android:foreground="?attr/selectableItemBackground"
+                android:padding="2dp"
+                app:layout_constraintBottom_toBottomOf="@id/thumbnailImageView"
+                app:layout_constraintStart_toStartOf="parent"
+                app:shapeAppearance="@style/ShapeAppearance.App.CircleImageView.Default.Bubble" />
+
+            <TextView
+                android:id="@+id/commerceTextViewProfileName"
+                style="@style/TrueID.TinySmall.Bold.White"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="4dp"
+                android:layout_marginRight="8dp"
+                android:contentDescription="commerce_activelive_profilename"
+                android:ellipsize="end"
+                android:maxLines="2"
+                app:layout_constraintBottom_toBottomOf="@id/commerceProfileImageView"
+                app:layout_constraintEnd_toEndOf="@id/thumbnailImageView"
+                app:layout_constraintStart_toEndOf="@id/commerceProfileImageView"
+                app:layout_constraintTop_toTopOf="@id/commerceProfileImageView"
+                tools:text="BelBeleleleleleelelelelelelelelelelelele" />
+
+            <ImageView
+                android:id="@+id/commerceLiveActiveIconImageView"
+                android:layout_width="40dp"
+                android:layout_height="16dp"
+                android:layout_margin="8dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/commerce_bg_live_active_icon"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/textView"
+                style="@style/TextAppearance.TrueID.SuperSmall.White"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:paddingLeft="6dp"
+                android:text="Live"
+                app:layout_constraintBottom_toBottomOf="@id/commerceLiveActiveIconImageView"
+                app:layout_constraintStart_toStartOf="@id/commerceLiveActiveIconImageView"
+                app:layout_constraintTop_toTopOf="@id/commerceLiveActiveIconImageView" />
+            
+            <ImageView
+                android:layout_width="5dp"
+                android:layout_height="5dp"
+                android:layout_marginRight="6dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/commerce_bg_live_active_red_icon"
+                app:layout_constraintBottom_toBottomOf="@id/textView"
+                app:layout_constraintEnd_toEndOf="@id/commerceLiveActiveIconImageView"
+                app:layout_constraintStart_toEndOf="@id/textView"
+                app:layout_constraintTop_toTopOf="@id/textView" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+</androidx.constraintlayout.widget.ConstraintLayout>

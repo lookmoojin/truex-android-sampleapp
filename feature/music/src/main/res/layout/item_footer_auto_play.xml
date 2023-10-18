@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:contentDescription="@string/queue_item_footer"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/llAutoPlay"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/horizontal_row_spacing"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="@dimen/horizontal_row_spacing"
+        android:layout_marginBottom="16dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/titleTextView"
+            style="@style/TextMusic.Header3.Red"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:contentDescription="@string/queue_textview_footerTitle"
+            android:text="@string/player_queue_auto_play_enabled" />
+
+        <TextView
+            android:id="@+id/descriptionTextView"
+            style="@style/TextMusic.ExtraSmall.White"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="4dp"
+            android:contentDescription="@string/queue_textview_footerDescription"
+            android:gravity="center_horizontal"
+            android:text="@string/player_queue_auto_play_description" />
+
+    </LinearLayout>
+
+</LinearLayout>

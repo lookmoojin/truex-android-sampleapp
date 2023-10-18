@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="320dp"
+    android:layout_height="match_parent"
+    android:contentDescription="@string/item_16x9_article">
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/contentImageView"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:adjustViewBounds="true"
+        android:contentDescription="@string/today_imageview_16x9_article"
+        android:foreground="?attr/selectableItemBackground"
+        android:scaleType="centerCrop"
+        android:src="@drawable/placeholder_trueidwhite_horizontal"
+        app:layout_constraintDimensionRatio="16:9"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:shapeAppearanceOverlay="@style/ShapeAppearance.App.CornerRadius.Medium" />
+
+    <TextView
+        android:id="@+id/titleTextView"
+        style="@style/TrueID.Small.Bold.Black.Title"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:contentDescription="@string/today_textview_16x9_article_title"
+        android:ellipsize="end"
+        android:maxLines="2"
+        android:textAppearance="@style/TrueID.Small.DarkGrey"
+        app:layout_constraintEnd_toEndOf="@+id/contentImageView"
+        app:layout_constraintStart_toStartOf="@+id/contentImageView"
+        app:layout_constraintTop_toBottomOf="@+id/contentImageView"
+        tools:text="Bangkok: 2-Hour Wonderful Pearl Candle Light Dinner Cruise" />
+
+    <RelativeLayout
+        android:id="@+id/detailContainer"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/titleTextView">
+
+        <TextView
+            android:id="@+id/subtitleTextView"
+            style="@style/TrueID.Small.DarkGrey"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentLeft="true"
+            android:layout_marginTop="2dp"
+            android:contentDescription="@string/today_textview_16x9_article_subtitle"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:text="Business Finance" />
+
+        <TextView
+            android:id="@+id/timeTextView"
+            style="@style/TrueID.Small.DarkGrey"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2dp"
+            android:layout_toRightOf="@+id/subtitleTextView"
+            android:contentDescription="@string/today_textview_16x9_article_publish_date"
+            android:lineHeight="28sp"
+            android:lines="1"
+            tools:text=" · 4 ชั่วโมงที่แล้วผ่านไปนานเท่าไหร่แล้ว" />
+    </RelativeLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="TrueID.CommonAppBar" parent="Widget.Design.CollapsingToolbar">
+        <item name="cab_title_style">@style/TrueID.CollapsingToolbarTitle</item>
+        <item name="cab_search_style">@style/TrueID.CommonSearchBar</item>
+        <item name="cab_icon_search_style">@style/TrueID.IconSearchBar.SearchLight</item>
+        <item name="cab_icon_scan_style">@style/TrueID.IconSearchBar.ScanLight</item>
+    </style>
+
+    <style name="TrueID.CommonAppBar.Dark">
+        <item name="cab_title_style">@style/TrueID.CollapsingToolbarTitle.Dark</item>
+        <item name="cab_search_style">@style/TrueID.CommonSearchBar.Dark</item>
+        <item name="cab_icon_search_style">@style/TrueID.IconSearchBar.SearchDark</item>
+        <item name="cab_icon_scan_style">@style/TrueID.IconSearchBar.ScanDark</item>
+    </style>
+
+    <style name="TrueID.CollapsingToolbarTitle">
+        <item name="collapsedTitleGravity">left</item>
+        <item name="collapsedTitleTextAppearance">@style/TrueID.CollapseTitleInCommonAppBar</item>
+        <item name="expandedTitleGravity">left|bottom</item>
+        <item name="expandedTitleMarginBottom">@dimen/appbar_expanded_title_margin_bottom</item>
+        <item name="expandedTitleMarginStart">20dp</item>
+        <item name="expandedTitleTextAppearance">@style/TrueID.TitleInCommonAppBar</item>
+        <item name="layout_scrollFlags">scroll|exitUntilCollapsed</item>
+    </style>
+
+    <style name="TrueID.CollapsingToolbarTitle.Dark">
+        <item name="collapsedTitleTextAppearance">@style/TrueID.CollapseTitleInCommonAppBar.Dark
+        </item>
+        <item name="expandedTitleTextAppearance">@style/TrueID.TitleInCommonAppBar.Dark</item>
+    </style>
+
+    <style name="RedProgressBar">
+        <item name="colorAccent">@color/red_500_brand</item>
+    </style>
+</resources>

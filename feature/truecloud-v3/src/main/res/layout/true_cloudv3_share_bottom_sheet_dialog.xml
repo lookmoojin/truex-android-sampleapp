@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/bg_white_true_cloudv3_upload_dialog"
+    android:orientation="vertical"
+    android:paddingBottom="@dimen/true_cloudv3_spacing_l">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:paddingHorizontal="@dimen/true_cloudv3_spacing_m"
+        android:paddingTop="@dimen/true_cloudv3_spacing_l"
+        android:paddingBottom="@dimen/true_cloudv3_spacing_2s">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/collapseImageView"
+            android:layout_width="@dimen/true_cloudv3_spacing_l"
+            android:layout_height="@dimen/true_cloudv3_spacing_l"
+            android:src="@drawable/ic_baseline_keyboard_arrow_down_24"
+            android:tint="@color/black"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/titleFileName"
+                style="@style/TrueID.Body.Black"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/true_cloudv3_spacing_2s"
+                android:layout_toEndOf="@id/collapseImageView"
+                android:layout_toStartOf="@id/icStatus"
+                android:maxLines="1"
+                android:ellipsize="end"
+                android:gravity="start"/>
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/icStatus"
+            android:layout_width="@dimen/true_cloudv3_spacing_l"
+            android:layout_height="@dimen/true_cloudv3_spacing_l"
+            android:src="@drawable/ic_share_public_24"
+            android:tint="@color/black"
+            android:layout_toStartOf="@id/txtStatus"
+            android:visibility="gone" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/txtStatus"
+            style="@style/TrueID.Body.Black"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginStart="@dimen/true_cloudv3_spacing_3s"
+            android:visibility="gone" />
+
+    </RelativeLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:layout_marginHorizontal="@dimen/true_cloudv3_spacing_m"
+        android:background="@color/true_cloudv3_line_separator_color2" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/shareTitleContainer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:paddingHorizontal="@dimen/true_cloudv3_spacing_m"
+        android:paddingTop="@dimen/true_cloudv3_spacing_l"
+        android:paddingBottom="@dimen/true_cloudv3_spacing_m">
+
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/trueCloudTitleShareTextView"
+            style="@style/TrueID.Header2.Bold.Black"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/true_cloudv3_share"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/shareContainer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:paddingHorizontal="@dimen/true_cloudv3_spacing_m"
+        android:paddingTop="@dimen/true_cloudv3_spacing_l"
+        android:paddingBottom="@dimen/true_cloudv3_spacing_m">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/iconShareImageView"
+            android:layout_width="@dimen/true_cloudv3_spacing_l"
+            android:layout_height="@dimen/true_cloudv3_spacing_l"
+            android:src="@drawable/ic_baseline_ios_share_24"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"/>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/trueCloudShareTextView"
+            style="@style/TrueID.Header3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/true_cloudv3_spacing_m"
+            android:text="@string/true_cloudv3_share"
+            app:layout_constraintStart_toEndOf="@+id/iconShareImageView"
+            app:layout_constraintTop_toTopOf="parent"
+            />
+
+        <ProgressBar
+            android:id="@+id/shareProgressBar"
+            style="?android:attr/progressBarStyle"
+            android:layout_width="@dimen/true_cloudv3_spacing_l"
+            android:layout_height="@dimen/true_cloudv3_spacing_l"
+            android:layout_centerHorizontal="true"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:indeterminateTint="@color/true_cloudv3_color_black"
+            android:visibility="gone"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:id="@+id/copyLinkContainer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:paddingHorizontal="@dimen/true_cloudv3_spacing_m"
+        android:paddingTop="@dimen/true_cloudv3_spacing_l"
+        android:paddingBottom="@dimen/true_cloudv3_spacing_m">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/iconCopyImageView"
+            android:layout_width="@dimen/true_cloudv3_spacing_l"
+            android:layout_height="@dimen/true_cloudv3_spacing_l"
+            android:src="@drawable/ic_truecloud_content_copy_24" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/trueCloudCopyLinkTextView"
+            style="@style/TrueID.Header3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/true_cloudv3_spacing_m"
+            android:text="@string/true_cloudv3_copy_link" />
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:id="@+id/trueCloudControlShareAccessContainer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:paddingHorizontal="@dimen/true_cloudv3_spacing_m"
+        android:paddingTop="@dimen/true_cloudv3_spacing_l"
+        android:paddingBottom="@dimen/true_cloudv3_spacing_m">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/iconControlShareAccessImageView"
+            android:layout_width="@dimen/true_cloudv3_spacing_l"
+            android:layout_height="@dimen/true_cloudv3_spacing_l"
+            android:src="@drawable/ic_baseline_lock_24" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/trueCloudControlShareAccessTextView"
+            style="@style/TrueID.Header3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/true_cloudv3_spacing_m"
+            android:text="@string/true_cloudv3_control_share_access" />
+    </androidx.appcompat.widget.LinearLayoutCompat>
+</androidx.appcompat.widget.LinearLayoutCompat>

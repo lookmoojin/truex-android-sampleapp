@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item name="sport_community_live_match_spacing_multiplier" type="integer" format="float">0.7</item>
+    <dimen name="shelf_countdown_guideline_match_date_bottom">0.98</dimen>
+</resources>

@@ -1,0 +1,41 @@
+apply {
+    from("${project.rootDir}/gradle/sub-module.gradle")
+    from("${project.rootDir}/gradle/dependencies.gradle")
+}
+
+android {
+    namespace 'com.tdg.truex_android_sampleapp.common.share.datalegacy.'
+    packagingOptions {
+        jniLibs {
+            useLegacyPackaging = true
+        }
+    }
+    productFlavors {
+        preprod {}
+        prod {}
+    }
+}
+
+dependencies {
+
+    api firebase.analytics
+    api firebase.config
+    api firebase.database
+    implementation eventBus.otto
+    implementation playService.auth
+    implementation trueIDSSOSDK.trueIDSSOSDK
+
+    implementation project(':common:core')
+    implementation project(':common:share:data:firestoreconfig')
+
+//    testImplementation project(':common:share:mock')
+    Chucker()
+    FacebookDebugger()
+    Room()
+    WebKit()
+    UnitTesting()
+}
+
+ext {
+    isBelongTo = "app-core"
+}

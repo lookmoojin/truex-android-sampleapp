@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.appcompat.widget.AppCompatTextView
+        style="@style/TrueID.Body.Bold.Black.Title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_margin="@dimen/true_cloudv3_spacing_l"
+        android:paddingLeft="@dimen/true_cloudv3_spacing_l"
+        android:paddingRight="@dimen/true_cloudv3_spacing_l"
+        android:text="@string/true_cloudv3_start_migration_data"
+        app:layout_constraintBottom_toTopOf="@+id/migrationImageView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/migrationImageView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_migration_holder"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.373" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        style="@style/TrueID.Body.Grey"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_margin="@dimen/true_cloudv3_spacing_l"
+        android:paddingLeft="@dimen/true_cloudv3_spacing_l"
+        android:paddingRight="@dimen/true_cloudv3_spacing_l"
+        android:text="@string/true_cloudv3_start_migration_detail"
+        app:layout_constraintTop_toBottomOf="@+id/migrationImageView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/true_cloudv3_spacing_3m"
+        android:orientation="horizontal"
+        android:layout_marginLeft="@dimen/true_cloudv3_spacing_2m"
+        android:layout_marginRight="@dimen/true_cloudv3_spacing_2m"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/trueCloudLaterTextView"
+            style="@style/TrueID.Body"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/true_cloudv3_spacing_m"
+            android:layout_weight="1"
+            android:background="@drawable/button_dialog_outlined"
+            android:gravity="center"
+            android:padding="@dimen/true_cloudv3_spacing_3s"
+            android:text="@string/true_cloudv3_later"
+            android:textColor="@color/black"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/trueCloudMigrateTextView"
+            style="@style/TrueID.Body"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/common_round_black"
+            android:gravity="center"
+            android:padding="@dimen/true_cloudv3_spacing_3s"
+            android:text="@string/true_cloudv3_migrate_data"
+            android:textColor="@color/white"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="Widget.TrueID.Button" parent="Widget.MaterialComponents.Button">
+        <item name="android:textSize">17sp</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:insetTop">0dp</item>
+        <item name="android:insetBottom">0dp</item>
+        <item name="android:letterSpacing">0</item>
+        <item name="android:textColor">@android:color/white</item>
+        <item name="cornerRadius">25dp</item>
+        <item name="materialThemeOverlay">@style/ThemeOverlay.TrueId.Button</item>
+    </style>
+
+    <style name="Widget.TrueID.Button.Red">
+        <item name="android:textStyle">bold</item>
+        <item name="android:backgroundTint">@color/red_500_brand</item>
+    </style>
+
+    <style name="Widget.TrueID.Button.White">
+        <item name="android:textColor">@android:color/black</item>
+        <item name="android:backgroundTint">@color/white</item>
+    </style>
+
+    <style name="Widget.TrueID.Button.Black.Rounded" parent="@style/Widget.AppCompat.Button.Borderless">
+        <item name="android:background">@drawable/bg_button_black_rounded</item>
+        <item name="android:textColor">@android:color/white</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="ThemeOverlay.TrueId.Button" parent="">
+        <item name="colorPrimary">@color/light_on_surface_high_emphasis</item>
+        <item name="colorOnSurface">@android:color/black</item>
+    </style>
+</resources>

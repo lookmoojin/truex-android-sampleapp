@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/musicGeoBlockRootView"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    android:clickable="true"
+    android:focusable="true">
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/startViewGuideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.1" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/endViewGuideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.9" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/geoBlockImageView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:contentDescription="@string/music_geo_block_imageview_logo"
+        app:srcCompat="@drawable/music_ic_geo_block"
+        app:layout_constraintBottom_toTopOf="@+id/geoBlockTitleTextView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_chainStyle="packed" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/geoBlockTitleTextView"
+        style="@style/TrueID.Title.Bold.Black"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:contentDescription="@string/music_geo_block_textview_title"
+        android:gravity="center"
+        android:text="@string/error_music_title"
+        app:layout_constraintBottom_toTopOf="@+id/geoBlockDetailTextView"
+        app:layout_constraintEnd_toEndOf="@id/endViewGuideline"
+        app:layout_constraintStart_toStartOf="@id/startViewGuideline"
+        app:layout_constraintTop_toBottomOf="@+id/geoBlockImageView" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/geoBlockDetailTextView"
+        style="@style/TrueID.Header3.Black"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:contentDescription="@string/music_geo_block_textview_description"
+        android:gravity="center"
+        android:text="@string/geo_block_description"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@id/endViewGuideline"
+        app:layout_constraintStart_toStartOf="@id/startViewGuideline"
+        app:layout_constraintTop_toBottomOf="@+id/geoBlockTitleTextView" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

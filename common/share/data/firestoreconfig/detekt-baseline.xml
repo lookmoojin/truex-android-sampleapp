@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<SmellBaseline>
+  <ManuallySuppressedIssues/>
+  <CurrentIssues>
+    <ID>ForbiddenComment:DomainRepository.kt$DomainRepositoryImpl$* Try-catch this block due to error ArrayIndexOutOfBoundsException * TODO: Need to find the better way to handle this error * </ID>
+  </CurrentIssues>
+</SmellBaseline>

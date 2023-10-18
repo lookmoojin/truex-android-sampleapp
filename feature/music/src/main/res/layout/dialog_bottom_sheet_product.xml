@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/llBottomSheet"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bottom_sheet_background_dark"
+    android:fitsSystemWindows="true"
+    app:behavior_hideable="true"
+    app:behavior_peekHeight="0dp"
+    app:layout_behavior="com.google.android.material.bottomsheet.BottomSheetBehavior">
+
+    <ImageView
+        android:id="@+id/crossImageView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="end"
+        android:layout_margin="8dp"
+        android:contentDescription="@string/more_button_close"
+        android:foreground="?attr/selectableItemBackground"
+        android:padding="8dp"
+        android:src="@drawable/music_ic_cross" />
+
+    <LinearLayout
+        android:id="@+id/llContentContainer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_margin="32dp"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@+id/productInfoContainer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <FrameLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:id="@+id/productArtImageView"
+                    android:layout_width="@dimen/bottom_sheet_title_image_size"
+                    android:layout_height="@dimen/bottom_sheet_title_image_size"
+                    android:layout_margin="16dp"
+                    android:background="@drawable/music_bg_rect_product_item"
+                    android:contentDescription="@string/more_imageview_cover"
+                    android:src="@drawable/placeholder_song" />
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/productArtRoundImageView"
+                    android:layout_width="@dimen/bottom_sheet_title_image_size"
+                    android:layout_height="@dimen/bottom_sheet_title_image_size"
+                    android:layout_margin="16dp"
+                    android:contentDescription="@string/more_imageview_cover"
+                    android:src="@drawable/placeholder_artist"
+                    app:civ_fill_color="@color/placeholder_background" />
+
+                <ImageView
+                    android:id="@+id/productIndicatorImageView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom"
+                    android:layout_margin="16dp"
+                    android:contentDescription="@string/more_imageview_indicator"
+                    android:padding="4dp"
+                    android:src="@drawable/music_ic_app_playlist"
+                    android:visibility="gone" />
+
+            </FrameLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/titleTextView"
+                    style="@style/TextMusic.Body.Bold.White"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:contentDescription="@string/more_textview_title"
+                    android:ellipsize="end"
+                    android:maxLines="3"
+                    tools:text="Hipster" />
+
+                <TextView
+                    android:id="@+id/subTitleTextView"
+                    style="@style/TextMusic.Small.GrayMedium"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:contentDescription="@string/more_textview_subtitle"
+                    android:ellipsize="end"
+                    android:maxLines="1"
+                    tools:text="Mix" />
+
+                <TextView
+                    android:id="@+id/explicitTextView"
+                    style="@style/TextMusic.TinySmall.Red"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:background="@drawable/music_bg_rect_explicit"
+                    android:contentDescription="@string/more_textview_explicit"
+                    android:paddingStart="8dp"
+                    android:paddingTop="2dp"
+                    android:paddingEnd="8dp"
+                    android:paddingBottom="2dp"
+                    android:text="@string/explicit_label"
+                    android:textAllCaps="true" />
+
+                <TextView
+                    android:id="@+id/extraInfoTextView"
+                    style="@style/TextMusic.Small.GrayMedium"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:contentDescription="@string/more_textview_description"
+                    android:ellipsize="end"
+                    tools:text="Mix\n0m" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvOptions"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:contentDescription="@string/more_scroll_options" />
+
+    </LinearLayout>
+
+    <com.wang.avi.AVLoadingIndicatorView
+        android:id="@+id/progressBar"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_gravity="center"
+        android:visibility="gone"
+        app:indicatorColor="@color/primary"
+        app:indicatorName="LineScalePartyIndicator" />
+
+</FrameLayout>

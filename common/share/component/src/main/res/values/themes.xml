@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--Dialog Theme-->
+    <style name="TrueIdDialogTheme" parent="Base.TrueID">
+        <item name="android:windowBackground">@color/transparent</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:windowMinWidthMajor">100%</item>
+        <item name="android:windowMinWidthMinor">100%</item>
+        <item name="android:backgroundDimEnabled">true</item>
+        <item name="backgroundColor">@color/white</item>
+        <item name="iconColor">@color/black</item>
+        <item name="iconBackgroundColor">#F2F2F2</item>
+        <item name="buttonColorPrimary">@color/black</item>
+        <item name="buttonColorSecondary">@color/black</item>
+        <item name="buttonColorTertiary">@color/transparent</item>
+        <item name="textButtonColorPrimary">@color/white</item>
+        <item name="textButtonColorSecondary">@color/black</item>
+        <item name="textButtonColorTertiary">@color/black</item>
+        <item name="textTitleColor">@color/black</item>
+        <item name="textSubtitleColor">#818181</item>
+
+        <item name="containedButtonColor">?buttonColorPrimary</item>
+        <item name="textContainedButtonColor">?textButtonColorPrimary</item>
+        <item name="outlinedButtonColor">?buttonColorSecondary</item>
+        <item name="textOutlinedButtonColor">?textButtonColorSecondary</item>
+        <item name="textButtonColor">?textButtonColorTertiary</item>
+
+        <item name="buttonStylePrimary">@style/TrueIdDialog.Button.Contained</item>
+        <item name="buttonStyleSecondary">@style/TrueIdDialog.Button.Outlined</item>
+        <item name="buttonStyleTertiary">@style/TrueIdDialog.Button.Text</item>
+    </style>
+
+    <style name="TrueIdDialogTheme.Dark">
+        <item name="backgroundColor">@color/dialog_bg_dark</item>
+        <item name="iconColor">@color/white</item>
+        <item name="iconBackgroundColor">@color/dialog_icon_bg_dark</item>
+        <item name="buttonColorPrimary">@color/white</item>
+        <item name="buttonColorSecondary">@color/white</item>
+        <item name="buttonColorTertiary">@color/transparent</item>
+        <item name="textButtonColorPrimary">@color/black</item>
+        <item name="textButtonColorSecondary">@color/white</item>
+        <item name="textButtonColorTertiary">@color/white</item>
+        <item name="textTitleColor">@color/white</item>
+        <item name="textSubtitleColor">#DDDDDD</item>
+    </style>
+
+    <style name="TrueIdDialogTheme.FullScreen">
+        <item name="android:windowBackground">@color/white</item>
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <style name="TrueIdDialogTheme.Dark.FullScreen">
+        <item name="android:windowBackground">@color/black</item>
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+</resources>

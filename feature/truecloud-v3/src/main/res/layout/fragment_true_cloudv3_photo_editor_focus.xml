@@ -1,0 +1,283 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/trueCloudHeaderTitle"
+        style="@style/TrueID.Body.Bold.Black"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:maxLines="1"
+        android:padding="@dimen/true_cloudv3_spacing_3s"
+        android:text="@string/true_cloudv3_photo_editor_focus"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <View
+        android:id="@+id/photoEditorBackgroundView"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@color/white"
+        app:layout_constraintBottom_toTopOf="@id/toolsLayoutGuideline"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/trueCloudHeaderTitle" />
+
+    <ja.burhanrashid52.photoeditor.PhotoEditorView
+        android:id="@+id/photoEditorView"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@id/toolsLayoutGuideline"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/trueCloudHeaderTitle" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/toolsLayoutGuideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_end="256dp" />
+
+    <LinearLayout
+        android:id="@+id/editorLayout"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@color/true_cloudv3_gray98"
+        android:gravity="bottom"
+        android:minHeight="256dp"
+        android:orientation="vertical"
+        android:paddingBottom="@dimen/true_cloudv3_spacing_2l"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <ViewFlipper
+            android:id="@+id/brushViewFlipper"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/true_cloudv3_spacing_m"
+            android:measureAllChildren="false"
+            android:paddingHorizontal="20dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:orientation="vertical">
+
+                <FrameLayout
+                    android:id="@+id/brushSizeLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/true_cloudv3_spacing_2s"
+                    android:gravity="center_vertical"
+                    android:paddingHorizontal="20dp"
+                    android:paddingVertical="8dp"
+                    android:visibility="gone"
+                    tools:visibility="visible">
+
+                    <com.vashisthg.startpointseekbar.StartPointSeekBar
+                        android:id="@+id/brushSizeSeekBar"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:defaultBackgroundColor="@color/true_cloudv3_gray82"
+                        app:defaultBackgroundRangeColor="@color/true_cloudv3_color_black"
+                        app:maxValue="100"
+                        app:minValue="0"
+                        app:thumbDrawable="@drawable/ic_true_cloudv3_photo_editor_seekbar_thumb"
+                        app:thumbPressedDrawable="@drawable/ic_true_cloudv3_photo_editor_seekbar_thumb" />
+                </FrameLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/brushColorTextView"
+                        style="@style/TrueID.ExtraSmall"
+                        android:layout_width="72dp"
+                        android:layout_height="wrap_content"
+                        android:background="?attr/selectableItemBackground"
+                        android:drawablePadding="@dimen/true_cloudv3_spacing_s"
+                        android:gravity="center"
+                        android:paddingVertical="@dimen/true_cloudv3_spacing_3s"
+                        android:text="@string/true_cloudv3_photo_editor_brush_color"
+                        app:drawableTopCompat="@drawable/ic_true_cloudv3_photo_editor_brush_color" />
+
+                    <androidx.appcompat.widget.AppCompatCheckedTextView
+                        android:id="@+id/brushSizeTextView"
+                        style="@style/TrueID.ExtraSmall"
+                        android:layout_width="72dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/true_cloudv3_spacing_2s"
+                        android:background="@drawable/bg_true_cloudv3_photo_editor_filter_button"
+                        android:checkMark="@null"
+                        android:drawablePadding="@dimen/true_cloudv3_spacing_s"
+                        android:gravity="center"
+                        android:paddingVertical="@dimen/true_cloudv3_spacing_3s"
+                        android:text="@string/true_cloudv3_photo_editor_brush_size"
+                        android:textAlignment="center"
+                        app:drawableTopCompat="@drawable/ic_true_cloudv3_photo_editor_brush_size" />
+
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:id="@+id/colorPickerLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:paddingVertical="@dimen/true_cloudv3_spacing_l"
+                    android:visibility="gone"
+                    tools:visibility="visible">
+
+                    <FrameLayout
+                        android:layout_width="0dp"
+                        android:layout_height="230dp"
+                        android:layout_weight="1">
+
+                        <com.skydoves.colorpickerview.sliders.BrightnessSlideBar
+                            android:id="@+id/brightnessSlideBar"
+                            android:layout_width="230dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:rotation="90"
+                            app:borderColor_BrightnessSlider="@android:color/transparent"
+                            app:borderSize_BrightnessSlider="0"
+                            app:selector_BrightnessSlider="@drawable/wheel" />
+                    </FrameLayout>
+
+                    <com.skydoves.colorpickerview.ColorPickerView
+                        android:id="@+id/colorPickerView"
+                        android:layout_width="230dp"
+                        android:layout_height="230dp"
+                        app:debounceDuration="150"
+                        app:selector="@drawable/wheel" />
+
+                    <FrameLayout
+                        android:layout_width="0dp"
+                        android:layout_height="230dp"
+                        android:layout_weight="1">
+
+                        <com.skydoves.colorpickerview.sliders.AlphaSlideBar
+                            android:id="@+id/alphaSlideBar"
+                            android:layout_width="230dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:rotation="90"
+                            app:borderColor_AlphaSlideBar="@android:color/transparent"
+                            app:borderSize_AlphaSlideBar="0"
+                            app:selector_AlphaSlideBar="@drawable/wheel" />
+                    </FrameLayout>
+                </LinearLayout>
+
+                <HorizontalScrollView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal">
+
+                        <com.google.android.material.card.MaterialCardView
+                            android:id="@+id/colorPickerCardView"
+                            android:layout_width="72dp"
+                            android:layout_height="72dp"
+                            app:cardBackgroundColor="@android:color/darker_gray"
+                            app:cardCornerRadius="8dp"
+                            app:cardElevation="0dp">
+
+                            <TextView
+                                android:id="@+id/colorPickerTextView"
+                                style="@style/TrueID.ExtraSmall"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:drawablePadding="@dimen/true_cloudv3_spacing_s"
+                                android:gravity="center"
+                                android:paddingVertical="@dimen/true_cloudv3_spacing_2s"
+                                android:text="@string/true_cloudv3_photo_editor_brush_picker"
+                                app:drawableTopCompat="@drawable/ic_true_cloudv3_photo_editor_picker" />
+                        </com.google.android.material.card.MaterialCardView>
+
+                        <com.google.android.material.card.MaterialCardView
+                            android:id="@+id/gray1CardView"
+                            android:layout_width="72dp"
+                            android:layout_height="72dp"
+                            android:layout_marginStart="@dimen/true_cloudv3_spacing_2s"
+                            app:cardBackgroundColor="#E5E5E5"
+                            app:cardCornerRadius="8dp"
+                            app:cardElevation="0dp" />
+
+                        <com.google.android.material.card.MaterialCardView
+                            android:id="@+id/gray2CardView"
+                            android:layout_width="72dp"
+                            android:layout_height="72dp"
+                            android:layout_marginStart="@dimen/true_cloudv3_spacing_2s"
+                            app:cardBackgroundColor="#C7C7C7"
+                            app:cardCornerRadius="8dp"
+                            app:cardElevation="0dp" />
+
+                        <com.google.android.material.card.MaterialCardView
+                            android:id="@+id/gray3CardView"
+                            android:layout_width="72dp"
+                            android:layout_height="72dp"
+                            android:layout_marginStart="@dimen/true_cloudv3_spacing_2s"
+                            app:cardBackgroundColor="#8E8E8E"
+                            app:cardCornerRadius="8dp"
+                            app:cardElevation="0dp" />
+
+                        <com.google.android.material.card.MaterialCardView
+                            android:id="@+id/gray4CardView"
+                            android:layout_width="72dp"
+                            android:layout_height="72dp"
+                            android:layout_marginStart="@dimen/true_cloudv3_spacing_2s"
+                            app:cardBackgroundColor="#484848"
+                            app:cardCornerRadius="8dp"
+                            app:cardElevation="0dp" />
+                    </LinearLayout>
+                </HorizontalScrollView>
+            </LinearLayout>
+        </ViewFlipper>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingHorizontal="30dp">
+
+            <ImageView
+                android:id="@+id/discardImageView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:contentDescription="@string/true_cloudv3_photo_editor_discard"
+                android:src="@drawable/ic_true_cloudv3_photo_editor_discard" />
+
+            <Space
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1" />
+
+            <ImageView
+                android:id="@+id/confirmImageView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:contentDescription="@string/true_cloudv3_photo_editor_save"
+                android:src="@drawable/ic_true_cloudv3_photo_editor_confirm" />
+        </LinearLayout>
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

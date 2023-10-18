@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/action_share"
+        android:icon="@drawable/music_ic_share_black"
+        android:title="Share from Collections"
+        android:visible="false"
+        app:showAsAction="always" />
+
+    <item
+        android:id="@+id/action_fav"
+        android:icon="@drawable/music_ic_star_empty_black"
+        android:title="Add to/Remove from Collections"
+        android:visible="false"
+        app:showAsAction="always" />
+
+</menu>

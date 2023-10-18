@@ -1,0 +1,532 @@
+apply {
+    from("${rootDir}/gradle/sub-module.gradle")
+    from("${rootDir}/gradle/dependencies.gradle")
+    from("${rootDir}/gradle/version.gradle")
+}
+
+android {
+    namespace 'com.tdg.truex_android_sampleapp.common.core'
+    defaultConfig {
+
+        buildConfigField 'boolean', 'BLOCK_NETWORK', 'false'
+        buildConfigField 'boolean', 'FORCE_UPDATE', 'true'
+        buildConfigField 'boolean', 'USE_SCHEME_IN_MORE_APP', 'false'
+        buildConfigField 'boolean', 'USE_SCHEME_ALL', 'false'
+        buildConfigField 'boolean', 'USE_TEST_FAIRY', 'false'
+
+        buildConfigField 'String', 'TRUEVISIONS_IV', '"ZF2E5PZW36D3W9TU"'
+        buildConfigField 'String', 'TRUEVISIONS_SECRETKEY', '"XISG9C83TTV3TVSL"'
+
+        buildConfigField 'String', 'GOOGLE_ANALYTIC_ENCRYPTION_KEY', '"hQeRhom34d9u3sTo"'
+        buildConfigField 'String', 'GOOGLE_ANALYTIC_ENCRYPTION_IV', '"sCwVxPGoahFn5QBL"'
+        buildConfigField 'String', 'GOOGLE_CAST_APP_ID', '"BDFD080A"'
+        buildConfigField 'String', 'SPRING_BOARD_VERSION', '"0.1"'
+
+        buildConfigField 'String', 'APP_LOG_URL', '"https://ga-apis-al-gcp.trueid.net"'
+        buildConfigField 'String', 'EDUCATION_URL', '"http://www.trueplookpanya.com/api/trueid/"'
+        buildConfigField 'String', 'EKO_CHAT_API_KEY', '"b0eceb5e68ddf36545308f4e000b12dcd90985e2bf3d6a2e"'
+        buildConfigField 'String', 'HOST', '"trueid.net/"'
+        buildConfigField 'String', 'ISERVICE', '"https://iservice-old.truecorp.co.th/"'
+        buildConfigField 'String', 'KEY_APPS_FLYER', '"x4MdNsJYmxUruCq7kGEv9i"'
+        buildConfigField 'String', 'KEY_FIREBASE_SENDER_ID', '"101521504738"'
+        buildConfigField 'String', 'SPORT_URL', '"http://sport.trueid.net/"'
+        buildConfigField 'String', 'SUBSCRIPTION_URL', '"https://subscription.trueid.net/v3/"'
+        if (project.hasProperty('devBuild')) {
+            buildConfigField 'int', 'TIMESTAMP', "1624446452"
+        } else {
+            buildConfigField 'int', 'TIMESTAMP', "${getTimestamp()}"
+        }
+        buildConfigField 'String', 'TRUE_YOU_EARN_POINT_CHANNEL', '"TRUEIDAPP"'
+        buildConfigField 'String', 'URL_DMP_CDN', '"https://discover.dmpcdn.com/"'
+        buildConfigField 'String', 'URL_PSERVICE', '"https://pgt.stm.trueid.net"'
+        buildConfigField 'String', 'URL_PPROXY', '"https://pproxy.stm.trueid.net"'
+        buildConfigField 'String', 'USE_SCHEME_LIST', '"trueyou trueiservice anywhere truemusic truetruetopup"'
+        buildConfigField "String", "API_DOMAIN", '"https://chat-apis.trueid-preprod.net/api/v1/"'
+        buildConfigField "String", "API_DOMAIN_V2", '"https://chat-apis.trueid-preprod.net/api/v2/"'
+        buildConfigField 'String', 'CREATOR_URL', '"https://sls-prod.api-onscene.com/"'
+    }
+
+    productFlavors {
+        staging {
+            buildConfigField 'String', 'APP_ID', '"com.tdcm.trueidapp.staging"'
+            buildConfigField 'String', 'APP_PROVIDER', '"com.tdcm.trueidapp.staing.provider"'
+            buildConfigField 'String', 'TRUEYOU_SERVICE_CLIENT_ID', '"trueyounativeapp-uat"'
+            buildConfigField 'String', 'TRUEYOU_SERVICE_DEAL_OF_THE_DAY_CLIENT_ID', '"trueID"'
+            buildConfigField 'String', 'ENVIRONMENT', '"staging"'
+
+            buildConfigField 'boolean', 'ENVIRONMENT_IS_DEV', 'true'
+            buildConfigField 'boolean', 'USE_FIREBASE_USAGE_METER_DEBUG', 'true'
+            buildConfigField 'boolean', 'USE_STETHO', 'true'
+            buildConfigField 'boolean', 'WALLET_API_PRO', 'false'
+
+            buildConfigField 'String', 'GOOGLE_CAST_APP_ID', '"D338CBD4"'
+
+            buildConfigField 'String', 'FIREBASE_DB_APP_ID', '"1:791297836702:android:f335ee92ad0700fdb35d8f"'
+            buildConfigField 'String', 'FIREBASE_DB_API_KEY', '"AIzaSyAUA_tWYDqvwl9M691M2WhAWt-2A6qCj6s"'
+            buildConfigField 'String', 'FIREBASE_DB_URL', '"https://trueid-staging.firebaseio.com"'
+            buildConfigField 'String', 'FIREBASE_DYNAMIC_LINK_DOMAIN', '"https://s.trueid-dev.net"'
+            buildConfigField 'String', 'FIREBASE_FUNCTIONS_URL', '"https://us-central1-trueid-staging.cloudfunctions.net/"'
+            buildConfigField 'String', 'FIREBASE_NOTIFICATION_SENDER_ID', '"1069164963919"'
+            buildConfigField 'String', 'FIREBASE_STORAGE_URL', '"gs://trueid-v3-staging.appspot.com"'
+            buildConfigField 'String', 'FIREBASE_TRUE_ID_PROJECT_ID', '"trueid-staging"'
+            buildConfigField 'String', 'FIREBASE_USAGEMETER_DB_APP_ID', '"1:399833628089:android:174c296de0d9ae41"'
+            buildConfigField 'String', 'FIREBASE_USAGEMETER_DB_API_KEY', '"AIzaSyDVwEA6M5Av3Lsztl-YgUFL_udIopU0x08"'
+            buildConfigField 'String', 'FIREBASE_USAGEMETER_DB_URL', '"https://usage-meter-staging.firebaseio.com/"'
+            buildConfigField 'String', 'FIREBASE_USAGEMETER_PROJECT_ID', '"usage-meter-staging"'
+            buildConfigField 'String', 'FIREBASE_USAGEMETER_TOPBAR_APP_ID', '"1:432159871636:android:8160fd3688c44683"'
+            buildConfigField 'String', 'FIREBASE_USAGEMETER_TOPBAR_API_KEY', '"AIzaSyDKKAOSAoRAJqzaP_yTAv4JJKU7R7iR_yc"'
+            buildConfigField 'String', 'FIREBASE_USAGEMETER_TOPBAR_PROJECT_ID', '"usage-meter-sdk-staging"'
+
+            buildConfigField 'String', 'KEY_CONTENT_FRAMEWORK_PROGRAM_ID', '"BP5XQAOwzvnN"'
+            buildConfigField 'String', 'KEY_CATEGORIES_SEARCH_SHELF_ID', '"wZEa4onm2MQZ"'
+
+            buildConfigField 'String', 'KEY_GET_REWARDS_ID', '"2OMPyRdnRRKV"'
+            buildConfigField 'String', 'KEY_HIGHLIGHT_CARD_ON_FEDD', '"agdjQyblbAE5"'
+            buildConfigField 'String', 'KEY_MEME_IMAGE_SHELF_ID', '"VkOXWnn0l769"'
+            buildConfigField 'String', 'KEY_MUX', '"378b58e887fa31dcc9eba2319"'
+            buildConfigField 'String', 'KEY_NOTIFICATION_TOPIC', '"NOTIFICATION_DEV"'
+            buildConfigField 'String', 'KEY_ONBOARDING_INAPP_MESSAGING_SHELF_ID', '"jbd6Y0oMWZLK"'
+            buildConfigField 'String', 'KEY_ONBOARDING_INAPP_MESSAGING_SHELF_ID_LOGGEDIN', '"VB1raLlLk81d"'
+            buildConfigField 'String', 'KEY_PRIVILEGE_CATEGORY', '"mX1B3e3PwKqp"'
+            buildConfigField 'String', 'KEY_PRIVILEGE_LIFE_STYLE_CATEGORY', '"Adjarr749vBn"'
+            buildConfigField 'String', 'KEY_SEVEN_COUPON_SHELF_ID', '"2PWVxLZQMeYm"'
+            buildConfigField 'String', 'KEY_SEVEN_COUPON_PROMOTION_SHELF_ID', '"KYpLW3VKjo9Y"'
+            buildConfigField 'String', 'KEY_SPORT_CHANNEL_SHELF_ID', '"3oqVRGebLdY8"'
+            buildConfigField 'String', 'KEY_SPORT_FAVORITE_SHELF_ID', '"3RkrNrWWMPW8"'
+            buildConfigField 'String', 'KEY_SUBSCRIPTIONS_API', '"AxQfej7pxYM9duLkqVMQx4nyo5Nn3xZn2Azdrf1g"'
+            buildConfigField 'String', 'KEY_TRUEYOU_SERVICE_CLIENT_SECRET', '"cf7f04ddca94601faecc6238bf96f60a7d463351"'
+            buildConfigField 'String', 'KEY_TRUEYOU_SERVICE_DEAL_OF_THE_DAY_CLIENT_SECRET', '"frhbVhk76RyU2Cc5jdFEZgMYMjH8WX2cVbe5LtYP"'
+            buildConfigField 'String', 'KEY_TV_SHELF_ID', '"zEJ6dbpPLJg"'
+            buildConfigField 'String', 'KEY_TV_SHELF_ID_ALL_CHANNEL', '"vdd78mEQYEv"'
+            buildConfigField 'String', 'KEY_TV_SHELF_ID_NEW_ALL_CHANNEL', '"9Z57EQg2bOMA"'
+
+            buildConfigField 'String', 'BASE_URL_DMP2', '"https://dmpapi2.trueid-dev.net/"'
+            buildConfigField 'String', 'BASE_URL_DMP2_SPORT', '"https://dmpapi2.trueid-preprod.net/"'
+            buildConfigField 'String', 'BASE_URL_GRAPH', '"https://graph.trueid-dev.net/"'
+            buildConfigField 'String', 'BASE_URL_NCC_CUS', '"https://dmpapi2.trueid-alpha.net/"'
+            buildConfigField 'String', 'BASE_URL_COMMUNICATOR_CUS', '" https://communicator-customer-api.trueid-preprod.net/"'
+            buildConfigField 'String', 'BASE_URL_SDK_AUTH', '"https://sdk-auth.trueid-dev.net/"'
+
+            //API PHASE 2
+            buildConfigField 'String', 'BASE_URL_STREAMER', '"https://dmpapi2.trueid-dev.net/"'
+            buildConfigField 'String', 'BASE_URL_STREAMER_CUSTOMER', '"https://streaming-customer-api.trueid-preprod.net"'
+            buildConfigField 'String', 'BASE_URL_CMS_FN', '"https://dmpapi2.trueid-alpha.net/"'
+            buildConfigField 'String', 'BASE_URL_CMS_API_FN', '"https://dmpapi2.trueid-dev.net/"'
+            buildConfigField 'String', 'BASE_URL_SCCMIXER', '"https://dmpapi2.trueid-dev.net/"'
+
+            // Inmobi SDK
+            buildConfigField 'long', 'ADS_INMOBI_INTERSTITIAL_VALUE_PLACEMENT', '1574888371282L'
+
+            buildConfigField 'String', 'URL_TRUE_MONEY_DATA_CHECKBALANCE_MENU', '"https://ecatalog-web.tmn-dev.com/register?utm=trueid"'
+            buildConfigField 'String', 'URL_TRUE_MONEY_DATA_TOPPING_MENU', '"https://ecatalog-web.tmn-dev.com/?utm=trueid"'
+            buildConfigField 'String', 'URL_TRUE_POINT', '"https://webview-dev.trueyou.co.th/webview-truepoint/home/3049"'
+            buildConfigField 'String', 'URL_TRUE_YOU', '"http://stage2.trueyou.co.th/mlogin/mapproduct/"'
+            buildConfigField 'String', 'URL_WTD_PLATFORM', '"https://wtd-platform.trueid-dev.net/"'
+
+            // Consent API
+            buildConfigField 'String', 'URL_IAM_PLATFORM', '"https://iam.trueid-dev.net"'
+
+            /// AAA PROFILE
+            buildConfigField 'String', 'URL_JSON_ACCOUNT_MENU_DATA', '"https://iam.dmpcdn.com/AAA_TRUEID-DEV_MENU.json"'
+
+            // Content API
+            buildConfigField 'String', 'BASE_URL_CONTENT', '"https://content-public-api.trueid-dev.net/"'
+
+            /// Notification (FCM)
+            buildConfigField 'String', 'BASE_URL_NOTIFICATION_FCM', '"https://dmpapi2.trueid-preprod.net/3cmp-tokenmanagement/"'
+
+            /// TrueYou Privilege API
+            buildConfigField 'String', 'BASE_URL_TRUE_YOU', '"https://api-uat.trueyou.co.th/"'
+
+            /// AVATAR LIVECHAT
+            buildConfigField 'String', 'BASE_URL_URL_PROFILE', '"https://stg-avatar.dmpcdn.com/"'
+
+            // Campaign Url
+            buildConfigField 'String', 'BASE_URL_CAMPAIGN', '"https://campaign-platform.trueid.net/"'
+
+            // We Mall
+            buildConfigField 'String', 'BASE_URL_WE_MALL', '"https://api.wls-dev.com/"'
+
+            /// WALLET DOMAIN
+            buildConfigField 'String', 'WALLET_DOMAIN', '"https://apis.tmn-dev.com/"'
+
+            /// Payment
+            buildConfigField 'String', 'BASE_PAYMENT_CUSTOMER', '"https://payment-customer-api.trueid-dev.net"'
+
+            /// Subscription
+            buildConfigField 'String', 'BASE_URL_SUBSCRIPTION', '"https://subscription-customer-api.trueid-preprod.net/"'
+            buildConfigField 'String', 'BASE_URL_SUBSCRIPTION_OFFERS', '"https://subscription-public-api.trueid-preprod.net/"'
+
+            //EKO CHAT
+            buildConfigField 'String', 'EKO_CHAT_API_KEY', '"b0eceb5e68ddf36545308f4e000b12dcd90985e2bf3d6a2e"'
+
+            // Content Customer
+            buildConfigField 'String', 'BASE_URL_CONTENT_CUSTOMER', '"https://content-customer-api.trueid-dev.net/"'
+
+            // My Account Web
+            buildConfigField 'String', 'BASE_URL_MYACCOUNT', '"https://myaccount.trueid-dev.net/"'
+
+            // My Account SDK
+            buildConfigField 'String', 'BASE_URL_SDK_MYACCOUNT', '"https://sdk-myaccount.trueid-dev.net"'
+
+            // Mission API
+            buildConfigField 'String', 'BASE_URL_MISSION', '"https://gcpapi.trueid-dev.net/"'
+
+            // UGC Content
+            buildConfigField 'String', 'BASE_URL_UGC_PUBLIC', '"https://ugc-public-api.trueid-preprod.net/"'
+
+            // Firebase Remote Config
+            buildConfigField 'String', 'REMOTE_CONFIG_DEFAULT_AAA_SIGNIN_URL', '"https://sdk-identity.trueid-alpha.net"'
+            buildConfigField 'long', 'FIREBASE_REMOTE_CONFIG_MINIMUM_FETCH', '3600'
+
+            buildConfigField 'int', 'API_NAVIGATE_SCHEMA_VERSION', '2'
+            buildConfigField 'int', 'API_COUNTRY_SCHEMA_VERSION', '2'
+
+            //Animals
+            buildConfigField 'String', 'SSL_URL_STREAMER', '"cms-streamer-dmpapi.trueid-preprod.net"'
+            buildConfigField 'String', 'SSL_URL_STREAMER_CUSTOMER', '"streaming-customer-api.trueid-preprod.net"'
+            buildConfigField 'String', 'SSL_URL_CONTENT_CUSTOMER', '"content-customer-api.trueid-preprod.net"'
+            buildConfigField 'String', 'SSL_URL_CONTENT', '"content-public-api.trueid-preprod.net"'
+            buildConfigField 'String', 'SSL_URL_SUBSCRIPTION', '"subscription-customer-api.trueid-preprod.net"'
+            buildConfigField 'String', 'SSL_URL_SUBSCRIPTION_OFFERS', '"subscription-public-api.trueid-preprod.net"'
+            buildConfigField 'String', 'ROCKET_BLACK_BOX', '"4a6cPehI7OG6cuDZka5NDZ7FR8a60d3auda+sKfg4Ng="'
+        }
+
+        preprod {
+            buildConfigField 'String', 'APP_ID', '"com.tdcm.trueidapp.preprod"'
+            buildConfigField 'String', 'APP_PROVIDER', '"com.tdcm.trueidapp.preprod.provider"'
+            buildConfigField 'String', 'TRUEYOU_SERVICE_CLIENT_ID', '"trueyounativeapp"'
+            buildConfigField 'String', 'TRUEYOU_SERVICE_DEAL_OF_THE_DAY_CLIENT_ID', '"trueID"'
+            buildConfigField 'String', 'ENVIRONMENT', '"preprod"'
+
+            buildConfigField 'boolean', 'ENVIRONMENT_IS_DEV', 'true'
+            buildConfigField 'boolean', 'USE_FIREBASE_USAGE_METER_DEBUG', 'false'
+            buildConfigField 'boolean', 'USE_STETHO', 'false'
+            buildConfigField 'boolean', 'WALLET_API_PRO', 'true'
+
+            buildConfigField 'String', 'GOOGLE_CAST_APP_ID', '"D338CBD4"'
+
+            buildConfigField 'String', 'EKO_CHAT_API_KEY', '"b0eceb5e68ddf36545308f4e000b12dcd90985e2bf3d6a2e"'
+
+            buildConfigField 'String', 'FIREBASE_DB_APP_ID', '"1:540367067888:android:289e27f2234d64b6e9c035"'
+            buildConfigField 'String', 'FIREBASE_DB_API_KEY', '"AIzaSyDN-ZkEC7SoFepecM_TCOcxjb2VgDVw5oY"'
+            buildConfigField 'String', 'FIREBASE_DB_URL', '"https://trueid-preprod.firebaseio.com"'
+            buildConfigField 'String', 'FIREBASE_DYNAMIC_LINK_DOMAIN', '"https://s.trueid-preprod.net"'
+            buildConfigField 'String', 'FIREBASE_FUNCTIONS_URL', '"https://us-central1-trueid-preprod.cloudfunctions.net/"'
+            buildConfigField 'String', 'FIREBASE_NOTIFICATION_SENDER_ID', '"101521504738"'
+            buildConfigField 'String', 'FIREBASE_STORAGE_URL', '"gs://trueid-v3-preprod.appspot.com"'
+            buildConfigField 'String', 'FIREBASE_TRUE_ID_PROJECT_ID', '"trueid-preprod"'
+            buildConfigField 'String', 'FIREBASE_USAGEMETER_DB_APP_ID', '"1:433763676255:ios:4b040bfdc93de2fafd2bea"'
+            buildConfigField 'String', 'FIREBASE_USAGEMETER_DB_API_KEY', '"AIzaSyDahQOUyCJKnAuv_WTOUUQqpLwD5PpRgNU"'
+            buildConfigField 'String', 'FIREBASE_USAGEMETER_DB_URL', '"https://usage-meter-preprod.firebaseio.com/"'
+            buildConfigField 'String', 'FIREBASE_USAGEMETER_PROJECT_ID', '"usage-meter-preprod"'
+            buildConfigField 'String', 'FIREBASE_USAGEMETER_TOPBAR_APP_ID', '"1:432159871636:android:8160fd3688c44683"'
+            buildConfigField 'String', 'FIREBASE_USAGEMETER_TOPBAR_API_KEY', '"AIzaSyDKKAOSAoRAJqzaP_yTAv4JJKU7R7iR_yc"'
+            buildConfigField 'String', 'FIREBASE_USAGEMETER_TOPBAR_PROJECT_ID', '"usage-meter-sdk-staging"'
+
+            buildConfigField 'String', 'KEY_CONTENT_FRAMEWORK_PROGRAM_ID', '"BP5XQAOwzvnN"'
+            buildConfigField 'String', 'KEY_CATEGORIES_SEARCH_SHELF_ID', '"qrxl8KWYW3Nr"'
+            buildConfigField 'String', 'KEY_GET_REWARDS_ID', '"mwKWmj3YaOvw"'
+            buildConfigField 'String', 'KEY_HIGHLIGHT_CARD_ON_FEDD', '"vl5rZnnN1yaX"'
+            buildConfigField 'String', 'KEY_MEME_IMAGE_SHELF_ID', '"b2Xj8o9mRxXZ"'
+            buildConfigField 'String', 'KEY_MUX', '"378b58e887fa31dcc9eba2319"'
+            buildConfigField 'String', 'KEY_NOTIFICATION_TOPIC', '"NOTIFICATION"'
+            buildConfigField 'String', 'KEY_ONBOARDING_INAPP_MESSAGING_SHELF_ID', '"VLK7kpaNqDYL"'
+            buildConfigField 'String', 'KEY_ONBOARDING_INAPP_MESSAGING_SHELF_ID_LOGGEDIN', '"eNOYOD7Qpdln"'
+            buildConfigField 'String', 'KEY_PRIVILEGE_CATEGORY', '"a0MzEqwaZO6R"'
+            buildConfigField 'String', 'KEY_PRIVILEGE_LIFE_STYLE_CATEGORY', '"5LwAp2GqMDDg"'
+            buildConfigField 'String', 'KEY_SEVEN_COUPON_SHELF_ID', '"L7OaevALgeEX"'
+            buildConfigField 'String', 'KEY_SEVEN_COUPON_PROMOTION_SHELF_ID', '"AoAObeWdpRq6"'
+            buildConfigField 'String', 'KEY_SPORT_CHANNEL_SHELF_ID', '"GDND90a8nJ7"'
+            buildConfigField 'String', 'KEY_SPORT_FAVORITE_SHELF_ID', '"0L2V81God1XL"'
+            buildConfigField 'String', 'KEY_SUBSCRIPTIONS_API', '"dPLAN68hrKpPiww9ulfd3DmxXEriL051glLKCKBmS5I"'
+            buildConfigField 'String', 'KEY_TRUEYOU_SERVICE_CLIENT_SECRET', '"89b28467db01346add3f001126f50d20013689a2"'
+            buildConfigField 'String', 'KEY_TRUEYOU_SERVICE_DEAL_OF_THE_DAY_CLIENT_SECRET', '"frhbVhk76RyU2Cc5jdFEZgMYMjH8WX2cVbe5LtYP"'
+            buildConfigField 'String', 'KEY_TV_SHELF_ID', '"zEJ6dbpPLJg"'
+            buildConfigField 'String', 'KEY_TV_SHELF_ID_ALL_CHANNEL', '"vdd78mEQYEv"'
+            buildConfigField 'String', 'KEY_TV_SHELF_ID_NEW_ALL_CHANNEL', '"9Z57EQg2bOMA"'
+
+            // TODO
+            // Using BASE_URL_DMP phase 1 and 2 on PRODUCTION are not ready yet. Please don't change it for now
+            buildConfigField 'String', 'BASE_URL_DMP2', '"https://dmpapi2.trueid-preprod.net/"'
+            buildConfigField 'String', 'BASE_URL_DMP2_SPORT', '"https://dmpapi2.trueid-preprod.net/"'
+            buildConfigField 'String', 'BASE_URL_GRAPH', '"https://graph.trueid-dev.net/"'
+            buildConfigField 'String', 'BASE_URL_NCC_CUS', '"https://dmpapi2.trueid.net/"'
+            buildConfigField 'String', 'BASE_URL_COMMUNICATOR_CUS', '" https://communicator-customer-api.trueid-preprod.net/"'
+            buildConfigField 'String', 'BASE_URL_SDK_AUTH', '"https://sdk-auth.trueid.net/"'
+
+            //API PHASE 2
+            buildConfigField 'String', 'BASE_URL_STREAMER', '"https://cms-streamer-dmpapi.trueid.net/"'
+            buildConfigField 'String', 'BASE_URL_STREAMER_CUSTOMER', '"https://streaming-customer-api.trueid-preprod.net"'
+            buildConfigField 'String', 'BASE_URL_CMS_FN', '"https://cms-fn-dmpapi.trueid.net/"'
+            buildConfigField 'String', 'BASE_URL_CMS_API_FN', '"https://cms-api-fn.trueid.net/"'
+            buildConfigField 'String', 'BASE_URL_SCCMIXER', '"https://cms-sccmixer-dmpapi.trueid.net/"'
+
+            // Inmobi SDK
+            buildConfigField 'long', 'ADS_INMOBI_INTERSTITIAL_VALUE_PLACEMENT', '1573322556743L'
+
+            buildConfigField 'String', 'URL_TRUE_MONEY_DATA_CHECKBALANCE_MENU', '"https://topping.truemoveh.com/register?utm=trueid"'
+            buildConfigField 'String', 'URL_TRUE_MONEY_DATA_TOPPING_MENU', '"https://topping.truemoveh.com/?utm=trueid"'
+            buildConfigField 'String', 'URL_TRUE_POINT', '"https://webview.trueyou.co.th/webview-truepoint/home/3049"'
+            buildConfigField 'String', 'URL_TRUE_YOU', '"http://trueyou.co.th/mlogin/mapproduct/"'
+            buildConfigField 'String', 'URL_WTD_PLATFORM', '"https://wtd-platform-preprod.trueid.net/"'
+
+            // Consent API
+            buildConfigField 'String', 'URL_IAM_PLATFORM', '"https://iam.trueid-preprod.net"'
+
+            /// AAA PROFILE
+            buildConfigField 'String', 'URL_JSON_ACCOUNT_MENU_DATA', '"https://iam.dmpcdn.com/AAA_TRUEID-DEV_MENU.json"'
+
+            // Content API
+            buildConfigField 'String', 'BASE_URL_CONTENT', '"https://content-public-api.trueid-preprod.net/"'
+
+            /// Notification (FCM)
+            buildConfigField 'String', 'BASE_URL_NOTIFICATION_FCM', '"https://dmpapi2.trueid-preprod.net/3cmp-tokenmanagement/"'
+
+            /// TrueYou Privilege API
+            buildConfigField 'String', 'BASE_URL_TRUE_YOU', '"https://api.trueyou.co.th/"'
+
+            /// AVATAR LIVECHAT
+            buildConfigField 'String', 'BASE_URL_URL_PROFILE', '"https://stg-avatar.dmpcdn.com/"'
+
+            // Campaign Url
+            buildConfigField 'String', 'BASE_URL_CAMPAIGN', '"https://campaign-platform.trueid.net/"'
+
+            // We Mall
+            buildConfigField 'String', 'BASE_URL_WE_MALL', '"https://api.wls-dev.com/"'
+
+            /// WALLET DOMAIN
+            buildConfigField 'String', 'WALLET_DOMAIN', '"https://apis.tmn-dev.com/"'
+
+            /// Payment
+            buildConfigField 'String', 'BASE_PAYMENT_CUSTOMER', '"https://payment-customer-api.trueid.net/"'
+
+            /// Subscription
+            buildConfigField 'String', 'BASE_URL_SUBSCRIPTION', '"https://subscription-customer-api.trueid-preprod.net/"'
+            buildConfigField 'String', 'BASE_URL_SUBSCRIPTION_OFFERS', '"https://subscription-public-api.trueid-preprod.net/"'
+
+            // Content Customer
+            buildConfigField 'String', 'BASE_URL_CONTENT_CUSTOMER', '"https://content-customer-api.trueid-preprod.net/"'
+
+            // My Account Web
+            buildConfigField 'String', 'BASE_URL_MYACCOUNT', '"https://myaccount.trueid-preprod.net/"'
+
+            // My Account SDK
+            buildConfigField 'String', 'BASE_URL_SDK_MYACCOUNT', '"https://sdk-myaccount.trueid-preprod.net"'
+
+            // Mission API
+            buildConfigField 'String', 'BASE_URL_MISSION', '"https://gcpapi.trueid-preprod.net/"'
+
+            // UGC Content
+            buildConfigField 'String', 'BASE_URL_UGC_PUBLIC', '"https://ugc-public-api.trueid-preprod.net/"'
+
+            // Firebase Remote Config
+            buildConfigField 'String', 'REMOTE_CONFIG_DEFAULT_AAA_SIGNIN_URL', '"https://sdk-identity.trueid-preprod.net"'
+            buildConfigField 'long', 'FIREBASE_REMOTE_CONFIG_MINIMUM_FETCH', '3600'
+
+            buildConfigField 'int', 'API_NAVIGATE_SCHEMA_VERSION', '2'
+            buildConfigField 'int', 'API_COUNTRY_SCHEMA_VERSION', '2'
+
+            // Watch Party
+            buildConfigField 'String', 'BASE_URL_PARTY_CUSTOMER', '"https://community-customer-api.trueid-preprod.net/"'
+            buildConfigField 'String', 'BASE_URL_PARTY_INTERNAL', '"https://community-internal-api.trueid-preprod.net/"'
+            buildConfigField 'String', 'BASE_URL_PARTY_PUBLIC', '"https://community-public-api.trueid-preprod.net/"'
+
+            // Chat URL
+            buildConfigField "String", "API_DOMAIN", '"https://chat-apis.trueid-preprod.net/api/v1/"'
+            buildConfigField "String", "API_DOMAIN_V2", '"https://chat-apis.trueid-preprod.net/api/v2/"'
+            //Animals
+            buildConfigField 'String', 'SSL_URL_STREAMER', '"cms-streamer-dmpapi.trueid-preprod.net"'
+            buildConfigField 'String', 'SSL_URL_STREAMER_CUSTOMER', '"streaming-customer-api.trueid-preprod.net"'
+            buildConfigField 'String', 'SSL_URL_CONTENT_CUSTOMER', '"content-customer-api.trueid-preprod.net"'
+            buildConfigField 'String', 'SSL_URL_CONTENT', '"content-public-api.trueid-preprod.net"'
+            buildConfigField 'String', 'SSL_URL_SUBSCRIPTION', '"subscription-customer-api.trueid-preprod.net"'
+            buildConfigField 'String', 'SSL_URL_SUBSCRIPTION_OFFERS', '"subscription-public-api.trueid-preprod.net"'
+            buildConfigField 'String', 'ROCKET_BLACK_BOX', '"4a6cPehI7OG6cuDZka5NDZ7FR8a60d3auda+sKfg4Ng="'
+        }
+
+        prod {
+            buildConfigField 'String', 'APP_ID', '"com.tdcm.trueidapp"'
+            buildConfigField 'String', 'APP_PROVIDER', '"com.tdcm.trueidapp.provider"'
+            buildConfigField 'String', 'TRUEYOU_SERVICE_CLIENT_ID', '"trueyounativeapp"'
+            buildConfigField 'String', 'TRUEYOU_SERVICE_DEAL_OF_THE_DAY_CLIENT_ID', '"trueID"'
+            buildConfigField 'String', 'ENVIRONMENT', '"prod"'
+
+            buildConfigField 'boolean', 'ENVIRONMENT_IS_DEV', 'false'
+            buildConfigField 'boolean', 'USE_FIREBASE_USAGE_METER_DEBUG', 'false'
+            buildConfigField 'boolean', 'USE_STETHO', 'false'
+            buildConfigField 'boolean', 'WALLET_API_PRO', 'true'
+
+            buildConfigField 'String', 'GOOGLE_CAST_APP_ID', '"F0818C5B"' //v.3
+
+            buildConfigField 'String', 'FIREBASE_DB_APP_ID', '"1:101521504738:android:174c296de0d9ae41"'
+            buildConfigField 'String', 'FIREBASE_DB_API_KEY', '"AIzaSyBEKJ2qr-ITnCRPKXrP21d2Li9axjS8ijk"'
+            buildConfigField 'String', 'FIREBASE_DB_URL', '"https://trueid-84d04.firebaseio.com"'
+            buildConfigField 'String', 'FIREBASE_DYNAMIC_LINK_DOMAIN', '"https://s.trueid.net"'
+            buildConfigField 'String', 'FIREBASE_FUNCTIONS_URL', '"https://us-central1-trueid-v3-production-c68dc.cloudfunctions.net/"'
+            buildConfigField 'String', 'FIREBASE_NOTIFICATION_SENDER_ID', '"101521504738"'
+            buildConfigField 'String', 'FIREBASE_STORAGE_URL', '"gs://trueid-v3-production-c68dc.appspot.com"'
+            buildConfigField 'String', 'FIREBASE_TRUE_ID_PROJECT_ID', '"trueid-84d04"'
+            buildConfigField 'String', 'FIREBASE_USAGEMETER_DB_APP_ID', '"1:921591288114:android:cbfb7576e08e41b5"'
+            buildConfigField 'String', 'FIREBASE_USAGEMETER_DB_API_KEY', '"AIzaSyDyyXqrBuQccfJgxzgsFwI5QmwKtoBwNcc"'
+            buildConfigField 'String', 'FIREBASE_USAGEMETER_DB_URL', '"https://usage-meter-a1111.firebaseio.com/"'
+            buildConfigField 'String', 'FIREBASE_USAGEMETER_PROJECT_ID', '"usage-meter-a1111"'
+            buildConfigField 'String', 'FIREBASE_USAGEMETER_TOPBAR_APP_ID', '"1:921591288114:android:174c296de0d9ae41"'
+            buildConfigField 'String', 'FIREBASE_USAGEMETER_TOPBAR_API_KEY', '"AIzaSyDyyXqrBuQccfJgxzgsFwI5QmwKtoBwNcc"'
+            buildConfigField 'String', 'FIREBASE_USAGEMETER_TOPBAR_PROJECT_ID', '"usage-meter-a1111"'
+
+            buildConfigField 'String', 'KEY_CONTENT_FRAMEWORK_PROGRAM_ID', '"BP5XQAOwzvnN"'
+            buildConfigField 'String', 'KEY_CATEGORIES_SEARCH_SHELF_ID', '"qrxl8KWYW3Nr"'
+            buildConfigField 'String', 'KEY_GET_REWARDS_ID', '"mwKWmj3YaOvw"'
+            buildConfigField 'String', 'KEY_HIGHLIGHT_CARD_ON_FEDD', '"vl5rZnnN1yaX"'
+            buildConfigField 'String', 'KEY_MEME_IMAGE_SHELF_ID', '"b2Xj8o9mRxXZ"'
+            buildConfigField 'String', 'KEY_MUX', '"0a103c6b950e3b4c1ffddf623"'
+            buildConfigField 'String', 'KEY_NOTIFICATION_TOPIC', '"NOTIFICATION"'
+            buildConfigField 'String', 'KEY_ONBOARDING_INAPP_MESSAGING_SHELF_ID', '"VLK7kpaNqDYL"'
+            buildConfigField 'String', 'KEY_ONBOARDING_INAPP_MESSAGING_SHELF_ID_LOGGEDIN', '"eNOYOD7Qpdln"'
+            buildConfigField 'String', 'KEY_PRIVILEGE_CATEGORY', '"a0MzEqwaZO6R"'
+            buildConfigField 'String', 'KEY_PRIVILEGE_LIFE_STYLE_CATEGORY', '"5LwAp2GqMDDg"'
+            buildConfigField 'String', 'KEY_SEVEN_COUPON_SHELF_ID', '"L7OaevALgeEX"'
+            buildConfigField 'String', 'KEY_SEVEN_COUPON_PROMOTION_SHELF_ID', '"AoAObeWdpRq6"'
+            buildConfigField 'String', 'KEY_SPORT_CHANNEL_SHELF_ID', '"GDND90a8nJ7"'
+            buildConfigField 'String', 'KEY_SPORT_FAVORITE_SHELF_ID', '"0L2V81God1XL"'
+            buildConfigField 'String', 'KEY_SUBSCRIPTIONS_API', '"dPLAN68hrKpPiww9ulfd3DmxXEriL051glLKCKBmS5I"'
+            buildConfigField 'String', 'KEY_TRUEYOU_SERVICE_CLIENT_SECRET', '"89b28467db01346add3f001126f50d20013689a2"'
+            buildConfigField 'String', 'KEY_TRUEYOU_SERVICE_DEAL_OF_THE_DAY_CLIENT_SECRET', '"frhbVhk76RyU2Cc5jdFEZgMYMjH8WX2cVbe5LtYP"'
+            buildConfigField 'String', 'KEY_TV_SHELF_ID', '"zEJ6dbpPLJg"'
+            buildConfigField 'String', 'KEY_TV_SHELF_ID_ALL_CHANNEL', '"vdd78mEQYEv"'
+            buildConfigField 'String', 'KEY_TV_SHELF_ID_NEW_ALL_CHANNEL', '"9Z57EQg2bOMA"'
+
+            // TODO
+            // Using BASE_URL_DMP phase 1 and 2 on PRODUCTION are not ready yet. Please don't change it for now
+            buildConfigField 'String', 'BASE_URL_DMP2', '"https://dmpapi2.trueid.net/"'
+            buildConfigField 'String', 'BASE_URL_DMP2_SPORT', '"https://cms-fn-dmpapi.trueid.net/"'
+            buildConfigField 'String', 'BASE_URL_GRAPH', '"https://graph.trueid.net/"'
+            buildConfigField 'String', 'BASE_URL_NCC_CUS', '"https://dmpapi2.trueid.net/"'
+            buildConfigField 'String', 'BASE_URL_COMMUNICATOR_CUS', '" https://communicator-customer-api.trueid.net/"'
+            buildConfigField 'String', 'BASE_URL_SDK_AUTH', '"https://sdk-auth.trueid.net/"'
+
+            //API PHASE 2
+            buildConfigField 'String', 'BASE_URL_STREAMER', '"https://cms-streamer-dmpapi.trueid.net/"'
+            buildConfigField 'String', 'BASE_URL_STREAMER_CUSTOMER', '"https://streaming-customer-api.trueid.net"'
+            buildConfigField 'String', 'BASE_URL_CMS_FN', '"https://cms-fn-dmpapi.trueid.net/"'
+            buildConfigField 'String', 'BASE_URL_CMS_API_FN', '"https://cms-api-fn.trueid.net/"'
+            buildConfigField 'String', 'BASE_URL_SCCMIXER', '"https://cms-sccmixer-dmpapi.trueid.net/"'
+
+            // Inmobi SDK
+            buildConfigField 'long', 'ADS_INMOBI_INTERSTITIAL_VALUE_PLACEMENT', '1573322556743L'
+
+            buildConfigField 'String', 'URL_TRUE_MONEY_DATA_CHECKBALANCE_MENU', '"https://topping.truemoveh.com/register?utm=trueid"'
+            buildConfigField 'String', 'URL_TRUE_MONEY_DATA_TOPPING_MENU', '"https://topping.truemoveh.com/?utm=trueid"'
+            buildConfigField 'String', 'URL_TRUE_POINT', '"https://webview.trueyou.co.th/webview-truepoint/home/3049"'
+            buildConfigField 'String', 'URL_TRUE_YOU', '"http://trueyou.co.th/mlogin/mapproduct/"'
+            buildConfigField 'String', 'URL_WTD_PLATFORM', '"https://wtd-platform.trueid.net/"'
+
+            // Consent API
+            buildConfigField 'String', 'URL_IAM_PLATFORM', '"https://iam.trueid.net"'
+
+            /// AAA PROFILE
+            buildConfigField 'String', 'URL_JSON_ACCOUNT_MENU_DATA', '"https://iam.dmpcdn.com/AAA_TRUEID_MENU.json"'
+
+            // Content API
+            buildConfigField 'String', 'BASE_URL_CONTENT', '"https://content-public-api.trueid.net/"'
+
+            /// Notification (FCM)
+            buildConfigField 'String', 'BASE_URL_NOTIFICATION_FCM', '"https://dmpapi2.trueid.net/3cmp-tokenmanagement/"'
+
+            /// TrueYou Privilege API
+            buildConfigField 'String', 'BASE_URL_TRUE_YOU', '"https://api.trueyou.co.th/"'
+
+            /// AVATAR LIVECHAT
+            buildConfigField 'String', 'BASE_URL_URL_PROFILE', '"https://avatar.dmpcdn.com/"'
+
+            // Campaign Url
+            buildConfigField 'String', 'BASE_URL_CAMPAIGN', '"https://campaign-platform.trueid.net/"'
+
+            // We Mall
+            buildConfigField 'String', 'BASE_URL_WE_MALL', '"https://api.wls-dev.com/"'
+
+            /// WALLET DOMAIN
+            buildConfigField 'String', 'WALLET_DOMAIN', '"https://apis.truemoney.com/"'
+
+            /// Payment
+            buildConfigField 'String', 'BASE_PAYMENT_CUSTOMER', '"https://payment-customer-api.trueid.net/"'
+
+            /// Subscription
+            buildConfigField 'String', 'BASE_URL_SUBSCRIPTION', '"https://subscription-customer-api.trueid.net/"'
+            buildConfigField 'String', 'BASE_URL_SUBSCRIPTION_OFFERS', '"https://subscription-public-api.trueid.net/"'
+
+            //EKO CHAT
+            buildConfigField 'String', 'EKO_CHAT_API_KEY', '"b3bde15c3989f86045658e4a530a1688d1088be0be3d6f25"'
+
+            // Content Customer
+            buildConfigField 'String', 'BASE_URL_CONTENT_CUSTOMER', '"https://content-customer-api.trueid.net/"'
+
+            // My Account Web
+            buildConfigField 'String', 'BASE_URL_MYACCOUNT', '"https://myaccount.trueid.net/"'
+
+            // My Account SDK
+            buildConfigField 'String', 'BASE_URL_SDK_MYACCOUNT', '"https://sdk-myaccount.trueid.net"'
+
+            // Mission API
+            buildConfigField 'String', 'BASE_URL_MISSION', '"https://gcpapi.trueid.net/"'
+
+            // UGC Content
+            buildConfigField 'String', 'BASE_URL_UGC_PUBLIC', '"https://ugc-public-api.trueid.net/"'
+
+            // Firebase Remote Config
+            buildConfigField 'String', 'REMOTE_CONFIG_DEFAULT_AAA_SIGNIN_URL', '"https://sdk-identity.trueid.net"'
+            buildConfigField 'long', 'FIREBASE_REMOTE_CONFIG_MINIMUM_FETCH', '43200'
+
+            buildConfigField 'int', 'API_NAVIGATE_SCHEMA_VERSION', '2'
+            buildConfigField 'int', 'API_COUNTRY_SCHEMA_VERSION', '2'
+
+            // Watch Party
+            buildConfigField 'String', 'BASE_URL_PARTY_CUSTOMER', '"https://community-customer-api.trueid.net/"'
+            buildConfigField 'String', 'BASE_URL_PARTY_INTERNAL', '"https://community-internal-api.trueid.net/"'
+            buildConfigField 'String', 'BASE_URL_PARTY_PUBLIC', '"https://community-public-api.trueid.net/"'
+
+            // Chat URL
+            buildConfigField "String", "API_DOMAIN", '"https://chat-apis.trueid.net/api/v1/"'
+            buildConfigField "String", "API_DOMAIN_V2", '"https://chat-apis.trueid.net/api/v2/"'
+
+            //Animals
+            buildConfigField 'String', 'SSL_URL_STREAMER', '"cms-streamer-dmpapi.trueid.net"'
+            buildConfigField 'String', 'SSL_URL_STREAMER_CUSTOMER', '"streaming-customer-api.trueid.net"'
+            buildConfigField 'String', 'SSL_URL_CONTENT_CUSTOMER', '"content-customer-api.trueid.net"'
+            buildConfigField 'String', 'SSL_URL_CONTENT', '"content-public-api.trueid.net"'
+            buildConfigField 'String', 'SSL_URL_SUBSCRIPTION', '"subscription-customer-api.trueid.net"'
+            buildConfigField 'String', 'SSL_URL_SUBSCRIPTION_OFFERS', '"subscription-public-api.trueid.net"'
+            buildConfigField 'String', 'ROCKET_BLACK_BOX', '"E3tYcwo9CiqATmKtpMLW5V+pzIq+ZoDmpXSiJlXGmTo="'
+        }
+    }
+
+}
+
+dependencies {
+
+    implementation playService.location
+    api playService.ads
+
+    api project(':common:foundation')
+
+    AndroidStateSafe()
+    AppsFlyer()
+    DataStore()
+    EventBus()
+    Firebase()
+    Location()
+    Parceler()
+    PlayService()
+    UnitTesting()
+    implementation kotlin.kotlinReflect
+//    testImplementation project(':common:share:mock')
+}
+
+static def getTimestamp() {
+    return (System.currentTimeMillis() / 1000).toInteger()
+}
+
+ext {
+    isBelongTo = "app-core"
+}

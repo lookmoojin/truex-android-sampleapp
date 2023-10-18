@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:contentDescription="@string/true_cloudv3_storagebar_item">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="8dp"
+        app:cardElevation="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/true_cloudv3_gray98">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/headerTitleTextView"
+                style="@style/TrueID.Body.Bold.Black"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="0dp"
+                android:layout_marginTop="8dp"
+                android:contentDescription="@string/true_cloudv3_storagebar_textview_title"
+                android:padding="14dp"
+                android:text="@string/true_cloudv3_storage_bar_title"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:text="True Cloud Storage"
+                tools:visibility="visible" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/trueCloudImageView"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="8dp"
+                android:contentDescription="@string/true_cloudv3_storagebar_imageview_item"
+                android:src="@drawable/ic_true_cloudv3_cloud"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/headerTitleTextView"
+                app:layout_constraintVertical_chainStyle="packed" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/usedTextView"
+                style="@style/TrueID.Body.Black"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="4dp"
+                android:contentDescription="@string/true_cloudv3_storagebar_textview_used"
+                app:layout_constraintStart_toEndOf="@+id/trueCloudImageView"
+                app:layout_constraintTop_toTopOf="@+id/trueCloudImageView"
+                tools:text="24.00 GB used"
+                tools:visibility="visible" />
+
+            <com.google.android.material.progressindicator.LinearProgressIndicator
+                android:id="@+id/progressBar"
+                android:layout_width="0dp"
+                android:layout_height="4dp"
+                android:layout_marginTop="2dp"
+                android:layout_marginEnd="16dp"
+                android:contentDescription="@string/true_cloudv3_storagebar_progressview_item"
+                android:indeterminate="false"
+                android:max="100"
+                app:indicatorColor="@color/black"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="@+id/usedTextView"
+                app:layout_constraintTop_toBottomOf="@+id/usedTextView"
+                app:trackColor="@color/true_cloudv3_gray82"
+                app:trackCornerRadius="8dp" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/totalTextView"
+                style="@style/TrueID.ExtraSmall.Grey"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2dp"
+                android:contentDescription="@string/true_cloudv3_storagebar_textview_total"
+                app:layout_constraintEnd_toEndOf="@+id/progressBar"
+                app:layout_constraintTop_toBottomOf="@+id/progressBar"
+                tools:text="30.00 GB Total"
+                tools:visibility="visible" />
+
+            <View
+                android:id="@+id/viewLine"
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="16dp"
+                android:background="@color/white_light_grey"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="@+id/totalTextView"
+                app:layout_constraintStart_toStartOf="@+id/trueCloudImageView"
+                app:layout_constraintTop_toBottomOf="@+id/totalTextView" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.cardview.widget.CardView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

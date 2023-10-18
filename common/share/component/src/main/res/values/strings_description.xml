@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="game_center_main_appbar" translatable="false">title_gamecenter_page</string>
+    <!-- ErrorViewWidget -->
+    <string name="error_view" translatable="false">errorView_view_error</string>
+    <string name="error_view_imageview_error" translatable="false">errorView_imageview_error</string>
+    <string name="error_view_textview_title" translatable="false">errorView_textview_title</string>
+    <string name="error_view_textview_description" translatable="false">errorView_textview_description</string>
+
+    <!-- Dialog Type A -->
+    <string name="dialog_type_a_icon" translatable="false">dialog_type_a_imageview_icon</string>
+    <string name="dialog_type_a_title" translatable="false">dialog_type_a_textview_title</string>
+    <string name="dialog_type_a_description" translatable="false">dialog_type_a_textview_description</string>
+    <string name="dialog_type_a_button_primary" translatable="false">dialog_type_a_button_primary</string>
+
+    <!-- Dialog Type B -->
+    <string name="dialog_type_b_icon" translatable="false">dialog_type_b_imageview_icon</string>
+    <string name="dialog_type_b_title" translatable="false">dialog_type_b_textview_title</string>
+    <string name="dialog_type_b_description" translatable="false">dialog_type_b_textview_description</string>
+    <string name="dialog_type_b_button_primary" translatable="false">dialog_type_b_button_primary</string>
+    <string name="dialog_type_b_button_secondary" translatable="false">dialog_type_b_button_secondary</string>
+
+    <!-- Dialog Type C -->
+    <string name="dialog_type_c_icon" translatable="false">dialog_type_c_imageview_icon</string>
+    <string name="dialog_type_c_title" translatable="false">dialog_type_c_textview_title</string>
+    <string name="dialog_type_c_description" translatable="false">dialog_type_c_textview_description</string>
+    <string name="dialog_type_c_button_primary" translatable="false">dialog_type_c_button_primary</string>
+    <string name="dialog_type_c_button_secondary" translatable="false">dialog_type_c_button_secondary</string>
+    <string name="dialog_type_c_button_tertiary" translatable="false">dialog_type_c_button_tertiary</string>
+
+    <!-- Dialog Type D -->
+    <string name="dialog_type_d_icon" translatable="false">dialog_type_d_imageview_icon</string>
+    <string name="dialog_type_d_title" translatable="false">dialog_type_d_textview_title</string>
+    <string name="dialog_type_d_description" translatable="false">dialog_type_d_textview_description</string>
+    <string name="dialog_type_d_button_primary" translatable="false">dialog_type_d_button_primary</string>
+    <string name="dialog_type_d_button_back" translatable="false">dialog_type_d_button_back</string>
+    <string name="dialog_type_d_button_close" translatable="false">dialog_type_d_button_close</string>
+
+    <string name="agree_permission_textview" translatable="false">agree_permission_textView</string>
+</resources>

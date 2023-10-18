@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="just_now">Vừa xong</string>
+    <string name="minute_ago">phút trước</string>
+    <string name="minutes_ago">phút trước</string>
+    <string name="hour_ago">giờ trước</string>
+    <string name="hours_ago">giờ trước</string>
+    <string name="days_ago">ngày trước</string>
+    <string name="moment_ago">Vừa xong</string>
+    <string name="one_day_ago">1 ngày trước</string>
+</resources>

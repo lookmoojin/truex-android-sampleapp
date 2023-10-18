@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/bg_white_true_cloudv3_upload_dialog"
+    android:orientation="vertical"
+    android:paddingBottom="@dimen/true_cloudv3_spacing_l">
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:paddingHorizontal="@dimen/true_cloudv3_spacing_m"
+        android:paddingTop="@dimen/true_cloudv3_spacing_l"
+        android:paddingBottom="@dimen/true_cloudv3_spacing_2s">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/collapseImageView"
+            android:layout_width="@dimen/true_cloudv3_spacing_l"
+            android:layout_height="@dimen/true_cloudv3_spacing_l"
+            android:src="@drawable/ic_baseline_keyboard_arrow_down_24"
+            android:tint="@color/black" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            style="@style/TrueID.Header3.Bold.Black"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/true_cloudv3_spacing_2s"
+            android:text="@string/true_cloudv3_dialog_option" />
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:layout_marginHorizontal="@dimen/true_cloudv3_spacing_m"
+        android:background="@color/true_cloudv3_line_separator_color2" />
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:paddingHorizontal="@dimen/true_cloudv3_spacing_m"
+        android:paddingTop="@dimen/true_cloudv3_spacing_2m"
+        android:paddingBottom="@dimen/true_cloudv3_spacing_2s">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/iconCopyToImageView"
+            android:layout_width="@dimen/true_cloudv3_spacing_l"
+            android:layout_height="@dimen/true_cloudv3_spacing_l"
+            android:src="@drawable/ic_truecloud_delete_24" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/trueCloudDeleteTextView"
+            style="@style/TrueID.Header3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/true_cloudv3_spacing_m"
+            android:text="@string/true_cloudv3_empty_trash_delete_permanent" />
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:paddingHorizontal="@dimen/true_cloudv3_spacing_m"
+        android:paddingTop="@dimen/true_cloudv3_spacing_2m"
+        android:paddingBottom="@dimen/true_cloudv3_spacing_2s"
+        android:visibility="visible">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/iconDeleteImageView"
+            android:layout_width="@dimen/true_cloudv3_spacing_l"
+            android:layout_height="@dimen/true_cloudv3_spacing_l"
+            android:src="@drawable/ic_true_cloudv3_restore_data" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/trueCloudRestoreTextView"
+            style="@style/TrueID.Header3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/true_cloudv3_spacing_m"
+            android:text="@string/true_cloudv3_empty_trash_restore" />
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:paddingHorizontal="@dimen/true_cloudv3_spacing_m"
+        android:paddingTop="@dimen/true_cloudv3_spacing_2m"
+        android:paddingBottom="@dimen/true_cloudv3_spacing_2s"
+        android:visibility="gone">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/iconFavoriteImageView"
+            android:layout_width="@dimen/true_cloudv3_spacing_l"
+            android:layout_height="@dimen/true_cloudv3_spacing_l"
+            android:src="@drawable/ic_favorite" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/trueCloudFavoriteTextView"
+            style="@style/TrueID.Header3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/true_cloudv3_spacing_m"
+            android:text="@string/true_cloudv3_dialog_selected_favorite" />
+    </androidx.appcompat.widget.LinearLayoutCompat>
+</androidx.appcompat.widget.LinearLayoutCompat>

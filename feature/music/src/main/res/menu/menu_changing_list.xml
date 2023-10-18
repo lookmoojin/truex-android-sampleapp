@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/action_change_list"
+        android:icon="@drawable/music_ic_list"
+        android:contentDescription="@string/music_see_all_button_toggle"
+        android:title="ChangeList"
+        app:showAsAction="always" />
+
+</menu>

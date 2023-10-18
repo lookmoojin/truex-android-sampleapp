@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <ImageView
+        android:id="@+id/shelfMenuImageView"
+        android:layout_width="wrap_content"
+        android:layout_height="14dp"
+        android:layout_gravity="center"
+        android:layout_marginStart="2dp"
+        android:layout_marginEnd="2dp"
+        android:adjustViewBounds="true"
+        android:minWidth="70dp"
+        android:paddingStart="5dp"
+        android:paddingEnd="5dp"
+        android:scaleType="fitXY"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="@id/shelfMenuTextView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/shelfMenuTextView"
+        tools:layout_editor_absoluteY="6dp" />
+
+    <com.truedigital.component.view.AppTextView
+        android:id="@+id/shelfMenuTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="2dp"
+        android:layout_marginEnd="2dp"
+        android:layout_marginBottom="5dp"
+        android:background="@android:color/white"
+        android:ellipsize="end"
+        android:gravity="center"
+        android:lines="1"
+        android:minWidth="70dp"
+        android:paddingStart="5dp"
+        android:paddingEnd="5dp"
+        android:textColor="@color/TCGrayDark"
+        android:textSize="15sp"
+        app:layout_constraintBottom_toTopOf="@+id/redLineView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:textStyle="skvbold" />
+
+    <ImageView
+        android:id="@+id/redLineView"
+        android:layout_width="0dp"
+        android:layout_height="2.5dp"
+        android:layout_marginStart="5dp"
+        android:layout_marginEnd="5dp"
+        android:background="@color/TCRedLight"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/TCGrayLightPlus"
+    android:orientation="vertical"
+    android:paddingLeft="30dp"
+    android:paddingTop="16dp"
+    android:paddingRight="30dp"
+    android:paddingBottom="16dp">
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:src="@drawable/ic_alertpopup" />
+
+    <com.truedigital.component.view.AppTextView
+        android:id="@+id/titleErrorTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_margin="4dp"
+        android:maxLines="3"
+        android:textAlignment="center"
+        android:textColor="@color/TFGrayMedium"
+        android:textSize="14sp"
+        app:textStyle="bold"
+        tools:text="ระบบดำเนินการ\nตัดทรูพอยท์ของคุณไม่สำเร็จ\nกรุณาลองใหม่อีกครั้งนะคะ" />
+
+    <com.truedigital.component.view.AppTextView
+        android:id="@+id/closeButtonTextView"
+        android:layout_width="160dp"
+        android:layout_height="40dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_margin="4dp"
+        android:background="@drawable/bg_qr_patment_error"
+        android:gravity="center"
+        android:text="@string/ok"
+        android:textAllCaps="false"
+        android:textColor="@android:color/white"
+        android:textSize="22sp"
+        app:textStyle="bold" />
+
+</LinearLayout>

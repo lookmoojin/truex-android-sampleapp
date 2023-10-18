@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="shelf_countdown_date_countdown_number_size">20sp</dimen>
+    <dimen name="shelf_countdown_date_countdown_detail_text_size">12sp</dimen>
+    <dimen name="shelf_countdown_date_countdown_string_size">20sp</dimen>
+    <dimen name="shelf_countdown_team_name_size">20sp</dimen>
+    <dimen name="shelf_countdown_match_date_text_size">12sp</dimen>
+</resources>

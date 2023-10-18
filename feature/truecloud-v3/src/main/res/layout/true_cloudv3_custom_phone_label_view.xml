@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/trueCloudLabelContainer"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="@dimen/true_cloudv3_spacing_m"
+    android:layout_marginTop="@dimen/true_cloudv3_spacing_m"
+    android:layout_marginRight="@dimen/true_cloudv3_spacing_m"
+    android:gravity="center_vertical"
+    android:orientation="horizontal"
+    app:layout_constraintStart_toStartOf="parent">
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/trueCloudLabelTextInputLayout"
+        style="@style/Widget.AppTheme.TextInputLayout"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="@dimen/true_cloudv3_spacing_s"
+        android:layout_weight="3"
+        android:hint="@string/true_cloudv3_edit_contact_label"
+        android:theme="@style/ThemeOverlay.AppTheme.TextInputEditText.Outlined"
+        app:boxStrokeColor="@color/true_cloudv3_color_gray"
+        app:errorEnabled="false">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/trueCloudLabeTextInputEditText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:clickable="true"
+            android:focusable="false"
+            android:inputType="text"
+            android:textColor="@color/true_cloudv3_color_black" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/trueCloudPhoneNumberTextInputLayout"
+        style="@style/Widget.AppTheme.TextInputLayout"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/true_cloudv3_spacing_s"
+        android:layout_weight="6"
+        android:hint="@string/true_cloudv3_edit_contact_phone"
+        android:theme="@style/ThemeOverlay.AppTheme.TextInputEditText.Outlined"
+        app:boxStrokeColor="@color/true_cloudv3_color_gray"
+        app:errorEnabled="false">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/trueCloudPhoneNumberTextInputEditText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="text"
+            android:textColor="@color/true_cloudv3_color_black" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/removeImageView"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/true_cloudv3_spacing_m"
+        android:layout_marginLeft="@dimen/true_cloudv3_spacing_2s"
+        android:layout_weight="0.5"
+        android:src="@drawable/ic_remove_circle_24" />
+
+</androidx.appcompat.widget.LinearLayoutCompat>

@@ -1,0 +1,273 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/playerBackgroundCardView"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:cardBackgroundColor="@color/page_background"
+        app:cardElevation="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/backgroundImageView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="@+id/playerBackgroundCardView"
+        app:layout_constraintEnd_toEndOf="@+id/playerBackgroundCardView"
+        app:layout_constraintStart_toStartOf="@+id/playerBackgroundCardView"
+        app:layout_constraintTop_toTopOf="@+id/playerBackgroundCardView" />
+
+    <View
+        android:id="@+id/backgroundOverlayImageView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white_opacity_5"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="@+id/playerBackgroundCardView"
+        app:layout_constraintEnd_toEndOf="@+id/playerBackgroundCardView"
+        app:layout_constraintStart_toStartOf="@+id/playerBackgroundCardView"
+        app:layout_constraintTop_toTopOf="@+id/playerBackgroundCardView" />
+
+    <ImageView
+        android:id="@+id/collapseButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:foreground="@drawable/selectable_background_ripper_circle"
+        android:padding="8dp"
+        android:src="@drawable/music_ic_collapse"
+        android:visibility="visible"
+        app:layout_constraintStart_toStartOf="@+id/playerBackgroundCardView"
+        app:layout_constraintTop_toTopOf="@+id/playerBackgroundCardView"
+        tools:ignore="UnusedAttribute" />
+
+    <ImageView
+        android:id="@+id/closeButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="10dp"
+        android:foreground="@drawable/selectable_background_ripper_circle"
+        android:padding="8dp"
+        android:src="@drawable/music_ic_close"
+        android:visibility="visible"
+        app:layout_constraintEnd_toEndOf="@+id/playerBackgroundCardView"
+        app:layout_constraintTop_toTopOf="@+id/playerBackgroundCardView"
+        tools:ignore="UnusedAttribute" />
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/thumbnailImageView"
+        style="@style/TrueID.CardView.ImageSquare"
+        android:layout_width="@dimen/full_player_thumb_size"
+        android:layout_height="@dimen/full_player_thumb_size"
+        android:layout_margin="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/collapseButton"
+        app:shapeAppearanceOverlay="@style/ShapeAppearance.App.CornerRadius.Small"
+        tools:src="@drawable/placeholder_new_trueid_white_square" />
+
+    <TextView
+        android:id="@+id/fullSongNameTextView"
+        style="@style/TextMusic.Header3.Bold.White"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:ellipsize="end"
+        android:singleLine="true"
+        android:visibility="visible"
+        app:layout_constraintEnd_toStartOf="@+id/moreButton"
+        app:layout_constraintStart_toStartOf="@+id/playerBackgroundCardView"
+        app:layout_constraintTop_toBottomOf="@+id/thumbnailImageView"
+        tools:text="Song name" />
+
+    <TextView
+        android:id="@+id/fullArtistNameTextView"
+        style="@style/TextMusic.Small.Bold.WhiteOpacity60"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:layout_marginEnd="8dp"
+        android:ellipsize="end"
+        android:maxLines="10"
+        android:visibility="visible"
+        app:layout_constraintEnd_toStartOf="@+id/moreButton"
+        app:layout_constraintStart_toStartOf="@+id/playerBackgroundCardView"
+        app:layout_constraintTop_toBottomOf="@+id/fullSongNameTextView"
+        app:layout_goneMarginEnd="30dp"
+        tools:text="Artist name" />
+
+    <ImageButton
+        android:id="@+id/moreButton"
+        android:layout_width="@dimen/full_player_icon_size"
+        android:layout_height="@dimen/full_player_icon_size"
+        android:layout_marginEnd="30dp"
+        android:background="@drawable/music_bg_circle_gray"
+        android:padding="8dp"
+        android:src="@drawable/music_ic_more_horizontal"
+        android:tint="@color/white"
+        android:visibility="visible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/fullSongNameTextView" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/lyricButton"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/full_player_lyric_height_size"
+        android:layout_marginTop="8dp"
+        android:backgroundTint="@color/white"
+        android:text="@string/lyrics_title"
+        android:textAppearance="@style/TextMusic.ExtraSmall.Bold.Black"
+        android:visibility="visible"
+        app:layout_constraintEnd_toEndOf="@+id/playerBackgroundCardView"
+        app:layout_constraintStart_toStartOf="@+id/playerBackgroundCardView"
+        app:layout_constraintTop_toBottomOf="@+id/fullArtistNameTextView"
+        app:shapeAppearanceOverlay="@style/ShapeAppearance.App.CircleImageView" />
+
+    <com.truedigital.features.music.widget.player.MusicSeekBarWidget
+        android:id="@+id/musicSeekBarWidget"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="22dp"
+        android:layout_marginTop="2dp"
+        android:layout_marginEnd="22dp"
+        android:paddingStart="0dp"
+        android:paddingEnd="0dp"
+        android:progress="30"
+        android:progressDrawable="@drawable/progress_bar_expanded_player"
+        android:thumb="@drawable/music_ic_seekbar_thumb"
+        android:visibility="visible"
+        app:layout_constraintBottom_toTopOf="@+id/playPauseBackgroundImageView"
+        app:layout_constraintEnd_toEndOf="@+id/playerBackgroundCardView"
+        app:layout_constraintStart_toStartOf="@+id/playerBackgroundCardView"
+        app:layout_constraintTop_toBottomOf="@+id/lyricButton"
+        app:layout_constraintVertical_chainStyle="packed" />
+
+    <ImageView
+        android:id="@+id/playPauseBackgroundImageView"
+        android:layout_width="@dimen/full_player_play_pause_size"
+        android:layout_height="@dimen/full_player_play_pause_size"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="16dp"
+        android:src="@drawable/music_bg_circle_white"
+        app:layout_constraintBottom_toTopOf="@+id/queueButton"
+        app:layout_constraintEnd_toStartOf="@+id/nextButton"
+        app:layout_constraintStart_toEndOf="@+id/previousButton"
+        app:layout_constraintTop_toBottomOf="@+id/musicSeekBarWidget" />
+
+    <com.truedigital.features.music.widget.player.MusicPlayPauseWidget
+        android:id="@+id/playPauseButton"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@null"
+        android:padding="4dp"
+        android:src="@drawable/selector_music_ic_play_pause"
+        android:tint="@color/black"
+        app:layout_constraintBottom_toBottomOf="@+id/playPauseBackgroundImageView"
+        app:layout_constraintEnd_toEndOf="@+id/playPauseBackgroundImageView"
+        app:layout_constraintStart_toStartOf="@+id/playPauseBackgroundImageView"
+        app:layout_constraintTop_toTopOf="@+id/playPauseBackgroundImageView" />
+
+    <com.truedigital.features.music.widget.player.MusicShuffleWidget
+        android:id="@+id/shuffleButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:background="@null"
+        android:padding="8dp"
+        android:src="@drawable/selector_music_ic_player_shuffle"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="@+id/playPauseBackgroundImageView"
+        app:layout_constraintStart_toStartOf="@+id/playerBackgroundCardView"
+        app:layout_constraintTop_toTopOf="@+id/playPauseBackgroundImageView" />
+
+    <ImageButton
+        android:id="@+id/previousButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@null"
+        android:padding="8dp"
+        android:src="@drawable/music_ic_skip_previous"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="@+id/playPauseBackgroundImageView"
+        app:layout_constraintEnd_toStartOf="@+id/playPauseBackgroundImageView"
+        app:layout_constraintStart_toEndOf="@+id/shuffleButton"
+        app:layout_constraintTop_toTopOf="@+id/playPauseBackgroundImageView" />
+
+    <ImageButton
+        android:id="@+id/nextButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@null"
+        android:padding="8dp"
+        android:src="@drawable/music_ic_skip_next"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="@+id/playPauseBackgroundImageView"
+        app:layout_constraintEnd_toStartOf="@+id/repeatButton"
+        app:layout_constraintStart_toEndOf="@+id/playPauseBackgroundImageView"
+        app:layout_constraintTop_toTopOf="@+id/playPauseBackgroundImageView" />
+
+    <ImageButton
+        android:id="@+id/repeatButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="30dp"
+        android:background="@null"
+        android:padding="8dp"
+        android:src="@drawable/music_ic_loop"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="@+id/playPauseBackgroundImageView"
+        app:layout_constraintEnd_toEndOf="@+id/playerBackgroundCardView"
+        app:layout_constraintTop_toTopOf="@+id/playPauseBackgroundImageView" />
+
+    <ImageButton
+        android:id="@+id/favoriteButton"
+        android:layout_width="@dimen/full_player_icon_size"
+        android:layout_height="@dimen/full_player_icon_size"
+        android:layout_marginStart="30dp"
+        android:layout_marginBottom="40dp"
+        android:background="@drawable/music_ic_favorite_state"
+        android:padding="8dp"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="@+id/playerBackgroundCardView"
+        app:layout_constraintStart_toStartOf="@+id/playerBackgroundCardView" />
+
+    <ImageButton
+        android:id="@+id/shareButton"
+        android:layout_width="@dimen/full_player_icon_size"
+        android:layout_height="@dimen/full_player_icon_size"
+        android:layout_marginEnd="30dp"
+        android:layout_marginBottom="40dp"
+        android:background="@drawable/music_bg_circle_gray"
+        android:padding="8dp"
+        android:src="@drawable/music_ic_player_share"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="@+id/playerBackgroundCardView"
+        app:layout_constraintEnd_toEndOf="@+id/playerBackgroundCardView" />
+
+    <ImageButton
+        android:id="@+id/queueButton"
+        android:layout_width="@dimen/full_player_icon_size"
+        android:layout_height="@dimen/full_player_icon_size"
+        android:layout_marginBottom="40dp"
+        android:background="@drawable/music_bg_circle_gray"
+        android:padding="8dp"
+        android:src="@drawable/music_ic_player_queue"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="@+id/playerBackgroundCardView"
+        app:layout_constraintEnd_toStartOf="@+id/shareButton"
+        app:layout_constraintStart_toEndOf="@+id/favoriteButton" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

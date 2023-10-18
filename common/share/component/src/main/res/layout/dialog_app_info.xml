@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="@dimen/dialog_margin"
+    android:background="@color/TCGrayLightPlus"
+    android:paddingLeft="@dimen/dialog_padding"
+    android:paddingTop="@dimen/err_dialog_top_padding"
+    android:paddingRight="@dimen/dialog_padding"
+    android:paddingBottom="@dimen/err_dialog_top_padding">
+
+    <ImageView
+        android:id="@+id/iconImageView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:src="@drawable/ic_error_dialog"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.truedigital.component.view.AppTextView
+        android:id="@+id/titleTextView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_margin="4dp"
+        android:gravity="center"
+        android:textAlignment="center"
+        android:textColor="@color/TFGrayMedium"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/iconImageView"
+        app:textStyle="bold"
+        tools:text="ระบบดำเนินการ\nตัดทรูพอยท์ของคุณไม่สำเร็จ\nกรุณาลองใหม่อีกครั้งนะคะ" />
+
+    <com.truedigital.component.view.AppTextView
+        android:id="@+id/messageTextView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="4dp"
+        android:gravity="center"
+        android:textColor="@color/TTGrayMedium"
+        android:textSize="@dimen/err_dialog_err_code_text_size"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/titleTextView"
+        app:textStyle="bold"
+        tools:text="message detail" />
+
+    <com.truedigital.component.view.AppTextView
+        android:id="@+id/codeErrorTextView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="4dp"
+        android:gravity="center"
+        android:textColor="@color/TTGrayMedium"
+        android:textSize="@dimen/err_dialog_err_code_text_size"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/messageTextView"
+        app:textStyle="bold"
+        tools:text="Error code: 1234" />
+
+    <View
+        android:id="@+id/buttonView"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="12dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/codeErrorTextView" />
+
+    <com.truedigital.component.view.AppTextView
+        android:id="@+id/leftButton"
+        android:layout_width="@dimen/btn_dialog_app_width"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_margin="4dp"
+        android:background="@drawable/bg_button_round_gray"
+        android:gravity="center"
+        android:paddingTop="4dp"
+        android:paddingBottom="4dp"
+        android:textAllCaps="false"
+        android:textColor="@android:color/white"
+        android:textSize="@dimen/err_dialog_button_text_size"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="@+id/buttonView"
+        app:layout_constraintEnd_toStartOf="@+id/rightButton"
+        app:layout_constraintHorizontal_weight="1"
+        app:layout_constraintStart_toStartOf="@+id/buttonView"
+        app:layout_constraintTop_toTopOf="@+id/buttonView"
+        app:textStyle="bold"
+        tools:text="@string/close"
+        tools:visibility="visible" />
+
+    <com.truedigital.component.view.AppTextView
+        android:id="@+id/rightButton"
+        android:layout_width="@dimen/btn_dialog_app_width"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_margin="4dp"
+        android:background="@drawable/bg_button_round_gray"
+        android:gravity="center"
+        android:paddingTop="4dp"
+        android:paddingBottom="4dp"
+        android:textAllCaps="false"
+        android:textColor="@android:color/white"
+        android:textSize="@dimen/err_dialog_button_text_size"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="@+id/buttonView"
+        app:layout_constraintEnd_toEndOf="@+id/buttonView"
+        app:layout_constraintHorizontal_weight="1"
+        app:layout_constraintStart_toEndOf="@+id/leftButton"
+        app:layout_constraintTop_toTopOf="@+id/buttonView"
+        app:textStyle="bold"
+        tools:text="@string/ok"
+        tools:visibility="visible" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

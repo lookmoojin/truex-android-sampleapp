@@ -1,0 +1,104 @@
+<resources>
+    <string name="true_cloudv3_intro_page_button_close" translatable="false">true_cloudv3_intro_page_button_close</string>
+    <string name="true_cloudv3_intro_page_button_login" translatable="false">true_cloudv3_intro_page_button_login</string>
+    <string name="true_cloudv3_permission_button" translatable="false">true_cloudv3_permission_button</string>
+
+    <string name="true_cloudv3_commonappbar_title" translatable="false">title_true_cloudv3_page</string>
+    <string name="true_cloudv3_category_item_images" translatable="false">true_cloudv3_category_item_images</string>
+    <string name="true_cloudv3_category_item_videos" translatable="false">true_cloudv3_category_item_videos</string>
+    <string name="true_cloudv3_category_item_audio" translatable="false">true_cloudv3_category_item_audio</string>
+    <string name="true_cloudv3_category_item_files" translatable="false">true_cloudv3_category_item_files</string>
+    <string name="true_cloudv3_category_item_contacts" translatable="false">true_cloudv3_category_item_contacts</string>
+
+    <string name="true_cloudv3_textview_title_images" translatable="false">true_cloudv3_textview_title_images</string>
+    <string name="true_cloudv3_textview_title_videos" translatable="false">true_cloudv3_textview_title_videos</string>
+    <string name="true_cloudv3_textview_title_audio" translatable="false">true_cloudv3_textview_title_audio</string>
+    <string name="true_cloudv3_textview_title_files" translatable="false">true_cloudv3_textview_title_files</string>
+    <string name="true_cloudv3_textview_title_contacts" translatable="false">true_cloudv3_textview_title_contacts</string>
+    <string name="true_cloudv3_button_back" translatable="false">"true_cloudv3_button_back"</string>
+
+    <string name="true_cloudv3_view_emptyView" translatable="false">true_cloudv3_view_emptyView</string>
+    <string name="true_cloudv3_view_imageEmptyView" translatable="false">true_cloudv3_view_imageEmptyView</string>
+    <string name="true_cloudv3_view_titleEmptyView" translatable="false">true_cloudv3_view_titleEmptyView</string>
+    <string name="true_cloudv3_button_upload" translatable="false">true_cloudv3_button_upload</string>
+    <string name="true_cloudv3_collapse_ImageView" translatable="false">true_cloudv3_collapse_ImageView</string>
+
+    <string name="true_cloudv3_upload_title" translatable="false">true_cloudv3_upload_title</string>
+    <string name="true_cloudv3_upload_images" translatable="false">true_cloudv3_upload_images</string>
+    <string name="true_cloudv3_upload_videos" translatable="false">true_cloudv3_upload_videos</string>
+    <string name="true_cloudv3_upload_contacts" translatable="false">true_cloudv3_upload_contacts</string>
+    <string name="true_cloudv3_upload_audio" translatable="false">true_cloudv3_upload_audio</string>
+    <string name="true_cloudv3_upload_files" translatable="false">true_cloudv3_upload_files</string>
+
+    <string name="true_cloudv3_more_option_collapse" translatable="false">true_cloudv3_more_option_collapse</string>
+    <string name="true_cloudv3_more_option_title" translatable="false">true_cloudv3_more_option_title</string>
+    <string name="true_cloudv3_more_option_share" translatable="false">true_cloudv3_more_option_share</string>
+    <string name="true_cloudv3_more_option_download" translatable="false">true_cloudv3_more_option_download</string>
+    <string name="true_cloudv3_more_option_delete" translatable="false">true_cloudv3_more_option_delete</string>
+
+    <string name="true_cloudv3_call_contact_collapse" translatable="false">true_cloudv3_call_contact_collapse</string>
+    <string name="true_cloudv3_call_contact_title" translatable="false">true_cloudv3_call_contact_title</string>
+
+    <string name="true_cloudv3_imageview_cover_item_images" translatable="false">true_cloudv3_imageview_cover_item_images</string>
+    <string name="true_cloudv3_textview_item_subtitle_images" translatable="false">true_cloudv3_textview_item_subtitle_images</string>
+    <string name="true_cloudv3_button_more_item_images" translatable="false">true_cloudv3_button_more_item_images</string>
+    <string name="true_cloudv3_item_list_images" translatable="false">true_cloudv3_item_list_images</string>
+    <string name="true_cloudv3_textview_item_title_images" translatable="false">true_cloudv3_textview_item_title_images</string>
+
+    <string name="true_cloudv3_imageview_cover_item_videos" translatable="false">true_cloudv3_imageview_cover_item_videos</string>
+    <string name="true_cloudv3_textview_item_subtitle_videos" translatable="false">true_cloudv3_textview_item_subtitle_videos</string>
+    <string name="true_cloudv3_button_more_item_videos" translatable="false">true_cloudv3_button_more_item_videos</string>
+    <string name="true_cloudv3_item_list_videos" translatable="false">true_cloudv3_item_list_videos</string>
+    <string name="true_cloudv3_textview_item_title_videos" translatable="false">true_cloudv3_textview_item_title_videos</string>
+
+    <string name="true_cloudv3_imageview_cover_item_audio" translatable="false">true_cloudv3_imageview_cover_item_audio</string>
+    <string name="true_cloudv3_textview_item_subtitle_audio" translatable="false">true_cloudv3_textview_item_subtitle_audio</string>
+    <string name="true_cloudv3_button_more_item_audio" translatable="false">true_cloudv3_button_more_item_audio</string>
+    <string name="true_cloudv3_item_list_audio" translatable="false">true_cloudv3_item_list_audio</string>
+    <string name="true_cloudv3_textview_item_title_audio" translatable="false">true_cloudv3_textview_item_title_audio</string>
+
+    <string name="true_cloudv3_imageview_cover_item_files" translatable="false">true_cloudv3_imageview_cover_item_files</string>
+    <string name="true_cloudv3_textview_item_subtitle_files" translatable="false">true_cloudv3_textview_item_subtitle_files</string>
+    <string name="true_cloudv3_button_more_item_files" translatable="false">true_cloudv3_button_more_item_files</string>
+    <string name="true_cloudv3_item_list_files" translatable="false">true_cloudv3_item_list_files</string>
+    <string name="true_cloudv3_textview_item_title_files" translatable="false">true_cloudv3_textview_item_title_files</string>
+
+    <string name="true_cloudv3_imageview_cover_contact" translatable="false">true_cloudv3_imageview_cover_contact</string>
+    <string name="true_cloudv3_item_list_contact" translatable="false">true_cloudv3_item_list_contact</string>
+    <string name="true_cloudv3_textview_contact" translatable="false">true_cloudv3_textview_contact</string>
+
+    <string name="true_cloudv3_storagebar_textview_title" translatable="false">true_cloudv3_storagebar_textview_title</string>
+    <string name="true_cloudv3_storagebar_textview_used" translatable="false">true_cloudv3_storagebar_textview_used</string>
+    <string name="true_cloudv3_storagebar_textview_total" translatable="false">true_cloudv3_storagebar_textview_total</string>
+    <string name="true_cloudv3_storagebar_imageview_item" translatable="false">true_cloudv3_storagebar_imageview_item</string>
+    <string name="true_cloudv3_storagebar_progressview_item" translatable="false">true_cloudv3_storagebar_progressview_item</string>
+    <string name="true_cloudv3_storagebar_item" translatable="false">true_cloudv3_storagebar_item</string>
+
+    <string name="true_cloudv3_preview_image_collapse" translatable="false">true_cloudv3_imageview_preview_collapse</string>
+    <string name="true_cloudv3_preview_image_pager" translatable="false">true_cloudv3_imageview_preview_pager</string>
+    <string name="true_cloudv3_preview_image_item" translatable="false">true_cloudv3_imageview_preview_item</string>
+
+    <string name="true_cloudv3_upload_total_textview" translatable="false">true_cloudv3_upload_total_textview</string>
+    <string name="true_cloudv3_upload_cancel_imageview" translatable="false">true_cloudv3_upload_cancel_imageview</string>
+    <string name="true_cloudv3_upload_count_textview" translatable="false">true_cloudv3_upload_count_textview</string>
+    <string name="true_cloudv3_upload_progress_bar" translatable="false">true_cloudv3_upload_progress_bar</string>
+
+    <string name="true_cloudv3_imageview_cover_Contact" translatable="false">true_cloudv3_imageview_cover_Contact</string>
+    <string name="true_cloudv3_textview_Contact" translatable="false">true_cloudv3_textview_Contact</string>
+    <string name="true_cloudv3_item_list_Contact" translatable="false">true_cloudv3_item_list_Contact</string>
+    <string name="true_cloudv3_trash_empty_view" translatable="false">true_cloudv3_trash_empty_view</string>
+    <string name="true_cloudv3_trash_image_empty_view" translatable="false">true_cloudv3_trash_image_empty_view</string>
+    <string name="true_cloudv3_trash_title_empty_view" translatable="false">true_cloudv3_trash_title_empty_view</string>
+
+
+    <string name="true_cloudv3_seekbar" translatable="false">true_cloudv3_seekbar</string>
+    <string name="true_cloudv3_seekbar_textview_currenttime" translatable="false">true_cloudv3_seekbar_textview_currenttime</string>
+    <string name="true_cloudv3_seekbar_textview_endtime" translatable="false">true_cloudv3_seekbar_textview_endtime</string>
+    <string name="true_cloudv3_audio_viewer_button_playpause" translatable="false">true_cloudv3_button_playpause</string>
+
+    <string name="true_cloudv3_photo_editor_discard" translatable="false">Discard</string>
+    <string name="true_cloudv3_photo_editor_save" translatable="false">Save</string>
+    <string name="true_cloudv3_photo_editor_confirm" translatable="false">Confirm</string>
+    <string name="true_cloudv3_photo_editor_undo" translatable="false">Undo</string>
+    <string name="true_cloudv3_photo_editor_redo" translatable="false">Redo</string>
+</resources>

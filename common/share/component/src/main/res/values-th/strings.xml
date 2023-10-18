@@ -1,0 +1,108 @@
+<resources>
+    <string name="error_code_caption">Error code:</string>
+
+    <string name="size_image_url">640</string>
+
+    <string name="ok">ตกลง</string>
+    <string name="cancel">ยกเลิก</string>
+    <string name="delete">ลบ</string>
+    <string name="close">ปิด</string>
+    <string name="done">ปิด</string>
+    <string name="disconnnet">ยกเลิกการเชื่อมต่อ</string>
+
+    <string name="save">บันทึก</string>
+    <string name="loading">กำลังโหลดข้อมูล…</string>
+
+    <string name="press_back_to_exit">กดอีกครั้งเพื่อออกจากโปรแกรม</string>
+
+    <string name="error_other">ขออภัย, มีข้อผิดพลาดเกิดขึ้น...</string>
+    <string name="error_other_sub">กรุณาลองใหม่อีกครั้งในอีกสักครู่</string>
+    <string name="error_reach_quota_server">ขออภัย, ขณะนี้ผู้ใช้งาน\nเป็นจำนวนมาก...</string>
+
+    <string name="discover_more">ดูเพิ่มเติม</string>
+
+    <!-- Card Type -->
+    <string name="txt_card_black">ลูกค้าทรูแบล็ค</string>
+    <string name="txt_card_black_blue_green_red">ลูกค้าทรู</string>
+    <string name="txt_card_black_blue_green_red_white">ลูกค้าทรู</string>
+    <string name="txt_card_black_blue_red">ลูกค้าทรู</string>
+    <string name="txt_card_black_red">ทรูแบล็ค/ทรูเรด</string>
+    <string name="txt_card_blue">ลูกค้าทรูบลู</string>
+    <string name="txt_card_blue_green">ทรูบลู/ทรูกรีน</string>
+    <string name="txt_card_blue_green_red">ลูกค้าทรู</string>
+    <string name="txt_card_blue_green_red_white">ลูกค้าทรู</string>
+    <string name="txt_card_blue_green_white">ลูกค้าทรู</string>
+    <string name="txt_card_blue_red">ทรูเรด/ทรูบลู</string>
+    <string name="txt_card_green">ลูกค้าทรูกรีน</string>
+    <string name="txt_card_red">ลูกค้าทรูเรด</string>
+    <string name="txt_card_truepoint">ทรูพอยท์&#160;</string>
+    <string name="txt_card_white">ลูกค้าทรูไวท์&#160;</string>
+    <string name="txt_card_no_card">ลูกค้าทรู</string>
+    <string name="txt_card_open_deal">สุขได้ทุกคน</string>
+    <string name="txt_card_other">สิทธิพิเศษทรู</string>
+
+    <string name="copy_to_clipboard">รายการถูกคัดลอกไปยังคลิปบอร์ดแล้ว</string>
+
+    <string name="no_internet_connection">ไม่สามารถเชื่อมต่ออินเตอร์เน็ตได้ กรุณาลองอีกครั้ง</string>
+    <string name="error_something_wrong">ไม่สามารถแสดงหน้านี้ได้ในขณะนี้\nกรุณาลองอีกครั้ง</string>
+    <string name="share_fail_api_exception">กรุณาอัปเดต Google Play services</string>
+
+    <string name="dialog_in_progress_please_wait">ระบบกำลังดำเนินการ\nกรุณารอสักครู่นะคะ</string>
+
+    <string name="function_button_back_to_top">กลับสู่ด้านบน</string>
+
+    <string name="show_detail">เพิ่มเติม</string>
+    <string name="hide_synopsis">ย่อ</string>
+
+    <string name="txt_hour">ชั่วโมง</string>
+    <string name="txt_minute">นาที</string>
+    <string name="txt_all_episode">ตอนจบ</string>
+
+    <!--Error-->
+    <string name="error_title">กำลังอัปเดตข้อมูล</string>
+    <string name="error_detail">ลองเข้ามาใหม่อีกครั้งนะคะ</string>
+    <string name="message_error_base">เกิดความขัดข้องชั่วคราว\nกรุณาลองใหม่อีกครั้งนะคะ</string>
+    <string name="global_search_search_not_found_title">ไม่พบผลลัพธ์จากคําค้นของคุณ</string>
+    <string name="global_search_search_not_found_detail">ลองตรวจการสะกด หรือใช้คําอื่นดูนะคะ</string>
+
+    <string name="label_go_to_setting_button">การตั้งค่า</string>
+
+    <!--Reminder-->
+    <string name="reminder_remaining_day">ตั้งเตือนรับชมแมทช์นี้ในอีก %d วัน</string>
+    <string name="reminder_remaining_days">ตั้งเตือนรับชมแมทช์นี้ในอีก %d วัน</string>
+    <string name="reminder_remaining_hr_min">ตั้งเตือนรับชมแมทช์นี้ในอีก %1$d ชั่วโมง %2$d นาที</string>
+    <string name="reminder_remaining_hr_mins">ตั้งเตือนรับชมแมทช์นี้ในอีก %1$d ชั่วโมง %2$d นาที</string>
+    <string name="reminder_remaining_hrs_min">ตั้งเตือนรับชมแมทช์นี้ในอีก %1$d ชั่วโมง %2$d นาที</string>
+    <string name="reminder_remaining_hrs_mins">ตั้งเตือนรับชมแมทช์นี้ในอีก %1$d ชั่วโมง %2$d นาที</string>
+    <string name="reminder_remaining_min_second">ตั้งเตือนรับชมแมทช์นี้ในอีก %1$d นาที %2$d วินาที</string>
+    <string name="reminder_remaining_min_seconds">ตั้งเตือนรับชมแมทช์นี้ในอีก %1$d นาที %2$d วินาที</string>
+    <string name="reminder_remaining_mins_second">ตั้งเตือนรับชมแมทช์นี้ในอีก %1$d นาที %2$d วินาที</string>
+    <string name="reminder_remaining_mins_seconds">ตั้งเตือนรับชมแมทช์นี้ในอีก %1$d นาที %2$d วินาที</string>
+    <string name="reminder_remaining_second">ตั้งเตือนรับชมแมทช์นี้ในอีก %d วินาที</string>
+    <string name="reminder_remaining_seconds">ตั้งเตือนรับชมแมทช์นี้ในอีก %d วินาที</string>
+
+    <string name="tv_current_program_channel">ช่องรายการ</string>
+    <string name="tv_current_program_dual_language">เสียงสองภาษา</string>
+
+    <!--Activity: Error-->
+    <string name="error_activity_error_occurred">ขอโทษนะ เหมือนเราจะเจอปัญหานิดหน่อย กรุณาลองใหม่อีกครั้งค่ะ</string>
+    <string name="error_internet_connection">ไม่สามารถเชื่อมต่ออินเตอร์เน็ตได้ กรุณาตรวจสอบและลองอีกครั้งค่ะ</string>
+
+    <!--Favorite Widget-->
+    <string name="live_favorite_added">เพิ่มลงใน ช่องรายการโปรด</string>
+    <string name="live_favorite_removed">ลบออกจาก ช่องรายการโปรด</string>
+    <string name="live_favorite_full">ช่องรายการโปรดของคุณเต็มแล้ว</string>
+
+    <string name="history_edit">แก้ไข</string>
+
+    <string name="tv_current_program_button_sheet_share">แชร์</string>
+    <string name="tv_current_program_button_sheet_help">ช่วยเหลือ</string>
+    <string name="tv_current_program_button_sheet_detail">ดูรายละเอียดรายการ</string>
+
+    <string name="redeem_success">Redeemed succesfully!</string>
+
+    <string name="detect_debuging_options_title">นโยบายความปลอดภัยของทรู ไอดี</string>
+    <string name="detect_debuging_options_detail">เพื่อใช้งาน ทรู ไอดี ได้อย่างต่อเนื่อง\nโปรดปิดระบบ “ทางเลือกผู้พัฒนา”(Developer options)\n1.ไปที่เมนูการตั้งค่าของอุปกรณ์ของคุณ\n2.เลือก ตัวเลือกนักพัฒนา (Developer Options)
+(หากตัวเลือกนักพัฒนา (Developer Options) ไม่ปรากฎ ให้ไปที่เกี่ยวกับโทรศัพท์ (About Phone) และกดเลือก เวอร์ชันอุปกรณ์ (Build Number) จำนวน 7 ครั้งเพื่อเปิดใช้งานฟังก์ชันดังกล่าว)\n3.กดปิดการใช้งาน USB Debugging และ Wireless Debugging\n4.เลือก ตกลง เพื่อยืนยันรายการ</string>
+    <string name="detect_debuging_options_ok">ตกลง</string>
+</resources>

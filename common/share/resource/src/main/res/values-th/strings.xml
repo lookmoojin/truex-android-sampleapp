@@ -1,0 +1,18 @@
+<resources>
+    <string name="action_retry">ลองอีกครั้ง</string>
+
+    <string name="error_page_title">ขออภัยค่ะ</string>
+    <string name="error_page_message">เกิดข้อผิดพลาดบางอย่าง โปรดลองอีกครั้ง</string>
+
+    <string name="error_system_title">เดี๋ยวเราจะกลับมา</string>
+    <string name="error_system_message">เรากำลังทำการอัพเดทระบบทรูไอดี โปรดกลับเข้ามาใหม่อีกครั้ง</string>
+
+    <!-- EditText-->
+    <string name="edit_text_hint_common_search_with_icon">Search for Movies, Music and more</string>
+
+    <string name="title_home">Home</string>
+    <string name="title_dashboard">Dashboard</string>
+    <string name="title_notifications">Notifications</string>
+    <string name="title_read">อ่าน</string>
+    <string name="title_shop">ช้อปปิ้ง</string>
+</resources>

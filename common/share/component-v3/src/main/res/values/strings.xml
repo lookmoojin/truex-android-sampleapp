@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="live_label" translatable="false">Live</string>
+
+    <string name="text_truepoint_your_point">Your TruePoint</string>
+    <string name="text_truepoint_point_unit">%1$s pts</string>
+    <string name="text_truepoint_budget_save_unit" translatable="false">+ %1$s ฿</string>
+    <string name="see_all">See more</string>
+    <string name="text_recommend">Recommend</string>
+
+    <string name="back_button" translatable="false">back_button</string>
+    <string name="close_button" translatable="false">close_button</string>
+    <string name="group_ads_dfp" translatable="false">group_ads-dfp</string>
+    <string name="group_banner_countdown" translatable="false">group_banner_countdown</string>
+    <string name="group_community_top_trending" translatable="false">group_community-top-trending</string>
+    <string name="group_recommend_article" translatable="false">group_recommend_article</string>
+    <string name="group_inline_banner" translatable="false">group_inline_banner</string>
+    <string name="group_item_1x1_highlight" translatable="false">group_item_1x1_highlight</string>
+    <string name="group_item_1x1_label" translatable="false">group_item_1x1_label</string>
+    <string name="group_shelf_multiple_horizontal" translatable="false">group_shelf_multiple_horizontal</string>
+    <string name="group_shelf_multiple_vertical" translatable="false">group_shelf_multiple_vertical</string>
+    <string name="group_truepoint" translatable="false">group_truepoint</string>
+    <string name="group_truescore" translatable="false">group_truescore</string>
+    <string name="group_wemall" translatable="false">group_wemall</string>
+    <string name="group_highlight_article" translatable="false">group_highlight_article</string>
+    <string name="group_item_16x4_content" translatable="false">group_item_16x4_content</string>
+    <string name="group_item_16x9_ads" translatable="false">group_item_16x9_ads</string>
+    <string name="item_1x1_bubble" translatable="false">item_1x1_bubble</string>
+    <string name="item_1x1_content" translatable="false">item_1x1_content</string>
+    <string name="item_1x1_label" translatable="false">item_1x1_label</string>
+    <string name="item_1x1_highlight" translatable="false">item_1x1_highlight</string>
+    <string name="item_1x1_music" translatable="false">item_1x1_music</string>
+    <string name="item_9x16_vertical_video" translatable="false">item_9x16_vertical_video</string>
+    <string name="item_16x4_content" translatable="false">item_16x4_content</string>
+    <string name="item_16x9_ads" translatable="false">item_16x9_ads</string>
+    <string name="item_16x9_article" translatable="false">item_16x9_article</string>
+    <string name="item_16x9_content" translatable="false">item_16x9_content</string>
+    <string name="item_16x9_privilege" translatable="false">item_16x9_privilege</string>
+    <string name="item_16x9_tv" translatable="false">item_16x9_tv</string>
+    <string name="item_16x9_player" translatable="false">item_16x9_player</string>
+    <string name="item_4x3_movie" translatable="false">item_4x3_movie</string>
+    <string name="item_4x3_movie_trueid_only_badge" translatable="false">item_4x3_movie_trueid_only_badge</string>
+    <string name="item_4x3_movie_trueid_original_badge" translatable="false">item_4x3_movie_trueid_original_badge</string>
+    <string name="item_4x3_movie_trueid_plus_badge" translatable="false">item_4x3_movie_trueid_plus_badge</string>
+    <string name="item_4x3_movie_truevisions_badge" translatable="false">item_4x3_movie_truevisions_badge</string>
+    <string name="item_4x3_tv" translatable="false">item_4x3_tv</string>
+    <string name="item_4x3_movie_rbt" translatable="false">item_4x3_movie_rbt</string>
+    <string name="item_truecard" translatable="false">item_truecard</string>
+    <string name="scanner_icon" translatable="false">scanner_icon</string>
+    <string name="close_icon" translatable="false">close_icon</string>
+    <string name="search_box" translatable="false">search_box</string>
+    <string name="search_input" translatable="false">search_input</string>
+    <string name="today_button_seeall" translatable="false">today_button_seeall</string>
+    <string name="today_imageview_bubble" translatable="false">today_imageview_bubble</string>
+    <string name="today_imageview_1x1_content" translatable="false">today_imageview_1x1_content</string>
+    <string name="today_imageview_1x1_label" translatable="false">today_imageview_1x1_label</string>
+    <string name="today_imageview_1x1_music" translatable="false">today_imageview_1x1_music</string>
+    <string name="today_imageview_1x1_privilege" translatable="false">today_imageview_1x1_privilege</string>
+    <string name="today_imageview_1x1_shopping" translatable="false">today_imageview_1x1_shopping</string>
+    <string name="today_imageview_16x9_article" translatable="false">today_imageview_16x9_article</string>
+    <string name="today_imageview_16x9_content" translatable="false">today_imageview_16x9_content</string>
+    <string name="today_imageview_16x9_player" translatable="false">today_imageview_16x9_player</string>
+    <string name="today_imageview_16x9_privilege" translatable="false">today_imageview_16x9_privilege</string>
+    <string name="today_imageview_16x9_tv" translatable="false">today_imageview_16x9_tv</string>
+    <string name="today_imageview_4x3_tv" translatable="false">today_imageview_4x3_tv</string>
+    <string name="today_item_singlehorizontal" translatable="false">today_item_singlehorizontal</string>
+    <string name="today_refresher_feedshelf" translatable="false">today_refresher_feedshelf</string>
+    <string name="today_scroll_feedshelf" translatable="false">today_scroll_feedshelf</string>
+    <string name="today_scroll_highlight" translatable="false">today_scroll_highlight</string>
+    <string name="today_textview_1x1_content_title" translatable="false">today_textview_1x1_content_title</string>
+    <string name="today_textview_1x1_label_title" translatable="false">today_textview_1x1_label_title</string>
+    <string name="today_textview_1x1_music_title" translatable="false">today_textview_1x1_music_title</string>
+    <string name="today_textview_1x1_music_subtitle" translatable="false">today_textview_1x1_music_subtitle</string>
+    <string name="today_textview_1x1_privilege_title" translatable="false">today_textview_1x1_privilege_title</string>
+    <string name="today_textview_1x1_privilege_subtitle" translatable="false">today_textview_1x1_privilege_subtitle</string>
+    <string name="today_textview_1x1_shopping_title" translatable="false">today_textview_1x1_shopping_title</string>
+    <string name="today_textview_1x1_shopping_title_description" translatable="false">today_textview_1x1_shopping_title_description</string>
+    <string name="today_textview_1x1_shopping_subtitle" translatable="false">today_textview_1x1_shopping_subtitle</string>
+    <string name="today_textview_16x9_article_title" translatable="false">today_textview_16x9_article_title</string>
+    <string name="today_textview_16x9_article_subtitle" translatable="false">today_textview_16x9_article_subtitle</string>
+    <string name="today_textview_16x9_article_publish_date" translatable="false">today_textview_16x9_article_publish_date</string>
+    <string name="today_textview_16x9_player_title" translatable="false">today_textview_16x9_player_title</string>
+    <string name="today_textview_header_title" translatable="false">today_textview_header_title</string>
+    <string name="today_header_imageview_full_redemption" translatable="false">today_header_imageview_full_redemption</string>
+    <string name="today_footer_imageview_full_redemption" translatable="false">today_footer_imageview_full_redemption</string>
+    <string name="today_textview_16x9_tv_title" translatable="false">today_textview_16x9_tv_title</string>
+    <string name="tutorial_button_start" translatable="false">tutorial_button_start</string>
+
+    <!-- watch content description -->
+    <string name="watch_imageview_4x3_movie" translatable="false">watch_imageview_4x3_movie</string>
+    <string name="watch_imageview_16x9_movie" translatable="false">watch_imageview_16x9_movie</string>
+    <string name="watch_textview_4x3_movie_title" translatable="false">watch_textview_4x3_movie_title</string>
+    <string name="watch_textview_16x9_movie_title" translatable="false">watch_textview_16x9_movie_title</string>
+    <string name="watch_imageview_full_redemption" translatable="false">watch_imageview_full_redemption</string>
+
+    <!-- banner -->
+    <string name="banner_item_banner_image" translatable="false">banner_item_bannerImage</string>
+    <string name="banner_imageview_banner_image" translatable="false">banner_imageview_bannerImage</string>
+
+    <string name="read_image_16x4content" translatable="false">read_image_16x4content</string>
+    <string name="read_textview_16x4content" translatable="false">read_textview_16x4content</string>
+
+    <string name="text_countdown_shelf_today" translatable="false">TODAY</string>
+    <string name="text_countdown_shelf_tonight" translatable="false">TONIGHT</string>
+    <string name="text_countdown_shelf_tomorrow" translatable="false">TOMORROW</string>
+    <string name="text_countdown_shelf_match_date" translatable="false">%s</string>
+    <string name="text_countdown_shelf_day_to_go" translatable="false">in %s days</string>
+    <string name="live_badge_imageview_shelf_countdown" translatable="false">live_badge_imageview_shelf_countdown</string>
+    <string name="player_home_imageview_shelf_countdown" translatable="false">player_home_imageview_shelf_countdown</string>
+    <string name="player_away_imageview_shelf_countdown" translatable="false">player_away_imageview_shelf_countdown</string>
+    <string name="home_logo_imageview_shelf_countdown" translatable="false">home_logo_imageview_shelf_countdown</string>
+    <string name="away_logo_imageview_shelf_countdown" translatable="false">away_logo_imageview_shelf_countdown</string>
+    <string name="home_team_textview_shelf_countdown" translatable="false">home_name_textview_shelf_countdown</string>
+    <string name="away_team_textview_shelf_countdown" translatable="false">away_name_textview_shelf_countdown</string>
+    <string name="match_date_textview_shelf_countdown" translatable="false">match_date_textview_shelf_countdown</string>
+    <string name="point_imageview_shelf_countdown" translatable="false">point_imageview_shelf_countdown</string>
+    <string name="live_imageview_shelf_countdown" translatable="false">live_imageview_shelf_countdown</string>
+    <string name="preview_badge_imageview_shelf_countdown" translatable="false">preview_badge_imageview_shelf_countdown</string>
+    <string name="vote_imageView_shelf_countdown" translatable="false">vote_imageView_shelf_countdown</string>
+
+    <!-- deeplink description-->
+    <string name="deeplink_feature_off_title" translatable="false">Content Not Available</string>
+    <string name="deeplink_not_found_description" translatable="false">This content is currently not available in your country or removed. (101)</string>
+    <string name="deeplink_feature_off_description" translatable="false">This content is currently not available in your country or removed. (102)</string>
+    <string name="deeplink_error_description" translatable="false">This content is currently not available in your country or removed. (103)</string>
+    <string name="deeplink_feature_off_button" translatable="false">OK</string>
+
+    <string name="today_txt_popular">Popular feed</string>
+    <string name="today_txt_for_you">For You</string>
+</resources>

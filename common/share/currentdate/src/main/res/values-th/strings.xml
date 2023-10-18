@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="just_now">เมื่อสักครู่</string>
+    <string name="minute_ago">นาทีที่แล้ว</string>
+    <string name="minutes_ago">นาทีที่แล้ว</string>
+    <string name="hour_ago">ชั่วโมงที่แล้ว</string>
+    <string name="hours_ago">ชั่วโมงที่แล้ว</string>
+    <string name="yesterday">เมื่อวานนี้</string>
+    <string name="days_ago">วันที่แล้ว</string>
+    <string name="moment_ago">เมื่อสักครู่</string>
+    <string name="one_day_ago">1 วันที่แล้ว</string>
+</resources>

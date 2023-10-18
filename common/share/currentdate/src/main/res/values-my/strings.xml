@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="just_now">အခုလေးတင်</string>
+    <string name="minute_ago">မိနစ်</string>
+    <string name="minutes_ago">မိနစ်</string>
+    <string name="hour_ago">နာရီ</string>
+    <string name="hours_ago">နာရီ</string>
+    <string name="yesterday">Yesterday</string>
+    <string name="days_ago">ရက်</string>
+    <string name="moment_ago">အခုလေးတင်</string>
+    <string name="one_day_ago">1 ရက်</string>
+</resources>

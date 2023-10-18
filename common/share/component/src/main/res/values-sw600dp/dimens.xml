@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="common_page_header_text_size">19sp</dimen>
+
+    <!--world cup match-->
+    <dimen name="system_text_size_h4">16sp</dimen>
+
+    <!-- Privilege feed -->
+    <dimen name="privilege_feed_horizontal_height">250dp</dimen>
+</resources>

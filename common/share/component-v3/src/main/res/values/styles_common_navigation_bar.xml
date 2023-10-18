@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="TrueID.CommonNavigationBarLarge">
+        <item name="cln_title_style">@style/TrueID.LargeTitle</item>
+    </style>
+
+    <style name="TrueID.CommonNavigationBarLarge.Dark">
+        <item name="cln_title_style">@style/TrueID.LargeTitle.Dark</item>
+    </style>
+
+</resources>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- deeplink description-->
+    <string name="deeplink_feature_off_title" translatable="false">Nội dung không khả dụng</string>
+    <string name="deeplink_not_found_description" translatable="false">Nội dung này hiện không có sẵn ở quốc gia của bạn hoặc đã bị xóa. (101)</string>
+    <string name="deeplink_feature_off_description" translatable="false">Nội dung này hiện không có sẵn ở quốc gia của bạn hoặc đã bị xóa. (102)</string>
+    <string name="deeplink_error_description" translatable="false">Nội dung này hiện không có sẵn ở quốc gia của bạn hoặc đã bị xóa. (103)</string>
+    <string name="deeplink_feature_off_button" translatable="false">Đồng ý</string>
+</resources>
