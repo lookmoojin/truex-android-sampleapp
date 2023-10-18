@@ -17,7 +17,6 @@
             <option value="$PROJECT_DIR$/common/foundation" />
             <option value="$PROJECT_DIR$/common/navigation" />
             <option value="$PROJECT_DIR$/common/share" />
-            <option value="$PROJECT_DIR$/common/share/amityserviceconfig" />
             <option value="$PROJECT_DIR$/common/share/analytics" />
             <option value="$PROJECT_DIR$/common/share/component" />
             <option value="$PROJECT_DIR$/common/share/component-v3" />
