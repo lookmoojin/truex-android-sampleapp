@@ -9,42 +9,43 @@ apply {
 android {
     namespace 'com.tdg.feature.music'
     defaultConfig {
-        buildConfigField 'String', 'API_URL_TUNEDGLOBAL', '"https://api-metadata-connect.tunedglobal.com/"'
-        buildConfigField 'String', 'API_SERVICES_URL_TUNEDGLOBAL', '"https://api-services-connect.tunedglobal.com/"'
-        buildConfigField 'String', 'API_AUTHEN_URL_TUNEDGLOBAL', '"https://api-authentication-connect.tunedglobal.com/"'
-        buildConfigField 'String', 'STORE_ID_TUNEDGLOBAL', '"TRUT"'
-        buildConfigField 'String', 'PROPERTIES', '"environment.properties"'
+//        buildConfigField 'String', 'API_URL_TUNEDGLOBAL', '"https://api-metadata-connect.tunedglobal.com/"'
+//        buildConfigField 'String', 'API_SERVICES_URL_TUNEDGLOBAL', '"https://api-services-connect.tunedglobal.com/"'
+//        buildConfigField 'String', 'API_AUTHEN_URL_TUNEDGLOBAL', '"https://api-authentication-connect.tunedglobal.com/"'
+//        buildConfigField 'String', 'STORE_ID_TUNEDGLOBAL', '"TRUT"'
+//        buildConfigField 'String', 'PROPERTIES', '"environment.properties"'
     }
 }
 
 dependencies {
-    implementation androidX.palette
-    implementation playService.ads
-    implementation trueIDSSOSDK.trueIDSSOSDK
-    implementation view.skeletonlayout
+//    implementation androidX.palette
+//    implementation playService.ads
+//    implementation trueIDSSOSDK.trueIDSSOSDK
+//    implementation view.skeletonlayout
 
-    implementation project(':common:core')
-    implementation project(':common:navigation')
-    implementation project(':common:share:analytics')
-    implementation project(':common:share:component')
-    implementation project(':common:share:component-v3')
-    implementation project(':common:share:data:coredata')
-    implementation project(':common:share:data:firestoreconfig')
+//    implementation project(':common:core')
+//    implementation project(':common:navigation')
+//    implementation project(':common:share:analytics')
+//    implementation project(':common:share:component')
+//    implementation project(':common:share:component-v3')
+//    implementation project(':common:share:data:coredata')
+//    implementation project(':common:share:data:firestoreconfig')
 //    implementation project(':common:share:data:geoinformation')
 //    implementation project(':common:share:data:prasarn')
-    implementation project(':common:share:datalegacy')
-    implementation project(':common:share:nativeshare')
-    implementation project(':common:share:resource')
+//    implementation project(':common:share:datalegacy')
+//    implementation project(':common:share:nativeshare')
+//    implementation project(':common:share:resource')
 //    implementation project(':common:share:webview:externalbrowser')
 //    implementation project(':features:listens:share')
 
 //    testImplementation project(':common:share:mock')
-    testImplementation(okhttp.okhttpMockwebserver)
+//    testImplementation(okhttp.okhttpMockwebserver)
 
-    AndroidPaging()
-    Room()
-    TunedDependencies()
-    UnitTesting()
+//    AndroidPaging()
+//    Room()
+//    TunedDependencies()
+//    UnitTesting()
+    Player()
 }
 
 ext {

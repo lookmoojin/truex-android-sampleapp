@@ -1,5 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<resources>
-    <dimen name="home_banner_image_size">200dp</dimen>
-    <dimen name="full_player_thumb_size">170dp</dimen>
-</resources>

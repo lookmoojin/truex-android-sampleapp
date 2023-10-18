@@ -1,4 +1,0 @@
-<selector xmlns:android="http://schemas.android.com/apk/res/android">
-  <item android:drawable="@drawable/music_ic_check_circle_black" android:state_selected="true" />
-  <item android:drawable="@drawable/music_ic_add" android:state_selected="false" />
-</selector>
