@@ -1,17 +1,34 @@
 package com.tdg.truex_android_sampleapp
 
+import android.content.ClipData
+import android.content.ClipboardManager
+import android.content.Context
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.view.inputmethod.InputMethodManager
+import android.widget.Toast
 import androidx.fragment.app.Fragment
+import androidx.fragment.app.viewModels
 import androidx.navigation.fragment.findNavController
 import com.tdg.truex_android_sampleapp.databinding.FragmentMainBinding
+import com.tdg.truex_android_sampleapp.injections.HomeComponent
+import javax.inject.Inject
 
 class MainFragment : Fragment() {
 
     private var _binding: FragmentMainBinding? = null
     private val binding get() = _binding!!
+
+    @Inject
+    lateinit var viewModelFactory: ViewModelFactory
+    private val mainViewModel: MainViewModel by viewModels { viewModelFactory }
+
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        HomeComponent.getInstance().inject(this)
+    }
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -24,10 +41,72 @@ class MainFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        binding.textView.setOnClickListener {
+        initView()
+        viewModelObserve()
+        preprodState()
+    }
+
+    private fun viewModelObserve() = with(mainViewModel) {
+        onLoginSuccess.observe(viewLifecycleOwner) {
+            binding.responseTextView.text = it
+        }
+        onLoginFailed.observe(viewLifecycleOwner) {
+            binding.responseTextView.text = it
+        }
+    }
+
+    private fun initView() = with(binding) {
+        preprodButton.setOnClickListener {
+            preprodState()
+        }
+
+        prodButton.setOnClickListener {
+            prodState()
+        }
+
+        loginButton.setOnClickListener {
+            mainViewModel.login(
+                usernameEditText.text.toString(),
+                passwordEditText.text.toString(),
+                preprodButton.isSelected
+            )
+            hideKeyboard(this.root)
+        }
+
+        nextButton.setOnClickListener {
             findNavController().navigate(
                 MainFragmentDirections.actionMainFragmentToMenuFragment()
             )
         }
+
+        copyButton.setOnClickListener {
+            Toast.makeText(context, "Copied to clipboard.", Toast.LENGTH_SHORT).show()
+            context?.let { context ->
+                val clipboard =
+                    context.getSystemService(Context.CLIPBOARD_SERVICE) as ClipboardManager
+                val clip = ClipData.newPlainText("Copied Text", binding.responseTextView.text)
+                clipboard.setPrimaryClip(clip)
+            }
+        }
+    }
+
+    private fun preprodState() = with(binding) {
+        preprodButton.isSelected = true
+        prodButton.isSelected = false
+        usernameEditText.setText("0620922456")
+        passwordEditText.setText("TestPass01")
+    }
+
+    private fun prodState() = with(binding) {
+        preprodButton.isSelected = false
+        prodButton.isSelected = true
+        usernameEditText.setText("")
+        passwordEditText.setText("")
+    }
+
+    private fun hideKeyboard(view: View) {
+        val inputMethodManager =
+            activity?.getSystemService(Context.INPUT_METHOD_SERVICE) as InputMethodManager
+        inputMethodManager.hideSoftInputFromWindow(view.applicationWindowToken, 0)
     }
 }
