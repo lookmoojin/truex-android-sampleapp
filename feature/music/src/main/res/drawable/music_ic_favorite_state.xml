@@ -1,4 +1,0 @@
-<selector xmlns:android="http://schemas.android.com/apk/res/android">
-  <item android:drawable="@drawable/music_ic_favorite_on_with_bg" android:state_checked="true" />
-  <item android:drawable="@drawable/music_ic_favorite_off_with_bg" android:state_checked="false" />
-</selector>

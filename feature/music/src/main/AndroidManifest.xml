@@ -15,118 +15,12 @@
     <permission android:name="android.permission.MEDIA_CONTENT_CONTROL" />
 
     <application>
-
-        <provider
-            android:name="androidx.startup.InitializationProvider"
-            android:authorities="${applicationId}.androidx-startup"
-            android:exported="false"
-            tools:node="merge">
-            <meta-data
-                android:name="com.truedigital.features.music.MusicInitializer"
-                android:value="androidx.startup" />
-        </provider>
-
-        <activity
-            android:name=".presentation.artist.view.ArtistActivity"
-            android:configChanges="orientation|screenSize"
-            android:label=""
-            android:screenOrientation="portrait"
-            android:theme="@style/TrueID" />
-
-        <activity
-            android:name=".presentation.album.view.AlbumActivity"
-            android:configChanges="orientation|screenSize"
-            android:label=""
-            android:screenOrientation="portrait"
-            android:theme="@style/TrueID" />
-
-        <activity
-            android:name=".presentation.station.view.StationActivity"
-            android:configChanges="orientation|screenSize"
-            android:label=""
-            android:screenOrientation="portrait"
-            android:theme="@style/TrueID" />
-
-        <activity
-            android:name=".presentation.player.view.PlayerQueueActivity"
-            android:configChanges="orientation|screenSize"
-            android:label="@string/player_queue_title"
-            android:screenOrientation="portrait"
-            android:theme="@style/TrueID"
-            android:windowSoftInputMode="adjustPan" />
-
-        <activity
-            android:name=".presentation.player.view.PlayerSettingActivity"
-            android:configChanges="orientation|screenSize"
-            android:label="@string/player_setting_title"
-            android:screenOrientation="portrait"
-            android:theme="@style/TrueID" />
-
-        <activity
-            android:name=".presentation.playlist.view.PlaylistActivity"
-            android:configChanges="orientation|screenSize"
-            android:screenOrientation="portrait"
-            android:theme="@style/TrueID" />
-
-        <activity
-            android:name=".presentation.productlist.view.ProductListActivity"
-            android:configChanges="orientation|screenSize"
-            android:label="Product List"
-            android:screenOrientation="portrait"
-            android:theme="@style/TrueID"
-            android:windowSoftInputMode="adjustPan" />
-
-        <activity
-            android:name=".presentation.tag.view.TagActivity"
-            android:configChanges="orientation|screenSize"
-            android:label=""
-            android:screenOrientation="portrait"
-            android:theme="@style/TrueID" />
-
-        <service
-            android:name=".service.music.MusicPlayerServiceImpl"
-            android:exported="false"
-            android:foregroundServiceType="mediaPlayback"
-            android:stopWithTask="true">
-            <intent-filter>
-                <action android:name="android.intent.action.MEDIA_BUTTON" />
-                <action android:name="android.media.AUDIO_BECOMING_NOISY" />
-            </intent-filter>
-        </service>
-
-        <receiver
-            android:name=".service.appstatus.BootCompleteReceiver"
-            android:exported="false">
-            <intent-filter>
-                <action android:name="android.intent.action.BOOT_COMPLETED" />
-            </intent-filter>
-        </receiver>
-
         <receiver
             android:name="androidx.media.session.MediaButtonReceiver"
             android:exported="false">
             <intent-filter>
                 <action android:name="android.intent.action.MEDIA_BUTTON" />
                 <action android:name="android.media.AUDIO_BECOMING_NOISY" />
-            </intent-filter>
-        </receiver>
-
-        <receiver
-            android:name=".presentation.widget.PlayerWidget"
-            android:exported="false">
-            <intent-filter>
-                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
-            </intent-filter>
-            <meta-data
-                android:name="android.appwidget.provider"
-                android:resource="@xml/player_widget" />
-        </receiver>
-
-        <receiver
-            android:name=".service.appstatus.ApplicationVisibilityReciever"
-            android:exported="false">
-            <intent-filter>
-                <action android:name="android.intent.action.APPLICATION_VISIBILITY_CHANGE" />
             </intent-filter>
         </receiver>
 

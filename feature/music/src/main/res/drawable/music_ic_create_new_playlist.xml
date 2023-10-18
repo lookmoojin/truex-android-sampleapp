@@ -1,9 +1,0 @@
-<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
-    <item android:drawable="@drawable/music_bg_circle_light_gray" />
-    <item
-        android:bottom="8dp"
-        android:drawable="@drawable/music_ic_add"
-        android:left="8dp"
-        android:right="8dp"
-        android:top="8dp" />
-</layer-list>
