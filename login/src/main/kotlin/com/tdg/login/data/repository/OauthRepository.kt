@@ -10,14 +10,14 @@ import okhttp3.RequestBody
 import javax.inject.Inject
 
 interface OauthRepository {
-    fun login(request: OauthRequest, isPreProd: Boolean): Flow<OauthResponse>
+    fun login(request: OauthRequest): Flow<OauthResponse>
 }
 
 class OauthRepositoryImpl @Inject constructor(
     private val apiInterface: OauthApiInterface
 ) : OauthRepository {
 
-    override fun login(request: OauthRequest, isPreProd: Boolean): Flow<OauthResponse> {
+    override fun login(request: OauthRequest): Flow<OauthResponse> {
         return flow {
             val clientId = RequestBody.create(MediaType.parse("text/plain"), request.clientId)
             val clientSecret =

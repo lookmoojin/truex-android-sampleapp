@@ -5,7 +5,7 @@ import retrofit2.Converter
 import retrofit2.Retrofit
 
 class ApiBuilder {
-    open class ApiScalarsAndGsonBuilder(
+    open class ApiBasicBuilder(
         val okHttpClient: OkHttpClient,
         val gsonConverterFactory: Converter.Factory
     ) {

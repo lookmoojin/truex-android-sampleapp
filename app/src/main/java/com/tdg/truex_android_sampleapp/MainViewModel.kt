@@ -32,9 +32,8 @@ class MainViewModel @Inject constructor(
                 .catch { error ->
                     _onLoginFailed.value = error.message
                 }
-                .collectSafe { (accessToken, refreshToken) ->
-                    _onLoginSuccess.value =
-                        "access token = $accessToken${"\n"}refresh token = $refreshToken"
+                .collectSafe {
+                    _onLoginSuccess.value = it
                 }
         }
     }

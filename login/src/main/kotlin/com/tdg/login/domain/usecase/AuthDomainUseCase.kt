@@ -2,12 +2,12 @@ package com.tdg.login.domain.usecase
 
 import javax.inject.Inject
 
-interface LoginDomainUseCase {
+interface AuthDomainUseCase {
     fun save(isPreProd: Boolean)
     fun execute(): String
 }
 
-class LoginDomainUseCaseImpl @Inject constructor(): LoginDomainUseCase {
+class AuthDomainUseCaseImpl @Inject constructor() : AuthDomainUseCase {
 
     companion object {
         var PREPROD_STATE = true

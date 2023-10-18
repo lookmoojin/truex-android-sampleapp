@@ -10,11 +10,11 @@ import kotlinx.coroutines.flow.map
 import javax.inject.Inject
 
 interface LoginUseCase {
-    fun execute(username: String, password: String, isPreProd: Boolean): Flow<Pair<String, String>>
+    fun execute(username: String, password: String, isPreProd: Boolean): Flow<String>
 }
 
 class LoginUseCaseImpl @Inject constructor(
-    private val loginDomainUseCase: LoginDomainUseCase,
+    private val authDomainUseCase: AuthDomainUseCase,
     private val oauthRepository: OauthRepository
 ) : LoginUseCase {
     @RequiresApi(Build.VERSION_CODES.FROYO)
@@ -22,16 +22,15 @@ class LoginUseCaseImpl @Inject constructor(
         username: String,
         password: String,
         isPreProd: Boolean
-    ): Flow<Pair<String, String>> {
-        loginDomainUseCase.save(isPreProd)
+    ): Flow<String> {
+        authDomainUseCase.save(isPreProd)
         return oauthRepository.login(
             OauthRequest(
                 username = username,
                 password = Base64.encodeToString(password.toByteArray(), Base64.DEFAULT)
-            ),
-            isPreProd
+            )
         ).map {
-            Pair(it.accessToken.orEmpty(), it.refreshToken.orEmpty())
+            it.accessToken.orEmpty()
         }
     }
 }
