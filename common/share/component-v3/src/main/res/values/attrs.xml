@@ -33,11 +33,6 @@
         </attr>
     </declare-styleable>
 
-    <declare-styleable name="CommonLargeNavigationBar">
-        <attr name="cln_title" format="string" />
-        <attr name="cln_title_style" format="reference" />
-    </declare-styleable>
-
     <declare-styleable name="CommonSearchBar">
         <attr name="csb_title" format="string" />
         <attr name="csb_card_style" format="reference" />
@@ -45,16 +40,5 @@
         <attr name="csb_ic_search_style" format="reference" />
         <attr name="csb_ic_scan_style" format="reference" />
         <attr name="csb_ic_close_style" format="reference" />
-    </declare-styleable>
-
-    <declare-styleable name="BadgeTextView">
-        <attr name="backgroundColor" />
-        <attr name="maxBadgeNumber" format="integer" />
-    </declare-styleable>
-
-    <declare-styleable name="TopNavigationView">
-        <attr name="item_content_description" format="string" />
-        <attr name="item_image_view_content_description" format="string" />
-        <attr name="item_text_view_content_description" format="string" />
     </declare-styleable>
 </resources>

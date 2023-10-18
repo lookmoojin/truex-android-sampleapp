@@ -9,37 +9,21 @@ import android.view.View
 import androidx.appcompat.widget.LinearLayoutCompat
 import androidx.core.view.isVisible
 import androidx.lifecycle.LifecycleObserver
-import androidx.lifecycle.LifecycleOwner
-import com.amity.socialcloud.uikit.community.newsfeed.activity.AmityPostTargetPickerActivity
 import com.google.android.material.appbar.AppBarLayout
 import com.google.android.material.appbar.AppBarLayout.OnOffsetChangedListener
 import com.truedigital.common.share.componentv3.R
 import com.truedigital.common.share.componentv3.common.IconGravity
-import com.truedigital.common.share.componentv3.data.CommonAppbarViewType
 import com.truedigital.common.share.componentv3.databinding.CommonAppbarBinding
 import com.truedigital.common.share.componentv3.injections.ComponentV3Component
-import com.truedigital.common.share.componentv3.widget.feedmenutab.CommunityTab
-import com.truedigital.common.share.componentv3.widget.feedmenutab.domain.usecase.model.CommunityTabDataModel
-import com.truedigital.common.share.componentv3.widget.feedmenutab.presentation.CommunityTabEnum
 import com.truedigital.common.share.componentv3.widget.searchanimation.model.SearchAnimationData
-import com.truedigital.common.share.componentv3.widget.searchanimation.presentation.SearchAnimationViewModel
 import com.truedigital.foundation.extension.gone
 import com.truedigital.foundation.extension.load
 import com.truedigital.foundation.extension.onClick
 import com.truedigital.foundation.extension.visible
 import com.truedigital.foundation.extension.visibleAnimation
-import com.truedigital.foundation.presentations.ViewModelFactory
-import javax.inject.Inject
 import kotlin.math.abs
 
 class CommonAppBar : AppBarLayout, LifecycleObserver {
-
-    @Inject
-    lateinit var viewModelFactory: ViewModelFactory
-
-    private val searchAnimationViewModel: SearchAnimationViewModel by lazy {
-        viewModelFactory.create(SearchAnimationViewModel::class.java)
-    }
 
     private var largeTitle = ""
     private var contentDescriptionTitle = ""
@@ -48,11 +32,6 @@ class CommonAppBar : AppBarLayout, LifecycleObserver {
 
     var isShowTitle = true
     var onClickAnimation: ((String) -> Unit)? = null
-    var onClickSearch: (() -> Unit)? = null
-    var onClickScan: (() -> Unit)? = null
-    var onClickClear: (() -> Unit)? = null
-    var onNavigateToAmityPost: ((AmityPostTargetPickerActivity.CreationType) -> Unit)? = null
-    var navigateToCommunityTab: (() -> Unit)? = null
     var keepShowingCommonButton = false
     var collapsedTextGravity = Gravity.CENTER_VERTICAL
 
@@ -232,7 +211,6 @@ class CommonAppBar : AppBarLayout, LifecycleObserver {
     private fun initialView(attrs: AttributeSet?) {
         getStyledAttributes(attrs)
         setupView()
-        setupListener()
         setupOffsetListener()
     }
 
@@ -263,36 +241,6 @@ class CommonAppBar : AppBarLayout, LifecycleObserver {
 
     private fun setSearchAnimationFile(adsUrl: String) {
         binding.commonSearchBar.setSearchAnimationFile(adsUrl)
-    }
-
-    private fun setupListener() {
-        binding.apply {
-            commonSearchBar.apply {
-                onClickSearch = {
-                    this@CommonAppBar.onClickSearch?.invoke()
-                }
-                onClickScan = {
-                    this@CommonAppBar.onClickScan?.invoke()
-                }
-                onClickClear = {
-                    this@CommonAppBar.onClickClear?.invoke()
-                }
-            }
-            communityShortCut.apply {
-                onNavigateToCommunityPage = {
-                    this@CommonAppBar.navigateToCommunityTab?.invoke()
-                }
-                onNavigateToAmityPost = {
-                    this@CommonAppBar.onNavigateToAmityPost?.invoke(it)
-                }
-            }
-            scanIconImageView.onClick {
-                this@CommonAppBar.onClickScan?.invoke()
-            }
-            searchIconImageView.onClick {
-                this@CommonAppBar.onClickSearch?.invoke()
-            }
-        }
     }
 
     private fun setupOffsetListener() {
@@ -411,27 +359,6 @@ class CommonAppBar : AppBarLayout, LifecycleObserver {
         binding.commonSearchBar.setHideQRScan()
     }
 
-    fun setSearchAnimation(pageKey: String, lifecycleOwner: LifecycleOwner) {
-        with(searchAnimationViewModel) {
-            onShowSearchAnimationData().observe(
-                lifecycleOwner
-            ) { searchAnimationData ->
-                searchAnimationData?.let {
-                    setupSearchAnimation(it)
-                }
-            }
-            getSearchAnimation(pageKey)
-        }
-    }
-
-    fun setCommunityTab(lifecycleOwner: LifecycleOwner) {
-        binding.communityShortCut.setObserveViewModel(lifecycleOwner)
-    }
-
-    fun setSearchListener(listener: CommonSearchBar.OnSearchInteraction) {
-        binding.commonSearchBar.setSearchListener(listener)
-    }
-
     fun setTitle(title: String) {
         largeTitle = title
         binding.appCollapsingToolbar.run {
@@ -455,33 +382,6 @@ class CommonAppBar : AppBarLayout, LifecycleObserver {
             binding.appCollapsingToolbar.title = ""
         }
     }
-
-    fun renderViewCommonAppbar(commonAppbarViewTypeList: List<CommonAppbarViewType>) =
-        with(binding) {
-            var sizeCollapsing = COLLAPSING_SIZE
-            commonAppbarViewTypeList.forEach { typeView ->
-                when (typeView) {
-                    CommonAppbarViewType.SHOW_ICON_ROW -> {
-                        iconSecondRowLinearLayoutCompat.visible()
-                    }
-                    CommonAppbarViewType.SHOW_COMMUNITY_SHORTCUT -> {
-                        communityShortCut.visible()
-                        sizeCollapsing += COLLAPSING_40
-                    }
-                    CommonAppbarViewType.SHOW_SEARCH -> {
-                        commonSearchBar.visible()
-                        sizeCollapsing += COLLAPSING_40
-                    }
-                    CommonAppbarViewType.SHOW_COMMUNITY_TAB -> {
-                        todayCommunityTabLayout.visible()
-                        sizeCollapsing += COLLAPSING_50
-                    }
-                }
-            }
-
-            val pixels: Float = sizeCollapsing * context.resources.displayMetrics.density
-            appCollapsingToolbar.layoutParams.height = pixels.toInt()
-        }
 
     fun clearSearchText() {
         binding.commonSearchBar.clearSearchText()
@@ -526,17 +426,5 @@ class CommonAppBar : AppBarLayout, LifecycleObserver {
         binding.appCollapsingToolbar.layoutParams = param.apply {
             scrollFlags = LayoutParams.SCROLL_FLAG_SNAP
         }
-    }
-
-    fun setCommunityTabTitle(communityTabData: CommunityTabDataModel) {
-        binding.todayCommunityTabLayout.setCommunityTabTitle(communityTabData)
-    }
-
-    fun onSwitchTabCommunityTab(tabType: CommunityTabEnum) {
-        binding.todayCommunityTabLayout.onSwitchTab(tabType)
-    }
-
-    fun setSelectFeedTabMenuListener(selectFeedTabMenuListener: CommunityTab.SelectFeedTabMenuListener) {
-        binding.todayCommunityTabLayout.setSelectFeedTabMenuListener(selectFeedTabMenuListener)
     }
 }
