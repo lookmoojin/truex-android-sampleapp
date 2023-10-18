@@ -5,7 +5,7 @@ import androidx.compose.runtime.staticCompositionLocalOf
 import androidx.compose.ui.text.font.Font
 import androidx.compose.ui.text.font.FontFamily
 import androidx.compose.ui.text.font.FontWeight
-import com.truedigital.common.share.resource.R
+import com.tdg.common.share.resource.R
 
 private val NotoSansFamily = FontFamily(
     Font(resId = R.font.noto_sans_regular, weight = FontWeight.Normal),

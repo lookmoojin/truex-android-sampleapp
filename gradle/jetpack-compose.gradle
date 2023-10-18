@@ -1,0 +1,26 @@
+apply {
+    from("${project.rootDir}/gradle/dependencies.gradle")
+}
+
+android {
+    buildFeatures {
+        compose true
+    }
+    composeOptions {
+        kotlinCompilerExtensionVersion "${versions.composeKotlinCompiler}"
+    }
+    defaultConfig {
+        vectorDrawables {
+            useSupportLibrary true
+        }
+    }
+    packagingOptions {
+        resources {
+            excludes += '/META-INF/{AL2.0,LGPL2.1}'
+        }
+    }
+}
+
+dependencies {
+    AndroidComposeUI()
+}

@@ -47,7 +47,7 @@ dependencies {
 
     DataStore()
     Navigation()
-    Huawei()
+//    Huawei()
 
     UnitTesting()
 //    testImplementation project(":common:share:mock")

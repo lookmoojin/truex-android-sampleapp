@@ -1,12 +1,17 @@
 package com.tdg.truex_android_sampleapp
 
+import android.content.Intent
 import android.os.Bundle
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.fragment.app.Fragment
+import com.tdg.truex_android_sampleapp.databinding.FragmentMenuBinding
 
 class MenuFragment : Fragment() {
+
+    private var _binding: FragmentMenuBinding? = null
+    private val binding get() = _binding!!
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -18,7 +23,15 @@ class MenuFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_menu, container, false)
+        _binding = FragmentMenuBinding.inflate(inflater, container, false)
+        return binding.root
     }
 
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+
+        binding.trueCloudMenu.setOnClickListener {
+//            startActivity(Intent(this, MainTrueCloudV3Activity::class.java))
+        }
+    }
 }

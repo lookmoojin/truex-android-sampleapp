@@ -174,13 +174,13 @@ def Glide = dependencyGroup {
     kapt imageLoader.glideCompiler
 }
 
-def Huawei = dependencyGroup {
-    huaweiApi huawei.core
-    huaweiApi huawei.coreInstaller
-    huaweiApi huawei.crash
-    huaweiApi huawei.hiAnalytics
-    huaweiApi huawei.push
-}
+//def Huawei = dependencyGroup {
+//    huaweiApi huawei.core
+//    huaweiApi huawei.coreInstaller
+//    huaweiApi huawei.crash
+//    huaweiApi huawei.hiAnalytics
+//    huaweiApi huawei.push
+//}
 
 def ImageUtil = dependencyGroup {
     implementation imageUtil.imageChooser
@@ -299,7 +299,7 @@ def TechnicalLogging = dependencyGroup {
     api newRelic.newRelic
     api tooLargeTool.toolargetool
 
-    huaweiApi huawei.crash
+//    huaweiApi huawei.crash
 }
 
 def TrueSDK = dependencyGroup {
@@ -495,7 +495,7 @@ ext.EventBus = EventBus
 ext.FacebookDebugger = FacebookDebugger
 ext.Firebase = Firebase
 ext.Glide = Glide
-ext.Huawei = Huawei
+//ext.Huawei = Huawei
 ext.ImageUtil = ImageUtil
 ext.KotlinCoroutine = KotlinCoroutine
 ext.LeakCanary = LeakCanary
