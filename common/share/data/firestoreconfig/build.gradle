@@ -8,7 +8,7 @@ apply {
 }
 
 android {
-    namespace 'com.tdg.truex_android_sampleapp.common.share.data.firestoreconfig'
+    namespace 'com.truedigital.share.data.firestoreconfig'
     productFlavors {
         staging {
             // Firebase
