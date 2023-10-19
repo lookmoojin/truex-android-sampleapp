@@ -2,10 +2,8 @@ package com.truedigital.foundation.extension
 
 import io.reactivex.Notification
 import io.reactivex.Observable
-import io.reactivex.ObservableSource
 import io.reactivex.disposables.CompositeDisposable
 import io.reactivex.disposables.Disposable
-import io.reactivex.functions.BiFunction
 
 fun Disposable.addTo(composite: CompositeDisposable): Boolean = composite.add(this)
 
