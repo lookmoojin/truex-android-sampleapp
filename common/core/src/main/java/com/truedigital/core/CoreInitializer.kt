@@ -62,14 +62,14 @@ class CoreInitializer : Initializer<CoreComponent> {
             },
             object : ViewSavedStateHandler {
                 override fun <T : View?> saveInstanceState(
-                    target: T,
+                    target: T & Any,
                     parentState: Parcelable?
                 ): Parcelable {
                     return Icepick.saveInstanceState(target, parentState)
                 }
 
                 override fun <T : View?> restoreInstanceState(
-                    target: T,
+                    target: T & Any,
                     state: Parcelable?
                 ): Parcelable? {
                     return Icepick.restoreInstanceState(target, state)
