@@ -5,7 +5,7 @@ apply {
 }
 
 android {
-    namespace 'com.tdg.truex_android_sampleapp.common.core'
+    namespace 'com.truedigital.core'
     defaultConfig {
 
         buildConfigField 'boolean', 'BLOCK_NETWORK', 'false'

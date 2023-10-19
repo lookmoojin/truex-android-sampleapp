@@ -7,7 +7,7 @@ apply {
 }
 
 android {
-    namespace 'com.tdg.feature.music'
+    namespace 'com.truedigital.features.tuned'
     defaultConfig {
 //        buildConfigField 'String', 'API_URL_TUNEDGLOBAL', '"https://api-metadata-connect.tunedglobal.com/"'
 //        buildConfigField 'String', 'API_SERVICES_URL_TUNEDGLOBAL', '"https://api-services-connect.tunedglobal.com/"'

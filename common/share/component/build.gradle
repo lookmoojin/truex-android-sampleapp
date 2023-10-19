@@ -7,7 +7,7 @@ apply from: "${project.rootDir}/gradle/dependencies.gradle"
 
 android {
 
-    namespace 'com.tdg.common.share.component'
+    namespace 'com.truedigital.component'
 
     productFlavors {
         staging {
