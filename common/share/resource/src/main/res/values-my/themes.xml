@@ -1,0 +1,9 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+
+    <!-- Base application theme. -->
+    <style name="Base.TrueID" parent="Theme.MaterialComponents.Light.NoActionBar">
+        <item name="fontFamily">@font/font_true_id_my</item>
+        <item name="android:fontFamily">@font/font_true_id_my</item>
+    </style>
+
+</resources>
