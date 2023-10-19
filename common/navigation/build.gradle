@@ -17,7 +17,7 @@ dependencies {
 //    implementation project(":common:share:mobileid")
 //    implementation project(":common:share:payment:share")
 //    implementation project(":common:share:payment:truemoney")
-//    implementation project(":common:share:resource")
+    implementation project(":common:share:resource")
 //    implementation project(':common:share:securitys')
 //    implementation project(":common:share:webview:webviewshare")
 
