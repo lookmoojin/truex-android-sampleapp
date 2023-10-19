@@ -4,7 +4,7 @@ apply from: "${project.rootDir}/gradle/sub-module.gradle"
 apply from: "${project.rootDir}/gradle/dependencies.gradle"
 
 android {
-    namespace 'com.tdg.common.share.currentdate'
+    namespace 'com.truedigital.common.share.currentdate'
 }
 
 dependencies {

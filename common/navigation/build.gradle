@@ -3,7 +3,7 @@ apply {
     from("${rootDir}/gradle/dependencies.gradle")
 }
 android {
-    namespace 'com.tdg.truex_android_sampleapp.common.navigation'
+    namespace 'com.truedigital.navigation'
 }
 dependencies {
     implementation project(":common:core")
