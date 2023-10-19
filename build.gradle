@@ -20,5 +20,17 @@ allprojects {
 
         //bridge
         maven { url 'https://jitpack.io' }
+
+        maven { url "https://clojars.org/repo/" }
+
+        maven { url "https://plugins.gradle.org/m2/" }
+        maven { url "https://muxinc.jfrog.io/artifactory/default-maven-release-local" }
+
+//        maven {
+//            url 'https://maven.promethean.tv'
+//            content {
+//                includeGroup 'tv.promethean.ptvsdk'
+//            }
+//        }
     }
 }

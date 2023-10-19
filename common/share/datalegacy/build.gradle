@@ -4,7 +4,7 @@ apply {
 }
 
 android {
-    namespace 'com.tdg.truex_android_sampleapp.common.share.datalegacy.'
+    namespace 'com.truedigital.common.share.datalegacy'
     packagingOptions {
         jniLibs {
             useLegacyPackaging = true

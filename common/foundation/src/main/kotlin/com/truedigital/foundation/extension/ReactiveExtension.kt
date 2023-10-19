@@ -18,14 +18,14 @@ inline fun <T> Observable<Notification<T>>.completed() = this.filter { it.isOnCo
 @Suppress("NOTHING_TO_INLINE")
 inline fun <T> Observable<Notification<T>>.error() = this.filter { it.error != null }.map { it.error!! }
 
-inline fun <T, U, R> Observable<T>.withLatest(other: ObservableSource<out U>, crossinline combiner: (T, U) -> R): Observable<R> {
-    return this.withLatestFrom(
-        other,
-        BiFunction<T, U, R> { t1, t2 ->
-            return@BiFunction combiner(t1, t2)
-        }
-    )
-}
+//inline fun <T, U, R> Observable<T>.withLatest(other: ObservableSource<out U>, crossinline combiner: (T, U) -> R): Observable<R> {
+//    return this.withLatestFrom(
+//        other,
+//        BiFunction<T, U, R> { t1, t2 ->
+//            return@BiFunction combiner(t1, t2)
+//        }
+//    )
+//}
 
 fun <E> ArrayList<E>.toObservable(): Observable<ArrayList<E>> {
     return Observable.just(this)

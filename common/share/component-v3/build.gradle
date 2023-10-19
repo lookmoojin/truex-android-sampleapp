@@ -7,7 +7,7 @@ apply {
     from("${project.rootDir}/gradle/dependencies.gradle")
 }
 android {
-    namespace 'com.tdg.common.share.component-v3'
+    namespace 'com.truedigital.common.share.componentv3'
 }
 dependencies {
 
