@@ -103,25 +103,6 @@ class BaseHttpClientModule {
 
     @Provides
     @Singleton
-    @MultipartFeaturePathV1OkHttp
-    fun providesFeatureMultipartOkHttp(
-        @HeaderOkHttp okHttpClient: OkHttpClient,
-        @Multipart contentTypeInterceptor: ContentTypeInterceptor,
-        featurePathInterceptor: FeaturePathInterceptor,
-        isBypassSSLUseCase: IsBypassSSLUseCase,
-        provideCertificatePinner: CertificatePinner,
-    ): OkHttpClient {
-        return okHttpClient.newBuilder().addInterceptor(contentTypeInterceptor)
-            .addInterceptor(featurePathInterceptor)
-            .apply {
-                if (!isBypassSSLUseCase.execute(BuildConfig.DEBUG)) {
-                    this.certificatePinner(provideCertificatePinner)
-                }
-            }.build()
-    }
-
-    @Provides
-    @Singleton
     @JsonFeaturePathV2OkHttp
     fun providesFeature2JsonOkHttp(
         @HeaderOkHttp okHttpClient: OkHttpClient,

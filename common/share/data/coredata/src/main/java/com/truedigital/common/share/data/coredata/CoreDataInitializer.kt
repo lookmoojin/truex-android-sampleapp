@@ -19,8 +19,7 @@ class CoreDataInitializer : Initializer<CoreDataComponent> {
         return DaggerCoreDataComponent.factory().create(
             CoreComponent.getInstance().getCoreSubComponent(),
             DataLegacyComponent.getInstance().getDataLegacySubComponent(),
-            FirestoreConfigComponent.getInstance().getFirestoreConfigSubComponent(),
-            PrasarnComponent.getInstance().getPrasarnSubComponent()
+            FirestoreConfigComponent.getInstance().getFirestoreConfigSubComponent()
         ).apply {
             CoreDataComponent.initialize(this)
         }

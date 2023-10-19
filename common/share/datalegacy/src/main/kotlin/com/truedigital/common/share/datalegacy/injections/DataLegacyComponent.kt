@@ -14,7 +14,6 @@ import com.truedigital.common.share.datalegacy.data.api.di.JsonFeaturePathV1OkHt
 import com.truedigital.common.share.datalegacy.data.api.di.JsonFeaturePathV2OkHttp
 import com.truedigital.common.share.datalegacy.data.api.di.JsonWithNoHeaderOkHttp
 import com.truedigital.common.share.datalegacy.data.api.di.JsonWithNoRetryInterceptorOkHttp
-import com.truedigital.common.share.datalegacy.data.api.di.MultipartFeaturePathV1OkHttp
 import com.truedigital.common.share.datalegacy.data.api.di.TokenInterceptor
 import com.truedigital.common.share.datalegacy.data.api.di.WithNoRetryInterceptor
 import com.truedigital.common.share.datalegacy.data.api.graph.GraphApiInterface
@@ -24,7 +23,6 @@ import com.truedigital.common.share.datalegacy.data.api.interceptor.FeaturePathI
 import com.truedigital.common.share.datalegacy.data.api.interceptor.FeaturePathV2Interceptor
 import com.truedigital.common.share.datalegacy.data.api.interceptor.HeaderInterceptor
 import com.truedigital.common.share.datalegacy.data.api.interceptor.HeaderWrapperInterceptor
-import com.truedigital.common.share.datalegacy.data.api.interceptor.SevenTokenInterceptor
 import com.truedigital.common.share.datalegacy.data.endpoint.ApiConfigurationManager
 import com.truedigital.common.share.datalegacy.data.repository.cmsfnshelf.repository.CmsShelfRepository
 import com.truedigital.common.share.datalegacy.data.repository.login.StateUserLoginRepository
@@ -143,9 +141,6 @@ interface DataLegacySubComponent {
     @JsonWithNoRetryInterceptorOkHttp
     fun getJsonFeature2WithNoRetryOkHttp(): OkHttpClient
 
-    @MultipartFeaturePathV1OkHttp
-    fun getMultipartFeatureOkHttpClient(): OkHttpClient
-
     @JsonWithNoHeaderOkHttp
     fun getJsonOKHttp(): OkHttpClient
 
@@ -158,7 +153,6 @@ interface DataLegacySubComponent {
 
     // Interceptors
     fun getChuckerLoggerInterceptor(): ChuckerLoggerInterceptor
-    fun getSevenTokenInterceptor(): SevenTokenInterceptor
     fun getHeaderWrapperInterceptor(): HeaderWrapperInterceptor
     fun getFeaturePathV2Interceptor(): FeaturePathV2Interceptor
     fun getFeaturePathInterceptor(): FeaturePathInterceptor

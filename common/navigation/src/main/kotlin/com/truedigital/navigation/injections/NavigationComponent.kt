@@ -13,7 +13,6 @@ import com.truedigital.navigation.di.NavigationProvidesModule
 import com.truedigital.navigation.di.NavigationRouterBindingModule
 import com.truedigital.navigation.di.NavigationRoutingBindsModule
 import com.truedigital.navigation.di.NavigationRoutingModule
-import com.truedigital.navigation.di.multi.NavigationMultiBindingDeepLinksModule
 import com.truedigital.navigation.domain.usecase.SetCrossRouterNavControllerUseCase
 import com.truedigital.navigation.domain.usecase.SetRouterSecondaryToNavControllerUseCase
 import com.truedigital.navigation.domain.usecase.SetRouterToNavControllerUseCase
@@ -31,8 +30,7 @@ import javax.inject.Singleton
         NavigationRouterBindingModule::class,
         NavigationRoutingModule::class,
         NavigationRoutingBindsModule::class,
-        NavigationMultiBindingModule::class,
-        NavigationMultiBindingDeepLinksModule::class
+        NavigationMultiBindingModule::class
     ],
     dependencies = [
         AnalyticsSubComponent::class,

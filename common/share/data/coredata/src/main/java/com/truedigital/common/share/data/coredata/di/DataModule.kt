@@ -2,8 +2,6 @@ package com.truedigital.common.share.data.coredata.di
 
 import com.truedigital.common.share.data.coredata.data.api.CmsFnCounterApiInterface
 import com.truedigital.common.share.data.coredata.data.api.CmsShelvesApiInterface
-import com.truedigital.common.share.data.coredata.data.api.PersonalizeApiInterface
-import com.truedigital.common.share.data.coredata.data.api.SimilarApiInterface
 import com.truedigital.common.share.datalegacy.data.api.ApiGsonBuilder
 import com.truedigital.common.share.datalegacy.data.api.ApiScalarsAndGsonBuilder
 import com.truedigital.common.share.datalegacy.data.api.di.BASE_URL_CMS_FN
@@ -36,46 +34,6 @@ object DataModule {
     ): CmsShelvesApiInterface {
         return ApiGsonBuilder(
             okHttpClient = okHttpClient,
-            gsonConverterFactory = gsonConverterFactory,
-            rxJavaAdapterFactory = rxJavaAdapterFactory,
-            errorHandlingAdapterFactory = errorHandlingAdapterFactory,
-            rxErrorHandlingAdapterFactory = rxErrorHandlingAdapterFactory
-        ).build(BuildConfig.BASE_URL_CONTENT)
-    }
-
-    @Singleton
-    @Provides
-    fun providePersonalizeApiInterface(
-        @JsonFeaturePathV1OkHttp okHttpClient: OkHttpClient,
-        @ScalarsConverter scalarsConverterFactory: Converter.Factory,
-        @GsonConverter gsonConverterFactory: Converter.Factory,
-        @RxJava2Adapter rxJavaAdapterFactory: CallAdapter.Factory,
-        @ErrorHandlingAdapter errorHandlingAdapterFactory: CallAdapter.Factory,
-        @RxErrorHandlingAdapter rxErrorHandlingAdapterFactory: CallAdapter.Factory
-    ): PersonalizeApiInterface {
-        return ApiScalarsAndGsonBuilder(
-            okHttpClient = okHttpClient,
-            scalarsConverterFactory = scalarsConverterFactory,
-            gsonConverterFactory = gsonConverterFactory,
-            rxJavaAdapterFactory = rxJavaAdapterFactory,
-            errorHandlingAdapterFactory = errorHandlingAdapterFactory,
-            rxErrorHandlingAdapterFactory = rxErrorHandlingAdapterFactory
-        ).build(BuildConfig.BASE_URL_DMP2)
-    }
-
-    @Singleton
-    @Provides
-    fun provideSimilarApiInterface(
-        @JsonFeaturePathV2OkHttp okHttpClient: OkHttpClient,
-        @ScalarsConverter scalarsConverterFactory: Converter.Factory,
-        @GsonConverter gsonConverterFactory: Converter.Factory,
-        @RxJava2Adapter rxJavaAdapterFactory: CallAdapter.Factory,
-        @ErrorHandlingAdapter errorHandlingAdapterFactory: CallAdapter.Factory,
-        @RxErrorHandlingAdapter rxErrorHandlingAdapterFactory: CallAdapter.Factory
-    ): SimilarApiInterface {
-        return ApiScalarsAndGsonBuilder(
-            okHttpClient = okHttpClient,
-            scalarsConverterFactory = scalarsConverterFactory,
             gsonConverterFactory = gsonConverterFactory,
             rxJavaAdapterFactory = rxJavaAdapterFactory,
             errorHandlingAdapterFactory = errorHandlingAdapterFactory,
