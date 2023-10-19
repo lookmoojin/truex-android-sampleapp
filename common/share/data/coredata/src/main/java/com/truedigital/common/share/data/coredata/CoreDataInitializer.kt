@@ -10,8 +10,6 @@ import com.truedigital.core.CoreInitializer
 import com.truedigital.core.injections.CoreComponent
 import com.truedigital.share.data.firestoreconfig.initializer.FirestoreConfigInitializer
 import com.truedigital.share.data.firestoreconfig.injections.FirestoreConfigComponent
-import com.truedigital.share.data.prasarn.PrasarnInitializer
-import com.truedigital.share.data.prasarn.injections.PrasarnComponent
 
 class CoreDataInitializer : Initializer<CoreDataComponent> {
 
@@ -28,7 +26,6 @@ class CoreDataInitializer : Initializer<CoreDataComponent> {
     override fun dependencies(): List<Class<out Initializer<*>>> = listOf(
         CoreInitializer::class.java,
         DataLegacyInitializer::class.java,
-        FirestoreConfigInitializer::class.java,
-        PrasarnInitializer::class.java
+        FirestoreConfigInitializer::class.java
     )
 }

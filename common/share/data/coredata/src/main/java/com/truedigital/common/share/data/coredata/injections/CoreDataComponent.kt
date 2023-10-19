@@ -16,7 +16,6 @@ import com.truedigital.common.share.data.coredata.di.DataContentModule
 import com.truedigital.common.share.data.coredata.di.DataModule
 import com.truedigital.common.share.data.coredata.di.DataMultiBindsModule
 import com.truedigital.common.share.data.coredata.domain.GetBaseShelfUseCase
-import com.truedigital.common.share.data.coredata.domain.usecase.CountViewUseCase
 import com.truedigital.common.share.datalegacy.injections.DataLegacySubComponent
 import com.truedigital.core.injections.CoreSubComponent
 import com.truedigital.share.data.firestoreconfig.injections.FirestoreConfigSubComponent
@@ -85,5 +84,4 @@ interface CoreDataSubComponent {
     fun getDecodeShortLinkUseCase(): DecodeShortLinkUseCase
     fun getGetBaseShelfUseCase(): GetBaseShelfUseCase
     fun getValidateDeeplinkUrlUseCase(): ValidateDeeplinkUrlUseCase
-    fun getCountViewUseCase(): CountViewUseCase
 }

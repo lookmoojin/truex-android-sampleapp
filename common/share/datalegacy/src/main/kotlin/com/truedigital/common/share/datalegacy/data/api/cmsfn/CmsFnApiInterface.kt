@@ -14,10 +14,4 @@ interface CmsFnApiInterface {
         @Path("shelf_id") shelfId: String,
         @Query("fields") fields: String
     ): Observable<Response<CmsShelfResponse>>
-
-    /** cms-fncounter
-     ************************************************************************************************/
-
-    @GET("cms-fncounter/v1/count")
-    suspend fun getCountView(@Query("id") id: String): Response<Unit>
 }

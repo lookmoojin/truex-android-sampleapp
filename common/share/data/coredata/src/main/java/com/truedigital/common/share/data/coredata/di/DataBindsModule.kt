@@ -16,8 +16,6 @@ import com.truedigital.common.share.data.coredata.deeplink.usecase.ValidateDeepl
 import com.truedigital.common.share.data.coredata.deeplink.usecase.ValidateDeeplinkUrlUseCaseImpl
 import com.truedigital.common.share.data.coredata.domain.GetBaseShelfUseCase
 import com.truedigital.common.share.data.coredata.domain.GetBaseShelfUseCaseImpl
-import com.truedigital.common.share.data.coredata.domain.usecase.CountViewUseCase
-import com.truedigital.common.share.data.coredata.domain.usecase.CountViewUseCaseImpl
 import dagger.Binds
 import dagger.Module
 import javax.inject.Singleton
@@ -68,9 +66,4 @@ interface DataBindsModule {
     fun bindsValidateDeeplinkUrlUseCase(
         validateDeeplinkUrlUseCaseImpl: ValidateDeeplinkUrlUseCaseImpl
     ): ValidateDeeplinkUrlUseCase
-
-    @Binds
-    fun bindsCountViewUseCaseImpl(
-        countViewUseCaseImpl: CountViewUseCaseImpl
-    ): CountViewUseCase
 }
