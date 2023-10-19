@@ -30,8 +30,4 @@
         </item>
         <item name="expandedTitleTextAppearance">@style/TrueID.TitleInCommonAppBar.Dark</item>
     </style>
-
-    <style name="RedProgressBar">
-        <item name="colorAccent">@color/red_500_brand</item>
-    </style>
 </resources>
