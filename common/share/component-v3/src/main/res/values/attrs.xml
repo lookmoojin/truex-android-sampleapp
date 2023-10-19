@@ -33,6 +33,11 @@
         </attr>
     </declare-styleable>
 
+    <declare-styleable name="CommonLargeNavigationBar">
+        <attr name="cln_title" format="string" />
+        <attr name="cln_title_style" format="reference" />
+    </declare-styleable>
+
     <declare-styleable name="CommonSearchBar">
         <attr name="csb_title" format="string" />
         <attr name="csb_card_style" format="reference" />

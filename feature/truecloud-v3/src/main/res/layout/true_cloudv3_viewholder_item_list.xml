@@ -79,7 +79,7 @@
         android:id="@+id/trueCloudMoreImageView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:paddingStart="@dimen/margin_8dp"
+        android:paddingStart="@dimen/true_cloudv3_spacing_2s"
         android:paddingTop="@dimen/true_cloudv3_spacing_m"
         android:paddingBottom="@dimen/true_cloudv3_spacing_m"
         app:layout_constraintBottom_toBottomOf="parent"
