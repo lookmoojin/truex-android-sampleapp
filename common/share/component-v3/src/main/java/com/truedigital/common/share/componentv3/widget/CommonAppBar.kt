@@ -15,7 +15,6 @@ import com.truedigital.common.share.componentv3.R
 import com.truedigital.common.share.componentv3.common.IconGravity
 import com.truedigital.common.share.componentv3.databinding.CommonAppbarBinding
 import com.truedigital.common.share.componentv3.injections.ComponentV3Component
-import com.truedigital.common.share.componentv3.widget.searchanimation.model.SearchAnimationData
 import com.truedigital.foundation.extension.gone
 import com.truedigital.foundation.extension.load
 import com.truedigital.foundation.extension.onClick
@@ -214,10 +213,6 @@ class CommonAppBar : AppBarLayout, LifecycleObserver {
         setupOffsetListener()
     }
 
-    private fun setAnimationVisible() {
-        binding.commonSearchBar.setAnimationVisible()
-    }
-
     private fun setCollapsedMarginTitle(listIconView: List<Triple<View, IconGravity, Int>>) {
         val defaultWidth = 32 * resources.displayMetrics.density.toInt()
         var marginLeft = 16 * resources.displayMetrics.density.toInt()
@@ -233,14 +228,6 @@ class CommonAppBar : AppBarLayout, LifecycleObserver {
             }
             binding.toolbar.setContentInsetsAbsolute(marginLeft, marginRight)
         }
-    }
-
-    private fun setPlayAndHideAnimationAfterFinishedShowing() {
-        binding.commonSearchBar.setPlayAndHideAnimationAfterFinishedShowing()
-    }
-
-    private fun setSearchAnimationFile(adsUrl: String) {
-        binding.commonSearchBar.setSearchAnimationFile(adsUrl)
     }
 
     private fun setupOffsetListener() {
@@ -289,21 +276,6 @@ class CommonAppBar : AppBarLayout, LifecycleObserver {
         )
     }
 
-    private fun setupSearchAnimation(searchAnimationData: SearchAnimationData) {
-        val adsUrl: String = searchAnimationData.adsUrl
-        val deeplink: String = searchAnimationData.deeplink
-        this@CommonAppBar.apply {
-            setAnimationVisible()
-            setSearchAnimationFile(adsUrl)
-            setPlayAndHideAnimationAfterFinishedShowing()
-        }
-        binding.commonSearchBar.apply {
-            onClickAnimation = {
-                this@CommonAppBar.onClickAnimation?.invoke(deeplink)
-            }
-        }
-    }
-
     private fun setupView() {
         addView(binding.root)
         setTitle(largeTitle)
@@ -344,21 +316,6 @@ class CommonAppBar : AppBarLayout, LifecycleObserver {
         }
     }
 
-    fun setContentDescription(contentDescription: String) {
-        binding.commonSearchBar.contentDescription = contentDescription
-    }
-
-    fun setEditText(keyword: String) {
-        binding.commonSearchBar.setEditText(keyword)
-        binding.commonSearchBar.setHideQRScan()
-        binding.commonSearchBar.setShowClearTextButton()
-    }
-
-    fun setHintText(hintText: String) {
-        binding.commonSearchBar.setHintText(hintText)
-        binding.commonSearchBar.setHideQRScan()
-    }
-
     fun setTitle(title: String) {
         largeTitle = title
         binding.appCollapsingToolbar.run {
@@ -383,22 +340,6 @@ class CommonAppBar : AppBarLayout, LifecycleObserver {
         }
     }
 
-    fun clearSearchText() {
-        binding.commonSearchBar.clearSearchText()
-    }
-
-    fun setHideClearButton() {
-        binding.commonSearchBar.setHideClearButton()
-    }
-
-    fun setupEdittextAfterSearch() {
-        binding.commonSearchBar.setupEdittextAfterSearch()
-    }
-
-    fun setTimeAutoComplete(time: Long) {
-        binding.commonSearchBar.setTimeInterval(time)
-    }
-
     fun setCommonButton(displayText: String, isShow: Boolean, keepShowing: Boolean) {
         binding.commonBtn.text = displayText
         binding.commonBtn.isVisible = isShow
@@ -409,16 +350,6 @@ class CommonAppBar : AppBarLayout, LifecycleObserver {
         binding.commonBtn.onClick {
             callback.invoke()
         }
-    }
-
-    fun getTextFromEditText(): String = binding.commonSearchBar.getTextFromEditText()
-
-    fun requestFocusAndShowKeyboard() {
-        binding.commonSearchBar.requestFocusAndShowKeyboard()
-    }
-
-    fun clearFocusAndHideKeyboard() {
-        binding.commonSearchBar.clearFocusAndHideKeyboard()
     }
 
     fun setLockCollapsible() {

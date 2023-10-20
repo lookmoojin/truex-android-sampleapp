@@ -45,8 +45,7 @@ interface TIDComponent {
             analyticsSubComponent: AnalyticsSubComponent,
             coreSubComponent: CoreSubComponent,
             currentDateSubComponent: CurrentDateSubComponent,
-            dataLegacySubComponent: DataLegacySubComponent,
-            linkGeneratorSubComponent: LinkGeneratorSubComponent,
+            dataLegacySubComponent: DataLegacySubComponent
         ): TIDComponent
     }
 

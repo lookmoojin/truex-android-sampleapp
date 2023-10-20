@@ -1,7 +1,6 @@
 package com.truedigital.common.share.componentv3.injections
 
 import com.truedigital.common.share.analytics.injections.AnalyticsSubComponent
-import com.truedigital.common.share.componentv3.di.SearchAnimationBindsModule
 import com.truedigital.common.share.componentv3.widget.CommonAppBar
 import com.truedigital.common.share.currentdate.injections.CurrentDateSubComponent
 import com.truedigital.common.share.data.coredata.injections.CoreDataSubComponent
@@ -14,9 +13,7 @@ import javax.inject.Singleton
 
 @Singleton
 @Component(
-    modules = [
-        SearchAnimationBindsModule::class
-    ],
+    modules = [],
     dependencies = [
         AnalyticsSubComponent::class,
         CoreDataSubComponent::class,
