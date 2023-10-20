@@ -1,10 +1,16 @@
 apply {
     from("${rootDir}/gradle/sub-module.gradle")
     from("${rootDir}/gradle/dependencies.gradle")
-    from("${rootDir}/gradle/jetpack-compose.gradle")
+//    from("${rootDir}/gradle/jetpack-compose.gradle")
 }
 android {
     namespace 'com.truedigital.foundation'
+
+    buildTypes {
+        release {
+            minifyEnabled false
+        }
+    }
 }
 dependencies {
 
