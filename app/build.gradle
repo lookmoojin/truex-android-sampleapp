@@ -1,5 +1,6 @@
 plugins {
     id 'com.android.application'
+    id 'com.google.gms.google-services'
     id 'org.jetbrains.kotlin.android'
     id 'androidx.navigation.safeargs.kotlin'
     id 'kotlin-kapt'
@@ -16,7 +17,7 @@ android {
     compileSdk 33
 
     defaultConfig {
-        applicationId "com.tdg.truex_android_sampleapp"
+        applicationId "com.tdcm.trueidapp"
         minSdk 27
         targetSdk 33
         versionCode 1
@@ -78,4 +79,5 @@ dependencies {
     implementation 'org.jetbrains.kotlinx:kotlinx-coroutines-core:1.6.4'
     implementation 'androidx.lifecycle:lifecycle-viewmodel-ktx:2.5.1'
     implementation 'androidx.lifecycle:lifecycle-livedata-ktx:2.5.1'
+    Firebase()
 }

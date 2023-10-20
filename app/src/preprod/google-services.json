@@ -1,0 +1,82 @@
+{
+  "project_info": {
+    "project_number": "474911571098",
+    "project_id": "trueid-v3-preprod",
+    "storage_bucket": "trueid-v3-preprod.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:474911571098:android:bc30877b49006d8905f323",
+        "android_client_info": {
+          "package_name": "com.tdcm.trueidapp.preprod"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "474911571098-hg322me7rdsrspneukqsnjqo5n22nb7p.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD0LYlt8p59wv4VcjJbnZMSeeWZgGpZcG4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "474911571098-hg322me7rdsrspneukqsnjqo5n22nb7p.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "474911571098-8tjumbdrgv6copc4gvgs8ut3bcl1gd15.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.truemoveent.trueidapp.preprod"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:474911571098:android:04c64a0d22d79d2d05f323",
+        "android_client_info": {
+          "package_name": "com.test.trueidapp.preprod"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "474911571098-hg322me7rdsrspneukqsnjqo5n22nb7p.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD0LYlt8p59wv4VcjJbnZMSeeWZgGpZcG4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "474911571098-hg322me7rdsrspneukqsnjqo5n22nb7p.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "474911571098-8tjumbdrgv6copc4gvgs8ut3bcl1gd15.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.truemoveent.trueidapp.preprod"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -32,6 +32,12 @@
                 android:name="com.tdg.truex_android_sampleapp.initializer.HomeInitializer"
                 android:value="androidx.startup" />
         </provider>
+
+        <provider
+            android:name="com.tdg.truex_android_sampleapp.startuptrace.StartupTimeProvider"
+            android:authorities="${applicationId}.startuptrace"
+            android:exported="false"
+            android:initOrder="2147483647" />
     </application>
 
 </manifest>
