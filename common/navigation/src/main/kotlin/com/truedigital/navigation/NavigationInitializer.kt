@@ -4,6 +4,7 @@ import android.content.Context
 import androidx.startup.Initializer
 import com.truedigital.common.share.analytics.AnalyticsInitializer
 import com.truedigital.common.share.analytics.injections.AnalyticsComponent
+import com.truedigital.common.share.componentv3.ComponentV3Initializer
 import com.truedigital.common.share.componentv3.injections.ComponentV3Component
 import com.truedigital.common.share.data.coredata.CoreDataInitializer
 import com.truedigital.common.share.data.coredata.injections.CoreDataComponent
@@ -32,6 +33,7 @@ class NavigationInitializer : Initializer<NavigationComponent> {
         AnalyticsInitializer::class.java,
         CoreDataInitializer::class.java,
         CoreInitializer::class.java,
+        ComponentV3Initializer::class.java,
         DataLegacyInitializer::class.java
     )
 }
