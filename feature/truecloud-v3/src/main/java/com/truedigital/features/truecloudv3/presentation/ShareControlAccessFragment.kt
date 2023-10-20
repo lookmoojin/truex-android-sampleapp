@@ -7,8 +7,8 @@ import android.view.View
 import android.widget.DatePicker
 import androidx.core.widget.doAfterTextChanged
 import androidx.fragment.app.viewModels
-import com.tdg.truecloud.R
-import com.tdg.truecloud.databinding.FragmentShareControlAccessBinding
+import com.truedigital.features.truecloudv3.R
+import com.truedigital.features.truecloudv3.databinding.FragmentShareControlAccessBinding
 import com.truedigital.component.base.BaseFragment
 import com.truedigital.core.extensions.viewBinding
 import com.truedigital.features.truecloudv3.common.TrueCloudV3KeyBundle

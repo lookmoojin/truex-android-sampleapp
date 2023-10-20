@@ -8,8 +8,8 @@ import android.view.WindowManager
 import androidx.fragment.app.DialogFragment
 import androidx.fragment.app.viewModels
 import androidx.navigation.fragment.findNavController
-import com.tdg.truecloud.R
-import com.tdg.truecloud.databinding.FragmentTrueCloudv3RenameFileBinding
+import com.truedigital.features.truecloudv3.R
+import com.truedigital.features.truecloudv3.databinding.FragmentTrueCloudv3RenameFileBinding
 import com.truedigital.common.share.componentv3.extension.setSavedStateHandle
 import com.truedigital.core.extensions.viewBinding
 import com.truedigital.core.utils.KeyboardUtils

@@ -11,8 +11,8 @@ import androidx.core.view.WindowInsetsControllerCompat
 import androidx.fragment.app.viewModels
 import androidx.navigation.fragment.findNavController
 import androidx.viewpager2.widget.ViewPager2
-import com.tdg.truecloud.R
-import com.tdg.truecloud.databinding.FragmentTrueCloudv3FileViewerBinding
+import com.truedigital.features.truecloudv3.R
+import com.truedigital.features.truecloudv3.databinding.FragmentTrueCloudv3FileViewerBinding
 import com.truedigital.common.share.componentv3.extension.getSavedStateHandle
 import com.truedigital.component.base.BaseFragment
 import com.truedigital.core.extensions.viewBinding

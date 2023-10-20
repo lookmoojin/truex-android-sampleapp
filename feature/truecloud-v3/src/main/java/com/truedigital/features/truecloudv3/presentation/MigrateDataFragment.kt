@@ -5,8 +5,8 @@ import android.view.View
 import androidx.activity.OnBackPressedCallback
 import androidx.fragment.app.viewModels
 import androidx.navigation.fragment.findNavController
-import com.tdg.truecloud.R
-import com.tdg.truecloud.databinding.FragmentMigrateDataBinding
+import com.truedigital.features.truecloudv3.R
+import com.truedigital.features.truecloudv3.databinding.FragmentMigrateDataBinding
 import com.truedigital.common.share.componentv3.extension.setSavedStateHandle
 import com.truedigital.component.base.BaseFragment
 import com.truedigital.core.extensions.viewBinding

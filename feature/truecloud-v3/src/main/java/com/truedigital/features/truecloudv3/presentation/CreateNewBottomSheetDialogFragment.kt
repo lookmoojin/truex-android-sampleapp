@@ -8,8 +8,8 @@ import android.view.ViewGroup
 import android.widget.FrameLayout
 import com.google.android.material.bottomsheet.BottomSheetBehavior
 import com.google.android.material.bottomsheet.BottomSheetDialogFragment
-import com.tdg.truecloud.R
-import com.tdg.truecloud.databinding.TrueCloudv3CreateNewBottomSheetDialogBinding
+import com.truedigital.features.truecloudv3.R
+import com.truedigital.features.truecloudv3.databinding.TrueCloudv3CreateNewBottomSheetDialogBinding
 import com.truedigital.core.extensions.viewBinding
 import com.truedigital.foundation.extension.onClick
 

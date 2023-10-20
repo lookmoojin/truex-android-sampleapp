@@ -10,8 +10,8 @@ import androidx.appcompat.widget.AppCompatCheckedTextView
 import androidx.core.view.forEach
 import androidx.fragment.app.viewModels
 import androidx.navigation.fragment.findNavController
-import com.tdg.truecloud.R
-import com.tdg.truecloud.databinding.FragmentTrueCloudv3PhotoEditorTransformBinding
+import com.truedigital.features.truecloudv3.R
+import com.truedigital.features.truecloudv3.databinding.FragmentTrueCloudv3PhotoEditorTransformBinding
 import com.truedigital.common.share.componentv3.extension.setSavedStateHandle
 import com.truedigital.component.base.BaseFragment
 import com.truedigital.component.dialog.trueid.DialogIconType

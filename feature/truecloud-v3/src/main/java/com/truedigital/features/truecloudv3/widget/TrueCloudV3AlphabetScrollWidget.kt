@@ -7,7 +7,7 @@ import android.view.LayoutInflater
 import android.widget.FrameLayout
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-import com.tdg.truecloud.databinding.TrueCloudv3ViewAlphabetScrollBinding
+import com.truedigital.features.truecloudv3.databinding.TrueCloudv3ViewAlphabetScrollBinding
 import com.truedigital.features.truecloudv3.domain.model.AlphabetItemModel
 import com.truedigital.features.truecloudv3.domain.model.ContactTrueCloudModel
 import com.truedigital.features.truecloudv3.presentation.adapter.AlphabetScrollAdapter

@@ -3,7 +3,7 @@ package com.truedigital.features.truecloudv3.common
 import android.view.View
 import androidx.annotation.ColorRes
 import androidx.annotation.StringRes
-import com.tdg.truecloud.R
+import com.truedigital.features.truecloudv3.R
 
 enum class TaskStatusType(
     val keyStatus: String,

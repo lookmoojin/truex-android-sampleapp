@@ -7,8 +7,8 @@ import android.view.LayoutInflater
 import android.widget.FrameLayout
 import androidx.appcompat.widget.LinearLayoutCompat
 import androidx.core.content.ContextCompat
-import com.tdg.truecloud.R
-import com.tdg.truecloud.databinding.TrueCloudv3WidgetStorageBinding
+import com.truedigital.features.truecloudv3.R
+import com.truedigital.features.truecloudv3.databinding.TrueCloudv3WidgetStorageBinding
 import com.truedigital.core.extensions.toDateFromUTC
 import com.truedigital.features.truecloudv3.common.FileStorageType
 import com.truedigital.features.truecloudv3.common.MigrationStatus

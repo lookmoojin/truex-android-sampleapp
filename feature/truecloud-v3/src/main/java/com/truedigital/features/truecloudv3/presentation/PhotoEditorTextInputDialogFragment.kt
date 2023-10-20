@@ -10,8 +10,8 @@ import android.view.WindowManager
 import android.view.inputmethod.InputMethodManager
 import androidx.fragment.app.DialogFragment
 import androidx.navigation.fragment.findNavController
-import com.tdg.truecloud.R
-import com.tdg.truecloud.databinding.TrueCloudv3PhotoEditorTextInputDialogBinding
+import com.truedigital.features.truecloudv3.R
+import com.truedigital.features.truecloudv3.databinding.TrueCloudv3PhotoEditorTextInputDialogBinding
 import com.truedigital.common.share.componentv3.extension.setSavedStateHandle
 import com.truedigital.core.extensions.viewBinding
 import com.truedigital.features.truecloudv3.common.TrueCloudV3SaveStateKey.KEY_TRUE_CLOUD_PHOTO_EDITOR_TEXT

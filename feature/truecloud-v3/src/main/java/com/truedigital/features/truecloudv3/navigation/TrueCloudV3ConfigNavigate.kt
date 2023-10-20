@@ -1,7 +1,7 @@
 package com.truedigital.features.truecloudv3.navigation
 
 import androidx.collection.arrayMapOf
-import com.tdg.truecloud.R
+import com.truedigital.features.truecloudv3.R
 import com.truedigital.navigation.router.Destination
 
 object TrueCloudV3ConfigNavigate : Map<Destination, Int> by arrayMapOf(

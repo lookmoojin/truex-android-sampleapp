@@ -9,7 +9,7 @@ import android.util.AttributeSet
 import android.util.TypedValue
 import android.view.View
 import androidx.annotation.ColorInt
-import com.tdg.truecloud.R
+import com.truedigital.features.truecloudv3.R
 
 internal class DegreeRulerView : View {
 

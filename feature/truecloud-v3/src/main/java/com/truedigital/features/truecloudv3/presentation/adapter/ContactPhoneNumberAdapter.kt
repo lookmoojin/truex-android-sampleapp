@@ -3,7 +3,7 @@ package com.truedigital.features.truecloudv3.presentation.adapter
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
-import com.tdg.truecloud.databinding.TrueCloudv3ViewholderContactNumberItemBinding
+import com.truedigital.features.truecloudv3.databinding.TrueCloudv3ViewholderContactNumberItemBinding
 import com.truedigital.features.truecloudv3.domain.model.ContactPhoneNumberModel
 import com.truedigital.foundation.extension.onClick
 

@@ -4,7 +4,7 @@ import android.net.Uri
 import android.os.Bundle
 import androidx.lifecycle.MutableLiveData
 import androidx.navigation.NavController
-import com.tdg.truecloud.R
+import com.truedigital.features.truecloudv3.R
 import com.truedigital.common.share.datalegacy.login.LoginManagerInterface
 import com.truedigital.common.share.datalegacy.wrapper.AuthLoginListener
 import com.truedigital.common.share.datalegacy.wrapper.ContextDataProviderWrapper

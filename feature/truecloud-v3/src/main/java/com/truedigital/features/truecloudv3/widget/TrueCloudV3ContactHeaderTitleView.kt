@@ -4,7 +4,7 @@ import android.content.Context
 import android.util.AttributeSet
 import android.view.LayoutInflater
 import android.widget.FrameLayout
-import com.tdg.truecloud.databinding.TrueCloudv3ContactHeaderTitleViewBinding
+import com.truedigital.features.truecloudv3.databinding.TrueCloudv3ContactHeaderTitleViewBinding
 import com.truedigital.foundation.extension.onClick
 
 class TrueCloudV3ContactHeaderTitleView @JvmOverloads constructor(

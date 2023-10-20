@@ -2,7 +2,7 @@ package com.truedigital.features.truecloudv3.presentation.viewmodel
 
 import androidx.datastore.preferences.core.stringPreferencesKey
 import androidx.lifecycle.viewModelScope
-import com.tdg.truecloud.R
+import com.truedigital.features.truecloudv3.R
 import com.truedigital.common.share.analytics.di.AnalyticsModule
 import com.truedigital.common.share.analytics.measurement.AnalyticManagerInterface
 import com.truedigital.common.share.analytics.measurement.constant.MeasurementConstant

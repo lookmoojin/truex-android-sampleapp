@@ -21,8 +21,8 @@ import androidx.lifecycle.lifecycleScope
 import androidx.lifecycle.repeatOnLifecycle
 import androidx.navigation.fragment.findNavController
 import com.skydoves.colorpickerview.listeners.ColorListener
-import com.tdg.truecloud.R
-import com.tdg.truecloud.databinding.FragmentTrueCloudv3PhotoEditorFocusBinding
+import com.truedigital.features.truecloudv3.R
+import com.truedigital.features.truecloudv3.databinding.FragmentTrueCloudv3PhotoEditorFocusBinding
 import com.truedigital.common.share.componentv3.extension.setSavedStateHandle
 import com.truedigital.component.base.BaseFragment
 import com.truedigital.component.dialog.trueid.DialogIconType

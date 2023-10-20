@@ -5,8 +5,8 @@ import android.view.ViewGroup
 import android.widget.Space
 import androidx.recyclerview.widget.RecyclerView
 import com.newrelic.agent.android.NewRelic
-import com.tdg.truecloud.databinding.TrueCloudv3ViewholderContactHeaderBinding
-import com.tdg.truecloud.databinding.TrueCloudv3ViewholderContactItemBinding
+import com.truedigital.features.truecloudv3.databinding.TrueCloudv3ViewholderContactHeaderBinding
+import com.truedigital.features.truecloudv3.databinding.TrueCloudv3ViewholderContactItemBinding
 import com.truedigital.features.truecloudv3.domain.model.Contact
 import com.truedigital.features.truecloudv3.domain.model.ContactTrueCloudModel
 import com.truedigital.features.truecloudv3.domain.model.HeaderSelectionModel

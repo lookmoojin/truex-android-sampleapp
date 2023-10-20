@@ -2,7 +2,7 @@ package com.truedigital.features.truecloudv3.presentation.viewmodel
 
 import android.os.Bundle
 import android.os.Environment
-import com.tdg.truecloud.R
+import com.truedigital.features.truecloudv3.R
 import com.truedigital.common.share.analytics.di.AnalyticsModule
 import com.truedigital.common.share.analytics.measurement.AnalyticManagerInterface
 import com.truedigital.common.share.analytics.measurement.constant.MeasurementConstant

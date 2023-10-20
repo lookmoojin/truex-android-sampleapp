@@ -3,8 +3,8 @@ package com.truedigital.features.truecloudv3.presentation.adapter
 import android.graphics.Typeface
 import androidx.core.content.ContextCompat
 import androidx.recyclerview.widget.RecyclerView
-import com.tdg.truecloud.R
-import com.tdg.truecloud.databinding.TrueCloudv3ItemAlphabetScrollBinding
+import com.truedigital.features.truecloudv3.R
+import com.truedigital.features.truecloudv3.databinding.TrueCloudv3ItemAlphabetScrollBinding
 import com.truedigital.features.truecloudv3.domain.model.AlphabetItemModel
 import com.truedigital.foundation.extension.onClick
 

@@ -4,8 +4,8 @@ import android.content.Context
 import android.util.AttributeSet
 import android.view.LayoutInflater
 import android.widget.FrameLayout
-import com.tdg.truecloud.R
-import com.tdg.truecloud.databinding.TrueCloudv3DataEmptyViewBinding
+import com.truedigital.features.truecloudv3.R
+import com.truedigital.features.truecloudv3.databinding.TrueCloudv3DataEmptyViewBinding
 import com.truedigital.core.extensions.ifNotNullOrEmpty
 import com.truedigital.foundation.extension.gone
 

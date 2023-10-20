@@ -8,8 +8,8 @@ import android.widget.ImageView
 import androidx.appcompat.app.AppCompatDelegate
 import androidx.fragment.app.viewModels
 import androidx.navigation.fragment.findNavController
-import com.tdg.truecloud.R
-import com.tdg.truecloud.databinding.FragmentIntroTrueCloudBinding
+import com.truedigital.features.truecloudv3.R
+import com.truedigital.features.truecloudv3.databinding.FragmentIntroTrueCloudBinding
 import com.truedigital.common.share.componentv3.extension.safePopBackStack
 import com.truedigital.component.base.BaseFragment
 import com.truedigital.core.extensions.viewBinding

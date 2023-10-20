@@ -11,7 +11,7 @@ import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.ViewFlipper
 import com.google.android.exoplayer2.ui.PlayerControlView
-import com.tdg.truecloud.R
+import com.truedigital.features.truecloudv3.R
 import com.truedigital.foundation.extension.onClick
 
 class TrueCloudV3VideoControllerView @JvmOverloads constructor(

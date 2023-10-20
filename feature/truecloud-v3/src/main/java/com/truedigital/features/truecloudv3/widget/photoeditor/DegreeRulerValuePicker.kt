@@ -12,7 +12,7 @@ import android.widget.LinearLayout
 import androidx.annotation.ColorInt
 import androidx.annotation.ColorRes
 import androidx.core.content.ContextCompat
-import com.tdg.truecloud.R
+import com.truedigital.features.truecloudv3.R
 import com.truedigital.features.truecloudv3.widget.photoeditor.ObservableHorizontalScrollView.ScrollChangedListener
 
 class DegreeRulerValuePicker : FrameLayout, ScrollChangedListener {

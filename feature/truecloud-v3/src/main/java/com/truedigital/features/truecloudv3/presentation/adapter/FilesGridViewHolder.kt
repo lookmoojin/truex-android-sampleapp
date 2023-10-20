@@ -5,7 +5,7 @@ import com.bumptech.glide.Glide
 import com.bumptech.glide.Priority
 import com.bumptech.glide.load.engine.DiskCacheStrategy
 import com.bumptech.glide.signature.ObjectKey
-import com.tdg.truecloud.databinding.TrueCloudv3ViewholderItemGridBinding
+import com.truedigital.features.truecloudv3.databinding.TrueCloudv3ViewholderItemGridBinding
 import com.truedigital.features.truecloudv3.common.FileMimeType
 import com.truedigital.features.truecloudv3.domain.model.TrueCloudFilesModel
 import com.truedigital.foundation.extension.gone

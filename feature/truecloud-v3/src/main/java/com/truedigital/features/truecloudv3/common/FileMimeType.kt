@@ -1,7 +1,7 @@
 package com.truedigital.features.truecloudv3.common
 
 import androidx.annotation.DrawableRes
-import com.tdg.truecloud.R
+import com.truedigital.features.truecloudv3.R
 
 enum class FileMimeType(
     val type: String,

@@ -1,7 +1,7 @@
 package com.truedigital.features.truecloudv3.extension
 
 import android.content.Context
-import com.tdg.truecloud.R
+import com.truedigital.features.truecloudv3.R
 import com.truedigital.common.share.datalegacy.wrapper.ContextDataProviderWrapper
 import com.truedigital.component.extension.formatEnTh
 import com.truedigital.core.constant.DateFormatConstant

@@ -8,7 +8,7 @@ apply {
     from("${project.rootDir}/gradle/dependencies.gradle")
 }
 android {
-    namespace 'com.tdg.truecloud'
+    namespace 'com.truedigital.features.truecloudv3'
     productFlavors {
         preprod {
             buildConfigField 'String', 'BASE_URL_TRUE_CLOUD', '"https://drive-customer-api-alpha.trueid-preprod.net/drive/"'

@@ -5,7 +5,7 @@ import android.util.AttributeSet
 import android.view.LayoutInflater
 import android.widget.FrameLayout
 import androidx.core.view.isVisible
-import com.tdg.truecloud.databinding.TrueCloudv3HeaderTitleViewBinding
+import com.truedigital.features.truecloudv3.databinding.TrueCloudv3HeaderTitleViewBinding
 import com.truedigital.foundation.extension.onClick
 
 class TrueCloudV3HeaderTitleView @JvmOverloads constructor(

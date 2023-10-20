@@ -1,7 +1,7 @@
 package com.truedigital.features.truecloudv3.extension
 
 import android.content.Context
-import com.tdg.truecloud.R
+import com.truedigital.features.truecloudv3.R
 
 private const val KILO_BYTE_AS_BYTE = 1024.0
 fun Long.formatBinarySize(context: Context): String {

@@ -3,7 +3,7 @@ package com.truedigital.features.truecloudv3.presentation.adapter
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
-import com.tdg.truecloud.databinding.TrueCloudv3ViewholderDataInfoItemBinding
+import com.truedigital.features.truecloudv3.databinding.TrueCloudv3ViewholderDataInfoItemBinding
 
 class DataInfoAdapter : RecyclerView.Adapter<DataInfoViewHolder>() {
     private var dataInfo: List<Pair<String, String>> = mutableListOf()

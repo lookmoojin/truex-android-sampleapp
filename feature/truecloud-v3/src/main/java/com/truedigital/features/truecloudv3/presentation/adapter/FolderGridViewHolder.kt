@@ -1,7 +1,7 @@
 package com.truedigital.features.truecloudv3.presentation.adapter
 
 import androidx.recyclerview.widget.RecyclerView
-import com.tdg.truecloud.databinding.TrueCloudv3ViewholderFolderItemGridBinding
+import com.truedigital.features.truecloudv3.databinding.TrueCloudv3ViewholderFolderItemGridBinding
 import com.truedigital.features.truecloudv3.domain.model.TrueCloudFilesModel
 import com.truedigital.foundation.extension.gone
 import com.truedigital.foundation.extension.onClick

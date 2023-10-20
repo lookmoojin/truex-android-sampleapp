@@ -5,7 +5,7 @@ import androidx.core.os.bundleOf
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.map
-import com.tdg.truecloud.R
+import com.truedigital.features.truecloudv3.R
 import com.truedigital.common.share.datalegacy.wrapper.ContextDataProviderWrapper
 import com.truedigital.core.base.ScopedViewModel
 import com.truedigital.core.coroutines.CoroutineDispatcherProvider

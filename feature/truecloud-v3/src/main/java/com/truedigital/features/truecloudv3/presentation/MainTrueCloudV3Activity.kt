@@ -2,7 +2,7 @@ package com.truedigital.features.truecloudv3.presentation
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import com.tdg.truecloud.R
+import com.truedigital.features.truecloudv3.R
 
 class MainTrueCloudV3Activity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {

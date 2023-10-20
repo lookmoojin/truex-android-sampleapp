@@ -1,8 +1,8 @@
 package com.truedigital.features.truecloudv3.presentation.adapter
 
 import androidx.recyclerview.widget.RecyclerView
-import com.tdg.truecloud.R
-import com.tdg.truecloud.databinding.TrueCloudv3ViewholderUploadHeaderBinding
+import com.truedigital.features.truecloudv3.R
+import com.truedigital.features.truecloudv3.databinding.TrueCloudv3ViewholderUploadHeaderBinding
 import com.truedigital.features.truecloudv3.domain.model.HeaderType
 import com.truedigital.foundation.extension.gone
 import com.truedigital.foundation.extension.onClick

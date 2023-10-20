@@ -11,7 +11,7 @@ import android.os.Bundle
 import androidx.core.app.ActivityCompat
 import androidx.core.app.NotificationCompat
 import androidx.core.app.NotificationManagerCompat
-import com.tdg.truecloud.R
+import com.truedigital.features.truecloudv3.R
 import com.truedigital.foundation.NotificationChannelInfo.Companion.TRUE_CLOUD_DOWNLOAD_CHANNEL_ID
 import com.truedigital.foundation.NotificationChannelInfo.Companion.TRUE_CLOUD_DOWNLOAD_CHANNEL_NAME
 import org.jetbrains.annotations.VisibleForTesting

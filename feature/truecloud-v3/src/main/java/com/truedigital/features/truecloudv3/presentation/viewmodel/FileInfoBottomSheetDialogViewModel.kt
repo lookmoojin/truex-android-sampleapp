@@ -1,7 +1,7 @@
 package com.truedigital.features.truecloudv3.presentation.viewmodel
 
 import androidx.exifinterface.media.ExifInterface
-import com.tdg.truecloud.R
+import com.truedigital.features.truecloudv3.R
 import com.truedigital.common.share.datalegacy.wrapper.ContextDataProviderWrapper
 import com.truedigital.core.base.ScopedViewModel
 import com.truedigital.core.coroutines.CoroutineDispatcherProvider

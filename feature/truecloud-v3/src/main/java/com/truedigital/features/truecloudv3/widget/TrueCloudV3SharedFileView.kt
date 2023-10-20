@@ -4,8 +4,8 @@ import android.content.Context
 import android.util.AttributeSet
 import android.view.LayoutInflater
 import android.widget.LinearLayout
-import com.tdg.truecloud.R
-import com.tdg.truecloud.databinding.TrueCloudv3SharedFileViewBinding
+import com.truedigital.features.truecloudv3.R
+import com.truedigital.features.truecloudv3.databinding.TrueCloudv3SharedFileViewBinding
 import com.truedigital.features.truecloudv3.domain.model.SharedFileModel
 import com.truedigital.foundation.extension.gone
 import com.truedigital.foundation.extension.loadWithImageCallback

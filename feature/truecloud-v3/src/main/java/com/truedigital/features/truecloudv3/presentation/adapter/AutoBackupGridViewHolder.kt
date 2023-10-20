@@ -3,8 +3,8 @@ package com.truedigital.features.truecloudv3.presentation.adapter
 import android.content.res.ColorStateList
 import androidx.core.content.ContextCompat
 import androidx.recyclerview.widget.RecyclerView
-import com.tdg.truecloud.R
-import com.tdg.truecloud.databinding.TrueCloudv3ViewholderUploadItemGridBinding
+import com.truedigital.features.truecloudv3.R
+import com.truedigital.features.truecloudv3.databinding.TrueCloudv3ViewholderUploadItemGridBinding
 import com.truedigital.features.truecloudv3.common.TaskStatusType
 import com.truedigital.features.truecloudv3.domain.model.TrueCloudFilesModel
 import com.truedigital.features.truecloudv3.extension.convertBackupToUpload

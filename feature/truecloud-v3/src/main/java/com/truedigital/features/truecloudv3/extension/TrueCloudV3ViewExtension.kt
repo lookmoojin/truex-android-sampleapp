@@ -14,7 +14,7 @@ import androidx.core.graphics.scale
 import androidx.core.view.children
 import androidx.core.view.isVisible
 import com.google.android.material.snackbar.Snackbar
-import com.tdg.truecloud.R
+import com.truedigital.features.truecloudv3.R
 import ja.burhanrashid52.photoeditor.DrawingView
 import ja.burhanrashid52.photoeditor.PhotoEditorView
 import kotlin.math.roundToInt
