@@ -33,6 +33,7 @@ import com.truedigital.common.share.datalegacy.di.feature.ContextModule
 import com.truedigital.common.share.datalegacy.di.feature.DataCommonModule
 import com.truedigital.common.share.datalegacy.di.feature.DeviceEntitlementModule
 import com.truedigital.common.share.datalegacy.di.feature.DeviceModule
+import com.truedigital.common.share.datalegacy.di.feature.FirebaseModule
 import com.truedigital.common.share.datalegacy.di.feature.LocationModule
 import com.truedigital.common.share.datalegacy.di.feature.LoginBindsModule
 import com.truedigital.common.share.datalegacy.di.feature.LoginModule
@@ -87,6 +88,7 @@ import javax.inject.Singleton
         DataCommonModule::class,
         DeviceEntitlementModule::class,
         DeviceModule::class,
+        FirebaseModule::class,
         InterceptorModule::class,
         LocationModule::class,
         LoginModule::class,
