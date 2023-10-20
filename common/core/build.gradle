@@ -506,7 +506,7 @@ android {
 dependencies {
 
     implementation playService.location
-    api playService.ads
+//    api playService.ads
 
     api project(':common:foundation')
 
