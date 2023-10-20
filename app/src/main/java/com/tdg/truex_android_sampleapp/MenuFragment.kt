@@ -7,6 +7,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import com.tdg.truex_android_sampleapp.databinding.FragmentMenuBinding
+import com.truedigital.features.truecloudv3.presentation.MainTrueCloudV3Activity
 
 class MenuFragment : Fragment() {
 
@@ -31,7 +32,8 @@ class MenuFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
         binding.trueCloudMenu.setOnClickListener {
-//            startActivity(Intent(this, MainTrueCloudV3Activity::class.java))
+            val intent = Intent(requireContext(), MainTrueCloudV3Activity::class.java)
+            startActivity(intent)
         }
     }
 }
