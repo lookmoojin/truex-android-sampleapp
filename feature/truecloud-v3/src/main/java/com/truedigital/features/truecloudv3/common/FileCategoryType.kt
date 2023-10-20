@@ -2,6 +2,7 @@ package com.truedigital.features.truecloudv3.common
 
 import androidx.annotation.DrawableRes
 import androidx.compose.ui.text.intl.Locale
+import androidx.compose.ui.text.toUpperCase
 import com.truedigital.features.truecloudv3.R
 
 enum class FileCategoryType(

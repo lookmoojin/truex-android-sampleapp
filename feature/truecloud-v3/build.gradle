@@ -6,6 +6,7 @@ plugins {
 apply {
     from("${project.rootDir}/gradle/sub-module.gradle")
     from("${project.rootDir}/gradle/dependencies.gradle")
+    from("${project.rootDir}/gradle/jetpack-compose.gradle")
 }
 android {
     namespace 'com.truedigital.features.truecloudv3'
