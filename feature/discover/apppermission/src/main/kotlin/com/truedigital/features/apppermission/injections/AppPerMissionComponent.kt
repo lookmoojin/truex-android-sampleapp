@@ -3,9 +3,6 @@ package com.truedigital.features.apppermission.injections
 import com.truedigital.common.share.analytics.injections.AnalyticsSubComponent
 import com.truedigital.core.injections.CoreSubComponent
 import com.truedigital.features.apppermission.di.AppPerMissionModule
-import com.truedigital.features.apppermission.di.AppPerMissionViewModelsModule
-import com.truedigital.features.apppermission.presenation.AppPermissionGuideFragment
-import com.truedigital.features.onboarding.injections.OnBoardingSubComponent
 import com.truedigital.share.data.firestoreconfig.injections.FirestoreConfigSubComponent
 import dagger.Component
 import javax.inject.Singleton
@@ -13,14 +10,12 @@ import javax.inject.Singleton
 @Singleton
 @Component(
     modules = [
-        AppPerMissionModule::class,
-        AppPerMissionViewModelsModule::class,
+        AppPerMissionModule::class
     ],
     dependencies = [
         AnalyticsSubComponent::class,
         CoreSubComponent::class,
-        FirestoreConfigSubComponent::class,
-        OnBoardingSubComponent::class
+        FirestoreConfigSubComponent::class
     ]
 )
 interface AppPerMissionComponent {
@@ -46,10 +41,7 @@ interface AppPerMissionComponent {
         fun create(
             analyticsSubComponent: AnalyticsSubComponent,
             coreSubComponent: CoreSubComponent,
-            firestoreConfigSubComponent: FirestoreConfigSubComponent,
-            onBoardingSubComponent: OnBoardingSubComponent
+            firestoreConfigSubComponent: FirestoreConfigSubComponent
         ): AppPerMissionComponent
     }
-
-    fun inject(fragment: AppPermissionGuideFragment)
 }

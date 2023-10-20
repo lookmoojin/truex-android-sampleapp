@@ -64,6 +64,7 @@ interface NavigationComponent {
             componentV3SubComponent: ComponentV3SubComponent,
             coreDataSubComponent: CoreDataSubComponent,
             coreSubComponent: CoreSubComponent,
+            dataLegacySubComponent: DataLegacySubComponent
         ): NavigationComponent
     }
 
