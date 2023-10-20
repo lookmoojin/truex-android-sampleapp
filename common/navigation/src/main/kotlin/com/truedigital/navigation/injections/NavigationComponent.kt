@@ -9,7 +9,6 @@ import com.truedigital.navigation.data.repository.router.NavigationRouterReposit
 import com.truedigital.navigation.deeplink.TrackFirebaseAnalyticsDeeplinkUseCase
 import com.truedigital.navigation.di.NavigationMainBindsModule
 import com.truedigital.navigation.di.NavigationMultiBindingModule
-import com.truedigital.navigation.di.NavigationProvidesModule
 import com.truedigital.navigation.di.NavigationRouterBindingModule
 import com.truedigital.navigation.di.NavigationRoutingBindsModule
 import com.truedigital.navigation.di.NavigationRoutingModule
@@ -26,7 +25,6 @@ import javax.inject.Singleton
 @Component(
     modules = [
         NavigationMainBindsModule::class,
-        NavigationProvidesModule::class,
         NavigationRouterBindingModule::class,
         NavigationRoutingModule::class,
         NavigationRoutingBindsModule::class,

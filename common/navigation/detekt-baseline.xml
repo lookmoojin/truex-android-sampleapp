@@ -6,7 +6,6 @@
     <ID>EmptyFunctionBlock:ShelfAdapter.kt$ShelfAdapter${}</ID>
     <ID>LongMethod:GetInterContentUseCase.kt$GetInterContentUseCaseImpl$private fun mapIntentContentToSkeleton(jsonArray: JsonArray): List&lt;ShelfSkeleton></ID>
     <ID>MagicNumber:TrackFirebaseAnalyticsDeeplinkUseCase.kt$TrackFirebaseAnalyticsDeeplinkUseCaseImpl$100</ID>
-    <ID>MaxLineLength:BaseInterViewModel.kt$BaseInterViewModel$if</ID>
     <ID>MaxLineLength:ShelfAdapter.kt$ShelfAdapter.&lt;no name provided>$if</ID>
     <ID>MaxLineLength:TrackFirebaseAnalyticsDeeplinkUseCase.kt$TrackFirebaseAnalyticsDeeplinkUseCaseImpl$MeasurementConstant.Key.KEY_ERROR_NAME to MeasurementConstant.Deeplink.Event.DEEPLINK_EVENT_DEEP_LINKING_ERROR</ID>
     <ID>MaxLineLength:TrackFirebaseAnalyticsDeeplinkUseCase.kt$TrackFirebaseAnalyticsDeeplinkUseCaseImpl$MeasurementConstant.Key.KEY_EVENT_NAME to MeasurementConstant.Deeplink.Event.DEEPLINK_EVENT_DEEP_LINKING_OPEN</ID>
