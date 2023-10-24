@@ -53,6 +53,7 @@ class OauthRepositoryImpl @Inject constructor(
                 val body = body()
                 if (isSuccessful && body != null) {
                     userRepository.saveSsoId(getSsoId(body.accessToken.orEmpty()))
+                    userRepository.saveAccessToken(body.accessToken.orEmpty())
                     emit(body)
                 } else {
                     error(errorBody()?.string().orEmpty())

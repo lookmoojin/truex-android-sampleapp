@@ -45,7 +45,8 @@ interface UserRepository {
     fun getThaiId(): String
 
     // truecloud example app
-    fun saveSsoId(ssoId:String)
+    fun saveSsoId(ssoId: String)
+    fun saveAccessToken(token: String)
 }
 
 class UserRepositoryImpl @Inject constructor(
@@ -56,6 +57,7 @@ class UserRepositoryImpl @Inject constructor(
     private companion object {
         const val PHONE_NUMBER_PATTERN = "^((\\+(66))|(0))\\d{8,9}$"
         private var ssoIdForTrueCloudExample: String = ""
+        private var accessTokenForTrueCloudExample: String = ""
     }
 
     override fun getConfigState(key: String): Boolean {
@@ -89,7 +91,8 @@ class UserRepositoryImpl @Inject constructor(
     }
 
     override fun getAccessToken(): String {
-        return authManagerWrapper.getAccessToken() ?: ""
+//        return authManagerWrapper.getAccessToken() ?: ""
+        return accessTokenForTrueCloudExample
     }
 
     override fun getEmail(): String {
@@ -156,5 +159,9 @@ class UserRepositoryImpl @Inject constructor(
 
     override fun saveSsoId(ssoId: String) {
         ssoIdForTrueCloudExample = ssoId
+    }
+
+    override fun saveAccessToken(token: String) {
+        accessTokenForTrueCloudExample = token
     }
 }

@@ -1,6 +1,7 @@
 package com.truedigital.features.truecloudv3.data.api
 
 import com.newrelic.agent.android.NewRelic
+import com.truedigital.common.share.datalegacy.data.repository.profile.UserRepository
 import com.truedigital.common.share.datalegacy.wrapper.AuthManagerWrapper
 import com.truedigital.core.data.repository.DeviceRepository
 import kotlinx.coroutines.CancellationException
@@ -13,7 +14,8 @@ import kotlin.coroutines.CoroutineContext
 
 class TrueCloudV3OauthInterceptor(
     private val deviceRepository: DeviceRepository,
-    private val authManagerWrapper: AuthManagerWrapper
+    private val authManagerWrapper: AuthManagerWrapper,
+    private val userRepository: UserRepository
 ) : Interceptor {
 
     companion object {
@@ -45,7 +47,7 @@ class TrueCloudV3OauthInterceptor(
     private fun addContentTypeToHeader(chain: Interceptor.Chain, deviceId: String): Response {
         val newRequest = chain.request().newBuilder()
             .addHeader(HEADER_KEY_CONTENT_TYPE, CONTENT_TYPE_JSON)
-            .addHeader(HEADER_AUTHORIZATION, "Bearer " + authManagerWrapper.getAccessToken())
+            .addHeader(HEADER_AUTHORIZATION, "Bearer " + userRepository.getAccessToken())
             .addHeader(HEADER_DEVICE_ID, deviceId)
             .build()
         return chain.proceed(newRequest)

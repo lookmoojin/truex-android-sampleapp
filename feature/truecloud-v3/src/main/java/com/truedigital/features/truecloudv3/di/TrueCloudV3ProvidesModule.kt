@@ -4,6 +4,7 @@ import com.google.gson.GsonBuilder
 import com.truedigital.common.share.datalegacy.data.api.ApiGsonBuilder
 import com.truedigital.common.share.datalegacy.data.api.di.DefaultOkHttp
 import com.truedigital.common.share.datalegacy.data.api.interceptor.ContentTypeInterceptor
+import com.truedigital.common.share.datalegacy.data.repository.profile.UserRepository
 import com.truedigital.common.share.datalegacy.domain.endpoint.usecase.GetApiConfigurationUseCase
 import com.truedigital.common.share.datalegacy.wrapper.AuthManagerWrapper
 import com.truedigital.core.api.di.ErrorHandlingAdapter
@@ -39,9 +40,10 @@ class TrueCloudV3ProvidesModule {
     @TrueCloudV3Interceptor
     fun providesTrueCloudV3OauthInterceptor(
         deviceRepository: DeviceRepository,
-        authManagerWrapper: AuthManagerWrapper
+        authManagerWrapper: AuthManagerWrapper,
+        userRepository: UserRepository
     ): Interceptor {
-        return TrueCloudV3OauthInterceptor(deviceRepository, authManagerWrapper)
+        return TrueCloudV3OauthInterceptor(deviceRepository, authManagerWrapper, userRepository)
     }
 
     @Provides
