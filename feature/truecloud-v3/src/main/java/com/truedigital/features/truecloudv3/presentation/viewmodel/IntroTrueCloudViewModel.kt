@@ -39,11 +39,13 @@ class IntroTrueCloudViewModel @Inject constructor(
     val onOpenMainTrueCloud: LiveData<Unit> = _onOpenMainTrueCloud
 
     fun checkAuthenticationState(isTablet: Boolean) {
-        if (loginManagerInterface.isLoggedIn()) {
-            router.execute(IntroTrueCloudToMain)
-        } else {
-            getIntroImage(isTablet)
-        }
+        router.execute(IntroTrueCloudToMain)
+        //TODO: reverse
+//        if (loginManagerInterface.isLoggedIn()) {
+//            router.execute(IntroTrueCloudToMain)
+//        } else {
+//            getIntroImage(isTablet)
+//        }
     }
 
     fun onClickCloseButton() {

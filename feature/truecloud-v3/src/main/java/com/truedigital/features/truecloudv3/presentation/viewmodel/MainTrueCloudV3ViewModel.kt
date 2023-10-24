@@ -238,15 +238,17 @@ class MainTrueCloudV3ViewModel @Inject constructor(
     }
 
     fun checkAuthenticationState() {
-        when {
-            trueCloudLoginManagerInterface.isLoggedIn() -> {
-                getStorage()
-            }
-
-            else -> {
-                openAuthenticationPage()
-            }
-        }
+        getStorage()
+        // TODO: reverse
+//        when {
+//            trueCloudLoginManagerInterface.isLoggedIn() -> {
+//                getStorage()
+//            }
+//
+//            else -> {
+//                openAuthenticationPage()
+//            }
+//        }
     }
 
     fun checkRetryState(action: String) {

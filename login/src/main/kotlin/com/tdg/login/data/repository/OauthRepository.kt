@@ -9,38 +9,35 @@ import com.tdg.login.base.fromJson
 import com.tdg.login.data.model.OauthRequest
 import com.tdg.login.data.model.OauthResponse
 import com.tdg.login.data.model.PayloadResponse
+import com.truedigital.common.share.datalegacy.data.repository.profile.UserRepository
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.flow
-import okhttp3.MediaType
-import okhttp3.RequestBody
+import okhttp3.MediaType.Companion.toMediaTypeOrNull
+import okhttp3.RequestBody.Companion.toRequestBody
 import javax.inject.Inject
 
 interface OauthRepository {
     fun login(request: OauthRequest): Flow<OauthResponse>
-    fun getSsoId(): String
 }
 
 class OauthRepositoryImpl @Inject constructor(
-    private val apiInterface: OauthApiInterface
+    private val apiInterface: OauthApiInterface,
+    private val userRepository: UserRepository
 ) : OauthRepository {
-
-    companion object {
-        private var accessToken: String = ""
-    }
 
     override fun login(request: OauthRequest): Flow<OauthResponse> {
         return flow {
-            val clientId = RequestBody.create(MediaType.parse("text/plain"), request.clientId)
+            val clientId = request.clientId.toRequestBody("text/plain".toMediaTypeOrNull())
             val clientSecret =
-                RequestBody.create(MediaType.parse("text/plain"), request.clientSecret)
-            val username = RequestBody.create(MediaType.parse("text/plain"), request.username)
-            val password = RequestBody.create(MediaType.parse("text/plain"), request.password)
-            val grantType = RequestBody.create(MediaType.parse("text/plain"), request.grantType)
-            val scope = RequestBody.create(MediaType.parse("text/plain"), request.scope)
-            val deviceId = RequestBody.create(MediaType.parse("text/plain"), request.deviceId)
-            val deviceModel = RequestBody.create(MediaType.parse("text/plain"), request.deviceModel)
-            val latlong = RequestBody.create(MediaType.parse("text/plain"), request.latlong)
-            val ipAddress = RequestBody.create(MediaType.parse("text/plain"), request.ipAddress)
+                request.clientSecret.toRequestBody("text/plain".toMediaTypeOrNull())
+            val username = request.username.toRequestBody("text/plain".toMediaTypeOrNull())
+            val password = request.password.toRequestBody("text/plain".toMediaTypeOrNull())
+            val grantType = request.grantType.toRequestBody("text/plain".toMediaTypeOrNull())
+            val scope = request.scope.toRequestBody("text/plain".toMediaTypeOrNull())
+            val deviceId = request.deviceId.toRequestBody("text/plain".toMediaTypeOrNull())
+            val deviceModel = request.deviceModel.toRequestBody("text/plain".toMediaTypeOrNull())
+            val latlong = request.latlong.toRequestBody("text/plain".toMediaTypeOrNull())
+            val ipAddress = request.ipAddress.toRequestBody("text/plain".toMediaTypeOrNull())
             apiInterface.login(
                 clientId,
                 clientSecret,
@@ -55,7 +52,7 @@ class OauthRepositoryImpl @Inject constructor(
             ).run {
                 val body = body()
                 if (isSuccessful && body != null) {
-                    accessToken = body.accessToken.orEmpty()
+                    userRepository.saveSsoId(getSsoId(body.accessToken.orEmpty()))
                     emit(body)
                 } else {
                     error(errorBody()?.string().orEmpty())
@@ -65,7 +62,7 @@ class OauthRepositoryImpl @Inject constructor(
     }
 
     @RequiresApi(Build.VERSION_CODES.FROYO)
-    override fun getSsoId(): String {
+    fun getSsoId(accessToken: String): String {
         val payloadJson = decodeJwtPayload(accessToken)
         val payload = Gson().fromJson<PayloadResponse>(payloadJson)
         return payload.sub.orEmpty()

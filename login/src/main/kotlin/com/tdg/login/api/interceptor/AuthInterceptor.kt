@@ -11,7 +11,7 @@ class AuthInterceptor @Inject constructor(
 ) : Interceptor {
 
     override fun intercept(chain: Interceptor.Chain): Response {
-        val url = chain.request().url().toString()
+        val url = chain.request().url.toString()
         val domain = authDomainUseCase.execute()
         val customRequest = chain.request().newBuilder()
             .url(url.replace(PREPROD, domain))

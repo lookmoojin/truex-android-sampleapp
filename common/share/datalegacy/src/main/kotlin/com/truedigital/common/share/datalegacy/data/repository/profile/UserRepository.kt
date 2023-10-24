@@ -43,6 +43,9 @@ interface UserRepository {
     // true you
     fun setThaiId(thaiId: String?)
     fun getThaiId(): String
+
+    // truecloud example app
+    fun saveSsoId(ssoId:String)
 }
 
 class UserRepositoryImpl @Inject constructor(
@@ -52,6 +55,7 @@ class UserRepositoryImpl @Inject constructor(
 
     private companion object {
         const val PHONE_NUMBER_PATTERN = "^((\\+(66))|(0))\\d{8,9}$"
+        private var ssoIdForTrueCloudExample: String = ""
     }
 
     override fun getConfigState(key: String): Boolean {
@@ -109,7 +113,8 @@ class UserRepositoryImpl @Inject constructor(
     }
 
     override fun getSsoId(): String {
-        return getProfile()?.payload?.sub ?: ""
+//        return getProfile()?.payload?.sub ?: ""
+        return ssoIdForTrueCloudExample
     }
 
     override fun getSsoThaiId(): String {
@@ -147,5 +152,9 @@ class UserRepositoryImpl @Inject constructor(
 
     override fun getThaiId(): String {
         return sharedPrefsUtils.get(SharedPrefsKeyConstant.TRUE_POINT_THAI_ID, "")
+    }
+
+    override fun saveSsoId(ssoId: String) {
+        ssoIdForTrueCloudExample = ssoId
     }
 }

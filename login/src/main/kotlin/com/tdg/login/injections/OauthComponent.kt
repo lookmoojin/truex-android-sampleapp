@@ -6,6 +6,8 @@ import com.tdg.login.di.OauthApiModule
 import com.tdg.login.di.OauthBaseModule
 import com.tdg.login.di.OauthModule
 import com.tdg.login.domain.usecase.LoginUseCase
+import com.truedigital.common.share.datalegacy.injections.DataLegacySubComponent
+import com.truedigital.core.injections.CoreSubComponent
 import dagger.Component
 import dagger.Subcomponent
 import javax.inject.Singleton
@@ -17,6 +19,10 @@ import javax.inject.Singleton
         OauthApiModule::class,
         OauthBaseModule::class,
         OauthModule::class
+    ],
+    dependencies = [
+        CoreSubComponent::class,
+        DataLegacySubComponent::class
     ]
 )
 interface OauthComponent {
@@ -38,7 +44,10 @@ interface OauthComponent {
 
     @Component.Factory
     interface Factory {
-        fun create(): OauthComponent
+        fun create(
+            coreSubComponent: CoreSubComponent,
+            dataLegacySubComponent: DataLegacySubComponent
+        ): OauthComponent
     }
 
     fun getLoginComponent(): LoginComponent

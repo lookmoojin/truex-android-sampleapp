@@ -185,15 +185,17 @@ class SharedFileViewerViewModel @Inject constructor(
     }
 
     fun checkAuthenticationState() {
-        when {
-            trueCloudLoginManagerInterface.isLoggedIn() -> {
-                getStorage()
-            }
-
-            else -> {
-                openAuthenticationPage()
-            }
-        }
+        getStorage()
+        //TODO: reverse
+//        when {
+//            trueCloudLoginManagerInterface.isLoggedIn() -> {
+//                getStorage()
+//            }
+//
+//            else -> {
+//                openAuthenticationPage()
+//            }
+//        }
     }
 
     fun getStorage() {
