@@ -35,6 +35,13 @@ import javax.inject.Singleton
 @Module
 class TrueCloudV3ProvidesModule {
 
+    companion object {
+        private const val PREPROD_BASE_URL_TRUE_CLOUD = "https://drive-customer-api-alpha.trueid-preprod.net/drive/"
+        private const val PROD_BASE_URL_TRUE_CLOUD = "https://drive-customer-api.trueid.net/drive/"
+        private const val PREPROD_BASE_URL_PUBLIC = "https://cloudshare.trueid-alpha.net/public-api/"
+        private const val PROD_BASE_URL_PUBLIC = "https://cloudshare.trueid.net/public-api/"
+    }
+
     @Provides
     @Singleton
     @TrueCloudV3Interceptor
@@ -59,7 +66,7 @@ class TrueCloudV3ProvidesModule {
     }
 
     @Provides
-    @Singleton
+//    @Singleton
     fun providesTrueCloudV3Interface(
         @TrueCloudV3HttpClient okHttpClient: OkHttpClient,
         @GsonConverter gsonConverterFactory: Converter.Factory,
@@ -70,8 +77,13 @@ class TrueCloudV3ProvidesModule {
     ): TrueCloudV3Interface {
         val gson = GsonBuilder().serializeNulls().create()
         val converter = GsonConverterFactory.create(gson)
-        val baseUrl = getApiConfigurationUseCase.getServiceUrl(true, BASE_URL_KEY)
-            .takeIf { it.isNotEmpty() } ?: BuildConfig.BASE_URL_TRUE_CLOUD
+        val baseUrl = if (getApiConfigurationUseCase.getEnvPreprod()) {
+            PREPROD_BASE_URL_TRUE_CLOUD
+        } else {
+            PROD_BASE_URL_TRUE_CLOUD
+        }
+//        val baseUrl = getApiConfigurationUseCase.getServiceUrl(true, BASE_URL_KEY)
+//            .takeIf { it.isNotEmpty() } ?: BuildConfig.BASE_URL_TRUE_CLOUD
         return ApiGsonBuilder(
             okHttpClient = okHttpClient,
             gsonConverterFactory = converter,
@@ -82,7 +94,7 @@ class TrueCloudV3ProvidesModule {
     }
 
     @Provides
-    @Singleton
+//    @Singleton
     fun providesTrueCloudV3UploadInterface(
         @TrueCloudV3HttpClient okHttpClient: OkHttpClient,
         @GsonConverter gsonConverterFactory: Converter.Factory,
@@ -91,8 +103,13 @@ class TrueCloudV3ProvidesModule {
         @RxErrorHandlingAdapter rxErrorHandlingAdapterFactory: CallAdapter.Factory,
         getApiConfigurationUseCase: GetApiConfigurationUseCase
     ): TrueCloudV3UploadInterface {
-        val baseUrl = getApiConfigurationUseCase.getServiceUrl(true, BASE_URL_KEY)
-            .takeIf { it.isNotEmpty() } ?: BuildConfig.BASE_URL_TRUE_CLOUD
+        val baseUrl = if (getApiConfigurationUseCase.getEnvPreprod()) {
+            PREPROD_BASE_URL_TRUE_CLOUD
+        } else {
+            PROD_BASE_URL_TRUE_CLOUD
+        }
+//        val baseUrl = getApiConfigurationUseCase.getServiceUrl(true, BASE_URL_KEY)
+//            .takeIf { it.isNotEmpty() } ?: BuildConfig.BASE_URL_TRUE_CLOUD
         return ApiGsonBuilder(
             okHttpClient = okHttpClient,
             gsonConverterFactory = gsonConverterFactory,
@@ -103,7 +120,7 @@ class TrueCloudV3ProvidesModule {
     }
 
     @Provides
-    @Singleton
+//    @Singleton
     fun providesTrueCloudV3DownloadInterface(
         @TrueCloudV3HttpClient okHttpClient: OkHttpClient,
         @GsonConverter gsonConverterFactory: Converter.Factory,
@@ -112,8 +129,13 @@ class TrueCloudV3ProvidesModule {
         @RxErrorHandlingAdapter rxErrorHandlingAdapterFactory: CallAdapter.Factory,
         getApiConfigurationUseCase: GetApiConfigurationUseCase
     ): TrueCloudV3DownloadInterface {
-        val baseUrl = getApiConfigurationUseCase.getServiceUrl(true, BASE_URL_KEY)
-            .takeIf { it.isNotEmpty() } ?: BuildConfig.BASE_URL_TRUE_CLOUD
+        val baseUrl = if (getApiConfigurationUseCase.getEnvPreprod()) {
+            PREPROD_BASE_URL_TRUE_CLOUD
+        } else {
+            PROD_BASE_URL_TRUE_CLOUD
+        }
+//        val baseUrl = getApiConfigurationUseCase.getServiceUrl(true, BASE_URL_KEY)
+//            .takeIf { it.isNotEmpty() } ?: BuildConfig.BASE_URL_TRUE_CLOUD
         return ApiGsonBuilder(
             okHttpClient = okHttpClient,
             gsonConverterFactory = gsonConverterFactory,
@@ -124,7 +146,7 @@ class TrueCloudV3ProvidesModule {
     }
 
     @Provides
-    @Singleton
+//    @Singleton
     fun providesTrueCloudV3GetSharedFileInterface(
         @DefaultOkHttp okHttpClient: OkHttpClient,
         @GsonConverter gsonConverterFactory: Converter.Factory,
@@ -133,8 +155,13 @@ class TrueCloudV3ProvidesModule {
         @RxErrorHandlingAdapter rxErrorHandlingAdapterFactory: CallAdapter.Factory,
         getApiConfigurationUseCase: GetApiConfigurationUseCase
     ): TrueCloudV3GetSharedFileInterface {
-        val baseUrl = getApiConfigurationUseCase.getServiceUrl(true, BASE_PUBLIC_URL_KEY)
-            .takeIf { it.isNotEmpty() } ?: BuildConfig.BASE_URL_PUBLIC
+        val baseUrl = if (getApiConfigurationUseCase.getEnvPreprod()) {
+            PREPROD_BASE_URL_PUBLIC
+        } else {
+            PROD_BASE_URL_PUBLIC
+        }
+//        val baseUrl = getApiConfigurationUseCase.getServiceUrl(true, BASE_PUBLIC_URL_KEY)
+//            .takeIf { it.isNotEmpty() } ?: BuildConfig.BASE_URL_PUBLIC
         return ApiGsonBuilder(
             okHttpClient = okHttpClient.newBuilder()
                 .addInterceptor(ContentTypeInterceptor(ContentTypeInterceptor.CONTENT_TYPE_JSON))
@@ -147,7 +174,7 @@ class TrueCloudV3ProvidesModule {
     }
 
     @Provides
-    @Singleton
+//    @Singleton
     fun providesTrueCloudV3SearchFileInterface(
         @TrueCloudV3HttpClient okHttpClient: OkHttpClient,
         @GsonConverter gsonConverterFactory: Converter.Factory,
@@ -156,8 +183,13 @@ class TrueCloudV3ProvidesModule {
         @RxErrorHandlingAdapter rxErrorHandlingAdapterFactory: CallAdapter.Factory,
         getApiConfigurationUseCase: GetApiConfigurationUseCase
     ): TrueCloudV3SearchFileInterface {
-        val baseUrl = getApiConfigurationUseCase.getServiceUrl(true, BASE_URL_KEY)
-            .takeIf { it.isNotEmpty() } ?: BuildConfig.BASE_URL_TRUE_CLOUD
+        val baseUrl = if (getApiConfigurationUseCase.getEnvPreprod()) {
+            PREPROD_BASE_URL_TRUE_CLOUD
+        } else {
+            PROD_BASE_URL_TRUE_CLOUD
+        }
+//        val baseUrl = getApiConfigurationUseCase.getServiceUrl(true, BASE_URL_KEY)
+//            .takeIf { it.isNotEmpty() } ?: BuildConfig.BASE_URL_TRUE_CLOUD
         return ApiGsonBuilder(
             okHttpClient = okHttpClient,
             gsonConverterFactory = gsonConverterFactory,

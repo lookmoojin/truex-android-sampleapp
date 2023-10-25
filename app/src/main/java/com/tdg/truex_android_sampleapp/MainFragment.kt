@@ -43,7 +43,6 @@ class MainFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
         initView()
         viewModelObserve()
-        preprodState()
     }
 
     private fun viewModelObserve() = with(mainViewModel) {
@@ -52,6 +51,13 @@ class MainFragment : Fragment() {
         }
         onLoginFailed.observe(viewLifecycleOwner) {
             binding.responseTextView.text = it
+        }
+        onLoginFinish.observe(viewLifecycleOwner) {
+            binding.responseTextView.text = it
+        }
+        onPreprodState.observe(viewLifecycleOwner) {
+            binding.preprodButton.isSelected = it
+            binding.prodButton.isSelected = !it
         }
     }
 
@@ -65,6 +71,11 @@ class MainFragment : Fragment() {
         }
 
         loginButton.setOnClickListener {
+            if (preprodButton.isSelected == prodButton.isSelected) {
+                Toast.makeText(context, "Please, select 'Preprod' or 'Prod'", Toast.LENGTH_SHORT)
+                    .show()
+                return@setOnClickListener
+            }
             mainViewModel.login(
                 usernameEditText.text.toString(),
                 passwordEditText.text.toString(),
@@ -91,15 +102,13 @@ class MainFragment : Fragment() {
     }
 
     private fun preprodState() = with(binding) {
-        preprodButton.isSelected = true
-        prodButton.isSelected = false
+        mainViewModel.savePreprodState(true)
         usernameEditText.setText("0620922456")
         passwordEditText.setText("TestPass01")
     }
 
     private fun prodState() = with(binding) {
-        preprodButton.isSelected = false
-        prodButton.isSelected = true
+        mainViewModel.savePreprodState(false)
         usernameEditText.setText("")
         passwordEditText.setText("")
     }

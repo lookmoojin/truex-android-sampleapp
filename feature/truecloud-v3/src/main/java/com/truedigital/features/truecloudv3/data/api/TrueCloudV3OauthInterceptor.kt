@@ -48,6 +48,8 @@ class TrueCloudV3OauthInterceptor(
         val newRequest = chain.request().newBuilder()
             .addHeader(HEADER_KEY_CONTENT_TYPE, CONTENT_TYPE_JSON)
             .addHeader(HEADER_AUTHORIZATION, "Bearer " + userRepository.getAccessToken())
+            // TODO: reverse
+//            .addHeader(HEADER_AUTHORIZATION, "Bearer " + authManagerWrapper.getAccessToken())
             .addHeader(HEADER_DEVICE_ID, deviceId)
             .build()
         return chain.proceed(newRequest)

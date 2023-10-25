@@ -14,12 +14,25 @@ interface GetApiConfigurationUseCase {
     fun hasApiConfiguration(serviceName: String): Boolean
 
     fun isApiSupportJwt(serviceName: String): Boolean
+
+    fun saveEnvPreprod(isPreProd: Boolean)
+    fun getEnvPreprod():Boolean
 }
 
 class GetApiConfigurationUseCaseImpl @Inject constructor(
     private val apiConfigurationRepository: DomainRepository,
     private val loginManagerInterface: LoginManagerInterface
 ) : GetApiConfigurationUseCase {
+
+    companion object {
+        var PREPROD_STATE = true
+    }
+
+    override fun saveEnvPreprod(isPreProd: Boolean) {
+        PREPROD_STATE = isPreProd
+    }
+
+    override fun getEnvPreprod(): Boolean = PREPROD_STATE
 
     override fun hasApiConfiguration(serviceName: String): Boolean {
         val apiServiceData = apiConfigurationRepository.getApiServiceData(serviceName)

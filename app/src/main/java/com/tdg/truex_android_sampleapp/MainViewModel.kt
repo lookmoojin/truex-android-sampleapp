@@ -25,16 +25,28 @@ class MainViewModel @Inject constructor(
     val onLoginFailed: LiveData<String>
         get() = _onLoginFailed
 
+    private val _onLoginFinish = MutableLiveData<String>()
+    val onLoginFinish: LiveData<String>
+        get() = _onLoginFinish
+
+    private val _onPreprodState = MutableLiveData<Boolean>()
+    val onPreprodState: LiveData<Boolean>
+        get() = _onPreprodState
+
     fun login(username: String, password: String, isPreProd: Boolean) {
         viewModelScope.launchSafe {
             loginUseCase.execute(username, password, isPreProd)
                 .flowOn(coroutineDispatcher.io())
                 .catch { error ->
-                    _onLoginFailed.value = error.message
+                    _onLoginFinish.value = error.message
                 }
                 .collectSafe {
-                    _onLoginSuccess.value = it
+                    _onLoginFinish.value = it
                 }
         }
+    }
+
+    fun savePreprodState(isPreprod : Boolean) {
+        _onPreprodState.value = isPreprod
     }
 }

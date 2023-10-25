@@ -1,5 +1,6 @@
 package com.tdg.login.domain.usecase
 
+import com.truedigital.common.share.datalegacy.domain.endpoint.usecase.GetApiConfigurationUseCase
 import javax.inject.Inject
 
 interface AuthDomainUseCase {
@@ -7,7 +8,9 @@ interface AuthDomainUseCase {
     fun execute(): String
 }
 
-class AuthDomainUseCaseImpl @Inject constructor() : AuthDomainUseCase {
+class AuthDomainUseCaseImpl @Inject constructor(
+    private val getApiConfigurationUseCase: GetApiConfigurationUseCase
+) : AuthDomainUseCase {
 
     companion object {
         var PREPROD_STATE = true
@@ -16,6 +19,7 @@ class AuthDomainUseCaseImpl @Inject constructor() : AuthDomainUseCase {
     }
 
     override fun save(isPreProd: Boolean) {
+        getApiConfigurationUseCase.saveEnvPreprod(isPreProd)
         PREPROD_STATE = isPreProd
     }
 
