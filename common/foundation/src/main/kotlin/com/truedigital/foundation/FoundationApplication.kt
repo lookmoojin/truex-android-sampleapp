@@ -18,6 +18,7 @@ import androidx.work.Configuration
 import com.microsoft.appcenter.AppCenter
 import com.microsoft.appcenter.analytics.Analytics
 import com.microsoft.appcenter.crashes.Crashes
+import com.microsoft.appcenter.distribute.Distribute
 import com.newrelic.agent.android.NewRelic
 import com.truedigital.foundation.injections.DaggerFoundationComponent
 import com.truedigital.foundation.injections.FoundationComponent
@@ -71,7 +72,8 @@ open class FoundationApplication : MultiDexApplication(), Configuration.Provider
             this,
             "ffbc56c6-b5ab-4391-bf2b-b422d861c1fb",
             Analytics::class.java,
-            Crashes::class.java
+            Crashes::class.java,
+            Distribute::class.java
         )
         try {
             createNotificationChannels()
