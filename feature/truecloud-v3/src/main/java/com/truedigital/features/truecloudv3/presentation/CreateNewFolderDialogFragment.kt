@@ -5,18 +5,18 @@ import android.os.Bundle
 import android.view.View
 import androidx.fragment.app.DialogFragment
 import androidx.navigation.fragment.findNavController
-import com.truedigital.features.truecloudv3.R
-import com.truedigital.features.truecloudv3.databinding.FragmentTrueCloudv3AddNewFolderBinding
 import com.truedigital.common.share.componentv3.extension.setSavedStateHandle
 import com.truedigital.core.extensions.viewBinding
+import com.truedigital.features.truecloudv3.R
 import com.truedigital.features.truecloudv3.common.TrueCloudV3SaveStateKey
+import com.truedigital.features.truecloudv3.databinding.FragmentTrueCloudv3AddNewFolderBinding
 import com.truedigital.foundation.extension.onClick
 
 class CreateNewFolderDialogFragment :
     DialogFragment(R.layout.fragment_true_cloudv3_add_new_folder) {
 
     init {
-        setStyle(STYLE_NORMAL, R.style.FullNoBackgroundDialog)
+        setStyle(STYLE_NORMAL, com.truedigital.common.share.componentv3.R.style.FullNoBackgroundDialog)
     }
 
     private val binding by viewBinding(FragmentTrueCloudv3AddNewFolderBinding::bind)

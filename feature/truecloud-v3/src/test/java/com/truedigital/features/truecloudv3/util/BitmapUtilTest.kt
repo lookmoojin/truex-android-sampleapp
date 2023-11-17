@@ -3,6 +3,7 @@ package com.truedigital.features.truecloudv3.util
 import android.graphics.Bitmap
 import android.media.ThumbnailUtils
 import android.os.Build
+import com.truedigital.share.mock.utils.BuildUtils
 import io.mockk.coEvery
 import io.mockk.every
 import io.mockk.mockk
@@ -11,8 +12,6 @@ import io.mockk.mockkStatic
 import org.junit.jupiter.api.BeforeEach
 import org.junit.jupiter.api.Test
 import java.io.File
-import java.lang.reflect.Field
-import java.lang.reflect.Modifier
 import kotlin.test.assertEquals
 
 class BitmapUtilTest {
@@ -29,7 +28,7 @@ class BitmapUtilTest {
     @Test
     fun testGetImageThumbnail() {
         // arrange
-        setFinalStatic(Build.VERSION::class.java.getField("SDK_INT"), 29)
+        BuildUtils.setFinalStatic(Build.VERSION::class.java.getField("SDK_INT"), 29)
         val mockFile = mockk<File>()
         val bitmap = mockkClass(Bitmap::class)
         mockkStatic(ThumbnailUtils::class)
@@ -62,7 +61,7 @@ class BitmapUtilTest {
     @Test
     fun testGetVideoThumbnail() {
         // arrange
-        setFinalStatic(Build.VERSION::class.java.getField("SDK_INT"), 29)
+        BuildUtils.setFinalStatic(Build.VERSION::class.java.getField("SDK_INT"), 29)
         val mockFile = mockk<File>()
         val bitmap = mockkClass(Bitmap::class)
         mockkStatic(ThumbnailUtils::class)
@@ -90,14 +89,5 @@ class BitmapUtilTest {
 
         // assert
         assertEquals(bitmap, response)
-    }
-
-    @Throws(Exception::class)
-    private fun setFinalStatic(field: Field, newValue: Any?) {
-        field.isAccessible = true
-        val modifiersField: Field = Field::class.java.getDeclaredField("modifiers")
-        modifiersField.isAccessible = true
-        modifiersField.setInt(field, field.modifiers and Modifier.FINAL.inv())
-        field.set(null, newValue)
     }
 }

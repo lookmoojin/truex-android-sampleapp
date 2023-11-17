@@ -37,7 +37,7 @@
         android:id="@+id/trueCloudFilesRecyclerView"
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_marginBottom="@dimen/dp_32"
+        android:layout_marginBottom="@dimen/true_cloudv3_spacing_2m"
         app:layout_constraintBottom_toTopOf="@+id/tureCloudButtonContainer"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

@@ -45,7 +45,7 @@ class TrueCloudV3GetUploadTaskUseCaseTest {
             updateAt = 0L
         )
         coEvery {
-            cacheUploadTaskRepository.getTasks()
+            cacheUploadTaskRepository.getRefreshTasks()
         } returns flow {
             mutableListOf(expectResponse)
         }

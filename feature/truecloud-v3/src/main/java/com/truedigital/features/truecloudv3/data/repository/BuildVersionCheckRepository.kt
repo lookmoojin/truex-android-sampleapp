@@ -10,6 +10,6 @@ interface BuildVersionCheckRepository {
 class BuildVersionCheckRepositoryImpl : BuildVersionCheckRepository {
     @ChecksSdkIntAtLeast(api = Build.VERSION_CODES.O_MR1)
     override fun isGreaterOrEqualVersionSdk27(): Boolean {
-        return true
+        return Build.VERSION.SDK_INT >= Build.VERSION_CODES.O_MR1
     }
 }

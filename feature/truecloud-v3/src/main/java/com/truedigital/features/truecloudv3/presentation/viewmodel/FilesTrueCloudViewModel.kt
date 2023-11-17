@@ -60,6 +60,7 @@ import com.truedigital.features.truecloudv3.data.worker.TrueCloudV3DownloadWorke
 import com.truedigital.features.truecloudv3.data.worker.TrueCloudV3DownloadWorker.Companion.PATH
 import com.truedigital.features.truecloudv3.domain.model.DetailDialogModel
 import com.truedigital.features.truecloudv3.domain.model.HeaderType
+import com.truedigital.features.truecloudv3.domain.model.TaskUploadModel
 import com.truedigital.features.truecloudv3.domain.model.TrueCloudFilesModel
 import com.truedigital.features.truecloudv3.domain.model.TrueCloudV3Model
 import com.truedigital.features.truecloudv3.domain.model.TrueCloudV3TransferObserver
@@ -70,7 +71,6 @@ import com.truedigital.features.truecloudv3.domain.usecase.DeleteTrashDataUseCas
 import com.truedigital.features.truecloudv3.domain.usecase.DownloadCoverImageUseCase
 import com.truedigital.features.truecloudv3.domain.usecase.EmptyTrashDataUseCase
 import com.truedigital.features.truecloudv3.domain.usecase.FileLocatorUseCase
-import com.truedigital.features.truecloudv3.domain.usecase.GetNewUploadTaskListUseCase
 import com.truedigital.features.truecloudv3.domain.usecase.GetStorageListUseCase
 import com.truedigital.features.truecloudv3.domain.usecase.GetStorageListWithCategoryUseCase
 import com.truedigital.features.truecloudv3.domain.usecase.GetTrashListUseCase
@@ -88,6 +88,7 @@ import com.truedigital.features.truecloudv3.domain.usecase.SearchWithCategoryUse
 import com.truedigital.features.truecloudv3.domain.usecase.UpdateTaskUploadStatusUseCase
 import com.truedigital.features.truecloudv3.domain.usecase.UploadFileUseCase
 import com.truedigital.features.truecloudv3.domain.usecase.UploadFileWithPathUseCase
+import com.truedigital.features.truecloudv3.domain.usecase.UploadQueueUseCase
 import com.truedigital.features.truecloudv3.extension.convertBackupToUpload
 import com.truedigital.features.truecloudv3.extension.convertFileToFolder
 import com.truedigital.features.truecloudv3.extension.convertFolderToFileModel
@@ -126,8 +127,8 @@ class FilesTrueCloudViewModel @Inject constructor(
     private val getStorageListUseCase: GetStorageListUseCase,
     private val getStorageListWithCategoryUseCase: GetStorageListWithCategoryUseCase,
     private val getUploadTaskListUseCase: GetUploadTaskListUseCase,
-    private val getNewUploadTaskListUseCase: GetNewUploadTaskListUseCase,
     private val getUploadTaskUseCase: GetUploadTaskUseCase,
+    private val uploadQueueUseCase: UploadQueueUseCase,
     private val uploadFileUseCase: UploadFileUseCase,
     private val uploadFileWithPathUseCase: UploadFileWithPathUseCase,
     private val removeTaskUseCase: RemoveTaskUseCase,
@@ -503,7 +504,7 @@ class FilesTrueCloudViewModel @Inject constructor(
         }
         analyticManagerInterface.trackEvent(
             hashMapOf(
-                MeasurementConstant.Key.KEY_LINK_TYPE to TrueCloudV3TrackAnalytic.EVENT_CLICK,
+                MeasurementConstant.Key.KEY_EVENT_NAME to TrueCloudV3TrackAnalytic.EVENT_CLICK,
                 MeasurementConstant.Key.KEY_LINK_TYPE to TrueCloudV3TrackAnalytic.LINK_TYPE_BOTTOM_SHEET,
                 MeasurementConstant.Key.KEY_LINK_DESC to TrueCloudV3TrackAnalytic.LINK_DESC_SELECT
             )
@@ -683,6 +684,7 @@ class FilesTrueCloudViewModel @Inject constructor(
                 taskUploadModel.id,
                 TaskStatusType.PAUSE
             )
+            refreshTask()
         }
     }
 
@@ -693,6 +695,7 @@ class FilesTrueCloudViewModel @Inject constructor(
         )
         flow {
             removeTaskUseCase.execute(taskUploadModel.id)
+            refreshTask()
             emit(Unit)
         }
             .flowOn(coroutineDispatcher.io())
@@ -713,6 +716,7 @@ class FilesTrueCloudViewModel @Inject constructor(
             )
         flow {
             removeAllTaskUseCase.execute()
+            refreshTask()
             emit(Unit)
         }
             .flowOn(coroutineDispatcher.io())
@@ -761,38 +765,49 @@ class FilesTrueCloudViewModel @Inject constructor(
     }
 
     fun onClickRetry(taskUploadModel: TrueCloudFilesModel.Upload) {
-        when (taskUploadModel.status) {
-            TaskStatusType.PAUSE -> {
-                if (
-                    taskUploadModel.actionType == TaskActionType.UPLOAD ||
-                    taskUploadModel.actionType == TaskActionType.AUTO_BACKUP
-                ) {
-                    trueCloudV3TransferUtilityProvider.resumeTransferById(
+        val taskData = trueCloudV3TransferUtilityProvider.getTrueCloudV3TransferObserverById(
+            contextDataProviderWrapper.get().getDataContext(),
+            taskUploadModel.id
+        )
+        if (taskData != null) {
+            when (taskUploadModel.status) {
+                TaskStatusType.PAUSE -> {
+                    if (
+                        taskUploadModel.actionType == TaskActionType.UPLOAD ||
+                        taskUploadModel.actionType == TaskActionType.AUTO_BACKUP
+                    ) {
+                        trueCloudV3TransferUtilityProvider.resumeTransferById(
+                            contextDataProviderWrapper.get().getDataContext(),
+                            taskUploadModel.id
+                        )?.setTransferListener(transferlistener)
+                    }
+                    launchSafe {
+                        updateTaskUploadStatusUseCase.execute(
+                            taskUploadModel.id,
+                            TaskStatusType.IN_PROGRESS
+                        )
+                        refreshTask()
+                    }
+                }
+
+                TaskStatusType.COMPLETE_API_FAILED -> {
+                    completeUpload(taskUploadModel.id)
+                }
+
+                else -> {
+                    trueCloudV3TransferUtilityProvider.cancelTransferById(
                         contextDataProviderWrapper.get().getDataContext(),
                         taskUploadModel.id
-                    )?.setTransferListener(transferlistener)
-                }
-                launchSafe {
-                    updateTaskUploadStatusUseCase.execute(
-                        taskUploadModel.id,
-                        TaskStatusType.IN_PROGRESS
                     )
+                    taskUploadModel.objectId?.let {
+                        retryUpload(it)
+                    } ?: uploadWithPath(taskUploadModel.path)
                 }
             }
-
-            TaskStatusType.COMPLETE_API_FAILED -> {
-                completeUpload(taskUploadModel.id)
-            }
-
-            else -> {
-                trueCloudV3TransferUtilityProvider.cancelTransferById(
-                    contextDataProviderWrapper.get().getDataContext(),
-                    taskUploadModel.id
-                )
-                taskUploadModel.objectId?.let {
-                    retryUpload(taskUploadModel.path, it)
-                } ?: uploadWithPath(taskUploadModel.path)
-            }
+        } else {
+            taskUploadModel.objectId?.let {
+                retryUpload(it)
+            } ?: uploadWithPath(taskUploadModel.path)
         }
     }
 
@@ -1210,16 +1225,16 @@ class FilesTrueCloudViewModel @Inject constructor(
 
     @VisibleForTesting
     fun getUploadTask() {
-        getNewUploadTaskListUseCase.execute()
+        getUploadTaskListUseCase.execute()
             .flowOn(coroutineDispatcher.io())
             .onEach { result ->
-                val itemList = result.map {
+                val itemList = result?.map {
                     if (it.actionType == TaskActionType.UPLOAD) {
                         it.getUploadFilesModel()
                     } else {
                         it.getAutoBackupFileModel()
                     }
-                }
+                }?.toMutableList() ?: mutableListOf()
                 uploadItemSize = if (itemList.isNotEmpty()) {
                     itemList.size + HEADER_SIZE
                 } else {
@@ -1245,11 +1260,70 @@ class FilesTrueCloudViewModel @Inject constructor(
                         }
                     }
                 setViewState(items.count())
+                uploadQueueList(result)
                 if (itemList.isEmpty()) {
                     transferObserverMap.clear()
                     clearAllUploadTask()
                 }
             }.launchSafeIn(this)
+    }
+
+    private fun uploadQueueList(uploadModels: MutableList<TaskUploadModel>?) {
+        val task = uploadModels?.filter {
+            it.status == TaskStatusType.IN_QUEUE ||
+                it.status == TaskStatusType.WAITING || it.id == 0
+        }
+        task ?: return
+        onShowLoading.value = true
+        uploadQueueUseCase.execute(task).map {
+            Timber.i("HIT OUT  ${it.getState()} id ${it.getId()}")
+            when (it.getState()) {
+                TrueCloudV3TransferState.COMPLETED -> {
+                    completeUpload(it.getId())
+                }
+
+                TrueCloudV3TransferState.FAILED -> {
+                    updateTaskUploadStatusUseCase.execute(
+                        it.getId(),
+                        TaskStatusType.FAILED
+                    )
+                }
+
+                else -> {
+                    // Do nothing
+                }
+            }
+            val taskUploadModel = getUploadTaskUseCase.execute(it.getId())
+            when (taskUploadModel?.status) {
+                TaskStatusType.PAUSE -> {
+                    trueCloudV3TransferUtilityProvider.pauseTransferById(
+                        contextDataProviderWrapper.get().getDataContext(),
+                        taskUploadModel.id
+                    )
+                }
+
+                else -> {
+                    // Do Nothing
+                }
+            }
+            it.setTransferListener(transferlistener)
+            refreshTask()
+            onShowLoading.value = false
+        }.catch { ex ->
+            if (!isMultipleUpload || (isMultipleUpload && multipleUploadErrorCount < MAXIMUM_TOAST_ERROR)) {
+                multipleUploadErrorCount++
+                val message = if (ERROR_INIT_UPLOAD_DATA_EXCEED_LIMIT == ex.message) {
+                    contextDataProviderWrapper.get()
+                        .getString(R.string.true_cloudv3_select_file_exceeded_storage_size)
+                } else {
+                    ex.message
+                }
+                onUploadError.postValue(message.orEmpty())
+            }
+            onShowLoading.postValue(false)
+        }
+            .flowOn(coroutineDispatcher.io())
+            .launchSafeIn(this)
     }
 
     private fun getFilesList() {
@@ -1605,6 +1679,7 @@ class FilesTrueCloudViewModel @Inject constructor(
         }
 
         override fun onProgressChanged(id: Int, bytesCurrent: Long, bytesTotal: Long) {
+            Timber.i("HIT PROGRESS CHANGE ")
             onShowProgressChange.value =
                 getUploadLoadProgress(id, (bytesCurrent / (bytesTotal * 0.01)).toLong())
         }
@@ -1613,6 +1688,7 @@ class FilesTrueCloudViewModel @Inject constructor(
             ex?.printStackTrace()
             launchSafe {
                 updateTaskUploadStatusUseCase.execute(id, TaskStatusType.FAILED)
+                refreshTask()
             }
         }
     }
@@ -1641,6 +1717,17 @@ class FilesTrueCloudViewModel @Inject constructor(
         var updateIndex = 0
         this.items.apply {
             filterIsInstance<TrueCloudFilesModel.Upload>()
+                .filter { it.id == id }
+                .map { task ->
+                    task.progress = if (progress > task.progress) {
+                        progress
+                    } else {
+                        task.progress
+                    }
+                    task.progressMessage = " ${task.progress}%"
+                    updateIndex = indexOf(task)
+                }
+            filterIsInstance<TrueCloudFilesModel.AutoBackup>()
                 .filter { it.id == id }
                 .map { task ->
                     task.progress = if (progress > task.progress) {
@@ -1686,52 +1773,53 @@ class FilesTrueCloudViewModel @Inject constructor(
         folderId: String = stackFolderIds.last().first
     ) {
         onShowLoading.value = true
-        uploadFileUseCase.execute(uriList, folderId).map {
-            when (it.getState()) {
-                TrueCloudV3TransferState.COMPLETED -> {
-                    completeUpload(it.getId())
-                }
+        uploadFileUseCase.execute(uriList, folderId)
+            .map {
+                when (it.getState()) {
+                    TrueCloudV3TransferState.COMPLETED -> {
+                        completeUpload(it.getId())
+                    }
 
-                TrueCloudV3TransferState.FAILED -> {
-                    updateTaskUploadStatusUseCase.execute(
-                        it.getId(),
-                        TaskStatusType.FAILED
-                    )
-                }
+                    TrueCloudV3TransferState.FAILED -> {
+                        updateTaskUploadStatusUseCase.execute(
+                            it.getId(),
+                            TaskStatusType.FAILED
+                        )
+                    }
 
-                else -> {
-                    // Do nothing
+                    else -> {
+                        // Do nothing
+                    }
                 }
-            }
-            val taskUploadModel = getUploadTaskUseCase.execute(it.getId())
-            when (taskUploadModel?.status) {
-                TaskStatusType.PAUSE -> {
-                    trueCloudV3TransferUtilityProvider.pauseTransferById(
-                        contextDataProviderWrapper.get().getDataContext(),
-                        taskUploadModel.id
-                    )
-                }
+                val taskUploadModel = getUploadTaskUseCase.execute(it.getId())
+                when (taskUploadModel?.status) {
+                    TaskStatusType.PAUSE -> {
+                        trueCloudV3TransferUtilityProvider.pauseTransferById(
+                            contextDataProviderWrapper.get().getDataContext(),
+                            taskUploadModel.id
+                        )
+                    }
 
-                else -> {
-                    // Do Nothing
+                    else -> {
+                        // Do Nothing
+                    }
                 }
-            }
-            it.setTransferListener(transferlistener)
-            refreshTask()
-            onShowLoading.value = false
-        }.catch { ex ->
-            if (!isMultipleUpload || (isMultipleUpload && multipleUploadErrorCount < MAXIMUM_TOAST_ERROR)) {
-                multipleUploadErrorCount++
-                val message = if (ERROR_INIT_UPLOAD_DATA_EXCEED_LIMIT == ex.message) {
-                    contextDataProviderWrapper.get()
-                        .getString(R.string.true_cloudv3_select_file_exceeded_storage_size)
-                } else {
-                    ex.message
+                it.setTransferListener(transferlistener)
+                refreshTask()
+                onShowLoading.value = false
+            }.catch { ex ->
+                if (!isMultipleUpload || (isMultipleUpload && multipleUploadErrorCount < MAXIMUM_TOAST_ERROR)) {
+                    multipleUploadErrorCount++
+                    val message = if (ERROR_INIT_UPLOAD_DATA_EXCEED_LIMIT == ex.message) {
+                        contextDataProviderWrapper.get()
+                            .getString(R.string.true_cloudv3_select_file_exceeded_storage_size)
+                    } else {
+                        ex.message
+                    }
+                    onUploadError.postValue(message.orEmpty())
                 }
-                onUploadError.postValue(message.orEmpty())
+                onShowLoading.postValue(false)
             }
-            onShowLoading.postValue(false)
-        }
             .flowOn(coroutineDispatcher.io())
             .launchSafeIn(this)
     }
@@ -1741,7 +1829,6 @@ class FilesTrueCloudViewModel @Inject constructor(
     }
 
     private fun refreshTask() {
-        var isUpload: Boolean = true
         getUploadTaskListUseCase.execute()
             .flowOn(coroutineDispatcher.io())
             .onEach { result ->
@@ -1750,7 +1837,6 @@ class FilesTrueCloudViewModel @Inject constructor(
                         if (it.actionType == TaskActionType.UPLOAD) {
                             it.getUploadFilesModel()
                         } else {
-                            isUpload = false
                             it.getAutoBackupFileModel()
                         }
                     }?.toMutableList() ?: mutableListOf()
@@ -1760,9 +1846,19 @@ class FilesTrueCloudViewModel @Inject constructor(
                     EMPTY_ITEM
                 }
                 refreshGridDecoration()
-                onShowUploadTaskList.value =
-                    if (isUpload) getUploadList(itemList) else getAutoBackupList(itemList)
+                itemList.filterIsInstance<TrueCloudFilesModel.Upload>()
+                    .let { list ->
+                        onShowUploadTaskList.value = getUploadList(list)
+                    }
+                itemList.filterIsInstance<TrueCloudFilesModel.AutoBackup>()
+                    .let { list ->
+                        onShowUploadTaskList.value = getAutoBackupList(list)
+                    }
                 setViewState(items.count())
+                if (itemList.isEmpty()) {
+                    transferObserverMap.clear()
+                    clearAllUploadTask()
+                }
             }
             .launchSafeIn(this)
     }
@@ -1891,8 +1987,8 @@ class FilesTrueCloudViewModel @Inject constructor(
         }.launchSafeIn(this)
     }
 
-    private fun retryUpload(path: String, objectId: String) {
-        retryUploadUseCase.execute(path, objectId).map {
+    private fun retryUpload(objectId: String) {
+        retryUploadUseCase.execute(objectId).map {
             when (it.getState()) {
                 TrueCloudV3TransferState.COMPLETED -> {
                     completeUpload(it.getId())
@@ -2048,8 +2144,6 @@ class FilesTrueCloudViewModel @Inject constructor(
                     refreshTransferListener(transferObserver)
                 }
             }
-        } else {
-            completeUpload(taskId)
         }
     }
 }

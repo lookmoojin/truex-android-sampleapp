@@ -12,38 +12,26 @@ fun Long.formatBinarySize(context: Context): String {
     return when {
         this < KILO_BYTE_AS_BYTE -> "${this.toDouble()} B"
         this >= KILO_BYTE_AS_BYTE && this < megaByteAsByte -> {
-            "${
-                String.format(
-                    context.getString(R.string.true_cloudv3_binary_size_format),
-                    (this / KILO_BYTE_AS_BYTE)
-                )
-            } KB"
+            "${String.format(
+                context.getString(R.string.true_cloudv3_binary_size_format),
+                (this / KILO_BYTE_AS_BYTE)
+            )} KB"
         }
-
         this >= megaByteAsByte && this < gigaByteAsByte ->
-            "${
-                String.format(
-                    context.getString(R.string.true_cloudv3_binary_size_format),
-                    (this / megaByteAsByte)
-                )
-            } MB"
-
+            "${String.format(
+                context.getString(R.string.true_cloudv3_binary_size_format),
+                (this / megaByteAsByte)
+            )} MB"
         this >= gigaByteAsByte && this < teraByteAsByte ->
-            "${
-                String.format(
-                    context.getString(R.string.true_cloudv3_binary_size_format),
-                    (this / gigaByteAsByte)
-                )
-            } GB"
-
+            "${String.format(
+                context.getString(R.string.true_cloudv3_binary_size_format),
+                (this / gigaByteAsByte)
+            )} GB"
         this >= teraByteAsByte && this < petaByteAsByte ->
-            "${
-                String.format(
-                    context.getString(R.string.true_cloudv3_binary_size_format),
-                    (this / teraByteAsByte)
-                )
-            } TB"
-
+            "${String.format(
+                context.getString(R.string.true_cloudv3_binary_size_format),
+                (this / teraByteAsByte)
+            )} TB"
         else -> "Bigger than 1024 TB"
     }
 }

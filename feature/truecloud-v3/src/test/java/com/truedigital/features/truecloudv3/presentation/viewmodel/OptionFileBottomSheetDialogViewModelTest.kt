@@ -234,7 +234,7 @@ class OptionFileBottomSheetDialogViewModelTest {
     fun `test onClickViewFile fileExists`() {
         // arrange
         val testObserveShowProgressLoading = TestObserver.test(viewModel.onShowProgressLoading)
-        val testObserveStartShare = TestObserver.test(viewModel.onStartShare)
+        val testObserveStartShare = TestObserver.test(viewModel.onStartViewFile)
 
         val mockFile = mockk<File>(relaxed = true)
         mockkStatic(Environment::class)
@@ -255,7 +255,7 @@ class OptionFileBottomSheetDialogViewModelTest {
     fun `test onClickViewFile fileNotExists`() {
         // arrange
         val testObserveShowProgressLoading = TestObserver.test(viewModel.onShowProgressLoading)
-        val testObserveStartShare = TestObserver.test(viewModel.onStartShare)
+        val testObserveStartShare = TestObserver.test(viewModel.onStartViewFile)
 
         val mockFile = mockk<File>(relaxed = true)
         mockkStatic(Environment::class)

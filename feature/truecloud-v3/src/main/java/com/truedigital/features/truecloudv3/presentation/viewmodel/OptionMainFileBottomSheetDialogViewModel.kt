@@ -43,7 +43,7 @@ class OptionMainFileBottomSheetDialogViewModel @Inject constructor(
         )
         analyticManagerInterface.trackEvent(
             hashMapOf(
-                MeasurementConstant.Key.KEY_LINK_TYPE to TrueCloudV3TrackAnalytic.EVENT_CLICK,
+                MeasurementConstant.Key.KEY_EVENT_NAME to TrueCloudV3TrackAnalytic.EVENT_CLICK,
                 MeasurementConstant.Key.KEY_LINK_TYPE to TrueCloudV3TrackAnalytic.LINK_TYPE_BOTTOM_SHEET,
                 MeasurementConstant.Key.KEY_LINK_DESC to TrueCloudV3TrackAnalytic.LINK_DESC_SORT_BY
             )
@@ -53,7 +53,7 @@ class OptionMainFileBottomSheetDialogViewModel @Inject constructor(
         router.execute(OptingMainToCreateNewFolder)
         analyticManagerInterface.trackEvent(
             hashMapOf(
-                MeasurementConstant.Key.KEY_LINK_TYPE to TrueCloudV3TrackAnalytic.EVENT_CLICK,
+                MeasurementConstant.Key.KEY_EVENT_NAME to TrueCloudV3TrackAnalytic.EVENT_CLICK,
                 MeasurementConstant.Key.KEY_LINK_TYPE to TrueCloudV3TrackAnalytic.LINK_TYPE_BOTTOM_SHEET,
                 MeasurementConstant.Key.KEY_LINK_DESC to TrueCloudV3TrackAnalytic.LINK_DESC_NEW_FOLDER
             )

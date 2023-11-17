@@ -10,8 +10,6 @@ import androidx.navigation.fragment.NavHostFragment
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-import com.truedigital.features.truecloudv3.R
-import com.truedigital.features.truecloudv3.databinding.FragmentTrashTrueCloudV3Binding
 import com.truedigital.common.share.componentv3.extension.getSavedStateHandle
 import com.truedigital.common.share.componentv3.extension.setSavedStateHandle
 import com.truedigital.component.base.BaseFragment
@@ -19,9 +17,11 @@ import com.truedigital.component.dialog.trueid.DialogIconType
 import com.truedigital.component.dialog.trueid.DialogManager
 import com.truedigital.component.dialog.trueid.DialogTopNavigationType
 import com.truedigital.core.extensions.viewBinding
+import com.truedigital.features.truecloudv3.R
 import com.truedigital.features.truecloudv3.common.SortType
 import com.truedigital.features.truecloudv3.common.TrueCloudV3KeyBundle
 import com.truedigital.features.truecloudv3.common.TrueCloudV3SaveStateKey
+import com.truedigital.features.truecloudv3.databinding.FragmentTrashTrueCloudV3Binding
 import com.truedigital.features.truecloudv3.domain.model.TrueCloudFilesModel
 import com.truedigital.features.truecloudv3.extension.snackBar
 import com.truedigital.features.truecloudv3.injections.TrueCloudV3Component
@@ -52,55 +52,42 @@ class TrashTrueCloudV3Fragment : BaseFragment(R.layout.fragment_trash_true_cloud
         override fun onPauseClicked(model: TrueCloudFilesModel.Upload) {
             // do nothing
         }
-
         override fun onRetryClicked(model: TrueCloudFilesModel.Upload) {
             // do nothing
         }
-
         override fun onCancelClicked(model: TrueCloudFilesModel.Upload) {
             // do nothing
         }
-
         override fun onFileClicked(model: TrueCloudFilesModel.File) {
             viewModel.onClickTrashFileOption(model)
         }
-
         override fun onMoreClicked(model: TrueCloudFilesModel.File) {
             viewModel.onClickTrashFileOption(model)
         }
-
         override fun onLongClicked(model: TrueCloudFilesModel.File) {
             // do nothing
         }
-
         override fun onCancelAllClicked() {
             // do nothing
         }
-
         override fun onUploadExpandClicked(status: Boolean) {
             // do nothing
         }
-
         override fun onFolderClicked(model: TrueCloudFilesModel.Folder) {
             viewModel.onClickTrashFolderOption(model)
         }
-
         override fun onFolderMoreClicked(model: TrueCloudFilesModel.Folder) {
             viewModel.onClickTrashFolderOption(model)
         }
-
         override fun onAutoBackupExpandClicked(status: Boolean) {
             // do nothing
         }
-
         override fun onCancelAllBackupClicked() {
             // do nothing
         }
-
         override fun onPauseAllBackupClicked() {
             // do nothing
         }
-
         override fun onResumeAllBackupClicked() {
             // do nothing
         }
@@ -129,8 +116,7 @@ class TrashTrueCloudV3Fragment : BaseFragment(R.layout.fragment_trash_true_cloud
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        val folderId =
-            arguments?.getString(TrueCloudV3KeyBundle.KEY_BUNDLE_TRUE_CLOUD_FOLDER_ID).orEmpty()
+        val folderId = arguments?.getString(TrueCloudV3KeyBundle.KEY_BUNDLE_TRUE_CLOUD_FOLDER_ID).orEmpty()
         viewModel.onGetTrashData(folderId)
         initViews()
         initListener()
@@ -299,7 +285,6 @@ class TrashTrueCloudV3Fragment : BaseFragment(R.layout.fragment_trash_true_cloud
             return viewModel.getSelectedItem()
         }
     }
-
     private fun refreshRecyclerView() {
         binding.trueCloudFilesRecyclerView.adapter = null
         binding.trueCloudFilesRecyclerView.adapter = filesAdapter

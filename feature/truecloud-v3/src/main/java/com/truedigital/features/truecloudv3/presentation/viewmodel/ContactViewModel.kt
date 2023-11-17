@@ -4,7 +4,6 @@ import android.content.Intent
 import android.os.Bundle
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.viewModelScope
-import com.truedigital.features.truecloudv3.R
 import com.truedigital.common.share.analytics.di.AnalyticsModule
 import com.truedigital.common.share.analytics.measurement.AnalyticManagerInterface
 import com.truedigital.common.share.analytics.measurement.base.platform.PlatformAnalyticModel
@@ -13,6 +12,7 @@ import com.truedigital.common.share.datalegacy.wrapper.ContextDataProviderWrappe
 import com.truedigital.core.base.ScopedViewModel
 import com.truedigital.core.coroutines.CoroutineDispatcherProvider
 import com.truedigital.core.extensions.launchSafeIn
+import com.truedigital.features.truecloudv3.R
 import com.truedigital.features.truecloudv3.common.FileMimeTypeManager
 import com.truedigital.features.truecloudv3.common.TrueCloudV3ErrorMessage
 import com.truedigital.features.truecloudv3.common.TrueCloudV3KeyBundle.KEY_BUNDLE_TRUE_CLOUD_CONTACT_DATA
@@ -140,7 +140,7 @@ class ContactViewModel @Inject constructor(
             .launchIn(this)
         analyticManagerInterface.trackEvent(
             hashMapOf(
-                MeasurementConstant.Key.KEY_LINK_TYPE to TrueCloudV3TrackAnalytic.EVENT_CLICK,
+                MeasurementConstant.Key.KEY_EVENT_NAME to TrueCloudV3TrackAnalytic.EVENT_CLICK,
                 MeasurementConstant.Key.KEY_LINK_TYPE to TrueCloudV3TrackAnalytic.LINK_TYPE_BOTTOM_SHEET,
                 MeasurementConstant.Key.KEY_LINK_DESC to TrueCloudV3TrackAnalytic.LINK_DESC_SYNC_ALL_CONTACTS
             )
@@ -165,7 +165,7 @@ class ContactViewModel @Inject constructor(
             .launchIn(this)
         analyticManagerInterface.trackEvent(
             hashMapOf(
-                MeasurementConstant.Key.KEY_LINK_TYPE to TrueCloudV3TrackAnalytic.EVENT_CLICK,
+                MeasurementConstant.Key.KEY_EVENT_NAME to TrueCloudV3TrackAnalytic.EVENT_CLICK,
                 MeasurementConstant.Key.KEY_LINK_TYPE to TrueCloudV3TrackAnalytic.LINK_TYPE_BOTTOM_SHEET,
                 MeasurementConstant.Key.KEY_LINK_DESC to TrueCloudV3TrackAnalytic.LINK_DESC_EXPORT_TO_DEVICE
             )
@@ -195,7 +195,7 @@ class ContactViewModel @Inject constructor(
         )
         analyticManagerInterface.trackEvent(
             hashMapOf(
-                MeasurementConstant.Key.KEY_LINK_TYPE to TrueCloudV3TrackAnalytic.EVENT_CLICK,
+                MeasurementConstant.Key.KEY_EVENT_NAME to TrueCloudV3TrackAnalytic.EVENT_CLICK,
                 MeasurementConstant.Key.KEY_LINK_TYPE to TrueCloudV3TrackAnalytic.LINK_TYPE_BOTTOM_SHEET,
                 MeasurementConstant.Key.KEY_LINK_DESC to TrueCloudV3TrackAnalytic.LINK_DESC_DELETE_ALL_CONTRACTS
             )
@@ -214,7 +214,7 @@ class ContactViewModel @Inject constructor(
         onIntentActionGetContact.value = true
         analyticManagerInterface.trackEvent(
             hashMapOf(
-                MeasurementConstant.Key.KEY_LINK_TYPE to TrueCloudV3TrackAnalytic.EVENT_CLICK,
+                MeasurementConstant.Key.KEY_EVENT_NAME to TrueCloudV3TrackAnalytic.EVENT_CLICK,
                 MeasurementConstant.Key.KEY_LINK_TYPE to TrueCloudV3TrackAnalytic.LINK_TYPE_BOTTOM_SHEET,
                 MeasurementConstant.Key.KEY_LINK_DESC to TrueCloudV3TrackAnalytic.LINK_DESC_SELECT_CONTACT_UPLOAD
             )
@@ -345,7 +345,6 @@ class ContactViewModel @Inject constructor(
             TrueCloudV3ErrorMessage.ERROR_CONTACT_NOT_FOUND -> {
                 onContactNotfound.postValue(Unit)
             }
-
             else -> {
                 onGetContactError.postValue(
                     Pair(errorMessage, ACTION_GET_CONTACT)

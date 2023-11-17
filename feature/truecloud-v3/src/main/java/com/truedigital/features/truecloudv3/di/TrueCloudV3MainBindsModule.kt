@@ -114,6 +114,8 @@ import com.truedigital.features.truecloudv3.domain.usecase.UploadFileUseCase
 import com.truedigital.features.truecloudv3.domain.usecase.UploadFileUseCaseImpl
 import com.truedigital.features.truecloudv3.domain.usecase.UploadFileWithPathUseCase
 import com.truedigital.features.truecloudv3.domain.usecase.UploadFileWithPathUseCaseImpl
+import com.truedigital.features.truecloudv3.domain.usecase.UploadQueueUseCase
+import com.truedigital.features.truecloudv3.domain.usecase.UploadQueueUseCaseImpl
 import com.truedigital.features.truecloudv3.provider.AmazonS3ClientProvider
 import com.truedigital.features.truecloudv3.provider.AmazonS3ClientProviderImpl
 import com.truedigital.features.truecloudv3.provider.ContactProvider
@@ -467,4 +469,9 @@ interface TrueCloudV3MainBindsModule {
     fun bindsSearchWithCategoryUseCase(
         searchWithCategoryUseCase: SearchWithCategoryUseCaseImpl
     ): SearchWithCategoryUseCase
+
+    @Binds
+    fun bindsUploadQueueUseCase(
+        uploadQueueUseCase: UploadQueueUseCaseImpl
+    ): UploadQueueUseCase
 }

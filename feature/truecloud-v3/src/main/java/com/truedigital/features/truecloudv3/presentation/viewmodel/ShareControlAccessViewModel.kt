@@ -1,12 +1,12 @@
 package com.truedigital.features.truecloudv3.presentation.viewmodel
 
-import com.truedigital.features.truecloudv3.R
 import com.truedigital.common.share.datalegacy.wrapper.ContextDataProviderWrapper
 import com.truedigital.core.base.ScopedViewModel
 import com.truedigital.core.constant.DateFormatConstant
 import com.truedigital.core.coroutines.CoroutineDispatcherProvider
 import com.truedigital.core.extensions.launchSafeIn
 import com.truedigital.core.extensions.toDateFromUTC
+import com.truedigital.features.truecloudv3.R
 import com.truedigital.features.truecloudv3.domain.model.TrueCloudFilesModel
 import com.truedigital.features.truecloudv3.domain.usecase.GetShareConfigUseCase
 import com.truedigital.features.truecloudv3.domain.usecase.GetShareLinkUseCase
@@ -93,7 +93,6 @@ class ShareControlAccessViewModel @Inject constructor(
         isNewPass = true
         onShowUpdateButton.value = true
     }
-
     fun clickEditPassword() {
         isNewPass = true
         oldPassword = ""
@@ -114,10 +113,7 @@ class ShareControlAccessViewModel @Inject constructor(
 
     fun updateExpireTime(date: Date) {
         expireAt =
-            SimpleDateFormat(
-                DateFormatConstant.yyyy_MM_dd_T_HH_mm_ss_SSS_Z,
-                Locale.getDefault()
-            ).format(date)
+            SimpleDateFormat(DateFormatConstant.yyyy_MM_dd_T_HH_mm_ss_SSS_Z, Locale.getDefault()).format(date)
         val selectedDateTime =
             SimpleDateFormat(DateFormatConstant.dd_MM_yyyy_SLASH, Locale.getDefault()).format(
                 date
@@ -159,10 +155,7 @@ class ShareControlAccessViewModel @Inject constructor(
                     isNewPass = false
                     var expiredTime = ""
                     if (expireAt?.isNotEmpty() == true) {
-                        expiredTime = SimpleDateFormat(
-                            DateFormatConstant.dd_MM_yyyy_SLASH,
-                            Locale.getDefault()
-                        ).format(
+                        expiredTime = SimpleDateFormat(DateFormatConstant.dd_MM_yyyy_SLASH, Locale.getDefault()).format(
                             expireAt.toDateFromUTC()
                         )
                     }
@@ -188,10 +181,7 @@ class ShareControlAccessViewModel @Inject constructor(
                 expireAt = _shareConfigModel.sharedFile.expireAt
                 var expiredTime = ""
                 if (expireAt?.isNotEmpty() == true) {
-                    expiredTime = SimpleDateFormat(
-                        DateFormatConstant.dd_MM_yyyy_SLASH,
-                        Locale.getDefault()
-                    ).format(
+                    expiredTime = SimpleDateFormat(DateFormatConstant.dd_MM_yyyy_SLASH, Locale.getDefault()).format(
                         expireAt.toDateFromUTC()
                     )
                 }

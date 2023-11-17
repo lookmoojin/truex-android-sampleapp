@@ -12,12 +12,11 @@ class TrueCloudV3HeaderImageView @JvmOverloads constructor(
     attrs: AttributeSet? = null,
     defStyleAttr: Int = 0
 ) : FrameLayout(context, attrs, defStyleAttr) {
-    private val binding: TrueCloudv3HeaderImageViewBinding =
-        TrueCloudv3HeaderImageViewBinding.inflate(
-            LayoutInflater.from(context),
-            this,
-            false
-        )
+    private val binding: TrueCloudv3HeaderImageViewBinding = TrueCloudv3HeaderImageViewBinding.inflate(
+        LayoutInflater.from(context),
+        this,
+        false
+    )
 
     init {
         addView(binding.root)

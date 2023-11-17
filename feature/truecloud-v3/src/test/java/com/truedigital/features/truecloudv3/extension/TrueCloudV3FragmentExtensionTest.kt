@@ -6,20 +6,19 @@ import android.content.pm.PackageManager
 import android.os.Build
 import androidx.core.content.ContextCompat
 import androidx.fragment.app.Fragment
+import com.truedigital.share.mock.utils.BuildUtils
 import io.mockk.every
 import io.mockk.mockk
 import io.mockk.mockkStatic
 import org.junit.jupiter.api.Assertions.assertTrue
 import org.junit.jupiter.api.Test
-import java.lang.reflect.Field
-import java.lang.reflect.Modifier
 import kotlin.test.assertEquals
 
 class TrueCloudV3FragmentExtensionTest {
 
     @Test
     fun `test checkStoragePermissionAlready returns correct value`() {
-        setFinalStatic(Build.VERSION::class.java.getField("SDK_INT"), 30)
+        BuildUtils.setFinalStatic(Build.VERSION::class.java.getField("SDK_INT"), 30)
         val fragment = mockk<Fragment>()
         val context = mockk<Context>()
         every { fragment.context } returns context
@@ -69,7 +68,7 @@ class TrueCloudV3FragmentExtensionTest {
 
     @Test
     fun `test checkStoragePermissionAlready READ_EXTERNAL_STORAGE false returns false value`() {
-        setFinalStatic(Build.VERSION::class.java.getField("SDK_INT"), 30)
+        BuildUtils.setFinalStatic(Build.VERSION::class.java.getField("SDK_INT"), 30)
         val fragment = mockk<Fragment>()
         val context = mockk<Context>()
         every { fragment.context } returns context
@@ -119,7 +118,7 @@ class TrueCloudV3FragmentExtensionTest {
 
     @Test
     fun `test checkStoragePermissionAlready WRITE_EXTERNAL_STORAGE false returns false value`() {
-        setFinalStatic(Build.VERSION::class.java.getField("SDK_INT"), 30)
+        BuildUtils.setFinalStatic(Build.VERSION::class.java.getField("SDK_INT"), 30)
         val fragment = mockk<Fragment>()
         val context = mockk<Context>()
         every { fragment.context } returns context
@@ -169,7 +168,7 @@ class TrueCloudV3FragmentExtensionTest {
 
     @Test
     fun `test checkStoragePermissionAlready READ_EXTERNAL_STORAGE and WRITE_EXTERNAL_STORAGE false returns false value`() {
-        setFinalStatic(Build.VERSION::class.java.getField("SDK_INT"), 30)
+        BuildUtils.setFinalStatic(Build.VERSION::class.java.getField("SDK_INT"), 30)
         val fragment = mockk<Fragment>()
         val context = mockk<Context>()
         every { fragment.context } returns context
@@ -219,7 +218,7 @@ class TrueCloudV3FragmentExtensionTest {
 
     @Test
     fun `test checkStoragePermissionAlready android 13 returns correct value`() {
-        setFinalStatic(Build.VERSION::class.java.getField("SDK_INT"), 33)
+        BuildUtils.setFinalStatic(Build.VERSION::class.java.getField("SDK_INT"), 33)
         val fragment = mockk<Fragment>()
         val context = mockk<Context>()
         every { fragment.context } returns context
@@ -269,7 +268,7 @@ class TrueCloudV3FragmentExtensionTest {
 
     @Test
     fun `test checkStoragePermissionAlready android 13 READ_MEDIA_IMAGES false returns false value`() {
-        setFinalStatic(Build.VERSION::class.java.getField("SDK_INT"), 33)
+        BuildUtils.setFinalStatic(Build.VERSION::class.java.getField("SDK_INT"), 33)
         val fragment = mockk<Fragment>()
         val context = mockk<Context>()
         every { fragment.context } returns context
@@ -319,7 +318,7 @@ class TrueCloudV3FragmentExtensionTest {
 
     @Test
     fun `test checkStoragePermissionAlready android 13 READ_MEDIA_AUDIO false returns false value`() {
-        setFinalStatic(Build.VERSION::class.java.getField("SDK_INT"), 33)
+        BuildUtils.setFinalStatic(Build.VERSION::class.java.getField("SDK_INT"), 33)
         val fragment = mockk<Fragment>()
         val context = mockk<Context>()
         every { fragment.context } returns context
@@ -369,7 +368,7 @@ class TrueCloudV3FragmentExtensionTest {
 
     @Test
     fun `test checkStoragePermissionAlready android 13 READ_MEDIA_VIDEO false returns false value`() {
-        setFinalStatic(Build.VERSION::class.java.getField("SDK_INT"), 33)
+        BuildUtils.setFinalStatic(Build.VERSION::class.java.getField("SDK_INT"), 33)
         val fragment = mockk<Fragment>()
         val context = mockk<Context>()
         every { fragment.context } returns context
@@ -419,7 +418,7 @@ class TrueCloudV3FragmentExtensionTest {
 
     @Test
     fun `test checkContactStoragePermissionAlready android 13 returns correct value`() {
-        setFinalStatic(Build.VERSION::class.java.getField("SDK_INT"), 33)
+        BuildUtils.setFinalStatic(Build.VERSION::class.java.getField("SDK_INT"), 33)
         val fragment = mockk<Fragment>()
         val context = mockk<Context>()
         every { fragment.context } returns context
@@ -477,7 +476,7 @@ class TrueCloudV3FragmentExtensionTest {
 
     @Test
     fun `test checkContactStoragePermissionAlready android 13 READ_MEDIA_IMAGES false returns false value`() {
-        setFinalStatic(Build.VERSION::class.java.getField("SDK_INT"), 33)
+        BuildUtils.setFinalStatic(Build.VERSION::class.java.getField("SDK_INT"), 33)
         val fragment = mockk<Fragment>()
         val context = mockk<Context>()
         every { fragment.context } returns context
@@ -535,7 +534,7 @@ class TrueCloudV3FragmentExtensionTest {
 
     @Test
     fun `test checkContactStoragePermissionAlready android 13 READ_CONTACTS false returns false value`() {
-        setFinalStatic(Build.VERSION::class.java.getField("SDK_INT"), 33)
+        BuildUtils.setFinalStatic(Build.VERSION::class.java.getField("SDK_INT"), 33)
         val fragment = mockk<Fragment>()
         val context = mockk<Context>()
         every { fragment.context } returns context
@@ -593,7 +592,7 @@ class TrueCloudV3FragmentExtensionTest {
 
     @Test
     fun `test getStoragePermissions android 13 returns correct value array size is 3`() {
-        setFinalStatic(Build.VERSION::class.java.getField("SDK_INT"), 33)
+        BuildUtils.setFinalStatic(Build.VERSION::class.java.getField("SDK_INT"), 33)
         val fragment = mockk<Fragment>()
 
         val result = fragment.getStoragePermissions()
@@ -603,7 +602,7 @@ class TrueCloudV3FragmentExtensionTest {
 
     @Test
     fun `test getStoragePermissions returns correct value array size is 2`() {
-        setFinalStatic(Build.VERSION::class.java.getField("SDK_INT"), 30)
+        BuildUtils.setFinalStatic(Build.VERSION::class.java.getField("SDK_INT"), 30)
         val fragment = mockk<Fragment>()
 
         val result = fragment.getStoragePermissions()
@@ -613,7 +612,7 @@ class TrueCloudV3FragmentExtensionTest {
 
     @Test
     fun `test getNotificationPermissions android 13 returns correct value array size is 4`() {
-        setFinalStatic(Build.VERSION::class.java.getField("SDK_INT"), 33)
+        BuildUtils.setFinalStatic(Build.VERSION::class.java.getField("SDK_INT"), 33)
         val fragment = mockk<Fragment>()
 
         val result = fragment.getNotificationPermission()
@@ -623,20 +622,11 @@ class TrueCloudV3FragmentExtensionTest {
 
     @Test
     fun `test getNotificationPermissions returns correct value array size is 2`() {
-        setFinalStatic(Build.VERSION::class.java.getField("SDK_INT"), 30)
+        BuildUtils.setFinalStatic(Build.VERSION::class.java.getField("SDK_INT"), 30)
         val fragment = mockk<Fragment>()
 
         val result = fragment.getNotificationPermission()
 
         assertEquals(2, result.size)
-    }
-
-    @Throws(Exception::class)
-    fun setFinalStatic(field: Field, newValue: Any?) {
-        field.isAccessible = true
-        val modifiersField: Field = Field::class.java.getDeclaredField("modifiers")
-        modifiersField.isAccessible = true
-        modifiersField.setInt(field, field.modifiers and Modifier.FINAL.inv())
-        field.set(null, newValue)
     }
 }

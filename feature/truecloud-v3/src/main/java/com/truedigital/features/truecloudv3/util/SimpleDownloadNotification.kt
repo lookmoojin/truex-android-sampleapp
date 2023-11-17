@@ -7,6 +7,7 @@ import android.app.NotificationManager
 import android.content.Context
 import android.content.pm.PackageManager
 import android.graphics.BitmapFactory
+import android.os.Build
 import android.os.Bundle
 import androidx.core.app.ActivityCompat
 import androidx.core.app.NotificationCompat
@@ -25,6 +26,7 @@ class SimpleDownloadNotification(val context: Context) {
         private const val MIN_PROGRESS = 0
         private const val KEY = "key"
         private const val PATH = "file_path"
+        private const val EMPTY_STRING = ""
     }
 
     init {
@@ -39,7 +41,7 @@ class SimpleDownloadNotification(val context: Context) {
                     R.drawable.ic_baseline_cloud_download_24
                 )
             )
-            .setSmallIcon(R.mipmap.ic_notification_small)
+            .setSmallIcon(com.truedigital.core.R.mipmap.ic_notification_small)
             .setShowWhen(false)
             .setPriority(NotificationCompat.PRIORITY_LOW)
             .setOngoing(true)
@@ -87,18 +89,20 @@ class SimpleDownloadNotification(val context: Context) {
 
     @VisibleForTesting
     fun createNotificationChannel(context: Context): String {
-
-        val notificationChannel =
-            NotificationChannel(
-                TRUE_CLOUD_DOWNLOAD_CHANNEL_ID,
-                TRUE_CLOUD_DOWNLOAD_CHANNEL_NAME,
-                NotificationManager.IMPORTANCE_HIGH
-            )
-        notificationChannel.lockscreenVisibility = Notification.VISIBILITY_PUBLIC
-        notificationManagerCompat = NotificationManagerCompat.from(context)
-        notificationManagerCompat?.createNotificationChannel(notificationChannel)
-
-        return TRUE_CLOUD_DOWNLOAD_CHANNEL_ID
+        return if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
+            val notificationChannel =
+                NotificationChannel(
+                    TRUE_CLOUD_DOWNLOAD_CHANNEL_ID,
+                    TRUE_CLOUD_DOWNLOAD_CHANNEL_NAME,
+                    NotificationManager.IMPORTANCE_HIGH
+                )
+            notificationChannel.lockscreenVisibility = Notification.VISIBILITY_PUBLIC
+            notificationManagerCompat = NotificationManagerCompat.from(context)
+            notificationManagerCompat?.createNotificationChannel(notificationChannel)
+            TRUE_CLOUD_DOWNLOAD_CHANNEL_ID
+        } else {
+            EMPTY_STRING
+        }
     }
 
     private fun checkPostNotificationPermission(): Boolean {

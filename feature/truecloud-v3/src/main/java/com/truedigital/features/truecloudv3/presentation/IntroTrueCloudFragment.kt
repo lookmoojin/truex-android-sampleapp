@@ -8,11 +8,11 @@ import android.widget.ImageView
 import androidx.appcompat.app.AppCompatDelegate
 import androidx.fragment.app.viewModels
 import androidx.navigation.fragment.findNavController
-import com.truedigital.features.truecloudv3.R
-import com.truedigital.features.truecloudv3.databinding.FragmentIntroTrueCloudBinding
 import com.truedigital.common.share.componentv3.extension.safePopBackStack
 import com.truedigital.component.base.BaseFragment
 import com.truedigital.core.extensions.viewBinding
+import com.truedigital.features.truecloudv3.R
+import com.truedigital.features.truecloudv3.databinding.FragmentIntroTrueCloudBinding
 import com.truedigital.features.truecloudv3.injections.TrueCloudV3Component
 import com.truedigital.features.truecloudv3.presentation.viewmodel.IntroTrueCloudViewModel
 import com.truedigital.foundation.extension.RESIZE_NONE
@@ -52,7 +52,7 @@ class IntroTrueCloudFragment : BaseFragment(R.layout.fragment_intro_true_cloud) 
         initViews()
         observeViewModel()
 
-        val isTablet = context?.resources?.getBoolean(R.bool.is_tablet) ?: false
+        val isTablet = context?.resources?.getBoolean(androidx.mediarouter.R.bool.is_tablet) ?: false
         viewModel.checkAuthenticationState(isTablet)
     }
 

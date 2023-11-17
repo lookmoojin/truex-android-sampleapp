@@ -47,21 +47,21 @@ class AutoBackupListViewHolder(
                 )
             )
             trueCloudCancelImageView.imageTintList = (
-                    ColorStateList.valueOf(
-                        ContextCompat.getColor(
-                            root.context,
-                            task.status.actionColor
-                        )
+                ColorStateList.valueOf(
+                    ContextCompat.getColor(
+                        root.context,
+                        task.status.actionColor
                     )
-                    )
+                )
+                )
             trueCloudRetryImageView.imageTintList = (
-                    ColorStateList.valueOf(
-                        ContextCompat.getColor(
-                            root.context,
-                            task.status.actionColor
-                        )
+                ColorStateList.valueOf(
+                    ContextCompat.getColor(
+                        root.context,
+                        task.status.actionColor
                     )
-                    )
+                )
+                )
             trueCloudUploadProgress.progress = task.progress?.toInt() ?: 0
             var status = root.context.getString(task.status.textStatus)
             if (TaskStatusType.IN_PROGRESS == task.status) {

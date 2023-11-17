@@ -49,7 +49,7 @@ class OptionFileSelectedBottomSheetDialogViewModel @Inject constructor(
         openPage(FileRepositoryImpl.MOVE)
         analyticManagerInterface.trackEvent(
             hashMapOf(
-                MeasurementConstant.Key.KEY_LINK_TYPE to TrueCloudV3TrackAnalytic.EVENT_CLICK,
+                MeasurementConstant.Key.KEY_EVENT_NAME to TrueCloudV3TrackAnalytic.EVENT_CLICK,
                 MeasurementConstant.Key.KEY_LINK_TYPE to TrueCloudV3TrackAnalytic.LINK_TYPE_BOTTOM_SHEET,
                 MeasurementConstant.Key.KEY_LINK_DESC to TrueCloudV3TrackAnalytic.LINK_DESC_MOVE_TO
             )
@@ -60,7 +60,7 @@ class OptionFileSelectedBottomSheetDialogViewModel @Inject constructor(
         openPage(FileRepositoryImpl.COPY)
         analyticManagerInterface.trackEvent(
             hashMapOf(
-                MeasurementConstant.Key.KEY_LINK_TYPE to TrueCloudV3TrackAnalytic.EVENT_CLICK,
+                MeasurementConstant.Key.KEY_EVENT_NAME to TrueCloudV3TrackAnalytic.EVENT_CLICK,
                 MeasurementConstant.Key.KEY_LINK_TYPE to TrueCloudV3TrackAnalytic.LINK_TYPE_BOTTOM_SHEET,
                 MeasurementConstant.Key.KEY_LINK_DESC to TrueCloudV3TrackAnalytic.LINK_DESC_COPY_TO
             )
@@ -70,7 +70,7 @@ class OptionFileSelectedBottomSheetDialogViewModel @Inject constructor(
     fun deleteSelectedItem() {
         analyticManagerInterface.trackEvent(
             hashMapOf(
-                MeasurementConstant.Key.KEY_LINK_TYPE to TrueCloudV3TrackAnalytic.EVENT_CLICK,
+                MeasurementConstant.Key.KEY_EVENT_NAME to TrueCloudV3TrackAnalytic.EVENT_CLICK,
                 MeasurementConstant.Key.KEY_LINK_TYPE to TrueCloudV3TrackAnalytic.LINK_TYPE_BOTTOM_SHEET,
                 MeasurementConstant.Key.KEY_LINK_DESC to TrueCloudV3TrackAnalytic.LINK_DESC_REMOVE_TO_TRASH
             )

@@ -8,9 +8,9 @@ import android.view.ViewGroup
 import android.widget.FrameLayout
 import com.google.android.material.bottomsheet.BottomSheetBehavior
 import com.google.android.material.bottomsheet.BottomSheetDialogFragment
+import com.truedigital.core.extensions.viewBinding
 import com.truedigital.features.truecloudv3.R
 import com.truedigital.features.truecloudv3.databinding.TrueCloudv3CreateNewBottomSheetDialogBinding
-import com.truedigital.core.extensions.viewBinding
 import com.truedigital.foundation.extension.onClick
 
 class CreateNewBottomSheetDialogFragment(private val onCreateFolderClick: OnCreateFolderClick) :
@@ -32,9 +32,9 @@ class CreateNewBottomSheetDialogFragment(private val onCreateFolderClick: OnCrea
     override fun onCreateDialog(savedInstanceState: Bundle?): Dialog {
         return super.onCreateDialog(savedInstanceState).apply {
             setOnShowListener {
-                val parentLayout = findViewById<View>(R.id.design_bottom_sheet) as FrameLayout
+                val parentLayout = findViewById<View>(com.google.android.material.R.id.design_bottom_sheet) as FrameLayout
                 parentLayout.let { bottomSheet ->
-                    bottomSheet.setBackgroundResource(R.color.transparent)
+                    bottomSheet.setBackgroundResource(com.truedigital.component.R.color.transparent)
                     val behaviour = BottomSheetBehavior.from(bottomSheet)
                     behaviour.isDraggable = false
                 }

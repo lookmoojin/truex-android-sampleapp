@@ -26,6 +26,7 @@ class FileHeaderViewHolder(
 
     companion object {
         private const val EMPTY_SIZE = 0
+        private var IS_PAUSE_ALL_CLICK = false
     }
 
     fun bind(size: Int, title: String, type: HeaderType) {
@@ -63,6 +64,8 @@ class FileHeaderViewHolder(
             trueCloudCancelAllTextView.visible()
             trueCloudExpandImageView.visible()
             trueCloudUploadTitleLayout.visible()
+            trueCloudV3ActionContainer.gone()
+            trueCloudCancelImageView.gone()
             trueCloudUploadTitleTextView.text =
                 trueCloudUploadTitleTextView.context.getString(
                     R.string.true_cloudv3_upload_header,
@@ -106,17 +109,24 @@ class FileHeaderViewHolder(
     private fun setupClickActionButton() {
         binding.apply {
             trueCloudPauseImageView.onClick {
+                IS_PAUSE_ALL_CLICK = true
                 trueCloudPauseImageView.gone()
                 trueCloudRetryImageView.visible()
                 onActionClickListener.onPauseAllBackupClicked()
             }
             trueCloudRetryImageView.onClick {
+                IS_PAUSE_ALL_CLICK = false
                 trueCloudRetryImageView.gone()
                 trueCloudPauseImageView.visible()
                 onActionClickListener.onResumeAllBackupClicked()
             }
             trueCloudCancelImageView.onClick {
                 onActionClickListener.onCancelAllBackupClicked()
+            }
+            if (IS_PAUSE_ALL_CLICK) {
+                trueCloudRetryImageView.visible()
+            } else {
+                trueCloudRetryImageView.gone()
             }
         }
     }
@@ -147,6 +157,8 @@ class FileHeaderViewHolder(
         binding.apply {
             trueCloudCancelAllTextView.gone()
             trueCloudExpandImageView.gone()
+            trueCloudV3ActionContainer.gone()
+            trueCloudCancelImageView.gone()
             trueCloudUploadTitleLayout.visible()
             trueCloudUploadTitleTextView.text = title
             this.root.setOnClickListener(null)

@@ -6,8 +6,8 @@ import com.bumptech.glide.Priority
 import com.bumptech.glide.load.engine.DiskCacheStrategy
 import com.bumptech.glide.signature.ObjectKey
 import com.truedigital.features.truecloudv3.R
-import com.truedigital.features.truecloudv3.databinding.TrueCloudv3ViewholderItemListBinding
 import com.truedigital.features.truecloudv3.common.FileMimeType
+import com.truedigital.features.truecloudv3.databinding.TrueCloudv3ViewholderItemListBinding
 import com.truedigital.features.truecloudv3.domain.model.TrueCloudFilesModel
 import com.truedigital.foundation.extension.gone
 import com.truedigital.foundation.extension.invisible
@@ -79,7 +79,6 @@ class FilesListViewHolder(
                 trueCloudSelectImageView.isSelected =
                     onItemSelected?.getSelectedList()?.contains(file) == true
             }
-
             locatorMode -> {
                 trueCloudMoreImageView.gone()
                 trueCloudSelectImageView.gone()
@@ -87,11 +86,9 @@ class FilesListViewHolder(
                 root.alpha = ALPHA_07
                 root.isClickable = false
             }
-
             isTrashMode -> {
                 trueCloudDetailTextView.text = deleteIn
             }
-
             else -> {
                 trueCloudSelectImageView.gone()
                 trueCloudMoreImageView.visible()

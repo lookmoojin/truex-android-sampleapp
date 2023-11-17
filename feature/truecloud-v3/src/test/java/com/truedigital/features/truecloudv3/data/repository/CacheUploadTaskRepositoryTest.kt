@@ -27,6 +27,8 @@ internal interface CacheUploadTaskRepositoryTestImpl {
     fun `test getTask return success`()
     fun `test getInprogressTask return success`()
     fun `test updateStatus2 return success`()
+    fun `test getTaskByObjectId return success`()
+    fun `test getTaskByObjectId return empty`()
 }
 
 class CacheUploadTaskRepositoryTest : CacheUploadTaskRepositoryTestImpl {
@@ -55,7 +57,8 @@ class CacheUploadTaskRepositoryTest : CacheUploadTaskRepositoryTestImpl {
             name = "xyz.jpg",
             size = "100",
             type = FileMimeType.IMAGE,
-            updateAt = 1L
+            updateAt = 1L,
+            objectId = "1"
         )
         val list = mutableListOf(taskUploadModel)
         val uploadFileModel = taskUploadModel.getUploadFilesModel()
@@ -317,7 +320,7 @@ class CacheUploadTaskRepositoryTest : CacheUploadTaskRepositoryTestImpl {
     }
 
     @Test
-    fun `getTasks should return correct task list`() = runTest {
+    fun `getRefreshTasks should return correct task list`() = runTest {
         // Set up mock behavior
         val taskUploadModel = TaskUploadModel(
             id = 1,
@@ -339,7 +342,7 @@ class CacheUploadTaskRepositoryTest : CacheUploadTaskRepositoryTestImpl {
         coEvery { mockCacheUploadTaskRepositoryImpl.getTask() } returns taskList
 
         // Call getTasks and collect emitted values
-        val taskListFlow = cacheUploadTaskRepositoryImpl.getTasks()
+        val taskListFlow = cacheUploadTaskRepositoryImpl.getRefreshTasks()
         val emittedTaskLists = mutableListOf<MutableList<TaskUploadModel>>()
         emittedTaskLists.add(taskListFlow.first() ?: mutableListOf())
 
@@ -559,6 +562,7 @@ class CacheUploadTaskRepositoryTest : CacheUploadTaskRepositoryTestImpl {
             }
         }
     }
+
     @Test
     fun testUpdateTaskIdWithObjectId() = runTest {
 // arrange
@@ -607,7 +611,7 @@ class CacheUploadTaskRepositoryTest : CacheUploadTaskRepositoryTestImpl {
         } returns Unit
 
         // act
-        cacheUploadTaskRepository.updateTaskIdWithObjectId(taskUploadModel)
+        cacheUploadTaskRepository.updateTaskIdWithObjectId(taskUploadModel, "objectId1")
 
         // assert
         coVerify(exactly = 1) {
@@ -672,7 +676,7 @@ class CacheUploadTaskRepositoryTest : CacheUploadTaskRepositoryTestImpl {
         } returns Unit
 
         // act
-        cacheUploadTaskRepository.updateTaskIdWithObjectId(taskUploadModel)
+        cacheUploadTaskRepository.updateTaskIdWithObjectId(taskUploadModel, "objectId1")
 
         // assert
         coVerify(exactly = 1) {
@@ -685,5 +689,81 @@ class CacheUploadTaskRepositoryTest : CacheUploadTaskRepositoryTestImpl {
                 )
             }
         }
+    }
+
+    @Test
+    override fun `test getTaskByObjectId return success`() = runTest {
+        // arrange
+        val taskUploadModel = TaskUploadModel(
+            id = 1,
+            path = "abc",
+            status = TaskStatusType.IN_PROGRESS,
+            name = "xyz.jpg",
+            size = "100",
+            type = FileMimeType.IMAGE,
+            updateAt = 0L,
+            coverImageSize = 0,
+            objectId = "1239143245245",
+            actionType = TaskActionType.UPLOAD,
+            progress = 990
+        )
+        val taskUploadModel2 = TaskUploadModel(
+            id = 2,
+            path = "abc",
+            status = TaskStatusType.IN_PROGRESS,
+            name = "xyz.jpg",
+            size = "100",
+            type = FileMimeType.IMAGE,
+            updateAt = 0L
+        )
+        val uploadFileModel = taskUploadModel.getUploadFilesModel()
+        taskUploadModel2.progress = 890
+        taskUploadModel2.objectId = "1235624y5345"
+        taskUploadModel2.coverImageSize = 0
+        taskUploadModel2.type = FileMimeType.VIDEO
+        taskUploadModel2.size = "5324"
+        taskUploadModel2.name = "name test"
+
+        val list = mutableListOf(taskUploadModel, taskUploadModel2)
+        coEvery {
+            dataStoreUtil.getSinglePreference(
+                stringPreferencesKey(KEY_TURE_CLOUD_V3_UPLOAD_TASK),
+                ""
+            )
+        } returns Gson().toJson(list)
+
+        // act
+        val response = cacheUploadTaskRepository.getTaskByObjectId("1239143245245")
+
+        // assert
+        assertEquals(taskUploadModel, response)
+        assertEquals(uploadFileModel, response?.getUploadFilesModel())
+        assertEquals(uploadFileModel.id, response?.getUploadFilesModel()?.id)
+        assertEquals(uploadFileModel.path, response?.getUploadFilesModel()?.path)
+        assertEquals(uploadFileModel.name, response?.getUploadFilesModel()?.name)
+        assertEquals(uploadFileModel.size, response?.getUploadFilesModel()?.size)
+        assertEquals(uploadFileModel.type, response?.getUploadFilesModel()?.type)
+        assertEquals(uploadFileModel.updateAt, response?.getUploadFilesModel()?.updateAt)
+        assertEquals(uploadFileModel.status, response?.getUploadFilesModel()?.status)
+        assertEquals(uploadFileModel.actionType, response?.getUploadFilesModel()?.actionType)
+        assertEquals(uploadFileModel.objectId, response?.getUploadFilesModel()?.objectId)
+        assertEquals(uploadFileModel.progress, response?.getUploadFilesModel()?.progress)
+    }
+
+    @Test
+    override fun `test getTaskByObjectId return empty`() = runTest {
+        // arrange
+        coEvery {
+            dataStoreUtil.getSinglePreference(
+                stringPreferencesKey(KEY_TURE_CLOUD_V3_UPLOAD_TASK),
+                ""
+            )
+        } returns ""
+
+        // act
+        val response = cacheUploadTaskRepositoryImpl.getTaskByObjectId("")
+
+        // assert
+        assertEquals(response, null)
     }
 }

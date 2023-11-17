@@ -16,13 +16,11 @@ class AlphabetViewHolder(
     fun bind(item: AlphabetItemModel) {
         binding.trueCloudTitleTextView.text = item.alphabet
         if (item.isActive) {
-            val activeColor =
-                ContextCompat.getColor(binding.root.context, R.color.true_cloudv3_color_black)
+            val activeColor = ContextCompat.getColor(binding.root.context, R.color.true_cloudv3_color_black)
             binding.trueCloudTitleTextView.setTextColor(activeColor)
             binding.trueCloudTitleTextView.setTypeface(null, Typeface.BOLD)
         } else {
-            val inactiveColor =
-                ContextCompat.getColor(binding.root.context, R.color.true_cloudv3_color_gray_30)
+            val inactiveColor = ContextCompat.getColor(binding.root.context, R.color.true_cloudv3_color_gray_30)
             binding.trueCloudTitleTextView.setTextColor(inactiveColor)
             binding.trueCloudTitleTextView.setTypeface(null, Typeface.NORMAL)
         }

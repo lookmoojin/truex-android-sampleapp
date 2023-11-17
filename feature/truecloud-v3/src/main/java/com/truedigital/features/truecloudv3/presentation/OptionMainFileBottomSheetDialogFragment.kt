@@ -11,13 +11,12 @@ import androidx.fragment.app.viewModels
 import androidx.navigation.fragment.findNavController
 import com.google.android.material.bottomsheet.BottomSheetBehavior
 import com.google.android.material.bottomsheet.BottomSheetDialogFragment
-import com.truedigital.features.truecloudv3.R
-import com.truedigital.features.truecloudv3.databinding.TrueCloudv3MoreOptionBottomSheetDialogBinding
 import com.truedigital.common.share.componentv3.extension.getSavedStateHandle
 import com.truedigital.common.share.componentv3.extension.setSavedStateHandle
 import com.truedigital.component.dialog.trueid.DialogIconType
 import com.truedigital.component.dialog.trueid.DialogManager
 import com.truedigital.core.extensions.viewBinding
+import com.truedigital.features.truecloudv3.R
 import com.truedigital.features.truecloudv3.common.SortType
 import com.truedigital.features.truecloudv3.common.TrueCloudV3KeyBundle.KEY_BUNDLE_TRUE_CLOUD_SORT_TYPE
 import com.truedigital.features.truecloudv3.common.TrueCloudV3KeyBundle.KEY_BUNDLE_TRUE_CLOUD_TRASH
@@ -25,6 +24,7 @@ import com.truedigital.features.truecloudv3.common.TrueCloudV3SaveStateKey.KEY_T
 import com.truedigital.features.truecloudv3.common.TrueCloudV3SaveStateKey.KEY_TRUE_CLOUD_OPTION_MAIN_FILE_EMPTY_TRASH
 import com.truedigital.features.truecloudv3.common.TrueCloudV3SaveStateKey.KEY_TRUE_CLOUD_OPTION_MAIN_FILE_SELECT_MODE
 import com.truedigital.features.truecloudv3.common.TrueCloudV3SaveStateKey.KEY_TRUE_CLOUD_OPTION_MAIN_FILE_SORT_BY
+import com.truedigital.features.truecloudv3.databinding.TrueCloudv3MoreOptionBottomSheetDialogBinding
 import com.truedigital.features.truecloudv3.injections.TrueCloudV3Component
 import com.truedigital.features.truecloudv3.presentation.viewmodel.OptionMainFileBottomSheetDialogViewModel
 import com.truedigital.foundation.extension.gone
@@ -62,9 +62,9 @@ class OptionMainFileBottomSheetDialogFragment : BottomSheetDialogFragment() {
     override fun onCreateDialog(savedInstanceState: Bundle?): Dialog {
         return super.onCreateDialog(savedInstanceState).apply {
             setOnShowListener {
-                val parentLayout = findViewById<View>(R.id.design_bottom_sheet) as FrameLayout
+                val parentLayout = findViewById<View>(com.google.android.material.R.id.design_bottom_sheet) as FrameLayout
                 parentLayout.let { bottomSheet ->
-                    bottomSheet.setBackgroundResource(R.color.transparent)
+                    bottomSheet.setBackgroundResource(com.truedigital.component.R.color.transparent)
                     val behaviour = BottomSheetBehavior.from(bottomSheet)
                     behaviour.isDraggable = false
                 }
@@ -164,7 +164,7 @@ class OptionMainFileBottomSheetDialogFragment : BottomSheetDialogFragment() {
             title = getString(R.string.true_cloudv3_empty_trash_title),
             subTitle = getString(R.string.true_cloudv3_empty_trash_desc)
         ) {
-            setSecondaryButton(R.string.cancel) { dialog ->
+            setSecondaryButton(com.truedigital.component.R.string.cancel) { dialog ->
                 dialog.dismiss()
             }
             setPrimaryButton(R.string.true_cloudv3_button_confirm) {

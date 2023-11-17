@@ -32,7 +32,6 @@ class ContactAdapter : RecyclerView.Adapter<RecyclerView.ViewHolder>() {
                     )
                 )
             }
-
             CONTACT_ITEM_VIEW_TYPE -> {
                 ContactViewHolder(
                     TrueCloudv3ViewholderContactItemBinding.inflate(
@@ -43,7 +42,6 @@ class ContactAdapter : RecyclerView.Adapter<RecyclerView.ViewHolder>() {
                     onItemClicked
                 )
             }
-
             else -> {
                 NewRelic.recordHandledException(
                     Exception("View type $viewType isn't supported in AddressBookContactAdapter")
@@ -59,7 +57,6 @@ class ContactAdapter : RecyclerView.Adapter<RecyclerView.ViewHolder>() {
                 is ContactHeaderViewHolder -> {
                     (item as HeaderSelectionModel).let { holder.bind(it) }
                 }
-
                 is ContactViewHolder -> {
                     (item as ContactTrueCloudModel).let { holder.bind(it) }
                 }
@@ -78,7 +75,6 @@ class ContactAdapter : RecyclerView.Adapter<RecyclerView.ViewHolder>() {
     override fun getItemCount(): Int {
         return contactList.size
     }
-
     fun getItemAtPosition(position: Int): Contact {
         return contactList[position]
     }

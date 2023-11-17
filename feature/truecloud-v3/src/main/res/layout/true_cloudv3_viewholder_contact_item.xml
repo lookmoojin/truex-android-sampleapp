@@ -37,7 +37,7 @@
         style="@style/TrueID.Small.Black"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="@dimen/dp_15"
+        android:layout_marginStart="15dp"
         android:drawablePadding="@dimen/true_cloudv3_spacing_2s"
         android:ellipsize="end"
         android:singleLine="true"

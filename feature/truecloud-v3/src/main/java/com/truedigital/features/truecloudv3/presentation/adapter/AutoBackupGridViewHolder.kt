@@ -4,8 +4,8 @@ import android.content.res.ColorStateList
 import androidx.core.content.ContextCompat
 import androidx.recyclerview.widget.RecyclerView
 import com.truedigital.features.truecloudv3.R
-import com.truedigital.features.truecloudv3.databinding.TrueCloudv3ViewholderUploadItemGridBinding
 import com.truedigital.features.truecloudv3.common.TaskStatusType
+import com.truedigital.features.truecloudv3.databinding.TrueCloudv3ViewholderUploadItemGridBinding
 import com.truedigital.features.truecloudv3.domain.model.TrueCloudFilesModel
 import com.truedigital.features.truecloudv3.extension.convertBackupToUpload
 
@@ -62,21 +62,21 @@ class AutoBackupGridViewHolder(
             )
 
             trueCloudRetryImageView.imageTintList = (
-                    ColorStateList.valueOf(
-                        ContextCompat.getColor(
-                            trueCloudRetryImageView.context,
-                            status.actionColor
-                        )
+                ColorStateList.valueOf(
+                    ContextCompat.getColor(
+                        trueCloudRetryImageView.context,
+                        status.actionColor
                     )
-                    )
+                )
+                )
             trueCloudCancelImageView.imageTintList = (
-                    ColorStateList.valueOf(
-                        ContextCompat.getColor(
-                            trueCloudCancelImageView.context,
-                            status.actionColor
-                        )
+                ColorStateList.valueOf(
+                    ContextCompat.getColor(
+                        trueCloudCancelImageView.context,
+                        status.actionColor
                     )
-                    )
+                )
+                )
 
             trueCloudLinearProgressIndicator.trackColor = ContextCompat.getColor(
                 trueCloudCancelImageView.context,

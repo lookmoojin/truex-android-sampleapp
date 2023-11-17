@@ -30,9 +30,9 @@ fun View.snackBar(message: String, color: Int) {
             ContextCompat.getColor(context, color)
         )
         if (color == R.color.true_cloudv3_color_toast_success) {
-            setCompoundDrawablesWithIntrinsicBounds(R.drawable.ic_check_circle, 0, 0, 0)
+            setCompoundDrawablesWithIntrinsicBounds(com.truedigital.common.share.componentv3.R.drawable.ic_check_circle, 0, 0, 0)
         } else {
-            setCompoundDrawablesWithIntrinsicBounds(R.drawable.ic_cross_circle, 0, 0, 0)
+            setCompoundDrawablesWithIntrinsicBounds(com.truedigital.common.share.componentv3.R.drawable.ic_cross_circle, 0, 0, 0)
         }
     }
     val snackBar = Snackbar.make(this, "", Snackbar.LENGTH_SHORT)

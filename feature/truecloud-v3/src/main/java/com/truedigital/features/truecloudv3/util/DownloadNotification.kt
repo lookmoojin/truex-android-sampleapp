@@ -1,7 +1,6 @@
 package com.truedigital.features.truecloudv3.util
 
 import android.Manifest
-import android.annotation.SuppressLint
 import android.app.Notification
 import android.app.NotificationChannel
 import android.app.NotificationManager
@@ -10,6 +9,7 @@ import android.content.Context
 import android.content.Intent
 import android.content.pm.PackageManager
 import android.graphics.BitmapFactory
+import android.os.Build
 import android.os.Bundle
 import androidx.core.app.ActivityCompat
 import androidx.core.app.NotificationCompat
@@ -35,6 +35,7 @@ class DownloadNotification(val context: Context) {
         private const val DOWNLOAD_RESUME = "download_resume"
         private const val PAUSE = "pause"
         private const val RESUME = "resume"
+        private const val EMPTY_STRING = ""
     }
 
     init {
@@ -77,7 +78,6 @@ class DownloadNotification(val context: Context) {
         )
     }
 
-    @SuppressLint("MissingPermission")
     fun show(notificationId: Int, key: String?, path: String?) {
         builder.setContentTitle(context.getString(R.string.true_cloudv3_noti_title_downloading))
             .setLargeIcon(
@@ -87,7 +87,7 @@ class DownloadNotification(val context: Context) {
                 )
             )
             .addAction(getPauseAction(notificationId))
-            .setSmallIcon(R.mipmap.ic_notification_small)
+            .setSmallIcon(com.truedigital.core.R.mipmap.ic_notification_small)
             .setShowWhen(false)
             .setPriority(NotificationCompat.PRIORITY_LOW)
             .setOngoing(true)
@@ -104,7 +104,6 @@ class DownloadNotification(val context: Context) {
         notificationManagerCompat?.notify(notificationId, builder.build())
     }
 
-    @SuppressLint("MissingPermission")
     fun updateProgress(notificationId: Int, progress: Int) {
         builder.setContentText(
             context.getString(
@@ -117,7 +116,6 @@ class DownloadNotification(val context: Context) {
         notificationManagerCompat?.notify(notificationId, builder.build())
     }
 
-    @SuppressLint("MissingPermission")
     fun downloadComplete(notificationId: Int) {
         builder.setContentText(context.getString(R.string.true_cloudv3_noti_title_download_complete))
             .setProgress(MIN_PROGRESS, MIN_PROGRESS, false)
@@ -127,7 +125,6 @@ class DownloadNotification(val context: Context) {
         notificationManagerCompat?.notify(notificationId, builder.build())
     }
 
-    @SuppressLint("MissingPermission")
     fun downloadFailed(notificationId: Int) {
         builder.setContentText(context.getString(R.string.true_cloudv3_noti_title_download_failed))
             .setProgress(MIN_PROGRESS, MIN_PROGRESS, false)
@@ -137,7 +134,6 @@ class DownloadNotification(val context: Context) {
         notificationManagerCompat?.notify(notificationId, builder.build())
     }
 
-    @SuppressLint("MissingPermission")
     fun downloadPause(notificationId: Int) {
         builder.setContentText(context.getString(R.string.true_cloudv3_noti_title_download_pause))
             .clearActions()
@@ -147,7 +143,6 @@ class DownloadNotification(val context: Context) {
         notificationManagerCompat?.notify(notificationId, builder.build())
     }
 
-    @SuppressLint("MissingPermission")
     fun downloadResume(notificationId: Int) {
         builder.setContentText(context.getString(R.string.true_cloudv3_noti_title_downloading))
             .clearActions()
@@ -159,18 +154,20 @@ class DownloadNotification(val context: Context) {
 
     @VisibleForTesting
     fun createNotificationChannel(context: Context): String {
-        val notificationChannel =
-            NotificationChannel(
-                TRUE_CLOUD_DOWNLOAD_CHANNEL_ID,
-                TRUE_CLOUD_DOWNLOAD_CHANNEL_NAME, NotificationManager.IMPORTANCE_HIGH
-            )
-        notificationChannel.lockscreenVisibility = Notification.VISIBILITY_PUBLIC
-        notificationManagerCompat = NotificationManagerCompat.from(context)
-        notificationManagerCompat?.createNotificationChannel(notificationChannel)
-
-        return TRUE_CLOUD_DOWNLOAD_CHANNEL_ID
+        return if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
+            val notificationChannel =
+                NotificationChannel(
+                    TRUE_CLOUD_DOWNLOAD_CHANNEL_ID,
+                    TRUE_CLOUD_DOWNLOAD_CHANNEL_NAME, NotificationManager.IMPORTANCE_HIGH
+                )
+            notificationChannel.lockscreenVisibility = Notification.VISIBILITY_PUBLIC
+            notificationManagerCompat = NotificationManagerCompat.from(context)
+            notificationManagerCompat?.createNotificationChannel(notificationChannel)
+            TRUE_CLOUD_DOWNLOAD_CHANNEL_ID
+        } else {
+            EMPTY_STRING
+        }
     }
-
     private fun checkPostNotificationPermission(): Boolean {
         if (ActivityCompat.checkSelfPermission(
                 context,

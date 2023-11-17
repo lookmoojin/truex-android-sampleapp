@@ -31,7 +31,7 @@ class OptionTrashFileBottomSheetDialogViewModel @Inject constructor(
         onRestore.value = selectedItemList
         analyticManagerInterface.trackEvent(
             hashMapOf(
-                MeasurementConstant.Key.KEY_LINK_TYPE to TrueCloudV3TrackAnalytic.EVENT_CLICK,
+                MeasurementConstant.Key.KEY_EVENT_NAME to TrueCloudV3TrackAnalytic.EVENT_CLICK,
                 MeasurementConstant.Key.KEY_LINK_TYPE to TrueCloudV3TrackAnalytic.LINK_TYPE_BOTTOM_SHEET,
                 MeasurementConstant.Key.KEY_LINK_DESC to TrueCloudV3TrackAnalytic.LINK_DESC_RESTORE
             )
@@ -42,7 +42,7 @@ class OptionTrashFileBottomSheetDialogViewModel @Inject constructor(
         onConfirmDelete.value = Unit
         analyticManagerInterface.trackEvent(
             hashMapOf(
-                MeasurementConstant.Key.KEY_LINK_TYPE to TrueCloudV3TrackAnalytic.EVENT_CLICK,
+                MeasurementConstant.Key.KEY_EVENT_NAME to TrueCloudV3TrackAnalytic.EVENT_CLICK,
                 MeasurementConstant.Key.KEY_LINK_TYPE to TrueCloudV3TrackAnalytic.LINK_TYPE_BOTTOM_SHEET,
                 MeasurementConstant.Key.KEY_LINK_DESC to TrueCloudV3TrackAnalytic.LINK_DESC_DELETE_PERMANENT
             )

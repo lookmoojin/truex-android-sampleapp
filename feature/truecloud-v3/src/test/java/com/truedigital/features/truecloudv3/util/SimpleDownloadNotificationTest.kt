@@ -28,7 +28,6 @@ internal class SimpleDownloadNotificationTest {
         simpleDownloadNotification = SimpleDownloadNotification(context)
     }
 
-    @Disabled
     @Test
     fun `show download notification test`() {
         // arrange
@@ -60,7 +59,6 @@ internal class SimpleDownloadNotificationTest {
         }
     }
 
-    @Disabled
     @Test
     fun `update notification progress test`() {
         // arrange
@@ -123,7 +121,6 @@ internal class SimpleDownloadNotificationTest {
         )
     }
 
-    @Disabled
     @Test
     fun `download notification success test`() {
         // arrange

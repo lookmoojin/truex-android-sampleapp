@@ -9,13 +9,13 @@ import android.widget.FrameLayout
 import androidx.navigation.fragment.findNavController
 import com.google.android.material.bottomsheet.BottomSheetBehavior
 import com.google.android.material.bottomsheet.BottomSheetDialogFragment
-import com.truedigital.features.truecloudv3.R
-import com.truedigital.features.truecloudv3.databinding.TrueCloudv3SortByBottomSheetDialogBinding
 import com.truedigital.common.share.componentv3.extension.setSavedStateHandle
 import com.truedigital.core.extensions.viewBinding
+import com.truedigital.features.truecloudv3.R
 import com.truedigital.features.truecloudv3.common.SortType
 import com.truedigital.features.truecloudv3.common.TrueCloudV3KeyBundle.KEY_BUNDLE_TRUE_CLOUD_SORT_TYPE
 import com.truedigital.features.truecloudv3.common.TrueCloudV3SaveStateKey
+import com.truedigital.features.truecloudv3.databinding.TrueCloudv3SortByBottomSheetDialogBinding
 import com.truedigital.foundation.extension.onClick
 
 class SortByBottomSheetDialogFragment : BottomSheetDialogFragment() {
@@ -33,9 +33,9 @@ class SortByBottomSheetDialogFragment : BottomSheetDialogFragment() {
     override fun onCreateDialog(savedInstanceState: Bundle?): Dialog {
         return super.onCreateDialog(savedInstanceState).apply {
             setOnShowListener {
-                val parentLayout = findViewById<View>(R.id.design_bottom_sheet) as FrameLayout
+                val parentLayout = findViewById<View>(com.google.android.material.R.id.design_bottom_sheet) as FrameLayout
                 parentLayout.let { bottomSheet ->
-                    bottomSheet.setBackgroundResource(R.color.transparent)
+                    bottomSheet.setBackgroundResource(com.truedigital.component.R.color.transparent)
                     val behaviour = BottomSheetBehavior.from(bottomSheet)
                     behaviour.isDraggable = true
                 }
@@ -58,23 +58,18 @@ class SortByBottomSheetDialogFragment : BottomSheetDialogFragment() {
             SortType.SORT_DATE_ASC -> {
                 trueCloudOldToNewRadioButton.isChecked = true
             }
-
             SortType.SORT_DATE_DESC -> {
                 trueCloudNewToOldRadioButton.isChecked = true
             }
-
             SortType.SORT_NAME_ASC -> {
                 trueCloudRadioAtoZRadioButton.isChecked = true
             }
-
             SortType.SORT_NAME_DESC -> {
                 trueCloudZtoARadioButton.isChecked = true
             }
-
             SortType.SORT_SIZE_ASC -> {
                 trueCloudSizeSmallToLargeRadioButton.isChecked = true
             }
-
             SortType.SORT_SIZE_DESC -> {
                 trueCloudSizeLargeToSmallRadioButton.isChecked = true
             }
@@ -100,7 +95,6 @@ class SortByBottomSheetDialogFragment : BottomSheetDialogFragment() {
                     selectedSortType =
                         SortType.SORT_SIZE_DESC
                 }
-
                 trueCloudSizeSmallToLargeRadioButton.isChecked -> {
                     selectedSortType = SortType.SORT_SIZE_ASC
                 }

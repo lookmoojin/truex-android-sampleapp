@@ -27,12 +27,12 @@ class TrueCloudV3RetryUploadUseCaseTest {
         // arrange
         val transferObserver: TransferObserver = mockk()
         coEvery {
-            uploadFileRepository.retryTask(any(), any())
+            uploadFileRepository.retryTask(any())
         } returns flow {
             emit(transferObserver)
         }
         // act
-        val flow = retryUploadUseCase.execute("path", "id")
+        val flow = retryUploadUseCase.execute("id")
 
         // assert
         flow.collectSafe { response ->

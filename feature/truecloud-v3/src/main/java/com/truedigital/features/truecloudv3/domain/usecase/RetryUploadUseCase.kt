@@ -7,13 +7,13 @@ import kotlinx.coroutines.flow.map
 import javax.inject.Inject
 
 interface RetryUploadUseCase {
-    fun execute(path: String, id: String): Flow<TrueCloudV3TransferObserver>
+    fun execute(id: String): Flow<TrueCloudV3TransferObserver>
 }
 
 class RetryUploadUseCaseImpl @Inject constructor(
     private val uploadFileRepository: UploadFileRepository
 ) : RetryUploadUseCase {
-    override fun execute(path: String, id: String): Flow<TrueCloudV3TransferObserver> {
-        return uploadFileRepository.retryTask(path, id).map { TrueCloudV3TransferObserver(it) }
+    override fun execute(id: String): Flow<TrueCloudV3TransferObserver> {
+        return uploadFileRepository.retryTask(id).map { TrueCloudV3TransferObserver(it) }
     }
 }

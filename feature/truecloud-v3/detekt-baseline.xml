@@ -1,0 +1,73 @@
+<?xml version="1.0" ?>
+<SmellBaseline>
+  <ManuallySuppressedIssues></ManuallySuppressedIssues>
+  <CurrentIssues>
+    <ID>ComplexMethod:FilesAdapter.kt$FilesAdapter$override fun getItemViewType(position: Int): Int</ID>
+    <ID>ComplexMethod:FilesAdapter.kt$FilesAdapter$override fun onBindViewHolder(holder: RecyclerView.ViewHolder, position: Int)</ID>
+    <ID>ComplexMethod:FilesAdapter.kt$FilesAdapter$override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): RecyclerView.ViewHolder</ID>
+    <ID>ComplexMethod:TrueCloudV3TransferObserver.kt$TrueCloudV3TransferObserver$@VisibleForTesting fun getTrueCloudV3State(transferState: TransferState?): TrueCloudV3TransferState</ID>
+    <ID>ConstructorParameterNaming:DegreeRulerValuePicker.kt$DegreeRulerValuePicker.SavedState$`in`: Parcel</ID>
+    <ID>LargeClass:FilesTrueCloudViewModel.kt$FilesTrueCloudViewModel : ScopedViewModel</ID>
+    <ID>LongMethod:AutoBackupListViewHolder.kt$AutoBackupListViewHolder$fun bind(task: TrueCloudFilesModel.AutoBackup)</ID>
+    <ID>LongMethod:ContactFragment.kt$ContactFragment$private fun observeViewModel()</ID>
+    <ID>LongMethod:CreateContactDetailBottomSheetDialogFragment.kt$CreateContactDetailBottomSheetDialogFragment$private fun observeViewModel()</ID>
+    <ID>LongMethod:FileInfoBottomSheetDialogViewModel.kt$FileInfoBottomSheetDialogViewModel$private fun getFileInfoList(fileModel: TrueCloudFilesModel.File): List&lt;Pair&lt;String, String&gt;&gt;</ID>
+    <ID>LongMethod:FileLocatorFragment.kt$FileLocatorFragment$private fun observeViewModel()</ID>
+    <ID>LongMethod:FilesAdapter.kt$FilesAdapter$override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): RecyclerView.ViewHolder</ID>
+    <ID>LongMethod:FilesListViewHolder.kt$FilesListViewHolder$fun bind(file: TrueCloudFilesModel.File)</ID>
+    <ID>LongMethod:FilesTrueCloudFragment.kt$FilesTrueCloudFragment$private fun initListener()</ID>
+    <ID>LongMethod:FilesTrueCloudFragment.kt$FilesTrueCloudFragment$private fun observeViewModel()</ID>
+    <ID>LongMethod:MainTrueCloudV3Fragment.kt$MainTrueCloudV3Fragment$private fun observeViewModel()</ID>
+    <ID>LongMethod:SharedFileViewerFragment.kt$SharedFileViewerFragment$private fun downloadFileToDevice(sharedFile: SharedFileModel?)</ID>
+    <ID>LongMethod:TrashTrueCloudV3Fragment.kt$TrashTrueCloudV3Fragment$private fun observeViewModel()</ID>
+    <ID>LongMethod:UploadListViewHolder.kt$UploadListViewHolder$fun bind(task: TrueCloudFilesModel.Upload)</ID>
+    <ID>MaxLineLength:CreateContactDetailBottomSheetDialogFragment.kt$CreateContactDetailBottomSheetDialogFragment$val parentLayout = findViewById&lt;View&gt;(com.google.android.material.R.id.design_bottom_sheet) as FrameLayout</ID>
+    <ID>MaxLineLength:CreateContactSelectLabelBottomSheetDialogFragment.kt$CreateContactSelectLabelBottomSheetDialogFragment$val parentLayout = findViewById&lt;View&gt;(com.google.android.material.R.id.design_bottom_sheet) as FrameLayout</ID>
+    <ID>MaxLineLength:CreateMigrationBottomSheetCancelDialogFragment.kt$CreateMigrationBottomSheetCancelDialogFragment$val parentLayout = findViewById&lt;View&gt;(com.google.android.material.R.id.design_bottom_sheet) as FrameLayout</ID>
+    <ID>MaxLineLength:CreateMigrationBottomSheetDialogFragment.kt$CreateMigrationBottomSheetDialogFragment$val parentLayout = findViewById&lt;View&gt;(com.google.android.material.R.id.design_bottom_sheet) as FrameLayout</ID>
+    <ID>MaxLineLength:CreateNewBottomSheetDialogFragment.kt$CreateNewBottomSheetDialogFragment$val parentLayout = findViewById&lt;View&gt;(com.google.android.material.R.id.design_bottom_sheet) as FrameLayout</ID>
+    <ID>MaxLineLength:CreateOptionContactBottomSheetDialogFragment.kt$CreateOptionContactBottomSheetDialogFragment$val parentLayout = findViewById&lt;View&gt;(com.google.android.material.R.id.design_bottom_sheet) as FrameLayout</ID>
+    <ID>MaxLineLength:CreateSyncContactBottomSheetDialogFragment.kt$CreateSyncContactBottomSheetDialogFragment$val parentLayout = findViewById&lt;View&gt;(com.google.android.material.R.id.design_bottom_sheet) as FrameLayout</ID>
+    <ID>MaxLineLength:FileInfoBottomSheetDialogFragment.kt$FileInfoBottomSheetDialogFragment$val parentLayout = findViewById&lt;View&gt;(com.google.android.material.R.id.design_bottom_sheet) as FrameLayout</ID>
+    <ID>MaxLineLength:MigratedBottomSheetDialogFragment.kt$MigratedBottomSheetDialogFragment$val parentLayout = findViewById&lt;View&gt;(com.google.android.material.R.id.design_bottom_sheet) as FrameLayout</ID>
+    <ID>MaxLineLength:OptionFileBottomSheetDialogFragment.kt$OptionFileBottomSheetDialogFragment$val parentLayout = findViewById&lt;View&gt;(com.google.android.material.R.id.design_bottom_sheet) as FrameLayout</ID>
+    <ID>MaxLineLength:OptionFileSelectedBottomSheetDialogFragment.kt$OptionFileSelectedBottomSheetDialogFragment$val parentLayout = findViewById&lt;View&gt;(com.google.android.material.R.id.design_bottom_sheet) as FrameLayout</ID>
+    <ID>MaxLineLength:OptionMainFileBottomSheetDialogFragment.kt$OptionMainFileBottomSheetDialogFragment$val parentLayout = findViewById&lt;View&gt;(com.google.android.material.R.id.design_bottom_sheet) as FrameLayout</ID>
+    <ID>MaxLineLength:OptionTrashFileBottomSheetDialogFragment.kt$OptionTrashFileBottomSheetDialogFragment$val parentLayout = findViewById&lt;View&gt;(com.google.android.material.R.id.design_bottom_sheet) as FrameLayout</ID>
+    <ID>MaxLineLength:PhotoEditorTextFragment.kt$PhotoEditorTextFragment$binding.sukhumvitBoldTextView.isChecked -&gt; com.truedigital.common.share.resource.R.font.sukhumvit_tadmai_bold</ID>
+    <ID>MaxLineLength:SaveSharedFileBottomSheetDialogFragment.kt$SaveSharedFileBottomSheetDialogFragment$val parentLayout = findViewById&lt;View&gt;(com.google.android.material.R.id.design_bottom_sheet) as FrameLayout</ID>
+    <ID>MaxLineLength:ShareBottomSheetDialogFragment.kt$ShareBottomSheetDialogFragment$val parentLayout = findViewById&lt;View&gt;(com.google.android.material.R.id.design_bottom_sheet) as FrameLayout</ID>
+    <ID>MaxLineLength:SortByBottomSheetDialogFragment.kt$SortByBottomSheetDialogFragment$val parentLayout = findViewById&lt;View&gt;(com.google.android.material.R.id.design_bottom_sheet) as FrameLayout</ID>
+    <ID>MaxLineLength:TrueCloudV3StorageView.kt$TrueCloudV3StorageView$binding.headerAutoBackupTextView.setTextColor(ContextCompat.getColor(context, com.truedigital.component.R.color.red))</ID>
+    <ID>MaxLineLength:TrueCloudV3ViewExtension.kt$setCompoundDrawablesWithIntrinsicBounds(com.truedigital.common.share.componentv3.R.drawable.ic_check_circle, 0, 0, 0)</ID>
+    <ID>MaxLineLength:TrueCloudV3ViewExtension.kt$setCompoundDrawablesWithIntrinsicBounds(com.truedigital.common.share.componentv3.R.drawable.ic_cross_circle, 0, 0, 0)</ID>
+    <ID>NestedBlockDepth:FolderListViewHolder.kt$FolderListViewHolder$fun bind(folder: TrueCloudFilesModel.Folder)</ID>
+    <ID>NestedBlockDepth:TrueCloudV3FileUtil.kt$TrueCloudV3FileUtilImpl$override fun readContentToFile(uri: Uri, contextDataProvider: ContextDataProvider): File?</ID>
+    <ID>PrintStackTrace:SharedFileViewerFragment.kt$SharedFileViewerFragment$e</ID>
+    <ID>ReturnCount:SharedFileViewerViewModel.kt$SharedFileViewerViewModel$fun checkResponseStatus(response: SharedFileModel): Int</ID>
+    <ID>SwallowedException:FilesAdapter.kt$FilesAdapter$e: Exception</ID>
+    <ID>SwallowedException:TrueCloudV3FileExtension.kt$e: FileNotFoundException</ID>
+    <ID>SwallowedException:TrueCloudV3StringPathExtension.kt$e: SecurityException</ID>
+    <ID>TooManyFunctions:CacheUploadTaskRepository.kt$CacheUploadTaskRepositoryImpl : CacheUploadTaskRepository</ID>
+    <ID>TooManyFunctions:ContactEditFragment.kt$ContactEditFragment : BaseFragment</ID>
+    <ID>TooManyFunctions:ContactFragment.kt$ContactFragment : BaseFragment</ID>
+    <ID>TooManyFunctions:ContactViewModel.kt$ContactViewModel : ScopedViewModel</ID>
+    <ID>TooManyFunctions:DegreeRulerValuePicker.kt$DegreeRulerValuePicker : FrameLayoutScrollChangedListener</ID>
+    <ID>TooManyFunctions:FileViewerViewModel.kt$FileViewerViewModel : ScopedViewModel</ID>
+    <ID>TooManyFunctions:FilesAdapter.kt$FilesAdapter : Adapter</ID>
+    <ID>TooManyFunctions:FilesTrueCloudFragment.kt$FilesTrueCloudFragment : BaseFragment</ID>
+    <ID>TooManyFunctions:FilesTrueCloudViewModel.kt$FilesTrueCloudViewModel : ScopedViewModel</ID>
+    <ID>TooManyFunctions:MainTrueCloudV3Fragment.kt$MainTrueCloudV3Fragment : BaseFragment</ID>
+    <ID>TooManyFunctions:MainTrueCloudV3ViewModel.kt$MainTrueCloudV3ViewModel : ScopedViewModel</ID>
+    <ID>TooManyFunctions:OptionFileBottomSheetDialogViewModel.kt$OptionFileBottomSheetDialogViewModel : ScopedViewModel</ID>
+    <ID>TooManyFunctions:PhotoEditorTextFragment.kt$PhotoEditorTextFragment : BaseFragment</ID>
+    <ID>TooManyFunctions:ShareControlAccessViewModel.kt$ShareControlAccessViewModel : ScopedViewModel</ID>
+    <ID>TooManyFunctions:SharedFileViewerFragment.kt$SharedFileViewerFragment : BaseFragment</ID>
+    <ID>TooManyFunctions:SharedFileViewerViewModel.kt$SharedFileViewerViewModel : ScopedViewModel</ID>
+    <ID>TooManyFunctions:TrueCloudV3ContactEditViewModel.kt$TrueCloudV3ContactEditViewModel : ScopedViewModel</ID>
+    <ID>TooManyFunctions:TrueCloudV3Interface.kt$TrueCloudV3Interface</ID>
+    <ID>TooManyFunctions:TrueCloudV3PhotoEditorViewModel.kt$TrueCloudV3PhotoEditorViewModel : ScopedViewModel</ID>
+    <ID>TooManyFunctions:TrueCloudV3StorageView.kt$TrueCloudV3StorageView : FrameLayout</ID>
+    <ID>TooManyFunctions:UploadFileRepository.kt$UploadFileRepositoryImpl : UploadFileRepository</ID>
+  </CurrentIssues>
+</SmellBaseline>

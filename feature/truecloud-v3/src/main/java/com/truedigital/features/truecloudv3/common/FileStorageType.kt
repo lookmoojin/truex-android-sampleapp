@@ -41,7 +41,6 @@ enum class FileStorageType(
         R.string.true_cloudv3_menu_others,
         R.drawable.ic_true_cloudv3_storage_other_type_color
     );
-
     companion object {
         fun getStorageType(type: String?): FileStorageType {
             return when (type) {

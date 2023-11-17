@@ -15,8 +15,6 @@ import androidx.lifecycle.Lifecycle
 import androidx.lifecycle.lifecycleScope
 import androidx.lifecycle.repeatOnLifecycle
 import androidx.navigation.fragment.findNavController
-import com.truedigital.features.truecloudv3.R
-import com.truedigital.features.truecloudv3.databinding.FragmentTrueCloudv3PhotoEditorAdjustBinding
 import com.truedigital.common.share.componentv3.extension.setSavedStateHandle
 import com.truedigital.component.base.BaseFragment
 import com.truedigital.component.dialog.trueid.DialogIconType
@@ -24,8 +22,10 @@ import com.truedigital.component.dialog.trueid.DialogManager
 import com.truedigital.core.extensions.collectSafe
 import com.truedigital.core.extensions.launchSafe
 import com.truedigital.core.extensions.viewBinding
+import com.truedigital.features.truecloudv3.R
 import com.truedigital.features.truecloudv3.common.TrueCloudV3KeyBundle.KEY_BUNDLE_TRUE_CLOUD_PHOTO_EDITOR_IMAGE
 import com.truedigital.features.truecloudv3.common.TrueCloudV3SaveStateKey.KEY_TRUE_CLOUD_PHOTO_EDITOR_IMAGE
+import com.truedigital.features.truecloudv3.databinding.FragmentTrueCloudv3PhotoEditorAdjustBinding
 import com.truedigital.features.truecloudv3.extension.snackBar
 import com.truedigital.features.truecloudv3.injections.TrueCloudV3Component
 import com.truedigital.features.truecloudv3.presentation.viewmodel.TrueCloudV3PhotoEditorAdjustViewModel
@@ -108,7 +108,7 @@ class PhotoEditorAdjustFragment :
                     it.dismiss()
                     findNavController().navigateUp()
                 }
-                this.setSecondaryButton(R.string.cancel) {
+                this.setSecondaryButton(com.truedigital.component.R.string.cancel) {
                     it.dismiss()
                 }
             }

@@ -50,6 +50,7 @@ import com.truedigital.features.truecloudv3.domain.usecase.ScanFileUseCase
 import com.truedigital.features.truecloudv3.domain.usecase.SetMigrateFailDisplayTimeUseCase
 import com.truedigital.features.truecloudv3.domain.usecase.UpdateTaskUploadStatusUseCase
 import com.truedigital.features.truecloudv3.domain.usecase.UploadFileUseCase
+import com.truedigital.features.truecloudv3.domain.usecase.UploadQueueUseCase
 import com.truedigital.features.truecloudv3.extension.formatBinarySize
 import com.truedigital.features.truecloudv3.navigation.MainToContact
 import com.truedigital.features.truecloudv3.navigation.MainToCreateNewFolder
@@ -85,6 +86,7 @@ class MainTrueCloudV3ViewModel @Inject constructor(
     private val setMigrateFailDisplayTimeUseCase: SetMigrateFailDisplayTimeUseCase,
     private val completeUploadUseCase: CompleteUploadUseCase,
     private val uploadFileUseCase: UploadFileUseCase,
+    private val uploadQueueUseCase: UploadQueueUseCase,
     private val removeTaskUseCase: RemoveTaskUseCase,
     private val createFolderUserCase: CreateFolderUserCase,
     private val updateTaskUploadStatusUseCase: UpdateTaskUploadStatusUseCase,
@@ -173,7 +175,7 @@ class MainTrueCloudV3ViewModel @Inject constructor(
         router.execute(MainToCreateNewFolder)
         analyticManagerInterface.trackEvent(
             hashMapOf(
-                MeasurementConstant.Key.KEY_LINK_TYPE to TrueCloudV3TrackAnalytic.EVENT_CLICK,
+                MeasurementConstant.Key.KEY_EVENT_NAME to TrueCloudV3TrackAnalytic.EVENT_CLICK,
                 MeasurementConstant.Key.KEY_LINK_TYPE to TrueCloudV3TrackAnalytic.LINK_TYPE_BOTTOM_SHEET,
                 MeasurementConstant.Key.KEY_LINK_DESC to TrueCloudV3TrackAnalytic.LINK_DESC_NEW_FOLDER
             )
@@ -384,6 +386,7 @@ class MainTrueCloudV3ViewModel @Inject constructor(
             .flowOn(coroutineDispatcher.io())
             .onEach { _uploadModels ->
                 updateUploadTask(_uploadModels)
+                uploadQueueList(_uploadModels)
                 if (rootFolderId != null) {
                     checkAutoBackup()
                 }
@@ -475,6 +478,36 @@ class MainTrueCloudV3ViewModel @Inject constructor(
         }.launchSafeIn(this)
     }
 
+    private fun uploadQueueList(uploadModels: MutableList<TaskUploadModel>?) {
+        val data =
+            uploadModels?.filter { it.status == TaskStatusType.IN_QUEUE || it.status == TaskStatusType.WAITING }
+        data ?: return
+        uploadQueueUseCase.execute(data).map {
+            when (it.getState()) {
+                TrueCloudV3TransferState.COMPLETED -> {
+                    completeUpload(it.getId())
+                }
+
+                TrueCloudV3TransferState.FAILED -> {
+                    updateTaskUploadStatusUseCase.execute(
+                        it.getId(),
+                        TaskStatusType.FAILED
+                    )
+                }
+
+                else -> {
+                    // Do nothing
+                }
+            }
+            it.setTransferListener(transferlistener)
+        }.catch { ex ->
+            if (!isMultipleUpload || (isMultipleUpload && multipleUploadErrorCount < MAXIMUM_TOAST_ERROR)) {
+                multipleUploadErrorCount++
+                onUploadError.value = ex.message
+            }
+        }.launchSafeIn(this)
+    }
+
     private fun openAuthenticationPage() {
         trueCloudLoginManagerInterface.login(
             object : AuthLoginListener() {
@@ -537,7 +570,7 @@ class MainTrueCloudV3ViewModel @Inject constructor(
     private suspend fun updateUploadTask(taskUploadModels: MutableList<TaskUploadModel>?) {
         taskUploadModels?.filter {
             it.actionType == TaskActionType.UPLOAD ||
-                    it.actionType == TaskActionType.AUTO_BACKUP
+                it.actionType == TaskActionType.AUTO_BACKUP
         }
             ?.forEach { _taskUplaodModel ->
                 val transferObserver =
@@ -570,8 +603,6 @@ class MainTrueCloudV3ViewModel @Inject constructor(
                             // Do nothing
                         }
                     }
-                } else {
-                    completeUpload(_taskUplaodModel.id)
                 }
             }
     }
@@ -598,9 +629,9 @@ class MainTrueCloudV3ViewModel @Inject constructor(
                     "false"
                 ).toBoolean() &&
                 dataStoreUtil.getSinglePreference(
-                    stringPreferencesKey(AutoBackupViewModel.lastTimeStamp),
-                    "0"
-                ).toLong() <= 0L
+                        stringPreferencesKey(AutoBackupViewModel.lastTimeStamp),
+                        getCurrentDateTimeUseCase.execute().firstOrNull().toString()
+                    ).toLong() <= 0L
             ) {
                 onShowInitAutoBackup.value = Unit
             } else {
@@ -649,11 +680,15 @@ class MainTrueCloudV3ViewModel @Inject constructor(
                 contentList,
                 dataStoreUtil.getSinglePreference(
                     stringPreferencesKey(AutoBackupViewModel.lastTimeStamp),
-                    "0"
+                    getCurrentDateTimeUseCase.execute().firstOrNull().toString()
                 ).toLong()
             )
                 .flowOn(coroutineDispatcher.io())
                 .onEach { files ->
+                    dataStoreUtil.putPreference(
+                        stringPreferencesKey(AutoBackupViewModel.lastTimeStamp),
+                        getCurrentDateTimeUseCase.execute().firstOrNull().toString()
+                    )
                     if (files.isEmpty()) {
                         onUpdateBackupUi.value = false
                         return@onEach
@@ -661,10 +696,6 @@ class MainTrueCloudV3ViewModel @Inject constructor(
                     uploadMutipleFile(
                         files,
                         TaskActionType.AUTO_BACKUP
-                    )
-                    dataStoreUtil.putPreference(
-                        stringPreferencesKey(AutoBackupViewModel.lastTimeStamp),
-                        getCurrentDateTimeUseCase.execute().firstOrNull().toString()
                     )
                     onUpdateBackupUi.value = true
                 }

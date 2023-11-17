@@ -6,13 +6,13 @@ import androidx.activity.OnBackPressedCallback
 import androidx.fragment.app.viewModels
 import androidx.navigation.fragment.NavHostFragment
 import androidx.navigation.fragment.findNavController
-import com.truedigital.features.truecloudv3.R
-import com.truedigital.features.truecloudv3.databinding.FragmentIntroMigrateDataBinding
 import com.truedigital.common.share.componentv3.extension.getSavedStateHandle
 import com.truedigital.common.share.componentv3.extension.setSavedStateHandle
 import com.truedigital.component.base.BaseFragment
 import com.truedigital.core.extensions.viewBinding
+import com.truedigital.features.truecloudv3.R
 import com.truedigital.features.truecloudv3.common.TrueCloudV3SaveStateKey
+import com.truedigital.features.truecloudv3.databinding.FragmentIntroMigrateDataBinding
 import com.truedigital.features.truecloudv3.injections.TrueCloudV3Component
 import com.truedigital.features.truecloudv3.presentation.viewmodel.IntroMigrateDataViewModel
 import com.truedigital.foundation.extension.onClick

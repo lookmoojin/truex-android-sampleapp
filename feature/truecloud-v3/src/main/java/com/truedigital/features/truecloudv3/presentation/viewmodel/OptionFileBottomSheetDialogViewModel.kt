@@ -47,7 +47,7 @@ class OptionFileBottomSheetDialogViewModel @Inject constructor(
     val onSetShowViewFile = SingleLiveEvent<Boolean>()
     val onSetShowPhotoEditor = SingleLiveEvent<Boolean>()
     val onShowProgressLoading = SingleLiveEvent<Boolean>()
-    val onStartShare = SingleLiveEvent<File>()
+    val onStartViewFile = SingleLiveEvent<Pair<File, String>>()
     private var trueCloudFilesModel: TrueCloudFilesModel.File? = null
 
     fun setFileModel(trueCloudFilesModel: TrueCloudFilesModel.File) {
@@ -71,7 +71,7 @@ class OptionFileBottomSheetDialogViewModel @Inject constructor(
         )
         analyticManagerInterface.trackEvent(
             hashMapOf(
-                MeasurementConstant.Key.KEY_LINK_TYPE to TrueCloudV3TrackAnalytic.EVENT_CLICK,
+                MeasurementConstant.Key.KEY_EVENT_NAME to TrueCloudV3TrackAnalytic.EVENT_CLICK,
                 MeasurementConstant.Key.KEY_LINK_TYPE to TrueCloudV3TrackAnalytic.LINK_TYPE_BOTTOM_SHEET,
                 MeasurementConstant.Key.KEY_LINK_DESC to TrueCloudV3TrackAnalytic.LINK_DESC_RENAME
             )
@@ -90,7 +90,7 @@ class OptionFileBottomSheetDialogViewModel @Inject constructor(
         )
         analyticManagerInterface.trackEvent(
             hashMapOf(
-                MeasurementConstant.Key.KEY_LINK_TYPE to TrueCloudV3TrackAnalytic.EVENT_CLICK,
+                MeasurementConstant.Key.KEY_EVENT_NAME to TrueCloudV3TrackAnalytic.EVENT_CLICK,
                 MeasurementConstant.Key.KEY_LINK_TYPE to TrueCloudV3TrackAnalytic.LINK_TYPE_BOTTOM_SHEET,
                 MeasurementConstant.Key.KEY_LINK_DESC to TrueCloudV3TrackAnalytic.LINK_DESC_SHARE
             )
@@ -109,7 +109,7 @@ class OptionFileBottomSheetDialogViewModel @Inject constructor(
         )
         analyticManagerInterface.trackEvent(
             hashMapOf(
-                MeasurementConstant.Key.KEY_LINK_TYPE to TrueCloudV3TrackAnalytic.EVENT_CLICK,
+                MeasurementConstant.Key.KEY_EVENT_NAME to TrueCloudV3TrackAnalytic.EVENT_CLICK,
                 MeasurementConstant.Key.KEY_LINK_TYPE to TrueCloudV3TrackAnalytic.LINK_TYPE_BOTTOM_SHEET,
                 MeasurementConstant.Key.KEY_LINK_DESC to TrueCloudV3TrackAnalytic.LINK_DESC_SEE_INFO
             )
@@ -128,16 +128,17 @@ class OptionFileBottomSheetDialogViewModel @Inject constructor(
                     "_"
                 )
             val file = fileProvider.getFile(path)
+            val mimeType = trueCloudFilesModel?.mimeType.orEmpty()
             if (file.exists()) {
-                startShare(file)
+                startViewFile(file, mimeType)
             } else {
                 val key = trueCloudFile.id.orEmpty()
-                downloadFile(key, path)
+                downloadFile(key, path, mimeType)
             }
         }
         analyticManagerInterface.trackEvent(
             hashMapOf(
-                MeasurementConstant.Key.KEY_LINK_TYPE to TrueCloudV3TrackAnalytic.EVENT_CLICK,
+                MeasurementConstant.Key.KEY_EVENT_NAME to TrueCloudV3TrackAnalytic.EVENT_CLICK,
                 MeasurementConstant.Key.KEY_LINK_TYPE to TrueCloudV3TrackAnalytic.LINK_TYPE_BOTTOM_SHEET,
                 MeasurementConstant.Key.KEY_LINK_DESC to TrueCloudV3TrackAnalytic.LINK_DESC_VIEW_FILE
             )
@@ -151,7 +152,7 @@ class OptionFileBottomSheetDialogViewModel @Inject constructor(
         )
         analyticManagerInterface.trackEvent(
             hashMapOf(
-                MeasurementConstant.Key.KEY_LINK_TYPE to TrueCloudV3TrackAnalytic.EVENT_CLICK,
+                MeasurementConstant.Key.KEY_EVENT_NAME to TrueCloudV3TrackAnalytic.EVENT_CLICK,
                 MeasurementConstant.Key.KEY_LINK_TYPE to TrueCloudV3TrackAnalytic.LINK_TYPE_BOTTOM_SHEET,
                 MeasurementConstant.Key.KEY_LINK_DESC to TrueCloudV3TrackAnalytic.LINK_DESC_EDIT_IMAGE
             )
@@ -162,7 +163,7 @@ class OptionFileBottomSheetDialogViewModel @Inject constructor(
         onDelete.value = trueCloudFilesModel
         analyticManagerInterface.trackEvent(
             hashMapOf(
-                MeasurementConstant.Key.KEY_LINK_TYPE to TrueCloudV3TrackAnalytic.EVENT_CLICK,
+                MeasurementConstant.Key.KEY_EVENT_NAME to TrueCloudV3TrackAnalytic.EVENT_CLICK,
                 MeasurementConstant.Key.KEY_LINK_TYPE to TrueCloudV3TrackAnalytic.LINK_TYPE_BOTTOM_SHEET,
                 MeasurementConstant.Key.KEY_LINK_DESC to TrueCloudV3TrackAnalytic.LINK_DESC_REMOVE_TO_TRASH
             )
@@ -173,7 +174,7 @@ class OptionFileBottomSheetDialogViewModel @Inject constructor(
         onDownload.value = trueCloudFilesModel
         analyticManagerInterface.trackEvent(
             hashMapOf(
-                MeasurementConstant.Key.KEY_LINK_TYPE to TrueCloudV3TrackAnalytic.EVENT_CLICK,
+                MeasurementConstant.Key.KEY_EVENT_NAME to TrueCloudV3TrackAnalytic.EVENT_CLICK,
                 MeasurementConstant.Key.KEY_LINK_TYPE to TrueCloudV3TrackAnalytic.LINK_TYPE_BOTTOM_SHEET,
                 MeasurementConstant.Key.KEY_LINK_DESC to TrueCloudV3TrackAnalytic.LINK_DESC_DOWNLOAD
             )
@@ -199,12 +200,12 @@ class OptionFileBottomSheetDialogViewModel @Inject constructor(
         }
     }
 
-    private fun startShare(file: File) {
+    private fun startViewFile(file: File, mimeType: String) {
         onShowProgressLoading.value = false
-        onStartShare.value = file
+        onStartViewFile.value = Pair(file, mimeType)
     }
 
-    private fun downloadFile(key: String, path: String) {
+    private fun downloadFile(key: String, path: String, mimeType: String) {
         downloadUseCase.execute(key, path, DownloadType.SHARE)
             .flowOn(coroutineDispatcher.io())
             .onEach { transferObserver ->
@@ -215,7 +216,7 @@ class OptionFileBottomSheetDialogViewModel @Inject constructor(
                             state: TrueCloudV3TransferState?
                         ) {
                             if (state == TrueCloudV3TransferState.COMPLETED) {
-                                startShare(fileProvider.getFile(path))
+                                startViewFile(fileProvider.getFile(path), mimeType)
                             }
                         }
 

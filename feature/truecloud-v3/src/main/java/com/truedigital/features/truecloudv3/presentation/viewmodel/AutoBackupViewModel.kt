@@ -2,7 +2,6 @@ package com.truedigital.features.truecloudv3.presentation.viewmodel
 
 import androidx.datastore.preferences.core.stringPreferencesKey
 import androidx.lifecycle.viewModelScope
-import com.truedigital.features.truecloudv3.R
 import com.truedigital.common.share.analytics.di.AnalyticsModule
 import com.truedigital.common.share.analytics.measurement.AnalyticManagerInterface
 import com.truedigital.common.share.analytics.measurement.constant.MeasurementConstant
@@ -10,6 +9,7 @@ import com.truedigital.common.share.datalegacy.wrapper.ContextDataProviderWrappe
 import com.truedigital.core.base.ScopedViewModel
 import com.truedigital.core.extensions.launchSafe
 import com.truedigital.core.utils.DataStoreUtil
+import com.truedigital.features.truecloudv3.R
 import com.truedigital.features.truecloudv3.common.TrueCloudV3TrackAnalytic
 import com.truedigital.features.truecloudv3.domain.model.DataUsageModel
 import com.truedigital.foundation.extension.SingleLiveEvent
@@ -33,7 +33,6 @@ class AutoBackupViewModel @Inject constructor(
         const val audioBackup = "audio_backup"
         const val otherBackup = "other_backup"
         const val lastTimeStamp = "last_time_stamp"
-
         @VisibleForTesting
         var backupState: Boolean = false
     }
@@ -50,9 +49,7 @@ class AutoBackupViewModel @Inject constructor(
 
     fun init() {
         viewModelScope.launch {
-            backupState =
-                dataStoreUtil.getSinglePreference(stringPreferencesKey(BACKUP_STATE_KEY), "false")
-                    .toBoolean()
+            backupState = dataStoreUtil.getSinglePreference(stringPreferencesKey(BACKUP_STATE_KEY), "false").toBoolean()
             onUpdateBackupState.value = backupState
             onGetBackupState.value = backupState
             contentActive.apply {
@@ -104,7 +101,7 @@ class AutoBackupViewModel @Inject constructor(
                     MeasurementConstant.Key.KEY_EVENT_NAME to TrueCloudV3TrackAnalytic.EVENT_BACKUP,
                     TrueCloudV3TrackAnalytic.PARAMS_FILE_TYPE to key.split("_").first(),
                     TrueCloudV3TrackAnalytic.METHOD to
-                            if (isChecked) TrueCloudV3TrackAnalytic.METHOD_ON else TrueCloudV3TrackAnalytic.METHOD_OFF
+                        if (isChecked) TrueCloudV3TrackAnalytic.METHOD_ON else TrueCloudV3TrackAnalytic.METHOD_OFF
                 )
             )
         }
@@ -139,15 +136,15 @@ class AutoBackupViewModel @Inject constructor(
                             MeasurementConstant.Key.KEY_EVENT_NAME to TrueCloudV3TrackAnalytic.EVENT_BACKUP,
                             TrueCloudV3TrackAnalytic.PARAMS_FILE_TYPE to it.split("_").first(),
                             TrueCloudV3TrackAnalytic.METHOD to
-                                    if (dataStoreUtil.getSinglePreference(
-                                            stringPreferencesKey(it),
-                                            "false"
-                                        ).toBoolean()
-                                    ) {
-                                        TrueCloudV3TrackAnalytic.METHOD_ON
-                                    } else {
-                                        TrueCloudV3TrackAnalytic.METHOD_OFF
-                                    }
+                                if (dataStoreUtil.getSinglePreference(
+                                        stringPreferencesKey(it),
+                                        "false"
+                                    ).toBoolean()
+                                ) {
+                                    TrueCloudV3TrackAnalytic.METHOD_ON
+                                } else {
+                                    TrueCloudV3TrackAnalytic.METHOD_OFF
+                                }
                         )
                     )
                 }

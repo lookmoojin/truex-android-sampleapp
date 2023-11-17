@@ -4,9 +4,9 @@ import android.content.Context
 import android.util.AttributeSet
 import android.view.LayoutInflater
 import android.widget.FrameLayout
-import com.truedigital.features.truecloudv3.R
-import com.truedigital.features.truecloudv3.databinding.TrueCloudv3DataEmptyViewBinding
+import com.truedigital.component.R
 import com.truedigital.core.extensions.ifNotNullOrEmpty
+import com.truedigital.features.truecloudv3.databinding.TrueCloudv3DataEmptyViewBinding
 import com.truedigital.foundation.extension.gone
 
 class TrueCloudV3DataEmptyView @JvmOverloads constructor(

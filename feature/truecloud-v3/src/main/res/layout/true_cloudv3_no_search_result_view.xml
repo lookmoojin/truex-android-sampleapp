@@ -8,7 +8,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:src="@drawable/ic_search_result"
-        android:layout_marginBottom="@dimen/dp_18"
+        android:layout_marginBottom="18dp"
         app:layout_constraintBottom_toTopOf="@+id/appCompatTextView"
         app:layout_constraintEnd_toEndOf="@+id/appCompatTextView"
         app:layout_constraintStart_toStartOf="@+id/appCompatTextView" />
@@ -20,7 +20,7 @@
         android:layout_height="wrap_content"
         android:text="@string/true_cloudv3_no_search_result"
         android:gravity="center"
-        android:textSize="@dimen/sp_16"
+        android:textSize="16sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

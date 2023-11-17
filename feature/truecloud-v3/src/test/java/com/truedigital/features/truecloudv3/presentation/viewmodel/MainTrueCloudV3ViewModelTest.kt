@@ -44,6 +44,7 @@ import com.truedigital.features.truecloudv3.domain.usecase.ScanFileUseCase
 import com.truedigital.features.truecloudv3.domain.usecase.SetMigrateFailDisplayTimeUseCase
 import com.truedigital.features.truecloudv3.domain.usecase.UpdateTaskUploadStatusUseCase
 import com.truedigital.features.truecloudv3.domain.usecase.UploadFileUseCase
+import com.truedigital.features.truecloudv3.domain.usecase.UploadQueueUseCase
 import com.truedigital.features.truecloudv3.navigation.MainToContact
 import com.truedigital.features.truecloudv3.navigation.MainToCreateNewFolder
 import com.truedigital.features.truecloudv3.navigation.MainToFiles
@@ -138,6 +139,7 @@ internal class MainTrueCloudV3ViewModelTest : MainTrueCloudViewModelTestCase {
     private val getCurrentDateTimeUseCase: GetCurrentDateTimeUseCase = mockk()
     private val scanFileUseCase: ScanFileUseCase = mockk()
     private val uri: Uri = mockk()
+    private val uploadQueueUseCase: UploadQueueUseCase = mockk(relaxed = true)
 
     @BeforeEach
     fun setUp() {
@@ -159,7 +161,8 @@ internal class MainTrueCloudV3ViewModelTest : MainTrueCloudViewModelTestCase {
             getCurrentDateTimeUseCase = getCurrentDateTimeUseCase,
             scanFileUseCase = scanFileUseCase,
             analyticManagerInterface = analyticManagerInterface,
-            dataStoreUtil = dataStoreUtil
+            dataStoreUtil = dataStoreUtil,
+            uploadQueueUseCase = uploadQueueUseCase
         )
     }
 
@@ -1393,10 +1396,16 @@ internal class MainTrueCloudV3ViewModelTest : MainTrueCloudViewModelTestCase {
             removeTaskUseCase.execute(any())
         } returns Unit
         coEvery {
-            dataStoreUtil.getSinglePreference(stringPreferencesKey(AutoBackupViewModel.BACKUP_STATE_KEY), "false")
+            dataStoreUtil.getSinglePreference(
+                stringPreferencesKey(AutoBackupViewModel.BACKUP_STATE_KEY),
+                "false"
+            )
         } returns "false"
         coEvery {
-            dataStoreUtil.getSinglePreference(stringPreferencesKey(AutoBackupViewModel.lastTimeStamp), "0")
+            dataStoreUtil.getSinglePreference(
+                stringPreferencesKey(AutoBackupViewModel.lastTimeStamp),
+                "0"
+            )
         } returns "0"
         every {
             contextDataProviderWrapper.get()
@@ -1416,16 +1425,17 @@ internal class MainTrueCloudV3ViewModelTest : MainTrueCloudViewModelTestCase {
     }
 
     @Test
-    fun `test onResume transfer is null call complete`() = runTest {
+    fun `test onResume transfer is null call uploadQueue complete`() = runTest {
         // arrange
         val taskUploadModel = TaskUploadModel(
-            id = 1,
+            id = 0,
             path = "abc",
-            status = TaskStatusType.IN_PROGRESS,
+            status = TaskStatusType.IN_QUEUE,
             name = "xyz.jpg",
             size = "100",
             type = FileMimeType.IMAGE,
             updateAt = 0L,
+            objectId = "object1"
         )
         val trueCloudV3Model = TrueCloudV3Model()
         val contextDataProvider = mockk<ContextDataProvider>()
@@ -1434,8 +1444,11 @@ internal class MainTrueCloudV3ViewModelTest : MainTrueCloudViewModelTestCase {
         coEvery {
             getUploadTaskListUseCase.execute()
         } returns flowOf(mutableListOf(taskUploadModel))
-
         val transfer: TrueCloudV3TransferObserver = mockk(relaxed = true)
+        coEvery {
+            uploadQueueUseCase.execute(any())
+        } returns flowOf(transfer)
+        every { transfer.getState() } returns TrueCloudV3TransferState.COMPLETED
         coEvery {
             trueCloudV3TransferUtilityProvider.getTrueCloudV3TransferObserverById(any(), any())
         } returns null
@@ -1450,10 +1463,16 @@ internal class MainTrueCloudV3ViewModelTest : MainTrueCloudViewModelTestCase {
             removeTaskUseCase.execute(any())
         } returns Unit
         coEvery {
-            dataStoreUtil.getSinglePreference(stringPreferencesKey(AutoBackupViewModel.BACKUP_STATE_KEY), "false")
+            dataStoreUtil.getSinglePreference(
+                stringPreferencesKey(AutoBackupViewModel.BACKUP_STATE_KEY),
+                "false"
+            )
         } returns "false"
         coEvery {
-            dataStoreUtil.getSinglePreference(stringPreferencesKey(AutoBackupViewModel.lastTimeStamp), "0")
+            dataStoreUtil.getSinglePreference(
+                stringPreferencesKey(AutoBackupViewModel.lastTimeStamp),
+                "0"
+            )
         } returns "0"
         every {
             contextDataProviderWrapper.get()
@@ -1510,10 +1529,16 @@ internal class MainTrueCloudV3ViewModelTest : MainTrueCloudViewModelTestCase {
             transfer.getState()
         } returns TrueCloudV3TransferState.IN_PROGRESS
         coEvery {
-            dataStoreUtil.getSinglePreference(stringPreferencesKey(AutoBackupViewModel.BACKUP_STATE_KEY), "false")
+            dataStoreUtil.getSinglePreference(
+                stringPreferencesKey(AutoBackupViewModel.BACKUP_STATE_KEY),
+                "false"
+            )
         } returns "false"
         coEvery {
-            dataStoreUtil.getSinglePreference(stringPreferencesKey(AutoBackupViewModel.lastTimeStamp), "0")
+            dataStoreUtil.getSinglePreference(
+                stringPreferencesKey(AutoBackupViewModel.lastTimeStamp),
+                "0"
+            )
         } returns "0"
         // act
         viewModel.onResume()
@@ -1562,10 +1587,16 @@ internal class MainTrueCloudV3ViewModelTest : MainTrueCloudViewModelTestCase {
             trueCloudV3TransferUtilityProvider.resumeTransferById(any(), any())
         } returns transfer
         coEvery {
-            dataStoreUtil.getSinglePreference(stringPreferencesKey(AutoBackupViewModel.BACKUP_STATE_KEY), "false")
+            dataStoreUtil.getSinglePreference(
+                stringPreferencesKey(AutoBackupViewModel.BACKUP_STATE_KEY),
+                "false"
+            )
         } returns "false"
         coEvery {
-            dataStoreUtil.getSinglePreference(stringPreferencesKey(AutoBackupViewModel.lastTimeStamp), "0")
+            dataStoreUtil.getSinglePreference(
+                stringPreferencesKey(AutoBackupViewModel.lastTimeStamp),
+                "0"
+            )
         } returns "0"
         // act
         viewModel.onResume()
@@ -1615,10 +1646,16 @@ internal class MainTrueCloudV3ViewModelTest : MainTrueCloudViewModelTestCase {
             trueCloudV3TransferUtilityProvider.resumeTransferById(any(), any())
         } returns transfer
         coEvery {
-            dataStoreUtil.getSinglePreference(stringPreferencesKey(AutoBackupViewModel.BACKUP_STATE_KEY), "false")
+            dataStoreUtil.getSinglePreference(
+                stringPreferencesKey(AutoBackupViewModel.BACKUP_STATE_KEY),
+                "false"
+            )
         } returns "false"
         coEvery {
-            dataStoreUtil.getSinglePreference(stringPreferencesKey(AutoBackupViewModel.lastTimeStamp), "0")
+            dataStoreUtil.getSinglePreference(
+                stringPreferencesKey(AutoBackupViewModel.lastTimeStamp),
+                "0"
+            )
         } returns "0"
         // act
         viewModel.onResume()
@@ -1668,10 +1705,16 @@ internal class MainTrueCloudV3ViewModelTest : MainTrueCloudViewModelTestCase {
             trueCloudV3TransferUtilityProvider.resumeTransferById(any(), any())
         } returns transfer
         coEvery {
-            dataStoreUtil.getSinglePreference(stringPreferencesKey(AutoBackupViewModel.BACKUP_STATE_KEY), "false")
+            dataStoreUtil.getSinglePreference(
+                stringPreferencesKey(AutoBackupViewModel.BACKUP_STATE_KEY),
+                "false"
+            )
         } returns "false"
         coEvery {
-            dataStoreUtil.getSinglePreference(stringPreferencesKey(AutoBackupViewModel.lastTimeStamp), "0")
+            dataStoreUtil.getSinglePreference(
+                stringPreferencesKey(AutoBackupViewModel.lastTimeStamp),
+                "0"
+            )
         } returns "0"
         // act
         viewModel.onResume()
@@ -1718,10 +1761,16 @@ internal class MainTrueCloudV3ViewModelTest : MainTrueCloudViewModelTestCase {
             updateTaskUploadStatusUseCase.execute(any(), any())
         } returns Unit
         coEvery {
-            dataStoreUtil.getSinglePreference(stringPreferencesKey(AutoBackupViewModel.BACKUP_STATE_KEY), "false")
+            dataStoreUtil.getSinglePreference(
+                stringPreferencesKey(AutoBackupViewModel.BACKUP_STATE_KEY),
+                "false"
+            )
         } returns "false"
         coEvery {
-            dataStoreUtil.getSinglePreference(stringPreferencesKey(AutoBackupViewModel.lastTimeStamp), "0")
+            dataStoreUtil.getSinglePreference(
+                stringPreferencesKey(AutoBackupViewModel.lastTimeStamp),
+                "0"
+            )
         } returns "0"
         // act
         viewModel.onResume()
@@ -1748,10 +1797,16 @@ internal class MainTrueCloudV3ViewModelTest : MainTrueCloudViewModelTestCase {
     fun `test check Auto Backup return true`() = runTest {
         val testObserver = TestObserver.test(viewModel.onAutoBackupState)
         coEvery {
-            dataStoreUtil.getSinglePreference(stringPreferencesKey(AutoBackupViewModel.BACKUP_STATE_KEY), "false")
+            dataStoreUtil.getSinglePreference(
+                stringPreferencesKey(AutoBackupViewModel.BACKUP_STATE_KEY),
+                "false"
+            )
         } returns "true"
         coEvery {
-            dataStoreUtil.getSinglePreference(stringPreferencesKey(AutoBackupViewModel.lastTimeStamp), "0")
+            dataStoreUtil.getSinglePreference(
+                stringPreferencesKey(AutoBackupViewModel.lastTimeStamp),
+                "0"
+            )
         } returns "0"
         // act
         viewModel.checkAutoBackup()
@@ -1767,23 +1822,41 @@ internal class MainTrueCloudV3ViewModelTest : MainTrueCloudViewModelTestCase {
         val mockFiles = mutableListOf(Uri.parse("file2"), Uri.parse("file3"))
 
         coEvery {
-            dataStoreUtil.getSinglePreference(stringPreferencesKey(AutoBackupViewModel.imageBackup), "false")
+            dataStoreUtil.getSinglePreference(
+                stringPreferencesKey(AutoBackupViewModel.imageBackup),
+                "false"
+            )
         } returns "true"
         coEvery {
-            dataStoreUtil.getSinglePreference(stringPreferencesKey(AutoBackupViewModel.videoBackup), "false")
+            dataStoreUtil.getSinglePreference(
+                stringPreferencesKey(AutoBackupViewModel.videoBackup),
+                "false"
+            )
         } returns "true"
         coEvery {
-            dataStoreUtil.getSinglePreference(stringPreferencesKey(AutoBackupViewModel.audioBackup), "false")
+            dataStoreUtil.getSinglePreference(
+                stringPreferencesKey(AutoBackupViewModel.audioBackup),
+                "false"
+            )
         } returns "true"
         coEvery {
-            dataStoreUtil.getSinglePreference(stringPreferencesKey(AutoBackupViewModel.otherBackup), "false")
+            dataStoreUtil.getSinglePreference(
+                stringPreferencesKey(AutoBackupViewModel.otherBackup),
+                "false"
+            )
         } returns "true"
         coEvery {
-            dataStoreUtil.getSinglePreference(stringPreferencesKey(AutoBackupViewModel.lastTimeStamp), "0")
+            dataStoreUtil.getSinglePreference(
+                stringPreferencesKey(AutoBackupViewModel.lastTimeStamp),
+                "123456789"
+            )
         } returns "123456789"
         coEvery {
             scanFileUseCase.execute(any(), any())
         } returns flowOf(mockFiles)
+        coEvery {
+            getCurrentDateTimeUseCase.execute(any())
+        } returns flowOf(123456789L)
 
         // act
         viewModel.initBackup()

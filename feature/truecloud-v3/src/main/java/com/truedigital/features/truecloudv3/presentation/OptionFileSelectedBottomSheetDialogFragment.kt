@@ -12,14 +12,14 @@ import androidx.fragment.app.viewModels
 import androidx.navigation.fragment.findNavController
 import com.google.android.material.bottomsheet.BottomSheetBehavior
 import com.google.android.material.bottomsheet.BottomSheetDialogFragment
-import com.truedigital.features.truecloudv3.R
-import com.truedigital.features.truecloudv3.databinding.TrueCloudv3FileSelectedOptionBottomSheetDialogBinding
 import com.truedigital.common.share.componentv3.extension.getSavedStateHandle
 import com.truedigital.common.share.componentv3.extension.setSavedStateHandle
 import com.truedigital.core.extensions.viewBinding
+import com.truedigital.features.truecloudv3.R
 import com.truedigital.features.truecloudv3.common.TrueCloudV3KeyBundle
 import com.truedigital.features.truecloudv3.common.TrueCloudV3KeyBundle.KEY_BUNDLE_TRUE_CLOUD_FILE_SELECTED
 import com.truedigital.features.truecloudv3.common.TrueCloudV3SaveStateKey
+import com.truedigital.features.truecloudv3.databinding.TrueCloudv3FileSelectedOptionBottomSheetDialogBinding
 import com.truedigital.features.truecloudv3.domain.model.TrueCloudFilesModel
 import com.truedigital.features.truecloudv3.injections.TrueCloudV3Component
 import com.truedigital.features.truecloudv3.presentation.viewmodel.OptionFileSelectedBottomSheetDialogViewModel
@@ -56,9 +56,9 @@ class OptionFileSelectedBottomSheetDialogFragment : BottomSheetDialogFragment() 
     override fun onCreateDialog(savedInstanceState: Bundle?): Dialog {
         return super.onCreateDialog(savedInstanceState).apply {
             setOnShowListener {
-                val parentLayout = findViewById<View>(R.id.design_bottom_sheet) as FrameLayout
+                val parentLayout = findViewById<View>(com.google.android.material.R.id.design_bottom_sheet) as FrameLayout
                 parentLayout.let { bottomSheet ->
-                    bottomSheet.setBackgroundResource(R.color.transparent)
+                    bottomSheet.setBackgroundResource(com.truedigital.component.R.color.transparent)
                     val behaviour = BottomSheetBehavior.from(bottomSheet)
                     behaviour.isDraggable = false
                 }

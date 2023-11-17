@@ -6,15 +6,16 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.appcompat.app.AppCompatDelegate
 import androidx.fragment.app.viewModels
-import com.truedigital.features.truecloudv3.R
-import com.truedigital.features.truecloudv3.databinding.FragmentTrueCloudv3ImageItemViewerBinding
 import com.truedigital.component.base.BaseFragment
 import com.truedigital.core.extensions.viewBinding
+import com.truedigital.features.truecloudv3.R
 import com.truedigital.features.truecloudv3.common.TrueCloudV3KeyBundle.KEY_BUNDLE_TRUE_CLOUD_FILE_VIEW
+import com.truedigital.features.truecloudv3.databinding.FragmentTrueCloudv3ImageItemViewerBinding
 import com.truedigital.features.truecloudv3.domain.model.TrueCloudFilesModel
 import com.truedigital.features.truecloudv3.injections.TrueCloudV3Component
 import com.truedigital.features.truecloudv3.presentation.viewmodel.TrueCloudV3FileViewerViewModel
-import com.truedigital.foundation.extension.load
+import com.truedigital.foundation.extension.gone
+import com.truedigital.foundation.extension.loadWithImageCallback
 import com.truedigital.foundation.presentations.ViewModelFactory
 import javax.inject.Inject
 
@@ -57,9 +58,16 @@ class ImageItemViewerFragment : BaseFragment(R.layout.fragment_true_cloudv3_imag
     }
 
     private fun observeViewModel() {
-        viewModel.onShowPreview.observe(viewLifecycleOwner) {
-            binding.trueCloudImageViewProgress.visibility = View.GONE
-            binding.trueCloudImageView.load(context, it)
+        viewModel.onShowPreview.observe(viewLifecycleOwner) { url ->
+            binding.trueCloudImageView.loadWithImageCallback(
+                context = context ?: requireContext(),
+                url = url,
+                onSuccess = ::closeImageViewProgress
+            )
         }
+    }
+
+    private fun closeImageViewProgress() {
+        binding.trueCloudImageViewProgress.gone()
     }
 }

@@ -7,6 +7,7 @@ import android.content.Intent
 import android.os.Build
 import androidx.core.app.NotificationManagerCompat
 import com.truedigital.foundation.NotificationChannelInfo
+import com.truedigital.share.mock.utils.BuildUtils
 import io.mockk.every
 import io.mockk.justRun
 import io.mockk.mockk
@@ -14,10 +15,7 @@ import io.mockk.mockkConstructor
 import io.mockk.mockkStatic
 import io.mockk.verify
 import org.junit.jupiter.api.BeforeEach
-import org.junit.jupiter.api.Disabled
 import org.junit.jupiter.api.Test
-import java.lang.reflect.Field
-import java.lang.reflect.Modifier
 import kotlin.test.assertEquals
 
 internal class DownloadNotificationTest {
@@ -26,11 +24,10 @@ internal class DownloadNotificationTest {
 
     @BeforeEach
     fun setup() {
-        setFinalStatic(Build.VERSION::class.java.getField("SDK_INT"), 1)
+        BuildUtils.setFinalStatic(Build.VERSION::class.java.getField("SDK_INT"), 1)
         downloadNotification = DownloadNotification(context)
     }
 
-    @Disabled
     @Test
     fun showNotificationTestCaseNotiNull() {
         // arrange
@@ -61,8 +58,6 @@ internal class DownloadNotificationTest {
             )
         }
     }
-
-    @Disabled
     @Test
     fun updateProgressNotificationTestCaseSuccess() {
         // arrange
@@ -96,8 +91,6 @@ internal class DownloadNotificationTest {
             )
         }
     }
-
-    @Disabled
     @Test
     fun downloadFailedNotificationTestCaseSuccess() {
         // arrange
@@ -131,8 +124,6 @@ internal class DownloadNotificationTest {
             )
         }
     }
-
-    @Disabled
     @Test
     fun downloadPauseNotificationTestCaseSuccess() {
         // arrange
@@ -172,8 +163,6 @@ internal class DownloadNotificationTest {
             )
         }
     }
-
-    @Disabled
     @Test
     fun downloadResumeNotificationTestCaseSuccess() {
         // arrange
@@ -213,8 +202,6 @@ internal class DownloadNotificationTest {
             )
         }
     }
-
-    @Disabled
     @Test
     fun downloadCompleteNotificationTestCaseSuccess() {
         // arrange
@@ -248,12 +235,10 @@ internal class DownloadNotificationTest {
             )
         }
     }
-
-    @Disabled
     @Test
     fun createNotificationChannelCaseSuccess() {
         // arrange
-        setFinalStatic(Build.VERSION::class.java.getField("SDK_INT"), 30)
+        BuildUtils.setFinalStatic(Build.VERSION::class.java.getField("SDK_INT"), 30)
         val mockNotificationManagerCompat = mockk<NotificationManagerCompat>()
         mockkStatic(NotificationManagerCompat::class)
         every {
@@ -270,14 +255,5 @@ internal class DownloadNotificationTest {
 
         // assert
         assertEquals(NotificationChannelInfo.TRUE_CLOUD_DOWNLOAD_CHANNEL_ID, response)
-    }
-
-    @Throws(Exception::class)
-    private fun setFinalStatic(field: Field, newValue: Any?) {
-        field.isAccessible = true
-        val modifiersField: Field = Field::class.java.getDeclaredField("modifiers")
-        modifiersField.isAccessible = true
-        modifiersField.setInt(field, field.modifiers and Modifier.FINAL.inv())
-        field.set(null, newValue)
     }
 }

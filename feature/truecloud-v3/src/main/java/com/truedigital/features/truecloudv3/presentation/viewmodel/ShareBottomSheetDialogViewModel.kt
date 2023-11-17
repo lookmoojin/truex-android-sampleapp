@@ -2,7 +2,6 @@ package com.truedigital.features.truecloudv3.presentation.viewmodel
 
 import android.os.Bundle
 import android.os.Environment
-import com.truedigital.features.truecloudv3.R
 import com.truedigital.common.share.analytics.di.AnalyticsModule
 import com.truedigital.common.share.analytics.measurement.AnalyticManagerInterface
 import com.truedigital.common.share.analytics.measurement.constant.MeasurementConstant
@@ -10,6 +9,7 @@ import com.truedigital.common.share.datalegacy.wrapper.ContextDataProviderWrappe
 import com.truedigital.core.base.ScopedViewModel
 import com.truedigital.core.coroutines.CoroutineDispatcherProvider
 import com.truedigital.core.extensions.launchSafeIn
+import com.truedigital.features.truecloudv3.R
 import com.truedigital.features.truecloudv3.common.TrueCloudV3KeyBundle
 import com.truedigital.features.truecloudv3.common.TrueCloudV3TrackAnalytic
 import com.truedigital.features.truecloudv3.common.TrueCloudV3TransferState
@@ -70,7 +70,7 @@ class ShareBottomSheetDialogViewModel @Inject constructor(
         }
         analyticManagerInterface.trackEvent(
             hashMapOf(
-                MeasurementConstant.Key.KEY_LINK_TYPE to TrueCloudV3TrackAnalytic.EVENT_CLICK,
+                MeasurementConstant.Key.KEY_EVENT_NAME to TrueCloudV3TrackAnalytic.EVENT_CLICK,
                 MeasurementConstant.Key.KEY_LINK_TYPE to TrueCloudV3TrackAnalytic.LINK_TYPE_BOTTOM_SHEET,
                 MeasurementConstant.Key.KEY_LINK_DESC to TrueCloudV3TrackAnalytic.LINK_DESC_SHARE
             )
@@ -86,7 +86,7 @@ class ShareBottomSheetDialogViewModel @Inject constructor(
             .launchSafeIn(this)
         analyticManagerInterface.trackEvent(
             hashMapOf(
-                MeasurementConstant.Key.KEY_LINK_TYPE to TrueCloudV3TrackAnalytic.EVENT_CLICK,
+                MeasurementConstant.Key.KEY_EVENT_NAME to TrueCloudV3TrackAnalytic.EVENT_CLICK,
                 MeasurementConstant.Key.KEY_LINK_TYPE to TrueCloudV3TrackAnalytic.LINK_TYPE_BOTTOM_SHEET,
                 MeasurementConstant.Key.KEY_LINK_DESC to TrueCloudV3TrackAnalytic.LINK_DESC_COPY_LINK
             )
@@ -105,7 +105,7 @@ class ShareBottomSheetDialogViewModel @Inject constructor(
         )
         analyticManagerInterface.trackEvent(
             hashMapOf(
-                MeasurementConstant.Key.KEY_LINK_TYPE to TrueCloudV3TrackAnalytic.EVENT_CLICK,
+                MeasurementConstant.Key.KEY_EVENT_NAME to TrueCloudV3TrackAnalytic.EVENT_CLICK,
                 MeasurementConstant.Key.KEY_LINK_TYPE to TrueCloudV3TrackAnalytic.LINK_TYPE_BOTTOM_SHEET,
                 MeasurementConstant.Key.KEY_LINK_DESC to TrueCloudV3TrackAnalytic.LINK_DESC_CONTROL_SHARE
             )

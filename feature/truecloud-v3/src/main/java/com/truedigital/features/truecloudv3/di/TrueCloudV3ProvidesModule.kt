@@ -66,7 +66,7 @@ class TrueCloudV3ProvidesModule {
     }
 
     @Provides
-//    @Singleton
+    @Singleton
     fun providesTrueCloudV3Interface(
         @TrueCloudV3HttpClient okHttpClient: OkHttpClient,
         @GsonConverter gsonConverterFactory: Converter.Factory,

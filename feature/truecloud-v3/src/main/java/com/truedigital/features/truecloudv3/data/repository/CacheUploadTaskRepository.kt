@@ -8,9 +8,7 @@ import com.truedigital.features.truecloudv3.common.TaskActionType
 import com.truedigital.features.truecloudv3.common.TaskStatusType
 import com.truedigital.features.truecloudv3.domain.model.TaskUploadModel
 import kotlinx.coroutines.Dispatchers
-import kotlinx.coroutines.delay
 import kotlinx.coroutines.flow.Flow
-import kotlinx.coroutines.flow.filterNotNull
 import kotlinx.coroutines.flow.flow
 import kotlinx.coroutines.flow.flowOn
 import kotlinx.coroutines.sync.Mutex
@@ -18,23 +16,22 @@ import org.jetbrains.annotations.VisibleForTesting
 import org.json.JSONException
 import timber.log.Timber
 import javax.inject.Inject
-import kotlin.time.Duration.Companion.milliseconds
 
 interface CacheUploadTaskRepository {
-    fun getTasks(): Flow<MutableList<TaskUploadModel>>
     fun getRefreshTasks(): Flow<MutableList<TaskUploadModel>>
     suspend fun addUploadTask(task: TaskUploadModel)
     suspend fun addUploadTaskList(tasks: List<TaskUploadModel>)
     suspend fun clearAllTask()
     suspend fun removeTask(id: Int)
     suspend fun getTask(id: Int): TaskUploadModel?
+    suspend fun getTaskByObjectId(id: String): TaskUploadModel?
     suspend fun getInprogressTask(): TaskUploadModel?
     suspend fun updateTaskStatus(id: Int, statusType: TaskStatusType)
-    suspend fun updateTaskIdWithObjectId(task: TaskUploadModel)
+    suspend fun updateTaskIdWithObjectId(task: TaskUploadModel, newId: String)
 }
 
 class CacheUploadTaskRepositoryImpl @Inject constructor(
-    private val dataStoreInterface: DataStoreInterface
+    private val dataStoreInterface: DataStoreInterface,
 ) : CacheUploadTaskRepository {
 
     companion object {
@@ -55,22 +52,6 @@ class CacheUploadTaskRepositoryImpl @Inject constructor(
         } finally {
             mutex.unlock()
         }
-    }
-
-    override fun getTasks(): Flow<MutableList<TaskUploadModel>> {
-        return flow {
-            var oldTask = mutableListOf<TaskUploadModel>()
-            delay(400.milliseconds)
-            while (true) {
-                val newTask =
-                    getTask().filter { taskUpload -> taskUpload.updateAt != 0L }.toMutableList()
-                if (oldTask.size != newTask.size || oldTask.toSet() != newTask.toSet()) {
-                    oldTask = newTask
-                    emit(newTask)
-                }
-                delay(1000.milliseconds)
-            }
-        }.filterNotNull()
     }
 
     override fun getRefreshTasks(): Flow<MutableList<TaskUploadModel>> {
@@ -133,6 +114,10 @@ class CacheUploadTaskRepositoryImpl @Inject constructor(
         return getTask().firstOrNull { it.id == id }
     }
 
+    override suspend fun getTaskByObjectId(id: String): TaskUploadModel? {
+        return getTask().firstOrNull { it.objectId == id }
+    }
+
     private suspend fun putUpdateData(task: MutableList<TaskUploadModel>) {
         dataStoreInterface.apply {
             putPreference(
@@ -190,15 +175,18 @@ class CacheUploadTaskRepositoryImpl @Inject constructor(
         }
     }
 
-    override suspend fun updateTaskIdWithObjectId(task: TaskUploadModel) {
+    override suspend fun updateTaskIdWithObjectId(task: TaskUploadModel, newId: String) {
         mutex.lock()
         try {
             val listTaskData = getTask()
-            val taskIndex = listTaskData.indexOfFirst { it.objectId == task.objectId }
+            val taskIndex = listTaskData.indexOfFirst {
+                it.objectId == task.objectId
+            }
             if (taskIndex != DEFAULT_INDEX_NOT_FOUND) {
                 if (listTaskData[taskIndex].actionType == TaskActionType.AUTO_BACKUP) {
                     task.actionType = listTaskData[taskIndex].actionType
                 }
+                task.objectId = newId
                 listTaskData[taskIndex] = task
                 putUpdateData(listTaskData)
             }

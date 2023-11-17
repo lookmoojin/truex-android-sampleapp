@@ -8,14 +8,14 @@ import android.view.WindowManager
 import androidx.fragment.app.DialogFragment
 import androidx.fragment.app.viewModels
 import androidx.navigation.fragment.findNavController
-import com.truedigital.features.truecloudv3.R
-import com.truedigital.features.truecloudv3.databinding.FragmentTrueCloudv3RenameFileBinding
 import com.truedigital.common.share.componentv3.extension.setSavedStateHandle
 import com.truedigital.core.extensions.viewBinding
 import com.truedigital.core.utils.KeyboardUtils
+import com.truedigital.features.truecloudv3.R
 import com.truedigital.features.truecloudv3.common.StorageType
 import com.truedigital.features.truecloudv3.common.TrueCloudV3KeyBundle.KEY_BUNDLE_TRUE_CLOUD_OPTION_FILE_MODEL
 import com.truedigital.features.truecloudv3.common.TrueCloudV3SaveStateKey
+import com.truedigital.features.truecloudv3.databinding.FragmentTrueCloudv3RenameFileBinding
 import com.truedigital.features.truecloudv3.domain.model.TrueCloudFilesModel
 import com.truedigital.features.truecloudv3.injections.TrueCloudV3Component
 import com.truedigital.features.truecloudv3.presentation.viewmodel.RenameDialogViewModel
@@ -38,7 +38,7 @@ class RenameDialogFragment : DialogFragment(R.layout.fragment_true_cloudv3_renam
     private val viewModel: RenameDialogViewModel by viewModels { viewModelFactory }
 
     init {
-        setStyle(STYLE_NORMAL, R.style.FullNoBackgroundDialog)
+        setStyle(STYLE_NORMAL, com.truedigital.common.share.componentv3.R.style.FullNoBackgroundDialog)
     }
 
     override fun onAttach(context: Context) {

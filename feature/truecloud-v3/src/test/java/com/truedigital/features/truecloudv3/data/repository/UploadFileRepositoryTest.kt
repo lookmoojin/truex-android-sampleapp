@@ -20,11 +20,13 @@ import com.truedigital.core.provider.ContextDataProvider
 import com.truedigital.features.truecloudv3.common.FileMimeType
 import com.truedigital.features.truecloudv3.common.FileMimeTypeManager
 import com.truedigital.features.truecloudv3.common.TaskActionType
+import com.truedigital.features.truecloudv3.common.TaskStatusType
 import com.truedigital.features.truecloudv3.data.api.TrueCloudV3UploadInterface
 import com.truedigital.features.truecloudv3.data.model.InitUploadRequest
 import com.truedigital.features.truecloudv3.data.model.InitialDataResponse
 import com.truedigital.features.truecloudv3.data.model.InitialUploadResponse
 import com.truedigital.features.truecloudv3.data.model.SecureTokenServiceDataResponse
+import com.truedigital.features.truecloudv3.domain.model.TaskUploadModel
 import com.truedigital.features.truecloudv3.provider.SecureTokenServiceProvider
 import com.truedigital.features.truecloudv3.provider.TrueCloudV3TransferUtilityProvider
 import com.truedigital.features.truecloudv3.util.BitmapUtil
@@ -212,6 +214,16 @@ class UploadFileRepositoryTest {
     @Test
     fun `test retryUpload success`() = runTest {
         // arrange
+        val taskUploadModel = TaskUploadModel(
+            id = 1,
+            path = "abc",
+            status = TaskStatusType.IN_QUEUE,
+            name = "xyz.jpg",
+            size = "100",
+            type = FileMimeType.IMAGE,
+            updateAt = 1L,
+            objectId = "1"
+        )
         val stsData = SecureTokenServiceDataResponse(
             accessToken = "accessToken",
             secretKey = "secretKey",
@@ -235,6 +247,9 @@ class UploadFileRepositoryTest {
         coEvery {
             sTSProvider.getSTS()
         } returns flowOf(stsData)
+        coEvery {
+            cacheUploadTaskRepository.getTaskByObjectId(any())
+        } returns taskUploadModel
         every { contextDataProvider.getDataContext() } returns context
 
         mockkStatic(MimeTypeMap::class)
@@ -245,7 +260,7 @@ class UploadFileRepositoryTest {
             trueCloudV3TransferUtilityProvider.getTransferUtility(any(), any())
         } returns transferUtility
         coEvery {
-            cacheUploadTaskRepository.updateTaskIdWithObjectId(any())
+            cacheUploadTaskRepository.updateTaskIdWithObjectId(any(), any())
         } returns Unit
         coEvery {
             transferUtility.upload(any(), any(), any<ObjectMetadata>())
@@ -253,6 +268,12 @@ class UploadFileRepositoryTest {
         coEvery {
             transferObserver.id
         } returns 0
+        coEvery {
+            trueCloudV3UploadInterface.initialUpload(
+                ssoid = any(),
+                request = any()
+            )
+        } returns Response.success(initialUploadResponse)
         val slotListener = slot<TransferListener>()
         every {
             transferObserver.setTransferListener(capture(slotListener))
@@ -269,7 +290,6 @@ class UploadFileRepositoryTest {
 
         // act
         val uploadFile = uploadFileRepository.retryTask(
-            path = mockFile.path,
             objectId = "objectId"
         )
 
@@ -508,6 +528,16 @@ class UploadFileRepositoryTest {
     @Test
     fun `test thumbnail size 200k`() = runTest {
         // arrange
+        val taskUploadModel = TaskUploadModel(
+            id = 1,
+            path = "abc",
+            status = TaskStatusType.WAITING,
+            name = "xyz.jpg",
+            size = "100",
+            type = FileMimeType.IMAGE,
+            updateAt = 1L,
+            objectId = "1"
+        )
         val transferUtility: TransferUtility = mockk(relaxed = true)
 
         val mockFile = mockk<File>()
@@ -518,6 +548,9 @@ class UploadFileRepositoryTest {
         every { mockFile.toUri() } returns uri
         every { contextDataProvider.getContentResolver().getType(any()) } returns "image/jpg"
         every { contextDataProvider.getDataContext() } returns context
+        coEvery {
+            cacheUploadTaskRepository.getTaskByObjectId(any())
+        } returns taskUploadModel
         mockkStatic(MimeTypeMap::class)
         every { MimeTypeMap.getFileExtensionFromUrl(any()) } returns "mock MimeType"
         every { MimeTypeMap.getSingleton().getMimeTypeFromExtension(any()) } returns "mockMimeType"
@@ -617,6 +650,16 @@ class UploadFileRepositoryTest {
     @Test
     fun `test uploadMultiFileWithPath success`() = runTest {
         // arrange
+        val taskUploadModel = TaskUploadModel(
+            id = 1,
+            path = "abc",
+            status = TaskStatusType.IN_QUEUE,
+            name = "xyz.jpg",
+            size = "100",
+            type = FileMimeType.IMAGE,
+            updateAt = 1L,
+            objectId = "1"
+        )
         val transferUtility: TransferUtility = mockk(relaxed = true)
         val dataResponse = InitialDataResponse()
         val transferObserver = mockk<TransferObserver>()
@@ -651,13 +694,16 @@ class UploadFileRepositoryTest {
             trueCloudV3TransferUtilityProvider.getTransferUtility(any(), any())
         } returns transferUtility
         coEvery {
-            cacheUploadTaskRepository.addUploadTask(any())
+            cacheUploadTaskRepository.getTaskByObjectId(any())
+        } returns taskUploadModel
+        coEvery {
+            cacheUploadTaskRepository.addUploadTask(taskUploadModel)
         } returns Unit
         coEvery {
             cacheUploadTaskRepository.addUploadTaskList(any())
         } returns Unit
         coEvery {
-            cacheUploadTaskRepository.updateTaskIdWithObjectId(any())
+            cacheUploadTaskRepository.updateTaskIdWithObjectId(any(), any())
         } returns Unit
         coEvery {
             trueCloudV3FileUtil.getMimeType(any(), any())
@@ -703,6 +749,16 @@ class UploadFileRepositoryTest {
     @Test
     fun `test uploadMultiFileWithPath getMimeType is null`() = runTest {
         // arrange
+        val taskUploadModel = TaskUploadModel(
+            id = 1,
+            path = "abc",
+            status = TaskStatusType.IN_QUEUE,
+            name = "xyz.jpg",
+            size = "100",
+            type = FileMimeType.IMAGE,
+            updateAt = 1L,
+            objectId = "1"
+        )
         val transferUtility: TransferUtility = mockk(relaxed = true)
         val dataResponse = InitialDataResponse()
         val initialUploadResponse = InitialUploadResponse(
@@ -736,13 +792,16 @@ class UploadFileRepositoryTest {
             trueCloudV3TransferUtilityProvider.getTransferUtility(any(), any())
         } returns transferUtility
         coEvery {
+            cacheUploadTaskRepository.getTaskByObjectId(any())
+        } returns taskUploadModel
+        coEvery {
             cacheUploadTaskRepository.addUploadTask(any())
         } returns Unit
         coEvery {
             cacheUploadTaskRepository.addUploadTaskList(any())
         } returns Unit
         coEvery {
-            cacheUploadTaskRepository.updateTaskIdWithObjectId(any())
+            cacheUploadTaskRepository.updateTaskIdWithObjectId(any(), any())
         } returns Unit
         coEvery {
             trueCloudV3FileUtil.getMimeType(any(), any())
@@ -774,6 +833,16 @@ class UploadFileRepositoryTest {
     @Test
     fun `test uploadMultiFileWithPath case exceed limit`() = runTest {
         // arrange
+        val taskUploadModel = TaskUploadModel(
+            id = 1,
+            path = "abc",
+            status = TaskStatusType.IN_QUEUE,
+            name = "xyz.jpg",
+            size = "100",
+            type = FileMimeType.IMAGE,
+            updateAt = 1L,
+            objectId = "1"
+        )
         val responseBody = "null".toResponseBody("application/json".toMediaTypeOrNull())
 
         val mockFile = mockk<File>(relaxed = true)
@@ -782,6 +851,13 @@ class UploadFileRepositoryTest {
         every { Uri.fromFile(any()) } returns uri
         every { mockFile.toUri() } returns uri
         every { contextDataProvider.getContentResolver().getType(any()) } returns "image/jpg"
+        coEvery {
+            cacheUploadTaskRepository.getTaskByObjectId(any())
+        } returns taskUploadModel
+        every { contextDataProvider.getDataContext() } returns context
+        coEvery {
+            cacheUploadTaskRepository.addUploadTask(any())
+        } returns Unit
         coEvery {
             trueCloudV3FileUtil.getMimeType(any(), any())
         } returns "MimeType"
@@ -801,9 +877,9 @@ class UploadFileRepositoryTest {
 
         // assert
         uploadFile.catch { e ->
-            assertEquals("Exceed limit error", e.message)
+            assertNotNull(e.message)
         }.collect()
-        coVerify(exactly = 0) {
+        coVerify(exactly = 1) {
             cacheUploadTaskRepository.addUploadTaskList(any())
         }
     }

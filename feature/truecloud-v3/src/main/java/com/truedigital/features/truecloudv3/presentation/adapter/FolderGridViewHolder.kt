@@ -45,13 +45,11 @@ class FolderGridViewHolder(
                     trueCloudGridSelectImageView.isSelected =
                         onItemSelected?.getSelectedList()?.contains(it) == true
                 }
-
                 isTrashMode -> {
                     trueCloudGridSelectImageView.gone()
                     trueCloudDetailTextView.visible()
                     trueCloudDetailTextView.text = deleteIn
                 }
-
                 else -> {
                     trueCloudGridSelectImageView.gone()
                     trueCloudDetailTextView.gone()

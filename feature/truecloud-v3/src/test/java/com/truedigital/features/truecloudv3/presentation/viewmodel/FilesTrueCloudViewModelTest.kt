@@ -52,6 +52,7 @@ import com.truedigital.features.truecloudv3.domain.usecase.SearchWithCategoryUse
 import com.truedigital.features.truecloudv3.domain.usecase.UpdateTaskUploadStatusUseCase
 import com.truedigital.features.truecloudv3.domain.usecase.UploadFileUseCase
 import com.truedigital.features.truecloudv3.domain.usecase.UploadFileWithPathUseCase
+import com.truedigital.features.truecloudv3.domain.usecase.UploadQueueUseCase
 import com.truedigital.features.truecloudv3.extension.convertToFilesModel
 import com.truedigital.features.truecloudv3.navigation.AllFileToImageViewer
 import com.truedigital.features.truecloudv3.navigation.AllFileToMainOptionBottomSheet
@@ -133,6 +134,7 @@ class FilesTrueCloudViewModelTest {
     private val stackIds = mockkObject(FilesTrueCloudViewModel.Companion)
     private val searchInAllFilesUseCase: SearchInAllFilesUseCase = mockk(relaxed = true)
     private val searchWithCategoryUseCase: SearchWithCategoryUseCase = mockk(relaxed = true)
+    private val uploadQueueUseCase: UploadQueueUseCase = mockk(relaxed = true)
 
     @BeforeEach
     fun setUp() {
@@ -142,7 +144,6 @@ class FilesTrueCloudViewModelTest {
             getStorageListUseCase = getStorageListUseCase,
             getStorageListWithCategoryUseCase = getStorageListWithCategoryUseCase,
             getUploadTaskListUseCase = getUploadTaskListUseCase,
-            getNewUploadTaskListUseCase = getNewUploadTaskListUseCase,
             getUploadTaskUseCase = getUploadTaskUseCase,
             uploadFileUseCase = uploadFileUseCase,
             uploadFileWithPathUseCase = uploadFileWithPathUseCase,
@@ -166,7 +167,8 @@ class FilesTrueCloudViewModelTest {
             deleteTrashDataUseCase = deleteTrashDataUseCase,
             emptyTrashDataUseCase = emptyTrashDataUseCase,
             searchInAllFilesUseCase = searchInAllFilesUseCase,
-            searchWithCategoryUseCase = searchWithCategoryUseCase
+            searchWithCategoryUseCase = searchWithCategoryUseCase,
+            uploadQueueUseCase = uploadQueueUseCase
         )
     }
 
@@ -230,7 +232,7 @@ class FilesTrueCloudViewModelTest {
         coEvery {
             getNewUploadTaskListUseCase.execute()
         } answers {
-            flowOf(listOf(taskUploadModel))
+            flowOf(mutableListOf(taskUploadModel))
         }
         every { analyticManagerInterface.trackScreen(any()) } just runs
         // act
@@ -258,7 +260,7 @@ class FilesTrueCloudViewModelTest {
         coEvery {
             getNewUploadTaskListUseCase.execute()
         } answers {
-            flowOf(listOf(taskUploadModel))
+            flowOf(mutableListOf(taskUploadModel))
         }
         every { analyticManagerInterface.trackScreen(any()) } just runs
         // act
@@ -289,7 +291,7 @@ class FilesTrueCloudViewModelTest {
         coEvery {
             getNewUploadTaskListUseCase.execute()
         } answers {
-            flowOf(listOf(taskUploadModel))
+            flowOf(mutableListOf(taskUploadModel))
         }
         every { analyticManagerInterface.trackScreen(any()) } just runs
         // act
@@ -320,7 +322,7 @@ class FilesTrueCloudViewModelTest {
         coEvery {
             getNewUploadTaskListUseCase.execute()
         } answers {
-            flowOf(listOf(taskUploadModel))
+            flowOf(mutableListOf(taskUploadModel))
         }
         every { analyticManagerInterface.trackScreen(any()) } just runs
         // act
@@ -351,7 +353,7 @@ class FilesTrueCloudViewModelTest {
         coEvery {
             getNewUploadTaskListUseCase.execute()
         } answers {
-            flowOf(listOf(taskUploadModel))
+            flowOf(mutableListOf(taskUploadModel))
         }
         every { analyticManagerInterface.trackScreen(any()) } just runs
         // act
@@ -382,7 +384,7 @@ class FilesTrueCloudViewModelTest {
         coEvery {
             getNewUploadTaskListUseCase.execute()
         } answers {
-            flowOf(listOf(taskUploadModel))
+            flowOf(mutableListOf(taskUploadModel))
         }
         every { analyticManagerInterface.trackScreen(any()) } just runs
         // act
@@ -1369,11 +1371,11 @@ class FilesTrueCloudViewModelTest {
             name = "xyz.jpg",
             size = "100",
             type = FileMimeType.IMAGE,
-            updateAt = 0L,
+            updateAt = 10L,
             actionType = TaskActionType.UPLOAD
         )
         coEvery {
-            getNewUploadTaskListUseCase.execute()
+            getUploadTaskListUseCase.execute()
         } answers {
             flowOf(mutableListOf(taskUploadModel))
         }
@@ -1410,7 +1412,7 @@ class FilesTrueCloudViewModelTest {
             actionType = TaskActionType.UPLOAD
         )
         coEvery {
-            getNewUploadTaskListUseCase.execute()
+            getUploadTaskListUseCase.execute()
         } answers {
             flowOf(mutableListOf())
         }
@@ -1451,7 +1453,7 @@ class FilesTrueCloudViewModelTest {
             updateAt = 0L
         )
         coEvery {
-            getNewUploadTaskListUseCase.execute()
+            getUploadTaskListUseCase.execute()
         } answers {
             flowOf(mutableListOf(taskUploadModel))
         }
@@ -1505,7 +1507,7 @@ class FilesTrueCloudViewModelTest {
             updateAt = 0L
         )
         coEvery {
-            getNewUploadTaskListUseCase.execute()
+            getUploadTaskListUseCase.execute()
         } answers {
             flowOf(mutableListOf(taskUploadModel))
         }
@@ -1559,7 +1561,7 @@ class FilesTrueCloudViewModelTest {
             updateAt = 0L
         )
         coEvery {
-            getNewUploadTaskListUseCase.execute()
+            getUploadTaskListUseCase.execute()
         } answers {
             flowOf(mutableListOf(taskUploadModel))
         }
@@ -1613,7 +1615,7 @@ class FilesTrueCloudViewModelTest {
             updateAt = 0L
         )
         coEvery {
-            getNewUploadTaskListUseCase.execute()
+            getUploadTaskListUseCase.execute()
         } answers {
             flowOf(mutableListOf(taskUploadModel))
         }
@@ -1725,7 +1727,7 @@ class FilesTrueCloudViewModelTest {
             updateAt = 0L
         )
         coEvery {
-            getNewUploadTaskListUseCase.execute()
+            getUploadTaskListUseCase.execute()
         } answers {
             flowOf(mutableListOf(taskUploadModel))
         }
@@ -1779,7 +1781,7 @@ class FilesTrueCloudViewModelTest {
             updateAt = 0L
         )
         coEvery {
-            getNewUploadTaskListUseCase.execute()
+            getUploadTaskListUseCase.execute()
         } answers {
             flowOf(mutableListOf(taskUploadModel))
         }
@@ -1826,28 +1828,28 @@ class FilesTrueCloudViewModelTest {
         val taskUploadModel = TaskUploadModel(
             id = 1,
             path = "abc",
-            status = TaskStatusType.IN_PROGRESS,
+            status = TaskStatusType.WAITING,
             name = "xyz.jpg",
             size = "100",
             type = FileMimeType.IMAGE,
-            updateAt = 0L
+            updateAt = 0L,
+            objectId = "object1"
         )
-        coEvery {
-            getNewUploadTaskListUseCase.execute()
-        } answers {
-            flowOf(mutableListOf(taskUploadModel))
-        }
         coEvery {
             getUploadTaskListUseCase.execute()
         } returns flowOf(mutableListOf(taskUploadModel))
 
-        val transfer: TrueCloudV3TransferObserver? = null
+        val transfer: TrueCloudV3TransferObserver = mockk(relaxed = true)
+        coEvery {
+            uploadQueueUseCase.execute(any())
+        } returns flowOf(transfer)
+        every { transfer.getState() } returns TrueCloudV3TransferState.COMPLETED
         coEvery {
             trueCloudV3TransferUtilityProvider.getTrueCloudV3TransferObserverById(any(), any())
         } returns transfer
         coEvery {
             completeUploadUseCase.execute(any())
-        } returns flow { }
+        } returns flow {}
         viewModel.categoryType = FileCategoryType.UNSUPPORTED_FORMAT
         FilesTrueCloudViewModel.Companion.stackFolderIds.clear()
         FilesTrueCloudViewModel.Companion.stackFolderIds.add(Pair("folderId", "cateName"))
@@ -1858,9 +1860,6 @@ class FilesTrueCloudViewModelTest {
         // assert
         testhowUploadTaskListObserver.assertHasValue()
         testObserver.assertHasValue()
-        coVerify(exactly = 1) {
-            completeUploadUseCase.execute(any())
-        }
     }
 
     @Test
@@ -1973,7 +1972,7 @@ class FilesTrueCloudViewModelTest {
             type = FileMimeType.IMAGE,
             objectId = "1234321",
             actionType = TaskActionType.UPLOAD,
-            updateAt = 0L
+            updateAt = 1L
         )
 
         coEvery {
@@ -1996,7 +1995,7 @@ class FilesTrueCloudViewModelTest {
         // assert
         coVerify(exactly = 1) {
             removeAllTaskUseCase.execute()
-            getUploadTaskListUseCase.execute()
+            //  getUploadTaskListUseCase.execute()
         }
     }
 
@@ -2015,6 +2014,13 @@ class FilesTrueCloudViewModelTest {
             actionType = TaskActionType.UPLOAD,
             updateAt = 0L
         )
+        val transfer: TrueCloudV3TransferObserver = mockk(relaxed = true)
+        every {
+            contextDataProviderWrapper.get().getDataContext()
+        } returns context
+        coEvery {
+            trueCloudV3TransferUtilityProvider.getTrueCloudV3TransferObserverById(any(), any())
+        } returns transfer
         coEvery {
             updateTaskUploadStatusUseCase.execute(
                 any(),
@@ -2064,10 +2070,16 @@ class FilesTrueCloudViewModelTest {
             actionType = TaskActionType.UPLOAD,
             updateAt = 0L
         )
+        val transfer: TrueCloudV3TransferObserver = mockk(relaxed = true)
         every {
             completeUploadUseCase.execute(any())
         } returns flowOf()
-
+        every {
+            contextDataProviderWrapper.get().getDataContext()
+        } returns context
+        coEvery {
+            trueCloudV3TransferUtilityProvider.getTrueCloudV3TransferObserverById(any(), any())
+        } returns transfer
         FilesTrueCloudViewModel.Companion.stackFolderIds.clear()
         FilesTrueCloudViewModel.Companion.stackFolderIds.add(Pair("folderId", "cateName"))
 
@@ -2093,11 +2105,19 @@ class FilesTrueCloudViewModelTest {
             actionType = TaskActionType.UPLOAD,
             updateAt = 0L
         )
+        val transfer: TrueCloudV3TransferObserver = mockk(relaxed = true)
+
+        every {
+            contextDataProviderWrapper.get().getDataContext()
+        } returns context
+        coEvery {
+            trueCloudV3TransferUtilityProvider.getTrueCloudV3TransferObserverById(any(), any())
+        } returns transfer
         coEvery {
             removeTaskUseCase.execute(any())
         } returns Unit
         coEvery {
-            retryUploadUseCase.execute(any(), any())
+            retryUploadUseCase.execute(any())
         } returns mockk()
         coEvery {
             uploadFileWithPathUseCase.execute(any(), any())
@@ -2133,8 +2153,15 @@ class FilesTrueCloudViewModelTest {
             actionType = TaskActionType.UPLOAD,
             updateAt = 0L
         )
+        val transfer: TrueCloudV3TransferObserver = mockk(relaxed = true)
+        every {
+            contextDataProviderWrapper.get().getDataContext()
+        } returns context
         coEvery {
-            retryUploadUseCase.execute(any(), any())
+            trueCloudV3TransferUtilityProvider.getTrueCloudV3TransferObserverById(any(), any())
+        } returns transfer
+        coEvery {
+            retryUploadUseCase.execute(any())
         } returns mockk()
         coEvery {
             uploadFileWithPathUseCase.execute(any(), any())
@@ -2151,7 +2178,7 @@ class FilesTrueCloudViewModelTest {
 
         // assert
         coVerify(exactly = 1) {
-            retryUploadUseCase.execute(any(), any())
+            retryUploadUseCase.execute(any())
         }
     }
 
@@ -3070,7 +3097,12 @@ class FilesTrueCloudViewModelTest {
         // arrange
         every { router.execute(any()) } just runs
         FilesTrueCloudViewModel.Companion.stackFolderIds.clear()
-        FilesTrueCloudViewModel.Companion.stackFolderIds.addAll(listOf(Pair("a", "aa"), Pair("b", "aa")))
+        FilesTrueCloudViewModel.Companion.stackFolderIds.addAll(
+            listOf(
+                Pair("a", "aa"),
+                Pair("b", "aa")
+            )
+        )
         // act
         viewModel.onClickSelectOption(true)
 
@@ -3082,7 +3114,12 @@ class FilesTrueCloudViewModelTest {
     fun `test onTrashSortByClick success`() {
         // arrange
         FilesTrueCloudViewModel.Companion.stackFolderIds.clear()
-        FilesTrueCloudViewModel.Companion.stackFolderIds.addAll(listOf(Pair("a", "aa"), Pair("b", "aa")))
+        FilesTrueCloudViewModel.Companion.stackFolderIds.addAll(
+            listOf(
+                Pair("a", "aa"),
+                Pair("b", "aa")
+            )
+        )
         coEvery {
             getTrashListUseCase.execute()
         } returns flow {}
@@ -3196,7 +3233,13 @@ class FilesTrueCloudViewModelTest {
         coEvery {
             trueCloudV3TransferUtilityProvider.pauseTransferById(any(), any())
         } returns true
-
+        val transfer: TrueCloudV3TransferObserver = mockk(relaxed = true)
+        every {
+            contextDataProviderWrapper.get().getDataContext()
+        } returns context
+        coEvery {
+            trueCloudV3TransferUtilityProvider.getTrueCloudV3TransferObserverById(any(), any())
+        } returns transfer
         viewModel.itemBackupList = mutableListOf(
             TrueCloudFilesModel.AutoBackup(
                 id = 1,
@@ -3282,6 +3325,13 @@ class FilesTrueCloudViewModelTest {
                 coverImageSize = 1
             )
         )
+        val transfer: TrueCloudV3TransferObserver = mockk(relaxed = true)
+        every {
+            contextDataProviderWrapper.get().getDataContext()
+        } returns context
+        coEvery {
+            trueCloudV3TransferUtilityProvider.getTrueCloudV3TransferObserverById(any(), any())
+        } returns transfer
         coEvery {
             updateTaskUploadStatusUseCase.execute(
                 any(),

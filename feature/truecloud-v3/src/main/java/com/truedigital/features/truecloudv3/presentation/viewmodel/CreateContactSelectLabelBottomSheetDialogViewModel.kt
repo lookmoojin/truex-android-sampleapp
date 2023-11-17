@@ -32,8 +32,8 @@ class CreateContactSelectLabelBottomSheetDialogViewModel @Inject constructor(
         onSelected.value = customPhoneLabelModel
         analyticManagerInterface.trackEvent(
             hashMapOf(
-                MeasurementConstant.Key.KEY_LINK_TYPE to TrueCloudV3TrackAnalytic.EVENT_CLICK,
-                MeasurementConstant.Key.KEY_EVENT_NAME to TrueCloudV3TrackAnalytic.LINK_TYPE_BOTTOM_SHEET,
+                MeasurementConstant.Key.KEY_EVENT_NAME to TrueCloudV3TrackAnalytic.EVENT_CLICK,
+                MeasurementConstant.Key.KEY_LINK_TYPE to TrueCloudV3TrackAnalytic.LINK_TYPE_BOTTOM_SHEET,
                 MeasurementConstant.Key.KEY_LINK_DESC to lable
             )
         )
@@ -43,8 +43,8 @@ class CreateContactSelectLabelBottomSheetDialogViewModel @Inject constructor(
         onSelected.value = customPhoneLabelModel
         analyticManagerInterface.trackEvent(
             hashMapOf(
-                MeasurementConstant.Key.KEY_LINK_TYPE to TrueCloudV3TrackAnalytic.EVENT_CLICK,
-                MeasurementConstant.Key.KEY_EVENT_NAME to TrueCloudV3TrackAnalytic.LINK_TYPE_BOTTOM_SHEET,
+                MeasurementConstant.Key.KEY_EVENT_NAME to TrueCloudV3TrackAnalytic.EVENT_CLICK,
+                MeasurementConstant.Key.KEY_LINK_TYPE to TrueCloudV3TrackAnalytic.LINK_TYPE_BOTTOM_SHEET,
                 MeasurementConstant.Key.KEY_LINK_DESC to TrueCloudV3TrackAnalytic.LINK_DESC_CUSTOM_LABEL
             )
         )

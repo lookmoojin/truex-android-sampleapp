@@ -11,6 +11,7 @@ import com.amazonaws.mobileconnectors.s3.transferutility.TransferState
 import com.amazonaws.mobileconnectors.s3.transferutility.TransferUtility
 import com.amazonaws.services.s3.model.ObjectMetadata
 import com.amazonaws.services.s3.util.Mimetypes
+import com.google.ads.interactivemedia.v3.internal.it
 import com.truedigital.common.share.currentdate.usecase.GetCurrentDateTimeUseCase
 import com.truedigital.common.share.datalegacy.data.repository.profile.UserRepository
 import com.truedigital.core.provider.ContextDataProvider
@@ -35,6 +36,7 @@ import kotlinx.coroutines.flow.catch
 import kotlinx.coroutines.flow.channelFlow
 import kotlinx.coroutines.flow.collect
 import kotlinx.coroutines.flow.combine
+import kotlinx.coroutines.flow.emitAll
 import kotlinx.coroutines.flow.firstOrNull
 import kotlinx.coroutines.flow.flatMapConcat
 import kotlinx.coroutines.flow.flow
@@ -44,6 +46,7 @@ import timber.log.Timber
 import java.io.ByteArrayInputStream
 import java.io.ByteArrayOutputStream
 import java.io.File
+import java.util.UUID
 import javax.inject.Inject
 
 interface UploadFileRepository {
@@ -52,9 +55,14 @@ interface UploadFileRepository {
         folderId: String,
         uploadType: TaskActionType
     ): Flow<TransferObserver>
+
+    fun uploadMultiFileWithTask(
+        tasks: List<TaskUploadModel>
+    ): Flow<TransferObserver>
+
     fun uploadFileWithPath(path: String, folderId: String?): Flow<TransferObserver>
     fun uploadContactWithPath(path: String, folderId: String?, key: String): Flow<TransferObserver>
-    fun retryTask(path: String, objectId: String): Flow<TransferObserver>
+    fun retryTask(objectId: String): Flow<TransferObserver>
     fun replaceFileWithPath(path: String, objectId: String): Flow<TransferObserver>
 }
 
@@ -88,49 +96,33 @@ class UploadFileRepositoryImpl @Inject constructor(
         folderId: String,
         uploadType: TaskActionType
     ): Flow<TransferObserver> {
-        return channelFlow {
-            val taskList = try {
-                getTaskListFromPath(paths, folderId, uploadType)
-            } catch (e: Exception) {
-                channel.close(e)
-                return@channelFlow
-            }
-            val stsResponse = sTSProvider.getSTS().firstOrNull()
-            val transferUtility = trueCloudV3TransferUtilityProvider.getTransferUtility(
-                stsResponse,
-                contextDataProvider.getDataContext()
-            )
-            cacheUploadTaskRepository.addUploadTaskList(taskList)
-            for (task in taskList) {
-                val file = File(task.path)
+        return flow<TransferObserver> {
+            val taskList = mutableListOf<TaskUploadModel>()
+            for (path in paths) {
+                val file = File(path)
                 val mimeTypeStr = trueCloudV3FileUtil.getMimeType(
                     file.toUri(),
                     contextDataProvider.getContentResolver()
                 ).orEmpty()
                 val mimeType = FileMimeTypeManager.getMimeType(mimeTypeStr)
-                val coverImageSize = uploadThumbnail(file, task.objectId, transferUtility, mimeType)
-                val meta = ObjectMetadata()
-                meta.contentType = Mimetypes.getInstance().getMimetype(file)
-                val transferObserver = transferUtility.upload(task.objectId, file, meta)
-                transferObserver.setTransferListener(object : TransferListener {
-                    override fun onStateChanged(id: Int, state: TransferState?) {
-                        Timber.i("onStateChanged  id : $id  , state : ${state?.name}")
-                    }
-
-                    override fun onProgressChanged(id: Int, bytesCurrent: Long, bytesTotal: Long) {
-                        Timber.i("onStateChanged id : $id, bytesCurrent : $bytesCurrent , bytesTotal : $bytesTotal")
-                    }
-
-                    override fun onError(id: Int, ex: Exception?) {
-                        Timber.i("onError  id : $id  , message : ${ex?.message}")
-                    }
-                })
-                task.id = transferObserver.id
-                task.coverImageSize = coverImageSize
-                cacheUploadTaskRepository.updateTaskIdWithObjectId(task)
-                send(transferObserver)
-                delay(DEFAULT_UPLOAD_DELAY)
+                val task = TaskUploadModel(
+                    id = DEFAULT_TASK_ID,
+                    path = path,
+                    status = TaskStatusType.IN_QUEUE,
+                    name = file.name,
+                    size = file.length()
+                        .formatBinarySize(contextDataProvider.getDataContext()),
+                    coverImageSize = COVER_SIZE_ZERO,
+                    type = mimeType,
+                    objectId = "${UUID.randomUUID()}+UUID",
+                    updateAt = getCurrentDateTimeUseCase.execute().firstOrNull() ?: 0,
+                    folderId = folderId,
+                    actionType = uploadType
+                )
+                taskList.add(task)
             }
+            cacheUploadTaskRepository.addUploadTaskList(taskList)
+            emitAll(uploadMultiFileWithTask(taskList))
         }
     }
 
@@ -144,10 +136,8 @@ class UploadFileRepositoryImpl @Inject constructor(
     }
 
     @RequiresApi(Build.VERSION_CODES.Q)
-    override fun retryTask(path: String, objectId: String): Flow<TransferObserver> {
-        return sTSProvider.getSTS().flatMapConcat { _stsResponse ->
-            processRetryUpload(objectId, _stsResponse, path)
-        }
+    override fun retryTask(objectId: String): Flow<TransferObserver> {
+        return processRetryUpload(objectId)
     }
 
     override fun replaceFileWithPath(path: String, objectId: String): Flow<TransferObserver> {
@@ -176,19 +166,13 @@ class UploadFileRepositoryImpl @Inject constructor(
 
     private fun processRetryUpload(
         objectId: String,
-        stsResponse: SecureTokenServiceDataResponse,
-        path: String
     ): Flow<TransferObserver> {
         return flow {
-            val uploadResponse = uploadFile(
-                objectId = objectId,
-                stsResponse = stsResponse,
-                path = path
-            )
-            val uploadObserver = uploadResponse.first
-            val taskUploadModel = uploadResponse.second
-            cacheUploadTaskRepository.updateTaskIdWithObjectId(taskUploadModel)
-            emit(uploadObserver)
+            cacheUploadTaskRepository.getTaskByObjectId(objectId)
+                ?.let { task ->
+                    task.status = TaskStatusType.WAITING
+                    testLoopUpload(task)?.let { emit(it) }
+                }
         }.flowOn(Dispatchers.IO)
     }
 
@@ -291,12 +275,14 @@ class UploadFileRepositoryImpl @Inject constructor(
                     coverBitmap = bitmapUtil.createImageThumbnail(file)
                     coverImageSize = processUploadCoverImage(id, coverBitmap, transferUtility)
                 }
+
                 FileMimeType.VIDEO -> {
                     coverBitmap = bitmapUtil.createVideoThumbnail(file)
                     coverBitmap?.let { _coverBitmap ->
                         coverImageSize = processUploadCoverImage(id, _coverBitmap, transferUtility)
                     }
                 }
+
                 else -> {
                     coverImageSize = null
                 }
@@ -307,6 +293,7 @@ class UploadFileRepositoryImpl @Inject constructor(
                 FileMimeType.VIDEO -> {
                     coverImageSize = COVER_SIZE_ZERO
                 }
+
                 else -> {
                     coverImageSize = null
                 }
@@ -354,42 +341,78 @@ class UploadFileRepositoryImpl @Inject constructor(
         }
     }
 
-    private suspend fun getTaskListFromPath(
-        paths: List<String>,
-        folderId: String,
-        uploadType: TaskActionType
-    ): List<TaskUploadModel> {
-        val taskList = mutableListOf<TaskUploadModel>()
-        for (path in paths) {
-            initUpload(folderId, path)
-                .map { _initData ->
-                    val file = File(path)
-                    val mimeTypeStr = trueCloudV3FileUtil.getMimeType(
-                        file.toUri(),
-                        contextDataProvider.getContentResolver()
-                    ).orEmpty()
-                    val mimeType = FileMimeTypeManager.getMimeType(mimeTypeStr)
-                    val task = TaskUploadModel(
-                        id = DEFAULT_TASK_ID,
-                        path = path,
-                        status = TaskStatusType.IN_PROGRESS,
-                        name = file.name,
-                        size = file.length()
-                            .formatBinarySize(contextDataProvider.getDataContext()),
-                        coverImageSize = COVER_SIZE_ZERO,
-                        type = mimeType,
-                        objectId = _initData.data?.id,
-                        updateAt = getCurrentDateTimeUseCase.execute().firstOrNull() ?: 0,
-                        folderId = folderId,
-                        actionType = uploadType
-                    )
-                    taskList.add(task)
+    override fun uploadMultiFileWithTask(
+        tasks: List<TaskUploadModel>
+    ): Flow<TransferObserver> {
+        return channelFlow {
+            for (task in tasks) {
+                task.objectId?.let { objId ->
+                    cacheUploadTaskRepository.getTaskByObjectId(objId)
+                        ?.let { task ->
+                            try {
+                                testLoopUpload(task)?.let { send(it) }
+                            } catch (e: Exception) {
+                                channel.close(e)
+                            }
+                        }
                 }
-                .catch {
-                    throw it
-                }
-                .collect()
+            }
         }
-        return taskList
+    }
+
+    private suspend fun testLoopUpload(task: TaskUploadModel): TransferObserver? {
+        if (task.status == TaskStatusType.PAUSE) return null
+        task.status = TaskStatusType.WAITING
+        cacheUploadTaskRepository.updateTaskIdWithObjectId(task, task.objectId!!)
+        val stsResponse = sTSProvider.getSTS().firstOrNull()
+        val transferUtility = trueCloudV3TransferUtilityProvider.getTransferUtility(
+            stsResponse,
+            contextDataProvider.getDataContext()
+        )
+        val taskUpdate = getTaskFromPath(task)
+        val file = File(task.path)
+        val mimeTypeStr = trueCloudV3FileUtil.getMimeType(
+            file.toUri(),
+            contextDataProvider.getContentResolver()
+        ).orEmpty()
+        val mimeType = FileMimeTypeManager.getMimeType(mimeTypeStr)
+        val coverImageSize = uploadThumbnail(file, taskUpdate.data?.id, transferUtility, mimeType)
+        val meta = ObjectMetadata()
+        meta.contentType = Mimetypes.getInstance().getMimetype(file)
+        val transferObserver = transferUtility.upload(taskUpdate.data?.id, file, meta)
+        transferObserver.setTransferListener(object : TransferListener {
+            override fun onStateChanged(id: Int, state: TransferState?) {
+                Timber.i("onStateChanged  id : $id  , state : ${state?.name}")
+            }
+
+            override fun onProgressChanged(id: Int, bytesCurrent: Long, bytesTotal: Long) {
+                Timber.i("onStateChanged id : $id, bytesCurrent : $bytesCurrent , bytesTotal : $bytesTotal")
+            }
+
+            override fun onError(id: Int, ex: Exception?) {
+                Timber.i("onError  id : $id  , message : ${ex?.message}")
+            }
+        })
+        task.status = TaskStatusType.IN_PROGRESS
+        task.id = transferObserver.id
+        task.coverImageSize = coverImageSize
+        cacheUploadTaskRepository.updateTaskIdWithObjectId(task, taskUpdate.data?.id!!)
+        delay(DEFAULT_UPLOAD_DELAY)
+        return transferObserver
+    }
+
+    private suspend fun getTaskFromPath(
+        task: TaskUploadModel
+    ): InitialUploadResponse {
+        var response: InitialUploadResponse? = null
+        initUpload(task.folderId, task.path)
+            .map { _initData ->
+                response = _initData
+            }
+            .catch {
+                throw it
+            }
+            .collect()
+        return response!!
     }
 }

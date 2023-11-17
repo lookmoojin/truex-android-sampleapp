@@ -6,13 +6,13 @@ import kotlinx.coroutines.flow.Flow
 import javax.inject.Inject
 
 interface GetNewUploadTaskListUseCase {
-    fun execute(): Flow<List<TaskUploadModel>>
+    fun execute(): Flow<MutableList<TaskUploadModel>>
 }
 
 class GetNewUploadTaskListUseCaseImpl @Inject constructor(
     private val cacheUploadTaskRepository: CacheUploadTaskRepository
 ) : GetNewUploadTaskListUseCase {
-    override fun execute(): Flow<List<TaskUploadModel>> {
-        return cacheUploadTaskRepository.getTasks()
+    override fun execute(): Flow<MutableList<TaskUploadModel>> {
+        return cacheUploadTaskRepository.getRefreshTasks()
     }
 }

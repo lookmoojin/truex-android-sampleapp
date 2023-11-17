@@ -13,17 +13,17 @@ import androidx.fragment.app.viewModels
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-import com.truedigital.features.truecloudv3.R
-import com.truedigital.features.truecloudv3.databinding.FragmentTrueCloudv3FileLocatorBinding
 import com.truedigital.common.share.componentv3.extension.getSavedStateHandle
 import com.truedigital.common.share.componentv3.extension.setSavedStateHandle
 import com.truedigital.component.base.BaseFragment
 import com.truedigital.core.extensions.viewBinding
+import com.truedigital.features.truecloudv3.R
 import com.truedigital.features.truecloudv3.common.FileCategoryType
 import com.truedigital.features.truecloudv3.common.TrueCloudV3KeyBundle
 import com.truedigital.features.truecloudv3.common.TrueCloudV3MediaType
 import com.truedigital.features.truecloudv3.common.TrueCloudV3SaveStateKey
 import com.truedigital.features.truecloudv3.data.repository.FileRepositoryImpl
+import com.truedigital.features.truecloudv3.databinding.FragmentTrueCloudv3FileLocatorBinding
 import com.truedigital.features.truecloudv3.domain.model.TrueCloudFilesModel
 import com.truedigital.features.truecloudv3.extension.actionGetContent
 import com.truedigital.features.truecloudv3.extension.snackBar
@@ -58,7 +58,6 @@ class FileLocatorFragment : BaseFragment(R.layout.fragment_true_cloudv3_file_loc
         override fun onRetryClicked(model: TrueCloudFilesModel.Upload) {
             // not do everything
         }
-
         override fun onCancelClicked(model: TrueCloudFilesModel.Upload) {
             // not do everything
         }
@@ -189,7 +188,6 @@ class FileLocatorFragment : BaseFragment(R.layout.fragment_true_cloudv3_file_loc
             viewModel.onScrolled(dy, recyclerView.layoutManager as? GridLayoutManager)
         }
     }
-
     private fun initListener() {
         findNavController()
             .getSavedStateHandle<TrueCloudV3MediaType>(TrueCloudV3SaveStateKey.KEY_PERMISSION_GRANTED_RESULT)
@@ -220,13 +218,11 @@ class FileLocatorFragment : BaseFragment(R.layout.fragment_true_cloudv3_file_loc
                         getString(R.string.true_cloudv3_dialog_selected_copy_file),
                         _categoryName
                     )
-
                     FileRepositoryImpl.MOVE -> String.format(
                         getString(R.string.true_cloudv3_file_locator),
                         getString(R.string.true_cloudv3_dialog_selected_move_file),
                         _categoryName
                     )
-
                     else -> ""
                 }
             }

@@ -13,16 +13,16 @@ import android.view.View
 import androidx.core.content.getSystemService
 import androidx.fragment.app.viewModels
 import androidx.navigation.fragment.findNavController
-import com.truedigital.features.truecloudv3.R
-import com.truedigital.features.truecloudv3.databinding.FragmentTrueCloudv3SharedFileViewerBinding
 import com.truedigital.common.share.componentv3.extension.getSavedStateHandle
 import com.truedigital.component.base.BaseFragment
 import com.truedigital.component.dialog.trueid.DialogIconType
 import com.truedigital.component.dialog.trueid.DialogManager
 import com.truedigital.component.dialog.trueid.DialogTopNavigationType
 import com.truedigital.core.extensions.viewBinding
+import com.truedigital.features.truecloudv3.R
 import com.truedigital.features.truecloudv3.common.TrueCloudV3KeyBundle.KEY_BUNDLE_TRUE_CLOUD_SHARED_FILE_ID
 import com.truedigital.features.truecloudv3.common.TrueCloudV3SaveStateKey
+import com.truedigital.features.truecloudv3.databinding.FragmentTrueCloudv3SharedFileViewerBinding
 import com.truedigital.features.truecloudv3.domain.model.SharedFileModel
 import com.truedigital.features.truecloudv3.extension.snackBar
 import com.truedigital.features.truecloudv3.injections.TrueCloudV3Component
@@ -238,9 +238,10 @@ class SharedFileViewerFragment : BaseFragment(R.layout.fragment_true_cloudv3_sha
 
     private fun setSharedObjectView(sharedObject: SharedFileModel?) {
         sharedObject?.let { sharedFile ->
+            binding.trueCloudProgressBarContainer.visible()
+            binding.trueCloudPrivateFileContainer.gone()
             binding.trueCloudSharedFileView.setDisplayItem(sharedFile, ::closeLoadingScreen)
             binding.trueCloudFileHeaderTitle.setTitle(sharedFile.name)
-            binding.trueCloudPrivateFileContainer.gone()
             binding.trueCloudFileContainer.visible()
         }
     }

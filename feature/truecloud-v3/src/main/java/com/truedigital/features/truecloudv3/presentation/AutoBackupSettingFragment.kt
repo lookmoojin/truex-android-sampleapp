@@ -12,8 +12,6 @@ import androidx.core.view.isVisible
 import androidx.fragment.app.viewModels
 import androidx.navigation.fragment.NavHostFragment
 import androidx.navigation.fragment.findNavController
-import com.truedigital.features.truecloudv3.R
-import com.truedigital.features.truecloudv3.databinding.FragmentTrueCloudv3AutoBackupSettingBinding
 import com.truedigital.common.share.componentv3.extension.getSavedStateHandle
 import com.truedigital.component.base.BaseFragment
 import com.truedigital.component.dialog.trueid.DialogIconType
@@ -21,8 +19,10 @@ import com.truedigital.component.dialog.trueid.DialogManager
 import com.truedigital.core.extensions.viewBinding
 import com.truedigital.core.manager.permission.PermissionManager
 import com.truedigital.core.manager.permission.PermissionManagerImpl
+import com.truedigital.features.truecloudv3.R
 import com.truedigital.features.truecloudv3.common.TrueCloudV3KeyBundle
 import com.truedigital.features.truecloudv3.common.TrueCloudV3SaveStateKey
+import com.truedigital.features.truecloudv3.databinding.FragmentTrueCloudv3AutoBackupSettingBinding
 import com.truedigital.features.truecloudv3.domain.model.DataUsageModel
 import com.truedigital.features.truecloudv3.domain.model.DetailDialogModel
 import com.truedigital.features.truecloudv3.domain.usecase.NodePermission
@@ -101,11 +101,9 @@ class AutoBackupSettingFragment : BaseFragment(R.layout.fragment_true_cloudv3_au
                             )
                             Timber.i("onPermissionDisabled")
                         }
-
                         override fun onPermissionGranted() {
                             viewModel.setBackupState(backupActiveSwitch.isChecked)
                         }
-
                         override fun onPermissionDenied() {
                             backupActiveSwitch.isChecked = false
                             viewModel.setBackupState(false)
@@ -192,8 +190,7 @@ class AutoBackupSettingFragment : BaseFragment(R.layout.fragment_true_cloudv3_au
         activity?.startActivity(
             Intent().apply {
                 action = Settings.ACTION_APPLICATION_DETAILS_SETTINGS
-                data =
-                    Uri.fromParts(AutoBackupViewModel.PACKAGE, requireContext().packageName, null)
+                data = Uri.fromParts(AutoBackupViewModel.PACKAGE, requireContext().packageName, null)
             }
         )
     }

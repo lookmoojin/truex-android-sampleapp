@@ -14,15 +14,15 @@ import androidx.fragment.app.viewModels
 import androidx.navigation.fragment.findNavController
 import com.google.android.material.bottomsheet.BottomSheetBehavior
 import com.google.android.material.bottomsheet.BottomSheetDialogFragment
-import com.truedigital.features.truecloudv3.R
-import com.truedigital.features.truecloudv3.databinding.TrueCloudv3FileBottomSheetDialogBinding
 import com.truedigital.common.share.componentv3.extension.getSavedStateHandle
 import com.truedigital.common.share.componentv3.extension.setSavedStateHandle
 import com.truedigital.core.databinding.setViewGone
 import com.truedigital.core.extensions.viewBinding
+import com.truedigital.features.truecloudv3.R
 import com.truedigital.features.truecloudv3.common.TrueCloudV3KeyBundle.KEY_BUNDLE_TRUE_CLOUD_OPTION_FILE_MODEL
 import com.truedigital.features.truecloudv3.common.TrueCloudV3KeyBundle.KEY_BUNDLE_TRUE_CLOUD_OPTION_FOLDER
 import com.truedigital.features.truecloudv3.common.TrueCloudV3SaveStateKey
+import com.truedigital.features.truecloudv3.databinding.TrueCloudv3FileBottomSheetDialogBinding
 import com.truedigital.features.truecloudv3.domain.model.TrueCloudFilesModel
 import com.truedigital.features.truecloudv3.injections.TrueCloudV3Component
 import com.truedigital.features.truecloudv3.presentation.viewmodel.OptionFileBottomSheetDialogViewModel
@@ -57,9 +57,9 @@ class OptionFileBottomSheetDialogFragment : BottomSheetDialogFragment() {
     override fun onCreateDialog(savedInstanceState: Bundle?): Dialog {
         return super.onCreateDialog(savedInstanceState).apply {
             setOnShowListener {
-                val parentLayout = findViewById<View>(R.id.design_bottom_sheet) as FrameLayout
+                val parentLayout = findViewById<View>(com.google.android.material.R.id.design_bottom_sheet) as FrameLayout
                 parentLayout.let { bottomSheet ->
-                    bottomSheet.setBackgroundResource(R.color.transparent)
+                    bottomSheet.setBackgroundResource(com.truedigital.component.R.color.transparent)
                     val behaviour = BottomSheetBehavior.from(bottomSheet)
                     behaviour.isDraggable = false
                 }
@@ -114,12 +114,12 @@ class OptionFileBottomSheetDialogFragment : BottomSheetDialogFragment() {
         viewModel.onShowProgressLoading.observe(viewLifecycleOwner) { _isShowProgress ->
             binding.viewFileProgressBar.isVisible = _isShowProgress
         }
-        viewModel.onStartShare.observe(viewLifecycleOwner) { _file ->
+        viewModel.onStartViewFile.observe(viewLifecycleOwner) { (_file, _mimeType) ->
             val fileUri: Uri = Uri.fromFile(_file)
-            val intent = Intent(Intent.ACTION_SEND)
-            intent.type = "*/*"
-            intent.putExtra(Intent.EXTRA_STREAM, fileUri)
-            startActivity(Intent.createChooser(intent, "Share File"))
+            val intent = Intent(Intent.ACTION_VIEW)
+            intent.setDataAndType(fileUri, _mimeType)
+            intent.addFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION)
+            startActivity(Intent.createChooser(intent, "View File"))
         }
     }
 

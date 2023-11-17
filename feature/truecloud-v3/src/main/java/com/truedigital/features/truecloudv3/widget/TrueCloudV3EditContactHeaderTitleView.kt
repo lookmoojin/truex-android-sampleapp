@@ -12,12 +12,11 @@ class TrueCloudV3EditContactHeaderTitleView @JvmOverloads constructor(
     attrs: AttributeSet? = null,
     defStyleAttr: Int = 0
 ) : FrameLayout(context, attrs, defStyleAttr) {
-    private val binding: TrueCloudv3HeaderEditContactViewBinding =
-        TrueCloudv3HeaderEditContactViewBinding.inflate(
-            LayoutInflater.from(context),
-            this,
-            false
-        )
+    private val binding: TrueCloudv3HeaderEditContactViewBinding = TrueCloudv3HeaderEditContactViewBinding.inflate(
+        LayoutInflater.from(context),
+        this,
+        false
+    )
 
     init {
         addView(binding.root)

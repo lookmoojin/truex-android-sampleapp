@@ -10,6 +10,7 @@ import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.flatMapConcat
 import kotlinx.coroutines.flow.flow
 import kotlinx.coroutines.flow.map
+import timber.log.Timber
 import javax.inject.Inject
 
 interface CompleteUploadUseCase {
@@ -24,6 +25,7 @@ class CompleteUploadUseCaseImpl @Inject constructor(
     override fun execute(id: Int): Flow<TrueCloudV3Model>? {
         return flow {
             cacheUploadTaskRepository.updateTaskStatus(id, TaskStatusType.COMPLETE)
+            Timber.i("HIT FROM COMPLETE UPLOAD")
             emit(cacheUploadTaskRepository.getTask(id))
         }.flatMapConcat { taskUploadModel ->
             val objectId = taskUploadModel?.objectId ?: ""

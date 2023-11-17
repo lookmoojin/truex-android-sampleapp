@@ -21,11 +21,11 @@ fun Fragment.checkPermissionAlready(permission: String): Boolean {
 fun Fragment.checkStoragePermissionAlready(): Boolean {
     return if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.TIRAMISU) {
         checkPermissionAlready(Manifest.permission.READ_MEDIA_AUDIO) &&
-                checkPermissionAlready(Manifest.permission.READ_MEDIA_VIDEO) &&
-                checkPermissionAlready(Manifest.permission.READ_MEDIA_IMAGES)
+            checkPermissionAlready(Manifest.permission.READ_MEDIA_VIDEO) &&
+            checkPermissionAlready(Manifest.permission.READ_MEDIA_IMAGES)
     } else {
         checkPermissionAlready(Manifest.permission.READ_EXTERNAL_STORAGE) &&
-                checkPermissionAlready(Manifest.permission.WRITE_EXTERNAL_STORAGE)
+            checkPermissionAlready(Manifest.permission.WRITE_EXTERNAL_STORAGE)
     }
 }
 
@@ -83,18 +83,14 @@ fun Fragment.actionGetContentWithMimeType(categoryType: FileCategoryType): Inten
         intent = Intent("com.sec.android.app.myfiles.PICK_DATA")
         intent.putExtra("CONTENT_TYPE", mimeType)
         intent.addCategory(Intent.CATEGORY_DEFAULT)
-        intent = Intent(Intent.ACTION_OPEN_DOCUMENT)
-        intent.addCategory(Intent.CATEGORY_OPENABLE)
-        intent.putExtra(Intent.EXTRA_LOCAL_ONLY, true)
-        intent.type = mimeType
-    } else {
+    } else
         /*
-      Remaining devices
+      Above kitkat version
      */
-        intent = Intent()
-        intent.action = Intent.ACTION_GET_CONTENT
-        intent.type = categoryType.fileMimeType.mimeType
-    }
+        intent = Intent(Intent.ACTION_OPEN_DOCUMENT)
+    intent.addCategory(Intent.CATEGORY_OPENABLE)
+    intent.putExtra(Intent.EXTRA_LOCAL_ONLY, true)
+    intent.type = mimeType
     if (categoryType == FileCategoryType.OTHER) {
         val mimeTypes = arrayOf(
             "text/*",

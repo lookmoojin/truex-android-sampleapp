@@ -22,7 +22,7 @@ import java.util.TimeZone
 import javax.inject.Inject
 
 interface SecureTokenServiceProvider {
-    fun getSTS(): Flow<SecureTokenServiceDataResponse>
+    fun getSTS(foreReload: Boolean = true): Flow<SecureTokenServiceDataResponse>
 }
 
 class SecureTokenServiceProviderImpl @Inject constructor(
@@ -41,10 +41,10 @@ class SecureTokenServiceProviderImpl @Inject constructor(
     @VisibleForTesting
     var loading = false
 
-    override fun getSTS(): Flow<SecureTokenServiceDataResponse> {
+    override fun getSTS(foreReload: Boolean): Flow<SecureTokenServiceDataResponse> {
         return flow {
             val stsdata = getSTSDataStore()
-            if (stsdata == null || datetimeIsPass(stsdata.expiresAt)) {
+            if (stsdata == null || datetimeIsPass(stsdata.expiresAt) || foreReload) {
                 emit(getSTSNetworkFlow().first())
             } else {
                 emit(stsdata)

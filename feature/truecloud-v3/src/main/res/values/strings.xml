@@ -88,6 +88,7 @@
     <string name="true_cloudv3_status_paused">Paused</string>
     <string name="true_cloudv3_status_failed">Failed</string>
     <string name="true_cloudv3_status_complete">Complete</string>
+    <string name="ture_cloudv3_status_inqueue">In Queue</string>
 
     <string name="true_cloudv3_notification_channel_name">TransferNotificationChannel</string>
     <string name="true_cloudv3_notification_title">Upload</string>

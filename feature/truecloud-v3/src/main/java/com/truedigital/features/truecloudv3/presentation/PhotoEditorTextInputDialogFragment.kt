@@ -10,11 +10,11 @@ import android.view.WindowManager
 import android.view.inputmethod.InputMethodManager
 import androidx.fragment.app.DialogFragment
 import androidx.navigation.fragment.findNavController
-import com.truedigital.features.truecloudv3.R
-import com.truedigital.features.truecloudv3.databinding.TrueCloudv3PhotoEditorTextInputDialogBinding
 import com.truedigital.common.share.componentv3.extension.setSavedStateHandle
 import com.truedigital.core.extensions.viewBinding
+import com.truedigital.features.truecloudv3.R
 import com.truedigital.features.truecloudv3.common.TrueCloudV3SaveStateKey.KEY_TRUE_CLOUD_PHOTO_EDITOR_TEXT
+import com.truedigital.features.truecloudv3.databinding.TrueCloudv3PhotoEditorTextInputDialogBinding
 import com.truedigital.foundation.extension.onClick
 
 class PhotoEditorTextInputDialogFragment :
@@ -23,7 +23,7 @@ class PhotoEditorTextInputDialogFragment :
     private val binding by viewBinding(TrueCloudv3PhotoEditorTextInputDialogBinding::bind)
 
     init {
-        setStyle(STYLE_NO_TITLE, R.style.FullNoBackgroundDialog)
+        setStyle(STYLE_NO_TITLE, com.truedigital.common.share.componentv3.R.style.FullNoBackgroundDialog)
     }
 
     override fun onCreateDialog(savedInstanceState: Bundle?): Dialog {

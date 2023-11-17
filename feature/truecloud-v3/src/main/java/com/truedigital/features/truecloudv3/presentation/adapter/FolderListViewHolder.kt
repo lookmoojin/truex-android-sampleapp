@@ -27,7 +27,6 @@ class FolderListViewHolder(
         private const val ALPHA_07 = 0.7f
         private const val ALPHA_1 = 1f
     }
-
     fun bind(folder: TrueCloudFilesModel.Folder) = with(binding) {
         folder.let {
             val createDate = it.createdAt

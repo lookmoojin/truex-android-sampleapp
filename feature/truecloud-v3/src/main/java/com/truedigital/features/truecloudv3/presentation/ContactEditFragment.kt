@@ -10,18 +10,18 @@ import androidx.activity.result.contract.ActivityResultContracts
 import androidx.appcompat.app.AppCompatDelegate
 import androidx.fragment.app.viewModels
 import androidx.navigation.fragment.findNavController
-import com.truedigital.features.truecloudv3.R
-import com.truedigital.features.truecloudv3.databinding.FragmentTrueCloudv3EditContactBinding
 import com.truedigital.common.share.componentv3.extension.getSavedStateHandle
 import com.truedigital.common.share.componentv3.extension.setSavedStateHandle
 import com.truedigital.component.base.BaseFragment
 import com.truedigital.component.dialog.trueid.DialogIconType
 import com.truedigital.component.dialog.trueid.DialogManager
 import com.truedigital.core.extensions.viewBinding
+import com.truedigital.features.truecloudv3.R
 import com.truedigital.features.truecloudv3.common.TrueCloudV3KeyBundle.KEY_BUNDLE_TRUE_CLOUD_CONTACT_DATA
 import com.truedigital.features.truecloudv3.common.TrueCloudV3SaveStateKey.KEY_TRUE_CLOUD_CONTACT_DATA
 import com.truedigital.features.truecloudv3.common.TrueCloudV3SaveStateKey.KEY_TRUE_CLOUD_CONTACT_SELECTED_PHONE_LABEL
 import com.truedigital.features.truecloudv3.common.TrueCloudV3SaveStateKey.KEY_TRUE_CLOUD_DELETE_CONTACT
+import com.truedigital.features.truecloudv3.databinding.FragmentTrueCloudv3EditContactBinding
 import com.truedigital.features.truecloudv3.domain.model.ContactTrueCloudModel
 import com.truedigital.features.truecloudv3.domain.model.CustomPhoneLabelModel
 import com.truedigital.features.truecloudv3.injections.TrueCloudV3Component
@@ -221,7 +221,7 @@ class ContactEditFragment : BaseFragment(R.layout.fragment_true_cloudv3_edit_con
             title = getString(R.string.true_cloudv3_would_you_like_to_delete_this_contact),
             subTitle = getString(R.string.true_cloudv3_if_you_delete_this_contact)
         ) {
-            setSecondaryButton(R.string.cancel) { dialog ->
+            setSecondaryButton(com.truedigital.component.R.string.cancel) { dialog ->
                 dialog.dismiss()
             }
             setPrimaryButton(R.string.true_cloudv3_button_confirm) {

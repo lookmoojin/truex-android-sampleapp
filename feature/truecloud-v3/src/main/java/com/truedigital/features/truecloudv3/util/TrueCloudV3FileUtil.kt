@@ -5,6 +5,7 @@ import android.content.ContentUris
 import android.content.Context
 import android.database.Cursor
 import android.net.Uri
+import android.os.Build
 import android.os.Environment
 import android.provider.DocumentsContract
 import android.provider.MediaStore
@@ -77,8 +78,9 @@ class TrueCloudV3FileUtilImpl @Inject constructor() : TrueCloudV3FileUtil {
 
     override fun getPathFromUri(contextDataProvider: ContextDataProvider, uri: Uri): String? {
         var path: String? = null
+        val isKitKat: Boolean = Build.VERSION.SDK_INT >= Build.VERSION_CODES.KITKAT
         // DocumentProvider
-        if (DocumentsContract.isDocumentUri(
+        if (isKitKat && DocumentsContract.isDocumentUri(
                 contextDataProvider.getDataContext(),
                 uri
             )

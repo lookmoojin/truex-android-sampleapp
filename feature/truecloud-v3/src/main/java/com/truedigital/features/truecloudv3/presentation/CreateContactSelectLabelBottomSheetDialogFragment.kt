@@ -14,14 +14,14 @@ import androidx.fragment.app.viewModels
 import androidx.navigation.fragment.findNavController
 import com.google.android.material.bottomsheet.BottomSheetBehavior
 import com.google.android.material.bottomsheet.BottomSheetDialogFragment
-import com.truedigital.features.truecloudv3.R
-import com.truedigital.features.truecloudv3.databinding.TrueCloudv3EditContactBottomSheetDialogBinding
 import com.truedigital.common.share.componentv3.extension.getSavedStateHandle
 import com.truedigital.common.share.componentv3.extension.setSavedStateHandle
 import com.truedigital.core.extensions.viewBinding
+import com.truedigital.features.truecloudv3.R
 import com.truedigital.features.truecloudv3.common.TrueCloudV3KeyBundle.KEY_BUNDLE_TRUE_CLOUD_CONTACT_EDIT_PHONE_LABEL_DATA
 import com.truedigital.features.truecloudv3.common.TrueCloudV3SaveStateKey.KEY_TRUE_CLOUD_CONTACT_CUSTOM_PHONE_LABEL
 import com.truedigital.features.truecloudv3.common.TrueCloudV3SaveStateKey.KEY_TRUE_CLOUD_CONTACT_SELECTED_PHONE_LABEL
+import com.truedigital.features.truecloudv3.databinding.TrueCloudv3EditContactBottomSheetDialogBinding
 import com.truedigital.features.truecloudv3.domain.model.ContactTrueCloudModel
 import com.truedigital.features.truecloudv3.domain.model.CustomPhoneLabelModel
 import com.truedigital.features.truecloudv3.extension.underline
@@ -66,9 +66,9 @@ class CreateContactSelectLabelBottomSheetDialogFragment : BottomSheetDialogFragm
     override fun onCreateDialog(savedInstanceState: Bundle?): Dialog {
         return super.onCreateDialog(savedInstanceState).apply {
             setOnShowListener {
-                val parentLayout = findViewById<View>(R.id.design_bottom_sheet) as FrameLayout
+                val parentLayout = findViewById<View>(com.google.android.material.R.id.design_bottom_sheet) as FrameLayout
                 parentLayout.let { bottomSheet ->
-                    bottomSheet.setBackgroundResource(R.color.transparent)
+                    bottomSheet.setBackgroundResource(com.truedigital.component.R.color.transparent)
                     val behaviour = BottomSheetBehavior.from(bottomSheet)
                     behaviour.isDraggable = true
                 }
@@ -124,35 +124,27 @@ class CreateContactSelectLabelBottomSheetDialogFragment : BottomSheetDialogFragm
                 EMPTY_LABEL -> {
                     underlineSelectedLabel(binding.trueCloudNoLabelTextView)
                 }
-
                 getString(R.string.true_cloudv3_dialog_mobile) -> {
                     underlineSelectedLabel(binding.trueCloudMobileTextView)
                 }
-
                 getString(R.string.true_cloudv3_dialog_work) -> {
                     underlineSelectedLabel(binding.trueCloudWorkTextView)
                 }
-
                 getString(R.string.true_cloudv3_dialog_home) -> {
                     underlineSelectedLabel(binding.trueCloudHomeTextView)
                 }
-
                 getString(R.string.true_cloudv3_dialog_work_fax) -> {
                     underlineSelectedLabel(binding.trueCloudWorkFaxTextView)
                 }
-
                 getString(R.string.true_cloudv3_dialog_home_fax) -> {
                     underlineSelectedLabel(binding.trueCloudHomeFaxTextView)
                 }
-
                 getString(R.string.true_cloudv3_dialog_main) -> {
                     underlineSelectedLabel(binding.trueCloudMainTextView)
                 }
-
                 getString(R.string.true_cloudv3_dialog_other) -> {
                     underlineSelectedLabel(binding.trueCloudOtherTextView)
                 }
-
                 else -> {
                     underlineSelectedLabel(binding.trueCloudCustomTextView)
                 }

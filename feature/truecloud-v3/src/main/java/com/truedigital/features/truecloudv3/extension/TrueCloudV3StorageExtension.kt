@@ -1,11 +1,11 @@
 package com.truedigital.features.truecloudv3.extension
 
 import android.content.Context
-import com.truedigital.features.truecloudv3.R
 import com.truedigital.common.share.datalegacy.wrapper.ContextDataProviderWrapper
 import com.truedigital.component.extension.formatEnTh
 import com.truedigital.core.constant.DateFormatConstant
 import com.truedigital.core.extensions.toDateByDefaultTimeZone
+import com.truedigital.features.truecloudv3.R
 import com.truedigital.features.truecloudv3.common.FileMimeTypeManager
 import com.truedigital.features.truecloudv3.common.TaskActionType
 import com.truedigital.features.truecloudv3.data.model.TrueCloudV3StorageData
@@ -29,8 +29,7 @@ fun TrueCloudV3StorageData?.convertToTrueCloudV3Model(context: ContextDataProvid
     )
     var deleteIn: String? = null
     if (context != null) {
-        deleteIn =
-            String.format(context.get().getString(R.string.true_cloudv3_delete_date), deleteDate)
+        deleteIn = String.format(context.get().getString(R.string.true_cloudv3_delete_date), deleteDate)
     }
     return TrueCloudV3Model(
         id = trueCloudV3StorageData?.id,
@@ -50,7 +49,7 @@ fun TrueCloudV3StorageData?.convertToTrueCloudV3Model(context: ContextDataProvid
 }
 
 fun List<TrueCloudV3StorageData>?.convertToListTrueCloudV3Model(context: ContextDataProviderWrapper? = null):
-        List<TrueCloudV3Model> {
+    List<TrueCloudV3Model> {
     return this?.map { it.convertToTrueCloudV3Model(context) } ?: emptyList()
 }
 
@@ -135,7 +134,6 @@ fun TrueCloudFilesModel.File?.convertFileToFolder(context: Context): TrueCloudFi
         deleteIn = trueCloudV3Model?.deleteIn
     )
 }
-
 fun TrueCloudFilesModel.AutoBackup.convertBackupToUpload(): TrueCloudFilesModel.Upload {
     val trueCloudV3Model = this
     return TrueCloudFilesModel.Upload(

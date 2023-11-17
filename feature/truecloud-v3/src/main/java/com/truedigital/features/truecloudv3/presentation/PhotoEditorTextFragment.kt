@@ -28,17 +28,17 @@ import com.skydoves.colorpickerview.ColorPickerView
 import com.skydoves.colorpickerview.listeners.ColorListener
 import com.skydoves.colorpickerview.sliders.AlphaSlideBar
 import com.skydoves.colorpickerview.sliders.BrightnessSlideBar
-import com.truedigital.features.truecloudv3.R
-import com.truedigital.features.truecloudv3.databinding.FragmentTrueCloudv3PhotoEditorTextBinding
 import com.truedigital.common.share.componentv3.extension.getSavedStateHandle
 import com.truedigital.common.share.componentv3.extension.setSavedStateHandle
 import com.truedigital.component.base.BaseFragment
 import com.truedigital.component.dialog.trueid.DialogIconType
 import com.truedigital.component.dialog.trueid.DialogManager
 import com.truedigital.core.extensions.viewBinding
+import com.truedigital.features.truecloudv3.R
 import com.truedigital.features.truecloudv3.common.TrueCloudV3KeyBundle.KEY_BUNDLE_TRUE_CLOUD_PHOTO_EDITOR_IMAGE
 import com.truedigital.features.truecloudv3.common.TrueCloudV3SaveStateKey.KEY_TRUE_CLOUD_PHOTO_EDITOR_IMAGE
 import com.truedigital.features.truecloudv3.common.TrueCloudV3SaveStateKey.KEY_TRUE_CLOUD_PHOTO_EDITOR_TEXT
+import com.truedigital.features.truecloudv3.databinding.FragmentTrueCloudv3PhotoEditorTextBinding
 import com.truedigital.features.truecloudv3.extension.getEditBitmap
 import com.truedigital.features.truecloudv3.extension.snackBar
 import com.truedigital.features.truecloudv3.injections.TrueCloudV3Component
@@ -372,7 +372,7 @@ class PhotoEditorTextFragment :
                     it.dismiss()
                     findNavController().navigateUp()
                 }
-                this.setSecondaryButton(R.string.cancel) {
+                this.setSecondaryButton(com.truedigital.component.R.string.cancel) {
                     it.dismiss()
                 }
             }
@@ -381,7 +381,7 @@ class PhotoEditorTextFragment :
 
     private fun updateTextStyle(style: TextStyleBuilder) {
         val view = binding.photoEditorView.children.last()
-        val textView = view.findViewById<TextView>(R.id.tvPhotoEditorText)
+        val textView = view.findViewById<TextView>(ja.burhanrashid52.photoeditor.R.id.tvPhotoEditorText)
         if (textView != null) {
             photoEditor.editText(
                 view,
