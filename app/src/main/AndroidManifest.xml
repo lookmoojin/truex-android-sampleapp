@@ -29,12 +29,12 @@
             tools:node="merge">
 
             <meta-data
-                android:name="com.tdg.truex_android_sampleapp.initializer.HomeInitializer"
+                android:name="com.tdg.truexsampleapp.initializer.HomeInitializer"
                 android:value="androidx.startup" />
         </provider>
 
         <provider
-            android:name="com.tdg.truex_android_sampleapp.startuptrace.StartupTimeProvider"
+            android:name="com.tdg.truexsampleapp.startuptrace.StartupTimeProvider"
             android:authorities="${applicationId}.startuptrace"
             android:exported="false"
             android:initOrder="2147483647" />

@@ -1,4 +1,4 @@
-package com.tdg.truex_android_sampleapp.startuptrace
+package com.tdg.truexsampleapp.startuptrace
 
 import android.content.ContentProvider
 import android.content.ContentValues

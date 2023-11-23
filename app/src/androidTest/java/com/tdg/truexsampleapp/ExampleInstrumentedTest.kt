@@ -1,4 +1,4 @@
-package com.tdg.truex_android_sampleapp
+package com.tdg.truexsampleapp
 
 import androidx.test.platform.app.InstrumentationRegistry
 import androidx.test.ext.junit.runners.AndroidJUnit4

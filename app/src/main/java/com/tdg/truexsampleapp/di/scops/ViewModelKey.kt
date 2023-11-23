@@ -1,4 +1,4 @@
-package com.tdg.truex_android_sampleapp.di.scops
+package com.tdg.truexsampleapp.di.scops
 
 import androidx.lifecycle.ViewModel
 import dagger.MapKey

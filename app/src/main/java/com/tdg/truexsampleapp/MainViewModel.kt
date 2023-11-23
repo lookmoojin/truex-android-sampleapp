@@ -1,4 +1,4 @@
-package com.tdg.truex_android_sampleapp
+package com.tdg.truexsampleapp
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData

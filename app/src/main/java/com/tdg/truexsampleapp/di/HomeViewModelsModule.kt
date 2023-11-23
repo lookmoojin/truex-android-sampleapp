@@ -1,10 +1,10 @@
-package com.tdg.truex_android_sampleapp.di
+package com.tdg.truexsampleapp.di
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
-import com.tdg.truex_android_sampleapp.MainViewModel
-import com.tdg.truex_android_sampleapp.ViewModelFactory
-import com.tdg.truex_android_sampleapp.di.scops.ViewModelKey
+import com.tdg.truexsampleapp.MainViewModel
+import com.tdg.truexsampleapp.ViewModelFactory
+import com.tdg.truexsampleapp.di.scops.ViewModelKey
 import dagger.Binds
 import dagger.Module
 import dagger.multibindings.IntoMap

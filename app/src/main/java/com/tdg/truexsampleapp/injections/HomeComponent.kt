@@ -1,9 +1,9 @@
-package com.tdg.truex_android_sampleapp.injections
+package com.tdg.truexsampleapp.injections
 
 import com.tdg.login.injections.LoginComponent
-import com.tdg.truex_android_sampleapp.MainActivity
-import com.tdg.truex_android_sampleapp.MainFragment
-import com.tdg.truex_android_sampleapp.di.HomeViewModelsModule
+import com.tdg.truexsampleapp.MainActivity
+import com.tdg.truexsampleapp.MainFragment
+import com.tdg.truexsampleapp.di.HomeViewModelsModule
 import dagger.Component
 import javax.inject.Singleton
 

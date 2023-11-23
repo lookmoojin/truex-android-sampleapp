@@ -1,4 +1,4 @@
-package com.tdg.truex_android_sampleapp
+package com.tdg.truexsampleapp
 
 import android.content.Intent
 import android.os.Bundle
@@ -6,7 +6,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
-import com.tdg.truex_android_sampleapp.databinding.FragmentMenuBinding
+import com.tdg.truexsampleapp.databinding.FragmentMenuBinding
 import com.truedigital.features.truecloudv3.presentation.MainTrueCloudV3Activity
 
 class MenuFragment : Fragment() {

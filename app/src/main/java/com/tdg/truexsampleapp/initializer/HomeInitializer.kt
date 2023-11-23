@@ -1,11 +1,11 @@
-package com.tdg.truex_android_sampleapp.initializer
+package com.tdg.truexsampleapp.initializer
 
 import android.content.Context
 import androidx.startup.Initializer
 import com.tdg.login.initializer.OauthInitializer
 import com.tdg.login.injections.OauthComponent
-import com.tdg.truex_android_sampleapp.injections.DaggerHomeComponent
-import com.tdg.truex_android_sampleapp.injections.HomeComponent
+import com.tdg.truexsampleapp.injections.DaggerHomeComponent
+import com.tdg.truexsampleapp.injections.HomeComponent
 
 class HomeInitializer : Initializer<HomeComponent> {
 
