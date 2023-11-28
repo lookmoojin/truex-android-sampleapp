@@ -8,8 +8,7 @@ data class WhatNewData(
     val imageMobile: String = "",
     val imageTablet: String = "",
     val type: WhatNewType = WhatNewType.NONE,
-    val url: String = "",
-    val timestamp: String = ""
+    val url: String = ""
 ) : Parcelable
 
 enum class WhatNewType(val value: String) {

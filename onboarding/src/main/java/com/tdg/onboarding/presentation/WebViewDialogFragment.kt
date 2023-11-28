@@ -29,6 +29,8 @@ import timber.log.Timber
 class WebViewDialogFragment : DialogFragment(R.layout.dialog_webview) {
 
     companion object {
+        private const val JS_ZOOM = "javascript:document.getElementsByName('viewport')[0]" +
+                ".setAttribute('content', 'initial-scale=1.0,maximum-scale=10.0');"
         val TAG = WebViewDialogFragment::class.java.simpleName
         private const val JAVASCRIPT_INTERFACE_NAME = "AndroidWebView"
         private const val KEY_URL = "KEY_URL"
@@ -190,6 +192,7 @@ class WebViewDialogFragment : DialogFragment(R.layout.dialog_webview) {
                 if (isAdded) {
                     binding.webViewAppProgressBar.gone()
                     binding.webViewAppHeaderTextView.text = view?.originalUrl.orEmpty()
+                    view?.loadUrl(JS_ZOOM)
                 }
             }
 
