@@ -12,6 +12,7 @@ import com.tdg.onboarding.presentation.WhatNewDialogFragment
 import com.tdg.truexsampleapp.databinding.FragmentMenuBinding
 import com.tdg.truexsampleapp.injections.HomeComponent
 import com.truedigital.features.truecloudv3.presentation.MainTrueCloudV3Activity
+import timber.log.Timber
 import javax.inject.Inject
 
 class MenuFragment : Fragment() {
@@ -63,11 +64,7 @@ class MenuFragment : Fragment() {
             ft.add(whatsNewDialog, WhatNewDialogFragment.TAG)
             ft.commitAllowingStateLoss()
         } catch (e: IllegalStateException) {
-//            val handlingExceptionMap = mapOf(
-//                "Key" to "MainFragment:",
-//                "Value" to "on OpenWhatNewDialog",
-//            )
-//            NewRelic.recordHandledException(Exception(e.localizedMessage), handlingExceptionMap)
+            Timber.e(Exception(e.localizedMessage))
         }
     }
 }

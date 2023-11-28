@@ -210,6 +210,7 @@ class WebViewDialogFragment : DialogFragment(R.layout.dialog_webview) {
                 errorResponse: WebResourceResponse?
             ) {
                 super.onReceivedHttpError(view, request, errorResponse)
+                Timber.e(Exception("Response WebView Error"))
             }
 
             override fun shouldOverrideUrlLoading(
