@@ -3,6 +3,7 @@ package com.tdg.truexsampleapp.di
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
 import com.tdg.truexsampleapp.MainViewModel
+import com.tdg.truexsampleapp.MenuViewModel
 import com.tdg.truexsampleapp.ViewModelFactory
 import com.tdg.truexsampleapp.di.scops.ViewModelKey
 import dagger.Binds
@@ -22,4 +23,10 @@ interface HomeViewModelsModule {
         mainViewModel: MainViewModel,
     ): ViewModel
 
+    @Binds
+    @IntoMap
+    @ViewModelKey(MenuViewModel::class)
+    fun bindsMenuViewModel(
+        menuViewModel: MenuViewModel,
+    ): ViewModel
 }

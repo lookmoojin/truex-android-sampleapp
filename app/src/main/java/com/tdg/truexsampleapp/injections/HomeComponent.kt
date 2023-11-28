@@ -1,8 +1,11 @@
 package com.tdg.truexsampleapp.injections
 
 import com.tdg.login.injections.LoginComponent
+import com.tdg.onboarding.injections.WhatNewComponent
+import com.tdg.onboarding.injections.WhatNewConfigComponent
 import com.tdg.truexsampleapp.MainActivity
 import com.tdg.truexsampleapp.MainFragment
+import com.tdg.truexsampleapp.MenuFragment
 import com.tdg.truexsampleapp.di.HomeViewModelsModule
 import dagger.Component
 import javax.inject.Singleton
@@ -14,6 +17,7 @@ import javax.inject.Singleton
     ],
     dependencies = [
         LoginComponent::class,
+        WhatNewConfigComponent::class
     ]
 )
 interface HomeComponent {
@@ -37,10 +41,12 @@ interface HomeComponent {
     @Component.Factory
     interface Factory {
         fun create(
-            loginComponent: LoginComponent
+            loginComponent: LoginComponent,
+            whatNewConfigComponent: WhatNewConfigComponent
         ): HomeComponent
     }
 
     fun inject(activity: MainActivity)
     fun inject(fragment: MainFragment)
+    fun inject(fragment: MenuFragment)
 }
