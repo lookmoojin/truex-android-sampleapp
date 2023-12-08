@@ -1,10 +1,14 @@
 package com.tdg.onboarding.presentation
 
+import android.content.Intent
+import android.graphics.Color
+import android.net.Uri
 import android.os.Build
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.view.WindowManager
 import android.widget.ImageView
 import androidx.fragment.app.DialogFragment
 import com.tdg.onboarding.R
@@ -15,10 +19,8 @@ import com.tdg.onboarding.injections.WhatNewComponent
 import com.truedigital.core.extensions.dismissSafe
 import com.truedigital.core.extensions.viewBinding
 import com.truedigital.foundation.extension.RESIZE_NONE
-import com.truedigital.foundation.extension.gone
 import com.truedigital.foundation.extension.load
 import com.truedigital.foundation.extension.onClick
-import com.truedigital.foundation.extension.visible
 
 class WhatNewDialogFragment : DialogFragment() {
 
@@ -56,16 +58,28 @@ class WhatNewDialogFragment : DialogFragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+        setupDialogWindow()
+        getArgumentsWhatNewData()
+    }
+
+    private fun setupDialogWindow() {
+        dialog?.window?.let { window ->
+            window.apply {
+                addFlags(WindowManager.LayoutParams.FLAG_DRAWS_SYSTEM_BAR_BACKGROUNDS)
+                decorView.systemUiVisibility = View.SYSTEM_UI_FLAG_LAYOUT_FULLSCREEN
+                statusBarColor = Color.TRANSPARENT
+            }
+        }
+    }
+
+    private fun getArgumentsWhatNewData() {
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.TIRAMISU) {
-            arguments?.getParcelable(WHAT_NEW_KEY, WhatNewData::class.java)?.let { data ->
-                display(data)
-                onClick(data)
-            }
+            arguments?.getParcelable(WHAT_NEW_KEY, WhatNewData::class.java)
         } else {
-            arguments?.getParcelable<WhatNewData>(WHAT_NEW_KEY)?.let { data ->
-                display(data)
-                onClick(data)
-            }
+            arguments?.getParcelable<WhatNewData>(WHAT_NEW_KEY)
+        }?.let {
+            display(it)
+            onClick(it)
         }
     }
 
@@ -73,25 +87,14 @@ class WhatNewDialogFragment : DialogFragment() {
         closeButton.onClick {
             dismissSafe()
         }
-        openButton.onClick {
-            openContent(data)
+        whatsNewImageView.onClick {
+            if (data.type != WhatNewType.NONE) {
+                openContent(data)
+            }
         }
     }
 
     private fun display(data: WhatNewData) = with(binding) {
-        loadImage(data)
-        when (data.type) {
-            WhatNewType.NONE -> {
-                openButton.gone()
-            }
-
-            WhatNewType.WEBVIEW -> {
-                openButton.visible()
-            }
-        }
-    }
-
-    private fun loadImage(data: WhatNewData) = with(binding) {
         val isTablet = context?.resources?.getBoolean(R.bool.is_tablet) ?: false
         val url = if (isTablet) {
             data.imageTablet
@@ -110,11 +113,16 @@ class WhatNewDialogFragment : DialogFragment() {
     private fun openContent(data: WhatNewData) {
         dismissSafe()
         when (data.type) {
-            WhatNewType.WEBVIEW -> {
+            WhatNewType.INAPPBROWSER -> {
                 val ft = parentFragmentManager.beginTransaction()
                 val whatsNewDialog = WebViewDialogFragment.newInstance(data.url)
                 ft.add(whatsNewDialog, WebViewDialogFragment.TAG)
                 ft.commitAllowingStateLoss()
+            }
+
+            WhatNewType.EXTERNALBROWSER -> {
+                val browserIntent = Intent(Intent.ACTION_VIEW, Uri.parse(data.url))
+                requireActivity().startActivity(browserIntent)
             }
 
             else -> {}

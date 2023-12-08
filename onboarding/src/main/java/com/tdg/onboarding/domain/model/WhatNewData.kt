@@ -13,5 +13,6 @@ data class WhatNewData(
 
 enum class WhatNewType(val value: String) {
     NONE(""),
-    WEBVIEW("webview")
+    INAPPBROWSER("inapp-browser"),
+    EXTERNALBROWSER("external-browser")
 }

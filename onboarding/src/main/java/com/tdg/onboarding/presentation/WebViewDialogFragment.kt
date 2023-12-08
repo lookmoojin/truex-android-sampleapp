@@ -31,6 +31,8 @@ class WebViewDialogFragment : DialogFragment(R.layout.dialog_webview) {
     companion object {
         private const val JS_ZOOM = "javascript:document.getElementsByName('viewport')[0]" +
                 ".setAttribute('content', 'initial-scale=1.0,maximum-scale=10.0');"
+        private const val USER_AGENT = "Mozilla/5.0 (Linux; Android 6.0; Nexus 5 Build/MRA58N) " +
+                "AppleWebKit/537.36 (KHTML, like Gecko) Chrome/62.0.3202.94 Mobile Safari/537.36"
         val TAG = WebViewDialogFragment::class.java.simpleName
         private const val JAVASCRIPT_INTERFACE_NAME = "AndroidWebView"
         private const val KEY_URL = "KEY_URL"
@@ -166,6 +168,7 @@ class WebViewDialogFragment : DialogFragment(R.layout.dialog_webview) {
                 builtInZoomControls = true
                 displayZoomControls = false
                 mixedContentMode = WebSettings.MIXED_CONTENT_ALWAYS_ALLOW
+                userAgentString = USER_AGENT
             }
             CookieManager.getInstance().setAcceptCookie(true)
             CookieManager.getInstance().setAcceptThirdPartyCookies(this, true)

@@ -43,8 +43,10 @@ class GetWhatNewConfigUseCaseImpl @Inject constructor(
     }
 
     private fun mapWhatNewType(type: String): WhatNewType {
-        return if (type.equals(WhatNewType.WEBVIEW.value, true)) {
-            WhatNewType.WEBVIEW
+        return if (type.equals(WhatNewType.INAPPBROWSER.value, true)) {
+            WhatNewType.INAPPBROWSER
+        } else if (type.equals(WhatNewType.EXTERNALBROWSER.value, true)) {
+            WhatNewType.EXTERNALBROWSER
         } else {
             WhatNewType.NONE
         }
