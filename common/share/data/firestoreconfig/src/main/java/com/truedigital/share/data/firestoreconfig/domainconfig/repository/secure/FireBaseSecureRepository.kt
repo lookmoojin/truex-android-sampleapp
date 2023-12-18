@@ -15,13 +15,22 @@ class FireBaseSecureRepositoryImpl @Inject constructor() : FireBaseSecureReposit
         FirebaseApp.initializeApp(
             context,
             FirebaseOptions.Builder()
-                .setApplicationId(BuildConfig.FIRE_BASE_APPLICATION_ID)
-                .setApiKey(BuildConfig.FIRE_BASE_API_KEY)
-                .setGcmSenderId(BuildConfig.FIRE_BASE_GCM_SENDER_ID)
-                .setStorageBucket(BuildConfig.FIRE_BASE_STORAGE_BUCKET)
-                .setProjectId(BuildConfig.FIRE_BASE_PROJECT_ID)
+                .setApplicationId("1:334842447973:android:123da9a7260617739ede8c")
+//                .setApiKey(BuildConfig.FIRE_BASE_API_KEY)
+                .setProjectId("truex-preprod")
                 .build(),
-            BuildConfig.FIRE_BASE_SECURE_NAME
+            "true-x-preprod"
         )
+//        FirebaseApp.initializeApp(
+//            context,
+//            FirebaseOptions.Builder()
+//                .setApplicationId(BuildConfig.FIRE_BASE_APPLICATION_ID)
+//                .setApiKey(BuildConfig.FIRE_BASE_API_KEY)
+//                .setGcmSenderId(BuildConfig.FIRE_BASE_GCM_SENDER_ID)
+//                .setStorageBucket(BuildConfig.FIRE_BASE_STORAGE_BUCKET)
+//                .setProjectId(BuildConfig.FIRE_BASE_PROJECT_ID)
+//                .build(),
+//            BuildConfig.FIRE_BASE_SECURE_NAME
+//        )
     }
 }

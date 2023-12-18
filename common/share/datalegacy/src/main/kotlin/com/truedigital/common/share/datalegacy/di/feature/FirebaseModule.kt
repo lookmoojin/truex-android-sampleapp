@@ -21,7 +21,8 @@ object FirebaseModule {
     fun provideTIDFirebaseRemoteConfig(): FirebaseRemoteConfig {
         val remoteConfig = Firebase.remoteConfig(
             FirebaseApp.getInstance(
-                BuildConfig.FIRE_BASE_SECURE_NAME
+                "true-x-preprod"
+//                BuildConfig.FIRE_BASE_SECURE_NAME
             )
         )
 

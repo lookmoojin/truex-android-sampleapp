@@ -1,0 +1,4 @@
+<resources>
+    <string name="webviewapp_refresh">Refresh</string>
+    <string name="webviewapp_open_browser">Open via %1$s</string>
+</resources>

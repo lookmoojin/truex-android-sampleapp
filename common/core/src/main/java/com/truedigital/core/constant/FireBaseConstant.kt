@@ -1,14 +1,8 @@
 package com.truedigital.core.constant
 
-import com.truedigital.core.BuildConfig
-
 object FireBaseConstant {
-    const val REAL_TIME_DB_APP_NAME = "realtime"
-    const val NOTIFICATION_TOPIC = BuildConfig.KEY_NOTIFICATION_TOPIC
     const val USAGEMETER_REAL_TIME_DB_APP_NAME = "usagemeter_realtime"
-    const val USAGEMETER_TOPBAR_APP_NAME = "usagemeter_topbar"
-    const val USAGEMETER_NODE_TRUE_POINT = "true_point"
-    const val FIREBASE_ERROR_MESSAGE = "Could not get data from Firebase's node"
+    const val TRUEX_DB_APP_NAME = "true-x-preprod"
     const val FIREBASE_INBOX_ENABLED = "inbox_enabled"
     const val FIREBASE_MORE_PAGE_MENU = "oneapp_more_page"
     const val FIREBASE_ONE_APP_FORCE_LOGIN = "oneapp_force_login"

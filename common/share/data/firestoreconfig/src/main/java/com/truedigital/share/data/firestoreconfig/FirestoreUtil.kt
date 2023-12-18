@@ -22,6 +22,7 @@ interface FirestoreUtil {
 
     fun getFirestore(): FirebaseFirestore
     fun getFirestoreUsageMeter(): FirebaseFirestore
+    fun getFirestoreTrueX(): FirebaseFirestore
 }
 
 class FirestoreUtilImpl @Inject constructor() : FirestoreUtil {
@@ -46,6 +47,14 @@ class FirestoreUtilImpl @Inject constructor() : FirestoreUtil {
         return FirebaseFirestore.getInstance(
             FirebaseApp.getInstance(
                 FireBaseConstant.USAGEMETER_REAL_TIME_DB_APP_NAME
+            )
+        )
+    }
+
+    override fun getFirestoreTrueX(): FirebaseFirestore {
+        return FirebaseFirestore.getInstance(
+            FirebaseApp.getInstance(
+                FireBaseConstant.TRUEX_DB_APP_NAME
             )
         )
     }

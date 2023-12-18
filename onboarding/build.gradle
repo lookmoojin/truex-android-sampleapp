@@ -1,0 +1,23 @@
+apply plugin: 'com.android.library'
+
+apply {
+    from("${project.rootDir}/gradle/sub-module.gradle")
+    from("${project.rootDir}/gradle/dependencies.gradle")
+}
+
+android {
+    namespace 'com.tdg.onboarding'
+}
+
+dependencies {
+    implementation project(':common:core')
+    implementation project(':common:share:data:firestoreconfig')
+
+    implementation 'androidx.core:core-ktx:1.9.0'
+    implementation 'androidx.appcompat:appcompat:1.6.1'
+    implementation 'com.google.android.material:material:1.10.0'
+    implementation 'com.google.dagger:dagger:2.46.1'
+    kapt 'com.google.dagger:dagger-compiler:2.46.1'
+
+    Firebase()
+}

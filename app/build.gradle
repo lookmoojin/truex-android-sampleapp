@@ -13,11 +13,11 @@ apply {
 }
 
 android {
-    namespace 'com.tdg.truex_android_sampleapp'
-    compileSdk 33
+    namespace 'com.tdg.truexsampleapp'
+    compileSdk 34
 
     defaultConfig {
-        applicationId "com.tdcm.trueidapp"
+        applicationId "com.tdg.truexsampleapp"
         minSdk 27
         targetSdk 33
         versionCode 1
@@ -36,7 +36,7 @@ android {
     flavorDimensions 'environment'
     productFlavors {
         preprod {
-            applicationIdSuffix ".preprod"
+//            applicationIdSuffix ".preprod"
             dimension 'environment'
         }
         prod {
@@ -68,6 +68,7 @@ dependencies {
 
     implementation project(":common:foundation")
     implementation project(":login")
+    implementation project(":onboarding")
     implementation project(':feature:truecloud-v3')
     implementation("androidx.navigation:navigation-fragment-ktx:2.6.0")
     implementation("androidx.navigation:navigation-ui-ktx:2.6.0")

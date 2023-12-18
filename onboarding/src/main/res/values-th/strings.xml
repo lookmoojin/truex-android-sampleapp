@@ -1,0 +1,4 @@
+<resources>
+    <string name="webviewapp_refresh">รีเฟรช</string>
+    <string name="webviewapp_open_browser">เปิดโดย %1$s</string>
+</resources>
