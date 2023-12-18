@@ -82,7 +82,7 @@
                     android:visibility="gone"
                     tools:visibility="visible">
 
-                    <com.vashisthg.startpointseekbar.StartPointSeekBar
+                    <com.truedigital.features.truecloudv3.widget.StartPointSeekBar
                         android:id="@+id/brushSizeSeekBar"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"

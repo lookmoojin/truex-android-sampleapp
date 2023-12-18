@@ -346,9 +346,6 @@ ext {
 //imageCropper
             imageCropper              : '4.5.0',
 
-// startPointSeekBar
-            startPointSeekBar         : 'master-SNAPSHOT',
-
 // colorPicker
             colorPicker               : '2.2.4'
     ]

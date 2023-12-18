@@ -57,7 +57,7 @@
             android:paddingHorizontal="20dp"
             android:paddingVertical="8dp">
 
-            <com.vashisthg.startpointseekbar.StartPointSeekBar
+            <com.truedigital.features.truecloudv3.widget.StartPointSeekBar
                 android:id="@+id/adjustValueSeekBar"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"

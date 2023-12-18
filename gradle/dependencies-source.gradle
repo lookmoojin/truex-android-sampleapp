@@ -509,7 +509,6 @@ ext {
             swipeLayoutLib       : "com.daimajia.swipelayout:library:${versions.swipeLayoutLib}",
             switcher             : "com.github.jkwiecien:Switcher:${versions.switcher}",
             viewpagerIndicator   : "com.githang:viewpagerindicator:${versions.viewpagerIndicator}",
-            startPointSeekBar    : "com.github.vashisthg:StartPointSeekBar:${versions.startPointSeekBar}",
             colorPicker          : "com.github.skydoves:colorpickerview:${versions.colorPicker}"
     ]
 

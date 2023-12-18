@@ -44,7 +44,6 @@ dependencies {
     implementation broakenmedia.multiContactPicker
     implementation imageUtil.photoEditor
     implementation imageUtil.imageCropper
-    implementation view.startPointSeekBar
     implementation view.colorPicker
 
     DataStore()
