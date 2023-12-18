@@ -44,9 +44,7 @@ dependencies {
     implementation project(":common:share:currentdate")
     implementation project(":common:share:data:coredata")
     implementation project(":common:share:datalegacy")
-//    implementation project(":common:share:nativeshare")
     implementation project(":common:share:resource")
-//    testImplementation project(":common:share:mock")
 
     KotlinCoroutine()
     UnitTesting()

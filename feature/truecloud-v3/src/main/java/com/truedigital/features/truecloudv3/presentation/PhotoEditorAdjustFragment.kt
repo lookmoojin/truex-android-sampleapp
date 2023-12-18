@@ -30,6 +30,7 @@ import com.truedigital.features.truecloudv3.extension.snackBar
 import com.truedigital.features.truecloudv3.injections.TrueCloudV3Component
 import com.truedigital.features.truecloudv3.presentation.viewmodel.TrueCloudV3PhotoEditorAdjustViewModel
 import com.truedigital.features.truecloudv3.presentation.viewmodel.TrueCloudV3PhotoEditorFileViewModel
+import com.truedigital.features.truecloudv3.widget.StartPointSeekBar
 import com.truedigital.foundation.extension.onClick
 import com.truedigital.foundation.presentations.ViewModelFactory
 import ja.burhanrashid52.photoeditor.CustomEffect
@@ -91,9 +92,12 @@ class PhotoEditorAdjustFragment :
     private fun initView() = with(binding) {
         photoEditor =
             PhotoEditor.Builder(requireContext(), photoEditorView).setClipSourceImage(true).build()
-        adjustValueSeekBar.setOnSeekBarChangeListener { _, progress ->
-            viewModel.setScale(progress)
-        }
+        adjustValueSeekBar.setOnSeekBarChangeListener(object :
+            StartPointSeekBar.OnSeekBarChangeListener {
+            override fun onOnSeekBarValueChange(bar: StartPointSeekBar?, value: Double) {
+                viewModel.setScale(value)
+            }
+        })
         adjustValueSeekBar.setProgress(0.0)
         initAdjustListener()
         discardImageView.onClick {

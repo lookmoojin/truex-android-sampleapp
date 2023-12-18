@@ -37,6 +37,7 @@ import com.truedigital.features.truecloudv3.extension.snackBar
 import com.truedigital.features.truecloudv3.injections.TrueCloudV3Component
 import com.truedigital.features.truecloudv3.presentation.viewmodel.TrueCloudV3PhotoEditorFileViewModel
 import com.truedigital.features.truecloudv3.presentation.viewmodel.TrueCloudV3PhotoEditorFocusViewModel
+import com.truedigital.features.truecloudv3.widget.StartPointSeekBar
 import com.truedigital.foundation.extension.gone
 import com.truedigital.foundation.extension.onClick
 import com.truedigital.foundation.extension.visible
@@ -105,9 +106,12 @@ class PhotoEditorFocusFragment :
             brushSizeLayout.visible()
             brushSizeTextView.isChecked = true
         }
-        brushSizeSeekBar.setOnSeekBarChangeListener { _, progress ->
-            viewModel.setBrushSize(progress)
-        }
+        brushSizeSeekBar.setOnSeekBarChangeListener(object :
+            StartPointSeekBar.OnSeekBarChangeListener {
+            override fun onOnSeekBarValueChange(bar: StartPointSeekBar?, value: Double) {
+                viewModel.setBrushSize(value)
+            }
+        })
         initColorPickerListener()
         discardImageView.onClick {
             backPressed()
