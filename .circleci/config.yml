@@ -15,6 +15,16 @@ jobs:
             - jars-{{ checksum "build.gradle" }}-{{ checksum  "app/build.gradle" }}
             - jars-
       - run:
+          name: Install Cloud Google
+          command: |
+            curl https://packages.cloud.google.com/apt/doc/apt-key.gpg | sudo apt-key add -
+      - run:
+          name: Install Debian
+          command: |
+            sudo sed -i s/deb.debian.org/archive.debian.org/g /etc/apt/sources.list
+            sudo sed -i 's|security.debian.org|archive.debian.org|g' /etc/apt/sources.list
+            sudo sed -i '/stretch-updates/d' /etc/apt/sources.list
+      - run:
           name: Install OpenJDK 11
           command: |
             sudo apt-get update && sudo apt-get install openjdk-11-jdk
@@ -43,8 +53,3 @@ jobs:
           name: Upload Artifacts File APK
           path: app/build/outputs/apk
           destination: apk
-
-
-          #            sudo sed -i s/deb.debian.org/archive.debian.org/g /etc/apt/sources.list
-          #            sudo sed -i 's|security.debian.org|archive.debian.org|g' /etc/apt/sources.list
-          #            sudo sed -i '/stretch-updates/d' /etc/apt/sources.list
