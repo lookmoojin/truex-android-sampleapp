@@ -15,6 +15,16 @@ jobs:
             - jars-{{ checksum "build.gradle" }}-{{ checksum  "app/build.gradle" }}
             - jars-
       - run:
+          name: Install OpenJDK 11
+          command: |
+            sudo apt update
+            sudo add-apt-repository ppa:openjdk-r/ppa
+            sudo apt-get update
+            sudo apt install openjdk-11-jdk
+            sudo update-alternatives --set java /usr/lib/jvm/java-11-openjdk-amd64/bin/java
+            sudo update-alternatives --set javac /usr/lib/jvm/java-11-openjdk-amd64/bin/javac
+            java -version
+      - run:
           name: Download Dependencies
           command: ./gradlew androidDependencies
       - save_cache:
@@ -47,13 +57,3 @@ jobs:
           #            sudo sed -i s/deb.debian.org/archive.debian.org/g /etc/apt/sources.list
           #            sudo sed -i 's|security.debian.org|archive.debian.org|g' /etc/apt/sources.list
           #            sudo sed -i '/stretch-updates/d' /etc/apt/sources.list
-          #      - run:
-          #          name: Install OpenJDK 11
-          #          command: |
-          #            sudo apt update
-          #            sudo add-apt-repository ppa:openjdk-r/ppa
-          #            sudo apt-get update
-          #            sudo apt install openjdk-11-jdk
-          #            sudo update-alternatives --set java /usr/lib/jvm/java-11-openjdk-amd64/bin/java
-          #            sudo update-alternatives --set javac /usr/lib/jvm/java-11-openjdk-amd64/bin/javac
-          #            java -version
