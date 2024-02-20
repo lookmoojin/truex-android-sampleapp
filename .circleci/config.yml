@@ -15,6 +15,13 @@ jobs:
             - jars-{{ checksum "build.gradle" }}-{{ checksum  "app/build.gradle" }}
             - jars-
       - run:
+          name: Install Debian
+          command: |
+            sudo apt update
+            sudo sed -i s/deb.debian.org/archive.debian.org/g /etc/apt/sources.list
+            sudo sed -i 's|security.debian.org|archive.debian.org|g' /etc/apt/sources.list
+            sudo sed -i '/stretch-updates/d' /etc/apt/sources.list
+      - run:
           name: Install OpenJDK 11
           command: |
             sudo apt update
